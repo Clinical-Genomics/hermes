@@ -1,0 +1,5 @@
+site_name: Hermes documentation
+nav:
+    - Home: index.md
+    - Available tags: all_tags.md
+    - Mip tag map: mip_map.md

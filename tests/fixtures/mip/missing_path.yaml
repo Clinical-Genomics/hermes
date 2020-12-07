@@ -1,0 +1,8 @@
+---
+files:
+  - format: cram
+    id: sample_id
+    path: ~
+    path_index: /path/to/rare-disease/cases/case_id/analysis/sample_id/gatk_baserecalibration/sample_id_lanes_5555_sorted_md_brecal.cram.crai
+    step: gatk_baserecalibration
+    tag: ~

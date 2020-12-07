@@ -1,0 +1,38 @@
+---
+files:
+  - format: cram
+    id: sample_id
+    path: /path/to/rare-disease/cases/case_id/analysis/sample_id/gatk_baserecalibration/sample_id_lanes_5555_sorted_md_brecal.cram
+    path_index: /path/to/rare-disease/cases/case_id/analysis/sample_id/gatk_baserecalibration/sample_id_lanes_5555_sorted_md_brecal.cram.crai
+    step: gatk_baserecalibration
+    tag: ~
+  - format: meta
+    id: sample_id
+    path: /path/to/rare-disease/cases/case_id/analysis/sample_id/chanjo_sexcheck/sample_id_lanes_5555_sorted_md_brecal_sex.tsv
+    path_index: ~
+    step: chanjo_sexcheck
+    tag: ~
+  - format: bam
+    id: sample_id
+    path: /path/to/rare-disease/cases/case_id/analysis/sample_id/samtools_subsample_mt/sample_id_lanes_5555_sorted_md_brecal_subsample_MT.bam
+    path_index: /path/to/rare-disease/cases/case_id/analysis/sample_id/samtools_subsample_mt/sample_id_lanes_5555_sorted_md_brecal_subsample_MT.bam.bai
+    step: samtools_subsample_mt
+    tag: ~
+  - format: vcf
+    id: case_id
+    path: /path/to/rare-disease/cases/case_id/analysis/case_id/expansionhunter/case_id_exphun.vcf.gz
+    path_index: /path/to/rare-disease/cases/case_id/analysis/case_id/expansionhunter/case_id_exphun.vcf.gz.csi
+    step: expansionhunter
+    tag: sv_str
+  - format: vcf
+    id: case_id
+    path: /path/to/rare-disease/cases/case_id/analysis/case_id/sv_reformat/case_id_comb_ann_vep_parsed_ranked.vcf.gz
+    path_index: /path/to/rare-disease/cases/case_id/analysis/case_id/sv_reformat/case_id_comb_ann_vep_parsed_ranked.vcf.gz.csi
+    step: sv_reformat
+    tag: research
+  - format: vcf
+    id: case_id
+    path: /path/to/rare-disease/cases/case_id/analysis/case_id/sv_reformat/case_id_comb_ann_vep_parsed_ranked.selected.vcf.gz
+    path_index: /path/to/rare-disease/cases/case_id/analysis/case_id/sv_reformat/case_id_comb_ann_vep_parsed_ranked.selected.vcf.gz.csi
+    step: sv_reformat
+    tag: clinical
