@@ -12,6 +12,7 @@ from cg_hermes.config.pipelines import Pipeline
 from cg_hermes.exceptions import MissingFileError
 from cg_hermes.validate import (
     validate_balsamic_deliverables,
+    validate_common_tags,
     validate_mip_deliverables,
     validate_tag_map,
 )
@@ -48,22 +49,29 @@ def validate_deliverables(
 @app.command("tags")
 def validate_tags_cmd(pipeline: Pipeline):
     """Validate the tag maps for one of the definitions"""
+    LOG.info("Validating %s common tags", pipeline.value)
+    exit_code = 0
     if pipeline == Pipeline.mip:
         tag_map = MIP_DNA_TAGS
-        LOG.info("Validating MIP dna tags")
     elif pipeline == Pipeline.balsamic:
         tag_map = BALSAMIC_COMMON_TAGS
-        LOG.info("Validating balsamic common tags")
     elif pipeline == Pipeline.fluffy:
         tag_map = FLUFFY_COMMON_TAGS
-        LOG.info("Validating Fluffy common tags")
+    elif pipeline == Pipeline.cg:
+        try:
+            validate_common_tags()
+            LOG.info("Tag map looks fine")
+        except AssertionError:
+            exit_code = 1
+        raise typer.Exit(code=exit_code)
     else:
         LOG.info("Could not find pipeline tags for %s", pipeline.value)
-        raise typer.Exit()
+        raise typer.Exit(code=exit_code)
 
     try:
         validate_tag_map(tags=tag_map)
         LOG.info("Tag map looks fine")
     except ValidationError as err:
         LOG.warning(err)
-        raise typer.Abort()
+        exit_code = 1
+    raise typer.Exit(code=exit_code)

@@ -3,6 +3,7 @@ import logging
 from typing import Dict, FrozenSet, List, Set
 
 from cg_hermes.config.mip import MIP_DNA_TAGS
+from cg_hermes.config.tags import COMMON_TAG_CATEGORIES
 from cg_hermes.exceptions import MissingFileError
 from cg_hermes.models.pipeline_deliverables import BalsamicDeliverables, MipDeliverables
 from cg_hermes.models.tags import TagMap
@@ -51,6 +52,24 @@ def validate_balsamic_deliverables(
     model = BalsamicDeliverables.parse_obj(deliverables)
 
     return model
+
+
+def validate_common_tags() -> bool:
+    """Validate the common tags"""
+    for category in COMMON_TAG_CATEGORIES:
+        tag_map: Dict[str, Dict[str, str]] = COMMON_TAG_CATEGORIES[category]
+        for tag_name in tag_map:
+            try:
+                assert isinstance(tag_map[tag_name], dict)
+            except AssertionError as err:
+                LOG.warning("Tag %s in %s is on the wrong format", tag_name, category.upper())
+                raise err
+            try:
+                assert "description" in tag_map[tag_name]
+            except AssertionError as err:
+                LOG.warning("Tag %s in %s does not have a description", tag_name, category.upper())
+                raise err
+    return True
 
 
 def validate_tag_map(tags: Dict[FrozenSet[str], dict]) -> bool:

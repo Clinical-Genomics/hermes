@@ -4,6 +4,8 @@ from enum import Enum
 import typer
 from tabulate import tabulate
 
+from cg_hermes.config.balsamic import BALSAMIC_COMMON_TAGS
+from cg_hermes.config.fluffy import FLUFFY_COMMON_TAGS
 from cg_hermes.config.mip import MIP_DNA_TAGS
 from cg_hermes.config.pipelines import Pipeline
 from cg_hermes.config.tags import COMMON_TAG_CATEGORIES
@@ -39,11 +41,7 @@ def export_tags_cmd(
 ):
     """Export tag definitions from hermes"""
     LOG.info("Running export tags for pipeline %s", pipeline.value)
-    if pipeline.value == "mip":
-        header = ["Mip tags", "Mandatory", "HK tags", "Used by"]
-        table = get_table(MIP_DNA_TAGS)
-        typer.echo(tabulate(table, headers=header, tablefmt=format))
-    if pipeline.value == "cg":
+    if pipeline == Pipeline.cg:
         header = ["Tag name", "Description"]
         for category in COMMON_TAG_CATEGORIES:
             table_name = category.upper().replace("_", " ")
@@ -57,3 +55,20 @@ def export_tags_cmd(
                 table.append([tag_name, COMMON_TAG_CATEGORIES[category][tag_name]["description"]])
             typer.echo(tabulate(table, headers=header, tablefmt=output.value))
             typer.echo()
+        raise typer.Exit()
+    if pipeline == Pipeline.mip:
+        header = ["Mip tags", "Mandatory", "HK tags", "Used by"]
+        table = get_table(MIP_DNA_TAGS)
+
+    elif pipeline == Pipeline.fluffy:
+        header = ["Fluffy tags", "Mandatory", "HK tags", "Used by"]
+        table = get_table(FLUFFY_COMMON_TAGS)
+
+    elif pipeline == Pipeline.balsamic:
+        header = ["Balsamic tags", "Mandatory", "HK tags", "Used by"]
+        table = get_table(BALSAMIC_COMMON_TAGS)
+    else:
+        LOG.info("Could not recognize pipeline")
+        raise typer.Exit(code=1)
+
+    typer.echo(tabulate(table, headers=header, tablefmt=format))

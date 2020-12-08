@@ -20,7 +20,7 @@ RAW_DATA = {"fastq": {"description": "Files with raw data in fastq format"}}
 
 
 VARIANT_COMMON = {
-    "cnv": {"Copy number variants"},
+    "cnv": {"description": "Copy number variants"},
     "normal": {"description": "Associated with normal sample"},
     "rhocall-viz": {"description": "Runs of homozygosity index"},
     "smn-calling": {"description": "Copy number calls for the SMN gene"},
@@ -30,7 +30,7 @@ VARIANT_COMMON = {
     "sv-vcf": {"description": "Variant call formated file with structural variants"},
     "sv-vcf-index": {"description": "Following index"},
     "telomere-calling": {"description": "Variants from telomere calling"},
-    "tmb": {"Tumor mutational burden information"},
+    "tmb": {"description": "Tumor mutational burden information"},
     "tumor": {"description": "Associated with tumor sample"},
     "upd": {"description": "Uniparental disomy variants"},
     "vcf": {"description": "Variant call formated file"},
@@ -57,7 +57,7 @@ REPORTING_COMMON = {
     "multiqc-html": {"description": "Multiqc report for the run in html format"},
     "multiqc-json": {"description": "Multiqc report for the run in json format"},
     "sambamba-depth": {"description": "Coverage information from sambamba"},
-    "vcf-report": {"Results and QC from variant calling"},
+    "vcf-report": {"description": "Results and QC from variant calling"},
 }
 
 VALIDATIONS_COMMON = {
