@@ -12,7 +12,7 @@ FLUFFY_COMMON_TAGS = {
         "used_by": ["nipt"],
     },
     frozenset(["wisecondor_aberrations"]): {
-        "tags": ["wisecondor"],
+        "tags": ["wisecondor", "cnv"],
         "is_mandatory": True,
         "used_by": ["nipt"],
     },

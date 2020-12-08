@@ -1,10 +1,4 @@
 ALIGNMENT_COMMON = {
-    "cram": {
-        "description": "Alignment file in CRAM format",
-    },
-    "cram-index": {
-        "description": "Index file for alignment file in CRAM format",
-    },
     "bam": {
         "description": "Alignment file in BAM format",
     },
@@ -14,37 +8,44 @@ ALIGNMENT_COMMON = {
     "bam-mt": {
         "description": "Alignment file in BAM format holding the reaads from chrMT",
     },
+    "cram": {
+        "description": "Alignment file in CRAM format",
+    },
+    "cram-index": {
+        "description": "Index file for alignment file in CRAM format",
+    },
 }
 
 RAW_DATA = {"fastq": {"description": "Files with raw data in fastq format"}}
 
 
 VARIANT_COMMON = {
-    "snv-gbcf": {"description": "Gvcf including all SNV variants"},
-    "snv-bcf": {"description": "Gvcf including all SNV variants"},
-    "sv-bcf": {"description": "Gvcf including all SV variants"},
-    "upd": {"description": "Uniparental disomy variants"},
-    "vcf-snv-clinical": {"description": "SNV variants from clinical panels"},
-    "vcf-snv-clinical-index": {"description": "Following index"},
-    "vcf-sv-clinical": {"description": "SV variants from clinical panels"},
-    "vcf-sv-clinical-index": {"description": "Following index"},
-    "vcf-snv-research": {"description": "SNV variants from whole genome"},
-    "vcf-snv-research-index": {"description": "Following index"},
-    "vcf-sv-research": {"description": "SV variants from whole genome"},
-    "vcf-sv-research-index": {"description": "Following index"},
-    "vcf-str": {"description": "Short tandem repeat variants"},
-    "vcf-str-index": {"description": "Following index"},
+    "cnv": {"Copy number variants"},
+    "normal": {"description": "Associated with normal sample"},
     "rhocall-viz": {"description": "Runs of homozygosity index"},
     "smn-calling": {"description": "Copy number calls for the SMN gene"},
-    "telomere-calling": {"description": "Variants from telomere calling"},
-    "vcf2cytosure": {"description": "Conversion from vcf format to cytosure format"},
-    "tumor": {"description": "Associated with tumor sample"},
-    "normal": {"description": "Associated with normal sample"},
-    "vcf": {"description": "Variant call formated file"},
-    "vcf-index": {"description": "Following index"},
+    "snv-bcf": {"description": "Gvcf including all SNV variants"},
+    "snv-gbcf": {"description": "Gvcf including all SNV variants"},
+    "sv-bcf": {"description": "Gvcf including all SV variants"},
     "sv-vcf": {"description": "Variant call formated file with structural variants"},
     "sv-vcf-index": {"description": "Following index"},
+    "telomere-calling": {"description": "Variants from telomere calling"},
     "tmb": {"Tumor mutational burden information"},
+    "tumor": {"description": "Associated with tumor sample"},
+    "upd": {"description": "Uniparental disomy variants"},
+    "vcf": {"description": "Variant call formated file"},
+    "vcf-index": {"description": "Following index"},
+    "vcf-snv-clinical": {"description": "SNV variants from clinical panels"},
+    "vcf-snv-clinical-index": {"description": "Following index"},
+    "vcf-snv-research": {"description": "SNV variants from whole genome"},
+    "vcf-snv-research-index": {"description": "Following index"},
+    "vcf-str": {"description": "Short tandem repeat variants"},
+    "vcf-str-index": {"description": "Following index"},
+    "vcf-sv-clinical": {"description": "SV variants from clinical panels"},
+    "vcf-sv-clinical-index": {"description": "Following index"},
+    "vcf-sv-research": {"description": "SV variants from whole genome"},
+    "vcf-sv-research-index": {"description": "Following index"},
+    "vcf2cytosure": {"description": "Conversion from vcf format to cytosure format"},
 }
 
 FAMILY_COMMON = {
@@ -60,97 +61,97 @@ REPORTING_COMMON = {
 }
 
 VALIDATIONS_COMMON = {
-    "sex-check": {"description": "Results from sex validation"},
-    "qc-metrics": {"description": "QC metrics from analysis"},
     "ped-check": {"description": "Results from pedigree validation"},
+    "qc-metrics": {"description": "QC metrics from analysis"},
+    "sex-check": {"description": "Results from sex validation"},
 }
 
 ANALYSIS_COMMON = {
+    "autozyg": {"description": "Autozygous region"},
+    "bigwig": {"description": "Bigwig formated file"},
     "config": {"description": "Config file"},
-    "reference-info": {"description": "Information about references used in analysis"},
-    "sites": {"description": "Output for sites"},
+    "coverage": {"description": "Output with coverage information"},
+    "diagram": {"description": "Data diagram"},
+    "filtered": {"description": "Filtered data"},
+    "fracsnp": {"description": "Fraction of reads with snp"},
     "genes": {"description": "Related to genes"},
+    "metrics": {"description": "Data metrics"},
+    "reference-info": {"description": "Information about references used in analysis"},
     "regions": {"description": "Output for regions"},
     "segments": {"description": "Output for segments"},
+    "sites": {"description": "Output for sites"},
     "tcov": {"description": "Coverage output"},
-    "autozyg": {"description": "Autozygous region"},
-    "fracsnp": {"description": "Fraction of reads with snp"},
     "tiddit-coverage": {"description": "Coverage output from tiddit"},
-    "bigwig": {"description": "Bigwig formated file"},
-    "coverage": {"description": "Output with coverage information"},
     "visualization": {"description": "Visualizes data"},
-    "diagram": {"description": "Data diagram"},
-    "metrics": {"description": "Data metrics"},
-    "filtered": {"description": "Filtered data"},
 }
 
 TOOLS = {
     "chanjo": {"description": "Tool to keep track of coverage over specific regions"},
-    "peddy": {"description": "Tool to check pedigree and ancestral relations"},
     "chromograph": {"description": "Tool to create PNG images from BED and WIG files from mikaell"},
-    "cyrius": {"description": "Tool to call the problematic CYP2D6 gene"},
-    "upd": {"description": "Uniparent disomy caller from bjhall"},
     "cnvkit": {"description": "Tool to call copy number variations"},
-    "manta": {"description": "Tool to call structural variants"},
-    "sention": {"description": "Sention algorithm"},
-    "haplotype-caller": {"description": "Call snv and indels"},
-    "scope": {"description": "Call snv indels"},
+    "cyrius": {"description": "Tool to call the problematic CYP2D6 gene"},
     "genotyper": {"description": "SNV indel caller from sention"},
-    "vardict": {"description": "Cancer variant caller"},
-    "strelka": {"description": "Cancer variant caller"},
+    "haplotype-caller": {"description": "Call snv and indels"},
+    "manta": {"description": "Tool to call structural variants"},
     "mutect": {"description": "Cancer variant caller"},
+    "peddy": {"description": "Tool to check pedigree and ancestral relations"},
+    "scope": {"description": "Call snv indels"},
+    "sention": {"description": "Sention algorithm"},
+    "strelka": {"description": "Cancer variant caller"},
+    "upd": {"description": "Uniparent disomy caller from bjhall"},
+    "vardict": {"description": "Cancer variant caller"},
     "wisecondor": {"description": "NIPT caller"},
 }
 
 MIP_SPECIFIC = {
-    "mip-config": {"description": "MIP configs for analysis"},
-    "mip-analyse": {"description": "MIP information about analysis"},
-    "mip-log": {"description": "Logs for MIP analysis"},
-    "sample-info": {"description": "MIP info file about samples"},
-    "pedigree-yaml": {"description": "YAML file with pedigree information"},
     "exe-ver": {"description": "Executable versions"},
+    "mip-analyse": {"description": "MIP information about analysis"},
+    "mip-config": {"description": "MIP configs for analysis"},
+    "mip-log": {"description": "Logs for MIP analysis"},
+    "pedigree-yaml": {"description": "YAML file with pedigree information"},
+    "sample-info": {"description": "MIP info file about samples"},
 }
 
 BALSAMIC_SPECIFIC = {
     "balsamic-config": {"description": "Balsamic configs for analysis"},
-    "balsamic-report": {"description": "Report from analysis"},
     "balsamic-dag": {"description": "Balsamic run schema"},
+    "balsamic-report": {"description": "Report from analysis"},
 }
 
 AVAILABLE_USAGES = {
-    "scout",
-    "cg",
-    "vogue",
-    "chanjo",
-    "storage",
-    "genotype",
     "audit",
+    "cg",
+    "chanjo",
     "deliver",
+    "genotype",
     "nipt",
+    "scout",
+    "storage",
+    "vogue",
 }
 
 COMMON_TAG_CATEGORIES = {
     "alignment_tags": ALIGNMENT_COMMON,
-    "raw_data": RAW_DATA,
-    "variant_tags": VARIANT_COMMON,
-    "family_tags": FAMILY_COMMON,
-    "reporting_tags": REPORTING_COMMON,
-    "validation_tags": VALIDATIONS_COMMON,
     "analysis_tags": ANALYSIS_COMMON,
+    "family_tags": FAMILY_COMMON,
+    "raw_data": RAW_DATA,
+    "reporting_tags": REPORTING_COMMON,
     "tool_tags": TOOLS,
+    "validation_tags": VALIDATIONS_COMMON,
+    "variant_tags": VARIANT_COMMON,
 }
 
 ALL_TAG_CATEGORIES = [
     ALIGNMENT_COMMON,
-    RAW_DATA,
-    VARIANT_COMMON,
-    FAMILY_COMMON,
-    REPORTING_COMMON,
-    VALIDATIONS_COMMON,
     ANALYSIS_COMMON,
-    TOOLS,
-    MIP_SPECIFIC,
     BALSAMIC_SPECIFIC,
+    FAMILY_COMMON,
+    MIP_SPECIFIC,
+    RAW_DATA,
+    REPORTING_COMMON,
+    TOOLS,
+    VALIDATIONS_COMMON,
+    VARIANT_COMMON,
 ]
 
 ALL_TAGS = set(tag for category in ALL_TAG_CATEGORIES for tag in category.keys())
