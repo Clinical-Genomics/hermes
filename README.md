@@ -1,4 +1,5 @@
 # Hermes 
+![Tests](https://github.com/Clinical-Genomics/hermes/workflows/Tests/badge.svg)
 
 Hermes :postal_horn: is a package to handle the communication between pipelines and CG.
 
