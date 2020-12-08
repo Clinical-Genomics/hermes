@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Balsamic tag map - Hermes documentation</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">Hermes documentation</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../all_tags/" class="nav-link">Available tags</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../mip_map/" class="nav-link">Mip tag map</a>
+                            </li>
+                            <li class="navitem active">
+                                <a href="./" class="nav-link">Balsamic tag map</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../fluffy_map/" class="nav-link">Fluffy tag map</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../mip_map/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../fluffy_map/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<table>
+<thead>
+<tr>
+<th>Balsamic tags</th>
+<th>Mandatory</th>
+<th>HK tags</th>
+<th>Used by</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cnv-cns, cns</td>
+<td>True</td>
+<td>cnvkit, segments</td>
+<td>deliver</td>
+</tr>
+<tr>
+<td>cnv-cnr, cnr</td>
+<td>True</td>
+<td>cnvkit, regions</td>
+<td>deliver</td>
+</tr>
+<tr>
+<td>cnv-scatter, scatter</td>
+<td>True</td>
+<td>cnvkit, visualization</td>
+<td>deliver</td>
+</tr>
+<tr>
+<td>diagram, cnv-diagram</td>
+<td>True</td>
+<td>cnvkit, visualization, diagram</td>
+<td>deliver</td>
+</tr>
+<tr>
+<td>gene-breaks, cnv-gene-breaks</td>
+<td>True</td>
+<td>cnvkit, genes</td>
+<td>storage</td>
+</tr>
+<tr>
+<td>cnv-gene-metrics, gene-metrics</td>
+<td>True</td>
+<td>cnvkit, genes, metrics</td>
+<td>deliver</td>
+</tr>
+<tr>
+<td>html, multiqc-html</td>
+<td>True</td>
+<td>multiqc-html</td>
+<td>scout, deliver, audit</td>
+</tr>
+<tr>
+<td>multiqc-json, json</td>
+<td>True</td>
+<td>multiqc-json</td>
+<td>vogue, audit</td>
+</tr>
+<tr>
+<td>scout-bam, bam</td>
+<td>False</td>
+<td>bam</td>
+<td>scout</td>
+</tr>
+<tr>
+<td>scout-bam-index, bam</td>
+<td>False</td>
+<td>bam-index</td>
+<td>scout</td>
+</tr>
+<tr>
+<td>tnhaplotyper, snv, annotated-somatic-vcf-all, vcf-all</td>
+<td>True</td>
+<td>vcf, tumor, haplotype-caller</td>
+<td>storage</td>
+</tr>
+<tr>
+<td>tnhaplotyper, annotated-somatic-vcf-all-index, snv, vcf-all</td>
+<td>True</td>
+<td>vcf-index, tumor, haplotype-caller</td>
+<td>storage</td>
+</tr>
+<tr>
+<td>tnscope, annotated-somatic-vcf-all, snv, vcf-all</td>
+<td>False</td>
+<td>tumor, scope, vcf-snv-research</td>
+<td>scout, deliver</td>
+</tr>
+<tr>
+<td>tnscope, annotated-somatic-vcf-all-index, snv, vcf-all</td>
+<td>False</td>
+<td>tumor, scope, vcf-snv-research-index</td>
+<td>scout, deliver</td>
+</tr>
+<tr>
+<td>annotated-somatic-vcf-all, tnsnv, snv, vcf-all</td>
+<td>False</td>
+<td>vcf, tumor, genotyper</td>
+<td>storage</td>
+</tr>
+<tr>
+<td>annotated-somatic-vcf-all-index, tnsnv, snv, vcf-all</td>
+<td>False</td>
+<td>vcf-index, tumor, genotyper</td>
+<td>storage</td>
+</tr>
+<tr>
+<td>annotated-somatic-vcf-all, sv, manta, vcf-all</td>
+<td>True</td>
+<td>vcf-sv-research, manta, tumor</td>
+<td>scout, deliver</td>
+</tr>
+<tr>
+<td>annotated-somatic-vcf-all-index, sv, manta, vcf-all</td>
+<td>True</td>
+<td>vcf-sv-research-index, manta, tumor</td>
+<td>scout, deliver</td>
+</tr>
+<tr>
+<td>cnv, cnvkit, annotated-somatic-vcf-all, vcf-all</td>
+<td>True</td>
+<td>cnvkit, sv-vcf, tumor</td>
+<td>deliver</td>
+</tr>
+<tr>
+<td>annotated-somatic-vcf-all-index, cnv, cnvkit, vcf-all</td>
+<td>True</td>
+<td>cnvkit, sv-vcf-index, tumor</td>
+<td>deliver</td>
+</tr>
+<tr>
+<td>tnscope, vcf-summary, annotated-somatic-vcf-summary, snv</td>
+<td>False</td>
+<td>sention, scope, vcf-report</td>
+<td>audit</td>
+</tr>
+<tr>
+<td>tnhaplotyper, annotated-somatic-vcf-summary, snv, vcf-summary</td>
+<td>True</td>
+<td>sention, haplotype-caller, vcf-report</td>
+<td>audit</td>
+</tr>
+<tr>
+<td>vcf-summary, annotated-somatic-vcf-summary, manta, sv</td>
+<td>True</td>
+<td>sention, manta, vcf-report</td>
+<td>audit</td>
+</tr>
+<tr>
+<td>vcf-summary, tnsnv, annotated-somatic-vcf-summary, snv</td>
+<td>False</td>
+<td>sention, genotyper, vcf-report</td>
+<td>audit</td>
+</tr>
+<tr>
+<td>vcf-summary, cnv, cnvkit, annotated-somatic-vcf-summary</td>
+<td>True</td>
+<td>cnvkit, vcf-report</td>
+<td>audit</td>
+</tr>
+<tr>
+<td>tnhaplotyper, annotated-somatic-vcf-pass, vcf-pass, snv</td>
+<td>True</td>
+<td>vcf, sention, haplotype-caller, filtered</td>
+<td>storage</td>
+</tr>
+<tr>
+<td>tnhaplotyper, vcf-pass, snv, annotated-somatic-vcf-pass-index</td>
+<td>True</td>
+<td>vcf-index, sention, haplotype-caller, filtered</td>
+<td>storage</td>
+</tr>
+<tr>
+<td>annotated-somatic-vcf-pass, tnsnv, vcf-pass, snv</td>
+<td>False</td>
+<td>vcf, sention, genotyper, filtered</td>
+<td>storage</td>
+</tr>
+<tr>
+<td>tnsnv, vcf-pass, snv, annotated-somatic-vcf-pass-index</td>
+<td>False</td>
+<td>vcf-index, sention, genotyper, filtered</td>
+<td>storage</td>
+</tr>
+<tr>
+<td>cnv, annotated-somatic-vcf-pass, cnvkit, vcf-pass</td>
+<td>True</td>
+<td>cnvkit, sv-vcf, filtered</td>
+<td>storage</td>
+</tr>
+<tr>
+<td>cnv, cnvkit, vcf-pass, annotated-somatic-vcf-pass-index</td>
+<td>True</td>
+<td>cnvkit, sv-vcf-index, filtered</td>
+<td>storage</td>
+</tr>
+<tr>
+<td>annotated-somatic-vcf-pass, vcf-pass, manta, sv</td>
+<td>True</td>
+<td>vcf-sv-clinical, manta, filtered</td>
+<td>scout</td>
+</tr>
+<tr>
+<td>manta, vcf-pass, annotated-somatic-vcf-pass-index, sv</td>
+<td>True</td>
+<td>vcf-sv-clinical-index, manta, filtered</td>
+<td>scout</td>
+</tr>
+<tr>
+<td>tnscope, annotated-somatic-vcf-pass, vcf-pass, snv</td>
+<td>False</td>
+<td>vcf-snv-clinical, scope, filtered, sention</td>
+<td>scout, deliver</td>
+</tr>
+<tr>
+<td>tnscope, vcf-pass, snv, annotated-somatic-vcf-pass-index</td>
+<td>False</td>
+<td>vcf-snv-clinical-index, scope, filtered, sention</td>
+<td>scout, deliver</td>
+</tr>
+<tr>
+<td>quality-trimmed-fastq-read1, read1</td>
+<td>True</td>
+<td>fastq</td>
+<td>deliver</td>
+</tr>
+<tr>
+<td>read2, quality-trimmed-fastq-read2</td>
+<td>True</td>
+<td>fastq</td>
+<td>deliver</td>
+</tr>
+<tr>
+<td>quality-trimmed-fastq-json, json</td>
+<td>True</td>
+<td>fastq, metrics</td>
+<td>audit</td>
+</tr>
+<tr>
+<td>html, quality-trimmed-fastq-html</td>
+<td>True</td>
+<td>fastq, visualization</td>
+<td>audit</td>
+</tr>
+<tr>
+<td>balsamic-report</td>
+<td>True</td>
+<td>balsamic-report</td>
+<td>audit</td>
+</tr>
+<tr>
+<td>balsamic-config</td>
+<td>True</td>
+<td>balsamic-config</td>
+<td>audit</td>
+</tr>
+<tr>
+<td>balsamic-dag</td>
+<td>True</td>
+<td>balsamic-dag</td>
+<td>audit</td>
+</tr>
+<tr>
+<td>normal-bam, bam</td>
+<td>False</td>
+<td>bam, normal</td>
+<td>scout, deliver</td>
+</tr>
+<tr>
+<td>normal-bam-index, bam</td>
+<td>False</td>
+<td>bam-index, normal</td>
+<td>scout, deliver</td>
+</tr>
+<tr>
+<td>normal-cram, cram</td>
+<td>False</td>
+<td>cram, normal</td>
+<td>scout, deliver</td>
+</tr>
+<tr>
+<td>normal-cram-index, cram</td>
+<td>False</td>
+<td>cram-index</td>
+<td>scout, deliver</td>
+</tr>
+<tr>
+<td>vardict, annotated-somatic-vcf-all, snv, vcf-all</td>
+<td>False</td>
+<td>vcf, vardict</td>
+<td>storage</td>
+</tr>
+<tr>
+<td>vardict, annotated-somatic-vcf-all-index, snv, vcf-all</td>
+<td>False</td>
+<td>vcf-index, vardict</td>
+<td>storage</td>
+</tr>
+<tr>
+<td>strelka, snv, annotated-somatic-vcf-all, vcf-all</td>
+<td>False</td>
+<td>vcf, strelka</td>
+<td>storage</td>
+</tr>
+<tr>
+<td>strelka, annotated-somatic-vcf-all-index, snv, vcf-all</td>
+<td>False</td>
+<td>vcf-index, strelka</td>
+<td>storage</td>
+</tr>
+<tr>
+<td>annotated-somatic-vcf-all, mutect, snv, vcf-all</td>
+<td>False</td>
+<td>vcf, mutect</td>
+<td>storage</td>
+</tr>
+<tr>
+<td>annotated-somatic-vcf-all-index, mutect, snv, vcf-all</td>
+<td>False</td>
+<td>vcf-index, mutect</td>
+<td>storage</td>
+</tr>
+<tr>
+<td>vardict, vcf-summary, annotated-somatic-vcf-summary, snv</td>
+<td>False</td>
+<td>vardict, vcf-report</td>
+<td>audit</td>
+</tr>
+<tr>
+<td>vcf-summary, annotated-somatic-vcf-summary, snv, mutect</td>
+<td>False</td>
+<td>mutect, vcf-report</td>
+<td>audit</td>
+</tr>
+<tr>
+<td>strelka, annotated-somatic-vcf-summary, snv, vcf-summary</td>
+<td>False</td>
+<td>strelka, vcf-report</td>
+<td>audit</td>
+</tr>
+<tr>
+<td>annotated-somatic-vcf-pass, vcf-pass, snv, mutect</td>
+<td>False</td>
+<td>vcf, mutect, filtered</td>
+<td>storage</td>
+</tr>
+<tr>
+<td>vcf-pass, snv, annotated-somatic-vcf-pass-index, mutect</td>
+<td>False</td>
+<td>vcf-index, mutect, filtered</td>
+<td>storage</td>
+</tr>
+<tr>
+<td>vardict, annotated-somatic-vcf-pass, vcf-pass, snv</td>
+<td>False</td>
+<td>vcf-snv-clinical, vardict, filtered</td>
+<td>scout, deliver</td>
+</tr>
+<tr>
+<td>vardict, vcf-pass, snv, annotated-somatic-vcf-pass-index</td>
+<td>False</td>
+<td>vcf-snv-clinical-index, vardict, filtered</td>
+<td>scout, deliver</td>
+</tr>
+<tr>
+<td>strelka, annotated-somatic-vcf-pass, vcf-pass, snv</td>
+<td>False</td>
+<td>vcf, strelka, filtered</td>
+<td>storage</td>
+</tr>
+<tr>
+<td>strelka, vcf-pass, snv, annotated-somatic-vcf-pass-index</td>
+<td>False</td>
+<td>vcf-index, strelka, filtered</td>
+<td>storage</td>
+</tr>
+<tr>
+<td>vardict, stat-somatic-tmb, tmb</td>
+<td>False</td>
+<td>vardict, tmb</td>
+<td>audit</td>
+</tr>
+<tr>
+<td>strelka-germline, annotated-germline-vcf-all, snv, vcf-all</td>
+<td>False</td>
+<td>vcf, strelka, normal</td>
+<td>storage</td>
+</tr>
+<tr>
+<td>annotated-germline-vcf-all-index, strelka-germline, snv, vcf-all</td>
+<td>False</td>
+<td>vcf-index, strelka, normal</td>
+<td>storage</td>
+</tr>
+<tr>
+<td>annotated-germline-vcf-all, snv, haplotypecaller, vcf-all</td>
+<td>False</td>
+<td>vcf, haplotype-caller, normal</td>
+<td>storage</td>
+</tr>
+<tr>
+<td>annotated-germline-vcf-all-index, snv, haplotypecaller, vcf-all</td>
+<td>False</td>
+<td>vcf-index, haplotype-caller, normal</td>
+<td>storage</td>
+</tr>
+<tr>
+<td>manta-germline, annotated-germline-vcf-all, sv, vcf-all</td>
+<td>False</td>
+<td>sv-vcf, manta, normal</td>
+<td>storage</td>
+</tr>
+<tr>
+<td>annotated-germline-vcf-all-index, sv, manta-germline, vcf-all</td>
+<td>False</td>
+<td>sv-vcf-index, manta, normal</td>
+<td>storage</td>
+</tr>
+<tr>
+<td>dnascope, annotated-germline-vcf-all, snv, vcf-all</td>
+<td>False</td>
+<td>vcf, scope, normal</td>
+<td>storage</td>
+</tr>
+<tr>
+<td>annotated-germline-vcf-all-index, dnascope, snv, vcf-all</td>
+<td>False</td>
+<td>vcf-index, scope, normal</td>
+<td>storage</td>
+</tr>
+<tr>
+<td>vcf-summary, strelka-germline, annotated-germline-vcf-summary, snv</td>
+<td>False</td>
+<td>strelka, normal, vcf-report</td>
+<td>audit</td>
+</tr>
+<tr>
+<td>vcf-summary, annotated-germline-vcf-summary, snv, haplotypecaller</td>
+<td>False</td>
+<td>haplotype-caller, normal, vcf-report</td>
+<td>audit</td>
+</tr>
+<tr>
+<td>dnascope, annotated-germline-vcf-summary, snv, vcf-summary</td>
+<td>False</td>
+<td>scope, normal, vcf-report</td>
+<td>audit</td>
+</tr>
+<tr>
+<td>manta-germline, annotated-germline-vcf-summary, sv, vcf-summary</td>
+<td>False</td>
+<td>manta, normal, vcf-report</td>
+<td>audit</td>
+</tr>
+<tr>
+<td>tumor-bam, bam</td>
+<td>False</td>
+<td>bam, tumor</td>
+<td>scout</td>
+</tr>
+<tr>
+<td>tumor-bam-index, bam</td>
+<td>False</td>
+<td>bam-index, tumor</td>
+<td>scout</td>
+</tr>
+<tr>
+<td>tumor-cram, cram</td>
+<td>False</td>
+<td>cram, tumor</td>
+<td>scout</td>
+</tr>
+<tr>
+<td>tumor-cram-index, cram</td>
+<td>False</td>
+<td>cram-index, tumor</td>
+<td>scout</td>
+</tr>
+<tr>
+<td>clinical-vcf-filtered, vcf-filtered, snv</td>
+<td>False</td>
+<td>vcf-snv-clinical, filtered</td>
+<td>scout, deliver</td>
+</tr>
+<tr>
+<td>clinical-vcf-filtered-index, vcf-filtered, snv</td>
+<td>False</td>
+<td>vcf-snv-clinical-index, filtered</td>
+<td>scout, deliver</td>
+</tr>
+<tr>
+<td>clinical-vcf-pass, vcf-pass, snv</td>
+<td>False</td>
+<td>vcf, filtered</td>
+<td>storage</td>
+</tr>
+<tr>
+<td>vcf-pass, snv, clinical-vcf-pass-index</td>
+<td>False</td>
+<td>vcf-index, filtered</td>
+<td>storage</td>
+</tr>
+</tbody>
+</table></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

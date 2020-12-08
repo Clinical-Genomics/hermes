@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Available tags - Hermes documentation</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">Hermes documentation</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem active">
+                                <a href="./" class="nav-link">Available tags</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../mip_map/" class="nav-link">Mip tag map</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../balsamic_map/" class="nav-link">Balsamic tag map</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../fluffy_map/" class="nav-link">Fluffy tag map</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href=".." class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../mip_map/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="2"><a href="#alignment-tags" class="nav-link">ALIGNMENT TAGS</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#analysis-tags" class="nav-link">ANALYSIS TAGS</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#family-tags" class="nav-link">FAMILY TAGS</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#raw-data" class="nav-link">RAW DATA</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#reporting-tags" class="nav-link">REPORTING TAGS</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#tool-tags" class="nav-link">TOOL TAGS</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#validation-tags" class="nav-link">VALIDATION TAGS</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#variant-tags" class="nav-link">VARIANT TAGS</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h2 id="alignment-tags">ALIGNMENT TAGS</h2>
+<table>
+<thead>
+<tr>
+<th>Tag name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bam</td>
+<td>Alignment file in BAM format</td>
+</tr>
+<tr>
+<td>bam-index</td>
+<td>Index file for alignment file in BAM format</td>
+</tr>
+<tr>
+<td>bam-mt</td>
+<td>Alignment file in BAM format holding the reaads from chrMT</td>
+</tr>
+<tr>
+<td>cram</td>
+<td>Alignment file in CRAM format</td>
+</tr>
+<tr>
+<td>cram-index</td>
+<td>Index file for alignment file in CRAM format</td>
+</tr>
+</tbody>
+</table>
+<h2 id="analysis-tags">ANALYSIS TAGS</h2>
+<table>
+<thead>
+<tr>
+<th>Tag name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>autozyg</td>
+<td>Autozygous region</td>
+</tr>
+<tr>
+<td>bigwig</td>
+<td>Bigwig formated file</td>
+</tr>
+<tr>
+<td>config</td>
+<td>Config file</td>
+</tr>
+<tr>
+<td>coverage</td>
+<td>Output with coverage information</td>
+</tr>
+<tr>
+<td>diagram</td>
+<td>Data diagram</td>
+</tr>
+<tr>
+<td>filtered</td>
+<td>Filtered data</td>
+</tr>
+<tr>
+<td>fracsnp</td>
+<td>Fraction of reads with snp</td>
+</tr>
+<tr>
+<td>genes</td>
+<td>Related to genes</td>
+</tr>
+<tr>
+<td>metrics</td>
+<td>Data metrics</td>
+</tr>
+<tr>
+<td>reference-info</td>
+<td>Information about references used in analysis</td>
+</tr>
+<tr>
+<td>regions</td>
+<td>Output for regions</td>
+</tr>
+<tr>
+<td>segments</td>
+<td>Output for segments</td>
+</tr>
+<tr>
+<td>sites</td>
+<td>Output for sites</td>
+</tr>
+<tr>
+<td>tcov</td>
+<td>Coverage output</td>
+</tr>
+<tr>
+<td>tiddit-coverage</td>
+<td>Coverage output from tiddit</td>
+</tr>
+<tr>
+<td>visualization</td>
+<td>Visualizes data</td>
+</tr>
+</tbody>
+</table>
+<h2 id="family-tags">FAMILY TAGS</h2>
+<table>
+<thead>
+<tr>
+<th>Tag name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pedigree</td>
+<td>Pedigree information</td>
+</tr>
+<tr>
+<td>ped</td>
+<td>Pedigree information</td>
+</tr>
+</tbody>
+</table>
+<h2 id="raw-data">RAW DATA</h2>
+<table>
+<thead>
+<tr>
+<th>Tag name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fastq</td>
+<td>Files with raw data in fastq format</td>
+</tr>
+</tbody>
+</table>
+<h2 id="reporting-tags">REPORTING TAGS</h2>
+<table>
+<thead>
+<tr>
+<th>Tag name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>multiqc-html</td>
+<td>Multiqc report for the run in html format</td>
+</tr>
+<tr>
+<td>multiqc-json</td>
+<td>Multiqc report for the run in json format</td>
+</tr>
+<tr>
+<td>sambamba-depth</td>
+<td>Coverage information from sambamba</td>
+</tr>
+<tr>
+<td>vcf-report</td>
+<td>Results and QC from variant calling</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tool-tags">TOOL TAGS</h2>
+<table>
+<thead>
+<tr>
+<th>Tag name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>chanjo</td>
+<td>Tool to keep track of coverage over specific regions</td>
+</tr>
+<tr>
+<td>chromograph</td>
+<td>Tool to create PNG images from BED and WIG files from mikaell</td>
+</tr>
+<tr>
+<td>cnvkit</td>
+<td>Tool to call copy number variations</td>
+</tr>
+<tr>
+<td>cyrius</td>
+<td>Tool to call the problematic CYP2D6 gene</td>
+</tr>
+<tr>
+<td>genotyper</td>
+<td>SNV indel caller from sention</td>
+</tr>
+<tr>
+<td>haplotype-caller</td>
+<td>Call snv and indels</td>
+</tr>
+<tr>
+<td>manta</td>
+<td>Tool to call structural variants</td>
+</tr>
+<tr>
+<td>mutect</td>
+<td>Cancer variant caller</td>
+</tr>
+<tr>
+<td>peddy</td>
+<td>Tool to check pedigree and ancestral relations</td>
+</tr>
+<tr>
+<td>scope</td>
+<td>Call snv indels</td>
+</tr>
+<tr>
+<td>sention</td>
+<td>Sention algorithm</td>
+</tr>
+<tr>
+<td>strelka</td>
+<td>Cancer variant caller</td>
+</tr>
+<tr>
+<td>upd</td>
+<td>Uniparent disomy caller from bjhall</td>
+</tr>
+<tr>
+<td>vardict</td>
+<td>Cancer variant caller</td>
+</tr>
+<tr>
+<td>wisecondor</td>
+<td>NIPT caller</td>
+</tr>
+</tbody>
+</table>
+<h2 id="validation-tags">VALIDATION TAGS</h2>
+<table>
+<thead>
+<tr>
+<th>Tag name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ped-check</td>
+<td>Results from pedigree validation</td>
+</tr>
+<tr>
+<td>qc-metrics</td>
+<td>QC metrics from analysis</td>
+</tr>
+<tr>
+<td>sex-check</td>
+<td>Results from sex validation</td>
+</tr>
+</tbody>
+</table>
+<h2 id="variant-tags">VARIANT TAGS</h2>
+<table>
+<thead>
+<tr>
+<th>Tag name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cnv</td>
+<td>Copy number variants</td>
+</tr>
+<tr>
+<td>normal</td>
+<td>Associated with normal sample</td>
+</tr>
+<tr>
+<td>rhocall-viz</td>
+<td>Runs of homozygosity index</td>
+</tr>
+<tr>
+<td>smn-calling</td>
+<td>Copy number calls for the SMN gene</td>
+</tr>
+<tr>
+<td>snv-bcf</td>
+<td>Gvcf including all SNV variants</td>
+</tr>
+<tr>
+<td>snv-gbcf</td>
+<td>Gvcf including all SNV variants</td>
+</tr>
+<tr>
+<td>sv-bcf</td>
+<td>Gvcf including all SV variants</td>
+</tr>
+<tr>
+<td>sv-vcf</td>
+<td>Variant call formated file with structural variants</td>
+</tr>
+<tr>
+<td>sv-vcf-index</td>
+<td>Following index</td>
+</tr>
+<tr>
+<td>telomere-calling</td>
+<td>Variants from telomere calling</td>
+</tr>
+<tr>
+<td>tmb</td>
+<td>Tumor mutational burden information</td>
+</tr>
+<tr>
+<td>tumor</td>
+<td>Associated with tumor sample</td>
+</tr>
+<tr>
+<td>upd</td>
+<td>Uniparental disomy variants</td>
+</tr>
+<tr>
+<td>vcf</td>
+<td>Variant call formated file</td>
+</tr>
+<tr>
+<td>vcf-index</td>
+<td>Following index</td>
+</tr>
+<tr>
+<td>vcf-snv-clinical</td>
+<td>SNV variants from clinical panels</td>
+</tr>
+<tr>
+<td>vcf-snv-clinical-index</td>
+<td>Following index</td>
+</tr>
+<tr>
+<td>vcf-snv-research</td>
+<td>SNV variants from whole genome</td>
+</tr>
+<tr>
+<td>vcf-snv-research-index</td>
+<td>Following index</td>
+</tr>
+<tr>
+<td>vcf-str</td>
+<td>Short tandem repeat variants</td>
+</tr>
+<tr>
+<td>vcf-str-index</td>
+<td>Following index</td>
+</tr>
+<tr>
+<td>vcf-sv-clinical</td>
+<td>SV variants from clinical panels</td>
+</tr>
+<tr>
+<td>vcf-sv-clinical-index</td>
+<td>Following index</td>
+</tr>
+<tr>
+<td>vcf-sv-research</td>
+<td>SV variants from whole genome</td>
+</tr>
+<tr>
+<td>vcf-sv-research-index</td>
+<td>Following index</td>
+</tr>
+<tr>
+<td>vcf2cytosure</td>
+<td>Conversion from vcf format to cytosure format</td>
+</tr>
+</tbody>
+</table></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
