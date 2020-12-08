@@ -71,4 +71,4 @@ def export_tags_cmd(
         LOG.info("Could not recognize pipeline")
         raise typer.Exit(code=1)
 
-    typer.echo(tabulate(table, headers=header, tablefmt=format))
+    typer.echo(tabulate(table, headers=header, tablefmt=output.value))
