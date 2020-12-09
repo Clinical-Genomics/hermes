@@ -30,7 +30,7 @@ jobs:
 
       - name: Test with pytest & Coveralls
         run: |
-          poetry run pytest --cov=./ --cov-report xml --cov-report term
+          poetry run pytest --cov=cg_hermes/ --cov-report xml --cov-report term
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v1
