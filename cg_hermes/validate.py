@@ -1,57 +1,118 @@
 """Code for validating files from different sources"""
+import copy
 import logging
-from typing import Dict, FrozenSet, List, Set
+from typing import Dict, FrozenSet, List, Optional, Set
 
-from cg_hermes.config.mip import MIP_DNA_TAGS
+from cg_hermes import config
+from cg_hermes.config.pipelines import AnalysisType, Pipeline
 from cg_hermes.config.tags import COMMON_TAG_CATEGORIES
 from cg_hermes.exceptions import MissingFileError
-from cg_hermes.models.pipeline_deliverables import BalsamicDeliverables, MipDeliverables
+from cg_hermes.models import pipeline_deliverables
+from cg_hermes.models.pipeline_deliverables import (
+    BalsamicDeliverables,
+    FluffyDeliverables,
+    MipDeliverables,
+    PipelineDeliverables,
+)
 from cg_hermes.models.tags import TagMap
 
 LOG = logging.getLogger(__name__)
 
 
-def validate_mandatory_files(file_identifiers: Set[FrozenSet[str]], config: dict) -> List[str]:
-    missing_mandatory_files = []
-    for file_tags in config:
-        if not config[file_tags]["is_mandatory"]:
-            continue
-        if file_tags not in file_identifiers:
-            LOG.warning("Mandatory file (%s) is missing", ", ".join(file_tags))
-            missing_mandatory_files.append(", ".join(file_tags))
-    return missing_mandatory_files
+class DeliverablesValidator:
+    """Class with functionality to validate deliverables"""
 
+    def __init__(
+        self,
+        deliverables: Dict[str, List[Dict[str, str]]],
+        pipeline: Pipeline,
+        analysis_type: Optional[AnalysisType] = None,
+    ):
+        self.raw_deliverables = deliverables
+        self.pipeline = pipeline
+        self.analysis_type = analysis_type
+        self.configs: Dict[FrozenSet[str], dict]
+        self.file_identifiers: Set[FrozenSet[str]]
+        if self.pipeline == Pipeline.fluffy:
+            LOG.info("Parsing deliverables for fluffy")
+            self.model: FluffyDeliverables = FluffyDeliverables.parse_obj(self.raw_deliverables)
+            self.file_identifiers = self.get_fluffy_files()
+            self.configs = config.fluffy.FLUFFY_COMMON_TAGS
+        elif self.pipeline == Pipeline.balsamic:
+            LOG.info("Parsing deliverables for balsamic")
+            self.model: BalsamicDeliverables = BalsamicDeliverables.parse_obj(self.raw_deliverables)
+            self.file_identifiers = self.get_balsamic_files()
+            self.configs = self.get_balsamic_analysis_configs()
+        else:
+            LOG.info("Parsing deliverables for mip")
+            self.model: MipDeliverables = MipDeliverables.parse_obj(self.raw_deliverables)
+            self.file_identifiers = self.get_mip_files()
+            self.configs = config.mip.MIP_DNA_TAGS
 
-def validate_mip_deliverables(deliverables: Dict[str, List[Dict[str, str]]]) -> MipDeliverables:
-    """Validate that the deliverables is following the mip specifications
+    def get_balsamic_analysis_configs(self) -> Dict[FrozenSet[str], dict]:
+        if self.analysis_type == AnalysisType.tumor_wgs:
+            tag_set = config.balsamic.TUMOR_ONLY_WGS_TAGS
+        elif self.analysis_type == AnalysisType.tumor_normal_wgs:
+            tag_set = config.balsamic.TUMOR_NORMAL_WGS_TAGS
+        elif self.analysis_type == AnalysisType.tumor_panel:
+            tag_set = config.balsamic.TUMOR_ONLY_PANEL_TAGS
+        else:
+            tag_set = config.balsamic.TUMOR_NORMAL_PANEL_TAGS
 
-    Mip creates unique identifiers for files by using either both 'step' and 'tag' or only 'step'
+        updated_tags = copy.deepcopy(config.balsamic.BALSAMIC_COMMON_TAGS)
+        for tag_name in tag_set:
+            tag_info = tag_set[tag_name]
+            updated_tags[tag_name]["is_mandatory"] = tag_info["is_mandatory"]
+        return updated_tags
 
-    """
-    model: MipDeliverables = MipDeliverables.parse_obj(deliverables)
-    file_identifiers: Set[FrozenSet[str]] = set()
-    for file_obj in model.files:
-        identifier = [file_obj.step]
-        if file_obj.tag:
-            identifier.append(file_obj.tag)
-        file_identifiers.add(frozenset(identifier))
+    def validate_deliverables(self) -> PipelineDeliverables:
+        self.validate_mandatory_files()
+        return self.model
 
-    missing_files = validate_mandatory_files(file_identifiers, config=MIP_DNA_TAGS)
-    if missing_files:
-        raise MissingFileError(
-            files=missing_files, message="Deliverables is missing mandatory files"
-        )
+    def validate_mandatory_files(self) -> None:
+        """Validate that all mandatory files are present in deliverables"""
+        missing_mandatory_files = []
+        for file_tags in self.configs:
+            if not self.configs[file_tags]["is_mandatory"]:
+                continue
+            if file_tags not in self.file_identifiers:
+                LOG.warning("Mandatory file (%s) is missing", ", ".join(file_tags))
+                missing_mandatory_files.append(", ".join(file_tags))
 
-    return model
+        if missing_mandatory_files:
+            raise MissingFileError(
+                files=missing_mandatory_files, message="Deliverables is missing mandatory files"
+            )
 
+    def get_mip_files(self) -> Set[FrozenSet[str]]:
+        file_obj: pipeline_deliverables.MipFile
+        files: Set[FrozenSet[str]] = set()
+        for file_obj in self.model.files:
+            identifier = [file_obj.step]
+            if file_obj.tag:
+                identifier.append(file_obj.tag)
+            files.add(frozenset(identifier))
+        return files
 
-def validate_balsamic_deliverables(
-    deliverables: Dict[str, List[Dict[str, str]]]
-) -> BalsamicDeliverables:
-    """Validate that the deliverables is following the balsamic specifications"""
-    model = BalsamicDeliverables.parse_obj(deliverables)
+    def get_fluffy_files(self) -> Set[FrozenSet[str]]:
+        file_obj: pipeline_deliverables.FileBase
+        files: Set[FrozenSet[str]] = set()
+        for file_obj in self.model.files:
+            files.add(frozenset([file_obj.tag.lower()]))
+        return files
 
-    return model
+    def get_balsamic_files(self) -> Set[FrozenSet[str]]:
+        file_obj: pipeline_deliverables.BalsamicFile
+        files: Set[FrozenSet[str]] = set()
+        for file_obj in self.model.files:
+            sample_id: str = file_obj.id
+            tag_sample_id: str = sample_id.replace("_", "-")
+            tags = frozenset(
+                [tag.lower() for tag in file_obj.tag.split(",") if tag != tag_sample_id]
+            )
+            LOG.debug("Found tag %s", tags)
+            files.add(tags)
+        return files
 
 
 def validate_common_tags() -> bool:
@@ -72,11 +133,11 @@ def validate_common_tags() -> bool:
     return True
 
 
-def validate_tag_map(tags: Dict[FrozenSet[str], dict]) -> bool:
+def validate_tag_map(tag_map: Dict[FrozenSet[str], dict]) -> bool:
     """Validate if a tag map is on the correct format"""
-    for pipeline_tags in tags:
+    for pipeline_tags in tag_map:
         assert isinstance(pipeline_tags, frozenset)
-        TagMap.validate(tags[pipeline_tags])
+        TagMap.validate(tag_map[pipeline_tags])
     return True
 
 

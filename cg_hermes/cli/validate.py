@@ -8,14 +8,9 @@ from cg_hermes.cli.common import get_deliverables
 from cg_hermes.config.balsamic import BALSAMIC_COMMON_TAGS
 from cg_hermes.config.fluffy import FLUFFY_COMMON_TAGS
 from cg_hermes.config.mip import MIP_DNA_TAGS
-from cg_hermes.config.pipelines import Pipeline
+from cg_hermes.config.pipelines import AnalysisType, Pipeline
 from cg_hermes.exceptions import MissingFileError
-from cg_hermes.validate import (
-    validate_balsamic_deliverables,
-    validate_common_tags,
-    validate_mip_deliverables,
-    validate_tag_map,
-)
+from cg_hermes.validate import DeliverablesValidator, validate_common_tags, validate_tag_map
 
 LOG = logging.getLogger(__name__)
 
@@ -26,19 +21,23 @@ app = typer.Typer()
 def validate_deliverables(
     infile: Path,
     pipeline: Pipeline = typer.Option(Pipeline.mip, help="Specify what pipeline"),
+    analysis_type: AnalysisType = typer.Option(None, help="Specify the analysis type"),
 ):
     """Validate a deliverables file"""
     LOG.info("Validating file '%s' from pipeline %s", infile, pipeline.value)
+    if pipeline == Pipeline.balsamic:
+        if not analysis_type:
+            LOG.info("Please specify analysis type for balsamic")
+            raise typer.Exit(code=1)
 
     # Read raw file into dict
     deliverables = get_deliverables(infile)
-    # Initiate the correct validation method
-    validation_method = validate_mip_deliverables
-    if pipeline == "balsamic":
-        validation_method = validate_balsamic_deliverables
 
     try:
-        validation_method(deliverables)
+        validator = DeliverablesValidator(
+            deliverables=deliverables, pipeline=pipeline, analysis_type=analysis_type
+        )
+        validator.validate_mandatory_files()
     except (ValidationError, MissingFileError) as err:
         LOG.error(err)
         LOG.warning("File %s does not follow the spec", infile)
@@ -69,7 +68,7 @@ def validate_tags_cmd(pipeline: Pipeline):
         raise typer.Exit(code=exit_code)
 
     try:
-        validate_tag_map(tags=tag_map)
+        validate_tag_map(tag_map=tag_map)
         LOG.info("Tag map looks fine")
     except ValidationError as err:
         LOG.warning(err)

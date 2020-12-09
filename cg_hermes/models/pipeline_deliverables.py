@@ -33,6 +33,10 @@ class BalsamicDeliverables(PipelineDeliverables):
     files: List[BalsamicFile]
 
 
+class FluffyDeliverables(PipelineDeliverables):
+    files: List[FileBase]
+
+
 class CGDeliverables(PipelineDeliverables):
     pipeline: str
     files: List[CGTag]
