@@ -8,11 +8,11 @@ from typing import Optional
 import typer
 from pydantic import ValidationError
 
-from cg_hermes import validate
 from cg_hermes.cli.common import get_deliverables
-from cg_hermes.config.pipelines import Pipeline
+from cg_hermes.config.pipelines import AnalysisType, Pipeline
+from cg_hermes.deliverables import Deliverables
 from cg_hermes.exceptions import MissingFileError
-from cg_hermes.parse import convert_to_cg_deliverables
+from cg_hermes.validate import get_deliverables_obj
 
 LOG = logging.getLogger(__name__)
 
@@ -20,21 +20,30 @@ app = typer.Typer()
 
 
 @app.command(name="deliverables")
-def convert_cmd(infile: Path, pipeline: Pipeline, outfile: Optional[Path] = None):
+def convert_cmd(
+    infile: Path,
+    pipeline: Pipeline,
+    outfile: Optional[Path] = None,
+    analysis_type: AnalysisType = typer.Option(None, help="Specify the analysis type"),
+):
     LOG.info("Convert deliverable file %s to CG format", infile)
-    deliverables_raw: dict = get_deliverables(infile)
-    if pipeline == Pipeline.mip:
-        validation_function = validate.validate_mip_deliverables
-    if pipeline == Pipeline.fluffy:
-        validation_function = validate.validate_fluffy_deliverables
+    # Read raw file into dict
+    deliverables_raw = get_deliverables(infile)
+
     try:
-        deliverables = validation_function(deliverables_raw)
+        deliverables_obj: Deliverables = get_deliverables_obj(
+            deliverables=deliverables_raw, pipeline=pipeline, analysis_type=analysis_type
+        )
+        deliverables_obj.validate_mandatory_files()
+    except SyntaxError:
+        raise typer.Abort()
     except (ValidationError, MissingFileError) as err:
         LOG.error(err)
         LOG.warning("File %s does not follow the spec", infile)
         raise typer.Abort()
-    raise typer.Exit()
-    cg_deliverables = convert_to_cg_deliverables(deliverables, pipeline=pipeline)
+
+    cg_deliverables = deliverables_obj.convert_to_cg_deliverables()
+
     if outfile:
         with open(outfile, "w") as handle:
             json.dump(cg_deliverables.dict(), handle)

@@ -40,6 +40,7 @@ BALSAMIC_COMMON_TAGS = {
     frozenset({"multiqc-html", "html"}): {
         "tags": ["multiqc-html"],
         "is_mandatory": True,
+        "bundle_id": True,
         "used_by": ["scout", "deliver", "audit"],
     },
     frozenset({"multiqc-json", "json"}): {
@@ -615,12 +616,3 @@ TUMOR_NORMAL_PANEL_TAGS = {
     frozenset({"cram", "tumor-cram"}): {"is_mandatory": True},
     frozenset({"cram", "tumor-cram-index"}): {"is_mandatory": True},
 }
-
-
-def create_tags(tag_set: Dict[FrozenSet[str], dict]) -> Dict[FrozenSet[str], dict]:
-    """Combine the common tags with the specific"""
-    updated_tags = copy.deepcopy(BALSAMIC_COMMON_TAGS)
-    for tag_name in tag_set:
-        tag_info = tag_set[tag_name]
-        updated_tags[tag_name]["is_mandatory"] = tag_info["is_mandatory"]
-    return updated_tags

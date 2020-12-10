@@ -40,6 +40,7 @@ MIP_DNA_TAGS = {
         "tags": ["vcf-snv-clinical"],
         "index_tags": ["vcf-snv-clinical-index"],
         "is_mandatory": True,
+        "bundle_id": True,
         "used_by": ["scout"],
     },
     frozenset(["endvariantannotationblock", "research"]): {

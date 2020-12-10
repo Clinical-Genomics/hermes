@@ -1,17 +1,14 @@
 """Functions for parsing files"""
 
+import logging
 from copy import deepcopy
-from typing import Iterable
+from typing import Dict, FrozenSet, Iterable, List
 
-from cg_hermes.config.mip import MIP_DNA_TAGS
-from cg_hermes.config.pipelines import Pipeline
-from cg_hermes.models.pipeline_deliverables import (
-    CGDeliverables,
-    MipDeliverables,
-    MipFile,
-    PipelineDeliverables,
-)
+from cg_hermes.deliverables import Deliverables
+from cg_hermes.models.pipeline_deliverables import CGDeliverables, TagBase
 from cg_hermes.models.tags import CGTag
+
+LOG = logging.getLogger(__name__)
 
 
 def convert_to_cg_tag(tag_info: dict, subject_id: str, path: str) -> CGTag:
@@ -22,46 +19,43 @@ def convert_to_cg_tag(tag_info: dict, subject_id: str, path: str) -> CGTag:
     return CGTag(path=path, tags=tags)
 
 
-def parse_mip_deliverables(deliverables: MipDeliverables) -> Iterable[CGTag]:
-    file_obj: MipFile
-    for file_obj in deliverables.files:
-        mip_tags = [file_obj.step]
-        if file_obj.tag:
-            mip_tags.append(file_obj.tag)
-        conversion_info = MIP_DNA_TAGS[frozenset(mip_tags)]
+def parse_deliverables(
+    file_objects: List[TagBase], configs: Dict[FrozenSet[str], dict]
+) -> Iterable[CGTag]:
+    for file_object in file_objects:
+        tags = file_object.tags
+        if tags not in configs:
+            LOG.warning("Could not find info for file %s", ", ".join(tags))
+            continue
+        conversion_info = configs[tags]
         yield convert_to_cg_tag(
-            tag_info=conversion_info, subject_id=file_obj.id, path=file_obj.path
+            tag_info=conversion_info, subject_id=file_object.subject_id, path=file_object.path
         )
-        if file_obj.path_index:
+        if file_object.path_index:
             yield convert_to_cg_tag(
-                tag_info=conversion_info, subject_id=file_obj.id, path=file_obj.path_index
+                tag_info=conversion_info,
+                subject_id=file_object.subject_id,
+                path=file_object.path_index,
             )
 
 
-def convert_to_cg_deliverables(
-    deliverables: PipelineDeliverables, pipeline: Pipeline
-) -> CGDeliverables:
-    tag_objs = []
-    if pipeline.value == "mip":
-        tag_objs = parse_mip_deliverables(deliverables)
-    return CGDeliverables(pipeline=pipeline.value, files=tag_objs)
+def convert_to_cg_deliverables(deliverables: Deliverables) -> CGDeliverables:
+    tag_objs = parse_deliverables(deliverables.files, deliverables.configs)
+    return CGDeliverables(pipeline=deliverables.pipeline.value, files=tag_objs)
 
 
 if __name__ == "__main__":
-    mip_deliverables = {
-        "files": [
-            {
-                "format": "coverage",
-                "id": "sample_id",
+    file_objs = [
+        TagBase(
+            **{
+                "subject_id": "sample_id",
                 "path": "path/to/file",
                 "path_index": None,
-                "step": "chanjo_sexcheck",
-                "tag": None,
+                "tags": frozenset(["chanjo_sexcheck"]),
             }
-        ]
-    }
-    deliverable_obj = MipDeliverables(**mip_deliverables)
-    pipeline = Pipeline("mip")
-    print(pipeline, pipeline.value)
-    cg_deliverables = convert_to_cg_deliverables(deliverable_obj, pipeline)
-    print(cg_deliverables)
+        )
+    ]
+
+    cg_deliverables = parse_mip_deliverables(file_objs)
+    for file_obj in cg_deliverables:
+        print(file_obj)

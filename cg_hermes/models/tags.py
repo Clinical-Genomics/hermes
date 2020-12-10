@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Optional
 
 from pydantic import validator
 from pydantic.main import BaseModel
@@ -10,6 +10,7 @@ class TagMap(BaseModel):
     tags: List[str]
     is_mandatory: bool
     used_by: List[str]
+    bundle_id: Optional[bool] = False
 
     @validator("tags", each_item=True)
     def check_tags(cls, tag):

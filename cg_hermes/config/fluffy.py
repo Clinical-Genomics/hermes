@@ -8,6 +8,7 @@ FLUFFY_COMMON_TAGS = {
     },
     frozenset(["nipt_csv"]): {
         "tags": ["metrics"],
+        "bundle_id": True,
         "is_mandatory": True,
         "used_by": ["nipt"],
     },
