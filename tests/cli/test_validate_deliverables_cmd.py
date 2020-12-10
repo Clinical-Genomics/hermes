@@ -18,3 +18,26 @@ def test_validate_mip_deliverables_file(cli_runner: CliRunner, mip_dna_deliverab
 
     # THEN assert it exits without problem
     assert result.exit_code == 0
+
+
+def test_validate_balsamic_deliverables_file(
+    cli_runner: CliRunner, balsamic_t_wgs_deliverables: Path
+):
+    # GIVEN a existing balsamic deliverables file and a CLI runner
+    assert balsamic_t_wgs_deliverables.exists()
+
+    # WHEN running the validate deliverables command
+    result = cli_runner.invoke(
+        app,
+        [
+            "deliverables",
+            str(balsamic_t_wgs_deliverables),
+            "--pipeline",
+            "balsamic",
+            "--analysis-type",
+            "tumor_wgs",
+        ],
+    )
+
+    # THEN assert it exits without problem
+    assert result.exit_code == 0
