@@ -24,8 +24,9 @@ jobs:
       poetry-version: "1.1.0"
 
    - name: Build and publish to PYPI
-     run:
-        poetry publish --build
+     run: |
+       poetry version $(git describe --tags --abbrev=0)
+       poetry publish --build
      env:
        GITHUB: 1
        POETRY_PYPI_TOKEN_PYPI: ${{ secrets.POETRY_PYPI_TOKEN_PYPI }}
