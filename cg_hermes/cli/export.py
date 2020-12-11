@@ -6,6 +6,7 @@ from tabulate import tabulate
 
 from cg_hermes.config.balsamic import BALSAMIC_COMMON_TAGS
 from cg_hermes.config.fluffy import FLUFFY_COMMON_TAGS
+from cg_hermes.config.microsalt import MICROSALT_COMMON_TAGS
 from cg_hermes.config.mip import MIP_DNA_TAGS
 from cg_hermes.config.pipelines import Pipeline
 from cg_hermes.config.tags import COMMON_TAG_CATEGORIES
@@ -63,6 +64,10 @@ def export_tags_cmd(
     elif pipeline == Pipeline.fluffy:
         header = ["Fluffy tags", "Mandatory", "HK tags", "Used by"]
         table = get_table(FLUFFY_COMMON_TAGS)
+
+    elif pipeline == Pipeline.microsalt:
+        header = ["Microsalt tags", "Mandatory", "HK tags", "Used by"]
+        table = get_table(MICROSALT_COMMON_TAGS)
 
     elif pipeline == Pipeline.balsamic:
         header = ["Balsamic tags", "Mandatory", "HK tags", "Used by"]

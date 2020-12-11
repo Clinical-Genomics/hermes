@@ -25,7 +25,6 @@ jobs:
 
    - name: Build and publish to PYPI
      run: |
-       poetry version $(git describe --tags --abbrev=0)
        poetry publish --build
      env:
        GITHUB: 1
