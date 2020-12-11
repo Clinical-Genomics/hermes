@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Mip tag map - Hermes documentation</title>
+        <title>Microsalt tag map - Hermes documentation</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
@@ -39,8 +39,8 @@
                             <li class="navitem">
                                 <a href="../all_tags/" class="nav-link">Available tags</a>
                             </li>
-                            <li class="navitem active">
-                                <a href="./" class="nav-link">Mip tag map</a>
+                            <li class="navitem">
+                                <a href="../mip_map/" class="nav-link">Mip tag map</a>
                             </li>
                             <li class="navitem">
                                 <a href="../balsamic_map/" class="nav-link">Balsamic tag map</a>
@@ -48,8 +48,8 @@
                             <li class="navitem">
                                 <a href="../fluffy_map/" class="nav-link">Fluffy tag map</a>
                             </li>
-                            <li class="navitem">
-                                <a href="../microsalt_map/" class="nav-link">Microsalt tag map</a>
+                            <li class="navitem active">
+                                <a href="./" class="nav-link">Microsalt tag map</a>
                             </li>
                         </ul>
 
@@ -60,12 +60,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../all_tags/" class="nav-link">
+                                <a rel="prev" href="../fluffy_map/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../balsamic_map/" class="nav-link">
+                                <a rel="next" class="nav-link disabled">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -94,7 +94,7 @@
 <table>
 <thead>
 <tr>
-<th>Mip tags</th>
+<th>Microsalt tags</th>
 <th>Mandatory</th>
 <th>HK tags</th>
 <th>Used by</th>
@@ -102,220 +102,82 @@
 </thead>
 <tbody>
 <tr>
-<td>chanjo_sexcheck</td>
+<td>analysis, sampleinfo</td>
+<td>True</td>
+<td>config</td>
+<td>storage, audit</td>
+</tr>
+<tr>
+<td>microsalt-qc, result_aggregation</td>
+<td>True</td>
+<td>qc-report, visualization</td>
+<td>deliver</td>
+</tr>
+<tr>
+<td>microsalt-type, result_aggregation</td>
+<td>True</td>
+<td>typing-report, visualization</td>
+<td>deliver</td>
+</tr>
+<tr>
+<td>microsalt-json, result_aggregation</td>
 <td>False</td>
-<td>chanjo, sex-check</td>
-<td>scout</td>
-</tr>
-<tr>
-<td>sites, chromograph_upd</td>
-<td>False</td>
-<td>chromograph, upd, sites</td>
-<td>scout</td>
-</tr>
-<tr>
-<td>regions, chromograph_upd</td>
-<td>False</td>
-<td>chromograph, upd, regions</td>
-<td>scout</td>
-</tr>
-<tr>
-<td>chromograph_cov, tcov</td>
-<td>False</td>
-<td>chromograph, tcov</td>
-<td>scout</td>
-</tr>
-<tr>
-<td>clinical, endvariantannotationblock</td>
-<td>True</td>
-<td>vcf-snv-clinical</td>
-<td>scout</td>
-</tr>
-<tr>
-<td>research, endvariantannotationblock</td>
-<td>True</td>
-<td>vcf-snv-research</td>
-<td>scout</td>
-</tr>
-<tr>
-<td>sv_str, expansionhunter</td>
-<td>False</td>
-<td>vcf-str</td>
-<td>scout</td>
-</tr>
-<tr>
-<td>gatk_baserecalibration</td>
-<td>False</td>
-<td>cram</td>
-<td>scout</td>
-</tr>
-<tr>
-<td>gatk_combinevariantcallsets</td>
-<td>True</td>
-<td>snv-gbcf, snv-bcf</td>
-<td>genotype</td>
-</tr>
-<tr>
-<td>config, mip_analyse</td>
-<td>True</td>
-<td>mip-analyse, config</td>
-<td>cg, audit</td>
-</tr>
-<tr>
-<td>config_analysis, mip_analyse</td>
-<td>True</td>
-<td>mip-config</td>
-<td>cg, audit</td>
-</tr>
-<tr>
-<td>log, mip_analyse</td>
-<td>True</td>
-<td>mip-log</td>
-<td>audit</td>
-</tr>
-<tr>
-<td>pedigree, mip_analyse</td>
-<td>True</td>
-<td>pedigree-yaml</td>
-<td>audit</td>
-</tr>
-<tr>
-<td>pedigree_fam, mip_analyse</td>
-<td>True</td>
-<td>pedigree</td>
-<td>scout</td>
-</tr>
-<tr>
-<td>references_info, mip_analyse</td>
-<td>True</td>
-<td>mip-analyse, reference-info</td>
-<td>audit</td>
-</tr>
-<tr>
-<td>sample_info, mip_analyse</td>
-<td>True</td>
-<td>sample-info</td>
-<td>cg, audit</td>
-</tr>
-<tr>
-<td>html, multiqc_ar</td>
-<td>True</td>
-<td>multiqc-html</td>
-<td>scout</td>
-</tr>
-<tr>
-<td>json, multiqc_ar</td>
-<td>True</td>
-<td>multiqc-json</td>
+<td>typing-report, qc-metrics</td>
 <td>vogue</td>
 </tr>
 <tr>
-<td>peddy_ar, ped_check</td>
+<td>runtime-settings, analysis</td>
 <td>True</td>
-<td>peddy, ped-check</td>
-<td>audit, scout</td>
+<td>microsalt-config</td>
+<td>storage, audit</td>
 </tr>
 <tr>
-<td>peddy, peddy_ar</td>
+<td>assembly</td>
 <td>True</td>
-<td>peddy, ped</td>
-<td>audit, scout</td>
+<td>assembly</td>
+<td>storage</td>
 </tr>
 <tr>
-<td>sex_check, peddy_ar</td>
-<td>True</td>
-<td>peddy, sex-check</td>
-<td>audit, scout</td>
+<td>concatination, trimmed-forward-reads</td>
+<td>False</td>
+<td>fastq, forward-strand</td>
+<td>storage</td>
 </tr>
 <tr>
-<td>qccollect_ar</td>
+<td>concatination, trimmed-reverse-reads</td>
+<td>False</td>
+<td>fastq, reverse-strand</td>
+<td>storage</td>
+</tr>
+<tr>
+<td>concatination, trimmed-unpaired-reads</td>
+<td>False</td>
+<td>fastq, unpaired-reads</td>
+<td>storage</td>
+</tr>
+<tr>
+<td>analysis, logfile</td>
 <td>True</td>
-<td>qc-metrics</td>
+<td>microsalt-log</td>
 <td>audit</td>
 </tr>
 <tr>
-<td>rhocall_viz</td>
+<td>assembly, quast-results</td>
 <td>False</td>
-<td>rhocall-viz</td>
-<td>scout</td>
-</tr>
-<tr>
-<td>coverage, sambamba_depth</td>
-<td>True</td>
-<td>coverage, sambamba-depth</td>
-<td>chanjo</td>
-</tr>
-<tr>
-<td>samtools_subsample_mt</td>
-<td>False</td>
-<td>bam-mt</td>
-<td>scout</td>
-</tr>
-<tr>
-<td>smncopynumbercaller</td>
-<td>False</td>
-<td>smn-calling</td>
-<td>scout</td>
-</tr>
-<tr>
-<td>star_caller</td>
-<td>False</td>
-<td>cyrius</td>
-<td>scout</td>
-</tr>
-<tr>
-<td>sv_combinevariantcallsets</td>
-<td>True</td>
-<td>sv-bcf</td>
+<td>qc-metrics, assembly</td>
 <td>audit</td>
 </tr>
 <tr>
-<td>clinical, sv_reformat</td>
-<td>False</td>
-<td>vcf-sv-clinical</td>
-<td>scout</td>
-</tr>
-<tr>
-<td>research, sv_reformat</td>
-<td>False</td>
-<td>vcf-sv-research</td>
-<td>scout</td>
-</tr>
-<tr>
-<td>telomerecat_ar</td>
-<td>False</td>
-<td>telomere-calling</td>
-<td>scout</td>
-</tr>
-<tr>
-<td>tiddit_coverage</td>
-<td>False</td>
-<td>tiddit-coverage, bigwig</td>
-<td>scout</td>
-</tr>
-<tr>
-<td>upd_ar, regions</td>
-<td>False</td>
-<td>upd, regions</td>
-<td>scout</td>
-</tr>
-<tr>
-<td>sites, upd_ar</td>
-<td>False</td>
-<td>upd, sites</td>
-<td>scout</td>
-</tr>
-<tr>
-<td>version_collect_ar</td>
+<td>reference-alignment-sorted, alignment</td>
 <td>True</td>
-<td>exe-ver</td>
-<td>audit</td>
+<td>bam</td>
+<td>storage</td>
 </tr>
 <tr>
-<td>vcf2cytosure_ar</td>
+<td>insertsize_calc, picard-insertsize</td>
 <td>False</td>
-<td>vcf2cytosure</td>
-<td>scout</td>
+<td>qc-metrics, picard</td>
+<td>audit</td>
 </tr>
 </tbody>
 </table></div>
