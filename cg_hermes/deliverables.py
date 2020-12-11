@@ -3,7 +3,16 @@ import copy
 import logging
 from typing import Dict, FrozenSet, List, Optional, Set
 
-from cg_hermes import config
+from cg_hermes.config.balsamic import (
+    BALSAMIC_COMMON_TAGS,
+    TUMOR_NORMAL_PANEL_TAGS,
+    TUMOR_NORMAL_WGS_TAGS,
+    TUMOR_ONLY_PANEL_TAGS,
+    TUMOR_ONLY_WGS_TAGS,
+)
+from cg_hermes.config.fluffy import FLUFFY_COMMON_TAGS
+from cg_hermes.config.microsalt import MICROSALT_COMMON_TAGS
+from cg_hermes.config.mip import MIP_DNA_TAGS
 from cg_hermes.config.pipelines import AnalysisType, Pipeline
 from cg_hermes.exceptions import MissingFileError
 from cg_hermes.models import pipeline_deliverables
@@ -11,6 +20,7 @@ from cg_hermes.models.pipeline_deliverables import (
     BalsamicDeliverables,
     CGDeliverables,
     FluffyDeliverables,
+    MicrosaltDeliverables,
     MipDeliverables,
     PipelineDeliverables,
     TagBase,
@@ -36,22 +46,33 @@ class Deliverables:
         self.configs: Dict[FrozenSet[str], TagMap]
         self.files: List[TagBase]
         self.file_identifiers: Set[FrozenSet[str]]
+        self.model: PipelineDeliverables
+        self.set_pipeline_specific_variables()
+        self.file_identifiers = {file_obj.tags for file_obj in self.files}
+
+    def set_pipeline_specific_variables(self):
         if self.pipeline == Pipeline.fluffy:
             LOG.info("Parsing deliverables for fluffy")
             self.model: FluffyDeliverables = FluffyDeliverables.parse_obj(self.raw_deliverables)
             self.files = self.get_fluffy_files()
-            self.configs = Deliverables.build_internal_tag_map(config.fluffy.FLUFFY_COMMON_TAGS)
+            self.configs = Deliverables.build_internal_tag_map(FLUFFY_COMMON_TAGS)
         elif self.pipeline == Pipeline.balsamic:
             LOG.info("Parsing deliverables for balsamic")
             self.model: BalsamicDeliverables = BalsamicDeliverables.parse_obj(self.raw_deliverables)
             self.files = self.get_balsamic_files()
             self.configs = Deliverables.build_internal_tag_map(self.get_balsamic_analysis_configs())
+        elif self.pipeline == Pipeline.microsalt:
+            LOG.info("Parsing deliverables for microsalt")
+            self.model: MicrosaltDeliverables = MicrosaltDeliverables.parse_obj(
+                self.raw_deliverables
+            )
+            self.files = self.get_microsalt_files()
+            self.configs = Deliverables.build_internal_tag_map(MICROSALT_COMMON_TAGS)
         else:
             LOG.info("Parsing deliverables for mip")
             self.model: MipDeliverables = MipDeliverables.parse_obj(self.raw_deliverables)
             self.files = self.get_mip_files()
-            self.configs = Deliverables.build_internal_tag_map(config.mip.MIP_DNA_TAGS)
-        self.file_identifiers = {file_obj.tags for file_obj in self.files}
+            self.configs = Deliverables.build_internal_tag_map(MIP_DNA_TAGS)
 
     @staticmethod
     def build_internal_tag_map(tag_map: Dict[FrozenSet[str], dict]) -> Dict[FrozenSet[str], TagMap]:
@@ -105,15 +126,15 @@ class Deliverables:
 
     def get_balsamic_analysis_configs(self) -> Dict[FrozenSet[str], dict]:
         if self.analysis_type == AnalysisType.tumor_wgs:
-            tag_set = config.balsamic.TUMOR_ONLY_WGS_TAGS
+            tag_set = TUMOR_ONLY_WGS_TAGS
         elif self.analysis_type == AnalysisType.tumor_normal_wgs:
-            tag_set = config.balsamic.TUMOR_NORMAL_WGS_TAGS
+            tag_set = TUMOR_NORMAL_WGS_TAGS
         elif self.analysis_type == AnalysisType.tumor_panel:
-            tag_set = config.balsamic.TUMOR_ONLY_PANEL_TAGS
+            tag_set = TUMOR_ONLY_PANEL_TAGS
         else:
-            tag_set = config.balsamic.TUMOR_NORMAL_PANEL_TAGS
+            tag_set = TUMOR_NORMAL_PANEL_TAGS
 
-        updated_tags = copy.deepcopy(config.balsamic.BALSAMIC_COMMON_TAGS)
+        updated_tags = copy.deepcopy(BALSAMIC_COMMON_TAGS)
         for tag_name in tag_set:
             tag_info = tag_set[tag_name]
             updated_tags[tag_name]["is_mandatory"] = tag_info["is_mandatory"]
@@ -147,6 +168,22 @@ class Deliverables:
                     subject_id=file_obj.id,
                     path=file_obj.path,
                     path_index=file_obj.path_index,
+                )
+            )
+        return files
+
+    def get_microsalt_files(self) -> List[TagBase]:
+        file_obj: pipeline_deliverables.MicrosaltFile
+        files: List[TagBase] = []
+        for file_obj in self.model.files:
+            identifier = [file_obj.step]
+            if file_obj.tag:
+                identifier.append(file_obj.tag)
+            files.append(
+                TagBase(
+                    tags=frozenset(identifier),
+                    subject_id=file_obj.id,
+                    path=file_obj.path,
                 )
             )
         return files

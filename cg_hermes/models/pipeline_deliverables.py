@@ -4,6 +4,8 @@ from pydantic import BaseModel
 
 from .tags import CGTag
 
+# Classes to represent file entries in the deliverables files
+
 
 class FileBase(BaseModel):
     "Definition for elements in deliverables file"
@@ -20,10 +22,20 @@ class MipFile(FileBase):
     step: str
 
 
+class MicrosaltFile(FileBase):
+    """Definition for elements in Microsalt deliverables"""
+
+    format: str
+    step: str
+
+
 class BalsamicFile(FileBase):
     """Definition of elements in balsamic deliverables"""
 
     format: Optional[str]
+
+
+# Classes to represent deliverable files
 
 
 class PipelineDeliverables(BaseModel):
@@ -36,6 +48,12 @@ class MipDeliverables(PipelineDeliverables):
     """Specification for a MIP specific deliverables file"""
 
     files: List[MipFile]
+
+
+class MicrosaltDeliverables(PipelineDeliverables):
+    """Specification for a MIP specific deliverables file"""
+
+    files: List[MicrosaltFile]
 
 
 class BalsamicDeliverables(PipelineDeliverables):

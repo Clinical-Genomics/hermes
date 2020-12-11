@@ -16,7 +16,12 @@ ALIGNMENT_COMMON = {
     },
 }
 
-RAW_DATA = {"fastq": {"description": "Files with raw data in fastq format"}}
+RAW_DATA = {
+    "fastq": {"description": "Files with raw data in fastq format"},
+    "forward-strand": {"description": "Reads from forward strand"},
+    "reverse-strand": {"description": "Reads from reverse strand"},
+    "unpaired-reads": {"description": "Reads that could not be paired"},
+}
 
 
 VARIANT_COMMON = {
@@ -58,6 +63,7 @@ REPORTING_COMMON = {
     "multiqc-json": {"description": "Multiqc report for the run in json format"},
     "sambamba-depth": {"description": "Coverage information from sambamba"},
     "vcf-report": {"description": "Results and QC from variant calling"},
+    "qc-report": {"description": "Results and QC"},
 }
 
 VALIDATIONS_COMMON = {
@@ -83,6 +89,7 @@ ANALYSIS_COMMON = {
     "tcov": {"description": "Coverage output"},
     "tiddit-coverage": {"description": "Coverage output from tiddit"},
     "visualization": {"description": "Visualizes data"},
+    "assembly": {"description": "Assembled genome"},
 }
 
 TOOLS = {
@@ -95,6 +102,7 @@ TOOLS = {
     "manta": {"description": "Tool to call structural variants"},
     "mutect": {"description": "Cancer variant caller"},
     "peddy": {"description": "Tool to check pedigree and ancestral relations"},
+    "picard": {"description": "Picard set of bioinformatic tools"},
     "scope": {"description": "Call snv indels"},
     "sention": {"description": "Sention algorithm"},
     "strelka": {"description": "Cancer variant caller"},
@@ -116,6 +124,12 @@ BALSAMIC_SPECIFIC = {
     "balsamic-config": {"description": "Balsamic configs for analysis"},
     "balsamic-dag": {"description": "Balsamic run schema"},
     "balsamic-report": {"description": "Report from analysis"},
+}
+
+MICROSALT_SPECIFIC = {
+    "microsalt-config": {"description": "Config settings for microsalt analysis"},
+    "microsalt-log": {"description": "SLURM log for microsalt analysis"},
+    "typing-report": {"description": "Results from bacterial typing"},
 }
 
 AVAILABLE_USAGES = {
@@ -147,6 +161,7 @@ ALL_TAG_CATEGORIES = [
     BALSAMIC_SPECIFIC,
     FAMILY_COMMON,
     MIP_SPECIFIC,
+    MICROSALT_SPECIFIC,
     RAW_DATA,
     REPORTING_COMMON,
     TOOLS,
