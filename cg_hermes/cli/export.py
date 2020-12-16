@@ -35,6 +35,26 @@ class OutputFormat(str, Enum):
     plain = "plain"
 
 
+PIPELINE_MAP = {
+    Pipeline.mip.value: {
+        "header": ["Mip tags", "Mandatory", "HK tags", "Used by"],
+        "tags": MIP_DNA_TAGS,
+    },
+    Pipeline.fluffy.value: {
+        "header": ["Fluffy tags", "Mandatory", "HK tags", "Used by"],
+        "tags": FLUFFY_COMMON_TAGS,
+    },
+    Pipeline.fluffy.microsalt: {
+        "header": ["Microsalt tags", "Mandatory", "HK tags", "Used by"],
+        "tags": MICROSALT_COMMON_TAGS,
+    },
+    Pipeline.fluffy.balsamic: {
+        "header": ["Balsamic tags", "Mandatory", "HK tags", "Used by"],
+        "tags": BALSAMIC_COMMON_TAGS,
+    },
+}
+
+
 @app.command(name="tags")
 def export_tags_cmd(
     pipeline: Pipeline = typer.Option(Pipeline.cg),
@@ -42,6 +62,7 @@ def export_tags_cmd(
 ):
     """Export tag definitions from hermes"""
     LOG.info("Running export tags for pipeline %s", pipeline.value)
+
     if pipeline == Pipeline.cg:
         header = ["Tag name", "Description"]
         for category in COMMON_TAG_CATEGORIES:
@@ -57,23 +78,11 @@ def export_tags_cmd(
             typer.echo(tabulate(table, headers=header, tablefmt=output.value))
             typer.echo()
         raise typer.Exit()
-    if pipeline == Pipeline.mip:
-        header = ["Mip tags", "Mandatory", "HK tags", "Used by"]
-        table = get_table(MIP_DNA_TAGS)
-
-    elif pipeline == Pipeline.fluffy:
-        header = ["Fluffy tags", "Mandatory", "HK tags", "Used by"]
-        table = get_table(FLUFFY_COMMON_TAGS)
-
-    elif pipeline == Pipeline.microsalt:
-        header = ["Microsalt tags", "Mandatory", "HK tags", "Used by"]
-        table = get_table(MICROSALT_COMMON_TAGS)
-
-    elif pipeline == Pipeline.balsamic:
-        header = ["Balsamic tags", "Mandatory", "HK tags", "Used by"]
-        table = get_table(BALSAMIC_COMMON_TAGS)
-    else:
+    if pipeline.value not in PIPELINE_MAP:
         LOG.info("Could not recognize pipeline")
         raise typer.Exit(code=1)
+
+    header = PIPELINE_MAP[pipeline.value]["header"]
+    table = get_table(PIPELINE_MAP[pipeline.value]["tags"])
 
     typer.echo(tabulate(table, headers=header, tablefmt=output.value))
