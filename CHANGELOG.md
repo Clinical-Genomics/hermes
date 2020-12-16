@@ -11,7 +11,7 @@ About changelog [here](https://keepachangelog.com/en/1.0.0/)
 
 ### Changed
 
-## [0.1.1]
+## [0.1.2]
 ### Added
 
 ### Fixed
@@ -21,6 +21,10 @@ About changelog [here](https://keepachangelog.com/en/1.0.0/)
 ### Changed
 
 - Update to new balsamic deliverables format
+
+## [0.1.1]
+Test publish with Github Actions
+
 
 ## [0.1.0]
 ### Added
