@@ -149,7 +149,6 @@ class Deliverables:
             if file_tags not in self.file_identifiers:
                 LOG.warning("Mandatory file (%s) is missing", ", ".join(file_tags))
                 missing_mandatory_files.append(", ".join(file_tags))
-
         if missing_mandatory_files:
             raise MissingFileError(
                 files=missing_mandatory_files, message="Deliverables is missing mandatory files"
@@ -201,13 +200,13 @@ class Deliverables:
         files: List[TagBase] = []
         for file_obj in self.model.files:
             sample_id: str = file_obj.id
+            tag_sample_id: str = sample_id.replace("_", "-")
+            # This is due to older balsamic format
             split_id: List[str] = sample_id.split("_")
             if len(split_id) > 2:
                 sample_id = split_id[1]
-            tag_sample_id: str = "-".join(split_id)
-            identifier = frozenset(
-                [tag.lower() for tag in file_obj.tag.split(",") if tag != tag_sample_id]
-            )
+                tag_sample_id: str = "-".join(split_id)
+            identifier = frozenset([tag.lower() for tag in file_obj.tag if tag != tag_sample_id])
             LOG.debug("Found tag %s", identifier)
             files.append(TagBase(tags=identifier, subject_id=sample_id, path=file_obj.path))
         return files

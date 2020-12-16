@@ -11,6 +11,17 @@ About changelog [here](https://keepachangelog.com/en/1.0.0/)
 
 ### Changed
 
+## [0.1.1]
+### Added
+
+### Fixed
+
+- Use dicts instead of ifs
+
+### Changed
+
+- Update to new balsamic deliverables format
+
 ## [0.1.0]
 ### Added
 - Converts deliverable files to CG format

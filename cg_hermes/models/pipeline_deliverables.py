@@ -1,6 +1,6 @@
 from typing import FrozenSet, List, Optional
 
-from pydantic import BaseModel
+from pydantic import BaseModel, validator
 
 from .tags import CGTag
 
@@ -8,7 +8,8 @@ from .tags import CGTag
 
 
 class FileBase(BaseModel):
-    "Definition for elements in deliverables file"
+    """Definition for elements in deliverables file"""
+
     path: str
     tag: Optional[str]
     id: str
@@ -33,6 +34,13 @@ class BalsamicFile(FileBase):
     """Definition of elements in balsamic deliverables"""
 
     format: Optional[str]
+    tag: List[str]
+
+    @validator("tag", pre=True)
+    def split_str(cls, v):
+        if isinstance(v, str):
+            return v.split(",")
+        return v
 
 
 # Classes to represent deliverable files
