@@ -26,3 +26,4 @@ class TagMap(BaseModel):
 class CGTag(BaseModel):
     path: str
     tags: List[str]
+    mandatory: bool
