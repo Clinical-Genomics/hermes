@@ -90,7 +90,7 @@ class Deliverables:
         cg_tags.extend(
             [tool for tool in conversion_info.used_by if tool not in ["cg", "audit", "store"]]
         )
-        return CGTag(path=path, tags=cg_tags)
+        return CGTag(path=path, tags=cg_tags, mandatory=conversion_info.is_mandatory)
 
     def convert_to_cg_deliverables(self) -> CGDeliverables:
         """Convert pipeline specific information from deliverables file to CG formatted information"""
@@ -179,11 +179,7 @@ class Deliverables:
             if file_obj.tag:
                 identifier.append(file_obj.tag)
             files.append(
-                TagBase(
-                    tags=frozenset(identifier),
-                    subject_id=file_obj.id,
-                    path=file_obj.path,
-                )
+                TagBase(tags=frozenset(identifier), subject_id=file_obj.id, path=file_obj.path,)
             )
         return files
 
