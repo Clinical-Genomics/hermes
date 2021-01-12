@@ -483,12 +483,12 @@ TUMOR_ONLY_PANEL_TAGS = {
     frozenset({"annotated-somatic-vcf-all-index", "vcf-all", "snv", "vardict"}): {
         "is_mandatory": True
     },
-    frozenset({"mutect", "vcf-all", "snv", "annotated-somatic-vcf-all"}): {"is_mandatory": True},
+    frozenset({"mutect", "vcf-all", "snv", "annotated-somatic-vcf-all"}): {"is_mandatory": False},
     frozenset({"mutect", "annotated-somatic-vcf-all-index", "vcf-all", "snv"}): {
-        "is_mandatory": True
+        "is_mandatory": False
     },
     frozenset({"mutect", "annotated-somatic-vcf-summary", "vcf-summary", "snv"}): {
-        "is_mandatory": True
+        "is_mandatory": False
     },
     frozenset({"annotated-somatic-vcf-summary", "vcf-summary", "snv", "vardict"}): {
         "is_mandatory": True
@@ -497,9 +497,9 @@ TUMOR_ONLY_PANEL_TAGS = {
     frozenset({"vcf-pass", "annotated-somatic-vcf-pass-index", "snv", "vardict"}): {
         "is_mandatory": True
     },
-    frozenset({"mutect", "vcf-pass", "annotated-somatic-vcf-pass", "snv"}): {"is_mandatory": True},
+    frozenset({"mutect", "vcf-pass", "annotated-somatic-vcf-pass", "snv"}): {"is_mandatory": False},
     frozenset({"mutect", "vcf-pass", "annotated-somatic-vcf-pass-index", "snv"}): {
-        "is_mandatory": True
+        "is_mandatory": False
     },
     frozenset({"stat-somatic-tmb", "tmb", "vardict"}): {"is_mandatory": True},
     frozenset({"haplotypecaller", "annotated-germline-vcf-all", "vcf-all", "snv"}): {
@@ -551,22 +551,22 @@ TUMOR_NORMAL_PANEL_TAGS = {
     frozenset({"annotated-somatic-vcf-all-index", "strelka", "snv", "vcf-all"}): {
         "is_mandatory": True
     },
-    frozenset({"mutect", "snv", "vcf-all", "annotated-somatic-vcf-all"}): {"is_mandatory": True},
+    frozenset({"mutect", "snv", "vcf-all", "annotated-somatic-vcf-all"}): {"is_mandatory": False},
     frozenset({"mutect", "annotated-somatic-vcf-all-index", "snv", "vcf-all"}): {
-        "is_mandatory": True
+        "is_mandatory": False
     },
     frozenset({"vcf-summary", "snv", "annotated-somatic-vcf-summary", "vardict"}): {
         "is_mandatory": True
     },
     frozenset({"mutect", "vcf-summary", "snv", "annotated-somatic-vcf-summary"}): {
-        "is_mandatory": True
+        "is_mandatory": False
     },
     frozenset({"strelka", "snv", "vcf-summary", "annotated-somatic-vcf-summary"}): {
         "is_mandatory": True
     },
-    frozenset({"mutect", "vcf-pass", "snv", "annotated-somatic-vcf-pass"}): {"is_mandatory": True},
+    frozenset({"mutect", "vcf-pass", "snv", "annotated-somatic-vcf-pass"}): {"is_mandatory": False},
     frozenset({"mutect", "vcf-pass", "snv", "annotated-somatic-vcf-pass-index"}): {
-        "is_mandatory": True
+        "is_mandatory": False
     },
     frozenset({"vcf-pass", "snv", "annotated-somatic-vcf-pass", "vardict"}): {"is_mandatory": True},
     frozenset({"vcf-pass", "snv", "annotated-somatic-vcf-pass-index", "vardict"}): {
