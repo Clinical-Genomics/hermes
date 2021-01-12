@@ -11,13 +11,15 @@ About changelog [here](https://keepachangelog.com/en/1.0.0/)
 
 ### Changed
 
+
 ## [0.1.3]
 
 ### Changed
 
-- Hermes convert deliverables now sends a mandatory field as response
+- Make mutect output optional for balsamic panel
 
 ## [0.1.2]
+### Added
 
 ### Fixed
 
