@@ -47,11 +47,14 @@ TRASH*
 .vagrant
 dev/
 
-# SublimeText: workspace files are user-specific
+# Editor specifics
 *.sublime-workspace
-
-# Textmate:
 .tm_properties
+.idea/
+
+# Python
+
+venv/
 
 # project files should be version controlled, unless a significant
 # proportion of contributors will probably not be using SublimeText
