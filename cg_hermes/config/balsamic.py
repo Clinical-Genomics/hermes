@@ -37,7 +37,7 @@ BALSAMIC_COMMON_TAGS = {
         "is_mandatory": True,
         "used_by": ["deliver"],
     },
-    frozenset({"delivery_report"}): {
+    frozenset({"balsamic_delivery"}): {
         "tags": ["delivery-report"],
         "is_mandatory": False,
         "used_by": ["scout"],
