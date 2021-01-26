@@ -37,6 +37,11 @@ BALSAMIC_COMMON_TAGS = {
         "is_mandatory": True,
         "used_by": ["deliver"],
     },
+    frozenset({"delivery-report"}): {
+        "tags": ["delivery_report"],
+        "is_mandatory": True,
+        "used_by": ["scout"],
+    },
     frozenset({"multiqc-html", "html"}): {
         "tags": ["multiqc-html"],
         "is_mandatory": True,

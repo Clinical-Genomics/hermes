@@ -64,6 +64,7 @@ REPORTING_COMMON = {
     "sambamba-depth": {"description": "Coverage information from sambamba"},
     "vcf-report": {"description": "Results and QC from variant calling"},
     "qc-report": {"description": "Results and QC"},
+    "delivery-report": {"description": "Delivery report with result for upload to Scout"},
 }
 
 VALIDATIONS_COMMON = {
