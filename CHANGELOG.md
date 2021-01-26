@@ -11,6 +11,11 @@ About changelog [here](https://keepachangelog.com/en/1.0.0/)
 
 ### Changed
 
+## [0.2]
+
+### Added
+
+- Add a delivery-report tag to balsamic
 
 ## [0.1.4]
 
