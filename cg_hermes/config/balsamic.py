@@ -402,12 +402,12 @@ BALSAMIC_COMMON_TAGS = {
     frozenset({"vcf-filtered", "snv", "clinical-vcf-filtered"}): {
         "tags": ["vcf", "vardict", "filtered"],
         "is_mandatory": False,
-        "used_by": ["store", "deliver"],
+        "used_by": ["storage", "deliver"],
     },
     frozenset({"clinical-vcf-filtered-index", "vcf-filtered", "snv"}): {
         "tags": ["vcf-index", "vardict", "filtered"],
         "is_mandatory": False,
-        "used_by": ["store", "deliver"],
+        "used_by": ["storage", "deliver"],
     },
     frozenset({"vcf-pass", "snv", "clinical-vcf-pass"}): {
         "tags": ["vcf", "filtered", "vcf-snv-clinical"],
