@@ -397,7 +397,7 @@ BALSAMIC_COMMON_TAGS = {
     frozenset({"cram", "tumor-cram-index"}): {
         "tags": ["cram-index", "tumor"],
         "is_mandatory": False,
-        "used_by": ["scout"],
+        "used_by": ["scout", "deliver"],
     },
     frozenset({"vcf-filtered", "snv", "clinical-vcf-filtered"}): {
         "tags": ["vcf", "vardict", "filtered"],
