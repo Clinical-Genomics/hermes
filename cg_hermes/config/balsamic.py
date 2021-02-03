@@ -415,7 +415,7 @@ BALSAMIC_COMMON_TAGS = {
         "used_by": ["scout"],
     },
     frozenset({"clinical-vcf-pass-index", "vcf-pass", "snv"}): {
-        "tags": ["vcf-index", "filtered", "vcf-snv-clinical-index"],
+        "tags": ["vcf-index", "filtered", "vardict", "vcf-snv-clinical-index"],
         "is_mandatory": False,
         "used_by": ["scout"],
     },
