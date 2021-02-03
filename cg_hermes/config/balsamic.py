@@ -400,22 +400,22 @@ BALSAMIC_COMMON_TAGS = {
         "used_by": ["scout", "deliver"],
     },
     frozenset({"vcf-filtered", "snv", "clinical-vcf-filtered"}): {
-        "tags": ["vcf", "vcf-snv-clinical-filtered"],
+        "tags": ["vcf", "vcf-snv-filtered"],
         "is_mandatory": False,
         "used_by": ["storage"],
     },
     frozenset({"clinical-vcf-filtered-index", "vcf-filtered", "snv"}): {
-        "tags": ["vcf-index", "vcf-snv-clinical-filtered-index"],
+        "tags": ["vcf-index", "vcf-snv-filtered-index"],
         "is_mandatory": False,
         "used_by": ["storage"],
     },
     frozenset({"vcf-pass", "snv", "clinical-vcf-pass"}): {
-        "tags": ["vcf", "vcf-snv-clinical-pass"],
+        "tags": ["vcf", "vcf-snv-clinical"],
         "is_mandatory": False,
         "used_by": ["scout", "deliver"],
     },
     frozenset({"clinical-vcf-pass-index", "vcf-pass", "snv"}): {
-        "tags": ["vcf-index", "vcf-snv-clinical-pass-index"],
+        "tags": ["vcf-index", "vcf-snv-clinical-index"],
         "is_mandatory": False,
         "used_by": ["scout", "deliver"],
     },
