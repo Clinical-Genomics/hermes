@@ -173,7 +173,7 @@ ALL_TAG_CATEGORIES = [
     VARIANT_COMMON,
 ]
 
-ALL_TAGS = set(tag for category in ALL_TAG_CATEGORIES for tag in category.keys())
+ALL_TAGS = {tag for category in ALL_TAG_CATEGORIES for tag in category.keys()}
 
 
 if __name__ == "__main__":
