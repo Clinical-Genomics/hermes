@@ -70,12 +70,12 @@ BALSAMIC_COMMON_TAGS = {
         "used_by": ["storage"],
     },
     frozenset({"vcf-all", "tnscope", "snv", "annotated-somatic-vcf-all"}): {
-        "tags": ["tumor", "scope", "vcf-snv-research"],
+        "tags": ["tumor", "tnscope", "vcf-snv-research"],
         "is_mandatory": False,
         "used_by": ["scout", "deliver"],
     },
     frozenset({"vcf-all", "tnscope", "snv", "annotated-somatic-vcf-all-index"}): {
-        "tags": ["tumor", "scope", "vcf-snv-research-index"],
+        "tags": ["tumor", "tnscope", "vcf-snv-research-index"],
         "is_mandatory": False,
         "used_by": ["scout", "deliver"],
     },
@@ -110,7 +110,7 @@ BALSAMIC_COMMON_TAGS = {
         "used_by": ["deliver"],
     },
     frozenset({"tnscope", "vcf-summary", "snv", "annotated-somatic-vcf-summary"}): {
-        "tags": ["sention", "scope", "vcf-report"],
+        "tags": ["sention", "tnscope", "vcf-report"],
         "is_mandatory": False,
         "used_by": ["audit"],
     },
@@ -175,12 +175,12 @@ BALSAMIC_COMMON_TAGS = {
         "used_by": ["scout"],
     },
     frozenset({"tnscope", "vcf-pass", "annotated-somatic-vcf-pass", "snv"}): {
-        "tags": ["vcf", "scope", "filtered", "sention"],
+        "tags": ["vcf", "tnscope", "filtered", "sention"],
         "is_mandatory": False,
         "used_by": ["scout", "deliver"],
     },
     frozenset({"tnscope", "vcf-pass", "snv", "annotated-somatic-vcf-pass-index"}): {
-        "tags": ["vcf-index", "scope", "filtered", "sention"],
+        "tags": ["vcf-index", "tnscope", "filtered", "sention"],
         "is_mandatory": False,
         "used_by": ["scout", "deliver"],
     },
@@ -350,12 +350,12 @@ BALSAMIC_COMMON_TAGS = {
         "used_by": ["storage"],
     },
     frozenset({"dnascope", "vcf-all", "snv", "annotated-germline-vcf-all"}): {
-        "tags": ["vcf", "scope", "normal"],
+        "tags": ["vcf", "dnascope", "normal"],
         "is_mandatory": False,
         "used_by": ["storage"],
     },
     frozenset({"annotated-germline-vcf-all-index", "vcf-all", "snv", "dnascope"}): {
-        "tags": ["vcf-index", "scope", "normal"],
+        "tags": ["vcf-index", "dnascope", "normal"],
         "is_mandatory": False,
         "used_by": ["storage"],
     },
@@ -370,7 +370,7 @@ BALSAMIC_COMMON_TAGS = {
         "used_by": ["audit"],
     },
     frozenset({"dnascope", "annotated-germline-vcf-summary", "vcf-summary", "snv"}): {
-        "tags": ["scope", "normal", "vcf-report"],
+        "tags": ["dnascope", "normal", "vcf-report"],
         "is_mandatory": False,
         "used_by": ["audit"],
     },
