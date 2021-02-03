@@ -175,12 +175,12 @@ BALSAMIC_COMMON_TAGS = {
         "used_by": ["scout"],
     },
     frozenset({"tnscope", "vcf-pass", "annotated-somatic-vcf-pass", "snv"}): {
-        "tags": ["vcf-snv-clinical", "scope", "filtered", "sention"],
+        "tags": ["vcf", "scope", "filtered", "sention"],
         "is_mandatory": False,
         "used_by": ["scout", "deliver"],
     },
     frozenset({"tnscope", "vcf-pass", "snv", "annotated-somatic-vcf-pass-index"}): {
-        "tags": ["vcf-snv-clinical-index", "scope", "filtered", "sention"],
+        "tags": ["vcf-index", "scope", "filtered", "sention"],
         "is_mandatory": False,
         "used_by": ["scout", "deliver"],
     },
@@ -295,14 +295,14 @@ BALSAMIC_COMMON_TAGS = {
         "used_by": ["storage"],
     },
     frozenset({"vcf-pass", "annotated-somatic-vcf-pass", "snv", "vardict"}): {
-        "tags": ["vcf-snv-clinical", "vardict", "filtered"],
+        "tags": ["vcf", "vardict"],
         "is_mandatory": False,
-        "used_by": ["scout", "deliver"],
+        "used_by": ["storage", "deliver"],
     },
     frozenset({"vcf-pass", "snv", "vardict", "annotated-somatic-vcf-pass-index"}): {
-        "tags": ["vcf-snv-clinical-index", "vardict", "filtered"],
+        "tags": ["vcf-index", "vardict"],
         "is_mandatory": False,
-        "used_by": ["scout", "deliver"],
+        "used_by": ["storage", "deliver"],
     },
     frozenset({"strelka", "vcf-pass", "annotated-somatic-vcf-pass", "snv"}): {
         "tags": ["vcf", "strelka", "filtered"],
@@ -400,24 +400,24 @@ BALSAMIC_COMMON_TAGS = {
         "used_by": ["scout"],
     },
     frozenset({"vcf-filtered", "snv", "clinical-vcf-filtered"}): {
-        "tags": ["vcf-snv-clinical", "filtered"],
+        "tags": ["vcf", "vardict", "filtered"],
         "is_mandatory": False,
-        "used_by": ["scout", "deliver"],
+        "used_by": ["store", "deliver"],
     },
     frozenset({"clinical-vcf-filtered-index", "vcf-filtered", "snv"}): {
-        "tags": ["vcf-snv-clinical-index", "filtered"],
+        "tags": ["vcf-index", "vardict", "filtered"],
         "is_mandatory": False,
-        "used_by": ["scout", "deliver"],
+        "used_by": ["store", "deliver"],
     },
     frozenset({"vcf-pass", "snv", "clinical-vcf-pass"}): {
-        "tags": ["vcf", "filtered"],
+        "tags": ["vcf", "filtered", "vcf-snv-clinical"],
         "is_mandatory": False,
-        "used_by": ["storage"],
+        "used_by": ["scout"],
     },
     frozenset({"clinical-vcf-pass-index", "vcf-pass", "snv"}): {
-        "tags": ["vcf-index", "filtered"],
+        "tags": ["vcf-index", "filtered", "vcf-snv-clinical-index"],
         "is_mandatory": False,
-        "used_by": ["storage"],
+        "used_by": ["scout"],
     },
 }
 
