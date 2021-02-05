@@ -70,12 +70,12 @@ BALSAMIC_COMMON_TAGS = {
         "used_by": ["storage"],
     },
     frozenset({"vcf-all", "tnscope", "snv", "annotated-somatic-vcf-all"}): {
-        "tags": ["tumor", "scope", "vcf-snv-research"],
+        "tags": ["tumor", "tnscope", "vcf-snv-research"],
         "is_mandatory": False,
         "used_by": ["scout", "deliver"],
     },
     frozenset({"vcf-all", "tnscope", "snv", "annotated-somatic-vcf-all-index"}): {
-        "tags": ["tumor", "scope", "vcf-snv-research-index"],
+        "tags": ["tumor", "tnscope", "vcf-snv-research-index"],
         "is_mandatory": False,
         "used_by": ["scout", "deliver"],
     },
@@ -110,7 +110,7 @@ BALSAMIC_COMMON_TAGS = {
         "used_by": ["deliver"],
     },
     frozenset({"tnscope", "vcf-summary", "snv", "annotated-somatic-vcf-summary"}): {
-        "tags": ["sention", "scope", "vcf-report"],
+        "tags": ["sention", "tnscope", "vcf-report"],
         "is_mandatory": False,
         "used_by": ["audit"],
     },
@@ -175,12 +175,12 @@ BALSAMIC_COMMON_TAGS = {
         "used_by": ["scout"],
     },
     frozenset({"tnscope", "vcf-pass", "annotated-somatic-vcf-pass", "snv"}): {
-        "tags": ["vcf-snv-clinical", "scope", "filtered", "sention"],
+        "tags": ["vcf", "tnscope", "filtered", "sention"],
         "is_mandatory": False,
         "used_by": ["scout", "deliver"],
     },
     frozenset({"tnscope", "vcf-pass", "snv", "annotated-somatic-vcf-pass-index"}): {
-        "tags": ["vcf-snv-clinical-index", "scope", "filtered", "sention"],
+        "tags": ["vcf-index", "tnscope", "filtered", "sention"],
         "is_mandatory": False,
         "used_by": ["scout", "deliver"],
     },
@@ -295,14 +295,14 @@ BALSAMIC_COMMON_TAGS = {
         "used_by": ["storage"],
     },
     frozenset({"vcf-pass", "annotated-somatic-vcf-pass", "snv", "vardict"}): {
-        "tags": ["vcf-snv-clinical", "vardict", "filtered"],
+        "tags": ["vcf", "vardict"],
         "is_mandatory": False,
-        "used_by": ["scout", "deliver"],
+        "used_by": ["storage"],
     },
     frozenset({"vcf-pass", "snv", "vardict", "annotated-somatic-vcf-pass-index"}): {
-        "tags": ["vcf-snv-clinical-index", "vardict", "filtered"],
+        "tags": ["vcf-index", "vardict"],
         "is_mandatory": False,
-        "used_by": ["scout", "deliver"],
+        "used_by": ["storage"],
     },
     frozenset({"strelka", "vcf-pass", "annotated-somatic-vcf-pass", "snv"}): {
         "tags": ["vcf", "strelka", "filtered"],
@@ -350,12 +350,12 @@ BALSAMIC_COMMON_TAGS = {
         "used_by": ["storage"],
     },
     frozenset({"dnascope", "vcf-all", "snv", "annotated-germline-vcf-all"}): {
-        "tags": ["vcf", "scope", "normal"],
+        "tags": ["vcf", "dnascope", "normal"],
         "is_mandatory": False,
         "used_by": ["storage"],
     },
     frozenset({"annotated-germline-vcf-all-index", "vcf-all", "snv", "dnascope"}): {
-        "tags": ["vcf-index", "scope", "normal"],
+        "tags": ["vcf-index", "dnascope", "normal"],
         "is_mandatory": False,
         "used_by": ["storage"],
     },
@@ -370,7 +370,7 @@ BALSAMIC_COMMON_TAGS = {
         "used_by": ["audit"],
     },
     frozenset({"dnascope", "annotated-germline-vcf-summary", "vcf-summary", "snv"}): {
-        "tags": ["scope", "normal", "vcf-report"],
+        "tags": ["dnascope", "normal", "vcf-report"],
         "is_mandatory": False,
         "used_by": ["audit"],
     },
@@ -382,42 +382,42 @@ BALSAMIC_COMMON_TAGS = {
     frozenset({"tumor-bam", "bam"}): {
         "tags": ["bam", "tumor"],
         "is_mandatory": False,
-        "used_by": ["scout"],
+        "used_by": ["scout", "deliver"],
     },
     frozenset({"tumor-bam-index", "bam"}): {
         "tags": ["bam-index", "tumor"],
         "is_mandatory": False,
-        "used_by": ["scout"],
+        "used_by": ["scout", "deliver"],
     },
     frozenset({"cram", "tumor-cram"}): {
         "tags": ["cram", "tumor"],
         "is_mandatory": False,
-        "used_by": ["scout"],
+        "used_by": ["scout", "deliver"],
     },
     frozenset({"cram", "tumor-cram-index"}): {
         "tags": ["cram-index", "tumor"],
         "is_mandatory": False,
-        "used_by": ["scout"],
+        "used_by": ["scout", "deliver"],
     },
     frozenset({"vcf-filtered", "snv", "clinical-vcf-filtered"}): {
-        "tags": ["vcf-snv-clinical", "filtered"],
+        "tags": ["vcf", "vcf-snv-filtered"],
         "is_mandatory": False,
-        "used_by": ["scout", "deliver"],
+        "used_by": ["storage"],
     },
     frozenset({"clinical-vcf-filtered-index", "vcf-filtered", "snv"}): {
-        "tags": ["vcf-snv-clinical-index", "filtered"],
+        "tags": ["vcf-index", "vcf-snv-filtered-index"],
+        "is_mandatory": False,
+        "used_by": ["storage"],
+    },
+    frozenset({"vcf-pass", "snv", "clinical-vcf-pass"}): {
+        "tags": ["vcf", "vcf-snv-clinical"],
         "is_mandatory": False,
         "used_by": ["scout", "deliver"],
     },
-    frozenset({"vcf-pass", "snv", "clinical-vcf-pass"}): {
-        "tags": ["vcf", "filtered"],
-        "is_mandatory": False,
-        "used_by": ["storage"],
-    },
     frozenset({"clinical-vcf-pass-index", "vcf-pass", "snv"}): {
-        "tags": ["vcf-index", "filtered"],
+        "tags": ["vcf-index", "vcf-snv-clinical-index"],
         "is_mandatory": False,
-        "used_by": ["storage"],
+        "used_by": ["scout", "deliver"],
     },
 }
 

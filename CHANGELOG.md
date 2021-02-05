@@ -11,6 +11,12 @@ About changelog [here](https://keepachangelog.com/en/1.0.0/)
 
 ### Changed
 
+## [0.2.1]
+
+### Changed
+
+- Change so that same file is choosen as scout snv upload vcf for all analyses
+
 ## [0.2]
 
 ### Added
