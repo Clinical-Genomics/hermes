@@ -297,12 +297,12 @@ BALSAMIC_COMMON_TAGS = {
     frozenset({"vcf-pass", "annotated-somatic-vcf-pass", "snv", "vardict"}): {
         "tags": ["vcf", "vardict"],
         "is_mandatory": False,
-        "used_by": ["storage"],
+        "used_by": ["deliver"],
     },
     frozenset({"vcf-pass", "snv", "vardict", "annotated-somatic-vcf-pass-index"}): {
         "tags": ["vcf-index", "vardict"],
         "is_mandatory": False,
-        "used_by": ["storage"],
+        "used_by": ["deliver"],
     },
     frozenset({"strelka", "vcf-pass", "annotated-somatic-vcf-pass", "snv"}): {
         "tags": ["vcf", "strelka", "filtered"],
