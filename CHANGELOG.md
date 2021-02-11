@@ -11,6 +11,13 @@ About changelog [here](https://keepachangelog.com/en/1.0.0/)
 
 ### Changed
 
+
+## [0.2.2]
+
+### Changed
+- Tag on vardict pass changed to deliver so it can be delivered 
+
+
 ## [0.2.1]
 
 ### Changed
