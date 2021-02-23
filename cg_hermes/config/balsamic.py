@@ -42,6 +42,11 @@ BALSAMIC_COMMON_TAGS = {
         "is_mandatory": False,
         "used_by": ["scout"],
     },
+    frozenset({"coverage_qc_report"}): {
+        "tags": ["coverage-qc-report"],
+        "is_mandatory": False,
+        "used_by": ["scout"],
+    },
     frozenset({"multiqc-html", "html"}): {
         "tags": ["multiqc-html"],
         "is_mandatory": True,
