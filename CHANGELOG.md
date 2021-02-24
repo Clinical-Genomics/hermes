@@ -6,7 +6,7 @@ About changelog [here](https://keepachangelog.com/en/1.0.0/)
 
 ## [x.x.x]
 ### Added
-- Added a balsamic coverage-qc-report tag
+- Substituted a balsamic coverage-qc-report tag
 ### Fixed
 
 ### Changed

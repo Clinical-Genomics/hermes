@@ -128,7 +128,6 @@ BALSAMIC_SPECIFIC = {
     "balsamic-config": {"description": "Balsamic configs for analysis"},
     "balsamic-dag": {"description": "Balsamic run schema"},
     "balsamic-report": {"description": "Report from analysis"},
-    "coverage-qc-report": {"description": "Static coverage report for Scout"},
 }
 
 MICROSALT_SPECIFIC = {

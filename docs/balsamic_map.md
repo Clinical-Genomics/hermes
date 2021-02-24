@@ -8,7 +8,6 @@
 | cnv-gene-metrics, gene-metrics                                     | True        | cnvkit, genes, metrics                           | deliver               |
 | html, multiqc-html                                                 | True        | multiqc-html                                     | scout, deliver, audit |
 | multiqc-json, json                                                 | True        | multiqc-json                                     | vogue, audit          |
-| coverage-qc-report                                                 | False       | coverage-qc-report                               | scout                 |
 | scout-bam, bam                                                     | False       | bam                                              | scout                 |
 | scout-bam-index, bam                                               | False       | bam-index                                        | scout                 |
 | tnhaplotyper, snv, annotated-somatic-vcf-all, vcf-all              | True        | vcf, tumor, haplotype-caller                     | storage               |
