@@ -4,9 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 About changelog [here](https://keepachangelog.com/en/1.0.0/)
 
-## [x.x.x]
+## [0.2.2]
 ### Added
-
+- Substituted a balsamic coverage-qc-report tag
 ### Fixed
 
 ### Changed
@@ -53,4 +53,3 @@ Test publish with Github Actions
 ## [0.1.0]
 ### Added
 - Converts deliverable files to CG format
-
