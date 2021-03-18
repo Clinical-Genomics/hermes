@@ -53,6 +53,7 @@ VARIANT_COMMON = {
     "vcf-sv-research": {"description": "SV variants from whole genome"},
     "vcf-sv-research-index": {"description": "Following index"},
     "vcf2cytosure": {"description": "Conversion from vcf format to cytosure format"},
+    "variants": {"description": "File pertaining variant information in some way"},
 }
 
 FAMILY_COMMON = {
@@ -67,6 +68,9 @@ REPORTING_COMMON = {
     "vcf-report": {"description": "Results and QC from variant calling"},
     "qc-report": {"description": "Results and QC"},
     "delivery-report": {"description": "Delivery report with result for upload to Scout"},
+    "tsv": {"description": "Tab separated values"},
+    "csv": {"description": "Comma separated values"},
+    "summary": {"description": "Overview file without detailed information"},
 }
 
 VALIDATIONS_COMMON = {
@@ -140,10 +144,6 @@ MUTANT_SPECIFIC = {
     "mutant-config": {"description": "Config settings for mutant analysis"},
     "mutant-log": {"description": "SLURM log for mutant analysis"},
     "typing-report": {"description": "Results from typing"},
-    "tsv": {"description": "Tab separated values"},
-    "csv": {"description": "Comma separated values"},
-    "summary": {"description": "Overview file without detailed information"},
-    "variants": {"description": "File pertaining variant information in some way"},
     "fohm": {"description": "Relevant for FoHM"},
     "pangolin": {"description": "Pangolin classified output"},
     "komplettering": {"description": "Filetype specific for national uploading of microbial data"},
