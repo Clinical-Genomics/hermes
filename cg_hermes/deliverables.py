@@ -70,7 +70,7 @@ class Deliverables:
             )
             self.files = self.get_microsalt_files()
             self.configs = Deliverables.build_internal_tag_map(MICROSALT_COMMON_TAGS)
-        elif self.pipeline == Pipeline.microsalt:
+        elif self.pipeline == Pipeline.mutant:
             LOG.info("Parsing deliverables for mutant")
             self.model: MutantDeliverables = MutantDeliverables.parse_obj(self.raw_deliverables)
             self.files = self.get_mutant_files()
@@ -81,7 +81,7 @@ class Deliverables:
             self.files = self.get_mip_files()
             self.configs = Deliverables.build_internal_tag_map(MIP_DNA_TAGS)
         else:
-            raise Exception("Invalid pipeline set for Deliverables object")
+            raise Exception("Invalid pipeline ({}) set for Deliverables object".format(self.pipeline))
 
     @staticmethod
     def build_internal_tag_map(tag_map: Dict[FrozenSet[str], dict]) -> Dict[FrozenSet[str], TagMap]:
