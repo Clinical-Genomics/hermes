@@ -140,6 +140,12 @@ MUTANT_SPECIFIC = {
     "mutant-config": {"description": "Config settings for mutant analysis"},
     "mutant-log": {"description": "SLURM log for mutant analysis"},
     "typing-report": {"description": "Results from typing"},
+    "tsv": {"description": "Tab separated values"},
+    "csv": {"description": "Comma separated values"},
+    "fohm": {"description": "Relevant for FoHM"},
+    "pangolin": {"description": "Pangolin classified output"},
+    "komplettering": {"description": "Filetype specific for national uploading of microbial data"},
+    "consensus": {"description": "Consensus sequence"}, 
 }
 
 AVAILABLE_USAGES = {

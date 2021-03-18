@@ -6,23 +6,23 @@ MUTANT_COMMON_TAGS = {
         "used_by": ["storage", "audit"],
     },
     frozenset({"variants","genotyping"}): {
-        "is_mandatory": True,
-        "tags": ["qc-report", "visualization"],
+        "is_mandatory": False,
+        "tags": ["vcf", "vcf-report"],
         "used_by": ["deliver"],
     },
     frozenset({"variants","variant-calling"}): {
         "is_mandatory": True,
-        "tags": ["qc-report", "visualization"],
+        "tags": ["tsv", "vcf-report"],
         "used_by": ["deliver"],
     },
     frozenset({"SARS-CoV-2-qc", "result_aggregation"}): {
         "is_mandatory": True,
-        "tags": ["qc-report", "visualization"],
+        "tags": ["qc-report", "csv","visualization"],
         "used_by": ["deliver"],
     },
     frozenset({"SARS-CoV-2-type", "typing"}): {
         "is_mandatory": True,
-        "tags": ["typing-report", "visualization"],
+        "tags": ["typing-report", "pangolin", "visualization"],
         "used_by": ["deliver"],
     },
     frozenset({"SARS-CoV-2-json", "result_aggregation"}): {
@@ -32,17 +32,17 @@ MUTANT_COMMON_TAGS = {
     },
     frozenset({"SARS-CoV-2-sum", "report"}): {
         "is_mandatory": True,
-        "tags": ["typing-report", "visualization"],
+        "tags": ["summary", "csv", "visualization"],
         "used_by": ["deliver"],
     },
     frozenset({"SARS-CoV-2-var", "report"}): {
         "is_mandatory": True,
-        "tags": ["typing-report", "visualization"],
+        "tags": ["variants", "csv", "visualization"],
         "used_by": ["deliver"],
     },
     frozenset({"SARS-CoV-2-info", "report"}): {
         "is_mandatory": True,
-        "tags": ["typing-report", "visualization"],
+        "tags": ["komplettering", "fohm", "visualization"],
         "used_by": ["deliver"],
     },
     frozenset({"runtime-settings", "runinfo"}): {
@@ -61,9 +61,9 @@ MUTANT_COMMON_TAGS = {
         "used_by": ["storage"],
     },
     frozenset({"consensus"}): {
-        "is_mandatory": False,
-        "tags": ["fastq", "unpaired-reads"],
-        "used_by": ["storage"],
+        "is_mandatory": True,
+        "tags": ["fastq", "consensus"],
+        "used_by": ["deliver", "storage"],
     },
     frozenset({"runinfo", "logfile"}): {
         "is_mandatory": True,
@@ -71,7 +71,7 @@ MUTANT_COMMON_TAGS = {
         "used_by": ["audit"],
     },
     frozenset({"alignment", "reference-alignment-sorted"}): {
-        "is_mandatory": True,
+        "is_mandatory": False,
         "tags": ["bam"],
         "used_by": ["storage"],
     },
