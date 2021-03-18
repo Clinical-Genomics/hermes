@@ -12,6 +12,7 @@ from cg_hermes.config.balsamic import (
 )
 from cg_hermes.config.fluffy import FLUFFY_COMMON_TAGS
 from cg_hermes.config.microsalt import MICROSALT_COMMON_TAGS
+from cg_hermes.config.mutant import MUTANT_COMMON_TAGS
 from cg_hermes.config.mip import MIP_DNA_TAGS
 from cg_hermes.config.pipelines import AnalysisType, Pipeline
 from cg_hermes.exceptions import MissingFileError
@@ -21,6 +22,7 @@ from cg_hermes.models.pipeline_deliverables import (
     CGDeliverables,
     FluffyDeliverables,
     MicrosaltDeliverables,
+    MutantDeliverables,
     MipDeliverables,
     PipelineDeliverables,
     TagBase,
@@ -68,6 +70,11 @@ class Deliverables:
             )
             self.files = self.get_microsalt_files()
             self.configs = Deliverables.build_internal_tag_map(MICROSALT_COMMON_TAGS)
+        elif self.pipeline == Pipeline.microsalt:
+            LOG.info("Parsing deliverables for mutant")
+            self.model: MutantDeliverables = MutantDeliverables.parse_obj(self.raw_deliverables)
+            self.files = self.get_mutant_files()
+            self.configs = Deliverables.build_internal_tag_map(MUTANT_COMMON_TAGS)
         else:
             LOG.info("Parsing deliverables for mip")
             self.model: MipDeliverables = MipDeliverables.parse_obj(self.raw_deliverables)
@@ -173,6 +180,18 @@ class Deliverables:
 
     def get_microsalt_files(self) -> List[TagBase]:
         file_obj: pipeline_deliverables.MicrosaltFile
+        files: List[TagBase] = []
+        for file_obj in self.model.files:
+            identifier = [file_obj.step]
+            if file_obj.tag:
+                identifier.append(file_obj.tag)
+            files.append(
+                TagBase(tags=frozenset(identifier), subject_id=file_obj.id, path=file_obj.path,)
+            )
+        return files
+
+    def get_mutant_files(self) -> List[TagBase]:
+        file_obj: pipeline_deliverables.MutantFile
         files: List[TagBase] = []
         for file_obj in self.model.files:
             identifier = [file_obj.step]

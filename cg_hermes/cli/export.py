@@ -8,6 +8,7 @@ from cg_hermes.config.balsamic import BALSAMIC_COMMON_TAGS
 from cg_hermes.config.fluffy import FLUFFY_COMMON_TAGS
 from cg_hermes.config.microsalt import MICROSALT_COMMON_TAGS
 from cg_hermes.config.mip import MIP_DNA_TAGS
+from cg_hermes.config.mutant improt MUTANT_COMMON_TAGS
 from cg_hermes.config.pipelines import Pipeline
 from cg_hermes.config.tags import COMMON_TAG_CATEGORIES
 
@@ -51,6 +52,10 @@ PIPELINE_MAP = {
     Pipeline.fluffy.balsamic: {
         "header": ["Balsamic tags", "Mandatory", "HK tags", "Used by"],
         "tags": BALSAMIC_COMMON_TAGS,
+    },
+   Pipeline.fluffy.mutant: {
+        "header": ["Mutant tags", "Mandatory", "HK tags", "Used by"],
+        "tags": MUTANT_COMMON_TAGS,
     },
 }
 

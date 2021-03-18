@@ -75,6 +75,11 @@ class FluffyDeliverables(PipelineDeliverables):
 
     files: List[FileBase]
 
+class MutantDeliverables(PipelineDeliverables):
+    """Specification for a MUTANT specific deliverables file"""
+
+    files: List[FileBase]
+
 
 class CGDeliverables(PipelineDeliverables):
     """Class that specifies the output to CG"""
