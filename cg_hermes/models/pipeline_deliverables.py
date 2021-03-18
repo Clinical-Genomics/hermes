@@ -29,6 +29,13 @@ class MicrosaltFile(FileBase):
     format: str
     step: str
 
+class MutantFile(FileBase):
+    """Definition for elements in Mutant deliverables"""
+
+    format: str
+    step: str
+
+
 
 class BalsamicFile(FileBase):
     """Definition of elements in balsamic deliverables"""
@@ -78,7 +85,7 @@ class FluffyDeliverables(PipelineDeliverables):
 class MutantDeliverables(PipelineDeliverables):
     """Specification for a MUTANT specific deliverables file"""
 
-    files: List[FileBase]
+    files: List[MutantFile]
 
 
 class CGDeliverables(PipelineDeliverables):
