@@ -75,11 +75,13 @@ class Deliverables:
             self.model: MutantDeliverables = MutantDeliverables.parse_obj(self.raw_deliverables)
             self.files = self.get_mutant_files()
             self.configs = Deliverables.build_internal_tag_map(MUTANT_COMMON_TAGS)
-        else:
+        elif self.pipeline == Pipeline.mip:
             LOG.info("Parsing deliverables for mip")
             self.model: MipDeliverables = MipDeliverables.parse_obj(self.raw_deliverables)
             self.files = self.get_mip_files()
             self.configs = Deliverables.build_internal_tag_map(MIP_DNA_TAGS)
+        else:
+            raise Exception("Invalid pipeline set for Deliverables object")
 
     @staticmethod
     def build_internal_tag_map(tag_map: Dict[FrozenSet[str], dict]) -> Dict[FrozenSet[str], TagMap]:
