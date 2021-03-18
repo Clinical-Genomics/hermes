@@ -136,6 +136,12 @@ MICROSALT_SPECIFIC = {
     "typing-report": {"description": "Results from bacterial typing"},
 }
 
+MUTANT_SPECIFIC = {
+    "mutant-config": {"description": "Config settings for mutant analysis"},
+    "mutant-log": {"description": "SLURM log for mutant analysis"},
+    "typing-report": {"description": "Results from typing"},
+}
+
 AVAILABLE_USAGES = {
     "audit",
     "cg",
