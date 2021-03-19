@@ -5,19 +5,19 @@ MUTANT_COMMON_TAGS = {
         "tags": ["config"],
         "used_by": ["storage", "audit"],
     },
-    frozenset({"variants","genotyping"}): {
+    frozenset({"variants", "genotyping"}): {
         "is_mandatory": False,
         "tags": ["vcf", "vcf-report"],
         "used_by": ["deliver"],
     },
-    frozenset({"variants","variant-calling"}): {
+    frozenset({"variants", "variant-calling"}): {
         "is_mandatory": True,
         "tags": ["tsv", "vcf-report"],
         "used_by": ["deliver"],
     },
     frozenset({"SARS-CoV-2-qc", "result_aggregation"}): {
         "is_mandatory": True,
-        "tags": ["qc-report", "csv","visualization"],
+        "tags": ["qc-report", "csv", "visualization"],
         "used_by": ["deliver"],
     },
     frozenset({"SARS-CoV-2-type", "typing"}): {

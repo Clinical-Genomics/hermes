@@ -41,6 +41,7 @@ def test_convert_microsalt_deliverables(cli_runner: CliRunner, microsalt_deliver
     # THEN assert that the program exits with success
     assert result.exit_code == 0
 
+
 def test_convert_mutant_deliverables(cli_runner: CliRunner, mutant_deliverables: Path):
     # GIVEN the path to a mutant deliverables file
     assert mutant_deliverables.exists()
@@ -50,7 +51,6 @@ def test_convert_mutant_deliverables(cli_runner: CliRunner, mutant_deliverables:
 
     # THEN assert that the program exits with success
     assert result.exit_code == 0
-
 
 
 def test_convert_fluffy_deliverables(cli_runner: CliRunner, fluffy_deliverables: Path):

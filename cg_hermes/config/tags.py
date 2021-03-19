@@ -147,7 +147,7 @@ MUTANT_SPECIFIC = {
     "fohm": {"description": "Relevant for FoHM"},
     "pangolin": {"description": "Pangolin classified output"},
     "komplettering": {"description": "Filetype specific for national uploading of microbial data"},
-    "consensus": {"description": "Consensus sequence"}, 
+    "consensus": {"description": "Consensus sequence"},
 }
 
 AVAILABLE_USAGES = {

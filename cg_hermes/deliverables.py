@@ -81,7 +81,9 @@ class Deliverables:
             self.files = self.get_mip_files()
             self.configs = Deliverables.build_internal_tag_map(MIP_DNA_TAGS)
         else:
-            raise Exception("Invalid pipeline ({}) set for Deliverables object".format(self.pipeline))
+            raise Exception(
+                "Invalid pipeline ({}) set for Deliverables object".format(self.pipeline)
+            )
 
     @staticmethod
     def build_internal_tag_map(tag_map: Dict[FrozenSet[str], dict]) -> Dict[FrozenSet[str], TagMap]:
@@ -188,7 +190,11 @@ class Deliverables:
             if file_obj.tag:
                 identifier.append(file_obj.tag)
             files.append(
-                TagBase(tags=frozenset(identifier), subject_id=file_obj.id, path=file_obj.path,)
+                TagBase(
+                    tags=frozenset(identifier),
+                    subject_id=file_obj.id,
+                    path=file_obj.path,
+                )
             )
         return files
 
@@ -200,7 +206,11 @@ class Deliverables:
             if file_obj.tag:
                 identifier.append(file_obj.tag)
             files.append(
-                TagBase(tags=frozenset(identifier), subject_id=file_obj.id, path=file_obj.path,)
+                TagBase(
+                    tags=frozenset(identifier),
+                    subject_id=file_obj.id,
+                    path=file_obj.path,
+                )
             )
         return files
 

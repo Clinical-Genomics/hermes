@@ -53,7 +53,7 @@ PIPELINE_MAP = {
         "header": ["Balsamic tags", "Mandatory", "HK tags", "Used by"],
         "tags": BALSAMIC_COMMON_TAGS,
     },
-   Pipeline.fluffy.mutant: {
+    Pipeline.fluffy.mutant: {
         "header": ["Mutant tags", "Mandatory", "HK tags", "Used by"],
         "tags": MUTANT_COMMON_TAGS,
     },

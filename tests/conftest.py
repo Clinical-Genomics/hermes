@@ -31,9 +31,11 @@ def fixture_fluffy_files(fixtures_dir: Path) -> Path:
 def fixture_microsalt_files(fixtures_dir: Path) -> Path:
     return fixtures_dir / "microsalt"
 
+
 @pytest.fixture(name="mutant_files")
 def fixture_mutant_files(fixtures_dir: Path) -> Path:
     return fixtures_dir / "mutant"
+
 
 # File fixtures
 
@@ -52,9 +54,11 @@ def fixture_fluffy_deliverables(fluffy_files: Path) -> Path:
 def fixture_microsalt_deliverables(microsalt_files: Path) -> Path:
     return microsalt_files / "deliverables.yaml"
 
+
 @pytest.fixture(name="mutant_deliverables")
 def fixture_mutant_deliverables(mutant_files: Path) -> Path:
     return mutant_files / "deliverables.yaml"
+
 
 @pytest.fixture(name="balsamic_t_wgs_deliverables")
 def fixture_balsamic_t_wgs_deliverables(balsamic_files: Path) -> Path:
