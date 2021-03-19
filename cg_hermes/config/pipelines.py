@@ -6,6 +6,7 @@ class Pipeline(str, Enum):
     balsamic = "balsamic"
     microsalt = "microsalt"
     fluffy = "fluffy"
+    mutant = "mutant"
     cg = "cg"
 
 
