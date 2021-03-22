@@ -91,7 +91,7 @@ def export_tags_cmd(
         LOG.info("Could not recognize pipeline")
         raise typer.Exit(code=1)
 
-    header = PIPELINE_MAP[pipeline.value]["header"]
-    table = get_table(PIPELINE_MAP[pipeline.value]["tags"])
+    header = PIPELINE_MAP[pipeline]["header"]
+    table = get_table(PIPELINE_MAP[pipeline]["tags"])
 
     typer.echo(tabulate(table, headers=header, tablefmt=output.value))
