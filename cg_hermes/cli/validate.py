@@ -56,11 +56,11 @@ def validate_tags_cmd(pipeline: Pipeline):
             exit_code = 1
         raise typer.Exit(code=exit_code)
 
-    elif pipeline == Pipeline.mip:
+    elif pipeline == Pipeline.MIP_DNA:
         tag_map = MIP_DNA_TAGS
-    elif pipeline == Pipeline.balsamic:
+    elif pipeline == Pipeline.BALSAMIC:
         tag_map = BALSAMIC_COMMON_TAGS
-    elif pipeline == Pipeline.fluffy:
+    elif pipeline == Pipeline.FLUFFY:
         tag_map = FLUFFY_COMMON_TAGS
     else:
         LOG.info("Could not find pipeline tags for %s", pipeline.value)

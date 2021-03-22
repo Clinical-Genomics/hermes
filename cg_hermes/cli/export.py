@@ -36,23 +36,23 @@ class OutputFormat(str, Enum):
 
 
 PIPELINE_MAP = {
-    Pipeline.mip.value: {
+    Pipeline.MIP_DNA: {
         "header": ["Mip tags", "Mandatory", "HK tags", "Used by"],
         "tags": MIP_DNA_TAGS,
     },
-    Pipeline.fluffy.value: {
+    Pipeline.FLUFFY: {
         "header": ["Fluffy tags", "Mandatory", "HK tags", "Used by"],
         "tags": FLUFFY_COMMON_TAGS,
     },
-    Pipeline.fluffy.microsalt: {
+    Pipeline.MICROSALT: {
         "header": ["Microsalt tags", "Mandatory", "HK tags", "Used by"],
         "tags": MICROSALT_COMMON_TAGS,
     },
-    Pipeline.fluffy.balsamic: {
+    Pipeline.BALSAMIC: {
         "header": ["Balsamic tags", "Mandatory", "HK tags", "Used by"],
         "tags": BALSAMIC_COMMON_TAGS,
     },
-    Pipeline.fluffy.mutant: {
+    Pipeline.SARS_COV_2: {
         "header": ["Mutant tags", "Mandatory", "HK tags", "Used by"],
         "tags": MUTANT_COMMON_TAGS,
     },
