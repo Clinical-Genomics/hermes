@@ -19,8 +19,7 @@ LOG = logging.getLogger(__name__)
 
 def get_table(tags: dict):
     table = []
-    for pipeline_tags in tags:
-        tag_info = tags[pipeline_tags]
+    for pipeline_tags, tag_info in tags.items():
         row = [
             ", ".join(pipeline_tags),
             str(tag_info["is_mandatory"]),
@@ -77,9 +76,14 @@ def export_tags_cmd(
             else:
                 typer.echo(table_name)
             typer.echo()
-            table = []
-            for tag_name in COMMON_TAG_CATEGORIES[category]:
-                table.append([tag_name, COMMON_TAG_CATEGORIES[category][tag_name]["description"]])
+            table = [
+                [
+                    tag_name,
+                    COMMON_TAG_CATEGORIES[category][tag_name]["description"],
+                ]
+                for tag_name in COMMON_TAG_CATEGORIES[category]
+            ]
+
             typer.echo(tabulate(table, headers=header, tablefmt=output.value))
             typer.echo()
         raise typer.Exit()

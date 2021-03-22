@@ -53,29 +53,29 @@ class Deliverables:
         self.file_identifiers = {file_obj.tags for file_obj in self.files}
 
     def set_pipeline_specific_variables(self):
-        if self.pipeline == Pipeline.fluffy:
+        if self.pipeline == Pipeline.FLUFFY:
             LOG.info("Parsing deliverables for fluffy")
             self.model: FluffyDeliverables = FluffyDeliverables.parse_obj(self.raw_deliverables)
             self.files = self.get_fluffy_files()
             self.configs = Deliverables.build_internal_tag_map(FLUFFY_COMMON_TAGS)
-        elif self.pipeline == Pipeline.balsamic:
+        elif self.pipeline == Pipeline.BALSAMIC:
             LOG.info("Parsing deliverables for balsamic")
             self.model: BalsamicDeliverables = BalsamicDeliverables.parse_obj(self.raw_deliverables)
             self.files = self.get_balsamic_files()
             self.configs = Deliverables.build_internal_tag_map(self.get_balsamic_analysis_configs())
-        elif self.pipeline == Pipeline.microsalt:
+        elif self.pipeline == Pipeline.MICROSALT:
             LOG.info("Parsing deliverables for microsalt")
             self.model: MicrosaltDeliverables = MicrosaltDeliverables.parse_obj(
                 self.raw_deliverables
             )
             self.files = self.get_microsalt_files()
             self.configs = Deliverables.build_internal_tag_map(MICROSALT_COMMON_TAGS)
-        elif self.pipeline == Pipeline.mutant:
+        elif self.pipeline == Pipeline.SARS_COV_2:
             LOG.info("Parsing deliverables for mutant")
             self.model: MutantDeliverables = MutantDeliverables.parse_obj(self.raw_deliverables)
             self.files = self.get_mutant_files()
             self.configs = Deliverables.build_internal_tag_map(MUTANT_COMMON_TAGS)
-        elif self.pipeline == Pipeline.mip:
+        elif self.pipeline == Pipeline.MIP_DNA:
             LOG.info("Parsing deliverables for mip")
             self.model: MipDeliverables = MipDeliverables.parse_obj(self.raw_deliverables)
             self.files = self.get_mip_files()
@@ -233,7 +233,8 @@ class Deliverables:
             if len(split_id) > 2:
                 sample_id = split_id[1]
                 tag_sample_id: str = "-".join(split_id)
-            identifier = frozenset([tag.lower() for tag in file_obj.tag if tag != tag_sample_id])
+            identifier = frozenset(tag.lower() for tag in file_obj.tag if tag != tag_sample_id)
+
             LOG.debug("Found tag %s", identifier)
             files.append(TagBase(tags=identifier, subject_id=sample_id, path=file_obj.path))
         return files
