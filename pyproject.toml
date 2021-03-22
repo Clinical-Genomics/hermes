@@ -12,7 +12,7 @@ pyyaml = "^5.3.1"
 typing-extensions = "^3.7.4"
 tabulate = "^0.8.7"
 typer = "^0.3.2"
-cgmodels = "^0.3.0"
+cgmodels = "0.3.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"

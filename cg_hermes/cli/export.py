@@ -61,13 +61,13 @@ PIPELINE_MAP = {
 
 @app.command(name="tags")
 def export_tags_cmd(
-    pipeline: Pipeline = typer.Option(Pipeline.cg),
     output: OutputFormat = typer.Option(OutputFormat.github),
+    pipeline: Pipeline = None,
 ):
     """Export tag definitions from hermes"""
-    LOG.info("Running export tags for pipeline %s", pipeline.value)
+    LOG.info("Running export tags for pipeline %s", pipeline)
 
-    if pipeline == Pipeline.cg:
+    if not pipeline:
         header = ["Tag name", "Description"]
         for category in COMMON_TAG_CATEGORIES:
             table_name = category.upper().replace("_", " ")

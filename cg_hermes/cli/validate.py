@@ -20,11 +20,11 @@ app = typer.Typer()
 @app.command("deliverables")
 def validate_deliverables(
     infile: Path,
-    pipeline: Pipeline = typer.Option(Pipeline.mip, help="Specify what pipeline"),
+    pipeline: Pipeline = typer.Option(Pipeline.MIP_DNA, help="Specify what pipeline"),
     analysis_type: AnalysisType = typer.Option(None, help="Specify the analysis type"),
 ):
     """Validate a deliverables file"""
-    LOG.info("Validating file '%s' from pipeline %s", infile, pipeline.value)
+    LOG.info("Validating file '%s' from pipeline %s", infile, pipeline)
 
     # Read raw file into dict
     deliverables = get_deliverables(infile)
@@ -44,11 +44,11 @@ def validate_deliverables(
 
 
 @app.command("tags")
-def validate_tags_cmd(pipeline: Pipeline):
+def validate_tags_cmd(pipeline: Pipeline = None):
     """Validate the tag maps for one of the definitions"""
-    LOG.info("Validating %s common tags", pipeline.value)
+    LOG.info("Validating %s common tags", pipeline)
     exit_code = 0
-    if pipeline == Pipeline.cg:
+    if not pipeline:
         try:
             validate_common_tags()
             LOG.info("Tag map looks fine")
@@ -63,7 +63,7 @@ def validate_tags_cmd(pipeline: Pipeline):
     elif pipeline == Pipeline.FLUFFY:
         tag_map = FLUFFY_COMMON_TAGS
     else:
-        LOG.info("Could not find pipeline tags for %s", pipeline.value)
+        LOG.info("Could not find pipeline tags for %s", pipeline)
         raise typer.Exit(code=exit_code)
 
     try:

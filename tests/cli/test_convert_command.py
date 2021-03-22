@@ -12,7 +12,7 @@ def test_convert_mip_dna_deliverables(cli_runner: CliRunner, mip_dna_deliverable
     assert mip_dna_deliverables.exists()
 
     # WHEN converting the deliverables to CG format
-    result = cli_runner.invoke(app, [str(mip_dna_deliverables), "--pipeline", "mip"])
+    result = cli_runner.invoke(app, [str(mip_dna_deliverables), "--pipeline", "mip-dna"])
 
     # THEN assert that the program exits with success
     assert result.exit_code == 0
@@ -25,7 +25,7 @@ def test_convert_mip_deliverables_microsalt_file(
     assert microsalt_deliverables.exists()
 
     # WHEN converting the deliverables to CG format using mip as pipeline
-    result = cli_runner.invoke(app, [str(microsalt_deliverables), "--pipeline", "mip"])
+    result = cli_runner.invoke(app, [str(microsalt_deliverables), "--pipeline", "mip-dna"])
 
     # THEN assert that the program exits without success
     assert result.exit_code == 1

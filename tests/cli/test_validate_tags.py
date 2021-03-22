@@ -9,7 +9,7 @@ def test_cli_validate_cg_tags(cli_runner: CliRunner):
     # GIVEN a CLI runner
 
     # WHEN testing to validate the common tags from the CLI
-    result = cli_runner.invoke(app, ["tags", "cg"])
+    result = cli_runner.invoke(app, ["tags"])
 
     # THEN assert that the validation was succesfull
     assert result.exit_code == 0
@@ -19,7 +19,7 @@ def test_cli_validate_mip_tags(cli_runner: CliRunner):
     # GIVEN a CLI runner
 
     # WHEN testing to validate the common tags from the CLI
-    result = cli_runner.invoke(app, ["tags", "mip"])
+    result = cli_runner.invoke(app, ["tags", "mip-dna"])
 
     # THEN assert that the validation was succesfull
     assert result.exit_code == 0
