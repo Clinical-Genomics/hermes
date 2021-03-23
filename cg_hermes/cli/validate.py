@@ -46,7 +46,7 @@ def validate_deliverables(
 
 
 @app.command("tags")
-def validate_tags_cmd(pipeline: Optional[Pipeline]):
+def validate_tags_cmd(pipeline: Optional[Pipeline] = None):
     """Validate the tag maps for one of the definitions"""
     LOG.info("Validating %s common tags", pipeline)
     exit_code = 0
