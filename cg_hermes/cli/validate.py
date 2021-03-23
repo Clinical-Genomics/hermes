@@ -46,19 +46,12 @@ def validate_deliverables(
 
 
 @app.command("tags")
-def validate_tags_cmd(pipeline: None):
+def validate_tags_cmd(pipeline: Pipeline):
     """Validate the tag maps for one of the definitions"""
     LOG.info("Validating %s common tags", pipeline)
     exit_code = 0
-    if not pipeline:
-        try:
-            validate_common_tags()
-            LOG.info("Tag map looks fine")
-        except AssertionError:
-            exit_code = 1
-        raise typer.Exit(code=exit_code)
 
-    elif pipeline == str(Pipeline.MIP_DNA):
+    if pipeline == str(Pipeline.MIP_DNA):
         tag_map = MIP_DNA_TAGS
     elif pipeline == str(Pipeline.BALSAMIC):
         tag_map = BALSAMIC_COMMON_TAGS
