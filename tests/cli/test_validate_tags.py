@@ -43,3 +43,13 @@ def test_cli_validate_fluffy_tags(cli_runner: CliRunner):
 
     # THEN assert that the validation was successful
     assert result.exit_code == 0
+
+
+def test_cli_validate_mutant_tags(cli_runner: CliRunner):
+    # GIVEN a CLI runner
+
+    # WHEN testing to validate the common tags from the CLI
+    result = cli_runner.invoke(app, ["tags", "sars-cov-2"])
+
+    # THEN assert that the validation was successful
+    assert result.exit_code == 0
