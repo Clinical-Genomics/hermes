@@ -1,5 +1,6 @@
 import logging
 from pathlib import Path
+from typing import Optional
 
 import typer
 from pydantic import ValidationError
@@ -20,7 +21,7 @@ app = typer.Typer()
 @app.command("deliverables")
 def validate_deliverables(
     infile: Path,
-    pipeline: Pipeline = typer.Option(Pipeline.MIP_DNA, help="Specify pipeline"),
+    pipeline: Pipeline = typer.Option(Pipeline.FLUFFY, help="Specify pipeline"),
     analysis_type: AnalysisType = typer.Option(None, help="Specify the analysis type"),
 ):
     """Validate a deliverables file"""
@@ -44,7 +45,7 @@ def validate_deliverables(
 
 
 @app.command("tags")
-def validate_tags_cmd(pipeline: Pipeline = None):
+def validate_tags_cmd(pipeline: Optional[Pipeline]):
     """Validate the tag maps for one of the definitions"""
     LOG.info("Validating %s common tags", pipeline)
     exit_code = 0
