@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 About changelog [here](https://keepachangelog.com/en/1.0.0/)
 
+## [0.4.0]
+### Added
+- Support same pipeline format as cg
+
 ## [0.3.0]
 ### Added
 - Added support for the mutant pipeline
