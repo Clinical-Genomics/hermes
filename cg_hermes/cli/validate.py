@@ -20,7 +20,7 @@ app = typer.Typer()
 @app.command("deliverables")
 def validate_deliverables(
     infile: Path,
-    pipeline: Pipeline = typer.Option(Pipeline.MIP_DNA, help="Specify what pipeline"),
+    pipeline: Pipeline = typer.Option(Pipeline.MIP_DNA, help="Specify pipeline"),
     analysis_type: AnalysisType = typer.Option(None, help="Specify the analysis type"),
 ):
     """Validate a deliverables file"""
