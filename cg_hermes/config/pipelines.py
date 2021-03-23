@@ -1,16 +1,7 @@
-from enum import Enum
+from cgmodels.cg.constants import Pipeline, StrEnum
 
 
-class Pipeline(str, Enum):
-    mip = "mip"
-    balsamic = "balsamic"
-    microsalt = "microsalt"
-    fluffy = "fluffy"
-    mutant = "mutant"
-    cg = "cg"
-
-
-class AnalysisType(str, Enum):
+class AnalysisType(StrEnum):
     tumor_wgs = "tumor_wgs"
     tumor_normal_wgs = "tumor_normal_wgs"
     tumor_panel = "tumor_panel"

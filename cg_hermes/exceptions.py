@@ -1,4 +1,4 @@
-from typing import FrozenSet, List
+from typing import List
 
 
 class Error(Exception):

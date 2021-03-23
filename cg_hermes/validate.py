@@ -15,28 +15,24 @@ def get_deliverables_obj(
     pipeline: Pipeline,
     analysis_type: Optional[AnalysisType] = None,
 ) -> Deliverables:
-    if pipeline == Pipeline.balsamic:
-        if not analysis_type:
-            LOG.info("Please specify analysis type for balsamic")
-            raise SyntaxError
-    deliverables_obj = Deliverables(
-        deliverables=deliverables, pipeline=pipeline, analysis_type=analysis_type
-    )
-    return deliverables_obj
+    if pipeline == Pipeline.BALSAMIC and not analysis_type:
+        LOG.info("Please specify analysis type for balsamic")
+        raise SyntaxError
+    return Deliverables(deliverables=deliverables, pipeline=pipeline, analysis_type=analysis_type)
 
 
 def validate_common_tags() -> bool:
     """Validate the common tags"""
     for category in COMMON_TAG_CATEGORIES:
         tag_map: Dict[str, Dict[str, str]] = COMMON_TAG_CATEGORIES[category]
-        for tag_name in tag_map:
+        for tag_name, value in tag_map.items():
             try:
                 assert isinstance(tag_map[tag_name], dict)
             except AssertionError as err:
                 LOG.warning("Tag %s in %s is on the wrong format", tag_name, category.upper())
                 raise err
             try:
-                assert "description" in tag_map[tag_name]
+                assert "description" in value
             except AssertionError as err:
                 LOG.warning("Tag %s in %s does not have a description", tag_name, category.upper())
                 raise err
@@ -45,12 +41,7 @@ def validate_common_tags() -> bool:
 
 def validate_tag_map(tag_map: Dict[FrozenSet[str], dict]) -> bool:
     """Validate if a tag map is on the correct format"""
-    for pipeline_tags in tag_map:
+    for pipeline_tags, value in tag_map.items():
         assert isinstance(pipeline_tags, frozenset)
-        TagMap.validate(tag_map[pipeline_tags])
+        TagMap.validate(value)
     return True
-
-
-if __name__ == "__main__":
-    tags = {frozenset(["tags"]): {"tags": ["cram"], "used_by": ["scout"], "mandatory": True}}
-    validate_tag_map(tags)

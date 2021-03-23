@@ -13,7 +13,7 @@ def test_validate_mip_deliverables_file(cli_runner: CliRunner, mip_dna_deliverab
 
     # WHEN running the validate deliverables command
     result = cli_runner.invoke(
-        app, ["deliverables", str(mip_dna_deliverables), "--pipeline", "mip"]
+        app, ["deliverables", str(mip_dna_deliverables), "--pipeline", "mip-dna"]
     )
 
     # THEN assert it exits without problem

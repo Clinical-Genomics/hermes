@@ -19,8 +19,7 @@ LOG = logging.getLogger(__name__)
 
 def get_table(tags: dict):
     table = []
-    for pipeline_tags in tags:
-        tag_info = tags[pipeline_tags]
+    for pipeline_tags, tag_info in tags.items():
         row = [
             ", ".join(pipeline_tags),
             str(tag_info["is_mandatory"]),
@@ -37,23 +36,23 @@ class OutputFormat(str, Enum):
 
 
 PIPELINE_MAP = {
-    Pipeline.mip.value: {
+    Pipeline.MIP_DNA: {
         "header": ["Mip tags", "Mandatory", "HK tags", "Used by"],
         "tags": MIP_DNA_TAGS,
     },
-    Pipeline.fluffy.value: {
+    Pipeline.FLUFFY: {
         "header": ["Fluffy tags", "Mandatory", "HK tags", "Used by"],
         "tags": FLUFFY_COMMON_TAGS,
     },
-    Pipeline.fluffy.microsalt: {
+    Pipeline.MICROSALT: {
         "header": ["Microsalt tags", "Mandatory", "HK tags", "Used by"],
         "tags": MICROSALT_COMMON_TAGS,
     },
-    Pipeline.fluffy.balsamic: {
+    Pipeline.BALSAMIC: {
         "header": ["Balsamic tags", "Mandatory", "HK tags", "Used by"],
         "tags": BALSAMIC_COMMON_TAGS,
     },
-    Pipeline.fluffy.mutant: {
+    Pipeline.SARS_COV_2: {
         "header": ["Mutant tags", "Mandatory", "HK tags", "Used by"],
         "tags": MUTANT_COMMON_TAGS,
     },
@@ -62,13 +61,13 @@ PIPELINE_MAP = {
 
 @app.command(name="tags")
 def export_tags_cmd(
-    pipeline: Pipeline = typer.Option(Pipeline.cg),
     output: OutputFormat = typer.Option(OutputFormat.github),
+    pipeline: Pipeline = None,
 ):
     """Export tag definitions from hermes"""
-    LOG.info("Running export tags for pipeline %s", pipeline.value)
+    LOG.info("Running export tags for pipeline %s", pipeline)
 
-    if pipeline == Pipeline.cg:
+    if not pipeline:
         header = ["Tag name", "Description"]
         for category in COMMON_TAG_CATEGORIES:
             table_name = category.upper().replace("_", " ")
@@ -77,9 +76,14 @@ def export_tags_cmd(
             else:
                 typer.echo(table_name)
             typer.echo()
-            table = []
-            for tag_name in COMMON_TAG_CATEGORIES[category]:
-                table.append([tag_name, COMMON_TAG_CATEGORIES[category][tag_name]["description"]])
+            table = [
+                [
+                    tag_name,
+                    COMMON_TAG_CATEGORIES[category][tag_name]["description"],
+                ]
+                for tag_name in COMMON_TAG_CATEGORIES[category]
+            ]
+
             typer.echo(tabulate(table, headers=header, tablefmt=output.value))
             typer.echo()
         raise typer.Exit()
@@ -87,7 +91,7 @@ def export_tags_cmd(
         LOG.info("Could not recognize pipeline")
         raise typer.Exit(code=1)
 
-    header = PIPELINE_MAP[pipeline.value]["header"]
-    table = get_table(PIPELINE_MAP[pipeline.value]["tags"])
+    header = PIPELINE_MAP[pipeline]["header"]
+    table = get_table(PIPELINE_MAP[pipeline]["tags"])
 
     typer.echo(tabulate(table, headers=header, tablefmt=output.value))

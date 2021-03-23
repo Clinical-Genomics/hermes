@@ -21,7 +21,7 @@ def test_export_mip_tags(cli_runner: CliRunner):
     # GIVEN a cli runner
 
     # WHEN running the export tags command for pipeline mip
-    result = cli_runner.invoke(app, ["--pipeline", "mip"])
+    result = cli_runner.invoke(app, ["--pipeline", "mip-dna"])
 
     # THEN assert that the command exits without problems
     assert result.exit_code == 0

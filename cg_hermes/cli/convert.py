@@ -27,7 +27,7 @@ def convert_cmd(
     LOG.info(
         "Convert deliverable file %s from pipeline %s to CG format",
         infile,
-        pipeline.value,
+        pipeline,
     )
     # Read raw file into dict
     deliverables_raw = get_deliverables(infile)
