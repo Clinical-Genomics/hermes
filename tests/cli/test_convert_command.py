@@ -47,7 +47,7 @@ def test_convert_mutant_deliverables(cli_runner: CliRunner, mutant_deliverables:
     assert mutant_deliverables.exists()
 
     # WHEN converting the deliverables to CG format
-    result = cli_runner.invoke(app, [str(mutant_deliverables), "--pipeline", "mutant"])
+    result = cli_runner.invoke(app, [str(mutant_deliverables), "--pipeline", "sars-cov-2"])
 
     # THEN assert that the program exits with success
     assert result.exit_code == 0
