@@ -247,16 +247,6 @@ BALSAMIC_COMMON_TAGS = {
         "is_mandatory": False,
         "used_by": ["storage"],
     },
-    frozenset({"vcf-all", "strelka", "snv", "annotated-somatic-vcf-all"}): {
-        "tags": ["vcf", "strelka"],
-        "is_mandatory": False,
-        "used_by": ["storage"],
-    },
-    frozenset({"vcf-all", "strelka", "snv", "annotated-somatic-vcf-all-index"}): {
-        "tags": ["vcf-index", "strelka"],
-        "is_mandatory": False,
-        "used_by": ["storage"],
-    },
     frozenset({"vcf-all", "mutect", "snv", "annotated-somatic-vcf-all"}): {
         "tags": ["vcf", "mutect"],
         "is_mandatory": False,
@@ -274,11 +264,6 @@ BALSAMIC_COMMON_TAGS = {
     },
     frozenset({"mutect", "vcf-summary", "snv", "annotated-somatic-vcf-summary"}): {
         "tags": ["mutect", "vcf-report"],
-        "is_mandatory": False,
-        "used_by": ["audit"],
-    },
-    frozenset({"strelka", "vcf-summary", "snv", "annotated-somatic-vcf-summary"}): {
-        "tags": ["strelka", "vcf-report"],
         "is_mandatory": False,
         "used_by": ["audit"],
     },
@@ -302,30 +287,10 @@ BALSAMIC_COMMON_TAGS = {
         "is_mandatory": False,
         "used_by": ["storage"],
     },
-    frozenset({"strelka", "vcf-pass", "annotated-somatic-vcf-pass", "snv"}): {
-        "tags": ["vcf", "strelka", "filtered"],
-        "is_mandatory": False,
-        "used_by": ["storage"],
-    },
-    frozenset({"strelka", "vcf-pass", "snv", "annotated-somatic-vcf-pass-index"}): {
-        "tags": ["vcf-index", "strelka", "filtered"],
-        "is_mandatory": False,
-        "used_by": ["storage"],
-    },
     frozenset({"tmb", "stat-somatic-tmb", "vardict"}): {
         "tags": ["vardict", "tmb"],
         "is_mandatory": False,
         "used_by": ["audit"],
-    },
-    frozenset({"vcf-all", "strelka-germline", "snv", "annotated-germline-vcf-all"}): {
-        "tags": ["vcf", "strelka", "normal"],
-        "is_mandatory": False,
-        "used_by": ["storage"],
-    },
-    frozenset({"annotated-germline-vcf-all-index", "strelka-germline", "vcf-all", "snv"}): {
-        "tags": ["vcf-index", "strelka", "normal"],
-        "is_mandatory": False,
-        "used_by": ["storage"],
     },
     frozenset({"vcf-all", "haplotypecaller", "snv", "annotated-germline-vcf-all"}): {
         "tags": ["vcf", "haplotype-caller", "normal"],
@@ -356,11 +321,6 @@ BALSAMIC_COMMON_TAGS = {
         "tags": ["vcf-index", "dnascope", "normal"],
         "is_mandatory": False,
         "used_by": ["storage"],
-    },
-    frozenset({"annotated-germline-vcf-summary", "strelka-germline", "vcf-summary", "snv"}): {
-        "tags": ["strelka", "normal", "vcf-report"],
-        "is_mandatory": False,
-        "used_by": ["audit"],
     },
     frozenset({"annotated-germline-vcf-summary", "haplotypecaller", "snv", "vcf-summary"}): {
         "tags": ["haplotype-caller", "normal", "vcf-report"],
@@ -517,17 +477,8 @@ TUMOR_ONLY_PANEL_TAGS = {
     frozenset({"sv", "vcf-all", "manta-germline", "annotated-germline-vcf-all-index"}): {
         "is_mandatory": True
     },
-    frozenset({"annotated-germline-vcf-all", "vcf-all", "snv", "strelka-germline"}): {
-        "is_mandatory": True
-    },
-    frozenset({"annotated-germline-vcf-all-index", "vcf-all", "snv", "strelka-germline"}): {
-        "is_mandatory": True
-    },
     frozenset({"annotated-germline-vcf-all", "dnascope", "vcf-all", "snv"}): {"is_mandatory": True},
     frozenset({"dnascope", "vcf-all", "snv", "annotated-germline-vcf-all-index"}): {
-        "is_mandatory": True
-    },
-    frozenset({"annotated-germline-vcf-summary", "vcf-summary", "snv", "strelka-germline"}): {
         "is_mandatory": True
     },
     frozenset({"haplotypecaller", "annotated-germline-vcf-summary", "vcf-summary", "snv"}): {
@@ -550,10 +501,6 @@ TUMOR_NORMAL_PANEL_TAGS = {
     frozenset({"annotated-somatic-vcf-all-index", "snv", "vcf-all", "vardict"}): {
         "is_mandatory": True
     },
-    frozenset({"strelka", "snv", "vcf-all", "annotated-somatic-vcf-all"}): {"is_mandatory": True},
-    frozenset({"annotated-somatic-vcf-all-index", "strelka", "snv", "vcf-all"}): {
-        "is_mandatory": True
-    },
     frozenset({"mutect", "snv", "vcf-all", "annotated-somatic-vcf-all"}): {"is_mandatory": False},
     frozenset({"mutect", "annotated-somatic-vcf-all-index", "snv", "vcf-all"}): {
         "is_mandatory": False
@@ -564,9 +511,6 @@ TUMOR_NORMAL_PANEL_TAGS = {
     frozenset({"mutect", "vcf-summary", "snv", "annotated-somatic-vcf-summary"}): {
         "is_mandatory": False
     },
-    frozenset({"strelka", "snv", "vcf-summary", "annotated-somatic-vcf-summary"}): {
-        "is_mandatory": True
-    },
     frozenset({"mutect", "vcf-pass", "snv", "annotated-somatic-vcf-pass"}): {"is_mandatory": False},
     frozenset({"mutect", "vcf-pass", "snv", "annotated-somatic-vcf-pass-index"}): {
         "is_mandatory": False
@@ -575,17 +519,7 @@ TUMOR_NORMAL_PANEL_TAGS = {
     frozenset({"vcf-pass", "snv", "annotated-somatic-vcf-pass-index", "vardict"}): {
         "is_mandatory": True
     },
-    frozenset({"vcf-pass", "strelka", "snv", "annotated-somatic-vcf-pass"}): {"is_mandatory": True},
-    frozenset({"vcf-pass", "strelka", "snv", "annotated-somatic-vcf-pass-index"}): {
-        "is_mandatory": True
-    },
     frozenset({"stat-somatic-tmb", "tmb", "vardict"}): {"is_mandatory": True},
-    frozenset({"strelka-germline", "snv", "vcf-all", "annotated-germline-vcf-all"}): {
-        "is_mandatory": True
-    },
-    frozenset({"strelka-germline", "snv", "vcf-all", "annotated-germline-vcf-all-index"}): {
-        "is_mandatory": True
-    },
     frozenset({"haplotypecaller", "snv", "vcf-all", "annotated-germline-vcf-all"}): {
         "is_mandatory": True
     },
@@ -600,9 +534,6 @@ TUMOR_NORMAL_PANEL_TAGS = {
     },
     frozenset({"snv", "vcf-all", "dnascope", "annotated-germline-vcf-all"}): {"is_mandatory": True},
     frozenset({"snv", "vcf-all", "dnascope", "annotated-germline-vcf-all-index"}): {
-        "is_mandatory": True
-    },
-    frozenset({"annotated-germline-vcf-summary", "strelka-germline", "snv", "vcf-summary"}): {
         "is_mandatory": True
     },
     frozenset({"annotated-germline-vcf-summary", "haplotypecaller", "snv", "vcf-summary"}): {
