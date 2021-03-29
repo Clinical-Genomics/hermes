@@ -21,12 +21,12 @@ MUTANT_COMMON_TAGS = {
         "used_by": ["deliver"],
     },
     frozenset({"SARS-CoV-2-type", "typing"}): {
-        "is_mandatory": True,
+        "is_mandatory": False,
         "tags": ["typing-report", "pangolin", "visualization"],
         "used_by": ["deliver"],
     },
     frozenset({"SARS-CoV-2-json", "result_aggregation"}): {
-        "is_mandatory": True,
+        "is_mandatory": False,
         "tags": ["typing-report", "visualization"],
         "used_by": ["deliver"],
     },
