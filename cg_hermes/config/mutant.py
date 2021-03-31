@@ -11,12 +11,12 @@ MUTANT_COMMON_TAGS = {
         "used_by": ["deliver"],
     },
     frozenset({"variants", "variant-calling"}): {
-        "is_mandatory": True,
+        "is_mandatory": False,
         "tags": ["tsv", "vcf-report"],
         "used_by": ["deliver"],
     },
     frozenset({"SARS-CoV-2-qc", "result_aggregation"}): {
-        "is_mandatory": True,
+        "is_mandatory": False,
         "tags": ["qc-report", "csv", "visualization"],
         "used_by": ["deliver"],
     },
@@ -31,22 +31,22 @@ MUTANT_COMMON_TAGS = {
         "used_by": ["deliver"],
     },
     frozenset({"SARS-CoV-2-sum", "report"}): {
-        "is_mandatory": True,
+        "is_mandatory": False,
         "tags": ["summary", "csv", "visualization"],
         "used_by": ["deliver"],
     },
     frozenset({"SARS-CoV-2-var", "report"}): {
-        "is_mandatory": True,
+        "is_mandatory": False,
         "tags": ["variants", "csv", "visualization"],
         "used_by": ["deliver"],
     },
     frozenset({"SARS-CoV-2-info", "report"}): {
-        "is_mandatory": True,
+        "is_mandatory": False,
         "tags": ["komplettering", "fohm", "visualization"],
         "used_by": ["deliver"],
     },
     frozenset({"runtime-settings", "runinfo"}): {
-        "is_mandatory": True,
+        "is_mandatory": False,
         "tags": ["mutant-config"],
         "used_by": ["storage", "audit"],
     },
@@ -61,12 +61,12 @@ MUTANT_COMMON_TAGS = {
         "used_by": ["storage"],
     },
     frozenset({"consensus"}): {
-        "is_mandatory": True,
+        "is_mandatory": False,
         "tags": ["fastq", "consensus"],
         "used_by": ["deliver", "storage"],
     },
     frozenset({"runinfo", "logfile"}): {
-        "is_mandatory": True,
+        "is_mandatory": False,
         "tags": ["mutant-log"],
         "used_by": ["audit"],
     },
