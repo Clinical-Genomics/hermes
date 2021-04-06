@@ -145,9 +145,11 @@ MUTANT_SPECIFIC = {
     "mutant-log": {"description": "SLURM log for mutant analysis"},
     "typing-report": {"description": "Results from typing"},
     "fohm": {"description": "Relevant for FoHM"},
-    "pangolin": {"description": "Pangolin classified output"},
     "komplettering": {"description": "Filetype specific for national uploading of microbial data"},
     "consensus": {"description": "Consensus sequence"},
+    "pangolin-typing": {"description": "Pangolin typing report"},
+    "pangolin-summary": {"description": "Summary report"},
+    "multiqc-json": {"description": "Multiqc putput for uload to vogue"},
 }
 
 AVAILABLE_USAGES = {

@@ -77,17 +77,17 @@ MUTANT_COMMON_TAGS = {
     },
     frozenset({"multiqc-json"}): {
         "is_mandatory": False,
-        "tags": ["multiqc"],
+        "tags": ["multiqc-json"],
         "used_by": ["vogue"],
     },
     frozenset({"pangolin-typing"}): {
         "is_mandatory": False,
-        "tags": ["pangolin-typing", "vcf", "report"],
+        "tags": ["pangolin-typing", "csv", "report"],
         "used_by": ["deliver"],
     },
     frozenset({"pangolin-summary"}): {
         "is_mandatory": False,
-        "tags": ["pangolin-summary", "vcf", "report"],
+        "tags": ["pangolin-summary", "csv", "report"],
         "used_by": ["deliver"],
     },
 }
