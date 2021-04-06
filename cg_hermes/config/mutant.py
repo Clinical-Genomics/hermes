@@ -22,7 +22,7 @@ MUTANT_COMMON_TAGS = {
     },
     frozenset({"SARS-CoV-2-type", "typing"}): {
         "is_mandatory": False,
-        "tags": ["typing-report", "pangolin", "visualization"],
+        "tags": ["typing-report", "visualization"],
         "used_by": ["deliver"],
     },
     frozenset({"SARS-CoV-2-json", "result_aggregation"}): {
@@ -74,5 +74,20 @@ MUTANT_COMMON_TAGS = {
         "is_mandatory": False,
         "tags": ["bam"],
         "used_by": ["storage"],
+    },
+    frozenset({"multiqc-json"}): {
+        "is_mandatory": False,
+        "tags": ["multiqc"],
+        "used_by": ["vogue"],
+    },
+    frozenset({"pangolin-typing"}): {
+        "is_mandatory": False,
+        "tags": ["pangolin-typing", "vcf", "report"],
+        "used_by": ["deliver"],
+    },
+    frozenset({"pangolin-summary"}): {
+        "is_mandatory": False,
+        "tags": ["pangolin-summary", "vcf", "report"],
+        "used_by": ["deliver"],
     },
 }
