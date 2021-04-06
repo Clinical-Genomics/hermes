@@ -147,8 +147,6 @@ MUTANT_SPECIFIC = {
     "fohm": {"description": "Relevant for FoHM"},
     "komplettering": {"description": "Filetype specific for national uploading of microbial data"},
     "consensus": {"description": "Consensus sequence"},
-    "pangolin-typing": {"description": "Pangolin typing report"},
-    "pangolin-summary": {"description": "Summary report"},
     "multiqc-json": {"description": "Multiqc putput for uload to vogue"},
 }
 
