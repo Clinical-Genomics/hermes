@@ -82,12 +82,12 @@ MUTANT_COMMON_TAGS = {
     },
     frozenset({"pangolin-typing"}): {
         "is_mandatory": False,
-        "tags": ["pangolin", "typing-report", "csv", "report"],
+        "tags": ["pangolin", "typing-report", "csv"],
         "used_by": ["deliver"],
     },
     frozenset({"pangolin-summary"}): {
         "is_mandatory": False,
-        "tags": ["pangolin", "typing-summary", "csv", "report"],
+        "tags": ["pangolin", "typing-summary", "csv"],
         "used_by": ["deliver"],
     },
 }
