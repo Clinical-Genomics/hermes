@@ -143,11 +143,12 @@ MICROSALT_SPECIFIC = {
 MUTANT_SPECIFIC = {
     "mutant-config": {"description": "Config settings for mutant analysis"},
     "mutant-log": {"description": "SLURM log for mutant analysis"},
+    "pangolin": {"description": "Pangolin specific output"},
     "typing-report": {"description": "Results from typing"},
     "fohm": {"description": "Relevant for FoHM"},
     "komplettering": {"description": "Filetype specific for national uploading of microbial data"},
     "consensus": {"description": "Consensus sequence"},
-    "multiqc-json": {"description": "Multiqc putput for uload to vogue"},
+    "multiqc-json": {"description": "Multiqc output for upload to vogue"},
 }
 
 AVAILABLE_USAGES = {
