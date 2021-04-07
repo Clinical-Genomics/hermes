@@ -1,4 +1,4 @@
-"""Tag map for MIP deliverables file"""
+"""Tag map for MIP-dna deliverables file"""
 
 MIP_DNA_TAGS = {
     frozenset(["chanjo_sexcheck"]): {

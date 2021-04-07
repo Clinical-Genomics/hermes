@@ -7,7 +7,8 @@ from tabulate import tabulate
 from cg_hermes.config.balsamic import BALSAMIC_COMMON_TAGS
 from cg_hermes.config.fluffy import FLUFFY_COMMON_TAGS
 from cg_hermes.config.microsalt import MICROSALT_COMMON_TAGS
-from cg_hermes.config.mip import MIP_DNA_TAGS
+from cg_hermes.config.mip_dna import MIP_DNA_TAGS
+from cg_hermes.config.mip_rna import MIP_RNA_TAGS
 from cg_hermes.config.mutant import MUTANT_COMMON_TAGS
 from cg_hermes.config.pipelines import Pipeline
 from cg_hermes.config.tags import COMMON_TAG_CATEGORIES
@@ -37,8 +38,12 @@ class OutputFormat(str, Enum):
 
 PIPELINE_MAP = {
     Pipeline.MIP_DNA: {
-        "header": ["Mip tags", "Mandatory", "HK tags", "Used by"],
+        "header": ["Mip-dna tags", "Mandatory", "HK tags", "Used by"],
         "tags": MIP_DNA_TAGS,
+    },
+    Pipeline.MIP_RNA: {
+        "header": ["Mip-rna tags", "Mandatory", "HK tags", "Used by"],
+        "tags": MIP_RNA_TAGS,
     },
     Pipeline.FLUFFY: {
         "header": ["Fluffy tags", "Mandatory", "HK tags", "Used by"],

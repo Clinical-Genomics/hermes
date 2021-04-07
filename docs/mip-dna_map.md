@@ -1,4 +1,4 @@
-| Mip tags                            | Mandatory   | HK tags                     | Used by      |
+| Mip-dna tags                            | Mandatory   | HK tags                     | Used by      |
 |-------------------------------------|-------------|-----------------------------|--------------|
 | chanjo_sexcheck                     | False       | chanjo, sex-check           | scout        |
 | sites, chromograph_upd              | False       | chromograph, upd, sites     | scout        |

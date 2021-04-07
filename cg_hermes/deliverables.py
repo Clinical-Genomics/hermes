@@ -12,8 +12,9 @@ from cg_hermes.config.balsamic import (
 )
 from cg_hermes.config.fluffy import FLUFFY_COMMON_TAGS
 from cg_hermes.config.microsalt import MICROSALT_COMMON_TAGS
+from cg_hermes.config.mip_dna import MIP_DNA_TAGS
+from cg_hermes.config.mip_rna import MIP_RNA_TAGS
 from cg_hermes.config.mutant import MUTANT_COMMON_TAGS
-from cg_hermes.config.mip import MIP_DNA_TAGS
 from cg_hermes.config.pipelines import AnalysisType, Pipeline
 from cg_hermes.exceptions import MissingFileError
 from cg_hermes.models import pipeline_deliverables
@@ -22,8 +23,8 @@ from cg_hermes.models.pipeline_deliverables import (
     CGDeliverables,
     FluffyDeliverables,
     MicrosaltDeliverables,
-    MutantDeliverables,
     MipDeliverables,
+    MutantDeliverables,
     PipelineDeliverables,
     TagBase,
 )
@@ -76,10 +77,15 @@ class Deliverables:
             self.files = self.get_mutant_files()
             self.configs = Deliverables.build_internal_tag_map(MUTANT_COMMON_TAGS)
         elif self.pipeline == Pipeline.MIP_DNA:
-            LOG.info("Parsing deliverables for mip")
+            LOG.info("Parsing deliverables for mip_dna")
             self.model: MipDeliverables = MipDeliverables.parse_obj(self.raw_deliverables)
             self.files = self.get_mip_files()
             self.configs = Deliverables.build_internal_tag_map(MIP_DNA_TAGS)
+        elif self.pipeline == Pipeline.MIP_RNA:
+            LOG.info("Parsing deliverables for mip_rna")
+            self.model: MipDeliverables = MipDeliverables.parse_obj(self.raw_deliverables)
+            self.files = self.get_mip_files()
+            self.configs = Deliverables.build_internal_tag_map(MIP_RNA_TAGS)
         else:
             raise Exception(
                 "Invalid pipeline ({}) set for Deliverables object".format(self.pipeline)

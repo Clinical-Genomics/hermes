@@ -1,0 +1,351 @@
+---
+files:
+  - format: meta
+    id: sample_id_1
+    path: /path/to/rare-disease/cases/case_id/analysis/sample_id_1/salmon_quant/sample_id_1_lanes_1234_quant.sf
+    path_index: ~
+    step: salmon_quant
+    tag: ~
+  - format: meta
+    id: sample_id_2
+    path: /path/to/rare-disease/cases/case_id/analysis/sample_id_2/salmon_quant/sample_id_2_lanes_1234_quant.sf
+    path_index: ~
+    step: salmon_quant
+    tag: ~
+  - format: meta
+    id: sample_id_3
+    path: /path/to/rare-disease/cases/case_id/analysis/sample_id_3/salmon_quant/sample_id_3_lanes_1234_quant.sf
+    path_index: ~
+    step: salmon_quant
+    tag: ~
+  - format: meta
+    id: sample_id_4
+    path: /path/to/rare-disease/cases/case_id/analysis/sample_id_4/salmon_quant/sample_id_4_lanes_1234_quant.sf
+    path_index: ~
+    step: salmon_quant
+    tag: ~
+  - format: meta
+    id: case_id
+    path: /path/to/rare-disease/cases/case_id/analysis/case_id/blobfish/affected_vs_unaffected.results.tsv
+    path_index: ~
+    step: blobfish
+    tag: ~
+  - format: meta
+    id: sample_id_1
+    path: /path/to/rare-disease/cases/case_id/analysis/sample_id_1/star_fusion/sample_id_1_lanes_1234_starfusion.tsv
+    path_index: ~
+    step: star_fusion
+    tag: ~
+  - format: meta
+    id: sample_id_2
+    path: /path/to/rare-disease/cases/case_id/analysis/sample_id_2/star_fusion/sample_id_2_lanes_1234_starfusion.tsv
+    path_index: ~
+    step: star_fusion
+    tag: ~
+  - format: meta
+    id: sample_id_3
+    path: /path/to/rare-disease/cases/case_id/analysis/sample_id_3/star_fusion/sample_id_3d:AAlanes_1234_starfusion.tsv
+    path_index: ~
+    step: star_fusion
+    tag: ~
+  - format: meta
+    id: sample_id_4
+    path: /path/to/rare-disease/cases/case_id/analysis/sample_id_4/star_fusion/sample_id_4_lanes_1234_starfusion.tsv
+    path_index: ~
+    step: star_fusion
+    tag: ~
+  - format: meta
+    id: sample_id_1
+    path: /path/to/rare-disease/cases/case_id/analysis/sample_id_1/arriba_ar/sample_id_1_lanes_1234_arriba.tsv
+    path_index: ~
+    step: arriba_ar
+    tag: ~
+  - format: meta
+    id: sample_id_2
+    path: /path/to/rare-disease/cases/case_id/analysis/sample_id_2/arriba_ar/sample_id_2_lanes_1234_arriba.tsv
+    path_index: ~
+    step: arriba_ar
+    tag: ~
+  - format: meta
+    id: sample_id_3
+    path: /path/to/rare-disease/cases/case_id/analysis/sample_id_3/arriba_ar/sample_id_3_lanes_1234_arriba.tsv
+    path_index: ~
+    step: arriba_ar
+    tag: ~
+  - format: meta
+    id: sample_id_4
+    path: /path/to/rare-disease/cases/case_id/analysis/sample_id_4/arriba_ar/sample_id_4_lanes_1234_arriba.tsv
+    path_index: ~
+    step: arriba_ar
+    tag: ~
+  - format: vcf
+    id: sample_id_1
+    path: /path/to/rare-disease/cases/case_id/analysis/sample_id_1/megafusion_ar/sample_id_1_fusion_comb.vcf.gz
+    path_index: /path/to/rare-disease/cases/case_id/analysis/sample_id_1/megafusion_ar/sample_id_1_fusion_comb.vcf.gz.tbi
+    step: megafusion_ar
+    tag: ~
+  - format: vcf
+    id: sample_id_2
+    path: /path/to/rare-disease/cases/case_id/analysis/sample_id_2/megafusion_ar/sample_id_2_fusion_comb.vcf.gz
+    path_index: /path/to/rare-disease/cases/case_id/analysis/sample_id_2/megafusion_ar/sample_id_2_fusion_comb.vcf.gz.tbi
+    step: megafusion_ar
+    tag: ~
+  - format: vcf
+    id: sample_id_3
+    path: /path/to/rare-disease/cases/case_id/analysis/sample_id_3/megafusion_ar/sample_id_3_fusion_comb.vcf.gz
+    path_index: /path/to/rare-disease/cases/case_id/analysis/sample_id_3/megafusion_ar/sample_id_3_fusion_comb.vcf.gz.tbi
+    step: megafusion_ar
+    tag: ~
+  - format: vcf
+    id: sample_id_4
+    path: /path/to/rare-disease/cases/case_id/analysis/sample_id_4/megafusion_ar/sample_id_4_fusion_comb.vcf.gz
+    path_index: /path/to/rare-disease/cases/case_id/analysis/sample_id_4/megafusion_ar/sample_id_4_fusion_comb.vcf.gz.tbi
+    step: megafusion_ar
+    tag: ~
+  - format: vcf
+    id: case_id
+    path: /path/to/rare-disease/cases/case_id/analysis/case_id/svdb_merge_fusion/case_id_fusion_report.vcf.gz
+    path_index: /path/to/rare-disease/cases/case_id/analysis/case_id/svdb_merge_fusion/case_id_fusion_report.vcf.gz.tbi
+    step: svdb_merge_fusion
+    tag: ~
+  - format: meta
+    id: case_id
+    path: /path/to/rare-disease/cases/case_id/analysis/case_id/merge_fusion_reports/case_id_report.selected.pdf
+    path_index: ~
+    step: merge_fusion_reports
+    tag: clinical
+  - format: meta
+    id: case_id
+    path: /path/to/rare-disease/cases/case_id/analysis/case_id/merge_fusion_reports/case_id_report.pdf
+    path_index: ~
+    step: merge_fusion_reports
+    tag: research
+  - format: bigwig
+    id: sample_id_1
+    path: /path/to/rare-disease/cases/case_id/analysis/sample_id_1/build_sj_tracks/sample_id_1_lanes_1234_star_sorted_sj.bigWig
+    path_index: ~
+    step: build_sj_tracks
+    tag: coverage
+  - format: bed
+    id: sample_id_1
+    path: /path/to/rare-disease/cases/case_id/analysis/sample_id_1/build_sj_tracks/sample_id_1_lanes_1234_star_sorted_sj.bed.gz
+    path_index: ~
+    step: build_sj_tracks
+    tag: junction
+  - format: bigwig
+    id: sample_id_2
+    path: /path/to/rare-disease/cases/case_id/analysis/sample_id_2/build_sj_tracks/sample_id_2_lanes_1234_star_sorted_sj.bigWig
+    path_index: ~
+    step: build_sj_tracks
+    tag: coverage
+  - format: bed
+    id: sample_id_2
+    path: /path/to/rare-disease/cases/case_id/analysis/sample_id_2/build_sj_tracks/sample_id_2_lanes_1234_star_sorted_sj.bed.gz
+    path_index: ~
+    step: build_sj_tracks
+    tag: junction
+  - format: bigwig
+    id: sample_id_3
+    path: /path/to/rare-disease/cases/case_id/analysis/sample_id_3/build_sj_tracks/sample_id_3_lanes_1234_star_sorted_sj.bigWig
+    path_index: ~
+    step: build_sj_tracks
+    tag: coverage
+  - format: bed
+    id: sample_id_3
+    path: /path/to/rare-disease/cases/case_id/analysis/sample_id_3/build_sj_tracks/sample_id_3_lanes_1234_star_sorted_sj.bed.gz
+    path_index: ~
+    step: build_sj_tracks
+    tag: junction
+  - format: bigwig
+    id: sample_id_4
+    path: /path/to/rare-disease/cases/case_id/analysis/sample_id_4/build_sj_tracks/sample_id_4_lanes_1234_star_sorted_sj.bigWig
+    path_index: ~
+    step: build_sj_tracks
+    tag: coverage
+  - format: bed
+    id: sample_id_4
+    path: /path/to/rare-disease/cases/case_id/analysis/sample_id_4/build_sj_tracks/sample_id_4_lanes_1234_star_sorted_sj.bed.gz
+    path_index: ~
+    step: build_sj_tracks
+    tag: junction
+  - format: meta
+    id: sample_id_1
+    path: /path/to/rare-disease/cases/case_id/analysis/sample_id_1/stringtie_ar/sample_id_1_lanes_1234_trim_star_sorted_merged_strg.gtf
+    path_index: ~
+    step: stringtie_ar
+    tag: ~
+  - format: meta
+    id: sample_id_2
+    path: /path/to/rare-disease/cases/case_id/analysis/sample_id_2/stringtie_ar/sample_id_2_lanes_1234_trim_star_sorted_merged_strg.gtf
+    path_index: ~
+    step: stringtie_ar
+    tag: ~
+  - format: meta
+    id: sample_id_3
+    path: /path/to/rare-disease/cases/case_id/analysis/sample_id_3/stringtie_ar/sample_id_3_lanes_1234_trim_star_sorted_merged_strg.gtf
+    path_index: ~
+    step: stringtie_ar
+    tag: ~
+  - format: meta
+    id: sample_id_4
+    path: /path/to/rare-disease/cases/case_id/analysis/sample_id_4/stringtie_ar/sample_id_4_lanes_1234_trim_star_sorted_merged_strg.gtf
+    path_index: ~
+    step: stringtie_ar
+    tag: ~
+  - format: meta
+    id: sample_id_1
+    path: /path/to/rare-disease/cases/case_id/analysis/sample_id_1/gffcompare_ar/sample_id_1_lanes_1234_trim_star_sorted_merged_strg_gffcmp.gtf
+    path_index: ~
+    step: gffcompare_ar
+    tag: ~
+  - format: meta
+    id: sample_id_2
+    path: /path/to/rare-disease/cases/case_id/analysis/sample_id_2/gffcompare_ar/sample_id_2_lanes_1234_trim_star_sorted_merged_strg_gffcmp.gtf
+    path_index: ~
+    step: gffcompare_ar
+    tag: ~
+  - format: meta
+    id: sample_id_3
+    path: /path/to/rare-disease/cases/case_id/analysis/sample_id_3/gffcompare_ar/sample_id_3_lanes_1234_trim_star_sorted_merged_strg_gffcmp.gtf
+    path_index: ~
+    step: gffcompare_ar
+    tag: ~
+  - format: meta
+    id: sample_id_4
+    path: /path/to/rare-disease/cases/case_id/analysis/sample_id_4/gffcompare_ar/sample_id_4_lanes_1234_trim_star_sorted_merged_strg_gffcmp.gtf
+    path_index: ~
+    step: gffcompare_ar
+    tag: ~
+  - format: cram
+    id: sample_id_1
+    path: /path/to/rare-disease/cases/case_id/analysis/sample_id_1/markduplicates/sample_id_1_lanes_1234_trim_star_sorted_merged_md.cram
+    path_index: /path/to/rare-disease/cases/case_id/analysis/sample_id_1/markduplicates/sample_id_1_lanes_1234_trim_star_sorted_merged_md.cram.crai
+    step: markduplicates
+    tag: ~
+  - format: cram
+    id: sample_id_2
+    path: /path/to/rare-disease/cases/case_id/analysis/sample_id_2/markduplicates/sample_id_2_lanes_1234_trim_star_sorted_merged_md.cram
+    path_index: /path/to/rare-disease/cases/case_id/analysis/sample_id_2/markduplicates/sample_id_2_lanes_1234_trim_star_sorted_merged_md.cram.crai
+    step: markduplicates
+    tag: ~
+  - format: cram
+    id: sample_id_3
+    path: /path/to/rare-disease/cases/case_id/analysis/sample_id_3/markduplicates/sample_id_3_lanes_1234_trim_star_sorted_merged_md.cram
+    path_index: /path/to/rare-disease/cases/case_id/analysis/sample_id_3/markduplicates/sample_id_3_lanes_1234_trim_star_sorted_merged_md.cram.crai
+    step: markduplicates
+    tag: ~
+  - format: cram
+    id: sample_id_4
+    path: /path/to/rare-disease/cases/case_id/analysis/sample_id_4/markduplicates/sample_id_4_lanes_1234_trim_star_sorted_merged_md.cram
+    path_index: /path/to/rare-disease/cases/case_id/analysis/sample_id_4/markduplicates/sample_id_4_lanes_1234_trim_star_sorted_merged_md.cram.crai
+    step: markduplicates
+    tag: ~
+  - format: meta
+    id: sample_id_1
+    path: /path/to/rare-disease/cases/case_id/analysis/sample_id_1/gatk_asereadcounter/sample_id_1_lanes_1234_trim_star_sorted_merged_md_splitncigar_brecal_haptc_filtered_ase.csv
+    path_index: ~
+    step: gatk_asereadcounter
+    tag: ~
+  - format: meta
+    id: sample_id_2
+    path: /path/to/rare-disease/cases/case_id/analysis/sample_id_2/gatk_asereadcounter/sample_id_2_lanes_1234_trim_star_sorted_merged_md_splitncigar_brecal_haptc_filtered_ase.csv
+    path_index: ~
+    step: gatk_asereadcounter
+    tag: ~
+  - format: meta
+    id: sample_id_3
+    path: /path/to/rare-disease/cases/case_id/analysis/sample_id_3/gatk_asereadcounter/sample_id_3_lanes_1234_trim_star_sorted_merged_md_splitncigar_brecal_haptc_filtered_ase.csv
+    path_index: ~
+    step: gatk_asereadcounter
+    tag: ~
+  - format: meta
+    id: sample_id_4
+    path: /path/to/rare-disease/cases/case_id/analysis/sample_id_4/gatk_asereadcounter/sample_id_4_lanes_1234_trim_star_sorted_merged_md_splitncigar_brecal_haptc_filtered_ase.csv
+    path_index: ~
+    step: gatk_asereadcounter
+    tag: ~
+  - format: vcf
+    id: case_id
+    path: /path/to/rare-disease/cases/case_id/analysis/case_id/vcfparser_ar/case_id_comb_vep_parsed.all.vcf.gz
+    path_index: /path/to/rare-disease/cases/case_id/analysis/case_id/vcfparser_ar/case_id_comb_vep_parsed.all.vcf.gz.tbi
+    step: vcfparser_ar
+    tag: research
+  - format: vcf
+    id: case_id
+    path: /path/to/rare-disease/cases/case_id/analysis/case_id/vcfparser_ar/case_id_comb_vep_parsed.selected.vcf.gz
+    path_index: /path/to/rare-disease/cases/case_id/analysis/case_id/vcfparser_ar/case_id_comb_vep_parsed.selected.vcf.gz.tbi
+    step: vcfparser_ar
+    tag: clinical
+  - format: meta
+    id: case_id
+    path: /path/to/rare-disease/cases/case_id/analysis/case_id/qccollect_ar/case_id_qc_metrics.yaml
+    path_index: ~
+    step: qccollect_ar
+    tag: ~
+  - format: meta
+    id: case_id
+    path: /path/to/rare-disease/cases/case_id/analysis/case_id_metrics_deliverables.yaml
+    path_index: ~
+    step: qccollect_ar
+    tag: ~
+  - format: meta
+    id: case_id
+    path: /path/to/rare-disease/cases/case_id/analysis/case_id/version_collect_ar/case_id_vcol.yaml
+    path_index: ~
+    step: version_collect_ar
+    tag: ~
+  - format: meta
+    id: case_id
+    path: /path/to/rare-disease/cases/case_id/analysis/case_id/multiqc_ar/multiqc_report.html
+    path_index: ~
+    step: multiqc_ar
+    tag: html
+  - format: meta
+    id: case_id
+    path: /path/to/rare-disease/cases/case_id/analysis/case_id/multiqc_ar/multiqc_data/multiqc_data.json
+    path_index: ~
+    step: multiqc_ar
+    tag: json
+  - format: meta
+    id: case_id
+    path: /path/to/rare-disease/cases/case_id/analysis/reference_info.yaml
+    path_index: ~
+    step: mip_analyse
+    tag: references_info
+  - format: meta
+    id: case_id
+    path: /path/to/rare-disease/cases/case_id/analysis/mip_log/2021-04-06/mip_2021-04-06T13:51:15.log
+    path_index: ~
+    step: mip_analyse
+    tag: log
+  - format: meta
+    id: case_id
+    path: /home/anders.jemt/rare_disease_test/case_id/pedigree-rna.yaml
+    path_index: ~
+    step: mip_analyse
+    tag: pedigree
+  - format: meta
+    id: case_id
+    path: /path/to/rare-disease/cases/case_id/analysis/case_id_qc_sample_info.yaml
+    path_index: ~
+    step: mip_analyse
+    tag: sample_info
+  - format: meta
+    id: case_id
+    path: /home/anders.jemt/rare_disease_test/mip38-rna-dev.yaml
+    path_index: ~
+    step: mip_analyse
+    tag: config
+  - format: meta
+    id: case_id
+    path: /path/to/rare-disease/cases/case_id/analysis/case_id_config.yaml
+    path_index: ~
+    step: mip_analyse
+    tag: config_analysis
+  - format: meta
+    id: case_id
+    path: /path/to/rare-disease/cases/case_id/analysis/case_id/case_id.fam
+    path_index: ~
+    step: mip_analyse
+    tag: pedigree_fam
+

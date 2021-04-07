@@ -2,7 +2,8 @@ site_name: Hermes documentation
 nav:
     - Home: index.md
     - Available tags: all_tags.md
-    - Mip tag map: mip_map.md
+    - Mip-dna tag map: mip-dna_map.md
+    - Mip-rna tag map: mip-rna_map.md
     - Balsamic tag map: balsamic_map.md
     - Fluffy tag map: fluffy_map.md
     - Microsalt tag map: microsalt_map.md
