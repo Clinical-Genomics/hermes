@@ -143,9 +143,10 @@ MICROSALT_SPECIFIC = {
 MUTANT_SPECIFIC = {
     "mutant-config": {"description": "Config settings for mutant analysis"},
     "mutant-log": {"description": "SLURM log for mutant analysis"},
+    "pangolin": {"description": "Pangolin specific output"},
     "typing-report": {"description": "Results from typing"},
+    "typing-summary": {"description": "Summary of results from typing"},
     "fohm": {"description": "Relevant for FoHM"},
-    "pangolin": {"description": "Pangolin classified output"},
     "komplettering": {"description": "Filetype specific for national uploading of microbial data"},
     "consensus": {"description": "Consensus sequence"},
 }
