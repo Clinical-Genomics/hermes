@@ -62,7 +62,7 @@ def fixture_mutant_deliverables(mutant_files: Path) -> Path:
 
 @pytest.fixture(name="balsamic_t_wgs_deliverables")
 def fixture_balsamic_t_wgs_deliverables(balsamic_files: Path) -> Path:
-    return balsamic_files / "oneel.hk"
+    return balsamic_files / "TN_wgs.hk"
 
 
 @pytest.fixture(name="balsamic_tn_panel_deliverables")
