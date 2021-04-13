@@ -89,3 +89,21 @@ files:
   path_index: '~'
   step: variant-calling
   tag: variants
+- format: csv
+  id: merrymink
+  path: merrymink-pangolin-typing.csv
+  path_index: '~'
+  step: report
+  tag: pangolin-typing
+- format: csv
+  id: merrymink
+  path: merrymink-pangolin-summary.csv
+  path_index: '~'
+  step: report
+  tag: pangolin-summary
+- format: json
+  id: merrymink
+  path: merrymink-multiqc.json
+  path_index: '~'
+  step: multiqc
+  tag: multiqc
