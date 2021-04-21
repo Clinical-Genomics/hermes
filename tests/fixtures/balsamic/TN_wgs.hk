@@ -1,309 +1,15 @@
 {
     "files": [
         {
-            "path": "/home/proj/stage/cancer/cases/fleetjay/analysis/qc/multiqc_report.html",
-            "path_index": [],
-            "step": "multiqc",
-            "tag": [
-                "multiqc-html",
-                "html"
-            ],
-            "id": "fleetjay",
-            "format": "html"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/fleetjay/analysis/qc/multiqc_data/multiqc_data.json",
-            "path_index": [],
-            "step": "multiqc",
-            "tag": [
-                "multiqc-json",
-                "json"
-            ],
-            "id": "fleetjay",
-            "format": "json"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/fleetjay/analysis/fastq/concatenated_ACC6307A1_XXXXXX_R_1.fp.fastq.gz",
-            "path_index": [],
-            "step": "fastp",
-            "tag": [
-                "quality-trimmed-fastq-read1",
-                "ACC6307A1",
-                "read1"
-            ],
-            "id": "ACC6307A1",
-            "format": "fastq.gz"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/fleetjay/analysis/fastq/concatenated_ACC5821A7_XXXXXX_R_1.fp.fastq.gz",
-            "path_index": [],
-            "step": "fastp",
-            "tag": [
-                "quality-trimmed-fastq-read1",
-                "ACC5821A7",
-                "read1"
-            ],
-            "id": "ACC5821A7",
-            "format": "fastq.gz"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/fleetjay/analysis/fastq/concatenated_ACC5821A7_XXXXXX_R_2.fp.fastq.gz",
-            "path_index": [],
-            "step": "fastp",
-            "tag": [
-                "ACC5821A7",
-                "quality-trimmed-fastq-read2",
-                "read2"
-            ],
-            "id": "ACC5821A7",
-            "format": "fastq.gz"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/fleetjay/analysis/fastq/concatenated_ACC6307A1_XXXXXX_R_2.fp.fastq.gz",
-            "path_index": [],
-            "step": "fastp",
-            "tag": [
-                "ACC6307A1",
-                "quality-trimmed-fastq-read2",
-                "read2"
-            ],
-            "id": "ACC6307A1",
-            "format": "fastq.gz"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/fleetjay/analysis/qc/fastp/concatenated_ACC6307A1_XXXXXX_R_fastp.json",
-            "path_index": [],
-            "step": "fastp",
-            "tag": [
-                "quality-trimmed-fastq-json",
-                "ACC6307A1",
-                "json"
-            ],
-            "id": "ACC6307A1",
-            "format": "json"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/fleetjay/analysis/qc/fastp/concatenated_ACC5821A7_XXXXXX_R_fastp.json",
-            "path_index": [],
-            "step": "fastp",
-            "tag": [
-                "quality-trimmed-fastq-json",
-                "ACC5821A7",
-                "json"
-            ],
-            "id": "ACC5821A7",
-            "format": "json"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/fleetjay/analysis/qc/fastp/concatenated_ACC5821A7_XXXXXX_R_fastp.html",
-            "path_index": [],
-            "step": "fastp",
-            "tag": [
-                "quality-trimmed-fastq-html",
-                "ACC5821A7",
-                "html"
-            ],
-            "id": "ACC5821A7",
-            "format": "html"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/fleetjay/analysis/qc/fastp/concatenated_ACC6307A1_XXXXXX_R_fastp.html",
-            "path_index": [],
-            "step": "fastp",
-            "tag": [
-                "quality-trimmed-fastq-html",
-                "ACC6307A1",
-                "html"
-            ],
-            "id": "ACC6307A1",
-            "format": "html"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/fleetjay/analysis/vep/CNV.somatic.fleetjay.cnvkit.all.vcf.gz",
-            "path_index": [
-                "/home/proj/stage/cancer/cases/fleetjay/analysis/vep/CNV.somatic.fleetjay.cnvkit.all.vcf.gz.tbi"
-            ],
-            "step": "vep_somatic",
-            "tag": [
-                "CNV",
-                "fleetjay",
-                "cnvkit",
-                "vcf-all",
-                "annotated-somatic-vcf-all"
-            ],
-            "id": "fleetjay",
-            "format": "vcf.gz"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/fleetjay/analysis/vep/CNV.somatic.fleetjay.cnvkit.all.vcf.gz.tbi",
-            "path_index": "",
-            "step": "vep_somatic",
-            "tag": [
-                "CNV",
-                "fleetjay",
-                "cnvkit",
-                "annotated-somatic-vcf-all-index",
-                "vcf-all"
-            ],
-            "id": "fleetjay",
-            "format": "vcf.gz.tbi"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/fleetjay/analysis/vep/SNV.somatic.fleetjay.tnscope.all.vcf.gz",
-            "path_index": [
-                "/home/proj/stage/cancer/cases/fleetjay/analysis/vep/SNV.somatic.fleetjay.tnscope.all.vcf.gz.tbi"
-            ],
-            "step": "vep_somatic",
-            "tag": [
-                "tnscope",
-                "fleetjay",
-                "vcf-all",
-                "annotated-somatic-vcf-all",
-                "SNV"
-            ],
-            "id": "fleetjay",
-            "format": "vcf.gz"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/fleetjay/analysis/vep/SNV.somatic.fleetjay.tnscope.all.vcf.gz.tbi",
-            "path_index": "",
-            "step": "vep_somatic",
-            "tag": [
-                "tnscope",
-                "fleetjay",
-                "annotated-somatic-vcf-all-index",
-                "vcf-all",
-                "SNV"
-            ],
-            "id": "fleetjay",
-            "format": "vcf.gz.tbi"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/fleetjay/analysis/vep/SV.somatic.fleetjay.manta.all.vcf.gz",
-            "path_index": [
-                "/home/proj/stage/cancer/cases/fleetjay/analysis/vep/SV.somatic.fleetjay.manta.all.vcf.gz.tbi"
-            ],
-            "step": "vep_somatic",
-            "tag": [
-                "fleetjay",
-                "SV",
-                "vcf-all",
-                "annotated-somatic-vcf-all",
-                "manta"
-            ],
-            "id": "fleetjay",
-            "format": "vcf.gz"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/fleetjay/analysis/vep/SV.somatic.fleetjay.manta.all.vcf.gz.tbi",
-            "path_index": "",
-            "step": "vep_somatic",
-            "tag": [
-                "fleetjay",
-                "annotated-somatic-vcf-all-index",
-                "SV",
-                "vcf-all",
-                "manta"
-            ],
-            "id": "fleetjay",
-            "format": "vcf.gz.tbi"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/fleetjay/analysis/vep/SNV.somatic.fleetjay.tnhaplotyper.all.vcf.gz",
-            "path_index": [
-                "/home/proj/stage/cancer/cases/fleetjay/analysis/vep/SNV.somatic.fleetjay.tnhaplotyper.all.vcf.gz.tbi"
-            ],
-            "step": "vep_somatic",
-            "tag": [
-                "fleetjay",
-                "vcf-all",
-                "tnhaplotyper",
-                "annotated-somatic-vcf-all",
-                "SNV"
-            ],
-            "id": "fleetjay",
-            "format": "vcf.gz"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/fleetjay/analysis/vep/SNV.somatic.fleetjay.tnhaplotyper.all.vcf.gz.tbi",
-            "path_index": "",
-            "step": "vep_somatic",
-            "tag": [
-                "fleetjay",
-                "annotated-somatic-vcf-all-index",
-                "vcf-all",
-                "tnhaplotyper",
-                "SNV"
-            ],
-            "id": "fleetjay",
-            "format": "vcf.gz.tbi"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/fleetjay/analysis/vep/SNV.somatic.fleetjay.tnscope.all.vcf.gz_summary.html",
-            "path_index": [],
-            "step": "vep_somatic",
-            "tag": [
-                "tnscope",
-                "annotated-somatic-vcf-summary",
-                "fleetjay",
-                "vcf-summary",
-                "SNV"
-            ],
-            "id": "fleetjay",
-            "format": "html"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/fleetjay/analysis/vep/SV.somatic.fleetjay.manta.all.vcf.gz_summary.html",
-            "path_index": [],
-            "step": "vep_somatic",
-            "tag": [
-                "annotated-somatic-vcf-summary",
-                "fleetjay",
-                "vcf-summary",
-                "SV",
-                "manta"
-            ],
-            "id": "fleetjay",
-            "format": "html"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/fleetjay/analysis/vep/CNV.somatic.fleetjay.cnvkit.all.vcf.gz_summary.html",
-            "path_index": [],
-            "step": "vep_somatic",
-            "tag": [
-                "CNV",
-                "annotated-somatic-vcf-summary",
-                "fleetjay",
-                "vcf-summary",
-                "cnvkit"
-            ],
-            "id": "fleetjay",
-            "format": "html"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/fleetjay/analysis/vep/SNV.somatic.fleetjay.tnhaplotyper.all.vcf.gz_summary.html",
-            "path_index": [],
-            "step": "vep_somatic",
-            "tag": [
-                "annotated-somatic-vcf-summary",
-                "fleetjay",
-                "vcf-summary",
-                "tnhaplotyper",
-                "SNV"
-            ],
-            "id": "fleetjay",
-            "format": "html"
-        },
-        {
             "path": "/home/proj/stage/cancer/cases/fleetjay/analysis/bam/normal.merged.bam",
             "path_index": [
                 "/home/proj/stage/cancer/cases/fleetjay/analysis/bam/normal.merged.bam.bai"
             ],
             "step": "mergeBam_normal",
             "tag": [
-                "normal-bam",
                 "bam",
-                "ACC6307A1"
+                "ACC6307A1",
+                "normal-bam"
             ],
             "id": "ACC6307A1",
             "format": "bam"
@@ -314,8 +20,8 @@
             "step": "mergeBam_normal",
             "tag": [
                 "bam",
-                "normal-bam-index",
-                "ACC6307A1"
+                "ACC6307A1",
+                "normal-bam-index"
             ],
             "id": "ACC6307A1",
             "format": "bai"
@@ -327,9 +33,9 @@
             ],
             "step": "mergeBam_normal",
             "tag": [
-                "normal-cram",
+                "ACC6307A1",
                 "cram",
-                "ACC6307A1"
+                "normal-cram"
             ],
             "id": "ACC6307A1",
             "format": "cram"
@@ -339,63 +45,11 @@
             "path_index": "",
             "step": "mergeBam_normal",
             "tag": [
+                "ACC6307A1",
                 "normal-cram-index",
-                "cram",
-                "ACC6307A1"
+                "cram"
             ],
             "id": "ACC6307A1",
-            "format": "crai"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/fleetjay/analysis/bam/tumor.merged.bam",
-            "path_index": [
-                "/home/proj/stage/cancer/cases/fleetjay/analysis/bam/tumor.merged.bam.bai"
-            ],
-            "step": "mergeBam_tumor",
-            "tag": [
-                "tumor-bam",
-                "ACC5821A7",
-                "bam"
-            ],
-            "id": "ACC5821A7",
-            "format": "bam"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/fleetjay/analysis/bam/tumor.merged.bam.bai",
-            "path_index": "",
-            "step": "mergeBam_tumor",
-            "tag": [
-                "ACC5821A7",
-                "tumor-bam-index",
-                "bam"
-            ],
-            "id": "ACC5821A7",
-            "format": "bai"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/fleetjay/analysis/bam/tumor.merged.cram",
-            "path_index": [
-                "/home/proj/stage/cancer/cases/fleetjay/analysis/bam/tumor.merged.cram.crai"
-            ],
-            "step": "mergeBam_tumor",
-            "tag": [
-                "tumor-cram",
-                "cram",
-                "ACC5821A7"
-            ],
-            "id": "ACC5821A7",
-            "format": "cram"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/fleetjay/analysis/bam/tumor.merged.cram.crai",
-            "path_index": "",
-            "step": "mergeBam_tumor",
-            "tag": [
-                "tumor-cram-index",
-                "cram",
-                "ACC5821A7"
-            ],
-            "id": "ACC5821A7",
             "format": "crai"
         },
         {
@@ -403,8 +57,8 @@
             "path_index": [],
             "step": "cnvkit_paired",
             "tag": [
-                "cnr",
-                "cnv-cnr"
+                "cnv-cnr",
+                "cnr"
             ],
             "id": "fleetjay",
             "format": "cnr"
@@ -414,8 +68,8 @@
             "path_index": [],
             "step": "cnvkit_paired",
             "tag": [
-                "cnv-cns",
-                "cns"
+                "cns",
+                "cnv-cns"
             ],
             "id": "fleetjay",
             "format": "cns"
@@ -447,8 +101,8 @@
             "path_index": [],
             "step": "cnvkit_paired",
             "tag": [
-                "gene-metrics",
-                "cnv-gene-metrics"
+                "cnv-gene-metrics",
+                "gene-metrics"
             ],
             "id": "fleetjay",
             "format": "gene_metrics"
@@ -465,16 +119,244 @@
             "format": "pdf"
         },
         {
+            "path": "/home/proj/stage/cancer/cases/fleetjay/analysis/vep/CNV.somatic.fleetjay.cnvkit.all.vcf.gz",
+            "path_index": [
+                "/home/proj/stage/cancer/cases/fleetjay/analysis/vep/CNV.somatic.fleetjay.cnvkit.all.vcf.gz.tbi"
+            ],
+            "step": "vep_somatic",
+            "tag": [
+                "annotated-somatic-vcf-all",
+                "vcf-all",
+                "cnvkit",
+                "fleetjay",
+                "CNV"
+            ],
+            "id": "fleetjay",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/fleetjay/analysis/vep/CNV.somatic.fleetjay.cnvkit.all.vcf.gz.tbi",
+            "path_index": "",
+            "step": "vep_somatic",
+            "tag": [
+                "vcf-all",
+                "cnvkit",
+                "annotated-somatic-vcf-all-index",
+                "fleetjay",
+                "CNV"
+            ],
+            "id": "fleetjay",
+            "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/fleetjay/analysis/vep/SNV.somatic.fleetjay.tnscope.all.vcf.gz",
+            "path_index": [
+                "/home/proj/stage/cancer/cases/fleetjay/analysis/vep/SNV.somatic.fleetjay.tnscope.all.vcf.gz.tbi"
+            ],
+            "step": "vep_somatic",
+            "tag": [
+                "annotated-somatic-vcf-all",
+                "vcf-all",
+                "tnscope",
+                "SNV",
+                "fleetjay"
+            ],
+            "id": "fleetjay",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/fleetjay/analysis/vep/SNV.somatic.fleetjay.tnscope.all.vcf.gz.tbi",
+            "path_index": "",
+            "step": "vep_somatic",
+            "tag": [
+                "vcf-all",
+                "tnscope",
+                "annotated-somatic-vcf-all-index",
+                "SNV",
+                "fleetjay"
+            ],
+            "id": "fleetjay",
+            "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/fleetjay/analysis/vep/SV.somatic.fleetjay.manta.all.vcf.gz",
+            "path_index": [
+                "/home/proj/stage/cancer/cases/fleetjay/analysis/vep/SV.somatic.fleetjay.manta.all.vcf.gz.tbi"
+            ],
+            "step": "vep_somatic",
+            "tag": [
+                "annotated-somatic-vcf-all",
+                "vcf-all",
+                "fleetjay",
+                "SV",
+                "manta"
+            ],
+            "id": "fleetjay",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/fleetjay/analysis/vep/SV.somatic.fleetjay.manta.all.vcf.gz.tbi",
+            "path_index": "",
+            "step": "vep_somatic",
+            "tag": [
+                "vcf-all",
+                "annotated-somatic-vcf-all-index",
+                "fleetjay",
+                "SV",
+                "manta"
+            ],
+            "id": "fleetjay",
+            "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/fleetjay/analysis/vep/SNV.somatic.fleetjay.tnhaplotyper.all.vcf.gz",
+            "path_index": [
+                "/home/proj/stage/cancer/cases/fleetjay/analysis/vep/SNV.somatic.fleetjay.tnhaplotyper.all.vcf.gz.tbi"
+            ],
+            "step": "vep_somatic",
+            "tag": [
+                "annotated-somatic-vcf-all",
+                "vcf-all",
+                "tnhaplotyper",
+                "SNV",
+                "fleetjay"
+            ],
+            "id": "fleetjay",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/fleetjay/analysis/vep/SNV.somatic.fleetjay.tnhaplotyper.all.vcf.gz.tbi",
+            "path_index": "",
+            "step": "vep_somatic",
+            "tag": [
+                "vcf-all",
+                "tnhaplotyper",
+                "annotated-somatic-vcf-all-index",
+                "SNV",
+                "fleetjay"
+            ],
+            "id": "fleetjay",
+            "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/fleetjay/analysis/vep/SNV.somatic.fleetjay.tnscope.all.vcf.gz_summary.html",
+            "path_index": [],
+            "step": "vep_somatic",
+            "tag": [
+                "tnscope",
+                "vcf-summary",
+                "SNV",
+                "fleetjay",
+                "annotated-somatic-vcf-summary"
+            ],
+            "id": "fleetjay",
+            "format": "html"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/fleetjay/analysis/vep/SV.somatic.fleetjay.manta.all.vcf.gz_summary.html",
+            "path_index": [],
+            "step": "vep_somatic",
+            "tag": [
+                "vcf-summary",
+                "fleetjay",
+                "SV",
+                "manta",
+                "annotated-somatic-vcf-summary"
+            ],
+            "id": "fleetjay",
+            "format": "html"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/fleetjay/analysis/vep/CNV.somatic.fleetjay.cnvkit.all.vcf.gz_summary.html",
+            "path_index": [],
+            "step": "vep_somatic",
+            "tag": [
+                "cnvkit",
+                "vcf-summary",
+                "fleetjay",
+                "annotated-somatic-vcf-summary",
+                "CNV"
+            ],
+            "id": "fleetjay",
+            "format": "html"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/fleetjay/analysis/vep/SNV.somatic.fleetjay.tnhaplotyper.all.vcf.gz_summary.html",
+            "path_index": [],
+            "step": "vep_somatic",
+            "tag": [
+                "tnhaplotyper",
+                "vcf-summary",
+                "SNV",
+                "fleetjay",
+                "annotated-somatic-vcf-summary"
+            ],
+            "id": "fleetjay",
+            "format": "html"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/fleetjay/analysis/bam/tumor.merged.bam",
+            "path_index": [
+                "/home/proj/stage/cancer/cases/fleetjay/analysis/bam/tumor.merged.bam.bai"
+            ],
+            "step": "mergeBam_tumor",
+            "tag": [
+                "bam",
+                "tumor-bam",
+                "ACC5821A7"
+            ],
+            "id": "ACC5821A7",
+            "format": "bam"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/fleetjay/analysis/bam/tumor.merged.bam.bai",
+            "path_index": "",
+            "step": "mergeBam_tumor",
+            "tag": [
+                "bam",
+                "ACC5821A7",
+                "tumor-bam-index"
+            ],
+            "id": "ACC5821A7",
+            "format": "bai"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/fleetjay/analysis/bam/tumor.merged.cram",
+            "path_index": [
+                "/home/proj/stage/cancer/cases/fleetjay/analysis/bam/tumor.merged.cram.crai"
+            ],
+            "step": "mergeBam_tumor",
+            "tag": [
+                "tumor-cram",
+                "cram",
+                "ACC5821A7"
+            ],
+            "id": "ACC5821A7",
+            "format": "cram"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/fleetjay/analysis/bam/tumor.merged.cram.crai",
+            "path_index": "",
+            "step": "mergeBam_tumor",
+            "tag": [
+                "tumor-cram-index",
+                "cram",
+                "ACC5821A7"
+            ],
+            "id": "ACC5821A7",
+            "format": "crai"
+        },
+        {
             "path": "/home/proj/stage/cancer/cases/fleetjay/analysis/vep/SNV.somatic.fleetjay.tnscope.filtered.vcf.gz",
             "path_index": [
                 "/home/proj/stage/cancer/cases/fleetjay/analysis/vep/SNV.somatic.fleetjay.tnscope.filtered.vcf.gz.tbi"
             ],
             "step": "ngs_filter_tnscope",
             "tag": [
-                "clinical-vcf-filtered",
-                "vcf-filtered",
+                "SNV",
                 "fleetjay",
-                "SNV"
+                "clinical-vcf-filtered",
+                "vcf-filtered"
             ],
             "id": "fleetjay",
             "format": "vcf.gz"
@@ -484,9 +366,9 @@
             "path_index": "",
             "step": "ngs_filter_tnscope",
             "tag": [
-                "vcf-filtered",
-                "fleetjay",
                 "SNV",
+                "fleetjay",
+                "vcf-filtered",
                 "clinical-vcf-filtered-index"
             ],
             "id": "fleetjay",
@@ -500,8 +382,8 @@
             "step": "ngs_filter_tnscope",
             "tag": [
                 "clinical-vcf-pass",
-                "fleetjay",
                 "SNV",
+                "fleetjay",
                 "vcf-pass"
             ],
             "id": "fleetjay",
@@ -513,8 +395,8 @@
             "step": "ngs_filter_tnscope",
             "tag": [
                 "clinical-vcf-pass-index",
-                "fleetjay",
                 "SNV",
+                "fleetjay",
                 "vcf-pass"
             ],
             "id": "fleetjay",
@@ -527,12 +409,12 @@
             ],
             "step": "vep_germline",
             "tag": [
-                "ACC6307A1",
                 "annotated-germline-vcf-all",
-                "dnascope",
+                "ACC6307A1",
                 "vcf-all",
+                "SNV",
                 "normal",
-                "SNV"
+                "dnascope"
             ],
             "id": "ACC6307A1",
             "format": "vcf.gz"
@@ -543,11 +425,11 @@
             "step": "vep_germline",
             "tag": [
                 "ACC6307A1",
-                "dnascope",
-                "annotated-germline-vcf-all-index",
                 "vcf-all",
+                "annotated-germline-vcf-all-index",
+                "SNV",
                 "normal",
-                "SNV"
+                "dnascope"
             ],
             "id": "ACC6307A1",
             "format": "vcf.gz.tbi"
@@ -560,11 +442,11 @@
             "step": "vep_germline",
             "tag": [
                 "annotated-germline-vcf-all",
-                "dnascope",
                 "vcf-all",
+                "SNV",
                 "tumor",
-                "ACC5821A7",
-                "SNV"
+                "dnascope",
+                "ACC5821A7"
             ],
             "id": "ACC5821A7",
             "format": "vcf.gz"
@@ -574,12 +456,12 @@
             "path_index": "",
             "step": "vep_germline",
             "tag": [
-                "dnascope",
-                "annotated-germline-vcf-all-index",
                 "vcf-all",
+                "annotated-germline-vcf-all-index",
+                "SNV",
                 "tumor",
-                "ACC5821A7",
-                "SNV"
+                "dnascope",
+                "ACC5821A7"
             ],
             "id": "ACC5821A7",
             "format": "vcf.gz.tbi"
@@ -589,12 +471,12 @@
             "path_index": [],
             "step": "vep_germline",
             "tag": [
-                "annotated-germline-vcf-summary",
                 "vcf-summary",
-                "dnascope",
+                "SNV",
                 "tumor",
-                "ACC5821A7",
-                "SNV"
+                "annotated-germline-vcf-summary",
+                "dnascope",
+                "ACC5821A7"
             ],
             "id": "ACC5821A7",
             "format": "html"
@@ -604,15 +486,133 @@
             "path_index": [],
             "step": "vep_germline",
             "tag": [
-                "annotated-germline-vcf-summary",
                 "ACC6307A1",
                 "vcf-summary",
-                "dnascope",
+                "SNV",
+                "annotated-germline-vcf-summary",
                 "normal",
-                "SNV"
+                "dnascope"
             ],
             "id": "ACC6307A1",
             "format": "html"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/fleetjay/analysis/fastq/concatenated_ACC6307A1_XXXXXX_R_1.fp.fastq.gz",
+            "path_index": [],
+            "step": "fastp",
+            "tag": [
+                "ACC6307A1",
+                "read1",
+                "quality-trimmed-fastq-read1"
+            ],
+            "id": "ACC6307A1",
+            "format": "fastq.gz"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/fleetjay/analysis/fastq/concatenated_ACC5821A7_XXXXXX_R_1.fp.fastq.gz",
+            "path_index": [],
+            "step": "fastp",
+            "tag": [
+                "quality-trimmed-fastq-read1",
+                "read1",
+                "ACC5821A7"
+            ],
+            "id": "ACC5821A7",
+            "format": "fastq.gz"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/fleetjay/analysis/fastq/concatenated_ACC5821A7_XXXXXX_R_2.fp.fastq.gz",
+            "path_index": [],
+            "step": "fastp",
+            "tag": [
+                "read2",
+                "quality-trimmed-fastq-read2",
+                "ACC5821A7"
+            ],
+            "id": "ACC5821A7",
+            "format": "fastq.gz"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/fleetjay/analysis/fastq/concatenated_ACC6307A1_XXXXXX_R_2.fp.fastq.gz",
+            "path_index": [],
+            "step": "fastp",
+            "tag": [
+                "read2",
+                "ACC6307A1",
+                "quality-trimmed-fastq-read2"
+            ],
+            "id": "ACC6307A1",
+            "format": "fastq.gz"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/fleetjay/analysis/qc/fastp/concatenated_ACC6307A1_XXXXXX_R_fastp.json",
+            "path_index": [],
+            "step": "fastp",
+            "tag": [
+                "ACC6307A1",
+                "quality-trimmed-fastq-json",
+                "json"
+            ],
+            "id": "ACC6307A1",
+            "format": "json"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/fleetjay/analysis/qc/fastp/concatenated_ACC5821A7_XXXXXX_R_fastp.json",
+            "path_index": [],
+            "step": "fastp",
+            "tag": [
+                "json",
+                "quality-trimmed-fastq-json",
+                "ACC5821A7"
+            ],
+            "id": "ACC5821A7",
+            "format": "json"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/fleetjay/analysis/qc/fastp/concatenated_ACC5821A7_XXXXXX_R_fastp.html",
+            "path_index": [],
+            "step": "fastp",
+            "tag": [
+                "html",
+                "quality-trimmed-fastq-html",
+                "ACC5821A7"
+            ],
+            "id": "ACC5821A7",
+            "format": "html"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/fleetjay/analysis/qc/fastp/concatenated_ACC6307A1_XXXXXX_R_fastp.html",
+            "path_index": [],
+            "step": "fastp",
+            "tag": [
+                "html",
+                "ACC6307A1",
+                "quality-trimmed-fastq-html"
+            ],
+            "id": "ACC6307A1",
+            "format": "html"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/fleetjay/analysis/qc/multiqc_report.html",
+            "path_index": [],
+            "step": "multiqc",
+            "tag": [
+                "html",
+                "multiqc-html"
+            ],
+            "id": "fleetjay",
+            "format": "html"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/fleetjay/analysis/qc/multiqc_data/multiqc_data.json",
+            "path_index": [],
+            "step": "multiqc",
+            "tag": [
+                "multiqc-json",
+                "json"
+            ],
+            "id": "fleetjay",
+            "format": "json"
         },
         {
             "path": "/home/proj/stage/cancer/cases/fleetjay/analysis/delivery_report/fleetjay_report.html",

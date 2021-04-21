@@ -1,6 +1,785 @@
 {
     "files": [
         {
+            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SV.somatic.unitedbeagle.manta.all.vcf.gz",
+            "path_index": [
+                "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SV.somatic.unitedbeagle.manta.all.vcf.gz.tbi"
+            ],
+            "step": "vep_somatic",
+            "tag": [
+                "vcf-all",
+                "manta",
+                "annotated-somatic-vcf-all",
+                "SV",
+                "unitedbeagle"
+            ],
+            "id": "unitedbeagle",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SV.somatic.unitedbeagle.manta.all.vcf.gz.tbi",
+            "path_index": "",
+            "step": "vep_somatic",
+            "tag": [
+                "annotated-somatic-vcf-all-index",
+                "vcf-all",
+                "manta",
+                "SV",
+                "unitedbeagle"
+            ],
+            "id": "unitedbeagle",
+            "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/CNV.somatic.unitedbeagle.cnvkit.all.vcf.gz",
+            "path_index": [
+                "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/CNV.somatic.unitedbeagle.cnvkit.all.vcf.gz.tbi"
+            ],
+            "step": "vep_somatic",
+            "tag": [
+                "CNV",
+                "vcf-all",
+                "annotated-somatic-vcf-all",
+                "unitedbeagle",
+                "cnvkit"
+            ],
+            "id": "unitedbeagle",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/CNV.somatic.unitedbeagle.cnvkit.all.vcf.gz.tbi",
+            "path_index": "",
+            "step": "vep_somatic",
+            "tag": [
+                "annotated-somatic-vcf-all-index",
+                "CNV",
+                "vcf-all",
+                "unitedbeagle",
+                "cnvkit"
+            ],
+            "id": "unitedbeagle",
+            "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.somatic.unitedbeagle.vardict.all.vcf.gz",
+            "path_index": [
+                "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.somatic.unitedbeagle.vardict.all.vcf.gz.tbi"
+            ],
+            "step": "vep_somatic",
+            "tag": [
+                "vardict",
+                "SNV",
+                "vcf-all",
+                "annotated-somatic-vcf-all",
+                "unitedbeagle"
+            ],
+            "id": "unitedbeagle",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.somatic.unitedbeagle.vardict.all.vcf.gz.tbi",
+            "path_index": "",
+            "step": "vep_somatic",
+            "tag": [
+                "annotated-somatic-vcf-all-index",
+                "vardict",
+                "SNV",
+                "vcf-all",
+                "unitedbeagle"
+            ],
+            "id": "unitedbeagle",
+            "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.somatic.unitedbeagle.TNscope_umi.all.vcf.gz",
+            "path_index": [
+                "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.somatic.unitedbeagle.TNscope_umi.all.vcf.gz.tbi"
+            ],
+            "step": "vep_somatic",
+            "tag": [
+                "SNV",
+                "vcf-all",
+                "annotated-somatic-vcf-all",
+                "TNscope-umi",
+                "unitedbeagle"
+            ],
+            "id": "unitedbeagle",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.somatic.unitedbeagle.TNscope_umi.all.vcf.gz.tbi",
+            "path_index": "",
+            "step": "vep_somatic",
+            "tag": [
+                "annotated-somatic-vcf-all-index",
+                "SNV",
+                "vcf-all",
+                "TNscope-umi",
+                "unitedbeagle"
+            ],
+            "id": "unitedbeagle",
+            "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.somatic.unitedbeagle.tnhaplotyper.all.vcf.gz",
+            "path_index": [
+                "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.somatic.unitedbeagle.tnhaplotyper.all.vcf.gz.tbi"
+            ],
+            "step": "vep_somatic",
+            "tag": [
+                "tnhaplotyper",
+                "SNV",
+                "vcf-all",
+                "annotated-somatic-vcf-all",
+                "unitedbeagle"
+            ],
+            "id": "unitedbeagle",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.somatic.unitedbeagle.tnhaplotyper.all.vcf.gz.tbi",
+            "path_index": "",
+            "step": "vep_somatic",
+            "tag": [
+                "tnhaplotyper",
+                "annotated-somatic-vcf-all-index",
+                "SNV",
+                "vcf-all",
+                "unitedbeagle"
+            ],
+            "id": "unitedbeagle",
+            "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.somatic.unitedbeagle.TNscope_umi.all.vcf.gz_summary.html",
+            "path_index": [],
+            "step": "vep_somatic",
+            "tag": [
+                "SNV",
+                "TNscope-umi",
+                "vcf-summary",
+                "unitedbeagle",
+                "annotated-somatic-vcf-summary"
+            ],
+            "id": "unitedbeagle",
+            "format": "html"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/CNV.somatic.unitedbeagle.cnvkit.all.vcf.gz_summary.html",
+            "path_index": [],
+            "step": "vep_somatic",
+            "tag": [
+                "CNV",
+                "vcf-summary",
+                "unitedbeagle",
+                "cnvkit",
+                "annotated-somatic-vcf-summary"
+            ],
+            "id": "unitedbeagle",
+            "format": "html"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SV.somatic.unitedbeagle.manta.all.vcf.gz_summary.html",
+            "path_index": [],
+            "step": "vep_somatic",
+            "tag": [
+                "manta",
+                "SV",
+                "vcf-summary",
+                "unitedbeagle",
+                "annotated-somatic-vcf-summary"
+            ],
+            "id": "unitedbeagle",
+            "format": "html"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.somatic.unitedbeagle.vardict.all.vcf.gz_summary.html",
+            "path_index": [],
+            "step": "vep_somatic",
+            "tag": [
+                "vardict",
+                "SNV",
+                "vcf-summary",
+                "unitedbeagle",
+                "annotated-somatic-vcf-summary"
+            ],
+            "id": "unitedbeagle",
+            "format": "html"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.somatic.unitedbeagle.tnhaplotyper.all.vcf.gz_summary.html",
+            "path_index": [],
+            "step": "vep_somatic",
+            "tag": [
+                "tnhaplotyper",
+                "SNV",
+                "vcf-summary",
+                "unitedbeagle",
+                "annotated-somatic-vcf-summary"
+            ],
+            "id": "unitedbeagle",
+            "format": "html"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/cnv/tumor.merged.cnr",
+            "path_index": [],
+            "step": "cnvkit_paired",
+            "tag": [
+                "cnv-cnr",
+                "cnr"
+            ],
+            "id": "unitedbeagle",
+            "format": "cnr"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/cnv/tumor.merged.cns",
+            "path_index": [],
+            "step": "cnvkit_paired",
+            "tag": [
+                "cns",
+                "cnv-cns"
+            ],
+            "id": "unitedbeagle",
+            "format": "cns"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/cnv/tumor.merged-diagram.pdf",
+            "path_index": [],
+            "step": "cnvkit_paired",
+            "tag": [
+                "cnv-diagram",
+                "diagram"
+            ],
+            "id": "unitedbeagle",
+            "format": "pdf"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/cnv/unitedbeagle.gene_breaks",
+            "path_index": [],
+            "step": "cnvkit_paired",
+            "tag": [
+                "gene-breaks",
+                "cnv-gene-breaks"
+            ],
+            "id": "unitedbeagle",
+            "format": "gene_breaks"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/cnv/unitedbeagle.gene_metrics",
+            "path_index": [],
+            "step": "cnvkit_paired",
+            "tag": [
+                "cnv-gene-metrics",
+                "gene-metrics"
+            ],
+            "id": "unitedbeagle",
+            "format": "gene_metrics"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/cnv/tumor.merged-scatter.pdf",
+            "path_index": [],
+            "step": "cnvkit_paired",
+            "tag": [
+                "scatter",
+                "cnv-scatter"
+            ],
+            "id": "unitedbeagle",
+            "format": "pdf"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/fastq/concatenated_ACC6225A18_XXXXXX_R_1.fp.fastq.gz",
+            "path_index": [],
+            "step": "fastp",
+            "tag": [
+                "quality-trimmed-fastq-read1",
+                "ACC6225A18",
+                "read1"
+            ],
+            "id": "ACC6225A18",
+            "format": "fastq.gz"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/fastq/concatenated_ACC6225A14_XXXXXX_R_1.fp.fastq.gz",
+            "path_index": [],
+            "step": "fastp",
+            "tag": [
+                "quality-trimmed-fastq-read1",
+                "read1",
+                "ACC6225A14"
+            ],
+            "id": "ACC6225A14",
+            "format": "fastq.gz"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/fastq/concatenated_ACC6225A18_XXXXXX_R_2.fp.fastq.gz",
+            "path_index": [],
+            "step": "fastp",
+            "tag": [
+                "read2",
+                "ACC6225A18",
+                "quality-trimmed-fastq-read2"
+            ],
+            "id": "ACC6225A18",
+            "format": "fastq.gz"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/fastq/concatenated_ACC6225A14_XXXXXX_R_2.fp.fastq.gz",
+            "path_index": [],
+            "step": "fastp",
+            "tag": [
+                "quality-trimmed-fastq-read2",
+                "read2",
+                "ACC6225A14"
+            ],
+            "id": "ACC6225A14",
+            "format": "fastq.gz"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/qc/fastp/concatenated_ACC6225A18_XXXXXX_R_fastp.json",
+            "path_index": [],
+            "step": "fastp",
+            "tag": [
+                "quality-trimmed-fastq-json",
+                "ACC6225A18",
+                "json"
+            ],
+            "id": "ACC6225A18",
+            "format": "json"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/qc/fastp/concatenated_ACC6225A14_XXXXXX_R_fastp.json",
+            "path_index": [],
+            "step": "fastp",
+            "tag": [
+                "json",
+                "quality-trimmed-fastq-json",
+                "ACC6225A14"
+            ],
+            "id": "ACC6225A14",
+            "format": "json"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/qc/fastp/concatenated_ACC6225A18_XXXXXX_R_fastp.html",
+            "path_index": [],
+            "step": "fastp",
+            "tag": [
+                "ACC6225A18",
+                "html",
+                "quality-trimmed-fastq-html"
+            ],
+            "id": "ACC6225A18",
+            "format": "html"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/qc/fastp/concatenated_ACC6225A14_XXXXXX_R_fastp.html",
+            "path_index": [],
+            "step": "fastp",
+            "tag": [
+                "quality-trimmed-fastq-html",
+                "html",
+                "ACC6225A14"
+            ],
+            "id": "ACC6225A14",
+            "format": "html"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.somatic.unitedbeagle.vardict.balsamic_stat",
+            "path_index": [],
+            "step": "vep_stat",
+            "tag": [
+                "stat-somatic-tmb",
+                "tmb",
+                "unitedbeagle",
+                "vardict"
+            ],
+            "id": "unitedbeagle",
+            "format": "balsamic_stat"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/bam/normal.merged.bam",
+            "path_index": [
+                "/home/proj/stage/cancer/cases/unitedbeagle/analysis/bam/normal.merged.bam.bai"
+            ],
+            "step": "mergeBam_normal",
+            "tag": [
+                "normal-bam",
+                "bam",
+                "ACC6225A14"
+            ],
+            "id": "ACC6225A14",
+            "format": "bam"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/bam/normal.merged.bam.bai",
+            "path_index": "",
+            "step": "mergeBam_normal",
+            "tag": [
+                "normal-bam-index",
+                "bam",
+                "ACC6225A14"
+            ],
+            "id": "ACC6225A14",
+            "format": "bai"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/bam/normal.merged.cram",
+            "path_index": [
+                "/home/proj/stage/cancer/cases/unitedbeagle/analysis/bam/normal.merged.cram.crai"
+            ],
+            "step": "mergeBam_normal",
+            "tag": [
+                "normal-cram",
+                "ACC6225A14",
+                "cram"
+            ],
+            "id": "ACC6225A14",
+            "format": "cram"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/bam/normal.merged.cram.crai",
+            "path_index": "",
+            "step": "mergeBam_normal",
+            "tag": [
+                "normal-cram-index",
+                "ACC6225A14",
+                "cram"
+            ],
+            "id": "ACC6225A14",
+            "format": "crai"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.germline.normal.haplotypecaller.vcf.gz",
+            "path_index": [
+                "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.germline.normal.haplotypecaller.vcf.gz.tbi"
+            ],
+            "step": "vep_germline",
+            "tag": [
+                "annotated-germline-vcf-all",
+                "normal",
+                "SNV",
+                "vcf-all",
+                "ACC6225A14",
+                "haplotypecaller"
+            ],
+            "id": "ACC6225A14",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.germline.normal.haplotypecaller.vcf.gz.tbi",
+            "path_index": "",
+            "step": "vep_germline",
+            "tag": [
+                "normal",
+                "SNV",
+                "vcf-all",
+                "annotated-germline-vcf-all-index",
+                "ACC6225A14",
+                "haplotypecaller"
+            ],
+            "id": "ACC6225A14",
+            "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SV.germline.normal.manta_germline.vcf.gz",
+            "path_index": [
+                "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SV.germline.normal.manta_germline.vcf.gz.tbi"
+            ],
+            "step": "vep_germline",
+            "tag": [
+                "annotated-germline-vcf-all",
+                "normal",
+                "manta-germline",
+                "vcf-all",
+                "SV",
+                "ACC6225A14"
+            ],
+            "id": "ACC6225A14",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SV.germline.normal.manta_germline.vcf.gz.tbi",
+            "path_index": "",
+            "step": "vep_germline",
+            "tag": [
+                "normal",
+                "manta-germline",
+                "annotated-germline-vcf-all-index",
+                "vcf-all",
+                "SV",
+                "ACC6225A14"
+            ],
+            "id": "ACC6225A14",
+            "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.germline.tumor.haplotypecaller.vcf.gz",
+            "path_index": [
+                "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.germline.tumor.haplotypecaller.vcf.gz.tbi"
+            ],
+            "step": "vep_germline",
+            "tag": [
+                "annotated-germline-vcf-all",
+                "ACC6225A18",
+                "SNV",
+                "vcf-all",
+                "tumor",
+                "haplotypecaller"
+            ],
+            "id": "ACC6225A18",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.germline.tumor.haplotypecaller.vcf.gz.tbi",
+            "path_index": "",
+            "step": "vep_germline",
+            "tag": [
+                "ACC6225A18",
+                "SNV",
+                "vcf-all",
+                "annotated-germline-vcf-all-index",
+                "tumor",
+                "haplotypecaller"
+            ],
+            "id": "ACC6225A18",
+            "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SV.germline.tumor.manta_germline.vcf.gz",
+            "path_index": [
+                "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SV.germline.tumor.manta_germline.vcf.gz.tbi"
+            ],
+            "step": "vep_germline",
+            "tag": [
+                "annotated-germline-vcf-all",
+                "ACC6225A18",
+                "manta-germline",
+                "vcf-all",
+                "SV",
+                "tumor"
+            ],
+            "id": "ACC6225A18",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SV.germline.tumor.manta_germline.vcf.gz.tbi",
+            "path_index": "",
+            "step": "vep_germline",
+            "tag": [
+                "ACC6225A18",
+                "manta-germline",
+                "annotated-germline-vcf-all-index",
+                "vcf-all",
+                "SV",
+                "tumor"
+            ],
+            "id": "ACC6225A18",
+            "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.germline.normal.dnascope.vcf.gz",
+            "path_index": [
+                "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.germline.normal.dnascope.vcf.gz.tbi"
+            ],
+            "step": "vep_germline",
+            "tag": [
+                "annotated-germline-vcf-all",
+                "normal",
+                "SNV",
+                "dnascope",
+                "vcf-all",
+                "ACC6225A14"
+            ],
+            "id": "ACC6225A14",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.germline.normal.dnascope.vcf.gz.tbi",
+            "path_index": "",
+            "step": "vep_germline",
+            "tag": [
+                "normal",
+                "annotated-germline-vcf-all-index",
+                "SNV",
+                "dnascope",
+                "vcf-all",
+                "ACC6225A14"
+            ],
+            "id": "ACC6225A14",
+            "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.germline.tumor.dnascope.vcf.gz",
+            "path_index": [
+                "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.germline.tumor.dnascope.vcf.gz.tbi"
+            ],
+            "step": "vep_germline",
+            "tag": [
+                "annotated-germline-vcf-all",
+                "ACC6225A18",
+                "SNV",
+                "dnascope",
+                "vcf-all",
+                "tumor"
+            ],
+            "id": "ACC6225A18",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.germline.tumor.dnascope.vcf.gz.tbi",
+            "path_index": "",
+            "step": "vep_germline",
+            "tag": [
+                "ACC6225A18",
+                "SNV",
+                "dnascope",
+                "annotated-germline-vcf-all-index",
+                "vcf-all",
+                "tumor"
+            ],
+            "id": "ACC6225A18",
+            "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.germline.tumor.haplotypecaller.vcf.gz_summary.html",
+            "path_index": [],
+            "step": "vep_germline",
+            "tag": [
+                "ACC6225A18",
+                "SNV",
+                "tumor",
+                "vcf-summary",
+                "haplotypecaller",
+                "annotated-germline-vcf-summary"
+            ],
+            "id": "ACC6225A18",
+            "format": "html"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SV.germline.normal.manta_germline.vcf.gz_summary.html",
+            "path_index": [],
+            "step": "vep_germline",
+            "tag": [
+                "normal",
+                "manta-germline",
+                "SV",
+                "vcf-summary",
+                "ACC6225A14",
+                "annotated-germline-vcf-summary"
+            ],
+            "id": "ACC6225A14",
+            "format": "html"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.germline.tumor.dnascope.vcf.gz_summary.html",
+            "path_index": [],
+            "step": "vep_germline",
+            "tag": [
+                "ACC6225A18",
+                "SNV",
+                "dnascope",
+                "tumor",
+                "vcf-summary",
+                "annotated-germline-vcf-summary"
+            ],
+            "id": "ACC6225A18",
+            "format": "html"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.germline.normal.haplotypecaller.vcf.gz_summary.html",
+            "path_index": [],
+            "step": "vep_germline",
+            "tag": [
+                "normal",
+                "SNV",
+                "vcf-summary",
+                "ACC6225A14",
+                "haplotypecaller",
+                "annotated-germline-vcf-summary"
+            ],
+            "id": "ACC6225A14",
+            "format": "html"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SV.germline.tumor.manta_germline.vcf.gz_summary.html",
+            "path_index": [],
+            "step": "vep_germline",
+            "tag": [
+                "ACC6225A18",
+                "manta-germline",
+                "SV",
+                "tumor",
+                "vcf-summary",
+                "annotated-germline-vcf-summary"
+            ],
+            "id": "ACC6225A18",
+            "format": "html"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.germline.normal.dnascope.vcf.gz_summary.html",
+            "path_index": [],
+            "step": "vep_germline",
+            "tag": [
+                "normal",
+                "SNV",
+                "dnascope",
+                "vcf-summary",
+                "ACC6225A14",
+                "annotated-germline-vcf-summary"
+            ],
+            "id": "ACC6225A14",
+            "format": "html"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/qc/multiqc_report.html",
+            "path_index": [],
+            "step": "multiqc",
+            "tag": [
+                "multiqc-html",
+                "html"
+            ],
+            "id": "unitedbeagle",
+            "format": "html"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/qc/multiqc_data/multiqc_data.json",
+            "path_index": [],
+            "step": "multiqc",
+            "tag": [
+                "json",
+                "multiqc-json"
+            ],
+            "id": "unitedbeagle",
+            "format": "json"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.somatic.unitedbeagle.vardict.all.filtered.pass.ranked.vcf.gz",
+            "path_index": [
+                "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.somatic.unitedbeagle.vardict.all.filtered.pass.ranked.vcf.gz.tbi"
+            ],
+            "step": "rankscore",
+            "tag": [
+                "SNV",
+                "research-vcf-pass",
+                "unitedbeagle",
+                "vcf-pass"
+            ],
+            "id": "unitedbeagle",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.somatic.unitedbeagle.vardict.all.filtered.pass.ranked.vcf.gz.tbi",
+            "path_index": "",
+            "step": "rankscore",
+            "tag": [
+                "SNV",
+                "unitedbeagle",
+                "research-vcf-pass-index",
+                "vcf-pass"
+            ],
+            "id": "unitedbeagle",
+            "format": "vcf.gz.tbi"
+        },
+        {
             "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/bam/tumor.merged.bam",
             "path_index": [
                 "/home/proj/stage/cancer/cases/unitedbeagle/analysis/bam/tumor.merged.bam.bai"
@@ -33,9 +812,9 @@
             ],
             "step": "mergeBam_tumor",
             "tag": [
+                "tumor-cram",
                 "ACC6225A18",
-                "cram",
-                "tumor-cram"
+                "cram"
             ],
             "id": "ACC6225A18",
             "format": "cram"
@@ -45,778 +824,12 @@
             "path_index": "",
             "step": "mergeBam_tumor",
             "tag": [
-                "cram",
                 "tumor-cram-index",
-                "ACC6225A18"
+                "ACC6225A18",
+                "cram"
             ],
             "id": "ACC6225A18",
             "format": "crai"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/fastq/concatenated_ACC6225A18_XXXXXX_R_1.fp.fastq.gz",
-            "path_index": [],
-            "step": "fastp",
-            "tag": [
-                "quality-trimmed-fastq-read1",
-                "ACC6225A18",
-                "read1"
-            ],
-            "id": "ACC6225A18",
-            "format": "fastq.gz"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/fastq/concatenated_ACC6225A14_XXXXXX_R_1.fp.fastq.gz",
-            "path_index": [],
-            "step": "fastp",
-            "tag": [
-                "quality-trimmed-fastq-read1",
-                "ACC6225A14",
-                "read1"
-            ],
-            "id": "ACC6225A14",
-            "format": "fastq.gz"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/fastq/concatenated_ACC6225A18_XXXXXX_R_2.fp.fastq.gz",
-            "path_index": [],
-            "step": "fastp",
-            "tag": [
-                "ACC6225A18",
-                "quality-trimmed-fastq-read2",
-                "read2"
-            ],
-            "id": "ACC6225A18",
-            "format": "fastq.gz"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/fastq/concatenated_ACC6225A14_XXXXXX_R_2.fp.fastq.gz",
-            "path_index": [],
-            "step": "fastp",
-            "tag": [
-                "quality-trimmed-fastq-read2",
-                "ACC6225A14",
-                "read2"
-            ],
-            "id": "ACC6225A14",
-            "format": "fastq.gz"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/qc/fastp/concatenated_ACC6225A18_XXXXXX_R_fastp.json",
-            "path_index": [],
-            "step": "fastp",
-            "tag": [
-                "ACC6225A18",
-                "quality-trimmed-fastq-json",
-                "json"
-            ],
-            "id": "ACC6225A18",
-            "format": "json"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/qc/fastp/concatenated_ACC6225A14_XXXXXX_R_fastp.json",
-            "path_index": [],
-            "step": "fastp",
-            "tag": [
-                "ACC6225A14",
-                "quality-trimmed-fastq-json",
-                "json"
-            ],
-            "id": "ACC6225A14",
-            "format": "json"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/qc/fastp/concatenated_ACC6225A18_XXXXXX_R_fastp.html",
-            "path_index": [],
-            "step": "fastp",
-            "tag": [
-                "html",
-                "ACC6225A18",
-                "quality-trimmed-fastq-html"
-            ],
-            "id": "ACC6225A18",
-            "format": "html"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/qc/fastp/concatenated_ACC6225A14_XXXXXX_R_fastp.html",
-            "path_index": [],
-            "step": "fastp",
-            "tag": [
-                "html",
-                "ACC6225A14",
-                "quality-trimmed-fastq-html"
-            ],
-            "id": "ACC6225A14",
-            "format": "html"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/bam/normal.merged.bam",
-            "path_index": [
-                "/home/proj/stage/cancer/cases/unitedbeagle/analysis/bam/normal.merged.bam.bai"
-            ],
-            "step": "mergeBam_normal",
-            "tag": [
-                "ACC6225A14",
-                "normal-bam",
-                "bam"
-            ],
-            "id": "ACC6225A14",
-            "format": "bam"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/bam/normal.merged.bam.bai",
-            "path_index": "",
-            "step": "mergeBam_normal",
-            "tag": [
-                "ACC6225A14",
-                "normal-bam-index",
-                "bam"
-            ],
-            "id": "ACC6225A14",
-            "format": "bai"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/bam/normal.merged.cram",
-            "path_index": [
-                "/home/proj/stage/cancer/cases/unitedbeagle/analysis/bam/normal.merged.cram.crai"
-            ],
-            "step": "mergeBam_normal",
-            "tag": [
-                "cram",
-                "ACC6225A14",
-                "normal-cram"
-            ],
-            "id": "ACC6225A14",
-            "format": "cram"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/bam/normal.merged.cram.crai",
-            "path_index": "",
-            "step": "mergeBam_normal",
-            "tag": [
-                "cram",
-                "ACC6225A14",
-                "normal-cram-index"
-            ],
-            "id": "ACC6225A14",
-            "format": "crai"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/cnv/tumor.merged.cnr",
-            "path_index": [],
-            "step": "cnvkit_paired",
-            "tag": [
-                "cnv-cnr",
-                "cnr"
-            ],
-            "id": "unitedbeagle",
-            "format": "cnr"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/cnv/tumor.merged.cns",
-            "path_index": [],
-            "step": "cnvkit_paired",
-            "tag": [
-                "cnv-cns",
-                "cns"
-            ],
-            "id": "unitedbeagle",
-            "format": "cns"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/cnv/tumor.merged-diagram.pdf",
-            "path_index": [],
-            "step": "cnvkit_paired",
-            "tag": [
-                "diagram",
-                "cnv-diagram"
-            ],
-            "id": "unitedbeagle",
-            "format": "pdf"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/cnv/unitedbeagle.gene_breaks",
-            "path_index": [],
-            "step": "cnvkit_paired",
-            "tag": [
-                "cnv-gene-breaks",
-                "gene-breaks"
-            ],
-            "id": "unitedbeagle",
-            "format": "gene_breaks"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/cnv/unitedbeagle.gene_metrics",
-            "path_index": [],
-            "step": "cnvkit_paired",
-            "tag": [
-                "gene-metrics",
-                "cnv-gene-metrics"
-            ],
-            "id": "unitedbeagle",
-            "format": "gene_metrics"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/cnv/tumor.merged-scatter.pdf",
-            "path_index": [],
-            "step": "cnvkit_paired",
-            "tag": [
-                "cnv-scatter",
-                "scatter"
-            ],
-            "id": "unitedbeagle",
-            "format": "pdf"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SV.somatic.unitedbeagle.manta.all.vcf.gz",
-            "path_index": [
-                "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SV.somatic.unitedbeagle.manta.all.vcf.gz.tbi"
-            ],
-            "step": "vep_somatic",
-            "tag": [
-                "annotated-somatic-vcf-all",
-                "vcf-all",
-                "unitedbeagle",
-                "SV",
-                "manta"
-            ],
-            "id": "unitedbeagle",
-            "format": "vcf.gz"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SV.somatic.unitedbeagle.manta.all.vcf.gz.tbi",
-            "path_index": "",
-            "step": "vep_somatic",
-            "tag": [
-                "vcf-all",
-                "unitedbeagle",
-                "annotated-somatic-vcf-all-index",
-                "SV",
-                "manta"
-            ],
-            "id": "unitedbeagle",
-            "format": "vcf.gz.tbi"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/CNV.somatic.unitedbeagle.cnvkit.all.vcf.gz",
-            "path_index": [
-                "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/CNV.somatic.unitedbeagle.cnvkit.all.vcf.gz.tbi"
-            ],
-            "step": "vep_somatic",
-            "tag": [
-                "annotated-somatic-vcf-all",
-                "vcf-all",
-                "unitedbeagle",
-                "CNV",
-                "cnvkit"
-            ],
-            "id": "unitedbeagle",
-            "format": "vcf.gz"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/CNV.somatic.unitedbeagle.cnvkit.all.vcf.gz.tbi",
-            "path_index": "",
-            "step": "vep_somatic",
-            "tag": [
-                "vcf-all",
-                "unitedbeagle",
-                "annotated-somatic-vcf-all-index",
-                "CNV",
-                "cnvkit"
-            ],
-            "id": "unitedbeagle",
-            "format": "vcf.gz.tbi"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.somatic.unitedbeagle.vardict.all.vcf.gz",
-            "path_index": [
-                "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.somatic.unitedbeagle.vardict.all.vcf.gz.tbi"
-            ],
-            "step": "vep_somatic",
-            "tag": [
-                "annotated-somatic-vcf-all",
-                "vardict",
-                "vcf-all",
-                "unitedbeagle",
-                "SNV"
-            ],
-            "id": "unitedbeagle",
-            "format": "vcf.gz"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.somatic.unitedbeagle.vardict.all.vcf.gz.tbi",
-            "path_index": "",
-            "step": "vep_somatic",
-            "tag": [
-                "vardict",
-                "vcf-all",
-                "unitedbeagle",
-                "annotated-somatic-vcf-all-index",
-                "SNV"
-            ],
-            "id": "unitedbeagle",
-            "format": "vcf.gz.tbi"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.somatic.unitedbeagle.TNscope_umi.all.vcf.gz",
-            "path_index": [
-                "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.somatic.unitedbeagle.TNscope_umi.all.vcf.gz.tbi"
-            ],
-            "step": "vep_somatic",
-            "tag": [
-                "annotated-somatic-vcf-all",
-                "TNscope-umi",
-                "vcf-all",
-                "unitedbeagle",
-                "SNV"
-            ],
-            "id": "unitedbeagle",
-            "format": "vcf.gz"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.somatic.unitedbeagle.TNscope_umi.all.vcf.gz.tbi",
-            "path_index": "",
-            "step": "vep_somatic",
-            "tag": [
-                "TNscope-umi",
-                "vcf-all",
-                "unitedbeagle",
-                "annotated-somatic-vcf-all-index",
-                "SNV"
-            ],
-            "id": "unitedbeagle",
-            "format": "vcf.gz.tbi"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.somatic.unitedbeagle.tnhaplotyper.all.vcf.gz",
-            "path_index": [
-                "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.somatic.unitedbeagle.tnhaplotyper.all.vcf.gz.tbi"
-            ],
-            "step": "vep_somatic",
-            "tag": [
-                "annotated-somatic-vcf-all",
-                "vcf-all",
-                "unitedbeagle",
-                "tnhaplotyper",
-                "SNV"
-            ],
-            "id": "unitedbeagle",
-            "format": "vcf.gz"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.somatic.unitedbeagle.tnhaplotyper.all.vcf.gz.tbi",
-            "path_index": "",
-            "step": "vep_somatic",
-            "tag": [
-                "vcf-all",
-                "unitedbeagle",
-                "annotated-somatic-vcf-all-index",
-                "tnhaplotyper",
-                "SNV"
-            ],
-            "id": "unitedbeagle",
-            "format": "vcf.gz.tbi"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.somatic.unitedbeagle.TNscope_umi.all.vcf.gz_summary.html",
-            "path_index": [],
-            "step": "vep_somatic",
-            "tag": [
-                "annotated-somatic-vcf-summary",
-                "TNscope-umi",
-                "unitedbeagle",
-                "SNV",
-                "vcf-summary"
-            ],
-            "id": "unitedbeagle",
-            "format": "html"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/CNV.somatic.unitedbeagle.cnvkit.all.vcf.gz_summary.html",
-            "path_index": [],
-            "step": "vep_somatic",
-            "tag": [
-                "annotated-somatic-vcf-summary",
-                "unitedbeagle",
-                "CNV",
-                "vcf-summary",
-                "cnvkit"
-            ],
-            "id": "unitedbeagle",
-            "format": "html"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SV.somatic.unitedbeagle.manta.all.vcf.gz_summary.html",
-            "path_index": [],
-            "step": "vep_somatic",
-            "tag": [
-                "annotated-somatic-vcf-summary",
-                "unitedbeagle",
-                "SV",
-                "vcf-summary",
-                "manta"
-            ],
-            "id": "unitedbeagle",
-            "format": "html"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.somatic.unitedbeagle.vardict.all.vcf.gz_summary.html",
-            "path_index": [],
-            "step": "vep_somatic",
-            "tag": [
-                "vardict",
-                "annotated-somatic-vcf-summary",
-                "unitedbeagle",
-                "SNV",
-                "vcf-summary"
-            ],
-            "id": "unitedbeagle",
-            "format": "html"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.somatic.unitedbeagle.tnhaplotyper.all.vcf.gz_summary.html",
-            "path_index": [],
-            "step": "vep_somatic",
-            "tag": [
-                "annotated-somatic-vcf-summary",
-                "unitedbeagle",
-                "tnhaplotyper",
-                "SNV",
-                "vcf-summary"
-            ],
-            "id": "unitedbeagle",
-            "format": "html"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/qc/multiqc_report.html",
-            "path_index": [],
-            "step": "multiqc",
-            "tag": [
-                "html",
-                "multiqc-html"
-            ],
-            "id": "unitedbeagle",
-            "format": "html"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/qc/multiqc_data/multiqc_data.json",
-            "path_index": [],
-            "step": "multiqc",
-            "tag": [
-                "multiqc-json",
-                "json"
-            ],
-            "id": "unitedbeagle",
-            "format": "json"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.germline.normal.haplotypecaller.vcf.gz",
-            "path_index": [
-                "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.germline.normal.haplotypecaller.vcf.gz.tbi"
-            ],
-            "step": "vep_germline",
-            "tag": [
-                "ACC6225A14",
-                "vcf-all",
-                "normal",
-                "SNV",
-                "haplotypecaller",
-                "annotated-germline-vcf-all"
-            ],
-            "id": "ACC6225A14",
-            "format": "vcf.gz"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.germline.normal.haplotypecaller.vcf.gz.tbi",
-            "path_index": "",
-            "step": "vep_germline",
-            "tag": [
-                "ACC6225A14",
-                "vcf-all",
-                "normal",
-                "annotated-germline-vcf-all-index",
-                "SNV",
-                "haplotypecaller"
-            ],
-            "id": "ACC6225A14",
-            "format": "vcf.gz.tbi"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SV.germline.normal.manta_germline.vcf.gz",
-            "path_index": [
-                "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SV.germline.normal.manta_germline.vcf.gz.tbi"
-            ],
-            "step": "vep_germline",
-            "tag": [
-                "ACC6225A14",
-                "vcf-all",
-                "normal",
-                "SV",
-                "manta-germline",
-                "annotated-germline-vcf-all"
-            ],
-            "id": "ACC6225A14",
-            "format": "vcf.gz"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SV.germline.normal.manta_germline.vcf.gz.tbi",
-            "path_index": "",
-            "step": "vep_germline",
-            "tag": [
-                "ACC6225A14",
-                "vcf-all",
-                "normal",
-                "annotated-germline-vcf-all-index",
-                "SV",
-                "manta-germline"
-            ],
-            "id": "ACC6225A14",
-            "format": "vcf.gz.tbi"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.germline.tumor.haplotypecaller.vcf.gz",
-            "path_index": [
-                "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.germline.tumor.haplotypecaller.vcf.gz.tbi"
-            ],
-            "step": "vep_germline",
-            "tag": [
-                "vcf-all",
-                "ACC6225A18",
-                "SNV",
-                "tumor",
-                "haplotypecaller",
-                "annotated-germline-vcf-all"
-            ],
-            "id": "ACC6225A18",
-            "format": "vcf.gz"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.germline.tumor.haplotypecaller.vcf.gz.tbi",
-            "path_index": "",
-            "step": "vep_germline",
-            "tag": [
-                "vcf-all",
-                "ACC6225A18",
-                "annotated-germline-vcf-all-index",
-                "SNV",
-                "tumor",
-                "haplotypecaller"
-            ],
-            "id": "ACC6225A18",
-            "format": "vcf.gz.tbi"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SV.germline.tumor.manta_germline.vcf.gz",
-            "path_index": [
-                "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SV.germline.tumor.manta_germline.vcf.gz.tbi"
-            ],
-            "step": "vep_germline",
-            "tag": [
-                "vcf-all",
-                "ACC6225A18",
-                "tumor",
-                "SV",
-                "manta-germline",
-                "annotated-germline-vcf-all"
-            ],
-            "id": "ACC6225A18",
-            "format": "vcf.gz"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SV.germline.tumor.manta_germline.vcf.gz.tbi",
-            "path_index": "",
-            "step": "vep_germline",
-            "tag": [
-                "vcf-all",
-                "ACC6225A18",
-                "annotated-germline-vcf-all-index",
-                "tumor",
-                "SV",
-                "manta-germline"
-            ],
-            "id": "ACC6225A18",
-            "format": "vcf.gz.tbi"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.germline.normal.dnascope.vcf.gz",
-            "path_index": [
-                "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.germline.normal.dnascope.vcf.gz.tbi"
-            ],
-            "step": "vep_germline",
-            "tag": [
-                "ACC6225A14",
-                "vcf-all",
-                "dnascope",
-                "normal",
-                "SNV",
-                "annotated-germline-vcf-all"
-            ],
-            "id": "ACC6225A14",
-            "format": "vcf.gz"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.germline.normal.dnascope.vcf.gz.tbi",
-            "path_index": "",
-            "step": "vep_germline",
-            "tag": [
-                "ACC6225A14",
-                "vcf-all",
-                "dnascope",
-                "normal",
-                "annotated-germline-vcf-all-index",
-                "SNV"
-            ],
-            "id": "ACC6225A14",
-            "format": "vcf.gz.tbi"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.germline.tumor.dnascope.vcf.gz",
-            "path_index": [
-                "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.germline.tumor.dnascope.vcf.gz.tbi"
-            ],
-            "step": "vep_germline",
-            "tag": [
-                "vcf-all",
-                "dnascope",
-                "ACC6225A18",
-                "SNV",
-                "tumor",
-                "annotated-germline-vcf-all"
-            ],
-            "id": "ACC6225A18",
-            "format": "vcf.gz"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.germline.tumor.dnascope.vcf.gz.tbi",
-            "path_index": "",
-            "step": "vep_germline",
-            "tag": [
-                "vcf-all",
-                "dnascope",
-                "ACC6225A18",
-                "annotated-germline-vcf-all-index",
-                "SNV",
-                "tumor"
-            ],
-            "id": "ACC6225A18",
-            "format": "vcf.gz.tbi"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.germline.tumor.haplotypecaller.vcf.gz_summary.html",
-            "path_index": [],
-            "step": "vep_germline",
-            "tag": [
-                "ACC6225A18",
-                "annotated-germline-vcf-summary",
-                "SNV",
-                "tumor",
-                "vcf-summary",
-                "haplotypecaller"
-            ],
-            "id": "ACC6225A18",
-            "format": "html"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SV.germline.normal.manta_germline.vcf.gz_summary.html",
-            "path_index": [],
-            "step": "vep_germline",
-            "tag": [
-                "ACC6225A14",
-                "annotated-germline-vcf-summary",
-                "normal",
-                "SV",
-                "vcf-summary",
-                "manta-germline"
-            ],
-            "id": "ACC6225A14",
-            "format": "html"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.germline.tumor.dnascope.vcf.gz_summary.html",
-            "path_index": [],
-            "step": "vep_germline",
-            "tag": [
-                "dnascope",
-                "ACC6225A18",
-                "annotated-germline-vcf-summary",
-                "SNV",
-                "tumor",
-                "vcf-summary"
-            ],
-            "id": "ACC6225A18",
-            "format": "html"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.germline.normal.haplotypecaller.vcf.gz_summary.html",
-            "path_index": [],
-            "step": "vep_germline",
-            "tag": [
-                "ACC6225A14",
-                "annotated-germline-vcf-summary",
-                "normal",
-                "SNV",
-                "vcf-summary",
-                "haplotypecaller"
-            ],
-            "id": "ACC6225A14",
-            "format": "html"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SV.germline.tumor.manta_germline.vcf.gz_summary.html",
-            "path_index": [],
-            "step": "vep_germline",
-            "tag": [
-                "ACC6225A18",
-                "annotated-germline-vcf-summary",
-                "vcf-summary",
-                "tumor",
-                "SV",
-                "manta-germline"
-            ],
-            "id": "ACC6225A18",
-            "format": "html"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.germline.normal.dnascope.vcf.gz_summary.html",
-            "path_index": [],
-            "step": "vep_germline",
-            "tag": [
-                "ACC6225A14",
-                "dnascope",
-                "annotated-germline-vcf-summary",
-                "normal",
-                "SNV",
-                "vcf-summary"
-            ],
-            "id": "ACC6225A14",
-            "format": "html"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.somatic.unitedbeagle.vardict.all.filtered.pass.ranked.vcf.gz",
-            "path_index": [
-                "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.somatic.unitedbeagle.vardict.all.filtered.pass.ranked.vcf.gz.tbi"
-            ],
-            "step": "rankscore",
-            "tag": [
-                "unitedbeagle",
-                "research-vcf-pass",
-                "SNV",
-                "vcf-pass"
-            ],
-            "id": "unitedbeagle",
-            "format": "vcf.gz"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.somatic.unitedbeagle.vardict.all.filtered.pass.ranked.vcf.gz.tbi",
-            "path_index": "",
-            "step": "rankscore",
-            "tag": [
-                "unitedbeagle",
-                "SNV",
-                "research-vcf-pass-index",
-                "vcf-pass"
-            ],
-            "id": "unitedbeagle",
-            "format": "vcf.gz.tbi"
         },
         {
             "path": "/home/proj/stage/cancer/cases/unitedbeagle/analysis/vep/SNV.somatic.unitedbeagle.vardict.all.filtered.vcf.gz",
@@ -825,10 +838,10 @@
             ],
             "step": "ngs_filter_vardict",
             "tag": [
-                "unitedbeagle",
                 "SNV",
-                "vcf-filtered",
-                "clinical-vcf-filtered"
+                "clinical-vcf-filtered",
+                "unitedbeagle",
+                "vcf-filtered"
             ],
             "id": "unitedbeagle",
             "format": "vcf.gz"
@@ -838,8 +851,8 @@
             "path_index": "",
             "step": "ngs_filter_vardict",
             "tag": [
-                "unitedbeagle",
                 "SNV",
+                "unitedbeagle",
                 "vcf-filtered",
                 "clinical-vcf-filtered-index"
             ],
@@ -854,8 +867,8 @@
             "step": "ngs_filter_vardict",
             "tag": [
                 "clinical-vcf-pass",
-                "unitedbeagle",
                 "SNV",
+                "unitedbeagle",
                 "vcf-pass"
             ],
             "id": "unitedbeagle",
@@ -866,9 +879,9 @@
             "path_index": "",
             "step": "ngs_filter_vardict",
             "tag": [
-                "unitedbeagle",
-                "SNV",
                 "clinical-vcf-pass-index",
+                "SNV",
+                "unitedbeagle",
                 "vcf-pass"
             ],
             "id": "unitedbeagle",
