@@ -4,6 +4,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 About changelog [here](https://keepachangelog.com/en/1.0.0/)
 
+## [0.8.0]
+### Changed:
+- BALSAMIC: All the normal tag maps changed to germline to correctly reflect the purpose of file
+### Added:
+- BALSAMIC: All the sets with annotated-somatic-vcf-\* have somatic tag to them
+### Removed:
+- BALSAMIC: annotated-somatic-vcf-pass and annotated-somatic-vcf-pass-index tags
+
 ## [0.7.0]
 ### Changed
 - Updated deliverables for BALSAMIC 7.1.7 
