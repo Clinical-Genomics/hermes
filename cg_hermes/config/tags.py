@@ -27,6 +27,8 @@ RAW_DATA = {
 VARIANT_COMMON = {
     "cnv": {"description": "Copy number variants"},
     "normal": {"description": "Associated with normal sample"},
+    "germline": {"description": "Associated with germline variants"},
+    "somatic": {"description": "Associated with somatic variants"},
     "rhocall-viz": {"description": "Runs of homozygosity index"},
     "smn-calling": {"description": "Copy number calls for the SMN gene"},
     "snv-bcf": {"description": "Gvcf including all SNV variants"},
