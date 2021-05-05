@@ -149,6 +149,7 @@ MUTANT_SPECIFIC = {
     "typing-report": {"description": "Results from typing"},
     "typing-summary": {"description": "Summary of results from typing"},
     "fohm": {"description": "Relevant for FoHM"},
+    "ks": {"description": "Relevant for Karolinska hospital/microbial routine"},
     "komplettering": {"description": "Filetype specific for national uploading of microbial data"},
     "consensus": {"description": "Consensus sequence"},
 }
