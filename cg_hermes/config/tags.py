@@ -158,6 +158,7 @@ MUTANT_SPECIFIC = {
     "artic-sum": {"description": "GMS-Artic summary file"},
     "artic-var": {"description": "GMS-Artic variant file"},
     "artic-qc": {"description": "GMS-Artic QC file"},
+    "artic-json": {"description": "GMS-Artic json file"},
 }
 
 AVAILABLE_USAGES = {
