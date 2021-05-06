@@ -148,10 +148,16 @@ MUTANT_SPECIFIC = {
     "pangolin": {"description": "Pangolin specific output"},
     "typing-report": {"description": "Results from typing"},
     "typing-summary": {"description": "Summary of results from typing"},
-    "fohm": {"description": "Relevant for FoHM"},
-    "ks": {"description": "Relevant for Karolinska hospital/microbial routine"},
+    "fohm-delivery": {"description": "Relevant for FoHM"},
+    "ks-delivery": {"description": "Relevant for Karolinska hospital/microbial routine"},
     "komplettering": {"description": "Filetype specific for national uploading of microbial data"},
     "consensus": {"description": "Consensus sequence"},
+    "ks-results": {"description": "KS modification of pangolin typing results"},
+    "ks-aux-results": {"description": "KS modification of pangolin called variants"},
+    "pangolin-typing": {"description": "Pangolin typing results"},
+    "artic-sum": {"description": "GMS-Artic summary file"},
+    "artic-var": {"description": "GMS-Artic variant file"},
+    "artic-qc": {"description": "GMS-Artic QC file"},
 }
 
 AVAILABLE_USAGES = {
