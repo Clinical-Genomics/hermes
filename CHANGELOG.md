@@ -4,6 +4,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 About changelog [here](https://keepachangelog.com/en/1.0.0/)
 
+## [0.9.0]
+### Changed:
+- MUTANT: Finalized the is_required tags
+- MUTANT: Changed some reports to aggregate forms
+### Added:
+- MUTANT: KS tag for files specifically requested by KS/Clinical routine
+
 ## [0.8.0]
 ### Changed:
 - BALSAMIC: All the normal tag maps changed to germline to correctly reflect the purpose of file
