@@ -4,6 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 About changelog [here](https://keepachangelog.com/en/1.0.0/)
 
+
+## [0.9.1]
+### Changed:
+- MUTANT: Hotfix to accomodate step-tag structure
+
 ## [0.9.0]
 ### Changed:
 - MUTANT: Finalized the is_required tags
