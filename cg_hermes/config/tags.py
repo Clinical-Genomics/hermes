@@ -157,6 +157,7 @@ MUTANT_SPECIFIC = {
     "pangolin-typing": {"description": "Pangolin typing results"},
     "artic-sum": {"description": "GMS-Artic summary file"},
     "artic-var": {"description": "GMS-Artic variant file"},
+    "artic-type": {"description": "GMS-Artic typing file"},
     "artic-qc": {"description": "GMS-Artic QC file"},
     "artic-json": {"description": "GMS-Artic json file"},
 }

@@ -35,7 +35,7 @@ MUTANT_COMMON_TAGS = {
         "tags": ["fohm-delivery", "pangolin-typing", "csv", "visualization"],
         "used_by": ["audit"],
     },
-    frozenset({"pangolin-typing"}): {
+    frozenset({"pangolin-typing", "report"}): {
         "is_mandatory": False,
         "tags": ["fohm-delivery", "pangolin-typing", "visualization", "csv"],
         "used_by": ["audit"],
@@ -55,32 +55,32 @@ MUTANT_COMMON_TAGS = {
         "tags": ["tsv", "vcf-report"],
         "used_by": ["deliver"],
     },
-    frozenset({"SARS-CoV-2-json", "result_aggregation"}): {
+    frozenset({"artic-json", "result_aggregation"}): {
         "is_mandatory": False,
         "tags": ["artic-json"],
         "used_by": ["vogue"],
     },
-    frozenset({"multiqc-json"}): {
+    frozenset({"multiqc-json", "report"}): {
         "is_mandatory": True,
         "tags": ["multiqc-json"],
         "used_by": ["vogue"],
     },
-    frozenset({"ks-results"}): {
+    frozenset({"ks-results", "report"}): {
         "is_mandatory": True,
         "tags": ["ks-delivery", "ks-results", "typing-report", "visualization", "csv"],
         "used_by": ["deliver"],
     },
-    frozenset({"ks-aux-results"}): {
+    frozenset({"ks-aux-results", "report"}): {
         "is_mandatory": True,
         "tags": ["ks-delivery", "ks-aux-results", "typing-report", "visualization", "csv"],
         "used_by": ["deliver"],
     },
-    frozenset({"consensus"}): {
+    frozenset({"consensus", "analysis"}): {
         "is_mandatory": True,
         "tags": ["ks-delivery", "fastq", "consensus"],
         "used_by": ["deliver", "storage"],
     },
-    frozenset({"multiqc-html"}): {
+    frozenset({"multiqc-html", "report"}): {
         "is_mandatory": True,
         "tags": ["ks-delivery", "multiqc-html"],
         "used_by": ["deliver"],
@@ -95,5 +95,9 @@ MUTANT_COMMON_TAGS = {
         "tags": ["artic-var", "csv"],
         "used_by": ["audit"],
     },
- 
+    frozenset({"SARS-CoV-2-type", "typing"}): {
+        "is_mandatory": False,
+        "tags": ["artic-type", "csv"],
+        "used_by": ["audit"],
+    },
 }
