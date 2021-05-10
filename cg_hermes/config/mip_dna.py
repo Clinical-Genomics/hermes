@@ -55,6 +55,12 @@ MIP_DNA_TAGS = {
         "is_mandatory": False,
         "used_by": ["scout"],
     },
+    frozenset(["glnexus_merge"]): {
+        "tags": ["deepvariant","snv", "vcf"],
+        "index_tags": ["deepvariant", "snv", "vcf-index"],
+        "is_mandatory": False,
+        "used_by": ["storage"],
+    },
     frozenset(["gatk_baserecalibration"]): {
         "tags": ["cram"],
         "index_tags": ["cram-index"],

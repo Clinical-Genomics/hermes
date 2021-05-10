@@ -36,3 +36,4 @@
 | sites, upd_ar                       | False       | upd, sites                  | scout        |
 | version_collect_ar                  | True        | exe-ver                     | audit        |
 | vcf2cytosure_ar                     | False       | vcf2cytosure                | scout        |
+| glnexus_merge                       | False       | deepvariant, snv, vcf       | storage      |
