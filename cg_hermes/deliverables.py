@@ -94,6 +94,7 @@ class Deliverables:
     @staticmethod
     def build_internal_tag_map(tag_map: Dict[FrozenSet[str], dict]) -> Dict[FrozenSet[str], TagMap]:
         """Convert and validate a tag map to TagMap objects"""
+        LOG.debug("Build internal tag map")
         internal_tag_map: Dict[FrozenSet[str], TagMap] = dict()
         for pipeline_tags in tag_map:
             internal_tag_map[pipeline_tags] = TagMap.parse_obj(tag_map[pipeline_tags])

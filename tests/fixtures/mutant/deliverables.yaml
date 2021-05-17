@@ -1,91 +1,217 @@
 files:
 - format: csv
-  id: merrymink
-  path: /Users/tanja.normark/Documents/Development/MUTANT/mutant/results/merrymink_210317-122403/sars-cov-2_100100_results_20210317.csv
+  id: frankhusky
+  path: /home/proj/development/microbial/mutant/cases/frankhusky_210505-172801/sars-cov-2_395698_results.csv
   path_index: '~'
   step: report
-  tag: SARS-CoV-2-sum
+  tag: ks-results
 - format: csv
-  id: merrymink
-  path: /Users/tanja.normark/Documents/Development/MUTANT/mutant/results/merrymink_210317-122403/sars-cov-2_100100_variants_20210317.csv
+  id: frankhusky
+  path: /home/proj/development/microbial/mutant/cases/frankhusky_210505-172801/sars-cov-2_395698_variants.csv
   path_index: '~'
   step: report
-  tag: SARS-CoV-2-var
+  tag: ks-aux-results
 - format: csv
-  id: merrymink
-  path: /Users/tanja.normark/Documents/Development/MUTANT/mutant/results/merrymink_210317-122403/merrymink_210317-122403.qc.csv
+  id: frankhusky
+  path: /home/proj/development/microbial/mutant/cases/frankhusky_210505-172801/395698.pangolin.csv
+  path_index: '~'
+  step: report
+  tag: pangolin-typing
+- format: csv
+  id: frankhusky
+  path: /home/proj/development/microbial/mutant/cases/frankhusky_210505-172801/395698.consensus.fa
+  path_index: '~'
+  step: analysis
+  tag: consensus
+- format: json
+  id: frankhusky
+  path: /home/proj/development/microbial/mutant/cases/frankhusky_210505-172801/395698_multiqc.html
+  path_index: '~'
+  step: report
+  tag: multiqc-html
+- format: json
+  id: frankhusky
+  path: /home/proj/development/microbial/mutant/cases/frankhusky_210505-172801/395698_multiqc.json
+  path_index: '~'
+  step: report
+  tag: multiqc-json
+- format: json
+  id: frankhusky
+  path: /home/proj/development/microbial/mutant/cases/frankhusky_210505-172801/395698_artic.json
   path_index: '~'
   step: result_aggregation
-  tag: SARS-CoV-2-qc
+  tag: artic-json
 - format: json
-  id: merrymink
-  path: /Users/tanja.normark/Documents/Development/MUTANT/mutant/results/merrymink_210317-122403/merrymink.json
-  path_index: '~'
-  step: result_aggregation
-  tag: SARS-CoV-2-json
-- format: json
-  id: merrymink
-  path: /Users/tanja.normark/Documents/Development/MUTANT/mutant/results/merrymink_210317-122403/merrymink_sampleinfo.json
+  id: frankhusky
+  path: cases/oldhusky/case_config.json
   path_index: '~'
   step: runinfo
   tag: sampleinfo
 - format: txt
-  id: merrymink
-  path: /Users/tanja.normark/Documents/Development/MUTANT/mutant/artic_dev.config
+  id: frankhusky
+  path: /home/proj/stage/mutant/MUTANT/mutant/config/hasta/artic.json
   path_index: '~'
   step: runinfo
   tag: runtime-settings
 - format: txt
-  id: merrymink
-  path: /Users/tanja.normark/Documents/Development/MUTANT/mutant/results/merrymink_210317-122403/nextflow.log
+  id: frankhusky
+  path: /home/proj/development/microbial/mutant/cases/frankhusky_210505-172801/nextflow.log
   path_index: '~'
   step: runinfo
   tag: logfile
 - format: csv
-  id: merrymink
-  path: /Users/tanja.normark/Documents/Development/MUTANT/mutant/results/merrymink_210317-122403/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE100_20210317_pangolin_classification.txt
+  id: frankhusky
+  path: /home/proj/development/microbial/mutant/cases/frankhusky_210505-172801/ncovIllumina_sequenceAnalysis_makeConsensus/01_Region_Stockholm_SE100_Karolinska_20210505_pangolin_classification.txt
   path_index: '~'
   step: typing
   tag: SARS-CoV-2-type
 - format: csv
-  id: merrymink
-  path: /Users/tanja.normark/Documents/Development/MUTANT/mutant/results/merrymink_210317-122403/01_SE100_20210317_komplettering.csv
+  id: frankhusky
+  path: /home/proj/development/microbial/mutant/cases/frankhusky_210505-172801/01_Region_Stockholm_SE100_Karolinska_20210505_komplettering.csv
   path_index: '~'
   step: report
   tag: SARS-CoV-2-info
 - format: fastq
-  id: ACC1000A1
-  path: /Users/tanja.normark/Documents/Development/MUTANT/mutant/results/merrymink_210317-122403/concat/01_SE100_ACC1000A1_1.fastq.gz
+  id: ACC7703A1
+  path: /home/proj/stage/mutant/cases/frankhusky/fastq/01_Region_Stockholm_SE100_Karolinska_21CS500657TEST_1.fastq.gz
   path_index: '~'
   step: concatination
   tag: forward-reads
 - format: fastq
-  id: ACC1000A1
-  path: /Users/tanja.normark/Documents/Development/MUTANT/mutant/results/merrymink_210317-122403/concat/01_SE100_ACC1000A1_2.fastq.gz
+  id: ACC7703A1
+  path: /home/proj/stage/mutant/cases/frankhusky/fastq/01_Region_Stockholm_SE100_Karolinska_21CS500657TEST_2.fastq.gz
   path_index: '~'
   step: concatination
   tag: reverse-reads
-- format: fasta
-  id: ACC1000A1
-  path: /Users/tanja.normark/Documents/Development/MUTANT/mutant/results/merrymink_210317-122403/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE100_ACC1000A1.consensus.fasta
+- format: fastq
+  id: ACC7703A2
+  path: /home/proj/stage/mutant/cases/frankhusky/fastq/01_Region_Stockholm_SE100_Karolinska_21CS500658TEST_1.fastq.gz
   path_index: '~'
-  step: consensus
-  tag: consensus
-- format: bam
-  id: ACC1000A1
-  path: /Users/tanja.normark/Documents/Development/MUTANT/mutant/results/merrymink_210317-122403/ncovIllumina_sequenceAnalysis_readMapping/SRR13486875.sorted.bam
+  step: concatination
+  tag: forward-reads
+- format: fastq
+  id: ACC7703A2
+  path: /home/proj/stage/mutant/cases/frankhusky/fastq/01_Region_Stockholm_SE100_Karolinska_21CS500658TEST_2.fastq.gz
   path_index: '~'
-  step: alignment
-  tag: reference-alignment-sorted
-- format: vcf
-  id: ACC1000A1
-  path: /Users/tanja.normark/Documents/Development/MUTANT/mutant/results/merrymink_210317-122403/ncovIllumina_Genotyping_typeVariants/vcf/01_SE100_ACC1000A1.vcf
+  step: concatination
+  tag: reverse-reads
+- format: fastq
+  id: ACC7703A3
+  path: /home/proj/stage/mutant/cases/frankhusky/fastq/01_Region_Stockholm_SE100_Karolinska_21CS500659TEST_1.fastq.gz
   path_index: '~'
-  step: genotyping
-  tag: variants
-- format: tsv
-  id: ACC1000A1
-  path: /Users/tanja.normark/Documents/Development/MUTANT/mutant/results/merrymink_210317-122403/ncovIllumina_sequenceAnalysis_callVariants/01_SE100_ACC1000A1.variants.tsv
+  step: concatination
+  tag: forward-reads
+- format: fastq
+  id: ACC7703A3
+  path: /home/proj/stage/mutant/cases/frankhusky/fastq/01_Region_Stockholm_SE100_Karolinska_21CS500659TEST_2.fastq.gz
   path_index: '~'
-  step: variant-calling
-  tag: variants
+  step: concatination
+  tag: reverse-reads
+- format: fastq
+  id: ACC7703A4
+  path: /home/proj/stage/mutant/cases/frankhusky/fastq/01_Region_Stockholm_SE100_Karolinska_21CS500660TEST_1.fastq.gz
+  path_index: '~'
+  step: concatination
+  tag: forward-reads
+- format: fastq
+  id: ACC7703A4
+  path: /home/proj/stage/mutant/cases/frankhusky/fastq/01_Region_Stockholm_SE100_Karolinska_21CS500660TEST_2.fastq.gz
+  path_index: '~'
+  step: concatination
+  tag: reverse-reads
+- format: fastq
+  id: ACC7703A5
+  path: /home/proj/stage/mutant/cases/frankhusky/fastq/01_Region_Stockholm_SE100_Karolinska_21CS500661TEST_1.fastq.gz
+  path_index: '~'
+  step: concatination
+  tag: forward-reads
+- format: fastq
+  id: ACC7703A5
+  path: /home/proj/stage/mutant/cases/frankhusky/fastq/01_Region_Stockholm_SE100_Karolinska_21CS500661TEST_2.fastq.gz
+  path_index: '~'
+  step: concatination
+  tag: reverse-reads
+- format: fastq
+  id: ACC7703A6
+  path: /home/proj/stage/mutant/cases/frankhusky/fastq/01_Region_Stockholm_SE100_Karolinska_21CS500662TEST_1.fastq.gz
+  path_index: '~'
+  step: concatination
+  tag: forward-reads
+- format: fastq
+  id: ACC7703A6
+  path: /home/proj/stage/mutant/cases/frankhusky/fastq/01_Region_Stockholm_SE100_Karolinska_21CS500662TEST_2.fastq.gz
+  path_index: '~'
+  step: concatination
+  tag: reverse-reads
+- format: fastq
+  id: ACC7703A7
+  path: /home/proj/stage/mutant/cases/frankhusky/fastq/01_Region_Stockholm_SE100_Karolinska_21CS500663TEST_1.fastq.gz
+  path_index: '~'
+  step: concatination
+  tag: forward-reads
+- format: fastq
+  id: ACC7703A7
+  path: /home/proj/stage/mutant/cases/frankhusky/fastq/01_Region_Stockholm_SE100_Karolinska_21CS500663TEST_2.fastq.gz
+  path_index: '~'
+  step: concatination
+  tag: reverse-reads
+- format: fastq
+  id: ACC7703A8
+  path: /home/proj/stage/mutant/cases/frankhusky/fastq/01_Region_Stockholm_SE100_Karolinska_21CS500664TEST_1.fastq.gz
+  path_index: '~'
+  step: concatination
+  tag: forward-reads
+- format: fastq
+  id: ACC7703A8
+  path: /home/proj/stage/mutant/cases/frankhusky/fastq/01_Region_Stockholm_SE100_Karolinska_21CS500664TEST_2.fastq.gz
+  path_index: '~'
+  step: concatination
+  tag: reverse-reads
+- format: fastq
+  id: ACC7703A9
+  path: /home/proj/stage/mutant/cases/frankhusky/fastq/01_Region_Stockholm_SE100_Karolinska_21CS500665TEST_1.fastq.gz
+  path_index: '~'
+  step: concatination
+  tag: forward-reads
+- format: fastq
+  id: ACC7703A9
+  path: /home/proj/stage/mutant/cases/frankhusky/fastq/01_Region_Stockholm_SE100_Karolinska_21CS500665TEST_2.fastq.gz
+  path_index: '~'
+  step: concatination
+  tag: reverse-reads
+- format: fastq
+  id: ACC7703A10
+  path: /home/proj/stage/mutant/cases/frankhusky/fastq/01_Region_Stockholm_SE100_Karolinska_21CS500666TEST_1.fastq.gz
+  path_index: '~'
+  step: concatination
+  tag: forward-reads
+- format: fastq
+  id: ACC7703A10
+  path: /home/proj/stage/mutant/cases/frankhusky/fastq/01_Region_Stockholm_SE100_Karolinska_21CS500666TEST_2.fastq.gz
+  path_index: '~'
+  step: concatination
+  tag: reverse-reads
+- format: fastq
+  id: ACC7703A11
+  path: /home/proj/stage/mutant/cases/frankhusky/fastq/01_Region_Stockholm_SE100_Karolinska_21CS500667TEST_1.fastq.gz
+  path_index: '~'
+  step: concatination
+  tag: forward-reads
+- format: fastq
+  id: ACC7703A11
+  path: /home/proj/stage/mutant/cases/frankhusky/fastq/01_Region_Stockholm_SE100_Karolinska_21CS500667TEST_2.fastq.gz
+  path_index: '~'
+  step: concatination
+  tag: reverse-reads
+- format: fastq
+  id: ACC7703A12
+  path: /home/proj/stage/mutant/cases/frankhusky/fastq/01_Region_Stockholm_SE100_Karolinska_21CS500668TEST_1.fastq.gz
+  path_index: '~'
+  step: concatination
+  tag: forward-reads
+- format: fastq
+  id: ACC7703A12
+  path: /home/proj/stage/mutant/cases/frankhusky/fastq/01_Region_Stockholm_SE100_Karolinska_21CS500668TEST_2.fastq.gz
+  path_index: '~'
+  step: concatination
+  tag: reverse-reads

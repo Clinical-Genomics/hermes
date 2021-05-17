@@ -27,6 +27,8 @@ RAW_DATA = {
 VARIANT_COMMON = {
     "cnv": {"description": "Copy number variants"},
     "normal": {"description": "Associated with normal sample"},
+    "germline": {"description": "Associated with germline variants"},
+    "somatic": {"description": "Associated with somatic variants"},
     "rhocall-viz": {"description": "Runs of homozygosity index"},
     "smn-calling": {"description": "Copy number calls for the SMN gene"},
     "snv": {"description": "Single nucleotide variants and short indels"},
@@ -158,11 +160,21 @@ MICROSALT_SPECIFIC = {
 MUTANT_SPECIFIC = {
     "mutant-config": {"description": "Config settings for mutant analysis"},
     "mutant-log": {"description": "SLURM log for mutant analysis"},
+    "pangolin": {"description": "Pangolin specific output"},
     "typing-report": {"description": "Results from typing"},
-    "fohm": {"description": "Relevant for FoHM"},
-    "pangolin": {"description": "Pangolin classified output"},
+    "typing-summary": {"description": "Summary of results from typing"},
+    "fohm-delivery": {"description": "Relevant for FoHM"},
+    "ks-delivery": {"description": "Relevant for Karolinska hospital/microbial routine"},
     "komplettering": {"description": "Filetype specific for national uploading of microbial data"},
     "consensus": {"description": "Consensus sequence"},
+    "ks-results": {"description": "KS modification of pangolin typing results"},
+    "ks-aux-results": {"description": "KS modification of pangolin called variants"},
+    "pangolin-typing": {"description": "Pangolin typing results"},
+    "artic-sum": {"description": "GMS-Artic summary file"},
+    "artic-var": {"description": "GMS-Artic variant file"},
+    "artic-type": {"description": "GMS-Artic typing file"},
+    "artic-qc": {"description": "GMS-Artic QC file"},
+    "artic-json": {"description": "GMS-Artic json file"},
 }
 
 AVAILABLE_USAGES = {
