@@ -61,7 +61,7 @@ MIP_DNA_TAGS = {
         "is_mandatory": False,
         "used_by": ["storage"],
     },
-    frozenset(["gatk_baserecalibration"]): {
+    frozenset(["markduplicates"]): {
         "tags": ["cram"],
         "index_tags": ["cram-index"],
         "is_mandatory": False,
