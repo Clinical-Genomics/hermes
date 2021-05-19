@@ -87,6 +87,7 @@ ANALYSIS_COMMON = {
     "assembly": {"description": "Assembly"},
     "autozyg": {"description": "Autozygous region"},
     "bed": {"description": "Bed file"},
+    "bed-index": {"description": "Following index"},
     "bigwig": {"description": "Bigwig formated file"},
     "clinical": {"description": "Clinical subset"},
     "config": {"description": "Config file"},

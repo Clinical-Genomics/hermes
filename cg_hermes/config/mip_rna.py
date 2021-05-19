@@ -105,6 +105,7 @@ MIP_RNA_TAGS = {
     },
     frozenset(["build_sj_tracks", "junction"]): {
         "tags": ["junction", "bed"],
+        "index_tags": ["junction", "bed-index"],
         "is_mandatory": True,
         "used_by": ["scout"],
     },
