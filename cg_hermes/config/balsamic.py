@@ -279,12 +279,12 @@ BALSAMIC_COMMON_TAGS = {
     },
     frozenset({"vcf-sv-pass", "sv", "clinical-vcf-sv-pass"}): {
         "tags": ["vcf", "vcf-sv-clinical", "somatic"],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": ["scout", "deliver"],
     },
     frozenset({"clinical-vcf-sv-pass-index", "vcf-sv-pass", "sv"}): {
         "tags": ["vcf-index", "vcf-sv-clinical-index", "somatic"],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": ["scout", "deliver"],
     },
 }
@@ -305,8 +305,8 @@ TUMOR_ONLY_WGS_TAGS = {
     frozenset({"clinical-vcf-filtered-index", "snv", "vcf-filtered"}): {"is_mandatory": True},
     frozenset({"vcf-pass", "clinical-vcf-pass", "snv"}): {"is_mandatory": True},
     frozenset({"vcf-pass", "clinical-vcf-pass-index", "snv"}): {"is_mandatory": True},
-    frozenset({"vcf-sv-pass", "clinical-vcf-sv-pass", "sv"}): {"is_mandatory": True},
-    frozenset({"vcf-sv-pass", "clinical-vcf-sv-pass-index", "sv"}): {"is_mandatory": True},
+    frozenset({"vcf-sv-pass", "clinical-vcf-sv-pass", "sv"}): {"is_mandatory": False},
+    frozenset({"vcf-sv-pass", "clinical-vcf-sv-pass-index", "sv"}): {"is_mandatory": False},
 }
 
 TUMOR_NORMAL_WGS_TAGS = {
@@ -322,8 +322,8 @@ TUMOR_NORMAL_WGS_TAGS = {
     frozenset({"clinical-vcf-filtered-index", "snv", "vcf-filtered"}): {"is_mandatory": True},
     frozenset({"vcf-pass", "clinical-vcf-pass", "snv"}): {"is_mandatory": True},
     frozenset({"vcf-pass", "clinical-vcf-pass-index", "snv"}): {"is_mandatory": True},
-    frozenset({"vcf-sv-pass", "clinical-vcf-sv-pass", "sv"}): {"is_mandatory": True},
-    frozenset({"vcf-sv-pass", "clinical-vcf-sv-pass-index", "sv"}): {"is_mandatory": True},
+    frozenset({"vcf-sv-pass", "clinical-vcf-sv-pass", "sv"}): {"is_mandatory": False},
+    frozenset({"vcf-sv-pass", "clinical-vcf-sv-pass-index", "sv"}): {"is_mandatory": False},
     frozenset({"tnscope", "snv", "annotated-somatic-vcf-all", "vcf-all"}): {"is_mandatory": True},
     frozenset({"tnscope", "snv", "annotated-somatic-vcf-all-index", "vcf-all"}): {
         "is_mandatory": True
@@ -342,8 +342,8 @@ TUMOR_ONLY_PANEL_TAGS = {
     frozenset({"clinical-vcf-filtered-index", "snv", "vcf-filtered"}): {"is_mandatory": True},
     frozenset({"vcf-pass", "clinical-vcf-pass", "snv"}): {"is_mandatory": True},
     frozenset({"vcf-pass", "clinical-vcf-pass-index", "snv"}): {"is_mandatory": True},
-    frozenset({"vcf-sv-pass", "clinical-vcf-sv-pass", "sv"}): {"is_mandatory": True},
-    frozenset({"vcf-sv-pass", "clinical-vcf-sv-pass-index", "sv"}): {"is_mandatory": True},
+    frozenset({"vcf-sv-pass", "clinical-vcf-sv-pass", "sv"}): {"is_mandatory": False},
+    frozenset({"vcf-sv-pass", "clinical-vcf-sv-pass-index", "sv"}): {"is_mandatory": False},
     frozenset({"annotated-somatic-vcf-all", "vcf-all", "snv", "vardict"}): {"is_mandatory": True},
     frozenset({"annotated-somatic-vcf-all-index", "vcf-all", "snv", "vardict"}): {
         "is_mandatory": True
@@ -392,8 +392,8 @@ TUMOR_NORMAL_PANEL_TAGS = {
     frozenset({"clinical-vcf-filtered-index", "snv", "vcf-filtered"}): {"is_mandatory": True},
     frozenset({"vcf-pass", "clinical-vcf-pass", "snv"}): {"is_mandatory": True},
     frozenset({"vcf-pass", "clinical-vcf-pass-index", "snv"}): {"is_mandatory": True},
-    frozenset({"vcf-sv-pass", "clinical-vcf-sv-pass", "sv"}): {"is_mandatory": True},
-    frozenset({"vcf-sv-pass", "clinical-vcf-sv-pass-index", "sv"}): {"is_mandatory": True},
+    frozenset({"vcf-sv-pass", "clinical-vcf-sv-pass", "sv"}): {"is_mandatory": False},
+    frozenset({"vcf-sv-pass", "clinical-vcf-sv-pass-index", "sv"}): {"is_mandatory": False},
     frozenset({"snv", "vcf-all", "vardict", "annotated-somatic-vcf-all"}): {"is_mandatory": True},
     frozenset({"annotated-somatic-vcf-all-index", "snv", "vcf-all", "vardict"}): {
         "is_mandatory": True

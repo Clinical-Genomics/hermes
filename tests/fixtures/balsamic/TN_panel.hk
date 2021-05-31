@@ -8,10 +8,10 @@
             "step": "mergeBam_normal",
             "tag": [
                 "bam",
-                "ACC456_R",
+                "ACC456",
                 "normal-bam"
             ],
-            "id": "ACC456_R",
+            "id": "ACC456",
             "format": "bam"
         },
         {
@@ -20,10 +20,10 @@
             "step": "mergeBam_normal",
             "tag": [
                 "bam",
-                "ACC456_R",
+                "ACC456",
                 "normal-bam-index"
             ],
-            "id": "ACC456_R",
+            "id": "ACC456",
             "format": "bai"
         },
         {
@@ -33,11 +33,11 @@
             ],
             "step": "mergeBam_normal",
             "tag": [
-                "ACC456_R",
+                "ACC456",
                 "cram",
                 "normal-cram"
             ],
-            "id": "ACC456_R",
+            "id": "ACC456",
             "format": "cram"
         },
         {
@@ -45,11 +45,11 @@
             "path_index": "",
             "step": "mergeBam_normal",
             "tag": [
-                "ACC456_R",
+                "ACC456",
                 "cram",
                 "normal-cram-index"
             ],
-            "id": "ACC456_R",
+            "id": "ACC456",
             "format": "crai"
         },
         {
@@ -64,7 +64,7 @@
                 "vcf-all",
                 "SNV"
             ],
-            "id": "ACC456_R",
+            "id": "ACC456",
             "format": "vcf.gz"
         },
         {
@@ -77,7 +77,7 @@
                 "annotated-germline-vcf-all-index",
                 "SNV"
             ],
-            "id": "ACC456_R",
+            "id": "ACC456",
             "format": "vcf.gz.tbi"
         },
         {
@@ -92,7 +92,7 @@
                 "annotated-germline-vcf-all",
                 "vcf-all"
             ],
-            "id": "ACC456_R",
+            "id": "ACC456",
             "format": "vcf.gz"
         },
         {
@@ -105,7 +105,7 @@
                 "annotated-germline-vcf-all-index",
                 "vcf-all"
             ],
-            "id": "ACC456_R",
+            "id": "ACC456",
             "format": "vcf.gz.tbi"
         },
         {
@@ -120,7 +120,7 @@
                 "vcf-all",
                 "SNV"
             ],
-            "id": "ACC123_R",
+            "id": "ACC123",
             "format": "vcf.gz"
         },
         {
@@ -133,7 +133,7 @@
                 "annotated-germline-vcf-all-index",
                 "SNV"
             ],
-            "id": "ACC123_R",
+            "id": "ACC123",
             "format": "vcf.gz.tbi"
         },
         {
@@ -148,7 +148,7 @@
                 "annotated-germline-vcf-all",
                 "vcf-all"
             ],
-            "id": "ACC123_R",
+            "id": "ACC123",
             "format": "vcf.gz"
         },
         {
@@ -161,7 +161,7 @@
                 "annotated-germline-vcf-all-index",
                 "vcf-all"
             ],
-            "id": "ACC123_R",
+            "id": "ACC123",
             "format": "vcf.gz.tbi"
         },
         {
@@ -176,7 +176,7 @@
                 "dnascope",
                 "SNV"
             ],
-            "id": "ACC456_R",
+            "id": "ACC456",
             "format": "vcf.gz"
         },
         {
@@ -189,7 +189,7 @@
                 "dnascope",
                 "SNV"
             ],
-            "id": "ACC456_R",
+            "id": "ACC456",
             "format": "vcf.gz.tbi"
         },
         {
@@ -204,7 +204,7 @@
                 "dnascope",
                 "SNV"
             ],
-            "id": "ACC123_R",
+            "id": "ACC123",
             "format": "vcf.gz"
         },
         {
@@ -217,7 +217,7 @@
                 "dnascope",
                 "SNV"
             ],
-            "id": "ACC123_R",
+            "id": "ACC123",
             "format": "vcf.gz.tbi"
         },
         {
@@ -230,7 +230,7 @@
                 "SNV",
                 "vcf-summary"
             ],
-            "id": "ACC123_R",
+            "id": "ACC123",
             "format": "html"
         },
         {
@@ -243,7 +243,7 @@
                 "SV",
                 "vcf-summary"
             ],
-            "id": "ACC456_R",
+            "id": "ACC456",
             "format": "html"
         },
         {
@@ -256,7 +256,7 @@
                 "SNV",
                 "vcf-summary"
             ],
-            "id": "ACC123_R",
+            "id": "ACC123",
             "format": "html"
         },
         {
@@ -269,7 +269,7 @@
                 "SNV",
                 "vcf-summary"
             ],
-            "id": "ACC456_R",
+            "id": "ACC456",
             "format": "html"
         },
         {
@@ -282,7 +282,7 @@
                 "SV",
                 "vcf-summary"
             ],
-            "id": "ACC123_R",
+            "id": "ACC123",
             "format": "html"
         },
         {
@@ -295,7 +295,7 @@
                 "SNV",
                 "vcf-summary"
             ],
-            "id": "ACC456_R",
+            "id": "ACC456",
             "format": "html"
         },
         {
@@ -423,10 +423,10 @@
             "step": "fastp",
             "tag": [
                 "quality-trimmed-fastq-read1",
-                "ACC123_R",
+                "ACC123",
                 "read1"
             ],
-            "id": "ACC123_R",
+            "id": "ACC123",
             "format": "fastq.gz"
         },
         {
@@ -434,11 +434,11 @@
             "path_index": [],
             "step": "fastp",
             "tag": [
-                "ACC456_R",
+                "ACC456",
                 "quality-trimmed-fastq-read1",
                 "read1"
             ],
-            "id": "ACC456_R",
+            "id": "ACC456",
             "format": "fastq.gz"
         },
         {
@@ -446,11 +446,11 @@
             "path_index": [],
             "step": "fastp",
             "tag": [
-                "ACC456_R",
+                "ACC456",
                 "read2",
                 "quality-trimmed-fastq-read2"
             ],
-            "id": "ACC456_R",
+            "id": "ACC456",
             "format": "fastq.gz"
         },
         {
@@ -459,10 +459,10 @@
             "step": "fastp",
             "tag": [
                 "read2",
-                "ACC123_R",
+                "ACC123",
                 "quality-trimmed-fastq-read2"
             ],
-            "id": "ACC123_R",
+            "id": "ACC123",
             "format": "fastq.gz"
         },
         {
@@ -471,10 +471,10 @@
             "step": "fastp",
             "tag": [
                 "quality-trimmed-fastq-json",
-                "ACC123_R",
+                "ACC123",
                 "json"
             ],
-            "id": "ACC123_R",
+            "id": "ACC123",
             "format": "json"
         },
         {
@@ -482,11 +482,11 @@
             "path_index": [],
             "step": "fastp",
             "tag": [
-                "ACC456_R",
+                "ACC456",
                 "quality-trimmed-fastq-json",
                 "json"
             ],
-            "id": "ACC456_R",
+            "id": "ACC456",
             "format": "json"
         },
         {
@@ -495,10 +495,10 @@
             "step": "fastp",
             "tag": [
                 "html",
-                "ACC123_R",
+                "ACC123",
                 "quality-trimmed-fastq-html"
             ],
-            "id": "ACC123_R",
+            "id": "ACC123",
             "format": "html"
         },
         {
@@ -506,11 +506,11 @@
             "path_index": [],
             "step": "fastp",
             "tag": [
-                "ACC456_R",
+                "ACC456",
                 "html",
                 "quality-trimmed-fastq-html"
             ],
-            "id": "ACC456_R",
+            "id": "ACC456",
             "format": "html"
         },
         {
@@ -741,10 +741,10 @@
             "step": "mergeBam_tumor",
             "tag": [
                 "bam",
-                "ACC123_R",
+                "ACC123",
                 "tumor-bam"
             ],
-            "id": "ACC123_R",
+            "id": "ACC123",
             "format": "bam"
         },
         {
@@ -753,10 +753,10 @@
             "step": "mergeBam_tumor",
             "tag": [
                 "bam",
-                "ACC123_R",
+                "ACC123",
                 "tumor-bam-index"
             ],
-            "id": "ACC123_R",
+            "id": "ACC123",
             "format": "bai"
         },
         {
@@ -767,10 +767,10 @@
             "step": "mergeBam_tumor",
             "tag": [
                 "cram",
-                "ACC123_R",
+                "ACC123",
                 "tumor-cram"
             ],
-            "id": "ACC123_R",
+            "id": "ACC123",
             "format": "cram"
         },
         {
@@ -778,11 +778,11 @@
             "path_index": "",
             "step": "mergeBam_tumor",
             "tag": [
-                "ACC123_R",
+                "ACC123",
                 "cram",
                 "tumor-cram-index"
             ],
-            "id": "ACC123_R",
+            "id": "ACC123",
             "format": "crai"
         },
         {
