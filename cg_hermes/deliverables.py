@@ -12,7 +12,8 @@ from cg_hermes.config.balsamic import (
 )
 from cg_hermes.config.fluffy import FLUFFY_COMMON_TAGS
 from cg_hermes.config.microsalt import MICROSALT_COMMON_TAGS
-from cg_hermes.config.mip import MIP_DNA_TAGS
+from cg_hermes.config.mip_dna import MIP_DNA_TAGS
+from cg_hermes.config.mip_rna import MIP_RNA_TAGS
 from cg_hermes.config.mutant import MUTANT_COMMON_TAGS
 from cg_hermes.config.pipelines import AnalysisType, Pipeline
 from cg_hermes.exceptions import MissingFileError
@@ -53,33 +54,33 @@ class Deliverables:
         self.file_identifiers = {file_obj.tags for file_obj in self.files}
 
     def set_pipeline_specific_variables(self):
+        LOG.info("Parsing deliverables for %s", self.pipeline)
         if self.pipeline == Pipeline.FLUFFY:
-            LOG.info("Parsing deliverables for fluffy")
             self.model: FluffyDeliverables = FluffyDeliverables.parse_obj(self.raw_deliverables)
             self.files = self.get_fluffy_files()
             self.configs = Deliverables.build_internal_tag_map(FLUFFY_COMMON_TAGS)
         elif self.pipeline == Pipeline.BALSAMIC:
-            LOG.info("Parsing deliverables for balsamic")
             self.model: BalsamicDeliverables = BalsamicDeliverables.parse_obj(self.raw_deliverables)
             self.files = self.get_balsamic_files()
             self.configs = Deliverables.build_internal_tag_map(self.get_balsamic_analysis_configs())
         elif self.pipeline == Pipeline.MICROSALT:
-            LOG.info("Parsing deliverables for microsalt")
             self.model: MicrosaltDeliverables = MicrosaltDeliverables.parse_obj(
                 self.raw_deliverables
             )
             self.files = self.get_microsalt_files()
             self.configs = Deliverables.build_internal_tag_map(MICROSALT_COMMON_TAGS)
         elif self.pipeline == Pipeline.SARS_COV_2:
-            LOG.info("Parsing deliverables for mutant")
             self.model: MutantDeliverables = MutantDeliverables.parse_obj(self.raw_deliverables)
             self.files = self.get_mutant_files()
             self.configs = Deliverables.build_internal_tag_map(MUTANT_COMMON_TAGS)
         elif self.pipeline == Pipeline.MIP_DNA:
-            LOG.info("Parsing deliverables for mip")
             self.model: MipDeliverables = MipDeliverables.parse_obj(self.raw_deliverables)
             self.files = self.get_mip_files()
             self.configs = Deliverables.build_internal_tag_map(MIP_DNA_TAGS)
+        elif self.pipeline == Pipeline.MIP_RNA:
+            self.model: MipDeliverables = MipDeliverables.parse_obj(self.raw_deliverables)
+            self.files = self.get_mip_files()
+            self.configs = Deliverables.build_internal_tag_map(MIP_RNA_TAGS)
         else:
             raise Exception(
                 "Invalid pipeline ({}) set for Deliverables object".format(self.pipeline)

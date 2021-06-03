@@ -12,9 +12,14 @@ def fixture_fixtures_dir() -> Path:
     return Path("tests/fixtures")
 
 
-@pytest.fixture(name="mip_files")
-def fixture_mip_files(fixtures_dir: Path) -> Path:
-    return fixtures_dir / "mip"
+@pytest.fixture(name="mip_dna_files")
+def fixture_mip_dna_files(fixtures_dir: Path) -> Path:
+    return fixtures_dir / "mip_dna"
+
+
+@pytest.fixture(name="mip_rna_files")
+def fixture_mip_rna_files(fixtures_dir: Path) -> Path:
+    return fixtures_dir / "mip_rna"
 
 
 @pytest.fixture(name="balsamic_files")
@@ -41,8 +46,13 @@ def fixture_mutant_files(fixtures_dir: Path) -> Path:
 
 
 @pytest.fixture(name="mip_dna_deliverables")
-def fixture_mip_dna_deliverables(mip_files: Path) -> Path:
-    return mip_files / "case_id_deliverables.yaml"
+def fixture_mip_dna_deliverables(mip_dna_files: Path) -> Path:
+    return mip_dna_files / "case_id_deliverables.yaml"
+
+
+@pytest.fixture(name="mip_rna_deliverables")
+def fixture_mip_rna_deliverables(mip_rna_files: Path) -> Path:
+    return mip_rna_files / "case_id_deliverables.yaml"
 
 
 @pytest.fixture(name="fluffy_deliverables")

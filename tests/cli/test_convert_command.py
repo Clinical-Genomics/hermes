@@ -8,11 +8,22 @@ from cg_hermes.cli.convert import app
 
 
 def test_convert_mip_dna_deliverables(cli_runner: CliRunner, mip_dna_deliverables: Path):
-    # GIVEN the path to a mip dna deliverables file
+    # GIVEN the path to a mip_dna dna deliverables file
     assert mip_dna_deliverables.exists()
 
     # WHEN converting the deliverables to CG format
     result = cli_runner.invoke(app, [str(mip_dna_deliverables), "--pipeline", "mip-dna"])
+
+    # THEN assert that the program exits with success
+    assert result.exit_code == 0
+
+
+def test_convert_mip_rna_deliverables(cli_runner: CliRunner, mip_rna_deliverables: Path):
+    # GIVEN the path to a mip_dna dna deliverables file
+    assert mip_rna_deliverables.exists()
+
+    # WHEN converting the deliverables to CG format
+    result = cli_runner.invoke(app, [str(mip_rna_deliverables), "--pipeline", "mip-rna"])
 
     # THEN assert that the program exits with success
     assert result.exit_code == 0

@@ -1,4 +1,4 @@
-| Mip tags                            | Mandatory   | HK tags                     | Used by      |
+| Mip-dna tags                            | Mandatory   | HK tags                     | Used by      |
 |-------------------------------------|-------------|-----------------------------|--------------|
 | chanjo_sexcheck                     | False       | chanjo, sex-check           | scout        |
 | sites, chromograph_upd              | False       | chromograph, upd, sites     | scout        |
@@ -36,3 +36,4 @@
 | sites, upd_ar                       | False       | upd, sites                  | scout        |
 | version_collect_ar                  | True        | exe-ver                     | audit        |
 | vcf2cytosure_ar                     | False       | vcf2cytosure                | scout        |
+| glnexus_merge                       | False       | deepvariant, snv, vcf       | storage      |

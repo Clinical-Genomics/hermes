@@ -584,7 +584,7 @@ files:
     tag: pedigree
   - format: meta
     id: case_id
-    path: /path/to/mip/config/mip_version-dna.yaml
+    path: /path/to/mip_dna/config/mip_version-dna.yaml
     path_index: ~
     step: mip_analyse
     tag: config
