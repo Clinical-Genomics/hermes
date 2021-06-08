@@ -1,668 +1,687 @@
 {
     "files": [
         {
-            "path": "/home/proj/stage/cancer/cases/bosssponge/analysis/qc/multiqc_report.html",
-            "path_index": [],
-            "step": "multiqc",
-            "tag": [
-                "multiqc-html",
-                "html"
-            ],
-            "id": "bosssponge",
-            "format": "html"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/bosssponge/analysis/qc/multiqc_data/multiqc_data.json",
-            "path_index": [],
-            "step": "multiqc",
-            "tag": [
-                "json",
-                "multiqc-json"
-            ],
-            "id": "bosssponge",
-            "format": "json"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/bosssponge/analysis/fastq/concatenated_ACC5962A16_XXXXXX_R_1.fp.fastq.gz",
-            "path_index": [],
-            "step": "fastp",
-            "tag": [
-                "quality-trimmed-fastq-read1",
-                "read1",
-                "ACC5962A16"
-            ],
-            "id": "ACC5962A16",
-            "format": "fastq.gz"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/bosssponge/analysis/fastq/concatenated_ACC5962A16_XXXXXX_R_2.fp.fastq.gz",
-            "path_index": [],
-            "step": "fastp",
-            "tag": [
-                "read2",
-                "ACC5962A16",
-                "quality-trimmed-fastq-read2"
-            ],
-            "id": "ACC5962A16",
-            "format": "fastq.gz"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/bosssponge/analysis/qc/fastp/concatenated_ACC5962A16_XXXXXX_R_fastp.json",
-            "path_index": [],
-            "step": "fastp",
-            "tag": [
-                "quality-trimmed-fastq-json",
-                "json",
-                "ACC5962A16"
-            ],
-            "id": "ACC5962A16",
-            "format": "json"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/bosssponge/analysis/qc/fastp/concatenated_ACC5962A16_XXXXXX_R_fastp.html",
-            "path_index": [],
-            "step": "fastp",
-            "tag": [
-                "html",
-                "quality-trimmed-fastq-html",
-                "ACC5962A16"
-            ],
-            "id": "ACC5962A16",
-            "format": "html"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/bosssponge/analysis/vep/SNV.somatic.bosssponge.vardict.balsamic_stat",
+            "path": "T_panel/analysis/vep/SNV.somatic.T_panel.vardict.balsamic_stat",
             "path_index": [],
             "step": "vep_stat",
             "tag": [
+                "T-panel",
                 "tmb",
-                "vardict",
                 "stat-somatic-tmb",
-                "bosssponge"
+                "vardict"
             ],
-            "id": "bosssponge",
+            "id": "T_panel",
             "format": "balsamic_stat"
         },
         {
-            "path": "/home/proj/stage/cancer/cases/bosssponge/analysis/bam/tumor.merged.bam",
+            "path": "T_panel/analysis/vep/SNV.germline.tumor.haplotypecaller.vcf.gz",
             "path_index": [
-                "/home/proj/stage/cancer/cases/bosssponge/analysis/bam/tumor.merged.bam.bai"
+                "T_panel/analysis/vep/SNV.germline.tumor.haplotypecaller.vcf.gz.tbi"
+            ],
+            "step": "vep_germline",
+            "tag": [
+                "SNV",
+                "haplotypecaller",
+                "annotated-germline-vcf-all",
+                "vcf-all"
+            ],
+            "id": "ACC123",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "T_panel/analysis/vep/SNV.germline.tumor.haplotypecaller.vcf.gz.tbi",
+            "path_index": "",
+            "step": "vep_germline",
+            "tag": [
+                "SNV",
+                "annotated-germline-vcf-all-index",
+                "haplotypecaller",
+                "vcf-all"
+            ],
+            "id": "ACC123",
+            "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "T_panel/analysis/vep/SV.germline.tumor.manta_germline.vcf.gz",
+            "path_index": [
+                "T_panel/analysis/vep/SV.germline.tumor.manta_germline.vcf.gz.tbi"
+            ],
+            "step": "vep_germline",
+            "tag": [
+                "manta-germline",
+                "SV",
+                "annotated-germline-vcf-all",
+                "vcf-all"
+            ],
+            "id": "ACC123",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "T_panel/analysis/vep/SV.germline.tumor.manta_germline.vcf.gz.tbi",
+            "path_index": "",
+            "step": "vep_germline",
+            "tag": [
+                "manta-germline",
+                "SV",
+                "annotated-germline-vcf-all-index",
+                "vcf-all"
+            ],
+            "id": "ACC123",
+            "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "T_panel/analysis/vep/SNV.germline.tumor.dnascope.vcf.gz",
+            "path_index": [
+                "T_panel/analysis/vep/SNV.germline.tumor.dnascope.vcf.gz.tbi"
+            ],
+            "step": "vep_germline",
+            "tag": [
+                "SNV",
+                "dnascope",
+                "annotated-germline-vcf-all",
+                "vcf-all"
+            ],
+            "id": "ACC123",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "T_panel/analysis/vep/SNV.germline.tumor.dnascope.vcf.gz.tbi",
+            "path_index": "",
+            "step": "vep_germline",
+            "tag": [
+                "SNV",
+                "dnascope",
+                "annotated-germline-vcf-all-index",
+                "vcf-all"
+            ],
+            "id": "ACC123",
+            "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "T_panel/analysis/vep/SNV.germline.tumor.haplotypecaller.vcf.gz_summary.html",
+            "path_index": [],
+            "step": "vep_germline",
+            "tag": [
+                "SNV",
+                "haplotypecaller",
+                "vcf-summary",
+                "annotated-germline-vcf-summary"
+            ],
+            "id": "ACC123",
+            "format": "html"
+        },
+        {
+            "path": "T_panel/analysis/vep/SNV.germline.tumor.dnascope.vcf.gz_summary.html",
+            "path_index": [],
+            "step": "vep_germline",
+            "tag": [
+                "SNV",
+                "dnascope",
+                "annotated-germline-vcf-summary",
+                "vcf-summary"
+            ],
+            "id": "ACC123",
+            "format": "html"
+        },
+        {
+            "path": "T_panel/analysis/vep/SV.germline.tumor.manta_germline.vcf.gz_summary.html",
+            "path_index": [],
+            "step": "vep_germline",
+            "tag": [
+                "annotated-germline-vcf-summary",
+                "manta-germline",
+                "SV",
+                "vcf-summary"
+            ],
+            "id": "ACC123",
+            "format": "html"
+        },
+        {
+            "path": "T_panel/analysis/vep/SV.somatic.T_panel.manta.all.filtered.pass.vcf.gz",
+            "path_index": [
+                "T_panel/analysis/vep/SV.somatic.T_panel.manta.all.filtered.pass.vcf.gz.tbi"
+            ],
+            "step": "ngs_filter_manta",
+            "tag": [
+                "T-panel",
+                "clinical-vcf-sv-pass",
+                "vcf-sv-pass",
+                "SV"
+            ],
+            "id": "T_panel",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "T_panel/analysis/vep/SV.somatic.T_panel.manta.all.filtered.pass.vcf.gz.tbi",
+            "path_index": "",
+            "step": "ngs_filter_manta",
+            "tag": [
+                "T-panel",
+                "vcf-sv-pass",
+                "SV",
+                "clinical-vcf-sv-pass-index"
+            ],
+            "id": "T_panel",
+            "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "T_panel/analysis/vep/SV.somatic.T_panel.manta.all.vcf.gz",
+            "path_index": [
+                "T_panel/analysis/vep/SV.somatic.T_panel.manta.all.vcf.gz.tbi"
+            ],
+            "step": "vep_somatic",
+            "tag": [
+                "T-panel",
+                "manta",
+                "vcf-all",
+                "SV",
+                "annotated-somatic-vcf-all"
+            ],
+            "id": "T_panel",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "T_panel/analysis/vep/SV.somatic.T_panel.manta.all.vcf.gz.tbi",
+            "path_index": "",
+            "step": "vep_somatic",
+            "tag": [
+                "T-panel",
+                "manta",
+                "vcf-all",
+                "SV",
+                "annotated-somatic-vcf-all-index"
+            ],
+            "id": "T_panel",
+            "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "T_panel/analysis/vep/SNV.somatic.T_panel.tnhaplotyper.all.vcf.gz",
+            "path_index": [
+                "T_panel/analysis/vep/SNV.somatic.T_panel.tnhaplotyper.all.vcf.gz.tbi"
+            ],
+            "step": "vep_somatic",
+            "tag": [
+                "T-panel",
+                "SNV",
+                "vcf-all",
+                "tnhaplotyper",
+                "annotated-somatic-vcf-all"
+            ],
+            "id": "T_panel",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "T_panel/analysis/vep/SNV.somatic.T_panel.tnhaplotyper.all.vcf.gz.tbi",
+            "path_index": "",
+            "step": "vep_somatic",
+            "tag": [
+                "T-panel",
+                "SNV",
+                "vcf-all",
+                "tnhaplotyper",
+                "annotated-somatic-vcf-all-index"
+            ],
+            "id": "T_panel",
+            "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "T_panel/analysis/vep/SNV.somatic.T_panel.vardict.all.vcf.gz",
+            "path_index": [
+                "T_panel/analysis/vep/SNV.somatic.T_panel.vardict.all.vcf.gz.tbi"
+            ],
+            "step": "vep_somatic",
+            "tag": [
+                "T-panel",
+                "vardict",
+                "SNV",
+                "vcf-all",
+                "annotated-somatic-vcf-all"
+            ],
+            "id": "T_panel",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "T_panel/analysis/vep/SNV.somatic.T_panel.vardict.all.vcf.gz.tbi",
+            "path_index": "",
+            "step": "vep_somatic",
+            "tag": [
+                "T-panel",
+                "vardict",
+                "SNV",
+                "vcf-all",
+                "annotated-somatic-vcf-all-index"
+            ],
+            "id": "T_panel",
+            "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "T_panel/analysis/vep/CNV.somatic.T_panel.cnvkit.all.vcf.gz",
+            "path_index": [
+                "T_panel/analysis/vep/CNV.somatic.T_panel.cnvkit.all.vcf.gz.tbi"
+            ],
+            "step": "vep_somatic",
+            "tag": [
+                "T-panel",
+                "vcf-all",
+                "CNV",
+                "cnvkit",
+                "annotated-somatic-vcf-all"
+            ],
+            "id": "T_panel",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "T_panel/analysis/vep/CNV.somatic.T_panel.cnvkit.all.vcf.gz.tbi",
+            "path_index": "",
+            "step": "vep_somatic",
+            "tag": [
+                "T-panel",
+                "vcf-all",
+                "CNV",
+                "cnvkit",
+                "annotated-somatic-vcf-all-index"
+            ],
+            "id": "T_panel",
+            "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "T_panel/analysis/vep/SNV.somatic.T_panel.TNscope_umi.all.vcf.gz",
+            "path_index": [
+                "T_panel/analysis/vep/SNV.somatic.T_panel.TNscope_umi.all.vcf.gz.tbi"
+            ],
+            "step": "vep_somatic",
+            "tag": [
+                "T-panel",
+                "SNV",
+                "vcf-all",
+                "TNscope-umi",
+                "annotated-somatic-vcf-all"
+            ],
+            "id": "T_panel",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "T_panel/analysis/vep/SNV.somatic.T_panel.TNscope_umi.all.vcf.gz.tbi",
+            "path_index": "",
+            "step": "vep_somatic",
+            "tag": [
+                "T-panel",
+                "SNV",
+                "vcf-all",
+                "TNscope-umi",
+                "annotated-somatic-vcf-all-index"
+            ],
+            "id": "T_panel",
+            "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "T_panel/analysis/vep/SNV.somatic.T_panel.vardict.all.vcf.gz_summary.html",
+            "path_index": [],
+            "step": "vep_somatic",
+            "tag": [
+                "T-panel",
+                "vardict",
+                "SNV",
+                "vcf-summary",
+                "annotated-somatic-vcf-summary"
+            ],
+            "id": "T_panel",
+            "format": "html"
+        },
+        {
+            "path": "T_panel/analysis/vep/CNV.somatic.T_panel.cnvkit.all.vcf.gz_summary.html",
+            "path_index": [],
+            "step": "vep_somatic",
+            "tag": [
+                "T-panel",
+                "vcf-summary",
+                "CNV",
+                "annotated-somatic-vcf-summary",
+                "cnvkit"
+            ],
+            "id": "T_panel",
+            "format": "html"
+        },
+        {
+            "path": "T_panel/analysis/vep/SV.somatic.T_panel.manta.all.vcf.gz_summary.html",
+            "path_index": [],
+            "step": "vep_somatic",
+            "tag": [
+                "T-panel",
+                "manta",
+                "vcf-summary",
+                "SV",
+                "annotated-somatic-vcf-summary"
+            ],
+            "id": "T_panel",
+            "format": "html"
+        },
+        {
+            "path": "T_panel/analysis/vep/SNV.somatic.T_panel.TNscope_umi.all.vcf.gz_summary.html",
+            "path_index": [],
+            "step": "vep_somatic",
+            "tag": [
+                "T-panel",
+                "TNscope-umi",
+                "SNV",
+                "vcf-summary",
+                "annotated-somatic-vcf-summary"
+            ],
+            "id": "T_panel",
+            "format": "html"
+        },
+        {
+            "path": "T_panel/analysis/vep/SNV.somatic.T_panel.tnhaplotyper.all.vcf.gz_summary.html",
+            "path_index": [],
+            "step": "vep_somatic",
+            "tag": [
+                "T-panel",
+                "SNV",
+                "vcf-summary",
+                "annotated-somatic-vcf-summary",
+                "tnhaplotyper"
+            ],
+            "id": "T_panel",
+            "format": "html"
+        },
+        {
+            "path": "T_panel/analysis/bam/tumor.merged.bam",
+            "path_index": [
+                "T_panel/analysis/bam/tumor.merged.bam.bai"
             ],
             "step": "mergeBam_tumor",
             "tag": [
-                "ACC5962A16",
+                "tumor-bam",
                 "bam",
-                "tumor-bam"
+                "ACC123"
             ],
-            "id": "ACC5962A16",
+            "id": "ACC123",
             "format": "bam"
         },
         {
-            "path": "/home/proj/stage/cancer/cases/bosssponge/analysis/bam/tumor.merged.bam.bai",
+            "path": "T_panel/analysis/bam/tumor.merged.bam.bai",
             "path_index": "",
             "step": "mergeBam_tumor",
             "tag": [
-                "ACC5962A16",
-                "tumor-bam-index",
-                "bam"
+                "ACC123",
+                "bam",
+                "tumor-bam-index"
             ],
-            "id": "ACC5962A16",
+            "id": "ACC123",
             "format": "bai"
         },
         {
-            "path": "/home/proj/stage/cancer/cases/bosssponge/analysis/bam/tumor.merged.cram",
+            "path": "T_panel/analysis/bam/tumor.merged.cram",
             "path_index": [
-                "/home/proj/stage/cancer/cases/bosssponge/analysis/bam/tumor.merged.cram.crai"
+                "T_panel/analysis/bam/tumor.merged.cram.crai"
             ],
             "step": "mergeBam_tumor",
             "tag": [
-                "tumor-cram",
-                "ACC5962A16",
-                "cram"
+                "ACC123",
+                "cram",
+                "tumor-cram"
             ],
-            "id": "ACC5962A16",
+            "id": "ACC123",
             "format": "cram"
         },
         {
-            "path": "/home/proj/stage/cancer/cases/bosssponge/analysis/bam/tumor.merged.cram.crai",
+            "path": "T_panel/analysis/bam/tumor.merged.cram.crai",
             "path_index": "",
             "step": "mergeBam_tumor",
             "tag": [
-                "tumor-cram-index",
-                "ACC5962A16",
-                "cram"
+                "ACC123",
+                "cram",
+                "tumor-cram-index"
             ],
-            "id": "ACC5962A16",
+            "id": "ACC123",
             "format": "crai"
         },
         {
-            "path": "/home/proj/stage/cancer/cases/bosssponge/analysis/vep/SNV.somatic.bosssponge.vardict.all.filtered.vcf.gz",
-            "path_index": [
-                "/home/proj/stage/cancer/cases/bosssponge/analysis/vep/SNV.somatic.bosssponge.vardict.all.filtered.vcf.gz.tbi"
-            ],
-            "step": "ngs_filter_vardict",
-            "tag": [
-                "SNV",
-                "clinical-vcf-filtered",
-                "bosssponge",
-                "vcf-filtered"
-            ],
-            "id": "bosssponge",
-            "format": "vcf.gz"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/bosssponge/analysis/vep/SNV.somatic.bosssponge.vardict.all.filtered.vcf.gz.tbi",
-            "path_index": "",
-            "step": "ngs_filter_vardict",
-            "tag": [
-                "SNV",
-                "clinical-vcf-filtered-index",
-                "bosssponge",
-                "vcf-filtered"
-            ],
-            "id": "bosssponge",
-            "format": "vcf.gz.tbi"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/bosssponge/analysis/vep/SNV.somatic.bosssponge.vardict.all.filtered.pass.vcf.gz",
-            "path_index": [
-                "/home/proj/stage/cancer/cases/bosssponge/analysis/vep/SNV.somatic.bosssponge.vardict.all.filtered.pass.vcf.gz.tbi"
-            ],
-            "step": "ngs_filter_vardict",
-            "tag": [
-                "vcf-pass",
-                "SNV",
-                "bosssponge",
-                "clinical-vcf-pass"
-            ],
-            "id": "bosssponge",
-            "format": "vcf.gz"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/bosssponge/analysis/vep/SNV.somatic.bosssponge.vardict.all.filtered.pass.vcf.gz.tbi",
-            "path_index": "",
-            "step": "ngs_filter_vardict",
-            "tag": [
-                "vcf-pass",
-                "SNV",
-                "clinical-vcf-pass-index",
-                "bosssponge"
-            ],
-            "id": "bosssponge",
-            "format": "vcf.gz.tbi"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/bosssponge/analysis/vep/SNV.somatic.bosssponge.vardict.all.vcf.gz",
-            "path_index": [
-                "/home/proj/stage/cancer/cases/bosssponge/analysis/vep/SNV.somatic.bosssponge.vardict.all.vcf.gz.tbi"
-            ],
-            "step": "vep_somatic",
-            "tag": [
-                "vardict",
-                "annotated-somatic-vcf-all",
-                "bosssponge",
-                "SNV",
-                "vcf-all"
-            ],
-            "id": "bosssponge",
-            "format": "vcf.gz"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/bosssponge/analysis/vep/SNV.somatic.bosssponge.vardict.all.vcf.gz.tbi",
-            "path_index": "",
-            "step": "vep_somatic",
-            "tag": [
-                "annotated-somatic-vcf-all-index",
-                "vardict",
-                "bosssponge",
-                "SNV",
-                "vcf-all"
-            ],
-            "id": "bosssponge",
-            "format": "vcf.gz.tbi"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/bosssponge/analysis/vep/SNV.somatic.bosssponge.TNscope_umi.all.vcf.gz",
-            "path_index": [
-                "/home/proj/stage/cancer/cases/bosssponge/analysis/vep/SNV.somatic.bosssponge.TNscope_umi.all.vcf.gz.tbi"
-            ],
-            "step": "vep_somatic",
-            "tag": [
-                "annotated-somatic-vcf-all",
-                "bosssponge",
-                "SNV",
-                "TNscope-umi",
-                "vcf-all"
-            ],
-            "id": "bosssponge",
-            "format": "vcf.gz"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/bosssponge/analysis/vep/SNV.somatic.bosssponge.TNscope_umi.all.vcf.gz.tbi",
-            "path_index": "",
-            "step": "vep_somatic",
-            "tag": [
-                "annotated-somatic-vcf-all-index",
-                "bosssponge",
-                "SNV",
-                "TNscope-umi",
-                "vcf-all"
-            ],
-            "id": "bosssponge",
-            "format": "vcf.gz.tbi"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/bosssponge/analysis/vep/SV.somatic.bosssponge.manta.all.vcf.gz",
-            "path_index": [
-                "/home/proj/stage/cancer/cases/bosssponge/analysis/vep/SV.somatic.bosssponge.manta.all.vcf.gz.tbi"
-            ],
-            "step": "vep_somatic",
-            "tag": [
-                "annotated-somatic-vcf-all",
-                "SV",
-                "manta",
-                "bosssponge",
-                "vcf-all"
-            ],
-            "id": "bosssponge",
-            "format": "vcf.gz"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/bosssponge/analysis/vep/SV.somatic.bosssponge.manta.all.vcf.gz.tbi",
-            "path_index": "",
-            "step": "vep_somatic",
-            "tag": [
-                "annotated-somatic-vcf-all-index",
-                "SV",
-                "manta",
-                "bosssponge",
-                "vcf-all"
-            ],
-            "id": "bosssponge",
-            "format": "vcf.gz.tbi"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/bosssponge/analysis/vep/SNV.somatic.bosssponge.tnhaplotyper.all.vcf.gz",
-            "path_index": [
-                "/home/proj/stage/cancer/cases/bosssponge/analysis/vep/SNV.somatic.bosssponge.tnhaplotyper.all.vcf.gz.tbi"
-            ],
-            "step": "vep_somatic",
-            "tag": [
-                "annotated-somatic-vcf-all",
-                "bosssponge",
-                "tnhaplotyper",
-                "SNV",
-                "vcf-all"
-            ],
-            "id": "bosssponge",
-            "format": "vcf.gz"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/bosssponge/analysis/vep/SNV.somatic.bosssponge.tnhaplotyper.all.vcf.gz.tbi",
-            "path_index": "",
-            "step": "vep_somatic",
-            "tag": [
-                "annotated-somatic-vcf-all-index",
-                "bosssponge",
-                "tnhaplotyper",
-                "SNV",
-                "vcf-all"
-            ],
-            "id": "bosssponge",
-            "format": "vcf.gz.tbi"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/bosssponge/analysis/vep/CNV.somatic.bosssponge.cnvkit.all.vcf.gz",
-            "path_index": [
-                "/home/proj/stage/cancer/cases/bosssponge/analysis/vep/CNV.somatic.bosssponge.cnvkit.all.vcf.gz.tbi"
-            ],
-            "step": "vep_somatic",
-            "tag": [
-                "CNV",
-                "annotated-somatic-vcf-all",
-                "bosssponge",
-                "cnvkit",
-                "vcf-all"
-            ],
-            "id": "bosssponge",
-            "format": "vcf.gz"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/bosssponge/analysis/vep/CNV.somatic.bosssponge.cnvkit.all.vcf.gz.tbi",
-            "path_index": "",
-            "step": "vep_somatic",
-            "tag": [
-                "CNV",
-                "annotated-somatic-vcf-all-index",
-                "bosssponge",
-                "cnvkit",
-                "vcf-all"
-            ],
-            "id": "bosssponge",
-            "format": "vcf.gz.tbi"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/bosssponge/analysis/vep/SNV.somatic.bosssponge.TNscope_umi.all.vcf.gz_summary.html",
-            "path_index": [],
-            "step": "vep_somatic",
-            "tag": [
-                "bosssponge",
-                "SNV",
-                "vcf-summary",
-                "TNscope-umi",
-                "annotated-somatic-vcf-summary"
-            ],
-            "id": "bosssponge",
-            "format": "html"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/bosssponge/analysis/vep/SNV.somatic.bosssponge.vardict.all.vcf.gz_summary.html",
-            "path_index": [],
-            "step": "vep_somatic",
-            "tag": [
-                "vardict",
-                "bosssponge",
-                "SNV",
-                "vcf-summary",
-                "annotated-somatic-vcf-summary"
-            ],
-            "id": "bosssponge",
-            "format": "html"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/bosssponge/analysis/vep/SV.somatic.bosssponge.manta.all.vcf.gz_summary.html",
-            "path_index": [],
-            "step": "vep_somatic",
-            "tag": [
-                "SV",
-                "manta",
-                "bosssponge",
-                "vcf-summary",
-                "annotated-somatic-vcf-summary"
-            ],
-            "id": "bosssponge",
-            "format": "html"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/bosssponge/analysis/vep/CNV.somatic.bosssponge.cnvkit.all.vcf.gz_summary.html",
-            "path_index": [],
-            "step": "vep_somatic",
-            "tag": [
-                "CNV",
-                "bosssponge",
-                "cnvkit",
-                "vcf-summary",
-                "annotated-somatic-vcf-summary"
-            ],
-            "id": "bosssponge",
-            "format": "html"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/bosssponge/analysis/vep/SNV.somatic.bosssponge.tnhaplotyper.all.vcf.gz_summary.html",
-            "path_index": [],
-            "step": "vep_somatic",
-            "tag": [
-                "bosssponge",
-                "tnhaplotyper",
-                "SNV",
-                "vcf-summary",
-                "annotated-somatic-vcf-summary"
-            ],
-            "id": "bosssponge",
-            "format": "html"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/bosssponge/analysis/vep/SNV.germline.tumor.haplotypecaller.vcf.gz",
-            "path_index": [
-                "/home/proj/stage/cancer/cases/bosssponge/analysis/vep/SNV.germline.tumor.haplotypecaller.vcf.gz.tbi"
-            ],
-            "step": "vep_germline",
-            "tag": [
-                "SNV",
-                "annotated-germline-vcf-all",
-                "vcf-all",
-                "haplotypecaller"
-            ],
-            "id": "ACC5962A16",
-            "format": "vcf.gz"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/bosssponge/analysis/vep/SNV.germline.tumor.haplotypecaller.vcf.gz.tbi",
-            "path_index": "",
-            "step": "vep_germline",
-            "tag": [
-                "SNV",
-                "annotated-germline-vcf-all-index",
-                "vcf-all",
-                "haplotypecaller"
-            ],
-            "id": "ACC5962A16",
-            "format": "vcf.gz.tbi"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/bosssponge/analysis/vep/SV.germline.tumor.manta_germline.vcf.gz",
-            "path_index": [
-                "/home/proj/stage/cancer/cases/bosssponge/analysis/vep/SV.germline.tumor.manta_germline.vcf.gz.tbi"
-            ],
-            "step": "vep_germline",
-            "tag": [
-                "SV",
-                "annotated-germline-vcf-all",
-                "vcf-all",
-                "manta-germline"
-            ],
-            "id": "ACC5962A16",
-            "format": "vcf.gz"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/bosssponge/analysis/vep/SV.germline.tumor.manta_germline.vcf.gz.tbi",
-            "path_index": "",
-            "step": "vep_germline",
-            "tag": [
-                "SV",
-                "annotated-germline-vcf-all-index",
-                "vcf-all",
-                "manta-germline"
-            ],
-            "id": "ACC5962A16",
-            "format": "vcf.gz.tbi"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/bosssponge/analysis/vep/SNV.germline.tumor.dnascope.vcf.gz",
-            "path_index": [
-                "/home/proj/stage/cancer/cases/bosssponge/analysis/vep/SNV.germline.tumor.dnascope.vcf.gz.tbi"
-            ],
-            "step": "vep_germline",
-            "tag": [
-                "SNV",
-                "annotated-germline-vcf-all",
-                "dnascope",
-                "vcf-all"
-            ],
-            "id": "ACC5962A16",
-            "format": "vcf.gz"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/bosssponge/analysis/vep/SNV.germline.tumor.dnascope.vcf.gz.tbi",
-            "path_index": "",
-            "step": "vep_germline",
-            "tag": [
-                "SNV",
-                "annotated-germline-vcf-all-index",
-                "dnascope",
-                "vcf-all"
-            ],
-            "id": "ACC5962A16",
-            "format": "vcf.gz.tbi"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/bosssponge/analysis/vep/SNV.germline.tumor.haplotypecaller.vcf.gz_summary.html",
-            "path_index": [],
-            "step": "vep_germline",
-            "tag": [
-                "SNV",
-                "annotated-germline-vcf-summary",
-                "haplotypecaller",
-                "vcf-summary"
-            ],
-            "id": "ACC5962A16",
-            "format": "html"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/bosssponge/analysis/vep/SNV.germline.tumor.dnascope.vcf.gz_summary.html",
-            "path_index": [],
-            "step": "vep_germline",
-            "tag": [
-                "SNV",
-                "annotated-germline-vcf-summary",
-                "dnascope",
-                "vcf-summary"
-            ],
-            "id": "ACC5962A16",
-            "format": "html"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/bosssponge/analysis/vep/SV.germline.tumor.manta_germline.vcf.gz_summary.html",
-            "path_index": [],
-            "step": "vep_germline",
-            "tag": [
-                "SV",
-                "annotated-germline-vcf-summary",
-                "manta-germline",
-                "vcf-summary"
-            ],
-            "id": "ACC5962A16",
-            "format": "html"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/bosssponge/analysis/cnv/tumor.merged.cns",
+            "path": "T_panel/analysis/cnv/tumor.merged.cns",
             "path_index": [],
             "step": "cnvkit_single",
             "tag": [
-                "cnv-cns",
-                "cns"
+                "cns",
+                "cnv-cns"
             ],
-            "id": "bosssponge",
+            "id": "T_panel",
             "format": "cns"
         },
         {
-            "path": "/home/proj/stage/cancer/cases/bosssponge/analysis/cnv/tumor.merged.cnr",
+            "path": "T_panel/analysis/cnv/tumor.merged.cnr",
             "path_index": [],
             "step": "cnvkit_single",
             "tag": [
-                "cnr",
-                "cnv-cnr"
+                "cnv-cnr",
+                "cnr"
             ],
-            "id": "bosssponge",
+            "id": "T_panel",
             "format": "cnr"
         },
         {
-            "path": "/home/proj/stage/cancer/cases/bosssponge/analysis/cnv/tumor.merged-scatter.pdf",
+            "path": "T_panel/analysis/cnv/tumor.merged-scatter.pdf",
             "path_index": [],
             "step": "cnvkit_single",
             "tag": [
-                "cnv-scatter",
-                "scatter"
+                "scatter",
+                "cnv-scatter"
             ],
-            "id": "bosssponge",
+            "id": "T_panel",
             "format": "pdf"
         },
         {
-            "path": "/home/proj/stage/cancer/cases/bosssponge/analysis/cnv/tumor.merged-diagram.pdf",
+            "path": "T_panel/analysis/cnv/tumor.merged-diagram.pdf",
             "path_index": [],
             "step": "cnvkit_single",
             "tag": [
                 "cnv-diagram",
                 "diagram"
             ],
-            "id": "bosssponge",
+            "id": "T_panel",
             "format": "pdf"
         },
         {
-            "path": "/home/proj/stage/cancer/cases/bosssponge/analysis/cnv/bosssponge.gene_breaks",
+            "path": "T_panel/analysis/cnv/T_panel.gene_breaks",
             "path_index": [],
             "step": "cnvkit_single",
             "tag": [
-                "gene-breaks",
-                "cnv-gene-breaks"
+                "cnv-gene-breaks",
+                "gene-breaks"
             ],
-            "id": "bosssponge",
+            "id": "T_panel",
             "format": "gene_breaks"
         },
         {
-            "path": "/home/proj/stage/cancer/cases/bosssponge/analysis/cnv/bosssponge.gene_metrics",
+            "path": "T_panel/analysis/cnv/T_panel.gene_metrics",
             "path_index": [],
             "step": "cnvkit_single",
             "tag": [
                 "gene-metrics",
                 "cnv-gene-metrics"
             ],
-            "id": "bosssponge",
+            "id": "T_panel",
             "format": "gene_metrics"
         },
         {
-            "path": "/home/proj/stage/cancer/cases/bosssponge/analysis/vep/SNV.somatic.bosssponge.vardict.all.filtered.pass.ranked.vcf.gz",
+            "path": "T_panel/analysis/qc/multiqc_report.html",
+            "path_index": [],
+            "step": "multiqc",
+            "tag": [
+                "multiqc-html",
+                "html"
+            ],
+            "id": "T_panel",
+            "format": "html"
+        },
+        {
+            "path": "T_panel/analysis/qc/multiqc_data/multiqc_data.json",
+            "path_index": [],
+            "step": "multiqc",
+            "tag": [
+                "multiqc-json",
+                "json"
+            ],
+            "id": "T_panel",
+            "format": "json"
+        },
+        {
+            "path": "T_panel/analysis/vep/SNV.somatic.T_panel.vardict.all.filtered.pass.ranked.vcf.gz",
             "path_index": [
-                "/home/proj/stage/cancer/cases/bosssponge/analysis/vep/SNV.somatic.bosssponge.vardict.all.filtered.pass.ranked.vcf.gz.tbi"
+                "T_panel/analysis/vep/SNV.somatic.T_panel.vardict.all.filtered.pass.ranked.vcf.gz.tbi"
             ],
             "step": "rankscore",
             "tag": [
-                "vcf-pass",
+                "T-panel",
                 "SNV",
-                "research-vcf-pass",
-                "bosssponge"
+                "vcf-pass",
+                "research-vcf-pass"
             ],
-            "id": "bosssponge",
+            "id": "T_panel",
             "format": "vcf.gz"
         },
         {
-            "path": "/home/proj/stage/cancer/cases/bosssponge/analysis/vep/SNV.somatic.bosssponge.vardict.all.filtered.pass.ranked.vcf.gz.tbi",
+            "path": "T_panel/analysis/vep/SNV.somatic.T_panel.vardict.all.filtered.pass.ranked.vcf.gz.tbi",
             "path_index": "",
             "step": "rankscore",
             "tag": [
-                "vcf-pass",
+                "T-panel",
                 "SNV",
-                "research-vcf-pass-index",
-                "bosssponge"
+                "vcf-pass",
+                "research-vcf-pass-index"
             ],
-            "id": "bosssponge",
+            "id": "T_panel",
             "format": "vcf.gz.tbi"
         },
         {
-            "path": "/home/proj/stage/cancer/cases/bosssponge/analysis/delivery_report/bosssponge_report.html",
+            "path": "T_panel/analysis/fastq/ACC123_R_1.fp.fastq.gz",
+            "path_index": [],
+            "step": "fastp",
+            "tag": [
+                "ACC123",
+                "quality-trimmed-fastq-read1",
+                "read1"
+            ],
+            "id": "ACC123",
+            "format": "fastq.gz"
+        },
+        {
+            "path": "T_panel/analysis/fastq/ACC123_R_2.fp.fastq.gz",
+            "path_index": [],
+            "step": "fastp",
+            "tag": [
+                "ACC123",
+                "read2",
+                "quality-trimmed-fastq-read2"
+            ],
+            "id": "ACC123",
+            "format": "fastq.gz"
+        },
+        {
+            "path": "T_panel/analysis/qc/fastp/ACC123_R_fastp.json",
+            "path_index": [],
+            "step": "fastp",
+            "tag": [
+                "quality-trimmed-fastq-json",
+                "ACC123",
+                "json"
+            ],
+            "id": "ACC123",
+            "format": "json"
+        },
+        {
+            "path": "T_panel/analysis/qc/fastp/ACC123_R_fastp.html",
+            "path_index": [],
+            "step": "fastp",
+            "tag": [
+                "ACC123",
+                "quality-trimmed-fastq-html",
+                "html"
+            ],
+            "id": "ACC123",
+            "format": "html"
+        },
+        {
+            "path": "T_panel/analysis/vep/SNV.somatic.T_panel.vardict.all.filtered.vcf.gz",
+            "path_index": [
+                "T_panel/analysis/vep/SNV.somatic.T_panel.vardict.all.filtered.vcf.gz.tbi"
+            ],
+            "step": "ngs_filter_vardict",
+            "tag": [
+                "T-panel",
+                "SNV",
+                "vcf-filtered",
+                "clinical-vcf-filtered"
+            ],
+            "id": "T_panel",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "T_panel/analysis/vep/SNV.somatic.T_panel.vardict.all.filtered.vcf.gz.tbi",
+            "path_index": "",
+            "step": "ngs_filter_vardict",
+            "tag": [
+                "T-panel",
+                "SNV",
+                "vcf-filtered",
+                "clinical-vcf-filtered-index"
+            ],
+            "id": "T_panel",
+            "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "T_panel/analysis/vep/SNV.somatic.T_panel.vardict.all.filtered.pass.vcf.gz",
+            "path_index": [
+                "T_panel/analysis/vep/SNV.somatic.T_panel.vardict.all.filtered.pass.vcf.gz.tbi"
+            ],
+            "step": "ngs_filter_vardict",
+            "tag": [
+                "T-panel",
+                "SNV",
+                "vcf-pass",
+                "clinical-vcf-pass"
+            ],
+            "id": "T_panel",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "T_panel/analysis/vep/SNV.somatic.T_panel.vardict.all.filtered.pass.vcf.gz.tbi",
+            "path_index": "",
+            "step": "ngs_filter_vardict",
+            "tag": [
+                "T-panel",
+                "SNV",
+                "vcf-pass",
+                "clinical-vcf-pass-index"
+            ],
+            "id": "T_panel",
+            "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "T_panel/analysis/delivery_report/T_panel_report.html",
             "step": "balsamic_delivery",
             "format": "html",
             "tag": [
                 "balsamic-report"
             ],
-            "id": "bosssponge"
+            "id": "T_panel"
         },
         {
-            "path": "/home/proj/stage/cancer/cases/bosssponge/bosssponge.json",
+            "path": "T_panel/T_panel.json",
             "step": "case_config",
             "format": "json",
             "tag": [
                 "balsamic-config"
             ],
-            "id": "bosssponge"
+            "id": "T_panel"
         },
         {
-            "path": "/home/proj/stage/cancer/cases/bosssponge/bosssponge_BALSAMIC_7.1.7_graph.pdf",
+            "path": "T_panel/T_panel_BALSAMIC_7.2.2_graph.pdf",
             "step": "case_config",
             "format": "pdf",
             "tag": [
                 "balsamic-dag"
             ],
-            "id": "bosssponge"
-        },
-        {
-            "path": "/home/proj/stage/cancer/cases/bosssponge/analysis/delivery_report/bosssponge_qc_report.html",
-            "step": "balsamic_delivery",
-            "format": "html",
-            "tag": [
-                "coverage-qc-report"
-            ],
-            "id": "bosssponge"
+            "id": "T_panel"
         }
     ]
 }
