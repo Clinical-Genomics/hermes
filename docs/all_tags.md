@@ -13,16 +13,22 @@
 | Tag name        | Description                                   |
 |-----------------|-----------------------------------------------|
 | autozyg         | Autozygous region                             |
+| assembly        | Assembly                                      |
+| bed             | Bed file                                      |
 | bigwig          | Bigwig formated file                          |
+| clinical        | Clinical subset                               |
 | config          | Config file                                   |
 | coverage        | Output with coverage information              |
 | diagram         | Data diagram                                  |
 | filtered        | Filtered data                                 |
 | fracsnp         | Fraction of reads with snp                    |
+| fusion          | Fusion transcripts                            |
 | genes           | Related to genes                              |
+| junction        | Junction data                                 |
 | metrics         | Data metrics                                  |
 | reference-info  | Information about references used in analysis |
 | regions         | Output for regions                            |
+| research        | Research set                                  |
 | segments        | Output for segments                           |
 | sites           | Output for sites                              |
 | tcov            | Coverage output                               |
@@ -48,6 +54,7 @@
 |----------------|-------------------------------------------|
 | multiqc-html   | Multiqc report for the run in html format |
 | multiqc-json   | Multiqc report for the run in json format |
+| pdf            | Portable document format                  |
 | sambamba-depth | Coverage information from sambamba        |
 | vcf-report     | Results and QC from variant calling       |
 
@@ -55,18 +62,24 @@
 
 | Tag name         | Description                                                   |
 |------------------|---------------------------------------------------------------|
+| arriba           | Fusion caller                                                 |
+| asereadcounter   | Count reads mapping to heterozygous sites                     |
 | chanjo           | Tool to keep track of coverage over specific regions          |
 | chromograph      | Tool to create PNG images from BED and WIG files from mikaell |
 | cnvkit           | Tool to call copy number variations                           |
 | cyrius           | Tool to call the problematic CYP2D6 gene                      |
+| deseq2           | Differential expression analysis with DESeq2                  |
 | genotyper        | SNV indel caller from sention                                 |
+| gffcompare       | Compare gff files                                             |
 | haplotype-caller | Call snv and indels                                           |
 | manta            | Tool to call structural variants                              |
 | mutect           | Cancer variant caller                                         |
 | peddy            | Tool to check pedigree and ancestral relations                |
 | scope            | Call snv indels                                               |
 | sention          | Sention algorithm                                             |
+| star-fusion      | Fusion caller                                                 |
 | strelka          | Cancer variant caller                                         |
+| stringtie        | Transcript assembler                                          |
 | upd              | Uniparent disomy caller from bjhall                           |
 | vardict          | Cancer variant caller                                         |
 | wisecondor       | NIPT caller                                                   |

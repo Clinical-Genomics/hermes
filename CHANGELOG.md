@@ -8,6 +8,10 @@ About changelog [here](https://keepachangelog.com/en/1.0.0/)
 ### Added
 - BALSAMIC: optional tag for clinical sv deliveries
 
+## [0.10.0]
+### Added:
+- MIP-rna: Tags to store files from MIP-rna
+
 ## [0.9.1]
 ### Changed:
 - MUTANT: Hotfix to accomodate step-tag structure

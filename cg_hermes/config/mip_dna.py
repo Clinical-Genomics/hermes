@@ -1,4 +1,4 @@
-"""Tag map for MIP deliverables file"""
+"""Tag map for MIP-dna deliverables file"""
 
 MIP_DNA_TAGS = {
     frozenset(["chanjo_sexcheck"]): {
@@ -55,7 +55,13 @@ MIP_DNA_TAGS = {
         "is_mandatory": False,
         "used_by": ["scout"],
     },
-    frozenset(["gatk_baserecalibration"]): {
+    frozenset(["glnexus_merge"]): {
+        "tags": ["deepvariant","snv", "vcf"],
+        "index_tags": ["deepvariant", "snv", "vcf-index"],
+        "is_mandatory": False,
+        "used_by": ["storage"],
+    },
+    frozenset(["markduplicates"]): {
         "tags": ["cram"],
         "index_tags": ["cram-index"],
         "is_mandatory": False,

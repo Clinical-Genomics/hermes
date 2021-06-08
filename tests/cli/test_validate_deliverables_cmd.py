@@ -8,12 +8,25 @@ from cg_hermes.cli.validate import app
 
 
 def test_validate_mip_deliverables_file(cli_runner: CliRunner, mip_dna_deliverables: Path):
-    # GIVEN a existing mip deliverables file and a CLI runner
+    # GIVEN a existing mip_dna deliverables file and a CLI runner
     assert mip_dna_deliverables.exists()
 
     # WHEN running the validate deliverables command
     result = cli_runner.invoke(
         app, ["deliverables", str(mip_dna_deliverables), "--pipeline", "mip-dna"]
+    )
+
+    # THEN assert it exits without problem
+    assert result.exit_code == 0
+
+
+def test_validate_mip_rna_deliverables_file(cli_runner: CliRunner, mip_rna_deliverables: Path):
+    # GIVEN a existing mip_dna deliverables file and a CLI runner
+    assert mip_rna_deliverables.exists()
+
+    # WHEN running the validate deliverables command
+    result = cli_runner.invoke(
+        app, ["deliverables", str(mip_rna_deliverables), "--pipeline", "mip-rna"]
     )
 
     # THEN assert it exits without problem
