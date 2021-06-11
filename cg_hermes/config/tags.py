@@ -176,6 +176,8 @@ MUTANT_SPECIFIC = {
     "artic-type": {"description": "GMS-Artic typing file"},
     "artic-qc": {"description": "GMS-Artic QC file"},
     "artic-json": {"description": "GMS-Artic json file"},
+    "vcf-covid": {"description": "VCF file containing covid data. Distinction req. by production"},
+    "instrument-properties": {"description": "Sequencing metadata"},
 }
 
 AVAILABLE_USAGES = {

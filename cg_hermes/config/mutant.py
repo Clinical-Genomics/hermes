@@ -5,6 +5,11 @@ MUTANT_COMMON_TAGS = {
         "tags": ["config"],
         "used_by": ["storage", "audit"],
     },
+    frozenset({"instrument-properties", "report"}): {
+        "is_mandatory":True,
+        "tags": ["fohm-delivery","instrument-properties"],
+        "used_by": ["storage", "audit"],
+    },
     frozenset({"runtime-settings", "runinfo"}): {
         "is_mandatory": True,
         "tags": ["mutant-config"],
@@ -45,12 +50,12 @@ MUTANT_COMMON_TAGS = {
         "tags": ["bam"],
         "used_by": ["storage"],
     },
-    frozenset({"variants", "genotyping"}): {
+    frozenset({"vcf-covid", "genotyping"}): {
         "is_mandatory": False,
         "tags": ["vcf", "vcf-report"],
         "used_by": ["deliver"],
     },
-    frozenset({"variants", "variant-calling"}): {
+    frozenset({"vcf-covid", "variant-calling"}): {
         "is_mandatory": False,
         "tags": ["tsv", "vcf-report"],
         "used_by": ["deliver"],
