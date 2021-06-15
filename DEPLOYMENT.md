@@ -11,8 +11,9 @@ hermes is following the [GitHub flow][gh-flow] branching model which means that 
 
 ## Steps
 
-1. Check in the PR if the change is a minor, mayor or patch: ![Version][pr-version]
-1. Make sure you are on `master` (`git checkout master`) and bump version according to step 1 with git, example: `git tag 0.2.0`
+1. Check in the PR if the change is a minor, mayor or patch.
+1. Make sure you are on `main` (`git checkout main`)
+1. Bump version according using poetry: `poetry version <patch | minor | major>` to step 1 with git, example: `git tag 0.2.0`
 1. Push the commit: `git push --tags`
 1. First deploy on stage so log into hasta and run:
     - `us`
@@ -29,7 +30,6 @@ hermes is following the [GitHub flow][gh-flow] branching model which means that 
 
 
 [poetry]: https://python-poetry.org/docs/#installation
-[pr-version]: docs/img/version.png
 [confirm-deploy]: docs/img/confirm_deploy.png
 [development-guide]: http://www.clinicalgenomics.se/development/publish/prod/
 [gh-flow]: http://www.clinicalgenomics.se/development/dev/models/#rolling-release-github-flow
