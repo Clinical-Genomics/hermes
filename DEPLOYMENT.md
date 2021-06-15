@@ -35,3 +35,8 @@ hermes is following the [GitHub flow][gh-flow] branching model which means that 
     - `cg deploy hermes`
 1. Take a screenshot that includes the name of the environment and publish it as a comment on the PR
 1. Great job :whale2:
+
+
+[poetry]: https://python-poetry.org/docs/#installation
+[development-guide]: http://www.clinicalgenomics.se/development/publish/prod/
+[gh-flow]: http://www.clinicalgenomics.se/development/dev/models/#rolling-release-github-flow
