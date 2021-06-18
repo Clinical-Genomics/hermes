@@ -4,6 +4,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 About changelog [here](https://keepachangelog.com/en/1.0.0/)
 
+## [1.1.1]
+### Added
+- New deployment instructions using bumpversion and poetry
+
+## [1.0.0]
+### Added
+- Adds tags for mip-rna
+
 ## [0.10.1]
 ### Added
 - BALSAMIC: optional tag for clinical sv deliveries
