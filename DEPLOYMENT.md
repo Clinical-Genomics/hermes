@@ -11,25 +11,32 @@ hermes is following the [GitHub flow][gh-flow] branching model which means that 
 
 ## Steps
 
-1. Check in the PR if the change is a minor, mayor or patch: ![Version][pr-version]
-1. Make sure you are on `master` (`git checkout master`) and bump version according to step 1 with git, example: `git tag 0.2.0`
-1. Push the commit: `git push --tags`
-1. First deploy on stage so log into hasta and run:
+1. Merge your PR to `main`
+1. Make sure you are on `main` (`git checkout main`)
+1. Check in the PR if the change is a major, minor or patch
+1. Bump version according using poetry: 
+   ```Console
+   poetry run bumpversion <major | minor | patch>
+   ```
+1. Push commit directly to master: 
+   ```Console
+   git push
+   ```
+1. Push the commit: 
+   ```Console
+   git push --tags
+   ```
+1. First deploy on stage so log into Hasta and run:
     - `us`
     - `cg deploy hermes`
 1. Deploy in productions by running the following commands:
     - `down`
     - `up`
     - `cg deploy hermes`
-1. Take a screen shot that includes the name of the environment and publish it as a comment on the PR: ![Deployed][confirm-deploy]
+1. Take a screenshot that includes the name of the environment and publish it as a comment on the PR
 1. Great job :whale2:
 
 
-
-
-
 [poetry]: https://python-poetry.org/docs/#installation
-[pr-version]: docs/img/version.png
-[confirm-deploy]: docs/img/confirm_deploy.png
 [development-guide]: http://www.clinicalgenomics.se/development/publish/prod/
 [gh-flow]: http://www.clinicalgenomics.se/development/dev/models/#rolling-release-github-flow
