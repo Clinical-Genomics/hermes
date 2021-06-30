@@ -23,6 +23,12 @@ files:
   path_index: '~'
   step: report
   tag: pangolin-typing
+- format: csv
+  id: maturejay
+  path: /home/proj/stage/mutant/cases/maturejay/results/381752_2021-06-30_pangolin_classification_format3.txt
+  path_index: '~'
+  step: report
+  tag: pangolin-typing-fohm
 - format: fasta
   id: maturejay
   path: /home/proj/stage/mutant/cases/maturejay/results/381752.consensus.fa
@@ -49,7 +55,7 @@ files:
   tag: artic-json
 - format: json
   id: maturejay
-  path: cases/maturejay/case_config.json
+  path: /home/proj/stage/mutant/cases/maturejay/case_config.json
   path_index: '~'
   step: runinfo
   tag: sampleinfo
@@ -67,19 +73,7 @@ files:
   tag: logfile
 - format: csv
   id: maturejay
-  path: /home/proj/stage/mutant/cases/maturejay/results/01_SE100_20210614_komplettering.csv
-  path_index: '~'
-  step: report
-  tag: SARS-CoV-2-info
-- format: csv
-  id: maturejay
-  path: /home/proj/stage/mutant/cases/maturejay/results/05_SE400_20210614_komplettering.csv
-  path_index: '~'
-  step: report
-  tag: SARS-CoV-2-info
-- format: csv
-  id: maturejay
-  path: /home/proj/stage/mutant/cases/maturejay/results/01_SE130_20210614_komplettering.csv
+  path: /home/proj/stage/mutant/cases/maturejay/results/381752_komplettering.csv
   path_index: '~'
   step: report
   tag: SARS-CoV-2-info
@@ -101,6 +95,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A1
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE100_21CS502111.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A2
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE100_21CS502112_1.fastq.gz
@@ -119,6 +119,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A2
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE100_21CS502112.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A3
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE100_21CS502113_1.fastq.gz
@@ -137,6 +143,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A3
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE100_21CS502113.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A4
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE100_21CS502114_1.fastq.gz
@@ -155,6 +167,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A4
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE100_21CS502114.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A5
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE100_21CS502115_1.fastq.gz
@@ -173,6 +191,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A5
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE100_21CS502115.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A6
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE100_21CS502116_1.fastq.gz
@@ -191,6 +215,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A6
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE100_21CS502116.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A7
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE100_21CS502117_1.fastq.gz
@@ -209,6 +239,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A7
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE100_21CS502117.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A8
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE100_21CS502118_1.fastq.gz
@@ -227,6 +263,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A8
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE100_21CS502118.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A9
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE100_21CS502119_1.fastq.gz
@@ -245,6 +287,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A9
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE100_21CS502119.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A10
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE100_21CS502120_1.fastq.gz
@@ -263,6 +311,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A10
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE100_21CS502120.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A11
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE100_21CS502121_1.fastq.gz
@@ -281,6 +335,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A11
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE100_21CS502121.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A12
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE100_21CS502122_1.fastq.gz
@@ -299,6 +359,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A12
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE100_21CS502122.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A13
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE100_21CS502123_1.fastq.gz
@@ -317,6 +383,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A13
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE100_21CS502123.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A14
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE100_21CS502124_1.fastq.gz
@@ -335,6 +407,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A14
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE100_21CS502124.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A15
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE100_21CS502125_1.fastq.gz
@@ -353,6 +431,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A15
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE100_21CS502125.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A16
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE100_21CS502126_1.fastq.gz
@@ -371,6 +455,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A16
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE100_21CS502126.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A17
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE100_21CS502127_1.fastq.gz
@@ -389,6 +479,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A17
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE100_21CS502127.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A18
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE100_21CS502128_1.fastq.gz
@@ -407,6 +503,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A18
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE100_21CS502128.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A19
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE100_21CS502129_1.fastq.gz
@@ -425,6 +527,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A19
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE100_21CS502129.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A20
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE100_21CS502130_1.fastq.gz
@@ -443,6 +551,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A20
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE100_21CS502130.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A21
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE100_21CS502131_1.fastq.gz
@@ -461,6 +575,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A21
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE100_21CS502131.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A22
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE100_21CS502132_1.fastq.gz
@@ -479,6 +599,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A22
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE100_21CS502132.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A23
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE100_21CS502133_1.fastq.gz
@@ -497,6 +623,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A23
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE100_21CS502133.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A24
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE100_21CS502134_1.fastq.gz
@@ -515,6 +647,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A24
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE100_21CS502134.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A25
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE100_21CS502135_1.fastq.gz
@@ -533,6 +671,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A25
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE100_21CS502135.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A26
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE100_21CS502136_1.fastq.gz
@@ -551,6 +695,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A26
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE100_21CS502136.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A27
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE100_21CS502137_1.fastq.gz
@@ -569,6 +719,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A27
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE100_21CS502137.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A28
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE100_21CS502138_1.fastq.gz
@@ -587,6 +743,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A28
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE100_21CS502138.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A29
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE100_21CS502139_1.fastq.gz
@@ -605,6 +767,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A29
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE100_21CS502139.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A30
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE100_21CS502140_1.fastq.gz
@@ -623,6 +791,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A30
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE100_21CS502140.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A31
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE100_21CS502141_1.fastq.gz
@@ -641,6 +815,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A31
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE100_21CS502141.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A32
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE100_21CS502142_1.fastq.gz
@@ -659,6 +839,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A32
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE100_21CS502142.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A33
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE100_21CS502143_1.fastq.gz
@@ -677,6 +863,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A33
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE100_21CS502143.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A34
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE100_21CS502144_1.fastq.gz
@@ -695,6 +887,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A34
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE100_21CS502144.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A35
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE100_21CS502145_1.fastq.gz
@@ -713,6 +911,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A35
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE100_21CS502145.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A42
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE100_21CS502152_1.fastq.gz
@@ -731,6 +935,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A42
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE100_21CS502152.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A43
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE100_21CS502153_1.fastq.gz
@@ -749,6 +959,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A43
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE100_21CS502153.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A44
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE100_21CS502154_1.fastq.gz
@@ -767,6 +983,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A44
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE100_21CS502154.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A45
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE100_21CS502155_1.fastq.gz
@@ -785,6 +1007,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A45
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE100_21CS502155.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A46
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE100_21CS502156_1.fastq.gz
@@ -803,6 +1031,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A46
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE100_21CS502156.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A47
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE100_21CS502157_1.fastq.gz
@@ -821,6 +1055,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A47
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE100_21CS502157.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A48
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE100_21CS502158_1.fastq.gz
@@ -839,6 +1079,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A48
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE100_21CS502158.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A49
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE100_21CS502159_1.fastq.gz
@@ -857,6 +1103,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A49
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE100_21CS502159.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A50
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE100_21CS502160_1.fastq.gz
@@ -875,6 +1127,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A50
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE100_21CS502160.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A51
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE100_21CS502161_1.fastq.gz
@@ -893,6 +1151,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A51
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE100_21CS502161.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A52
   path: /home/proj/stage/mutant/cases/maturejay/fastq/05_SE400_21CS502162_1.fastq.gz
@@ -911,6 +1175,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A52
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/05_SE400_21CS502162.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A53
   path: /home/proj/stage/mutant/cases/maturejay/fastq/05_SE400_21CS502163_1.fastq.gz
@@ -929,6 +1199,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A53
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/05_SE400_21CS502163.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A54
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE100_21CS502164_1.fastq.gz
@@ -947,6 +1223,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A54
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE100_21CS502164.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A55
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE130_21CS502165_1.fastq.gz
@@ -965,6 +1247,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A55
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE130_21CS502165.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A56
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE130_21CS502166_1.fastq.gz
@@ -983,6 +1271,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A56
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE130_21CS502166.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A57
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE130_21CS502167_1.fastq.gz
@@ -1001,6 +1295,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A57
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE130_21CS502167.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A58
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE130_21CS502168_1.fastq.gz
@@ -1019,6 +1319,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A58
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE130_21CS502168.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A59
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE130_21CS502169_1.fastq.gz
@@ -1037,6 +1343,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A59
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE130_21CS502169.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A60
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE130_21CS502170_1.fastq.gz
@@ -1055,6 +1367,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A60
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE130_21CS502170.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A61
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE130_21CS502171_1.fastq.gz
@@ -1073,6 +1391,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A61
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE130_21CS502171.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A62
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE130_21CS502172_1.fastq.gz
@@ -1091,6 +1415,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A62
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE130_21CS502172.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A63
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE130_21CS502173_1.fastq.gz
@@ -1109,6 +1439,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A63
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE130_21CS502173.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A64
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE130_21CS502174_1.fastq.gz
@@ -1127,6 +1463,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A64
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE130_21CS502174.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A65
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE130_21CS502175_1.fastq.gz
@@ -1145,6 +1487,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A65
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE130_21CS502175.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A66
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE130_21CS502176_1.fastq.gz
@@ -1163,6 +1511,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A66
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE130_21CS502176.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A67
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE130_21CS502177_1.fastq.gz
@@ -1181,6 +1535,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A67
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE130_21CS502177.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A68
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE130_21CS502178_1.fastq.gz
@@ -1199,6 +1559,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A68
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE130_21CS502178.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A69
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE130_21CS502179_1.fastq.gz
@@ -1217,6 +1583,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A69
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE130_21CS502179.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A70
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE130_21CS502180_1.fastq.gz
@@ -1235,6 +1607,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A70
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE130_21CS502180.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A71
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE130_21CS502181_1.fastq.gz
@@ -1253,6 +1631,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A71
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE130_21CS502181.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A72
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE130_21CS502182_1.fastq.gz
@@ -1271,6 +1655,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A72
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE130_21CS502182.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A73
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE130_21CS502183_1.fastq.gz
@@ -1289,6 +1679,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A73
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE130_21CS502183.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A74
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE130_21CS502184_1.fastq.gz
@@ -1307,6 +1703,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A74
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE130_21CS502184.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A75
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE130_21CS502185_1.fastq.gz
@@ -1325,6 +1727,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A75
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE130_21CS502185.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A76
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE130_21CS502186_1.fastq.gz
@@ -1343,6 +1751,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A76
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE130_21CS502186.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A77
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE130_21CS502187_1.fastq.gz
@@ -1361,6 +1775,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A77
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE130_21CS502187.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A78
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE130_21CS502188_1.fastq.gz
@@ -1379,6 +1799,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A78
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE130_21CS502188.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A79
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE130_21CS502189_1.fastq.gz
@@ -1397,6 +1823,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A79
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE130_21CS502189.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A80
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE130_21CS502190_1.fastq.gz
@@ -1415,6 +1847,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A80
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE130_21CS502190.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A81
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE130_21CS502191_1.fastq.gz
@@ -1433,6 +1871,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A81
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE130_21CS502191.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A82
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE130_21CS502192_1.fastq.gz
@@ -1451,6 +1895,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A82
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE130_21CS502192.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A83
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE130_21CS502193_1.fastq.gz
@@ -1469,6 +1919,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A83
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE130_21CS502193.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A84
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE130_21CS502194_1.fastq.gz
@@ -1487,6 +1943,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A84
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE130_21CS502194.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A85
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE130_21CS502195_1.fastq.gz
@@ -1505,6 +1967,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A85
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE130_21CS502195.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A86
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE130_21CS502196_1.fastq.gz
@@ -1523,6 +1991,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A86
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE130_21CS502196.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A87
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE130_21CS502197_1.fastq.gz
@@ -1541,6 +2015,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A87
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE130_21CS502197.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A88
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE130_21CS502198_1.fastq.gz
@@ -1559,6 +2039,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A88
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE130_21CS502198.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A89
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE130_21CS501861_1.fastq.gz
@@ -1577,6 +2063,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A89
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE130_21CS501861.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A90
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE130_21CS501862_1.fastq.gz
@@ -1595,6 +2087,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A90
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE130_21CS501862.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A91
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE130_21CS501863_1.fastq.gz
@@ -1613,6 +2111,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A91
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE130_21CS501863.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A92
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE130_21CS501864_1.fastq.gz
@@ -1631,6 +2135,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A92
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE130_21CS501864.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A93
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE130_21CS501865_1.fastq.gz
@@ -1649,6 +2159,12 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A93
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE130_21CS501865.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample
 - format: fastq
   id: ACC7910A94
   path: /home/proj/stage/mutant/cases/maturejay/fastq/01_SE130_21CS501866_1.fastq.gz
@@ -1667,3 +2183,9 @@ files:
   path_index: '~'
   step: genotyping
   tag: vcf-covid
+- format: fasta
+  id: ACC7910A94
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_makeConsensus/01_SE130_21CS501866.consensus.fasta
+  path_index: '~'
+  step: consensus
+  tag: consensus-sample

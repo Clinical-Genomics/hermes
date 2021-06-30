@@ -6,7 +6,7 @@ MUTANT_COMMON_TAGS = {
         "used_by": ["storage", "audit"],
     },
     frozenset({"instrument-properties", "report"}): {
-        "is_mandatory":True,
+        "is_mandatory":False,
         "tags": ["fohm-delivery","instrument-properties"],
         "used_by": ["storage", "audit"],
     },
@@ -44,6 +44,11 @@ MUTANT_COMMON_TAGS = {
         "is_mandatory": False,
         "tags": ["fohm-delivery", "pangolin-typing", "visualization", "csv"],
         "used_by": ["audit"],
+    },
+    frozenset({"pangolin-typing-fohm", "report"}): {
+        "is_mandatory": False,
+        "tags": ["fohm-delivery", "pangolin-typing-fohm", "txt"],
+        "used_by": ["deliver"],
     },
     frozenset({"alignment", "reference-alignment-sorted"}): {
         "is_mandatory": False,
@@ -83,6 +88,11 @@ MUTANT_COMMON_TAGS = {
     frozenset({"consensus", "analysis"}): {
         "is_mandatory": True,
         "tags": ["ks-delivery", "fastq", "consensus"],
+        "used_by": ["deliver", "storage"],
+    },
+    frozenset({"consensus-sample", "analysis"}): {
+        "is_mandatory": True,
+        "tags": ["fohm-delivery", "fasta", "consensus-sample"],
         "used_by": ["deliver", "storage"],
     },
     frozenset({"multiqc-html", "report"}): {

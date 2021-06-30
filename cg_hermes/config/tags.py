@@ -178,6 +178,8 @@ MUTANT_SPECIFIC = {
     "artic-json": {"description": "GMS-Artic json file"},
     "vcf-covid": {"description": "VCF file containing covid data. Distinction req. by production"},
     "instrument-properties": {"description": "Sequencing metadata"},
+    "consensus-sample": {"description": "Separate sample consensus fasta"},
+    "pangolin-typing-fohm": {"description": "Pangolin typing report with only qc_pass samples included"},
 }
 
 AVAILABLE_USAGES = {
