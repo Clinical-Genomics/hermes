@@ -90,7 +90,7 @@ MUTANT_COMMON_TAGS = {
         "tags": ["ks-delivery", "fastq", "consensus"],
         "used_by": ["deliver", "storage"],
     },
-    frozenset({"consensus-sample", "analysis"}): {
+    frozenset({"consensus-sample", "consensus"}): {
         "is_mandatory": False,
         "tags": ["fohm-delivery", "consensus-sample"],
         "used_by": ["deliver", "storage"],
