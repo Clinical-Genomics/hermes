@@ -57,7 +57,7 @@ MUTANT_COMMON_TAGS = {
     },
     frozenset({"vcf-covid", "genotyping"}): {
         "is_mandatory": False,
-        "tags": ["vcf", "vcf-report"],
+        "tags": ["vcf", "vcf-report", "fohm-delivery"],
         "used_by": ["deliver"],
     },
     frozenset({"vcf-covid", "variant-calling"}): {
