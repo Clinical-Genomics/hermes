@@ -92,7 +92,7 @@ MUTANT_COMMON_TAGS = {
     },
     frozenset({"consensus-sample", "analysis"}): {
         "is_mandatory": False,
-        "tags": ["fohm-delivery", "fasta", "consensus-sample"],
+        "tags": ["fohm-delivery", "consensus-sample"],
         "used_by": ["deliver", "storage"],
     },
     frozenset({"multiqc-html", "report"}): {
