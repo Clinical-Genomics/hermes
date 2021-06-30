@@ -18,6 +18,7 @@ ALIGNMENT_COMMON = {
 
 RAW_DATA = {
     "fastq": {"description": "Files with raw data in fastq format"},
+    "fasta": {"description": "Files with raw data in fasta format"},
     "forward-strand": {"description": "Reads from forward strand"},
     "reverse-strand": {"description": "Reads from reverse strand"},
     "unpaired-reads": {"description": "Reads that could not be paired"},
@@ -176,6 +177,10 @@ MUTANT_SPECIFIC = {
     "artic-type": {"description": "GMS-Artic typing file"},
     "artic-qc": {"description": "GMS-Artic QC file"},
     "artic-json": {"description": "GMS-Artic json file"},
+    "vcf-covid": {"description": "VCF file containing covid data. Distinction req. by production"},
+    "instrument-properties": {"description": "Sequencing metadata"},
+    "consensus-sample": {"description": "Separate sample consensus fasta"},
+    "pangolin-typing-fohm": {"description": "Pangolin typing report with only qc_pass samples included"},
 }
 
 AVAILABLE_USAGES = {

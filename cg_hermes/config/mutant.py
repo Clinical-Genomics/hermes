@@ -5,6 +5,11 @@ MUTANT_COMMON_TAGS = {
         "tags": ["config"],
         "used_by": ["storage", "audit"],
     },
+    frozenset({"instrument-properties", "report"}): {
+        "is_mandatory":False,
+        "tags": ["fohm-delivery","instrument-properties"],
+        "used_by": ["storage", "audit"],
+    },
     frozenset({"runtime-settings", "runinfo"}): {
         "is_mandatory": True,
         "tags": ["mutant-config"],
@@ -40,17 +45,22 @@ MUTANT_COMMON_TAGS = {
         "tags": ["fohm-delivery", "pangolin-typing", "visualization", "csv"],
         "used_by": ["audit"],
     },
+    frozenset({"pangolin-typing-fohm", "report"}): {
+        "is_mandatory": False,
+        "tags": ["fohm-delivery", "pangolin-typing-fohm", "csv"],
+        "used_by": ["deliver"],
+    },
     frozenset({"alignment", "reference-alignment-sorted"}): {
         "is_mandatory": False,
         "tags": ["bam"],
         "used_by": ["storage"],
     },
-    frozenset({"variants", "genotyping"}): {
+    frozenset({"vcf-covid", "genotyping"}): {
         "is_mandatory": False,
-        "tags": ["vcf", "vcf-report"],
+        "tags": ["vcf", "vcf-report", "fohm-delivery"],
         "used_by": ["deliver"],
     },
-    frozenset({"variants", "variant-calling"}): {
+    frozenset({"vcf-covid", "variant-calling"}): {
         "is_mandatory": False,
         "tags": ["tsv", "vcf-report"],
         "used_by": ["deliver"],
@@ -78,6 +88,11 @@ MUTANT_COMMON_TAGS = {
     frozenset({"consensus", "analysis"}): {
         "is_mandatory": True,
         "tags": ["ks-delivery", "fastq", "consensus"],
+        "used_by": ["deliver", "storage"],
+    },
+    frozenset({"consensus-sample", "consensus"}): {
+        "is_mandatory": False,
+        "tags": ["fohm-delivery", "fasta", "consensus-sample"],
         "used_by": ["deliver", "storage"],
     },
     frozenset({"multiqc-html", "report"}): {
