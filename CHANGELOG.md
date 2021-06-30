@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 About changelog [here](https://keepachangelog.com/en/1.0.0/)
 
+## [1.3.0]
+### Added
+- New mutant tags for fohm
+
 ## [1.2.0]
 ### Added
 - New deployment instructions using bumpversion and poetry
