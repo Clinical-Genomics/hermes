@@ -47,7 +47,7 @@ MUTANT_COMMON_TAGS = {
     },
     frozenset({"pangolin-typing-fohm", "report"}): {
         "is_mandatory": False,
-        "tags": ["fohm-delivery", "pangolin-typing-fohm", "txt"],
+        "tags": ["fohm-delivery", "pangolin-typing-fohm", "csv"],
         "used_by": ["deliver"],
     },
     frozenset({"alignment", "reference-alignment-sorted"}): {
