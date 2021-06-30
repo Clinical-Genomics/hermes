@@ -18,6 +18,7 @@ ALIGNMENT_COMMON = {
 
 RAW_DATA = {
     "fastq": {"description": "Files with raw data in fastq format"},
+    "fasta": {"description": "Files with raw data in fasta format"},
     "forward-strand": {"description": "Reads from forward strand"},
     "reverse-strand": {"description": "Reads from reverse strand"},
     "unpaired-reads": {"description": "Reads that could not be paired"},
