@@ -100,6 +100,8 @@ ANALYSIS_COMMON = {
     "genes": {"description": "Related to genes"},
     "junction": {"description": "Junction data"},
     "metrics": {"description": "Data metrics"},
+    "first-pass": {"description": "Data metrics first pass"},
+    "second-pass": {"description": "Data metrics second pass"},
     "reference-info": {"description": "Information about references used in analysis"},
     "regions": {"description": "Output for regions"},
     "research": {"description": "Research set"},
