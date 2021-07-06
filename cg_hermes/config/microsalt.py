@@ -11,7 +11,7 @@ MICROSALT_COMMON_TAGS = {
         "used_by": ["deliver"],
     },
     frozenset({"microsalt-type", "result_aggregation"}): {
-        "is_mandatory": True,
+        "is_mandatory": False,
         "tags": ["typing-report", "visualization"],
         "used_by": ["deliver"],
     },
@@ -25,7 +25,7 @@ MICROSALT_COMMON_TAGS = {
         "tags": ["microsalt-config"],
         "used_by": ["storage", "audit"],
     },
-    frozenset({"assembly"}): {"is_mandatory": True, "tags": ["assembly"], "used_by": ["storage"]},
+    frozenset({"assembly"}): {"is_mandatory": False, "tags": ["assembly"], "used_by": ["storage"]},
     frozenset({"concatination", "trimmed-forward-reads"}): {
         "is_mandatory": False,
         "tags": ["fastq", "forward-strand"],
@@ -42,7 +42,7 @@ MICROSALT_COMMON_TAGS = {
         "used_by": ["storage"],
     },
     frozenset({"analysis", "logfile"}): {
-        "is_mandatory": True,
+        "is_mandatory": False,
         "tags": ["microsalt-log"],
         "used_by": ["audit"],
     },
@@ -52,7 +52,7 @@ MICROSALT_COMMON_TAGS = {
         "used_by": ["audit"],
     },
     frozenset({"alignment", "reference-alignment-sorted"}): {
-        "is_mandatory": True,
+        "is_mandatory": False,
         "tags": ["bam"],
         "used_by": ["storage"],
     },
