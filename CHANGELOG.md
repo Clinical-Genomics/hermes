@@ -4,6 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 About changelog [here](https://keepachangelog.com/en/1.0.0/)
 
+
+## [1.5.0]
+### Added
+- Update microsalt deliverables to be less strict
+
 ## [1.4.0]
 ### Added
 - Fluffy pass files
