@@ -190,12 +190,12 @@ BALSAMIC_COMMON_TAGS = {
     frozenset({"vcf-all", "snv", "tnscope-umi", "annotated-somatic-vcf-all"}): {
         "tags": ["vcf", "tnscope-umi", "somatic"],
         "is_mandatory": False,
-        "used_by": ["storage"],
+        "used_by": ["storage", "deliver"],
     },
     frozenset({"vcf-all", "snv", "tnscope-umi", "annotated-somatic-vcf-all-index"}): {
         "tags": ["vcf-index", "tnscope-umi", "somatic"],
         "is_mandatory": False,
-        "used_by": ["storage"],
+        "used_by": ["storage", "deliver"],
     },
     frozenset({"tnscope-umi", "vcf-summary", "snv", "annotated-somatic-vcf-summary"}): {
         "tags": ["tnscope-umi", "vcf-report", "somatic"],
