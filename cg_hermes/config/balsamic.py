@@ -187,17 +187,17 @@ BALSAMIC_COMMON_TAGS = {
         "is_mandatory": False,
         "used_by": ["audit"],
     },
-    frozenset({"vcf-all", "snv", "TNscope-umi", "annotated-somatic-vcf-all"}): {
+    frozenset({"vcf-all", "snv", "tnscope-umi", "annotated-somatic-vcf-all"}): {
         "tags": ["vcf", "tnscope-umi", "somatic"],
         "is_mandatory": False,
         "used_by": ["storage"],
     },
-    frozenset({"vcf-all", "snv", "TNscope-umi", "annotated-somatic-vcf-all-index"}): {
+    frozenset({"vcf-all", "snv", "tnscope-umi", "annotated-somatic-vcf-all-index"}): {
         "tags": ["vcf-index", "tnscope-umi", "somatic"],
         "is_mandatory": False,
         "used_by": ["storage"],
     },
-    frozenset({"TNscope-umi", "vcf-summary", "snv", "annotated-somatic-vcf-summary"}): {
+    frozenset({"tnscope-umi", "vcf-summary", "snv", "annotated-somatic-vcf-summary"}): {
         "tags": ["tnscope-umi", "vcf-report", "somatic"],
         "is_mandatory": False,
         "used_by": ["audit"],
@@ -359,10 +359,10 @@ TUMOR_ONLY_PANEL_TAGS = {
     frozenset({"vcf-pass", "clinical-vcf-pass-index", "snv"}): {"is_mandatory": True},
     frozenset({"vcf-sv-pass", "clinical-vcf-sv-pass", "sv"}): {"is_mandatory": False},
     frozenset({"vcf-sv-pass", "clinical-vcf-sv-pass-index", "sv"}): {"is_mandatory": False},
-    frozenset({"vcf-all", "snv", "TNscope-umi", "annotated-somatic-vcf-all"},): {"is_mandatory": False},
-    frozenset({"vcf-all", "snv", "TNscope-umi", "annotated-somatic-vcf-all-index"},): {"is_mandatory": False},
-    frozenset({"annotated-somatic-vcf-summary", "TNscope-umi", "snv", "vcf-summary"}): {
-        "is_mandatory": False
+    frozenset({"vcf-all", "snv", "tnscope-umi", "annotated-somatic-vcf-all"},): {"is_mandatory": True},
+    frozenset({"vcf-all", "snv", "tnscope-umi", "annotated-somatic-vcf-all-index"},): {"is_mandatory": True},
+    frozenset({"annotated-somatic-vcf-summary", "tnscope-umi", "snv", "vcf-summary"}): {
+        "is_mandatory": True
     },
     frozenset({"annotated-somatic-vcf-all", "vcf-all", "snv", "vardict"}): {"is_mandatory": True},
     frozenset({"annotated-somatic-vcf-all-index", "vcf-all", "snv", "vardict"}): {
@@ -422,10 +422,10 @@ TUMOR_NORMAL_PANEL_TAGS = {
         "is_mandatory": True
     },
     frozenset({"stat-somatic-tmb", "tmb", "vardict"}): {"is_mandatory": True},
-    frozenset({"vcf-all", "snv", "TNscope-umi", "annotated-somatic-vcf-all"},): {"is_mandatory": False},
-    frozenset({"vcf-all", "snv", "TNscope-umi", "annotated-somatic-vcf-all-index"},): {"is_mandatory": False},
-    frozenset({"annotated-somatic-vcf-summary", "TNscope-umi", "snv", "vcf-summary"}): {
-        "is_mandatory": False
+    frozenset({"snv", "vcf-all", "tnscope-umi", "annotated-somatic-vcf-all"}): {"is_mandatory": True},
+    frozenset({"vcf-all", "snv", "tnscope-umi", "annotated-somatic-vcf-all-index"},): {"is_mandatory": True},
+    frozenset({"annotated-somatic-vcf-summary", "tnscope-umi", "snv", "vcf-summary"}): {
+        "is_mandatory": True
     },
     frozenset({"haplotypecaller", "snv", "vcf-all", "annotated-germline-vcf-all"}): {
         "is_mandatory": True
