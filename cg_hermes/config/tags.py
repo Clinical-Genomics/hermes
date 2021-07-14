@@ -135,6 +135,7 @@ TOOLS = {
     "strelka": {"description": "Cancer variant caller"},
     "stringtie": {"description": "Transcript assembler"},
     "tnscope": {"description": "Call snv indels"},
+    "tnscope-umi": {"description": "Call snv indels for umi"},
     "upd": {"description": "Uniparent disomy caller from bjhall"},
     "vardict": {"description": "Cancer variant caller"},
     "wisecondor": {"description": "NIPT caller"},
