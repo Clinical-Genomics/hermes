@@ -6,7 +6,7 @@ About changelog [here](https://keepachangelog.com/en/1.0.0/)
 
 ## [1.5.1]
 ### Added
-- Update BALSAMIC stored file with optional UMI 
+- Update BALSAMIC stored file with UMI 
 
 
 ## [1.5.0]
