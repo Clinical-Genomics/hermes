@@ -8,7 +8,7 @@ About changelog [here](https://keepachangelog.com/en/1.0.0/)
 ### Added
 - mitodel tag to mip_dna 
 
-## [1.5.1]
+## [1.5.2]
 ### Changed
 - Update to bump2version-ci@v3 
 
