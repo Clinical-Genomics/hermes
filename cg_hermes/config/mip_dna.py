@@ -118,6 +118,11 @@ MIP_DNA_TAGS = {
         "is_mandatory": True,
         "used_by": ["vogue"],
     },
+    frozenset(["mitodel"]): {
+        "tags": ["mitodel"],
+        "is_mandatory": True,
+        "used_by": ["scout"],
+    },
     frozenset(["peddy_ar", "ped_check"]): {
         "tags": ["peddy", "ped-check"],
         "is_mandatory": True,
