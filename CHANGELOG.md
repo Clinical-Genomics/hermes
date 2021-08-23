@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 About changelog [here](https://keepachangelog.com/en/1.0.0/)
 
+## [1.5.3]
+### Added
+- mitodel tag to mip_dna 
+
 ## [1.5.1]
 ### Changed
 - Update to bump2version-ci@v3 
