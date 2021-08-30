@@ -120,7 +120,7 @@ MIP_DNA_TAGS = {
     },
     frozenset(["mitodel"]): {
         "tags": ["mitodel"],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": ["scout"],
     },
     frozenset(["peddy_ar", "ped_check"]): {
