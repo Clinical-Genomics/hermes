@@ -73,6 +73,7 @@
 | gffcompare       | Compare gff files                                             |
 | haplotype-caller | Call snv and indels                                           |
 | manta            | Tool to call structural variants                              |
+| mitodel          | Tool to identify mitochondrial deletion signatures            |
 | mutect           | Cancer variant caller                                         |
 | peddy            | Tool to check pedigree and ancestral relations                |
 | scope            | Call snv indels                                               |

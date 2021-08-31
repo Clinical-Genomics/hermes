@@ -126,6 +126,7 @@ TOOLS = {
     "gffcompare": {"description": "Compare gff files"},
     "haplotype-caller": {"description": "Call snv and indels"},
     "manta": {"description": "Tool to call structural variants"},
+    "mitodel": {"description": "Tool to identify mitochondrial deletion signatures"},
     "mutect": {"description": "Cancer variant caller"},
     "peddy": {"description": "Tool to check pedigree and ancestral relations"},
     "picard": {"description": "Picard set of bioinformatic tools"},

@@ -97,6 +97,12 @@ files:
     step: version_collect_ar
     tag: ~
   - format: meta
+    id: sample_id
+    path: /path/to/rare-disease/cases/case_id/analysis/case_id/mitodel/sample_id_lanes_1_sorted_md_mitodel.MT.txt
+    path_index: ~
+    step: mitodel
+    tag: ~
+  - format: meta
     id: case_id
     path: /path/to/rare-disease/cases/case_id/analysis/case_id/multiqc_ar/multiqc_report.html
     path_index: ~
