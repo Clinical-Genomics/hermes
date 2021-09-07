@@ -4,10 +4,21 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 About changelog [here](https://keepachangelog.com/en/1.0.0/)
 
-## [1.5.1]
+## [1.5.4]
 ### Added
 - Update BALSAMIC stored file with UMI 
 
+## [1.5.3]
+### Added
+- mitodel tag to mip_dna 
+
+## [1.5.2]
+### Changed
+- Update to bump2version-ci@v3 
+
+## [1.5.1]
+### Added
+- bump2version-ci integration
 
 ## [1.5.0]
 ### Added
