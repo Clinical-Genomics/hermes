@@ -21,7 +21,7 @@
 | peddy_ar, ped_check                 | True        | peddy, ped-check            | audit, scout |
 | peddy, peddy_ar                     | True        | peddy, ped                  | audit, scout |
 | sex_check, peddy_ar                 | True        | peddy, sex-check            | audit, scout |
-| qccollect_ar, deliverables          | True        | qc-metrics, deliverables    | audit        |
+| qccollect_ar, deliverable           | True        | qc-metrics, deliverables    | audit        |
 | qccollect_ar, audit                 | True        | qc-metrics, audit           | audit        |
 | rhocall_viz                         | False       | rhocall-viz                 | scout        |
 | coverage, sambamba_depth            | True        | coverage, sambamba-depth    | chanjo       |

@@ -6,8 +6,8 @@ MUTANT_COMMON_TAGS = {
         "used_by": ["storage", "audit"],
     },
     frozenset({"instrument-properties", "report"}): {
-        "is_mandatory":False,
-        "tags": ["fohm-delivery","instrument-properties"],
+        "is_mandatory": False,
+        "tags": ["fohm-delivery", "instrument-properties"],
         "used_by": ["storage", "audit"],
     },
     frozenset({"runtime-settings", "runinfo"}): {

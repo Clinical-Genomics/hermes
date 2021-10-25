@@ -53,7 +53,7 @@
 | Tag name       | Description                               |
 |----------------|-------------------------------------------|
 | audit          | Audit files                               |
-| deliverables   | CG deliverables file                      |
+| deliverable    | CG deliverables file                      |
 | multiqc-html   | Multiqc report for the run in html format |
 | multiqc-json   | Multiqc report for the run in json format |
 | pdf            | Portable document format                  |

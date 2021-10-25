@@ -56,7 +56,7 @@ MIP_DNA_TAGS = {
         "used_by": ["scout"],
     },
     frozenset(["glnexus_merge"]): {
-        "tags": ["deepvariant","snv", "vcf"],
+        "tags": ["deepvariant", "snv", "vcf"],
         "index_tags": ["deepvariant", "snv", "vcf-index"],
         "is_mandatory": False,
         "used_by": ["storage"],
@@ -133,8 +133,8 @@ MIP_DNA_TAGS = {
         "is_mandatory": True,
         "used_by": ["audit", "scout"],
     },
-    frozenset(["qccollect_ar", "deliverables" ]): {
-        "tags": ["qc-metrics", "deliverables"],
+    frozenset(["qccollect_ar", "deliverable"]): {
+        "tags": ["qc-metrics", "deliverable"],
         "is_mandatory": True,
         "used_by": ["audit"],
     },

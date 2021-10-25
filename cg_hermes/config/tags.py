@@ -68,7 +68,7 @@ FAMILY_COMMON = {
 REPORTING_COMMON = {
     "audit": {"description": "Audit file"},
     "csv": {"description": "Comma separated values"},
-    "deliverables": {"description": "Deliverables file"},
+    "deliverable": {"description": "Deliverables file"},
     "delivery-report": {"description": "Delivery report with result for upload to Scout"},
     "multiqc-html": {"description": "Multiqc report for the run in html format"},
     "multiqc-json": {"description": "Multiqc report for the run in json format"},
@@ -184,7 +184,9 @@ MUTANT_SPECIFIC = {
     "vcf-covid": {"description": "VCF file containing covid data. Distinction req. by production"},
     "instrument-properties": {"description": "Sequencing metadata"},
     "consensus-sample": {"description": "Separate sample consensus fasta"},
-    "pangolin-typing-fohm": {"description": "Pangolin typing report with only qc_pass samples included"},
+    "pangolin-typing-fohm": {
+        "description": "Pangolin typing report with only qc_pass samples included"
+    },
 }
 
 AVAILABLE_USAGES = {

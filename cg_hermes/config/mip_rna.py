@@ -46,8 +46,8 @@ MIP_RNA_TAGS = {
         "is_mandatory": True,
         "used_by": ["vogue"],
     },
-    frozenset(["qccollect_ar", "deliverables" ]): {
-        "tags": ["qc-metrics", "deliverables"],
+    frozenset(["qccollect_ar", "deliverable"]): {
+        "tags": ["qc-metrics", "deliverable"],
         "is_mandatory": True,
         "used_by": ["audit"],
     },
