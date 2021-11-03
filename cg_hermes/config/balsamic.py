@@ -51,12 +51,6 @@ BALSAMIC_COMMON_TAGS = {
         "is_mandatory": True,
         "used_by": ["vogue", "audit"],
     },
-    frozenset({"scout-bam", "bam"}): {"tags": ["bam"], "is_mandatory": False, "used_by": ["scout"]},
-    frozenset({"scout-bam-index", "bam"}): {
-        "tags": ["bam-index"],
-        "is_mandatory": False,
-        "used_by": ["scout"],
-    },
     frozenset({"vcf-all", "tnhaplotyper", "snv", "annotated-somatic-vcf-all"}): {
         "tags": ["vcf", "tumor", "haplotype-caller", "somatic"],
         "is_mandatory": True,
@@ -152,16 +146,6 @@ BALSAMIC_COMMON_TAGS = {
         "is_mandatory": True,
         "used_by": ["audit"],
     },
-    frozenset({"normal-bam", "bam"}): {
-        "tags": ["bam", "normal"],
-        "is_mandatory": False,
-        "used_by": ["scout", "deliver"],
-    },
-    frozenset({"normal-bam-index", "bam"}): {
-        "tags": ["bam-index", "normal"],
-        "is_mandatory": False,
-        "used_by": ["scout", "deliver"],
-    },
     frozenset({"cram", "normal-cram"}): {
         "tags": ["cram", "normal"],
         "is_mandatory": False,
@@ -252,16 +236,6 @@ BALSAMIC_COMMON_TAGS = {
         "is_mandatory": False,
         "used_by": ["audit"],
     },
-    frozenset({"tumor-bam", "bam"}): {
-        "tags": ["bam", "tumor"],
-        "is_mandatory": False,
-        "used_by": ["scout", "deliver"],
-    },
-    frozenset({"tumor-bam-index", "bam"}): {
-        "tags": ["bam-index", "tumor"],
-        "is_mandatory": False,
-        "used_by": ["scout", "deliver"],
-    },
     frozenset({"cram", "tumor-cram"}): {
         "tags": ["cram", "tumor"],
         "is_mandatory": False,
@@ -312,8 +286,6 @@ TUMOR_ONLY_WGS_TAGS = {
     frozenset({"annotated-somatic-vcf-summary", "snv", "tnscope", "vcf-summary"}): {
         "is_mandatory": True
     },
-    frozenset({"tumor-bam", "bam"}): {"is_mandatory": True},
-    frozenset({"tumor-bam-index", "bam"}): {"is_mandatory": True},
     frozenset({"tumor-cram", "cram"}): {"is_mandatory": True},
     frozenset({"tumor-cram-index", "cram"}): {"is_mandatory": True},
     frozenset({"clinical-vcf-filtered", "snv", "vcf-filtered"}): {"is_mandatory": True},
@@ -325,8 +297,6 @@ TUMOR_ONLY_WGS_TAGS = {
 }
 
 TUMOR_NORMAL_WGS_TAGS = {
-    frozenset({"normal-bam", "bam"}): {"is_mandatory": True},
-    frozenset({"normal-bam-index", "bam"}): {"is_mandatory": True},
     frozenset({"normal-cram", "cram"}): {"is_mandatory": True},
     frozenset({"cram", "normal-cram-index"}): {"is_mandatory": True},
     frozenset({"tumor-bam", "bam"}): {"is_mandatory": True},
@@ -349,8 +319,6 @@ TUMOR_NORMAL_WGS_TAGS = {
 }
 
 TUMOR_ONLY_PANEL_TAGS = {
-    frozenset({"tumor-bam", "bam"}): {"is_mandatory": True},
-    frozenset({"tumor-bam-index", "bam"}): {"is_mandatory": True},
     frozenset({"tumor-cram", "cram"}): {"is_mandatory": True},
     frozenset({"tumor-cram-index", "cram"}): {"is_mandatory": True},
     frozenset({"clinical-vcf-filtered", "snv", "vcf-filtered"}): {"is_mandatory": True},
@@ -400,12 +368,9 @@ TUMOR_ONLY_PANEL_TAGS = {
 }
 
 TUMOR_NORMAL_PANEL_TAGS = {
-    frozenset({"tumor-bam", "bam"}): {"is_mandatory": True},
-    frozenset({"tumor-bam-index", "bam"}): {"is_mandatory": True},
+
     frozenset({"cram", "tumor-cram"}): {"is_mandatory": True},
     frozenset({"cram", "tumor-cram-index"}): {"is_mandatory": True},
-    frozenset({"normal-bam", "bam"}): {"is_mandatory": True},
-    frozenset({"normal-bam-index", "bam"}): {"is_mandatory": True},
     frozenset({"normal-cram", "cram"}): {"is_mandatory": True},
     frozenset({"cram", "normal-cram-index"}): {"is_mandatory": True},
     frozenset({"clinical-vcf-filtered", "snv", "vcf-filtered"}): {"is_mandatory": True},
