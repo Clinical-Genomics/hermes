@@ -299,8 +299,6 @@ TUMOR_ONLY_WGS_TAGS = {
 TUMOR_NORMAL_WGS_TAGS = {
     frozenset({"normal-cram", "cram"}): {"is_mandatory": True},
     frozenset({"cram", "normal-cram-index"}): {"is_mandatory": True},
-    frozenset({"tumor-bam", "bam"}): {"is_mandatory": True},
-    frozenset({"tumor-bam-index", "bam"}): {"is_mandatory": True},
     frozenset({"tumor-cram", "cram"}): {"is_mandatory": True},
     frozenset({"tumor-cram-index", "cram"}): {"is_mandatory": True},
     frozenset({"clinical-vcf-filtered", "snv", "vcf-filtered"}): {"is_mandatory": True},
