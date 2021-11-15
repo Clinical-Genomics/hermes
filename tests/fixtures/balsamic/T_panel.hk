@@ -666,6 +666,15 @@
             "id": "T_panel"
         },
         {
+            "path": "T_panel/analysis/delivery_report/T_panel_metrics_deliverables.yaml",
+            "step": "balsamic_delivery",
+            "format": "yaml",
+            "tag": [
+                "qc-metrics-yaml"
+            ],
+            "id": "T_panel"
+        },
+        {
             "path": "T_panel/T_panel.json",
             "step": "case_config",
             "format": "json",
