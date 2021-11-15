@@ -639,6 +639,7 @@
             ],
             "id": "TN_WGS"
         },
+        {
             "path": "TN_WGS/analysis/delivery_report/TN_WGS_metrics_deliverables.yaml",
             "step": "balsamic_delivery",
             "format": "yaml",
