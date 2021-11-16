@@ -5,6 +5,36 @@ However the tags that are available to a particular analysis is mandatory for th
 """
 
 BALSAMIC_COMMON_TAGS = {
+    frozenset({"cns", "cnv-cns"}): {
+        "tags": ["cnvkit", "segments"],
+        "is_mandatory": False,
+        "used_by": ["deliver"],
+    },
+    frozenset({"cnv-cnr", "cnr"}): {
+        "tags": ["cnvkit", "regions"],
+        "is_mandatory": False,
+        "used_by": ["deliver"],
+    },
+    frozenset({"cnv-scatter", "scatter"}): {
+        "tags": ["cnvkit", "visualization"],
+        "is_mandatory": False,
+        "used_by": ["deliver"],
+    },
+    frozenset({"cnv-diagram", "diagram"}): {
+        "tags": ["cnvkit", "visualization", "diagram"],
+        "is_mandatory": False,
+        "used_by": ["deliver"],
+    },
+    frozenset({"cnv-gene-breaks", "gene-breaks"}): {
+        "tags": ["cnvkit", "genes"],
+        "is_mandatory": False,
+        "used_by": ["storage"],
+    },
+    frozenset({"gene-metrics", "cnv-gene-metrics"}): {
+        "tags": ["cnvkit", "genes", "metrics"],
+        "is_mandatory": False,
+        "used_by": ["deliver"],
+    },
     frozenset({"coverage-qc-report"}): {
         "tags": ["delivery-report"],
         "is_mandatory": False,
@@ -51,6 +81,16 @@ BALSAMIC_COMMON_TAGS = {
         "is_mandatory": True,
         "used_by": ["scout", "deliver"],
     },
+    frozenset({"vcf-all", "cnvkit", "cnv", "annotated-somatic-vcf-all"}): {
+        "tags": ["cnvkit", "sv-vcf", "tumor", "somatic"],
+        "is_mandatory": False,
+        "used_by": ["deliver"],
+    },
+    frozenset({"vcf-all", "cnvkit", "annotated-somatic-vcf-all-index", "cnv"}): {
+        "tags": ["cnvkit", "sv-vcf-index", "tumor", "somatic"],
+        "is_mandatory": False,
+        "used_by": ["deliver"],
+    },
     frozenset({"tnscope", "vcf-summary", "snv", "annotated-somatic-vcf-summary"}): {
         "tags": ["sention", "tnscope", "vcf-report", "somatic"],
         "is_mandatory": False,
@@ -64,6 +104,11 @@ BALSAMIC_COMMON_TAGS = {
     frozenset({"vcf-summary", "manta", "annotated-somatic-vcf-summary", "sv"}): {
         "tags": ["sention", "manta", "vcf-report", "somatic"],
         "is_mandatory": True,
+        "used_by": ["audit"],
+    },
+    frozenset({"vcf-summary", "cnvkit", "cnv", "annotated-somatic-vcf-summary"}): {
+        "tags": ["cnvkit", "vcf-report", "somatic"],
+        "is_mandatory": False,
         "used_by": ["audit"],
     },
     frozenset({"read1", "quality-trimmed-fastq-read1"}): {
