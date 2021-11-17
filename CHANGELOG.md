@@ -6,7 +6,9 @@ About changelog [here](https://keepachangelog.com/en/1.0.0/)
 
 ## [1.5.5]
 ### Changed
-- Update tags according to new BALSAMIC features
+- Removed cnv tags from balsamic common tags
+- Added cnv tags for balsamic panel (tumor-only and tumor-normal)
+- Removed vardic tmb stat tags
 
 ## [1.5.4]
 ### Added
