@@ -186,11 +186,6 @@ BALSAMIC_COMMON_TAGS = {
         "is_mandatory": False,
         "used_by": ["audit"],
     },
-    frozenset({"tmb", "stat-somatic-tmb", "vardict"}): {
-        "tags": ["vardict", "tmb"],
-        "is_mandatory": False,
-        "used_by": ["audit"],
-    },
     frozenset({"vcf-all", "haplotypecaller", "snv", "annotated-germline-vcf-all"}): {
         "tags": ["vcf", "haplotype-caller", "germline"],
         "is_mandatory": False,
@@ -382,7 +377,6 @@ TUMOR_ONLY_PANEL_TAGS = {
     frozenset({"annotated-somatic-vcf-summary", "vcf-summary", "snv", "vardict"}): {
         "is_mandatory": True
     },
-    frozenset({"stat-somatic-tmb", "tmb", "vardict"}): {"is_mandatory": True},
     frozenset({"haplotypecaller", "annotated-germline-vcf-all", "vcf-all", "snv"}): {
         "is_mandatory": True
     },
@@ -473,7 +467,6 @@ TUMOR_NORMAL_PANEL_TAGS = {
     frozenset({"vcf-summary", "snv", "annotated-somatic-vcf-summary", "vardict"}): {
         "is_mandatory": True
     },
-    frozenset({"stat-somatic-tmb", "tmb", "vardict"}): {"is_mandatory": True},
     frozenset({"snv", "vcf-all", "tnscope-umi", "annotated-somatic-vcf-all"}): {"is_mandatory": True},
     frozenset({"vcf-all", "snv", "tnscope-umi", "annotated-somatic-vcf-all-index"},): {"is_mandatory": True},
     frozenset({"annotated-somatic-vcf-summary", "tnscope-umi", "snv", "vcf-summary"}): {
