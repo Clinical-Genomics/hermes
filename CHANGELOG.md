@@ -5,7 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 About changelog [here](https://keepachangelog.com/en/1.0.0/)
 
 ## [1.5.5]
-### Added
+### Changed
 - Update tags according to new BALSAMIC features
 
 ## [1.5.4]
