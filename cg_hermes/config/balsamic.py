@@ -319,11 +319,7 @@ TUMOR_NORMAL_WGS_TAGS = {
     frozenset({"tnscope", "snv", "vcf-summary", "annotated-somatic-vcf-summary"}): {
         "is_mandatory": True
     },
-    frozenset({"ascat-ngs"}): {
-        "tags": ["ascat-ngs", "visualization"],
-        "is_mandatory": True,
-        "used_by": ["scout", "deliver"],
-    },
+    frozenset({"ascat-ngs"}): {"is_mandatory": True},
 }
 
 TUMOR_ONLY_PANEL_TAGS = {
