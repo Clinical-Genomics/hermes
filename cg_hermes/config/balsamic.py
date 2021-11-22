@@ -7,32 +7,32 @@ However the tags that are available to a particular analysis is mandatory for th
 BALSAMIC_COMMON_TAGS = {
     frozenset({"cns", "cnv-cns"}): {
         "tags": ["cnvkit", "segments"],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": ["deliver"],
     },
     frozenset({"cnv-cnr", "cnr"}): {
         "tags": ["cnvkit", "regions"],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": ["deliver"],
     },
     frozenset({"cnv-scatter", "scatter"}): {
         "tags": ["cnvkit", "visualization"],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": ["deliver"],
     },
     frozenset({"cnv-diagram", "diagram"}): {
         "tags": ["cnvkit", "visualization", "diagram"],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": ["deliver"],
     },
     frozenset({"cnv-gene-breaks", "gene-breaks"}): {
         "tags": ["cnvkit", "genes"],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": ["storage"],
     },
     frozenset({"gene-metrics", "cnv-gene-metrics"}): {
         "tags": ["cnvkit", "genes", "metrics"],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": ["deliver"],
     },
     frozenset({"coverage-qc-report"}): {
@@ -83,12 +83,12 @@ BALSAMIC_COMMON_TAGS = {
     },
     frozenset({"vcf-all", "cnvkit", "cnv", "annotated-somatic-vcf-all"}): {
         "tags": ["cnvkit", "sv-vcf", "tumor", "somatic"],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": ["deliver"],
     },
     frozenset({"vcf-all", "cnvkit", "annotated-somatic-vcf-all-index", "cnv"}): {
         "tags": ["cnvkit", "sv-vcf-index", "tumor", "somatic"],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": ["deliver"],
     },
     frozenset({"tnscope", "vcf-summary", "snv", "annotated-somatic-vcf-summary"}): {
@@ -108,7 +108,7 @@ BALSAMIC_COMMON_TAGS = {
     },
     frozenset({"vcf-summary", "cnvkit", "cnv", "annotated-somatic-vcf-summary"}): {
         "tags": ["cnvkit", "vcf-report", "somatic"],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": ["audit"],
     },
     frozenset({"read1", "quality-trimmed-fastq-read1"}): {
@@ -183,11 +183,6 @@ BALSAMIC_COMMON_TAGS = {
     },
     frozenset({"tnscope-umi", "vcf-summary", "snv", "annotated-somatic-vcf-summary"}): {
         "tags": ["tnscope-umi", "vcf-report", "somatic"],
-        "is_mandatory": False,
-        "used_by": ["audit"],
-    },
-    frozenset({"tmb", "stat-somatic-tmb", "vardict"}): {
-        "tags": ["vardict", "tmb"],
         "is_mandatory": False,
         "used_by": ["audit"],
     },
@@ -317,6 +312,51 @@ TUMOR_NORMAL_WGS_TAGS = {
 }
 
 TUMOR_ONLY_PANEL_TAGS = {
+    frozenset({"cns", "cnv-cns"}): {
+        "tags": ["cnvkit", "segments"],
+        "is_mandatory": True,
+        "used_by": ["deliver"],
+    },
+    frozenset({"cnv-cnr", "cnr"}): {
+        "tags": ["cnvkit", "regions"],
+        "is_mandatory": True,
+        "used_by": ["deliver"],
+    },
+    frozenset({"cnv-scatter", "scatter"}): {
+        "tags": ["cnvkit", "visualization"],
+        "is_mandatory": True,
+        "used_by": ["deliver"],
+    },
+    frozenset({"cnv-diagram", "diagram"}): {
+        "tags": ["cnvkit", "visualization", "diagram"],
+        "is_mandatory": True,
+        "used_by": ["deliver"],
+    },
+    frozenset({"cnv-gene-breaks", "gene-breaks"}): {
+        "tags": ["cnvkit", "genes"],
+        "is_mandatory": True,
+        "used_by": ["storage"],
+    },
+    frozenset({"gene-metrics", "cnv-gene-metrics"}): {
+        "tags": ["cnvkit", "genes", "metrics"],
+        "is_mandatory": True,
+        "used_by": ["deliver"],
+    },
+    frozenset({"vcf-all", "cnvkit", "cnv", "annotated-somatic-vcf-all"}): {
+        "tags": ["cnvkit", "sv-vcf", "tumor", "somatic"],
+        "is_mandatory": True,
+        "used_by": ["deliver"],
+    },
+    frozenset({"vcf-all", "cnvkit", "annotated-somatic-vcf-all-index", "cnv"}): {
+        "tags": ["cnvkit", "sv-vcf-index", "tumor", "somatic"],
+        "is_mandatory": True,
+        "used_by": ["deliver"],
+    },
+    frozenset({"vcf-summary", "cnvkit", "cnv", "annotated-somatic-vcf-summary"}): {
+        "tags": ["cnvkit", "vcf-report", "somatic"],
+        "is_mandatory": True,
+        "used_by": ["audit"],
+    },
     frozenset({"tumor-cram", "cram"}): {"is_mandatory": True},
     frozenset({"tumor-cram-index", "cram"}): {"is_mandatory": True},
     frozenset({"clinical-vcf-filtered", "snv", "vcf-filtered"}): {"is_mandatory": True},
@@ -337,7 +377,6 @@ TUMOR_ONLY_PANEL_TAGS = {
     frozenset({"annotated-somatic-vcf-summary", "vcf-summary", "snv", "vardict"}): {
         "is_mandatory": True
     },
-    frozenset({"stat-somatic-tmb", "tmb", "vardict"}): {"is_mandatory": True},
     frozenset({"haplotypecaller", "annotated-germline-vcf-all", "vcf-all", "snv"}): {
         "is_mandatory": True
     },
@@ -366,7 +405,51 @@ TUMOR_ONLY_PANEL_TAGS = {
 }
 
 TUMOR_NORMAL_PANEL_TAGS = {
-
+    frozenset({"cns", "cnv-cns"}): {
+        "tags": ["cnvkit", "segments"],
+        "is_mandatory": True,
+        "used_by": ["deliver"],
+    },
+    frozenset({"cnv-cnr", "cnr"}): {
+        "tags": ["cnvkit", "regions"],
+        "is_mandatory": True,
+        "used_by": ["deliver"],
+    },
+    frozenset({"cnv-scatter", "scatter"}): {
+        "tags": ["cnvkit", "visualization"],
+        "is_mandatory": True,
+        "used_by": ["deliver"],
+    },
+    frozenset({"cnv-diagram", "diagram"}): {
+        "tags": ["cnvkit", "visualization", "diagram"],
+        "is_mandatory": True,
+        "used_by": ["deliver"],
+    },
+    frozenset({"cnv-gene-breaks", "gene-breaks"}): {
+        "tags": ["cnvkit", "genes"],
+        "is_mandatory": True,
+        "used_by": ["storage"],
+    },
+    frozenset({"gene-metrics", "cnv-gene-metrics"}): {
+        "tags": ["cnvkit", "genes", "metrics"],
+        "is_mandatory": True,
+        "used_by": ["deliver"],
+    },
+    frozenset({"vcf-all", "cnvkit", "cnv", "annotated-somatic-vcf-all"}): {
+        "tags": ["cnvkit", "sv-vcf", "tumor", "somatic"],
+        "is_mandatory": True,
+        "used_by": ["deliver"],
+    },
+    frozenset({"vcf-all", "cnvkit", "annotated-somatic-vcf-all-index", "cnv"}): {
+        "tags": ["cnvkit", "sv-vcf-index", "tumor", "somatic"],
+        "is_mandatory": True,
+        "used_by": ["deliver"],
+    },
+    frozenset({"vcf-summary", "cnvkit", "cnv", "annotated-somatic-vcf-summary"}): {
+        "tags": ["cnvkit", "vcf-report", "somatic"],
+        "is_mandatory": True,
+        "used_by": ["audit"],
+    },
     frozenset({"cram", "tumor-cram"}): {"is_mandatory": True},
     frozenset({"cram", "tumor-cram-index"}): {"is_mandatory": True},
     frozenset({"normal-cram", "cram"}): {"is_mandatory": True},
@@ -384,7 +467,6 @@ TUMOR_NORMAL_PANEL_TAGS = {
     frozenset({"vcf-summary", "snv", "annotated-somatic-vcf-summary", "vardict"}): {
         "is_mandatory": True
     },
-    frozenset({"stat-somatic-tmb", "tmb", "vardict"}): {"is_mandatory": True},
     frozenset({"snv", "vcf-all", "tnscope-umi", "annotated-somatic-vcf-all"}): {"is_mandatory": True},
     frozenset({"vcf-all", "snv", "tnscope-umi", "annotated-somatic-vcf-all-index"},): {"is_mandatory": True},
     frozenset({"annotated-somatic-vcf-summary", "tnscope-umi", "snv", "vcf-summary"}): {

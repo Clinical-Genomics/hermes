@@ -23,72 +23,6 @@
             "format": "json"
         },
         {
-            "path": "TN_WGS/analysis/cnv/ACC123_R.dedup.realign.cnr",
-            "path_index": [],
-            "step": "cnvkit_paired",
-            "tag": [
-                "cnv-cnr",
-                "cnr"
-            ],
-            "id": "TN_WGS",
-            "format": "cnr"
-        },
-        {
-            "path": "TN_WGS/analysis/cnv/ACC123_R.dedup.realign.cns",
-            "path_index": [],
-            "step": "cnvkit_paired",
-            "tag": [
-                "cns",
-                "cnv-cns"
-            ],
-            "id": "TN_WGS",
-            "format": "cns"
-        },
-        {
-            "path": "TN_WGS/analysis/cnv/ACC123_R.dedup.realign-diagram.pdf",
-            "path_index": [],
-            "step": "cnvkit_paired",
-            "tag": [
-                "diagram",
-                "cnv-diagram"
-            ],
-            "id": "TN_WGS",
-            "format": "pdf"
-        },
-        {
-            "path": "TN_WGS/analysis/cnv/TN_WGS.gene_breaks",
-            "path_index": [],
-            "step": "cnvkit_paired",
-            "tag": [
-                "gene-breaks",
-                "cnv-gene-breaks"
-            ],
-            "id": "TN_WGS",
-            "format": "gene_breaks"
-        },
-        {
-            "path": "TN_WGS/analysis/cnv/TN_WGS.gene_metrics",
-            "path_index": [],
-            "step": "cnvkit_paired",
-            "tag": [
-                "cnv-gene-metrics",
-                "gene-metrics"
-            ],
-            "id": "TN_WGS",
-            "format": "gene_metrics"
-        },
-        {
-            "path": "TN_WGS/analysis/cnv/ACC123_R.dedup.realign-scatter.pdf",
-            "path_index": [],
-            "step": "cnvkit_paired",
-            "tag": [
-                "cnv-scatter",
-                "scatter"
-            ],
-            "id": "TN_WGS",
-            "format": "pdf"
-        },
-        {
             "path": "TN_WGS/analysis/fastq/ACC123_R_1.fp.fastq.gz",
             "path_index": [],
             "step": "fastp",
@@ -463,36 +397,6 @@
             "format": "vcf.gz.tbi"
         },
         {
-            "path": "TN_WGS/analysis/vep/CNV.somatic.TN_WGS.cnvkit.all.vcf.gz",
-            "path_index": [
-                "TN_WGS/analysis/vep/CNV.somatic.TN_WGS.cnvkit.all.vcf.gz.tbi"
-            ],
-            "step": "vep_somatic",
-            "tag": [
-                "cnvkit",
-                "CNV",
-                "TN-WGS",
-                "annotated-somatic-vcf-all",
-                "vcf-all"
-            ],
-            "id": "TN_WGS",
-            "format": "vcf.gz"
-        },
-        {
-            "path": "TN_WGS/analysis/vep/CNV.somatic.TN_WGS.cnvkit.all.vcf.gz.tbi",
-            "path_index": "",
-            "step": "vep_somatic",
-            "tag": [
-                "annotated-somatic-vcf-all-index",
-                "cnvkit",
-                "CNV",
-                "TN-WGS",
-                "vcf-all"
-            ],
-            "id": "TN_WGS",
-            "format": "vcf.gz.tbi"
-        },
-        {
             "path": "TN_WGS/analysis/vep/SV.somatic.TN_WGS.manta.all.vcf.gz",
             "path_index": [
                 "TN_WGS/analysis/vep/SV.somatic.TN_WGS.manta.all.vcf.gz.tbi"
@@ -560,20 +464,6 @@
                 "vcf-summary",
                 "SNV",
                 "tnscope"
-            ],
-            "id": "TN_WGS",
-            "format": "html"
-        },
-        {
-            "path": "TN_WGS/analysis/vep/CNV.somatic.TN_WGS.cnvkit.all.vcf.gz_summary.html",
-            "path_index": [],
-            "step": "vep_somatic",
-            "tag": [
-                "cnvkit",
-                "CNV",
-                "annotated-somatic-vcf-summary",
-                "TN-WGS",
-                "vcf-summary"
             ],
             "id": "TN_WGS",
             "format": "html"

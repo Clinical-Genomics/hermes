@@ -1,19 +1,6 @@
 {
     "files": [
         {
-            "path": "T_panel/analysis/vep/SNV.somatic.T_panel.vardict.balsamic_stat",
-            "path_index": [],
-            "step": "vep_stat",
-            "tag": [
-                "T-panel",
-                "tmb",
-                "stat-somatic-tmb",
-                "vardict"
-            ],
-            "id": "T_panel",
-            "format": "balsamic_stat"
-        },
-        {
             "path": "T_panel/analysis/vep/SNV.germline.tumor.haplotypecaller.vcf.gz",
             "path_index": [
                 "T_panel/analysis/vep/SNV.germline.tumor.haplotypecaller.vcf.gz.tbi"
