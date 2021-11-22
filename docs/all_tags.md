@@ -68,6 +68,7 @@
 | chanjo           | Tool to keep track of coverage over specific regions          |
 | chromograph      | Tool to create PNG images from BED and WIG files from mikaell |
 | cnvkit           | Tool to call copy number variations                           |
+| ascat-ngs        | Tool to identify somatically acquired copy-number alterations |
 | cyrius           | Tool to call the problematic CYP2D6 gene                      |
 | deseq2           | Differential expression analysis with DESeq2                  |
 | genotyper        | SNV indel caller from sention                                 |

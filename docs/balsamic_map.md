@@ -6,6 +6,7 @@
 | diagram, cnv-diagram                                               | True        | cnvkit, visualization, diagram                   | deliver               |
 | gene-breaks, cnv-gene-breaks                                       | True        | cnvkit, genes                                    | storage               |
 | cnv-gene-metrics, gene-metrics                                     | True        | cnvkit, genes, metrics                           | deliver               |
+| ascat-ngs                                                          | True        | ascat-ngs, visualization                         | scout, deliver        |
 | qc-metrics-yaml                                                    | True        | qc-metrics, deliverable                          | vogue, deliver        |
 | html, multiqc-html                                                 | True        | multiqc-html                                     | scout, deliver, audit |
 | multiqc-json, json                                                 | True        | multiqc-json                                     | vogue, audit          |

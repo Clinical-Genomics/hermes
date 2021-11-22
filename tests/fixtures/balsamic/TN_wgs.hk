@@ -521,6 +521,76 @@
             "format": "crai"
         },
         {
+            "path": "TN_WGS/analysis/vcf/CNV.somatic.TN_WGS.ascat.ascatprofile.png",
+            "path_index": "",
+            "step": "ascat_tumor_normal",
+            "tag": [
+                "ascat-ngs"
+            ],
+            "id": "TN_WGS",
+            "format": "png"
+        },
+        {
+            "path": "TN_WGS/analysis/vcf/CNV.somatic.TN_WGS.ascat.ASPCF.png",
+            "path_index": "",
+            "step": "ascat_tumor_normal",
+            "tag": [
+                "ascat-ngs"
+            ],
+            "id": "TN_WGS",
+            "format": "png"
+        },
+        {
+            "path": "TN_WGS/analysis/vcf/CNV.somatic.TN_WGS.ascat.germline.png",
+            "path_index": "",
+            "step": "ascat_tumor_normal",
+            "tag": [
+                "ascat-ngs"
+            ],
+            "id": "TN_WGS",
+            "format": "png"
+        },
+        {
+            "path": "TN_WGS/analysis/vcf/CNV.somatic.TN_WGS.ascat.rawprofile.png",
+            "path_index": "",
+            "step": "ascat_tumor_normal",
+            "tag": [
+                "ascat-ngs"
+            ],
+            "id": "TN_WGS",
+            "format": "png"
+        },
+        {
+            "path": "TN_WGS/analysis/vcf/CNV.somatic.TN_WGS.ascat.sunrise.png",
+            "path_index": "",
+            "step": "ascat_tumor_normal",
+            "tag": [
+                "ascat-ngs"
+            ],
+            "id": "TN_WGS",
+            "format": "png"
+        },
+        {
+            "path": "TN_WGS/analysis/vcf/CNV.somatic.TN_WGS.ascat.tumor.png",
+            "path_index": "",
+            "step": "ascat_tumor_normal",
+            "tag": [
+                "ascat-ngs"
+            ],
+            "id": "TN_WGS",
+            "format": "png"
+        },
+        {
+            "path": "TN_WGS/analysis/vcf/CNV.somatic.TN_WGS.ascat.samplestatistics.txt",
+            "path_index": "",
+            "step": "ascat_tumor_normal",
+            "tag": [
+                "ascat-ngs"
+            ],
+            "id": "TN_WGS",
+            "format": "txt"
+        },
+        {
             "path": "TN_WGS/analysis/delivery_report/TN_WGS_report.html",
             "step": "balsamic_delivery",
             "format": "html",

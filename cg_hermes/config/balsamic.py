@@ -35,6 +35,11 @@ BALSAMIC_COMMON_TAGS = {
         "is_mandatory": False,
         "used_by": ["deliver"],
     },
+    frozenset({"ascat-ngs"}): {
+        "tags": ["ascat-ngs", "visualization"],
+        "is_mandatory": False,
+        "used_by": ["scout", "deliver"],
+    },
     frozenset({"coverage-qc-report"}): {
         "tags": ["delivery-report"],
         "is_mandatory": False,
@@ -313,6 +318,11 @@ TUMOR_NORMAL_WGS_TAGS = {
     },
     frozenset({"tnscope", "snv", "vcf-summary", "annotated-somatic-vcf-summary"}): {
         "is_mandatory": True
+    },
+    frozenset({"ascat-ngs"}): {
+        "tags": ["ascat-ngs", "visualization"],
+        "is_mandatory": True,
+        "used_by": ["scout", "deliver"],
     },
 }
 
