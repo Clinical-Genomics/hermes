@@ -67,6 +67,7 @@ FAMILY_COMMON = {
 
 REPORTING_COMMON = {
     "csv": {"description": "Comma separated values"},
+    "deliverable": {"description": "Deliverables file"},
     "delivery-report": {"description": "Delivery report with result for upload to Scout"},
     "multiqc-html": {"description": "Multiqc report for the run in html format"},
     "multiqc-json": {"description": "Multiqc report for the run in json format"},

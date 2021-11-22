@@ -876,6 +876,15 @@
             "id": "TN_panel"
         },
         {
+            "path": "TN_panel/analysis/delivery_report/TN_panel_metrics_deliverables.yaml",
+            "step": "balsamic_delivery",
+            "format": "yaml",
+            "tag": [
+                "qc-metrics-yaml"
+            ],
+            "id": "TN_panel"
+        },
+        {
             "path": "TN_panel/TN_panel.json",
             "step": "case_config",
             "format": "json",
