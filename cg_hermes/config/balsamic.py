@@ -35,12 +35,12 @@ BALSAMIC_COMMON_TAGS = {
         "is_mandatory": False,
         "used_by": ["deliver"],
     },
-    frozenset({"vcf-all", "annotated-somatic-vcf-all", "CNV", "ascat"}): {
+    frozenset({"ascat", "vcf-all", "annotated-somatic-vcf-all", "cnv"}): {
         "tags": ["ascat-ngs", "vcf", "somatic"],
         "is_mandatory": False,
         "used_by": ["deliver"],
     },
-    frozenset({"vcf-all", "annotated-somatic-vcf-all-index", "CNV", "ascat"}): {
+    frozenset({"ascat", "vcf-all", "annotated-somatic-vcf-all-index", "cnv"}): {
         "tags": ["ascat-ngs", "vcf-index", "somatic"],
         "is_mandatory": False,
         "used_by": ["deliver"],
@@ -328,6 +328,16 @@ TUMOR_NORMAL_WGS_TAGS = {
     },
     frozenset({"tnscope", "snv", "vcf-summary", "annotated-somatic-vcf-summary"}): {
         "is_mandatory": True
+    },
+    frozenset({"ascat", "vcf-all", "annotated-somatic-vcf-all", "cnv"}): {
+        "tags": ["ascat-ngs", "vcf", "somatic"],
+        "is_mandatory": True,
+        "used_by": ["deliver"],
+    },
+    frozenset({"ascat", "vcf-all", "annotated-somatic-vcf-all-index", "cnv"}): {
+        "tags": ["ascat-ngs", "vcf-index", "somatic"],
+        "is_mandatory": True,
+        "used_by": ["deliver"],
     },
     frozenset({"ascat-ngs"}): {
         "tags": ["ascat-ngs", "visualization"],

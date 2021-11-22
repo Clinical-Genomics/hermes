@@ -525,10 +525,10 @@
             "path_index": "TN_WGS/analysis/vep/CNV.somatic.TN_WGS.ascat.all.vcf.gz.tbi",
             "step": "vep_somatic",
             "tag": [
+                "ascat",
                 "vcf-all",
                 "annotated-somatic-vcf-all",
-                "CNV",
-                "ascat",
+                "cnv",
                 "TN-WGS"
             ],
             "id": "TN_WGS",
@@ -539,10 +539,10 @@
             "path_index": "",
             "step": "vep_somatic",
             "tag": [
+                "ascat",
                 "vcf-all",
                 "annotated-somatic-vcf-all-index",
-                "CNV",
-                "ascat",
+                "cnv",
                 "TN-WGS"
             ],
             "id": "TN_WGS",
