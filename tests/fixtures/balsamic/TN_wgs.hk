@@ -525,37 +525,25 @@
             "path_index": "TN_WGS/analysis/vep/CNV.somatic.TN_WGS.ascat.all.vcf.gz.tbi",
             "step": "vep_somatic",
             "tag": [
-                "annotated-somatic"
+                "vcf-all",
+                "annotated-somatic-vcf-all",
+                "CNV",
+                "ascat",
+                "TN-WGS"
             ],
             "id": "TN_WGS",
             "format": "vcf.gz"
         },
         {
-            "path": "TN_WGS/analysis/vep/CNV.somatic.TN_WGS.ascat.ascat.all.vcf.gz.tbi",
+            "path": "TN_WGS/analysis/vep/CNV.somatic.TN_WGS.ascat.all.vcf.gz.tbi",
             "path_index": "",
             "step": "vep_somatic",
             "tag": [
-                "annotated-somatic"
-            ],
-            "id": "TN_WGS",
-            "format": "vcf.gz.tbi"
-        },
-                {
-            "path": "TN_WGS/analysis/vep/CNV.somatic.TN_WGS.ascat.all.filtered.pass.vcf.gz",
-            "path_index": "TN_WGS/analysis/vep/CNV.somatic.TN_WGS.ascat.all.filtered.pass.vcf.gz.tbi",
-            "step": "bcftools_filter_ascat",
-            "tag": [
-                "research"
-            ],
-            "id": "TN_WGS",
-            "format": "vcf.gz"
-        },
-        {
-            "path": "TN_WGS/analysis/vep/CNV.somatic.TN_WGS.ascat.all.filtered.pass.vcf.gz.tbi",
-            "path_index": "",
-            "step": "bcftools_filter_ascat",
-            "tag": [
-                "research"
+                "vcf-all",
+                "annotated-somatic-vcf-all-index",
+                "CNV",
+                "ascat",
+                "TN-WGS"
             ],
             "id": "TN_WGS",
             "format": "vcf.gz.tbi"
