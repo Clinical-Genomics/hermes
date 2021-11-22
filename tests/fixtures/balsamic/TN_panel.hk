@@ -405,19 +405,6 @@
             "format": "vcf.gz.tbi"
         },
         {
-            "path": "TN_panel/analysis/vep/SNV.somatic.TN_panel.vardict.balsamic_stat",
-            "path_index": [],
-            "step": "vep_stat",
-            "tag": [
-                "vardict",
-                "stat-somatic-tmb",
-                "tmb",
-                "TN-panel"
-            ],
-            "id": "TN_panel",
-            "format": "balsamic_stat"
-        },
-        {
             "path": "TN_panel/analysis/fastq/ACC123_R_1.fp.fastq.gz",
             "path_index": [],
             "step": "fastp",

@@ -62,7 +62,6 @@
 | vardict, vcf-pass, snv, annotated-somatic-vcf-pass-index           | False       | vcf-snv-clinical-index, vardict, filtered        | scout, deliver        |
 | strelka, annotated-somatic-vcf-pass, vcf-pass, snv                 | False       | vcf, strelka, filtered                           | storage               |
 | strelka, vcf-pass, snv, annotated-somatic-vcf-pass-index           | False       | vcf-index, strelka, filtered                     | storage               |
-| vardict, stat-somatic-tmb, tmb                                     | False       | vardict, tmb                                     | audit                 |
 | strelka-germline, annotated-germline-vcf-all, snv, vcf-all         | False       | vcf, strelka, normal                             | storage               |
 | annotated-germline-vcf-all-index, strelka-germline, snv, vcf-all   | False       | vcf-index, strelka, normal                       | storage               |
 | annotated-germline-vcf-all, snv, haplotypecaller, vcf-all          | False       | vcf, haplotype-caller, normal                    | storage               |
