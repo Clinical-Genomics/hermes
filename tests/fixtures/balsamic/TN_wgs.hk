@@ -147,14 +147,14 @@
             "format": "vcf.gz.tbi"
         },
         {
-            "path": "TN_WGS/analysis/vep/SNV.somatic.TN_WGS.tnscope.filtered.pass.vcf.gz",
+            "path": "TN_WGS/analysis/vep/SNV.somatic.TN_WGS.tnscope.all.filtered.pass.vcf.gz",
             "path_index": [
-                "TN_WGS/analysis/vep/SNV.somatic.TN_WGS.tnscope.filtered.pass.vcf.gz.tbi"
+                "TN_WGS/analysis/vep/SNV.somatic.TN_WGS.tnscope.all.filtered.pass.vcf.gz.tbi"
             ],
-            "step": "ngs_filter_tnscope",
+            "step": "bcftools_intersect_tumor_only",
             "tag": [
-                "clinical-vcf-pass",
                 "SNV",
+                "clinical-vcf-pass",
                 "vcf-pass",
                 "TN-WGS"
             ],
@@ -162,13 +162,13 @@
             "format": "vcf.gz"
         },
         {
-            "path": "TN_WGS/analysis/vep/SNV.somatic.TN_WGS.tnscope.filtered.pass.vcf.gz.tbi",
+            "path": "TN_WGS/analysis/vep/SNV.somatic.TN_WGS.tnscope.all.filtered.pass.vcf.gz.tbi",
             "path_index": "",
-            "step": "ngs_filter_tnscope",
+            "step": "bcftools_intersect_tumor_only",
             "tag": [
-                "clinical-vcf-pass-index",
                 "SNV",
                 "vcf-pass",
+                "clinical-vcf-pass-index",
                 "TN-WGS"
             ],
             "id": "TN_WGS",
