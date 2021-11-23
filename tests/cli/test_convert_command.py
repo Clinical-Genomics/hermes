@@ -122,7 +122,7 @@ def test_convert_balsamic_t_only_panel_deliverables(
 def test_convert_balsamic_t_wgs_deliverables(
     cli_runner: CliRunner, balsamic_t_wgs_deliverables: Path
 ):
-    # GIVEN the path to a balsamic deliverables file with Tumor only data
+    # GIVEN the path to a balsamic deliverables file
     assert balsamic_t_wgs_deliverables.exists()
 
     # WHEN converting the deliverables to CG format

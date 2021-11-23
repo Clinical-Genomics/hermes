@@ -45,6 +45,16 @@ BALSAMIC_COMMON_TAGS = {
         "is_mandatory": False,
         "used_by": ["deliver"],
     },
+    frozenset({"research-vcf-sv-pass", "vcf-sv-pass"}): {
+        "tags": ["ascat-ngs", "vcf", "filtered"],
+        "is_mandatory": False,
+        "used_by": ["deliver"],
+    },
+    frozenset({"research-vcf-sv-pass-index", "vcf-sv-pass"}): {
+        "tags": ["ascat-ngs", "vcf-index", "filtered"],
+        "is_mandatory": False,
+        "used_by": ["deliver"],
+    },
     frozenset({"ascat-ngs"}): {
         "tags": ["ascat-ngs", "visualization"],
         "is_mandatory": False,
@@ -336,6 +346,16 @@ TUMOR_NORMAL_WGS_TAGS = {
     },
     frozenset({"ascat", "vcf-all", "annotated-somatic-vcf-all-index", "cnv"}): {
         "tags": ["ascat-ngs", "vcf-index", "somatic"],
+        "is_mandatory": True,
+        "used_by": ["deliver"],
+    },
+    frozenset({"research-vcf-sv-pass", "vcf-sv-pass"}): {
+        "tags": ["ascat-ngs", "vcf", "filtered"],
+        "is_mandatory": True,
+        "used_by": ["deliver"],
+    },
+    frozenset({"research-vcf-sv-pass-index", "vcf-sv-pass"}): {
+        "tags": ["ascat-ngs", "vcf-index", "filtered"],
         "is_mandatory": True,
         "used_by": ["deliver"],
     },

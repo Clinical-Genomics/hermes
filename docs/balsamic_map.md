@@ -6,8 +6,10 @@
 | diagram, cnv-diagram                                               | True        | cnvkit, visualization, diagram                   | deliver               |
 | gene-breaks, cnv-gene-breaks                                       | True        | cnvkit, genes                                    | storage               |
 | cnv-gene-metrics, gene-metrics                                     | True        | cnvkit, genes, metrics                           | deliver               |
-| ascat, vcf-all, annotated-somatic-vcf-all, CNV                     | True        | ascat-ngs, vcf, somatic                          | deliver               |
-| ascat, vcf-all, annotated-somatic-vcf-all-index, CNV               | True        | ascat-ngs, vcf-index, somatic                    | deliver               |
+| ascat, vcf-all, annotated-somatic-vcf-all, cnv                     | True        | ascat-ngs, vcf, somatic                          | deliver               |
+| ascat, vcf-all, annotated-somatic-vcf-all-index, cnv               | True        | ascat-ngs, vcf-index, somatic                    | deliver               |
+| research-vcf-sv-pass, vcf-sv-pass                                  | True        | ascat-ngs, vcf, filtered, somatic                | deliver               |
+| research-vcf-sv-pass-index, vcf-sv-pass                            | True        | ascat-ngs, vcf-index, filtered, somatic          | deliver               |
 | ascat-ngs                                                          | True        | ascat-ngs, visualization                         | scout, deliver        |
 | qc-metrics-yaml                                                    | True        | qc-metrics, deliverable                          | vogue, deliver        |
 | html, multiqc-html                                                 | True        | multiqc-html                                     | scout, deliver, audit |

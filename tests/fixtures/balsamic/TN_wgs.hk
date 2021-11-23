@@ -528,7 +528,7 @@
                 "ascat",
                 "vcf-all",
                 "annotated-somatic-vcf-all",
-                "cnv",
+                "CNV",
                 "TN-WGS"
             ],
             "id": "TN_WGS",
@@ -542,8 +542,34 @@
                 "ascat",
                 "vcf-all",
                 "annotated-somatic-vcf-all-index",
-                "cnv",
+                "CNV",
                 "TN-WGS"
+            ],
+            "id": "TN_WGS",
+            "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "TN_WGS/analysis/vep/CNV.somatic.TN_WGS.ascat.all.filtered.pass.vcf.gz",
+            "path_index": [
+                "TN_WGS/analysis/vep/CNV.somatic.TN_WGS.ascat.all.filtered.pass.vcf.gz.tbi"
+            ],
+            "step": "bcftools_filter_ascat",
+            "tag": [
+                "TN-WGS",
+                "research-vcf-sv-pass",
+                "vcf-sv-pass"
+            ],
+            "id": "TN-WGS",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "TN_WGS/analysis/vep/CNV.somatic.TN_WGS.ascat.all.filtered.pass.vcf.gz.tbi",
+            "path_index": "",
+            "step": "bcftools_filter_ascat",
+            "tag": [
+                "TN-WGS",
+                "vcf-sv-pass",
+                "research-vcf-sv-pass-index"
             ],
             "id": "TN_WGS",
             "format": "vcf.gz.tbi"
