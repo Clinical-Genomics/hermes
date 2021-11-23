@@ -111,6 +111,16 @@ BALSAMIC_COMMON_TAGS = {
         "is_mandatory": True,
         "used_by": ["storage"],
     },
+    frozenset({"vcf-filtered", "snv", "research-vcf-filtered"}): {
+        "tags": ["vcf-snv-research", "filtered", "somatic", "haplotype-caller"],
+        "is_mandatory": False,
+        "used_by": ["storage"],
+    },
+    frozenset({"vcf-filtered", "snv", "research-vcf-filtered-index"}): {
+        "tags": ["vcf-snv-research-index", "filtered", "somatic", "haplotype-caller"],
+        "is_mandatory": False,
+        "used_by": ["storage"],
+    },
     frozenset({"snv", "research-vcf-pass", "vcf-pass"}): {
         "tags": ["vcf", "filtered", "somatic", "haplotype-caller"],
         "is_mandatory": True,
