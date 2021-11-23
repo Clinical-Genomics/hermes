@@ -60,6 +60,26 @@ BALSAMIC_COMMON_TAGS = {
         "is_mandatory": False,
         "used_by": ["scout", "deliver"],
     },
+    frozenset({"delly", "annotated-somatic-vcf-all", "sv", "vcf-all"}): {
+        "tags": ["delly", "vcf", "somatic"],
+        "is_mandatory": True,
+        "used_by": ["deliver"],
+    },
+    frozenset({"delly", "annotated-somatic-vcf-all-index", "sv", "vcf-all"}): {
+        "tags": ["delly", "vcf-index", "somatic"],
+        "is_mandatory": True,
+        "used_by": ["deliver"],
+    },
+    frozenset({"sv", "vcf-sv-pass", "research-vcf-sv-pass"}): {
+        "tags": ["delly", "vcf", "filtered", "somatic"],
+        "is_mandatory": True,
+        "used_by": ["deliver"],
+    },
+    frozenset({"sv", "vcf-sv-pass", "research-vcf-sv-pass-index"}): {
+        "tags": ["delly", "vcf-index", "filtered", "somatic"],
+        "is_mandatory": True,
+        "used_by": ["deliver"],
+    },
     frozenset({"coverage-qc-report"}): {
         "tags": ["delivery-report"],
         "is_mandatory": False,

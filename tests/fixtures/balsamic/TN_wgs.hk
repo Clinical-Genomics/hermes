@@ -673,6 +673,64 @@
             "format": "txt"
         },
         {
+            "path": "TN_WGS/analysis/vep/SV.somatic.TN_WGS.delly.all.vcf.gz",
+            "path_index": [
+                "TN_WGS/analysis/vep/SV.somatic.TN_WGS.delly.all.vcf.gz.tbi"
+            ],
+            "step": "vep_somatic",
+            "tag": [
+                "annotated-somatic-vcf-all",
+                "SV",
+                "vcf-all",
+                "delly",
+                "TN-WGS"
+            ],
+            "id": "TN_WGS",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "TN_WGS/analysis/vep/SV.somatic.TN_WGS.delly.all.vcf.gz.tbi",
+            "path_index": "",
+            "step": "vep_somatic",
+            "tag": [
+                "SV",
+                "vcf-all",
+                "annotated-somatic-vcf-all-index",
+                "delly",
+                "TN-WGS"
+            ],
+            "id": "TN_WGS",
+            "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "TN_WGS/analysis/vep/SV.somatic.TN_WGS.delly.all.filtered.pass.vcf.gz",
+            "path_index": [
+                "TN_WGS/analysis/vep/SV.somatic.TN_WGS.delly.all.filtered.pass.vcf.gz.tbi"
+            ],
+            "step": "bcftools_filter_delly",
+            "tag": [
+                "research-vcf-sv-pass",
+                "SV",
+                "vcf-sv-pass",
+                "TN-WGS"
+            ],
+            "id": "TN_WGS",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "TN_WGS/analysis/vep/SV.somatic.TN_WGS.delly.all.filtered.pass.vcf.gz.tbi",
+            "path_index": "",
+            "step": "bcftools_filter_delly",
+            "tag": [
+                "SV",
+                "vcf-sv-pass",
+                "TN-WGS",
+                "research-vcf-sv-pass-index"
+            ],
+            "id": "TN_WGS",
+            "format": "vcf.gz.tbi"
+        },
+        {
             "path": "TN_WGS/analysis/delivery_report/TN_WGS_report.html",
             "step": "balsamic_delivery",
             "format": "html",

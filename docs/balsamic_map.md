@@ -11,6 +11,10 @@
 | research-vcf-sv-pass, vcf-sv-pass                                  | True        | ascat-ngs, vcf, filtered, somatic                | deliver               |
 | research-vcf-sv-pass-index, vcf-sv-pass                            | True        | ascat-ngs, vcf-index, filtered, somatic          | deliver               |
 | ascat-ngs                                                          | True        | ascat-ngs, visualization                         | scout, deliver        |
+| delly, annotated-somatic-vcf-all, sv, vcf-all                      | True        | delly, vcf, somatic                              | deliver               |
+| delly, annotated-somatic-vcf-all-index, sv, vcf-all                | True        | delly, vcf-index, somatic                        | deliver               |
+| sv, vcf-sv-pass, research-vcf-sv-pass                              | True        | delly, vcf, filtered, somatic                    | deliver               |
+| sv, vcf-sv-pass, research-vcf-sv-pass-index                        | True        | delly, vcf-index, filtered, somatic              | deliver               |
 | qc-metrics-yaml                                                    | True        | qc-metrics, deliverable                          | vogue, deliver        |
 | html, multiqc-html                                                 | True        | multiqc-html                                     | scout, deliver, audit |
 | multiqc-json, json                                                 | True        | multiqc-json                                     | vogue, audit          |
