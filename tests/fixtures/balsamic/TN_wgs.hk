@@ -397,6 +397,34 @@
             "format": "vcf.gz.tbi"
         },
         {
+            "path": "TN_WGS/analysis/vep/SNV.somatic.TN_WGS.tnhaplotyper.all.filtered.pass.vcf.gz",
+            "path_index": [
+                "TN_WGS/analysis/vep/SNV.somatic.TN_WGS.tnhaplotyper.all.filtered.pass.vcf.gz.tbi"
+            ],
+            "step": "bcftools_filter_tnhaplotyper_tumor_normal",
+            "tag": [
+                "TN-WGS",
+                "SNV",
+                "research-vcf-pass",
+                "vcf-pass"
+            ],
+            "id": "TN_WGS",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "TN_WGS/analysis/vep/SNV.somatic.TN_WGS.tnhaplotyper.all.filtered.pass.vcf.gz.tbi",
+            "path_index": "",
+            "step": "bcftools_filter_tnhaplotyper_tumor_normal",
+            "tag": [
+                "TN-WGS",
+                "SNV",
+                "research-vcf-pass-index",
+                "vcf-pass"
+            ],
+            "id": "TN_WGS",
+            "format": "vcf.gz.tbi"
+        },
+        {
             "path": "TN_WGS/analysis/vep/SV.somatic.TN_WGS.manta.all.vcf.gz",
             "path_index": [
                 "TN_WGS/analysis/vep/SV.somatic.TN_WGS.manta.all.vcf.gz.tbi"

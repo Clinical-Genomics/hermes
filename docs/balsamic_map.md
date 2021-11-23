@@ -18,6 +18,8 @@
 | scout-bam-index, bam                                               | False       | bam-index                                        | scout                 |
 | tnhaplotyper, snv, annotated-somatic-vcf-all, vcf-all              | True        | vcf, tumor, haplotype-caller                     | storage               |
 | tnhaplotyper, annotated-somatic-vcf-all-index, snv, vcf-all        | True        | vcf-index, tumor, haplotype-caller               | storage               |
+| snv, research-vcf-pass, vcf-pass                                   | True        | vcf, filtered, somatic, haplotype-caller         | storage               |
+| snv, research-vcf-pass-index, vcf-pass                             | True        | vcf-index, filtered, somatic, haplotype-caller   | storage               |
 | tnscope, annotated-somatic-vcf-all, snv, vcf-all                   | False       | tumor, scope, vcf-snv-research                   | scout, deliver        |
 | tnscope, annotated-somatic-vcf-all-index, snv, vcf-all             | False       | tumor, scope, vcf-snv-research-index             | scout, deliver        |
 | annotated-somatic-vcf-all, tnsnv, snv, vcf-all                     | False       | vcf, tumor, genotyper                            | storage               |
