@@ -738,7 +738,6 @@
             "step": "bcftools_filter_delly",
             "tag": [
                 "research-vcf-sv-pass",
-                "SV",
                 "vcf-sv-pass",
                 "TN-WGS"
             ],
@@ -746,11 +745,10 @@
             "format": "vcf.gz"
         },
         {
-            "path": "TN_WGS/analysis/vep/SV.somatic.TN_WGS.delly.all.filtered.pass.vcf.gz.tbi",
+            "path": "TN_WGS/analysis/vep/SV.somatic.TN_WGS.",
             "path_index": "",
             "step": "bcftools_filter_delly",
             "tag": [
-                "SV",
                 "vcf-sv-pass",
                 "TN-WGS",
                 "research-vcf-sv-pass-index"
