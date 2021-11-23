@@ -6,7 +6,7 @@ About changelog [here](https://keepachangelog.com/en/1.0.0/)
 
 ## [1.5.7]
 ### Added
-- Balsamic ascatNgs tags for Scout and delivery
+- Added BALSAMIC ascatNgs and Delly tags and updated outdated tags
 
 ## [1.5.6]
 ### Added
