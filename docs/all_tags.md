@@ -68,6 +68,8 @@
 | chanjo           | Tool to keep track of coverage over specific regions          |
 | chromograph      | Tool to create PNG images from BED and WIG files from mikaell |
 | cnvkit           | Tool to call copy number variations                           |
+| ascat-ngs        | Tool to identify somatically acquired copy-number alterations |
+| delly            | Structural variant prediction tool                            |
 | cyrius           | Tool to call the problematic CYP2D6 gene                      |
 | deseq2           | Differential expression analysis with DESeq2                  |
 | genotyper        | SNV indel caller from sention                                 |
@@ -75,12 +77,10 @@
 | haplotype-caller | Call snv and indels                                           |
 | manta            | Tool to call structural variants                              |
 | mitodel          | Tool to identify mitochondrial deletion signatures            |
-| mutect           | Cancer variant caller                                         |
 | peddy            | Tool to check pedigree and ancestral relations                |
 | scope            | Call snv indels                                               |
 | sention          | Sention algorithm                                             |
 | star-fusion      | Fusion caller                                                 |
-| strelka          | Cancer variant caller                                         |
 | stringtie        | Transcript assembler                                          |
 | upd              | Uniparent disomy caller from bjhall                           |
 | vardict          | Cancer variant caller                                         |

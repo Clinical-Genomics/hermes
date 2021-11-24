@@ -35,6 +35,91 @@ BALSAMIC_COMMON_TAGS = {
         "is_mandatory": False,
         "used_by": ["deliver"],
     },
+    frozenset({"ascat", "vcf-all", "annotated-somatic-vcf-all", "cnv"}): {
+        "tags": ["ascat-ngs", "vcf", "somatic"],
+        "is_mandatory": False,
+        "used_by": ["deliver"],
+    },
+    frozenset({"ascat", "vcf-all", "annotated-somatic-vcf-all-index", "cnv"}): {
+        "tags": ["ascat-ngs", "vcf-index", "somatic"],
+        "is_mandatory": False,
+        "used_by": ["deliver"],
+    },
+    frozenset({"research-vcf-sv-pass", "vcf-sv-pass"}): {
+        "tags": ["ascat-ngs", "vcf", "filtered"],
+        "is_mandatory": False,
+        "used_by": ["deliver"],
+    },
+    frozenset({"research-vcf-sv-pass-index", "vcf-sv-pass"}): {
+        "tags": ["ascat-ngs", "vcf-index", "filtered"],
+        "is_mandatory": False,
+        "used_by": ["deliver"],
+    },
+    frozenset({"ascat-ngs-samplestatistics", "samplestatistics"}): {
+        "tags": ["ascat-ngs", "visualization"],
+        "is_mandatory": False,
+        "used_by": ["scout", "deliver"],
+    },
+    frozenset({"aspcfplot", "ascat-ngs-aspcfplot"}): {
+        "tags": ["ascat-ngs", "visualization"],
+        "is_mandatory": False,
+        "used_by": ["scout", "deliver"],
+    },
+    frozenset({"ascat-ngs-germlineplot", "germlineplot"}): {
+        "tags": ["ascat-ngs", "visualization"],
+        "is_mandatory": False,
+        "used_by": ["scout", "deliver"],
+    },
+    frozenset({"ascat-ngs-rawprofileplot", "rawprofileplot"}): {
+        "tags": ["ascat-ngs", "visualization"],
+        "is_mandatory": False,
+        "used_by": ["scout", "deliver"],
+    },
+    frozenset({"sunriseplot", "ascat-ngs-sunriseplot"}): {
+        "tags": ["ascat-ngs", "visualization"],
+        "is_mandatory": False,
+        "used_by": ["scout", "deliver"],
+    },
+    frozenset({"tumorplot", "ascat-ngs-tumorplot"}): {
+        "tags": ["ascat-ngs", "visualization"],
+        "is_mandatory": False,
+        "used_by": ["scout", "deliver"],
+    },
+    frozenset({"ascat-ngs-ascatprofileplot", "ascatprofileplot"}): {
+        "tags": ["ascat-ngs", "visualization"],
+        "is_mandatory": False,
+        "used_by": ["scout", "deliver"],
+    },
+    frozenset({"delly", "annotated-somatic-vcf-all", "sv", "vcf-all"}): {
+        "tags": ["delly", "vcf", "somatic"],
+        "is_mandatory": True,
+        "used_by": ["deliver"],
+    },
+    frozenset({"delly", "annotated-somatic-vcf-all-index", "sv", "vcf-all"}): {
+        "tags": ["delly", "vcf-index", "somatic"],
+        "is_mandatory": True,
+        "used_by": ["deliver"],
+    },
+    frozenset({"sv", "vcf-sv-pass", "research-vcf-sv-pass"}): {
+        "tags": ["delly", "vcf", "filtered", "somatic"],
+        "is_mandatory": False,
+        "used_by": ["deliver"],
+    },
+    frozenset({"sv", "vcf-sv-pass", "research-vcf-sv-pass-index"}): {
+        "tags": ["delly", "vcf-index", "filtered", "somatic"],
+        "is_mandatory": False,
+        "used_by": ["deliver"],
+    },
+    frozenset({"vcf-sv-pass", "research-vcf-sv-pass"}): {
+        "tags": ["delly", "vcf", "filtered", "somatic"],
+        "is_mandatory": False,
+        "used_by": ["deliver"],
+    },
+    frozenset({"vcf-sv-pass", "research-vcf-sv-pass-index"}): {
+        "tags": ["delly", "vcf-index", "filtered", "somatic"],
+        "is_mandatory": False,
+        "used_by": ["deliver"],
+    },
     frozenset({"coverage-qc-report"}): {
         "tags": ["delivery-report"],
         "is_mandatory": False,
@@ -63,6 +148,26 @@ BALSAMIC_COMMON_TAGS = {
     },
     frozenset({"vcf-all", "tnhaplotyper", "snv", "annotated-somatic-vcf-all-index"}): {
         "tags": ["vcf-index", "tumor", "haplotype-caller", "somatic"],
+        "is_mandatory": True,
+        "used_by": ["storage"],
+    },
+    frozenset({"vcf-filtered", "snv", "research-vcf-filtered"}): {
+        "tags": ["vcf-snv-research", "filtered", "somatic", "haplotype-caller"],
+        "is_mandatory": False,
+        "used_by": ["storage"],
+    },
+    frozenset({"vcf-filtered", "snv", "research-vcf-filtered-index"}): {
+        "tags": ["vcf-snv-research-index", "filtered", "somatic", "haplotype-caller"],
+        "is_mandatory": False,
+        "used_by": ["storage"],
+    },
+    frozenset({"snv", "research-vcf-pass", "vcf-pass"}): {
+        "tags": ["vcf", "filtered", "somatic", "haplotype-caller"],
+        "is_mandatory": True,
+        "used_by": ["storage"],
+    },
+    frozenset({"snv", "research-vcf-pass-index", "vcf-pass"}): {
+        "tags": ["vcf-index", "filtered", "somatic", "haplotype-caller"],
         "is_mandatory": True,
         "used_by": ["storage"],
     },
@@ -313,6 +418,61 @@ TUMOR_NORMAL_WGS_TAGS = {
     },
     frozenset({"tnscope", "snv", "vcf-summary", "annotated-somatic-vcf-summary"}): {
         "is_mandatory": True
+    },
+    frozenset({"ascat", "vcf-all", "annotated-somatic-vcf-all", "cnv"}): {
+        "tags": ["ascat-ngs", "vcf", "somatic"],
+        "is_mandatory": True,
+        "used_by": ["deliver"],
+    },
+    frozenset({"ascat", "vcf-all", "annotated-somatic-vcf-all-index", "cnv"}): {
+        "tags": ["ascat-ngs", "vcf-index", "somatic"],
+        "is_mandatory": True,
+        "used_by": ["deliver"],
+    },
+    frozenset({"research-vcf-sv-pass", "vcf-sv-pass"}): {
+        "tags": ["ascat-ngs", "vcf", "filtered"],
+        "is_mandatory": True,
+        "used_by": ["deliver"],
+    },
+    frozenset({"research-vcf-sv-pass-index", "vcf-sv-pass"}): {
+        "tags": ["ascat-ngs", "vcf-index", "filtered"],
+        "is_mandatory": True,
+        "used_by": ["deliver"],
+    },
+    frozenset({"ascat-ngs-samplestatistics", "samplestatistics"}): {
+        "tags": ["ascat-ngs", "visualization"],
+        "is_mandatory": True,
+        "used_by": ["scout", "deliver"],
+    },
+    frozenset({"aspcfplot", "ascat-ngs-aspcfplot"}): {
+        "tags": ["ascat-ngs", "visualization"],
+        "is_mandatory": True,
+        "used_by": ["scout", "deliver"],
+    },
+    frozenset({"ascat-ngs-germlineplot", "germlineplot"}): {
+        "tags": ["ascat-ngs", "visualization"],
+        "is_mandatory": True,
+        "used_by": ["scout", "deliver"],
+    },
+    frozenset({"ascat-ngs-rawprofileplot", "rawprofileplot"}): {
+        "tags": ["ascat-ngs", "visualization"],
+        "is_mandatory": True,
+        "used_by": ["scout", "deliver"],
+    },
+    frozenset({"sunriseplot", "ascat-ngs-sunriseplot"}): {
+        "tags": ["ascat-ngs", "visualization"],
+        "is_mandatory": True,
+        "used_by": ["scout", "deliver"],
+    },
+    frozenset({"tumorplot", "ascat-ngs-tumorplot"}): {
+        "tags": ["ascat-ngs", "visualization"],
+        "is_mandatory": True,
+        "used_by": ["scout", "deliver"],
+    },
+    frozenset({"ascat-ngs-ascatprofileplot", "ascatprofileplot"}): {
+        "tags": ["ascat-ngs", "visualization"],
+        "is_mandatory": True,
+        "used_by": ["scout", "deliver"],
     },
 }
 
