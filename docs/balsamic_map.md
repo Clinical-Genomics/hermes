@@ -62,28 +62,15 @@
 | normal-cram-index, cram                                            | False       | cram-index                                       | scout, deliver        |
 | vardict, annotated-somatic-vcf-all, snv, vcf-all                   | False       | vcf, vardict                                     | storage               |
 | vardict, annotated-somatic-vcf-all-index, snv, vcf-all             | False       | vcf-index, vardict                               | storage               |
-| strelka, snv, annotated-somatic-vcf-all, vcf-all                   | False       | vcf, strelka                                     | storage               |
-| strelka, annotated-somatic-vcf-all-index, snv, vcf-all             | False       | vcf-index, strelka                               | storage               |
-| annotated-somatic-vcf-all, mutect, snv, vcf-all                    | False       | vcf, mutect                                      | storage               |
-| annotated-somatic-vcf-all-index, mutect, snv, vcf-all              | False       | vcf-index, mutect                                | storage               |
 | vardict, vcf-summary, annotated-somatic-vcf-summary, snv           | False       | vardict, vcf-report                              | audit                 |
-| vcf-summary, annotated-somatic-vcf-summary, snv, mutect            | False       | mutect, vcf-report                               | audit                 |
-| strelka, annotated-somatic-vcf-summary, snv, vcf-summary           | False       | strelka, vcf-report                              | audit                 |
-| annotated-somatic-vcf-pass, vcf-pass, snv, mutect                  | False       | vcf, mutect, filtered                            | storage               |
-| vcf-pass, snv, annotated-somatic-vcf-pass-index, mutect            | False       | vcf-index, mutect, filtered                      | storage               |
 | vardict, annotated-somatic-vcf-pass, vcf-pass, snv                 | False       | vcf-snv-clinical, vardict, filtered              | scout, deliver        |
 | vardict, vcf-pass, snv, annotated-somatic-vcf-pass-index           | False       | vcf-snv-clinical-index, vardict, filtered        | scout, deliver        |
-| strelka, annotated-somatic-vcf-pass, vcf-pass, snv                 | False       | vcf, strelka, filtered                           | storage               |
-| strelka, vcf-pass, snv, annotated-somatic-vcf-pass-index           | False       | vcf-index, strelka, filtered                     | storage               |
-| strelka-germline, annotated-germline-vcf-all, snv, vcf-all         | False       | vcf, strelka, normal                             | storage               |
-| annotated-germline-vcf-all-index, strelka-germline, snv, vcf-all   | False       | vcf-index, strelka, normal                       | storage               |
 | annotated-germline-vcf-all, snv, haplotypecaller, vcf-all          | False       | vcf, haplotype-caller, normal                    | storage               |
 | annotated-germline-vcf-all-index, snv, haplotypecaller, vcf-all    | False       | vcf-index, haplotype-caller, normal              | storage               |
 | manta-germline, annotated-germline-vcf-all, sv, vcf-all            | False       | sv-vcf, manta, normal                            | storage               |
 | annotated-germline-vcf-all-index, sv, manta-germline, vcf-all      | False       | sv-vcf-index, manta, normal                      | storage               |
 | dnascope, annotated-germline-vcf-all, snv, vcf-all                 | False       | vcf, scope, normal                               | storage               |
 | annotated-germline-vcf-all-index, dnascope, snv, vcf-all           | False       | vcf-index, scope, normal                         | storage               |
-| vcf-summary, strelka-germline, annotated-germline-vcf-summary, snv | False       | strelka, normal, vcf-report                      | audit                 |
 | vcf-summary, annotated-germline-vcf-summary, snv, haplotypecaller  | False       | haplotype-caller, normal, vcf-report             | audit                 |
 | dnascope, annotated-germline-vcf-summary, snv, vcf-summary         | False       | scope, normal, vcf-report                        | audit                 |
 | manta-germline, annotated-germline-vcf-summary, sv, vcf-summary    | False       | manta, normal, vcf-report                        | audit                 |

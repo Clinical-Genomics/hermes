@@ -77,12 +77,10 @@
 | haplotype-caller | Call snv and indels                                           |
 | manta            | Tool to call structural variants                              |
 | mitodel          | Tool to identify mitochondrial deletion signatures            |
-| mutect           | Cancer variant caller                                         |
 | peddy            | Tool to check pedigree and ancestral relations                |
 | scope            | Call snv indels                                               |
 | sention          | Sention algorithm                                             |
 | star-fusion      | Fusion caller                                                 |
-| strelka          | Cancer variant caller                                         |
 | stringtie        | Transcript assembler                                          |
 | upd              | Uniparent disomy caller from bjhall                           |
 | vardict          | Cancer variant caller                                         |
