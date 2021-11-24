@@ -635,7 +635,8 @@
             "path_index": "",
             "step": "ascat_tumor_normal",
             "tag": [
-                "ascat-ngs"
+                "ascat-ngs-ascatprofileplot",
+                "ascatprofileplot"
             ],
             "id": "TN_WGS",
             "format": "png"
@@ -645,7 +646,8 @@
             "path_index": "",
             "step": "ascat_tumor_normal",
             "tag": [
-                "ascat-ngs"
+                "aspcfplot",
+                "ascat-ngs-aspcfplot"
             ],
             "id": "TN_WGS",
             "format": "png"
@@ -655,7 +657,8 @@
             "path_index": "",
             "step": "ascat_tumor_normal",
             "tag": [
-                "ascat-ngs"
+                "ascat-ngs-germlineplot",
+                "germlineplot"
             ],
             "id": "TN_WGS",
             "format": "png"
@@ -665,7 +668,8 @@
             "path_index": "",
             "step": "ascat_tumor_normal",
             "tag": [
-                "ascat-ngs"
+                "ascat-ngs-rawprofileplot",
+                "rawprofileplot"
             ],
             "id": "TN_WGS",
             "format": "png"
@@ -675,7 +679,8 @@
             "path_index": "",
             "step": "ascat_tumor_normal",
             "tag": [
-                "ascat-ngs"
+                "sunriseplot",
+                "ascat-ngs-sunriseplot"
             ],
             "id": "TN_WGS",
             "format": "png"
@@ -685,7 +690,8 @@
             "path_index": "",
             "step": "ascat_tumor_normal",
             "tag": [
-                "ascat-ngs"
+                "tumorplot",
+                "ascat-ngs-tumorplot"
             ],
             "id": "TN_WGS",
             "format": "png"
@@ -695,7 +701,8 @@
             "path_index": "",
             "step": "ascat_tumor_normal",
             "tag": [
-                "ascat-ngs"
+                "ascat-ngs-samplestatistics",
+                "samplestatistics"
             ],
             "id": "TN_WGS",
             "format": "txt"

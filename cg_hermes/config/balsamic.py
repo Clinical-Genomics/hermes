@@ -55,7 +55,37 @@ BALSAMIC_COMMON_TAGS = {
         "is_mandatory": False,
         "used_by": ["deliver"],
     },
-    frozenset({"ascat-ngs"}): {
+    frozenset({"ascat-ngs-samplestatistics", "samplestatistics"}): {
+        "tags": ["ascat-ngs", "visualization"],
+        "is_mandatory": False,
+        "used_by": ["scout", "deliver"],
+    },
+    frozenset({"aspcfplot", "ascat-ngs-aspcfplot"}): {
+        "tags": ["ascat-ngs", "visualization"],
+        "is_mandatory": False,
+        "used_by": ["scout", "deliver"],
+    },
+    frozenset({"ascat-ngs-germlineplot", "germlineplot"}): {
+        "tags": ["ascat-ngs", "visualization"],
+        "is_mandatory": False,
+        "used_by": ["scout", "deliver"],
+    },
+    frozenset({"ascat-ngs-rawprofileplot", "rawprofileplot"}): {
+        "tags": ["ascat-ngs", "visualization"],
+        "is_mandatory": False,
+        "used_by": ["scout", "deliver"],
+    },
+    frozenset({"sunriseplot", "ascat-ngs-sunriseplot"}): {
+        "tags": ["ascat-ngs", "visualization"],
+        "is_mandatory": False,
+        "used_by": ["scout", "deliver"],
+    },
+    frozenset({"tumorplot", "ascat-ngs-tumorplot"}): {
+        "tags": ["ascat-ngs", "visualization"],
+        "is_mandatory": False,
+        "used_by": ["scout", "deliver"],
+    },
+    frozenset({"ascat-ngs-ascatprofileplot", "ascatprofileplot"}): {
         "tags": ["ascat-ngs", "visualization"],
         "is_mandatory": False,
         "used_by": ["scout", "deliver"],
@@ -409,11 +439,41 @@ TUMOR_NORMAL_WGS_TAGS = {
         "is_mandatory": True,
         "used_by": ["deliver"],
     },
-    frozenset({"ascat-ngs"}): {
+    frozenset({"ascat-ngs-samplestatistics", "samplestatistics"}): {
         "tags": ["ascat-ngs", "visualization"],
         "is_mandatory": True,
         "used_by": ["scout", "deliver"],
-    }
+    },
+    frozenset({"aspcfplot", "ascat-ngs-aspcfplot"}): {
+        "tags": ["ascat-ngs", "visualization"],
+        "is_mandatory": True,
+        "used_by": ["scout", "deliver"],
+    },
+    frozenset({"ascat-ngs-germlineplot", "germlineplot"}): {
+        "tags": ["ascat-ngs", "visualization"],
+        "is_mandatory": True,
+        "used_by": ["scout", "deliver"],
+    },
+    frozenset({"ascat-ngs-rawprofileplot", "rawprofileplot"}): {
+        "tags": ["ascat-ngs", "visualization"],
+        "is_mandatory": True,
+        "used_by": ["scout", "deliver"],
+    },
+    frozenset({"sunriseplot", "ascat-ngs-sunriseplot"}): {
+        "tags": ["ascat-ngs", "visualization"],
+        "is_mandatory": True,
+        "used_by": ["scout", "deliver"],
+    },
+    frozenset({"tumorplot", "ascat-ngs-tumorplot"}): {
+        "tags": ["ascat-ngs", "visualization"],
+        "is_mandatory": True,
+        "used_by": ["scout", "deliver"],
+    },
+    frozenset({"ascat-ngs-ascatprofileplot", "ascatprofileplot"}): {
+        "tags": ["ascat-ngs", "visualization"],
+        "is_mandatory": True,
+        "used_by": ["scout", "deliver"],
+    },
 }
 
 TUMOR_ONLY_PANEL_TAGS = {
