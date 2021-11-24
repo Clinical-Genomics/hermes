@@ -5,7 +5,7 @@ Hermes :postal_horn: is a package to handle the communication between pipelines 
 
 The name [Hermes][hermes-name] comes from greek mythology, he was considered to be the messenger between the humans and the gods, feel free to interpret that as you like:). Hermes was moving swiftly between the worlds aided by his winged sandals.
 
-## Installation
+## Local Installation 
 
 ### Pypi
 
@@ -20,6 +20,24 @@ Install [poetry][poetry]
 ```
 git clone https://github.com/Clinical-Genomics/cg-hermes
 poetry install 
+```
+
+## Deployment
+
+1. When the pull request is ready to be merged, follow the instructions in
+[Atlas](https://atlas.scilifelab.se/infrastructure/development/bump2version/)
+ on how to merge and publish to PyPi automatically
+
+2. To deploy on stage for testing before merge:
+```
+source activate S_hermes
+pip install git+https://github.com/Clinical-Genomics/hermes@<BRANCH_NAME>
+```
+4. Deploy in productions by running the following commands:
+
+```
+up
+cg deploy hermes
 ```
 
 # Usage
