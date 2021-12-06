@@ -631,82 +631,16 @@
             "format": "vcf.gz.tbi"
         },
         {
-            "path": "TN_WGS/analysis/vcf/CNV.somatic.TN_WGS.ascat.ascatprofile.png",
-            "path_index": "",
-            "step": "ascat_tumor_normal",
+            "path": "TN_WGS/analysis/vcf/CNV.somatic.TN_WGS.ascat.output.pdf",
+            "path_index": [],
+            "step": "ascat_tumor_normal_merge_output",
             "tag": [
-                "ascat-ngs-ascatprofileplot",
-                "ascatprofileplot"
+                "ascat-output-pdf",
+                "research-ascat-output-pdf"
             ],
             "id": "TN_WGS",
-            "format": "png"
-        },
-        {
-            "path": "TN_WGS/analysis/vcf/CNV.somatic.TN_WGS.ascat.ASPCF.png",
-            "path_index": "",
-            "step": "ascat_tumor_normal",
-            "tag": [
-                "aspcfplot",
-                "ascat-ngs-aspcfplot"
-            ],
-            "id": "TN_WGS",
-            "format": "png"
-        },
-        {
-            "path": "TN_WGS/analysis/vcf/CNV.somatic.TN_WGS.ascat.germline.png",
-            "path_index": "",
-            "step": "ascat_tumor_normal",
-            "tag": [
-                "ascat-ngs-germlineplot",
-                "germlineplot"
-            ],
-            "id": "TN_WGS",
-            "format": "png"
-        },
-        {
-            "path": "TN_WGS/analysis/vcf/CNV.somatic.TN_WGS.ascat.rawprofile.png",
-            "path_index": "",
-            "step": "ascat_tumor_normal",
-            "tag": [
-                "ascat-ngs-rawprofileplot",
-                "rawprofileplot"
-            ],
-            "id": "TN_WGS",
-            "format": "png"
-        },
-        {
-            "path": "TN_WGS/analysis/vcf/CNV.somatic.TN_WGS.ascat.sunrise.png",
-            "path_index": "",
-            "step": "ascat_tumor_normal",
-            "tag": [
-                "sunriseplot",
-                "ascat-ngs-sunriseplot"
-            ],
-            "id": "TN_WGS",
-            "format": "png"
-        },
-        {
-            "path": "TN_WGS/analysis/vcf/CNV.somatic.TN_WGS.ascat.tumor.png",
-            "path_index": "",
-            "step": "ascat_tumor_normal",
-            "tag": [
-                "tumorplot",
-                "ascat-ngs-tumorplot"
-            ],
-            "id": "TN_WGS",
-            "format": "png"
-        },
-        {
-            "path": "TN_WGS/analysis/vcf/CNV.somatic.TN_WGS.ascat.samplestatistics.txt",
-            "path_index": "",
-            "step": "ascat_tumor_normal",
-            "tag": [
-                "ascat-ngs-samplestatistics",
-                "samplestatistics"
-            ],
-            "id": "TN_WGS",
-            "format": "txt"
-        },
+            "format": "pdf"
+    },
         {
             "path": "TN_WGS/analysis/vep/SV.somatic.TN_WGS.delly.all.vcf.gz",
             "path_index": [
