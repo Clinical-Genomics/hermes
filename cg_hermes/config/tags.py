@@ -119,7 +119,7 @@ TOOLS = {
     "chanjo": {"description": "Tool to keep track of coverage over specific regions"},
     "chromograph": {"description": "Tool to create PNG images from BED and WIG files from mikaell"},
     "cnvkit": {"description": "Tool to call copy number variations"},
-    "ascat-ngs": {"description": "Tool to identify somatically acquired copy-number alterations"},
+    "ascatngs": {"description": "Tool to identify somatically acquired copy-number alterations"},
     "delly": {"description": "Cancer structural variant prediction tool"},
     "cyrius": {"description": "Tool to call the problematic CYP2D6 gene"},
     "deseq2": {"description": "Differential expression analysis with DESeq2"},

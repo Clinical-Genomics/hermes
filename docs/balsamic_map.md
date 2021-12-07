@@ -6,11 +6,11 @@
 | diagram, cnv-diagram                                               | True        | cnvkit, visualization, diagram                               | deliver               |
 | gene-breaks, cnv-gene-breaks                                       | True        | cnvkit, genes                                                | storage               |
 | cnv-gene-metrics, gene-metrics                                     | True        | cnvkit, genes, metrics                                       | deliver               |
-| ascat, vcf-all, annotated-somatic-vcf-all, cnv                     | True        | ascat-ngs, vcf, somatic                                      | deliver               |
-| ascat, vcf-all, annotated-somatic-vcf-all-index, cnv               | True        | ascat-ngs, vcf-index, somatic                                | deliver               |
-| research-vcf-sv-pass, vcf-sv-pass                                  | True        | ascat-ngs, vcf, filtered, somatic                            | deliver               |
-| research-vcf-sv-pass-index, vcf-sv-pass                            | True        | ascat-ngs, vcf-index, filtered, somatic                      | deliver               |
-| ascat-ngs                                                          | True        | ascat-ngs, visualization                                     | scout, deliver        |
+| ascat, vcf-all, annotated-somatic-vcf-all, cnv                     | True        | ascatngs, vcf, somatic                                       | deliver               |
+| ascat, vcf-all, annotated-somatic-vcf-all-index, cnv               | True        | ascatngs, vcf-index, somatic                                 | deliver               |
+| research-vcf-sv-pass, vcf-sv-pass                                  | True        | ascatngs, vcf, filtered, somatic                             | deliver               |
+| research-vcf-sv-pass-index, vcf-sv-pass                            | True        | ascatngs, vcf-index, filtered, somatic                       | deliver               |
+| ascat-output-pdf, research-ascat-output-pdf                        | True        | ascatngs, visualization                                      | scout, deliver        |
 | delly, annotated-somatic-vcf-all, sv, vcf-all                      | True        | delly, vcf, somatic                                          | deliver               |
 | delly, annotated-somatic-vcf-all-index, sv, vcf-all                | True        | delly, vcf-index, somatic                                    | deliver               |
 | sv, vcf-sv-pass, research-vcf-sv-pass                              | True        | delly, vcf, filtered, somatic                                | deliver               |
