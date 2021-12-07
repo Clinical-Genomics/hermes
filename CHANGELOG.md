@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 About changelog [here](https://keepachangelog.com/en/1.0.0/)
 
+## [1.6.6]
+### Changed
+- Fixed changelog versions
+
 ## [1.6.5]
 ### Changed
 - BALSAMICs ascatngs tag (PNG plots) has been changed to the one of the output PDF
