@@ -15,6 +15,11 @@ MUTANT_COMMON_TAGS = {
         "tags": ["mutant-config"],
         "used_by": ["storage", "audit"],
     },
+    frozenset({"software-versions", "runinfo"}): {
+        "is_mandatory": True,
+        "tags": ["software-versions"],
+        "used_by": ["storage", "audit"],
+    },
     frozenset({"runinfo", "logfile"}): {
         "is_mandatory": True,
         "tags": ["mutant-log"],
@@ -65,9 +70,9 @@ MUTANT_COMMON_TAGS = {
         "tags": ["tsv", "vcf-report"],
         "used_by": ["deliver"],
     },
-    frozenset({"artic-json", "result_aggregation"}): {
+    frozenset({"metrics", "result_aggregation"}): {
         "is_mandatory": False,
-        "tags": ["artic-json"],
+        "tags": ["metrics"],
         "used_by": ["vogue"],
     },
     frozenset({"multiqc-json", "report"}): {
