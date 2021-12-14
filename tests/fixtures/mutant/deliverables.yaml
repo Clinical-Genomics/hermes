@@ -47,12 +47,12 @@ files:
   path_index: '~'
   step: report
   tag: multiqc-json
-- format: json
+- format: yaml
   id: maturejay
-  path: /home/proj/stage/mutant/cases/maturejay/results/381752_artic.json
+  path: /home/proj/stage/mutant/cases/maturejay/results/maturejay_metrics_deliverables.yaml
   path_index: '~'
   step: result_aggregation
-  tag: artic-json
+  tag: metrics
 - format: json
   id: maturejay
   path: /home/proj/stage/mutant/cases/maturejay/case_config.json
@@ -65,6 +65,12 @@ files:
   path_index: '~'
   step: runinfo
   tag: runtime-settings
+- format: csv
+  id: maturejay
+  path: /home/proj/stage/mutant/cases/maturejay/results/ncovIllumina_sequenceAnalysis_versions/maturejay_211214-151224_versions.csv
+  path_index: '~'
+  step: runinfo
+  tag: software-versions
 - format: txt
   id: maturejay
   path: /home/proj/stage/mutant/cases/maturejay/results/nextflow.log
