@@ -77,6 +77,7 @@ REPORTING_COMMON = {
     "summary": {"description": "Overview file without detailed information"},
     "tsv": {"description": "Tab separated values"},
     "vcf-report": {"description": "Results and QC from variant calling"},
+    "software-versions": {"description": "Versions of software used in analysis"},
 }
 
 VALIDATIONS_COMMON = {
@@ -167,7 +168,6 @@ MICROSALT_SPECIFIC = {
 MUTANT_SPECIFIC = {
     "mutant-config": {"description": "Config settings for mutant analysis"},
     "mutant-log": {"description": "SLURM log for mutant analysis"},
-    "software-versions": {"description": "Versions of software used in analysis"},
     "pangolin": {"description": "Pangolin specific output"},
     "typing-report": {"description": "Results from typing"},
     "typing-summary": {"description": "Summary of results from typing"},
