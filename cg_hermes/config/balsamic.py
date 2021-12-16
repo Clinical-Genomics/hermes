@@ -351,6 +351,16 @@ BALSAMIC_COMMON_TAGS = {
         "is_mandatory": False,
         "used_by": ["scout", "deliver"],
     },
+    frozenset({"vcf-sv-pass", "clinical-vcf-sv-pass"}): {
+        "tags": ["vcf", "vcf-sv-clinical", "somatic"],
+        "is_mandatory": False,
+        "used_by": ["scout", "deliver"],
+    },
+    frozenset({"vcf-sv-pass", "clinical-vcf-sv-pass-index"}): {
+        "tags": ["vcf-index", "vcf-sv-clinical-index", "somatic"],
+        "is_mandatory": False,
+        "used_by": ["scout", "deliver"],
+    },
 }
 
 TUMOR_ONLY_WGS_TAGS = {
@@ -367,8 +377,8 @@ TUMOR_ONLY_WGS_TAGS = {
     frozenset({"clinical-vcf-filtered-index", "snv", "vcf-filtered"}): {"is_mandatory": True},
     frozenset({"vcf-pass", "clinical-vcf-pass", "snv"}): {"is_mandatory": True},
     frozenset({"vcf-pass", "clinical-vcf-pass-index", "snv"}): {"is_mandatory": True},
-    frozenset({"vcf-sv-pass", "clinical-vcf-sv-pass", "sv"}): {"is_mandatory": False},
-    frozenset({"vcf-sv-pass", "clinical-vcf-sv-pass-index", "sv"}): {"is_mandatory": False},
+    frozenset({"vcf-sv-pass", "clinical-vcf-sv-pass"}): {"is_mandatory": False},
+    frozenset({"vcf-sv-pass", "clinical-vcf-sv-pass-index"}): {"is_mandatory": False},
 }
 
 TUMOR_NORMAL_WGS_TAGS = {
@@ -380,8 +390,8 @@ TUMOR_NORMAL_WGS_TAGS = {
     frozenset({"clinical-vcf-filtered-index", "snv", "vcf-filtered"}): {"is_mandatory": True},
     frozenset({"vcf-pass", "clinical-vcf-pass", "snv"}): {"is_mandatory": True},
     frozenset({"vcf-pass", "clinical-vcf-pass-index", "snv"}): {"is_mandatory": True},
-    frozenset({"vcf-sv-pass", "clinical-vcf-sv-pass", "sv"}): {"is_mandatory": False},
-    frozenset({"vcf-sv-pass", "clinical-vcf-sv-pass-index", "sv"}): {"is_mandatory": False},
+    frozenset({"vcf-sv-pass", "clinical-vcf-sv-pass"}): {"is_mandatory": False},
+    frozenset({"vcf-sv-pass", "clinical-vcf-sv-pass-index"}): {"is_mandatory": False},
     frozenset({"tnscope", "snv", "annotated-somatic-vcf-all", "vcf-all"}): {"is_mandatory": True},
     frozenset({"tnscope", "snv", "annotated-somatic-vcf-all-index", "vcf-all"}): {
         "is_mandatory": True
