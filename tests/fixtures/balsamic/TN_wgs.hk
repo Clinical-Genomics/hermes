@@ -313,10 +313,9 @@
             "path_index": [
                 "TN_WGS/analysis/vep/SV.somatic.TN_WGS.manta.all.filtered.pass.vcf.gz.tbi"
             ],
-            "step": "ngs_filter_manta",
+            "step": "bcftools_filter_manta",
             "tag": [
                 "clinical-vcf-sv-pass",
-                "SV",
                 "vcf-sv-pass",
                 "TN-WGS"
             ],
@@ -326,10 +325,9 @@
         {
             "path": "TN_WGS/analysis/vep/SV.somatic.TN_WGS.manta.all.filtered.pass.vcf.gz.tbi",
             "path_index": "",
-            "step": "ngs_filter_manta",
+            "step": "bcftools_filter_manta",
             "tag": [
                 "clinical-vcf-sv-pass-index",
-                "SV",
                 "vcf-sv-pass",
                 "TN-WGS"
             ],
