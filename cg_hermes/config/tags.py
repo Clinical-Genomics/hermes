@@ -77,6 +77,7 @@ REPORTING_COMMON = {
     "summary": {"description": "Overview file without detailed information"},
     "tsv": {"description": "Tab separated values"},
     "vcf-report": {"description": "Results and QC from variant calling"},
+    "software-versions": {"description": "Versions of software used in analysis"},
 }
 
 VALIDATIONS_COMMON = {
