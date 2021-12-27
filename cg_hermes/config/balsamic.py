@@ -46,12 +46,12 @@ BALSAMIC_COMMON_TAGS = {
         "used_by": ["deliver"],
     },
     frozenset({"research-vcf-sv-pass", "vcf-sv-pass"}): {
-        "tags": ["ascatngs", "vcf", "filtered"],
+        "tags": ["ascatngs", "vcf-sv-research", "filtered"],
         "is_mandatory": False,
         "used_by": ["deliver"],
     },
     frozenset({"research-vcf-sv-pass-index", "vcf-sv-pass"}): {
-        "tags": ["ascatngs", "vcf-index", "filtered"],
+        "tags": ["ascatngs", "vcf-sv-research-index", "filtered"],
         "is_mandatory": False,
         "used_by": ["deliver"],
     },
@@ -410,19 +410,13 @@ TUMOR_NORMAL_WGS_TAGS = {
         "used_by": ["deliver"],
     },
     frozenset({"research-vcf-sv-pass", "vcf-sv-pass"}): {
-        "tags": ["ascatngs", "vcf", "filtered"],
         "is_mandatory": True,
-        "used_by": ["deliver"],
     },
     frozenset({"research-vcf-sv-pass-index", "vcf-sv-pass"}): {
-        "tags": ["ascatngs", "vcf-index", "filtered"],
         "is_mandatory": True,
-        "used_by": ["deliver"],
     },
     frozenset({"ascat-output-pdf", "research-ascat-output-pdf"}): {
-        "tags": ["ascatngs", "visualization"],
         "is_mandatory": True,
-        "used_by": ["scout", "deliver"],
     },
 }
 
