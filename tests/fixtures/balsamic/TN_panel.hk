@@ -959,6 +959,34 @@
                 "balsamic-dag"
             ],
             "id": "TN_panel"
+        },
+        {
+            "path": "TN_panel/analysis/vep/CNV.somatic.TN_panel.cnvkit.all.filtered.pass.vcf.gz",
+            "path_index": [
+                "TN_panel/analysis/vep/CNV.somatic.TN_panel.cnvkit.all.filtered.pass.vcf.gz.tbi"
+            ],
+            "step": "bcftools_filter_cnvkit",
+            "tag": [
+                "CNV",
+                "research-vcf-sv-pass",
+                "vcf-sv-pass",
+                "TN-panel"
+            ],
+            "id": "TN_panel",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "TN_panel/analysis/vep/CNV.somatic.TN_panel.cnvkit.all.filtered.pass.vcf.gz.tbi",
+            "path_index": "",
+            "step": "bcftools_filter_cnvkit",
+            "tag": [
+                "CNV",
+                "research-vcf-sv-pass-index",
+                "vcf-sv-pass",
+                "TN-panel"
+            ],
+            "id": "TN_panel",
+            "format": "vcf.gz.tbi"
         }
     ]
 }

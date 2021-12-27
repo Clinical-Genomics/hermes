@@ -4,6 +4,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 About changelog [here](https://keepachangelog.com/en/1.0.0/)
 
+## [1.6.9]
+### Added
+- cnvkit filtered vcf tags
+### Changed:
+- AscatNgs HK tag names
+### Fixed
+- Mantas filtered/passed vcf tags according to CG definition
+
 ## [1.6.8]
 ### Added
 - Mutant tags for vogue and versions file
