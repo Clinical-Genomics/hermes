@@ -960,7 +960,7 @@
             ],
             "id": "TN_panel"
         },
-                {
+        {
             "path": "TN_panel/analysis/vep/CNV.somatic.TN_panel.cnvkit.all.filtered.pass.vcf.gz",
             "path_index": [
                 "TN_panel/analysis/vep/CNV.somatic.TN_panel.cnvkit.all.filtered.pass.vcf.gz.tbi"

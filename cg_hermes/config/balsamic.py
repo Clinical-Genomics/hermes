@@ -389,8 +389,6 @@ TUMOR_ONLY_WGS_TAGS = {
     frozenset({"vcf-pass", "clinical-vcf-pass-index", "snv"}): {"is_mandatory": True},
     frozenset({"vcf-sv-pass", "clinical-vcf-sv-pass"}): {"is_mandatory": False},
     frozenset({"vcf-sv-pass", "clinical-vcf-sv-pass-index"}): {"is_mandatory": False},
-    frozenset({"research-vcf-sv-pass", "vcf-sv-pass", "CNV"}): {"is_mandatory": True},
-    frozenset({"research-vcf-sv-pass-index", "vcf-sv-pass", "CNV"}): {"is_mandatory": True},
 }
 
 TUMOR_NORMAL_WGS_TAGS = {
@@ -412,8 +410,6 @@ TUMOR_NORMAL_WGS_TAGS = {
     frozenset({"research-vcf-sv-pass", "vcf-sv-pass"}): {"is_mandatory": True},
     frozenset({"research-vcf-sv-pass-index", "vcf-sv-pass"}): {"is_mandatory": True},
     frozenset({"ascat-output-pdf", "research-ascat-output-pdf"}): {"is_mandatory": True},
-    frozenset({"research-vcf-sv-pass", "vcf-sv-pass", "CNV"}): {"is_mandatory": True},
-    frozenset({"research-vcf-sv-pass-index", "vcf-sv-pass", "CNV"}): {"is_mandatory": True},
 }
 
 TUMOR_ONLY_PANEL_TAGS = {
@@ -507,6 +503,8 @@ TUMOR_ONLY_PANEL_TAGS = {
     frozenset({"sv", "annotated-germline-vcf-summary", "vcf-summary", "manta-germline"}): {
         "is_mandatory": True
     },
+    frozenset({"research-vcf-sv-pass", "vcf-sv-pass", "cnv"}): {"is_mandatory": True},
+    frozenset({"research-vcf-sv-pass-index", "vcf-sv-pass", "cnv"}): {"is_mandatory": True},
 }
 
 TUMOR_NORMAL_PANEL_TAGS = {
@@ -602,4 +600,6 @@ TUMOR_NORMAL_PANEL_TAGS = {
     frozenset({"annotated-germline-vcf-summary", "vcf-summary", "manta-germline", "sv"}): {
         "is_mandatory": True
     },
+    frozenset({"research-vcf-sv-pass", "vcf-sv-pass", "cnv"}): {"is_mandatory": True},
+    frozenset({"research-vcf-sv-pass-index", "vcf-sv-pass", "cnv"}): {"is_mandatory": True},
 }
