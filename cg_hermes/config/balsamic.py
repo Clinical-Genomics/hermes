@@ -341,23 +341,23 @@ BALSAMIC_COMMON_TAGS = {
         "is_mandatory": True,
         "used_by": ["scout", "deliver"],
     },
-    frozenset({"vcf-sv-pass", "sv", "clinical-vcf-sv-pass"}): {
-        "tags": ["vcf", "vcf-sv-clinical", "somatic"],
+    frozenset({"vcf-sv-pass", "sv", "clinical-vcf-sv-pass"}): {  # manta filtered PANEL
+        "tags": ["vcf-sv-clinical", "manta", "filtered"],
         "is_mandatory": False,
         "used_by": ["scout", "deliver"],
     },
     frozenset({"clinical-vcf-sv-pass-index", "vcf-sv-pass", "sv"}): {
-        "tags": ["vcf-index", "vcf-sv-clinical-index", "somatic"],
+        "tags": ["vcf-sv-clinical-index", "manta", "filtered"],
         "is_mandatory": False,
         "used_by": ["scout", "deliver"],
     },
-    frozenset({"vcf-sv-pass", "clinical-vcf-sv-pass"}): {
-        "tags": ["vcf", "vcf-sv-clinical", "somatic"],
+    frozenset({"vcf-sv-pass", "clinical-vcf-sv-pass"}): {  # manta filtered WGS
+        "tags": ["vcf-sv-clinical", "manta", "filtered"],
         "is_mandatory": False,
         "used_by": ["scout", "deliver"],
     },
     frozenset({"vcf-sv-pass", "clinical-vcf-sv-pass-index"}): {
-        "tags": ["vcf-index", "vcf-sv-clinical-index", "somatic"],
+        "tags": ["vcf-sv-clinical-index", "manta", "filtered"],
         "is_mandatory": False,
         "used_by": ["scout", "deliver"],
     },
