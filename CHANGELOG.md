@@ -5,9 +5,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 About changelog [here](https://keepachangelog.com/en/1.0.0/)
 
 ## [1.6.9]
+### Added
+- cnvkit filtered vcf tags
+
 ### Fixed
 - Mantas filtered/passed vcf tags according to CG definition
-- Added cnvkit filtered vcf tags
 
 ## [1.6.8]
 ### Added
