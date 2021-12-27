@@ -7,7 +7,8 @@ About changelog [here](https://keepachangelog.com/en/1.0.0/)
 ## [1.6.9]
 ### Added
 - cnvkit filtered vcf tags
-
+### Changed:
+- AscatNgs HK tag names
 ### Fixed
 - Mantas filtered/passed vcf tags according to CG definition
 
