@@ -361,6 +361,16 @@ BALSAMIC_COMMON_TAGS = {
         "is_mandatory": False,
         "used_by": ["scout", "deliver"],
     },
+    frozenset({"research-vcf-sv-pass", "vcf-sv-pass", "CNV"}): {
+        "tags": ["cnvkit", "vcf-sv-research", "filtered"],
+        "is_mandatory": False,
+        "used_by": ["deliver"],
+    },
+    frozenset({"research-vcf-sv-pass-index", "vcf-sv-pass", "CNV"}): {
+        "tags": ["cnvkit", "vcf-sv-research-index", "filtered"],
+        "is_mandatory": False,
+        "used_by": ["deliver"],
+    },
 }
 
 TUMOR_ONLY_WGS_TAGS = {
@@ -379,6 +389,8 @@ TUMOR_ONLY_WGS_TAGS = {
     frozenset({"vcf-pass", "clinical-vcf-pass-index", "snv"}): {"is_mandatory": True},
     frozenset({"vcf-sv-pass", "clinical-vcf-sv-pass"}): {"is_mandatory": False},
     frozenset({"vcf-sv-pass", "clinical-vcf-sv-pass-index"}): {"is_mandatory": False},
+    frozenset({"research-vcf-sv-pass", "vcf-sv-pass", "CNV"}): {"is_mandatory": True},
+    frozenset({"research-vcf-sv-pass-index", "vcf-sv-pass", "CNV"}): {"is_mandatory": True},
 }
 
 TUMOR_NORMAL_WGS_TAGS = {
@@ -393,31 +405,15 @@ TUMOR_NORMAL_WGS_TAGS = {
     frozenset({"vcf-sv-pass", "clinical-vcf-sv-pass"}): {"is_mandatory": False},
     frozenset({"vcf-sv-pass", "clinical-vcf-sv-pass-index"}): {"is_mandatory": False},
     frozenset({"tnscope", "snv", "annotated-somatic-vcf-all", "vcf-all"}): {"is_mandatory": True},
-    frozenset({"tnscope", "snv", "annotated-somatic-vcf-all-index", "vcf-all"}): {
-        "is_mandatory": True
-    },
-    frozenset({"tnscope", "snv", "vcf-summary", "annotated-somatic-vcf-summary"}): {
-        "is_mandatory": True
-    },
-    frozenset({"ascat", "vcf-all", "annotated-somatic-vcf-all", "cnv"}): {
-        "tags": ["ascatngs", "vcf", "somatic"],
-        "is_mandatory": True,
-        "used_by": ["deliver"],
-    },
-    frozenset({"ascat", "vcf-all", "annotated-somatic-vcf-all-index", "cnv"}): {
-        "tags": ["ascatngs", "vcf-index", "somatic"],
-        "is_mandatory": True,
-        "used_by": ["deliver"],
-    },
-    frozenset({"research-vcf-sv-pass", "vcf-sv-pass"}): {
-        "is_mandatory": True,
-    },
-    frozenset({"research-vcf-sv-pass-index", "vcf-sv-pass"}): {
-        "is_mandatory": True,
-    },
-    frozenset({"ascat-output-pdf", "research-ascat-output-pdf"}): {
-        "is_mandatory": True,
-    },
+    frozenset({"tnscope", "snv", "annotated-somatic-vcf-all-index", "vcf-all"}): {"is_mandatory": True},
+    frozenset({"tnscope", "snv", "vcf-summary", "annotated-somatic-vcf-summary"}): {"is_mandatory": True},
+    frozenset({"ascat", "vcf-all", "annotated-somatic-vcf-all", "cnv"}): {"is_mandatory": True},
+    frozenset({"ascat", "vcf-all", "annotated-somatic-vcf-all-index", "cnv"}): {"is_mandatory": True},
+    frozenset({"research-vcf-sv-pass", "vcf-sv-pass"}): {"is_mandatory": True},
+    frozenset({"research-vcf-sv-pass-index", "vcf-sv-pass"}): {"is_mandatory": True},
+    frozenset({"ascat-output-pdf", "research-ascat-output-pdf"}): {"is_mandatory": True},
+    frozenset({"research-vcf-sv-pass", "vcf-sv-pass", "CNV"}): {"is_mandatory": True},
+    frozenset({"research-vcf-sv-pass-index", "vcf-sv-pass", "CNV"}): {"is_mandatory": True},
 }
 
 TUMOR_ONLY_PANEL_TAGS = {
