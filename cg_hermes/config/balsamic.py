@@ -361,12 +361,12 @@ BALSAMIC_COMMON_TAGS = {
         "is_mandatory": False,
         "used_by": ["scout", "deliver"],
     },
-    frozenset({"research-vcf-sv-pass", "vcf-sv-pass", "CNV"}): {
+    frozenset({"research-vcf-sv-pass", "vcf-sv-pass", "cnv"}): {
         "tags": ["cnvkit", "vcf-sv-research", "filtered"],
         "is_mandatory": False,
         "used_by": ["deliver"],
     },
-    frozenset({"research-vcf-sv-pass-index", "vcf-sv-pass", "CNV"}): {
+    frozenset({"research-vcf-sv-pass-index", "vcf-sv-pass", "cnv"}): {
         "tags": ["cnvkit", "vcf-sv-research-index", "filtered"],
         "is_mandatory": False,
         "used_by": ["deliver"],
