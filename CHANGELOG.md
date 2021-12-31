@@ -4,6 +4,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 About changelog [here](https://keepachangelog.com/en/1.0.0/)
 
+## [1.6.11]
+### Fixed
+- Workaround to deliver delly and ascat vcfs as a result of producing Balsamic the same labels for both of them
+
+## [1.6.10]
+
 ## [1.6.9]
 ### Added
 - cnvkit filtered vcf tags
