@@ -4,6 +4,24 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 About changelog [here](https://keepachangelog.com/en/1.0.0/)
 
+## [1.6.11]
+### Fixed
+- Workaround to deliver delly and ascat vcfs as a result of producing Balsamic the same labels for both of them
+
+## [1.6.10]
+
+## [1.6.9]
+### Added
+- cnvkit filtered vcf tags
+### Changed:
+- AscatNgs HK tag names
+### Fixed
+- Mantas filtered/passed vcf tags according to CG definition
+
+## [1.6.8]
+### Added
+- Mutant tags for vogue and versions file
+
 ## [1.6.7]
 ### Fixed
 - Mantas filtered/passed vcf storage for WGS analysis
