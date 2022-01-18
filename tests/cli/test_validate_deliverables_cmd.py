@@ -34,21 +34,21 @@ def test_validate_mip_rna_deliverables_file(cli_runner: CliRunner, mip_rna_deliv
 
 
 def test_validate_balsamic_deliverables_file(
-    cli_runner: CliRunner, balsamic_t_wgs_deliverables: Path
+    cli_runner: CliRunner, balsamic_tn_wgs_deliverables: Path
 ):
     # GIVEN a existing balsamic deliverables file and a CLI runner
-    assert balsamic_t_wgs_deliverables.exists()
+    assert balsamic_tn_wgs_deliverables.exists()
 
     # WHEN running the validate deliverables command
     result = cli_runner.invoke(
         app,
         [
             "deliverables",
-            str(balsamic_t_wgs_deliverables),
+            str(balsamic_tn_wgs_deliverables),
             "--pipeline",
             "balsamic",
             "--analysis-type",
-            "tumor_wgs",
+            "tumor_normal_wgs",
         ],
     )
 

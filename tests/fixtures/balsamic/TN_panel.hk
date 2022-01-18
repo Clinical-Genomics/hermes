@@ -1,392 +1,16 @@
 {
     "files": [
         {
-            "path": "TN_panel/analysis/bam/normal.merged.bam",
-            "path_index": [
-                "TN_panel/analysis/bam/normal.merged.bam.bai"
-            ],
-            "step": "mergeBam_normal",
-            "tag": [
-                "bam",
-                "ACC456",
-                "normal-bam"
-            ],
-            "id": "ACC456",
-            "format": "bam"
-        },
-        {
-            "path": "TN_panel/analysis/bam/normal.merged.bam.bai",
-            "path_index": "",
-            "step": "mergeBam_normal",
-            "tag": [
-                "bam",
-                "ACC456",
-                "normal-bam-index"
-            ],
-            "id": "ACC456",
-            "format": "bai"
-        },
-        {
-            "path": "TN_panel/analysis/bam/normal.merged.cram",
-            "path_index": [
-                "TN_panel/analysis/bam/normal.merged.cram.crai"
-            ],
-            "step": "mergeBam_normal",
-            "tag": [
-                "ACC456",
-                "cram",
-                "normal-cram"
-            ],
-            "id": "ACC456",
-            "format": "cram"
-        },
-        {
-            "path": "TN_panel/analysis/bam/normal.merged.cram.crai",
-            "path_index": "",
-            "step": "mergeBam_normal",
-            "tag": [
-                "ACC456",
-                "cram",
-                "normal-cram-index"
-            ],
-            "id": "ACC456",
-            "format": "crai"
-        },
-        {
-            "path": "TN_panel/analysis/vep/SNV.germline.normal.haplotypecaller.vcf.gz",
-            "path_index": [
-                "TN_panel/analysis/vep/SNV.germline.normal.haplotypecaller.vcf.gz.tbi"
-            ],
-            "step": "vep_germline",
-            "tag": [
-                "annotated-germline-vcf-all",
-                "haplotypecaller",
-                "vcf-all",
-                "SNV"
-            ],
-            "id": "ACC456",
-            "format": "vcf.gz"
-        },
-        {
-            "path": "TN_panel/analysis/vep/SNV.germline.normal.haplotypecaller.vcf.gz.tbi",
-            "path_index": "",
-            "step": "vep_germline",
-            "tag": [
-                "haplotypecaller",
-                "vcf-all",
-                "annotated-germline-vcf-all-index",
-                "SNV"
-            ],
-            "id": "ACC456",
-            "format": "vcf.gz.tbi"
-        },
-        {
-            "path": "TN_panel/analysis/vep/SV.germline.normal.manta_germline.vcf.gz",
-            "path_index": [
-                "TN_panel/analysis/vep/SV.germline.normal.manta_germline.vcf.gz.tbi"
-            ],
-            "step": "vep_germline",
-            "tag": [
-                "manta-germline",
-                "SV",
-                "annotated-germline-vcf-all",
-                "vcf-all"
-            ],
-            "id": "ACC456",
-            "format": "vcf.gz"
-        },
-        {
-            "path": "TN_panel/analysis/vep/SV.germline.normal.manta_germline.vcf.gz.tbi",
-            "path_index": "",
-            "step": "vep_germline",
-            "tag": [
-                "manta-germline",
-                "SV",
-                "annotated-germline-vcf-all-index",
-                "vcf-all"
-            ],
-            "id": "ACC456",
-            "format": "vcf.gz.tbi"
-        },
-        {
-            "path": "TN_panel/analysis/vep/SNV.germline.tumor.haplotypecaller.vcf.gz",
-            "path_index": [
-                "TN_panel/analysis/vep/SNV.germline.tumor.haplotypecaller.vcf.gz.tbi"
-            ],
-            "step": "vep_germline",
-            "tag": [
-                "annotated-germline-vcf-all",
-                "haplotypecaller",
-                "vcf-all",
-                "SNV"
-            ],
-            "id": "ACC123",
-            "format": "vcf.gz"
-        },
-        {
-            "path": "TN_panel/analysis/vep/SNV.germline.tumor.haplotypecaller.vcf.gz.tbi",
-            "path_index": "",
-            "step": "vep_germline",
-            "tag": [
-                "haplotypecaller",
-                "vcf-all",
-                "annotated-germline-vcf-all-index",
-                "SNV"
-            ],
-            "id": "ACC123",
-            "format": "vcf.gz.tbi"
-        },
-        {
-            "path": "TN_panel/analysis/vep/SV.germline.tumor.manta_germline.vcf.gz",
-            "path_index": [
-                "TN_panel/analysis/vep/SV.germline.tumor.manta_germline.vcf.gz.tbi"
-            ],
-            "step": "vep_germline",
-            "tag": [
-                "manta-germline",
-                "SV",
-                "annotated-germline-vcf-all",
-                "vcf-all"
-            ],
-            "id": "ACC123",
-            "format": "vcf.gz"
-        },
-        {
-            "path": "TN_panel/analysis/vep/SV.germline.tumor.manta_germline.vcf.gz.tbi",
-            "path_index": "",
-            "step": "vep_germline",
-            "tag": [
-                "manta-germline",
-                "SV",
-                "annotated-germline-vcf-all-index",
-                "vcf-all"
-            ],
-            "id": "ACC123",
-            "format": "vcf.gz.tbi"
-        },
-        {
-            "path": "TN_panel/analysis/vep/SNV.germline.normal.dnascope.vcf.gz",
-            "path_index": [
-                "TN_panel/analysis/vep/SNV.germline.normal.dnascope.vcf.gz.tbi"
-            ],
-            "step": "vep_germline",
-            "tag": [
-                "annotated-germline-vcf-all",
-                "vcf-all",
-                "dnascope",
-                "SNV"
-            ],
-            "id": "ACC456",
-            "format": "vcf.gz"
-        },
-        {
-            "path": "TN_panel/analysis/vep/SNV.germline.normal.dnascope.vcf.gz.tbi",
-            "path_index": "",
-            "step": "vep_germline",
-            "tag": [
-                "annotated-germline-vcf-all-index",
-                "vcf-all",
-                "dnascope",
-                "SNV"
-            ],
-            "id": "ACC456",
-            "format": "vcf.gz.tbi"
-        },
-        {
-            "path": "TN_panel/analysis/vep/SNV.germline.tumor.dnascope.vcf.gz",
-            "path_index": [
-                "TN_panel/analysis/vep/SNV.germline.tumor.dnascope.vcf.gz.tbi"
-            ],
-            "step": "vep_germline",
-            "tag": [
-                "annotated-germline-vcf-all",
-                "vcf-all",
-                "dnascope",
-                "SNV"
-            ],
-            "id": "ACC123",
-            "format": "vcf.gz"
-        },
-        {
-            "path": "TN_panel/analysis/vep/SNV.germline.tumor.dnascope.vcf.gz.tbi",
-            "path_index": "",
-            "step": "vep_germline",
-            "tag": [
-                "annotated-germline-vcf-all-index",
-                "vcf-all",
-                "dnascope",
-                "SNV"
-            ],
-            "id": "ACC123",
-            "format": "vcf.gz.tbi"
-        },
-        {
-            "path": "TN_panel/analysis/vep/SNV.germline.tumor.haplotypecaller.vcf.gz_summary.html",
-            "path_index": [],
-            "step": "vep_germline",
-            "tag": [
-                "annotated-germline-vcf-summary",
-                "haplotypecaller",
-                "SNV",
-                "vcf-summary"
-            ],
-            "id": "ACC123",
-            "format": "html"
-        },
-        {
-            "path": "TN_panel/analysis/vep/SV.germline.normal.manta_germline.vcf.gz_summary.html",
-            "path_index": [],
-            "step": "vep_germline",
-            "tag": [
-                "manta-germline",
-                "annotated-germline-vcf-summary",
-                "SV",
-                "vcf-summary"
-            ],
-            "id": "ACC456",
-            "format": "html"
-        },
-        {
-            "path": "TN_panel/analysis/vep/SNV.germline.tumor.dnascope.vcf.gz_summary.html",
-            "path_index": [],
-            "step": "vep_germline",
-            "tag": [
-                "annotated-germline-vcf-summary",
-                "dnascope",
-                "SNV",
-                "vcf-summary"
-            ],
-            "id": "ACC123",
-            "format": "html"
-        },
-        {
-            "path": "TN_panel/analysis/vep/SNV.germline.normal.haplotypecaller.vcf.gz_summary.html",
-            "path_index": [],
-            "step": "vep_germline",
-            "tag": [
-                "annotated-germline-vcf-summary",
-                "haplotypecaller",
-                "SNV",
-                "vcf-summary"
-            ],
-            "id": "ACC456",
-            "format": "html"
-        },
-        {
-            "path": "TN_panel/analysis/vep/SV.germline.tumor.manta_germline.vcf.gz_summary.html",
-            "path_index": [],
-            "step": "vep_germline",
-            "tag": [
-                "manta-germline",
-                "annotated-germline-vcf-summary",
-                "SV",
-                "vcf-summary"
-            ],
-            "id": "ACC123",
-            "format": "html"
-        },
-        {
-            "path": "TN_panel/analysis/vep/SNV.germline.normal.dnascope.vcf.gz_summary.html",
-            "path_index": [],
-            "step": "vep_germline",
-            "tag": [
-                "annotated-germline-vcf-summary",
-                "dnascope",
-                "SNV",
-                "vcf-summary"
-            ],
-            "id": "ACC456",
-            "format": "html"
-        },
-        {
-            "path": "TN_panel/analysis/vep/SNV.somatic.TN_panel.vardict.all.filtered.vcf.gz",
-            "path_index": [
-                "TN_panel/analysis/vep/SNV.somatic.TN_panel.vardict.all.filtered.vcf.gz.tbi"
-            ],
-            "step": "ngs_filter_vardict",
-            "tag": [
-                "vcf-filtered",
-                "clinical-vcf-filtered",
-                "SNV",
-                "TN-panel"
-            ],
-            "id": "TN_panel",
-            "format": "vcf.gz"
-        },
-        {
-            "path": "TN_panel/analysis/vep/SNV.somatic.TN_panel.vardict.all.filtered.vcf.gz.tbi",
-            "path_index": "",
-            "step": "ngs_filter_vardict",
-            "tag": [
-                "vcf-filtered",
-                "clinical-vcf-filtered-index",
-                "SNV",
-                "TN-panel"
-            ],
-            "id": "TN_panel",
-            "format": "vcf.gz.tbi"
-        },
-        {
-            "path": "TN_panel/analysis/vep/SNV.somatic.TN_panel.vardict.all.filtered.pass.vcf.gz",
-            "path_index": [
-                "TN_panel/analysis/vep/SNV.somatic.TN_panel.vardict.all.filtered.pass.vcf.gz.tbi"
-            ],
-            "step": "ngs_filter_vardict",
-            "tag": [
-                "clinical-vcf-pass",
-                "vcf-pass",
-                "SNV",
-                "TN-panel"
-            ],
-            "id": "TN_panel",
-            "format": "vcf.gz"
-        },
-        {
-            "path": "TN_panel/analysis/vep/SNV.somatic.TN_panel.vardict.all.filtered.pass.vcf.gz.tbi",
-            "path_index": "",
-            "step": "ngs_filter_vardict",
-            "tag": [
-                "clinical-vcf-pass-index",
-                "vcf-pass",
-                "SNV",
-                "TN-panel"
-            ],
-            "id": "TN_panel",
-            "format": "vcf.gz.tbi"
-        },
-        {
-            "path": "TN_panel/analysis/qc/multiqc_report.html",
-            "path_index": [],
-            "step": "multiqc",
-            "tag": [
-                "multiqc-html",
-                "html"
-            ],
-            "id": "TN_panel",
-            "format": "html"
-        },
-        {
-            "path": "TN_panel/analysis/qc/multiqc_data/multiqc_data.json",
-            "path_index": [],
-            "step": "multiqc",
-            "tag": [
-                "multiqc-json",
-                "json"
-            ],
-            "id": "TN_panel",
-            "format": "json"
-        },
-        {
             "path": "TN_panel/analysis/vep/SV.somatic.TN_panel.manta.all.filtered.pass.vcf.gz",
             "path_index": [
                 "TN_panel/analysis/vep/SV.somatic.TN_panel.manta.all.filtered.pass.vcf.gz.tbi"
             ],
-            "step": "ngs_filter_manta",
+            "step": "bcftools_filter_manta",
             "tag": [
-                "vcf-sv-pass",
                 "clinical-vcf-sv-pass",
-                "SV",
-                "TN-panel"
+                "vcf-sv-pass",
+                "TN-panel",
+                "SV"
             ],
             "id": "TN_panel",
             "format": "vcf.gz"
@@ -394,138 +18,12 @@
         {
             "path": "TN_panel/analysis/vep/SV.somatic.TN_panel.manta.all.filtered.pass.vcf.gz.tbi",
             "path_index": "",
-            "step": "ngs_filter_manta",
+            "step": "bcftools_filter_manta",
             "tag": [
                 "vcf-sv-pass",
+                "TN-panel",
                 "clinical-vcf-sv-pass-index",
-                "SV",
-                "TN-panel"
-            ],
-            "id": "TN_panel",
-            "format": "vcf.gz.tbi"
-        },
-        {
-            "path": "TN_panel/analysis/fastq/ACC123_R_1.fp.fastq.gz",
-            "path_index": [],
-            "step": "fastp",
-            "tag": [
-                "quality-trimmed-fastq-read1",
-                "ACC123",
-                "read1"
-            ],
-            "id": "ACC123",
-            "format": "fastq.gz"
-        },
-        {
-            "path": "TN_panel/analysis/fastq/ACC456_R_1.fp.fastq.gz",
-            "path_index": [],
-            "step": "fastp",
-            "tag": [
-                "ACC456",
-                "quality-trimmed-fastq-read1",
-                "read1"
-            ],
-            "id": "ACC456",
-            "format": "fastq.gz"
-        },
-        {
-            "path": "TN_panel/analysis/fastq/ACC456_R_2.fp.fastq.gz",
-            "path_index": [],
-            "step": "fastp",
-            "tag": [
-                "ACC456",
-                "read2",
-                "quality-trimmed-fastq-read2"
-            ],
-            "id": "ACC456",
-            "format": "fastq.gz"
-        },
-        {
-            "path": "TN_panel/analysis/fastq/ACC123_R_2.fp.fastq.gz",
-            "path_index": [],
-            "step": "fastp",
-            "tag": [
-                "read2",
-                "ACC123",
-                "quality-trimmed-fastq-read2"
-            ],
-            "id": "ACC123",
-            "format": "fastq.gz"
-        },
-        {
-            "path": "TN_panel/analysis/qc/fastp/ACC123_R_fastp.json",
-            "path_index": [],
-            "step": "fastp",
-            "tag": [
-                "quality-trimmed-fastq-json",
-                "ACC123",
-                "json"
-            ],
-            "id": "ACC123",
-            "format": "json"
-        },
-        {
-            "path": "TN_panel/analysis/qc/fastp/ACC456_R_fastp.json",
-            "path_index": [],
-            "step": "fastp",
-            "tag": [
-                "ACC456",
-                "quality-trimmed-fastq-json",
-                "json"
-            ],
-            "id": "ACC456",
-            "format": "json"
-        },
-        {
-            "path": "TN_panel/analysis/qc/fastp/ACC123_R_fastp.html",
-            "path_index": [],
-            "step": "fastp",
-            "tag": [
-                "html",
-                "ACC123",
-                "quality-trimmed-fastq-html"
-            ],
-            "id": "ACC123",
-            "format": "html"
-        },
-        {
-            "path": "TN_panel/analysis/qc/fastp/ACC456_R_fastp.html",
-            "path_index": [],
-            "step": "fastp",
-            "tag": [
-                "ACC456",
-                "html",
-                "quality-trimmed-fastq-html"
-            ],
-            "id": "ACC456",
-            "format": "html"
-        },
-        {
-            "path": "TN_panel/analysis/vep/CNV.somatic.TN_panel.cnvkit.all.vcf.gz",
-            "path_index": [
-                "TN_panel/analysis/vep/CNV.somatic.TN_panel.cnvkit.all.vcf.gz.tbi"
-            ],
-            "step": "vep_somatic",
-            "tag": [
-                "vcf-all",
-                "cnvkit",
-                "TN-panel",
-                "annotated-somatic-vcf-all",
-                "CNV"
-            ],
-            "id": "TN_panel",
-            "format": "vcf.gz"
-        },
-        {
-            "path": "TN_panel/analysis/vep/CNV.somatic.TN_panel.cnvkit.all.vcf.gz.tbi",
-            "path_index": "",
-            "step": "vep_somatic",
-            "tag": [
-                "vcf-all",
-                "cnvkit",
-                "annotated-somatic-vcf-all-index",
-                "TN-panel",
-                "CNV"
+                "SV"
             ],
             "id": "TN_panel",
             "format": "vcf.gz.tbi"
@@ -537,11 +35,11 @@
             ],
             "step": "vep_somatic",
             "tag": [
-                "vcf-all",
                 "TN-panel",
-                "vardict",
                 "annotated-somatic-vcf-all",
-                "SNV"
+                "SNV",
+                "vardict",
+                "vcf-all"
             ],
             "id": "TN_panel",
             "format": "vcf.gz"
@@ -551,41 +49,11 @@
             "path_index": "",
             "step": "vep_somatic",
             "tag": [
-                "vcf-all",
-                "annotated-somatic-vcf-all-index",
                 "TN-panel",
+                "SNV",
                 "vardict",
-                "SNV"
-            ],
-            "id": "TN_panel",
-            "format": "vcf.gz.tbi"
-        },
-        {
-            "path": "TN_panel/analysis/vep/SNV.somatic.TN_panel.tnhaplotyper.all.vcf.gz",
-            "path_index": [
-                "TN_panel/analysis/vep/SNV.somatic.TN_panel.tnhaplotyper.all.vcf.gz.tbi"
-            ],
-            "step": "vep_somatic",
-            "tag": [
                 "vcf-all",
-                "TN-panel",
-                "annotated-somatic-vcf-all",
-                "SNV",
-                "tnhaplotyper"
-            ],
-            "id": "TN_panel",
-            "format": "vcf.gz"
-        },
-        {
-            "path": "TN_panel/analysis/vep/SNV.somatic.TN_panel.tnhaplotyper.all.vcf.gz.tbi",
-            "path_index": "",
-            "step": "vep_somatic",
-            "tag": [
-                "vcf-all",
-                "annotated-somatic-vcf-all-index",
-                "TN-panel",
-                "SNV",
-                "tnhaplotyper"
+                "annotated-somatic-vcf-all-index"
             ],
             "id": "TN_panel",
             "format": "vcf.gz.tbi"
@@ -597,11 +65,11 @@
             ],
             "step": "vep_somatic",
             "tag": [
-                "vcf-all",
+                "TNscope-umi",
                 "TN-panel",
                 "annotated-somatic-vcf-all",
                 "SNV",
-                "TNscope-umi"
+                "vcf-all"
             ],
             "id": "TN_panel",
             "format": "vcf.gz"
@@ -611,11 +79,11 @@
             "path_index": "",
             "step": "vep_somatic",
             "tag": [
-                "vcf-all",
-                "annotated-somatic-vcf-all-index",
+                "TNscope-umi",
                 "TN-panel",
                 "SNV",
-                "TNscope-umi"
+                "vcf-all",
+                "annotated-somatic-vcf-all-index"
             ],
             "id": "TN_panel",
             "format": "vcf.gz.tbi"
@@ -627,11 +95,11 @@
             ],
             "step": "vep_somatic",
             "tag": [
-                "vcf-all",
-                "SV",
                 "TN-panel",
                 "annotated-somatic-vcf-all",
-                "manta"
+                "SV",
+                "manta",
+                "vcf-all"
             ],
             "id": "TN_panel",
             "format": "vcf.gz"
@@ -641,67 +109,143 @@
             "path_index": "",
             "step": "vep_somatic",
             "tag": [
-                "vcf-all",
-                "SV",
-                "annotated-somatic-vcf-all-index",
                 "TN-panel",
-                "manta"
+                "SV",
+                "manta",
+                "vcf-all",
+                "annotated-somatic-vcf-all-index"
             ],
             "id": "TN_panel",
             "format": "vcf.gz.tbi"
         },
         {
-            "path": "TN_panel/analysis/vep/SNV.somatic.TN_panel.vardict.all.vcf.gz_summary.html",
-            "path_index": [],
+            "path": "TN_panel/analysis/vep/SV.somatic.TN_panel.delly.all.vcf.gz",
+            "path_index": [
+                "TN_panel/analysis/vep/SV.somatic.TN_panel.delly.all.vcf.gz.tbi"
+            ],
             "step": "vep_somatic",
             "tag": [
-                "vcf-summary",
-                "annotated-somatic-vcf-summary",
                 "TN-panel",
-                "vardict",
-                "SNV"
+                "annotated-somatic-vcf-all",
+                "delly",
+                "SV",
+                "vcf-all"
             ],
             "id": "TN_panel",
-            "format": "html"
+            "format": "vcf.gz"
         },
         {
-            "path": "TN_panel/analysis/vep/SNV.somatic.TN_panel.TNscope_umi.all.vcf.gz_summary.html",
-            "path_index": [],
+            "path": "TN_panel/analysis/vep/SV.somatic.TN_panel.delly.all.vcf.gz.tbi",
+            "path_index": "",
             "step": "vep_somatic",
             "tag": [
-                "vcf-summary",
-                "annotated-somatic-vcf-summary",
+                "TN-panel",
+                "delly",
+                "SV",
+                "vcf-all",
+                "annotated-somatic-vcf-all-index"
+            ],
+            "id": "TN_panel",
+            "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "TN_panel/analysis/vep/SNV.somatic.TN_panel.tnhaplotyper.all.vcf.gz",
+            "path_index": [
+                "TN_panel/analysis/vep/SNV.somatic.TN_panel.tnhaplotyper.all.vcf.gz.tbi"
+            ],
+            "step": "vep_somatic",
+            "tag": [
+                "TN-panel",
+                "annotated-somatic-vcf-all",
+                "SNV",
+                "vcf-all",
+                "tnhaplotyper"
+            ],
+            "id": "TN_panel",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "TN_panel/analysis/vep/SNV.somatic.TN_panel.tnhaplotyper.all.vcf.gz.tbi",
+            "path_index": "",
+            "step": "vep_somatic",
+            "tag": [
                 "TN-panel",
                 "SNV",
-                "TNscope-umi"
+                "tnhaplotyper",
+                "vcf-all",
+                "annotated-somatic-vcf-all-index"
             ],
             "id": "TN_panel",
-            "format": "html"
+            "format": "vcf.gz.tbi"
         },
         {
-            "path": "TN_panel/analysis/vep/SV.somatic.TN_panel.manta.all.vcf.gz_summary.html",
-            "path_index": [],
+            "path": "TN_panel/analysis/vep/CNV.somatic.TN_panel.cnvkit.all.vcf.gz",
+            "path_index": [
+                "TN_panel/analysis/vep/CNV.somatic.TN_panel.cnvkit.all.vcf.gz.tbi"
+            ],
             "step": "vep_somatic",
             "tag": [
-                "SV",
-                "vcf-summary",
-                "annotated-somatic-vcf-summary",
+                "CNV",
                 "TN-panel",
-                "manta"
+                "annotated-somatic-vcf-all",
+                "cnvkit",
+                "vcf-all"
             ],
             "id": "TN_panel",
-            "format": "html"
+            "format": "vcf.gz"
+        },
+        {
+            "path": "TN_panel/analysis/vep/CNV.somatic.TN_panel.cnvkit.all.vcf.gz.tbi",
+            "path_index": "",
+            "step": "vep_somatic",
+            "tag": [
+                "CNV",
+                "TN-panel",
+                "cnvkit",
+                "vcf-all",
+                "annotated-somatic-vcf-all-index"
+            ],
+            "id": "TN_panel",
+            "format": "vcf.gz.tbi"
         },
         {
             "path": "TN_panel/analysis/vep/SNV.somatic.TN_panel.tnhaplotyper.all.vcf.gz_summary.html",
             "path_index": [],
             "step": "vep_somatic",
             "tag": [
-                "vcf-summary",
-                "annotated-somatic-vcf-summary",
                 "TN-panel",
                 "SNV",
+                "annotated-somatic-vcf-summary",
+                "vcf-summary",
                 "tnhaplotyper"
+            ],
+            "id": "TN_panel",
+            "format": "html"
+        },
+        {
+            "path": "TN_panel/analysis/vep/SV.somatic.TN_panel.delly.all.vcf.gz_summary.html",
+            "path_index": [],
+            "step": "vep_somatic",
+            "tag": [
+                "TN-panel",
+                "annotated-somatic-vcf-summary",
+                "delly",
+                "SV",
+                "vcf-summary"
+            ],
+            "id": "TN_panel",
+            "format": "html"
+        },
+        {
+            "path": "TN_panel/analysis/vep/SNV.somatic.TN_panel.vardict.all.vcf.gz_summary.html",
+            "path_index": [],
+            "step": "vep_somatic",
+            "tag": [
+                "TN-panel",
+                "SNV",
+                "annotated-somatic-vcf-summary",
+                "vcf-summary",
+                "vardict"
             ],
             "id": "TN_panel",
             "format": "html"
@@ -711,14 +255,438 @@
             "path_index": [],
             "step": "vep_somatic",
             "tag": [
-                "cnvkit",
-                "vcf-summary",
-                "annotated-somatic-vcf-summary",
+                "CNV",
                 "TN-panel",
-                "CNV"
+                "cnvkit",
+                "annotated-somatic-vcf-summary",
+                "vcf-summary"
             ],
             "id": "TN_panel",
             "format": "html"
+        },
+        {
+            "path": "TN_panel/analysis/vep/SNV.somatic.TN_panel.TNscope_umi.all.vcf.gz_summary.html",
+            "path_index": [],
+            "step": "vep_somatic",
+            "tag": [
+                "TNscope-umi",
+                "TN-panel",
+                "SNV",
+                "annotated-somatic-vcf-summary",
+                "vcf-summary"
+            ],
+            "id": "TN_panel",
+            "format": "html"
+        },
+        {
+            "path": "TN_panel/analysis/vep/SV.somatic.TN_panel.manta.all.vcf.gz_summary.html",
+            "path_index": [],
+            "step": "vep_somatic",
+            "tag": [
+                "TN-panel",
+                "annotated-somatic-vcf-summary",
+                "SV",
+                "vcf-summary",
+                "manta"
+            ],
+            "id": "TN_panel",
+            "format": "html"
+        },
+        {
+            "path": "TN_panel/analysis/vep/SNV.somatic.TN_panel.vardict.all.stats",
+            "path_index": [],
+            "step": "vep_somatic",
+            "tag": [
+                "TN-panel",
+                "SNV",
+                "bcftools-stats",
+                "annotated-somatic-bcftools-stats",
+                "vardict"
+            ],
+            "id": "TN_panel",
+            "format": "stats"
+        },
+        {
+            "path": "TN_panel/analysis/vep/SNV.somatic.TN_panel.tnhaplotyper.all.stats",
+            "path_index": [],
+            "step": "vep_somatic",
+            "tag": [
+                "TN-panel",
+                "SNV",
+                "bcftools-stats",
+                "annotated-somatic-bcftools-stats",
+                "tnhaplotyper"
+            ],
+            "id": "TN_panel",
+            "format": "stats"
+        },
+        {
+            "path": "TN_panel/analysis/vep/SV.somatic.TN_panel.delly.all.stats",
+            "path_index": [],
+            "step": "vep_somatic",
+            "tag": [
+                "TN-panel",
+                "bcftools-stats",
+                "annotated-somatic-bcftools-stats",
+                "delly",
+                "SV"
+            ],
+            "id": "TN_panel",
+            "format": "stats"
+        },
+        {
+            "path": "TN_panel/analysis/vep/CNV.somatic.TN_panel.cnvkit.all.stats",
+            "path_index": [],
+            "step": "vep_somatic",
+            "tag": [
+                "CNV",
+                "TN-panel",
+                "cnvkit",
+                "bcftools-stats",
+                "annotated-somatic-bcftools-stats"
+            ],
+            "id": "TN_panel",
+            "format": "stats"
+        },
+        {
+            "path": "TN_panel/analysis/vep/SV.somatic.TN_panel.manta.all.stats",
+            "path_index": [],
+            "step": "vep_somatic",
+            "tag": [
+                "TN-panel",
+                "bcftools-stats",
+                "annotated-somatic-bcftools-stats",
+                "SV",
+                "manta"
+            ],
+            "id": "TN_panel",
+            "format": "stats"
+        },
+        {
+            "path": "TN_panel/analysis/vep/SNV.somatic.TN_panel.TNscope_umi.all.stats",
+            "path_index": [],
+            "step": "vep_somatic",
+            "tag": [
+                "TNscope-umi",
+                "TN-panel",
+                "SNV",
+                "bcftools-stats",
+                "annotated-somatic-bcftools-stats"
+            ],
+            "id": "TN_panel",
+            "format": "stats"
+        },
+        {
+            "path": "TN_panel/analysis/vep/SNV.somatic.TN_panel.TNscope_umi.balsamic_stat",
+            "path_index": [],
+            "step": "tmb_calculation",
+            "tag": [
+                "tmb",
+                "TNscope-umi",
+                "TN-panel",
+                "SNV",
+                "stat-somatic-tmb"
+            ],
+            "id": "TN_panel",
+            "format": "balsamic_stat"
+        },
+        {
+            "path": "TN_panel/analysis/vep/SNV.somatic.TN_panel.tnhaplotyper.balsamic_stat",
+            "path_index": [],
+            "step": "tmb_calculation",
+            "tag": [
+                "tmb",
+                "TN-panel",
+                "SNV",
+                "stat-somatic-tmb",
+                "tnhaplotyper"
+            ],
+            "id": "TN_panel",
+            "format": "balsamic_stat"
+        },
+        {
+            "path": "TN_panel/analysis/vep/SNV.somatic.TN_panel.vardict.balsamic_stat",
+            "path_index": [],
+            "step": "tmb_calculation",
+            "tag": [
+                "tmb",
+                "TN-panel",
+                "SNV",
+                "stat-somatic-tmb",
+                "vardict"
+            ],
+            "id": "TN_panel",
+            "format": "balsamic_stat"
+        },
+        {
+            "path": "TN_panel/analysis/qc/multiqc_report.html",
+            "path_index": [],
+            "step": "multiqc",
+            "tag": [
+                "html",
+                "multiqc-html"
+            ],
+            "id": "TN_panel",
+            "format": "html"
+        },
+        {
+            "path": "TN_panel/analysis/qc/multiqc_data/multiqc_data.json",
+            "path_index": [],
+            "step": "multiqc",
+            "tag": [
+                "json",
+                "multiqc-json"
+            ],
+            "id": "TN_panel",
+            "format": "json"
+        },
+        {
+            "path": "TN_panel/analysis/vep/SNV.somatic.TN_panel.TNscope_umi.all.filtered.vcf.gz",
+            "path_index": [
+                "TN_panel/analysis/vep/SNV.somatic.TN_panel.TNscope_umi.all.filtered.vcf.gz.tbi"
+            ],
+            "step": "bcftools_filter_TNscope_umi_tumor_normal",
+            "tag": [
+                "SNV",
+                "vcf-filtered",
+                "research-vcf-filtered",
+                "TN-panel"
+            ],
+            "id": "TN_panel",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "TN_panel/analysis/vep/SNV.somatic.TN_panel.TNscope_umi.all.filtered.vcf.gz.tbi",
+            "path_index": "",
+            "step": "bcftools_filter_TNscope_umi_tumor_normal",
+            "tag": [
+                "SNV",
+                "vcf-filtered",
+                "research-vcf-filtered-index",
+                "TN-panel"
+            ],
+            "id": "TN_panel",
+            "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "TN_panel/analysis/vep/SNV.somatic.TN_panel.TNscope_umi.all.filtered.pass.vcf.gz",
+            "path_index": [
+                "TN_panel/analysis/vep/SNV.somatic.TN_panel.TNscope_umi.all.filtered.pass.vcf.gz.tbi"
+            ],
+            "step": "bcftools_filter_TNscope_umi_tumor_normal",
+            "tag": [
+                "SNV",
+                "research-vcf-pass",
+                "TN-panel",
+                "vcf-pass"
+            ],
+            "id": "TN_panel",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "TN_panel/analysis/vep/SNV.somatic.TN_panel.TNscope_umi.all.filtered.pass.vcf.gz.tbi",
+            "path_index": "",
+            "step": "bcftools_filter_TNscope_umi_tumor_normal",
+            "tag": [
+                "SNV",
+                "research-vcf-pass-index",
+                "TN-panel",
+                "vcf-pass"
+            ],
+            "id": "TN_panel",
+            "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "TN_panel/analysis/vep/SV.somatic.TN_panel.delly.all.filtered.pass.vcf.gz",
+            "path_index": [
+                "TN_panel/analysis/vep/SV.somatic.TN_panel.delly.all.filtered.pass.vcf.gz.tbi"
+            ],
+            "step": "bcftools_filter_delly",
+            "tag": [
+                "vcf-sv-pass",
+                "TN-panel",
+                "research-vcf-sv-pass",
+                "SV"
+            ],
+            "id": "TN_panel",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "TN_panel/analysis/vep/SV.somatic.TN_panel.delly.all.filtered.pass.vcf.gz.tbi",
+            "path_index": "",
+            "step": "bcftools_filter_delly",
+            "tag": [
+                "vcf-sv-pass",
+                "research-vcf-sv-pass-index",
+                "TN-panel",
+                "SV"
+            ],
+            "id": "TN_panel",
+            "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "TN_panel/analysis/vep/SNV.somatic.TN_panel.tnhaplotyper.all.filtered.vcf.gz",
+            "path_index": [
+                "TN_panel/analysis/vep/SNV.somatic.TN_panel.tnhaplotyper.all.filtered.vcf.gz.tbi"
+            ],
+            "step": "bcftools_filter_tnhaplotyper_tumor_normal",
+            "tag": [
+                "SNV",
+                "vcf-filtered",
+                "research-vcf-filtered",
+                "TN-panel"
+            ],
+            "id": "TN_panel",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "TN_panel/analysis/vep/SNV.somatic.TN_panel.tnhaplotyper.all.filtered.vcf.gz.tbi",
+            "path_index": "",
+            "step": "bcftools_filter_tnhaplotyper_tumor_normal",
+            "tag": [
+                "SNV",
+                "vcf-filtered",
+                "research-vcf-filtered-index",
+                "TN-panel"
+            ],
+            "id": "TN_panel",
+            "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "TN_panel/analysis/vep/SNV.somatic.TN_panel.tnhaplotyper.all.filtered.pass.vcf.gz",
+            "path_index": [
+                "TN_panel/analysis/vep/SNV.somatic.TN_panel.tnhaplotyper.all.filtered.pass.vcf.gz.tbi"
+            ],
+            "step": "bcftools_filter_tnhaplotyper_tumor_normal",
+            "tag": [
+                "SNV",
+                "research-vcf-pass",
+                "TN-panel",
+                "vcf-pass"
+            ],
+            "id": "TN_panel",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "TN_panel/analysis/vep/SNV.somatic.TN_panel.tnhaplotyper.all.filtered.pass.vcf.gz.tbi",
+            "path_index": "",
+            "step": "bcftools_filter_tnhaplotyper_tumor_normal",
+            "tag": [
+                "SNV",
+                "research-vcf-pass-index",
+                "TN-panel",
+                "vcf-pass"
+            ],
+            "id": "TN_panel",
+            "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "TN_panel/analysis/vep/SNV.somatic.TN_panel.vardict.all.filtered.vcf.gz",
+            "path_index": [
+                "TN_panel/analysis/vep/SNV.somatic.TN_panel.vardict.all.filtered.vcf.gz.tbi"
+            ],
+            "step": "bcftools_filter_vardict_tumor_normal",
+            "tag": [
+                "SNV",
+                "vcf-filtered",
+                "clinical-vcf-filtered",
+                "TN-panel"
+            ],
+            "id": "TN_panel",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "TN_panel/analysis/vep/SNV.somatic.TN_panel.vardict.all.filtered.vcf.gz.tbi",
+            "path_index": "",
+            "step": "bcftools_filter_vardict_tumor_normal",
+            "tag": [
+                "clinical-vcf-filtered-index",
+                "SNV",
+                "vcf-filtered",
+                "TN-panel"
+            ],
+            "id": "TN_panel",
+            "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "TN_panel/analysis/vep/SNV.somatic.TN_panel.vardict.all.filtered.pass.vcf.gz",
+            "path_index": [
+                "TN_panel/analysis/vep/SNV.somatic.TN_panel.vardict.all.filtered.pass.vcf.gz.tbi"
+            ],
+            "step": "bcftools_filter_vardict_tumor_normal",
+            "tag": [
+                "SNV",
+                "clinical-vcf-pass",
+                "TN-panel",
+                "vcf-pass"
+            ],
+            "id": "TN_panel",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "TN_panel/analysis/vep/SNV.somatic.TN_panel.vardict.all.filtered.pass.vcf.gz.tbi",
+            "path_index": "",
+            "step": "bcftools_filter_vardict_tumor_normal",
+            "tag": [
+                "SNV",
+                "clinical-vcf-pass-index",
+                "TN-panel",
+                "vcf-pass"
+            ],
+            "id": "TN_panel",
+            "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "TN_panel/analysis/bam/normal.merged.bam",
+            "path_index": [
+                "TN_panel/analysis/bam/normal.merged.bam.bai"
+            ],
+            "step": "mergeBam_normal",
+            "tag": [
+                "ACC0000A0",
+                "normal-bam",
+                "bam"
+            ],
+            "id": "ACC0000A0",
+            "format": "bam"
+        },
+        {
+            "path": "TN_panel/analysis/bam/normal.merged.bam.bai",
+            "path_index": "",
+            "step": "mergeBam_normal",
+            "tag": [
+                "normal-bam-index",
+                "ACC0000A0",
+                "bam"
+            ],
+            "id": "ACC0000A0",
+            "format": "bai"
+        },
+        {
+            "path": "TN_panel/analysis/bam/normal.merged.cram",
+            "path_index": [
+                "TN_panel/analysis/bam/normal.merged.cram.crai"
+            ],
+            "step": "mergeBam_normal",
+            "tag": [
+                "ACC0000A0",
+                "cram",
+                "normal-cram"
+            ],
+            "id": "ACC0000A0",
+            "format": "cram"
+        },
+        {
+            "path": "TN_panel/analysis/bam/normal.merged.cram.crai",
+            "path_index": "",
+            "step": "mergeBam_normal",
+            "tag": [
+                "ACC0000A0",
+                "cram",
+                "normal-cram-index"
+            ],
+            "id": "ACC0000A0",
+            "format": "crai"
         },
         {
             "path": "TN_panel/analysis/bam/tumor.merged.bam",
@@ -727,11 +695,11 @@
             ],
             "step": "mergeBam_tumor",
             "tag": [
+                "ACC0000A1",
                 "bam",
-                "ACC123",
                 "tumor-bam"
             ],
-            "id": "ACC123",
+            "id": "ACC0000A1",
             "format": "bam"
         },
         {
@@ -739,11 +707,11 @@
             "path_index": "",
             "step": "mergeBam_tumor",
             "tag": [
-                "bam",
-                "ACC123",
-                "tumor-bam-index"
+                "ACC0000A1",
+                "tumor-bam-index",
+                "bam"
             ],
-            "id": "ACC123",
+            "id": "ACC0000A1",
             "format": "bai"
         },
         {
@@ -753,11 +721,11 @@
             ],
             "step": "mergeBam_tumor",
             "tag": [
-                "cram",
-                "ACC123",
-                "tumor-cram"
+                "tumor-cram",
+                "ACC0000A1",
+                "cram"
             ],
-            "id": "ACC123",
+            "id": "ACC0000A1",
             "format": "cram"
         },
         {
@@ -765,12 +733,108 @@
             "path_index": "",
             "step": "mergeBam_tumor",
             "tag": [
-                "ACC123",
-                "cram",
-                "tumor-cram-index"
+                "ACC0000A1",
+                "tumor-cram-index",
+                "cram"
             ],
-            "id": "ACC123",
+            "id": "ACC0000A1",
             "format": "crai"
+        },
+        {
+            "path": "TN_panel/analysis/fastq/concatenated_ACC0000A0_XXXXXX_R_1.fp.fastq.gz",
+            "path_index": [],
+            "step": "fastp",
+            "tag": [
+                "read1",
+                "quality-trimmed-fastq-read1",
+                "ACC0000A0"
+            ],
+            "id": "ACC0000A0",
+            "format": "fastq.gz"
+        },
+        {
+            "path": "TN_panel/analysis/fastq/concatenated_ACC0000A1_XXXXXX_R_1.fp.fastq.gz",
+            "path_index": [],
+            "step": "fastp",
+            "tag": [
+                "read1",
+                "quality-trimmed-fastq-read1",
+                "ACC0000A1"
+            ],
+            "id": "ACC0000A1",
+            "format": "fastq.gz"
+        },
+        {
+            "path": "TN_panel/analysis/fastq/concatenated_ACC0000A1_XXXXXX_R_2.fp.fastq.gz",
+            "path_index": [],
+            "step": "fastp",
+            "tag": [
+                "quality-trimmed-fastq-read2",
+                "read2",
+                "ACC0000A1"
+            ],
+            "id": "ACC0000A1",
+            "format": "fastq.gz"
+        },
+        {
+            "path": "TN_panel/analysis/fastq/concatenated_ACC0000A0_XXXXXX_R_2.fp.fastq.gz",
+            "path_index": [],
+            "step": "fastp",
+            "tag": [
+                "quality-trimmed-fastq-read2",
+                "read2",
+                "ACC0000A0"
+            ],
+            "id": "ACC0000A0",
+            "format": "fastq.gz"
+        },
+        {
+            "path": "TN_panel/analysis/qc/fastp/concatenated_ACC0000A1_XXXXXX_R_fastp.json",
+            "path_index": [],
+            "step": "fastp",
+            "tag": [
+                "json",
+                "ACC0000A1",
+                "quality-trimmed-fastq-json"
+            ],
+            "id": "ACC0000A1",
+            "format": "json"
+        },
+        {
+            "path": "TN_panel/analysis/qc/fastp/concatenated_ACC0000A0_XXXXXX_R_fastp.json",
+            "path_index": [],
+            "step": "fastp",
+            "tag": [
+                "json",
+                "ACC0000A0",
+                "quality-trimmed-fastq-json"
+            ],
+            "id": "ACC0000A0",
+            "format": "json"
+        },
+        {
+            "path": "TN_panel/analysis/qc/fastp/concatenated_ACC0000A1_XXXXXX_R_fastp.html",
+            "path_index": [],
+            "step": "fastp",
+            "tag": [
+                "quality-trimmed-fastq-html",
+                "html",
+                "ACC0000A1"
+            ],
+            "id": "ACC0000A1",
+            "format": "html"
+        },
+        {
+            "path": "TN_panel/analysis/qc/fastp/concatenated_ACC0000A0_XXXXXX_R_fastp.html",
+            "path_index": [],
+            "step": "fastp",
+            "tag": [
+                "quality-trimmed-fastq-html",
+                "html",
+                "ACC0000A0"
+            ],
+            "id": "ACC0000A0",
+            "format": "html"
         },
         {
             "path": "TN_panel/analysis/cnv/tumor.merged.cnr",
@@ -821,8 +885,8 @@
             "path_index": [],
             "step": "cnvkit_paired",
             "tag": [
-                "cnv-gene-metrics",
-                "gene-metrics"
+                "gene-metrics",
+                "cnv-gene-metrics"
             ],
             "id": "TN_panel",
             "format": "gene_metrics"
@@ -832,97 +896,363 @@
             "path_index": [],
             "step": "cnvkit_paired",
             "tag": [
-                "cnv-scatter",
-                "scatter"
+                "scatter",
+                "cnv-scatter"
             ],
             "id": "TN_panel",
             "format": "pdf"
         },
         {
-            "path": "TN_panel/analysis/vep/SNV.somatic.TN_panel.vardict.all.filtered.pass.ranked.vcf.gz",
+            "path": "TN_panel/analysis/vep/CNV.somatic.TN_panel.cnvkit.all.filtered.pass.vcf.gz",
             "path_index": [
-                "TN_panel/analysis/vep/SNV.somatic.TN_panel.vardict.all.filtered.pass.ranked.vcf.gz.tbi"
+                "TN_panel/analysis/vep/CNV.somatic.TN_panel.cnvkit.all.filtered.pass.vcf.gz.tbi"
             ],
-            "step": "rankscore",
+            "step": "bcftools_filter_cnvkit",
             "tag": [
-                "research-vcf-pass",
-                "vcf-pass",
-                "SNV",
+                "CNV",
+                "research-vcf-sv-pass",
+                "vcf-sv-pass",
                 "TN-panel"
             ],
             "id": "TN_panel",
             "format": "vcf.gz"
         },
         {
-            "path": "TN_panel/analysis/vep/SNV.somatic.TN_panel.vardict.all.filtered.pass.ranked.vcf.gz.tbi",
+            "path": "TN_panel/analysis/vep/CNV.somatic.TN_panel.cnvkit.all.filtered.pass.vcf.gz.tbi",
             "path_index": "",
-            "step": "rankscore",
+            "step": "bcftools_filter_cnvkit",
             "tag": [
-                "research-vcf-pass-index",
-                "vcf-pass",
-                "SNV",
+                "CNV",
+                "research-vcf-sv-pass-index",
+                "vcf-sv-pass",
                 "TN-panel"
             ],
             "id": "TN_panel",
             "format": "vcf.gz.tbi"
         },
         {
-            "path": "TN_panel/analysis/vep/SV.somatic.TN_panel.delly.all.vcf.gz",
+            "path": "TN_panel/analysis/vep/SNV.germline.normal.haplotypecaller.vcf.gz",
             "path_index": [
-                "TN_panel/analysis/vep/SV.somatic.TN_panel.delly.all.vcf.gz.tbi"
+                "TN_panel/analysis/vep/SNV.germline.normal.haplotypecaller.vcf.gz.tbi"
             ],
-            "step": "vep_somatic",
+            "step": "vep_germline",
             "tag": [
+                "SNV",
+                "annotated-germline-vcf-all",
                 "vcf-all",
-                "TN-panel",
-                "delly",
-                "SV",
-                "annotated-somatic-vcf-all"
+                "haplotypecaller"
             ],
-            "id": "TN_panel",
+            "id": "ACC0000A0",
             "format": "vcf.gz"
         },
         {
-            "path": "TN_panel/analysis/vep/SV.somatic.TN_panel.delly.all.vcf.gz.tbi",
+            "path": "TN_panel/analysis/vep/SNV.germline.normal.haplotypecaller.vcf.gz.tbi",
             "path_index": "",
-            "step": "vep_somatic",
+            "step": "vep_germline",
             "tag": [
-                "annotated-somatic-vcf-all-index",
+                "annotated-germline-vcf-all-index",
+                "SNV",
                 "vcf-all",
-                "TN-panel",
-                "delly",
-                "SV"
+                "haplotypecaller"
             ],
-            "id": "TN_panel",
+            "id": "ACC0000A0",
             "format": "vcf.gz.tbi"
         },
-                {
-            "path": "TN_panel/analysis/vep/SV.somatic.TN_panel.delly.all.filtered.pass.vcf.gz",
+        {
+            "path": "TN_panel/analysis/vep/SV.germline.normal.manta_germline.vcf.gz",
             "path_index": [
-                "TN_panel/analysis/vep/SV.somatic.TN_panel.delly.all.filtered.pass.vcf.gz.tbi"
+                "TN_panel/analysis/vep/SV.germline.normal.manta_germline.vcf.gz.tbi"
             ],
-            "step": "bcftools_filter_delly",
+            "step": "vep_germline",
             "tag": [
+                "vcf-all",
+                "annotated-germline-vcf-all",
                 "SV",
-                "TN-panel",
-                "vcf-sv-pass",
-                "research-vcf-sv-pass"
+                "manta-germline"
             ],
-            "id": "TN_panel",
+            "id": "ACC0000A0",
             "format": "vcf.gz"
         },
         {
-            "path": "TN_panel/analysis/vep/SV.somatic.TN_panel.delly.all.filtered.pass.vcf.gz.tbi",
+            "path": "TN_panel/analysis/vep/SV.germline.normal.manta_germline.vcf.gz.tbi",
             "path_index": "",
-            "step": "bcftools_filter_delly",
+            "step": "vep_germline",
             "tag": [
+                "vcf-all",
+                "annotated-germline-vcf-all-index",
                 "SV",
-                "TN-panel",
-                "vcf-sv-pass",
-                "research-vcf-sv-pass-index"
+                "manta-germline"
             ],
-            "id": "TN_panel",
+            "id": "ACC0000A0",
             "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "TN_panel/analysis/vep/SNV.germline.tumor.haplotypecaller.vcf.gz",
+            "path_index": [
+                "TN_panel/analysis/vep/SNV.germline.tumor.haplotypecaller.vcf.gz.tbi"
+            ],
+            "step": "vep_germline",
+            "tag": [
+                "SNV",
+                "annotated-germline-vcf-all",
+                "vcf-all",
+                "haplotypecaller"
+            ],
+            "id": "ACC0000A1",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "TN_panel/analysis/vep/SNV.germline.tumor.haplotypecaller.vcf.gz.tbi",
+            "path_index": "",
+            "step": "vep_germline",
+            "tag": [
+                "annotated-germline-vcf-all-index",
+                "SNV",
+                "vcf-all",
+                "haplotypecaller"
+            ],
+            "id": "ACC0000A1",
+            "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "TN_panel/analysis/vep/SV.germline.tumor.manta_germline.vcf.gz",
+            "path_index": [
+                "TN_panel/analysis/vep/SV.germline.tumor.manta_germline.vcf.gz.tbi"
+            ],
+            "step": "vep_germline",
+            "tag": [
+                "vcf-all",
+                "annotated-germline-vcf-all",
+                "SV",
+                "manta-germline"
+            ],
+            "id": "ACC0000A1",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "TN_panel/analysis/vep/SV.germline.tumor.manta_germline.vcf.gz.tbi",
+            "path_index": "",
+            "step": "vep_germline",
+            "tag": [
+                "vcf-all",
+                "annotated-germline-vcf-all-index",
+                "SV",
+                "manta-germline"
+            ],
+            "id": "ACC0000A1",
+            "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "TN_panel/analysis/vep/SNV.germline.normal.dnascope.vcf.gz",
+            "path_index": [
+                "TN_panel/analysis/vep/SNV.germline.normal.dnascope.vcf.gz.tbi"
+            ],
+            "step": "vep_germline",
+            "tag": [
+                "SNV",
+                "dnascope",
+                "annotated-germline-vcf-all",
+                "vcf-all"
+            ],
+            "id": "ACC0000A0",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "TN_panel/analysis/vep/SNV.germline.normal.dnascope.vcf.gz.tbi",
+            "path_index": "",
+            "step": "vep_germline",
+            "tag": [
+                "annotated-germline-vcf-all-index",
+                "SNV",
+                "dnascope",
+                "vcf-all"
+            ],
+            "id": "ACC0000A0",
+            "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "TN_panel/analysis/vep/SNV.germline.tumor.dnascope.vcf.gz",
+            "path_index": [
+                "TN_panel/analysis/vep/SNV.germline.tumor.dnascope.vcf.gz.tbi"
+            ],
+            "step": "vep_germline",
+            "tag": [
+                "SNV",
+                "dnascope",
+                "annotated-germline-vcf-all",
+                "vcf-all"
+            ],
+            "id": "ACC0000A1",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "TN_panel/analysis/vep/SNV.germline.tumor.dnascope.vcf.gz.tbi",
+            "path_index": "",
+            "step": "vep_germline",
+            "tag": [
+                "annotated-germline-vcf-all-index",
+                "SNV",
+                "dnascope",
+                "vcf-all"
+            ],
+            "id": "ACC0000A1",
+            "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "TN_panel/analysis/vep/SNV.germline.tumor.haplotypecaller.vcf.gz_summary.html",
+            "path_index": [],
+            "step": "vep_germline",
+            "tag": [
+                "vcf-summary",
+                "SNV",
+                "haplotypecaller",
+                "annotated-germline-vcf-summary"
+            ],
+            "id": "ACC0000A1",
+            "format": "html"
+        },
+        {
+            "path": "TN_panel/analysis/vep/SV.germline.normal.manta_germline.vcf.gz_summary.html",
+            "path_index": [],
+            "step": "vep_germline",
+            "tag": [
+                "vcf-summary",
+                "annotated-germline-vcf-summary",
+                "SV",
+                "manta-germline"
+            ],
+            "id": "ACC0000A0",
+            "format": "html"
+        },
+        {
+            "path": "TN_panel/analysis/vep/SNV.germline.tumor.dnascope.vcf.gz_summary.html",
+            "path_index": [],
+            "step": "vep_germline",
+            "tag": [
+                "vcf-summary",
+                "SNV",
+                "dnascope",
+                "annotated-germline-vcf-summary"
+            ],
+            "id": "ACC0000A1",
+            "format": "html"
+        },
+        {
+            "path": "TN_panel/analysis/vep/SNV.germline.normal.haplotypecaller.vcf.gz_summary.html",
+            "path_index": [],
+            "step": "vep_germline",
+            "tag": [
+                "vcf-summary",
+                "SNV",
+                "haplotypecaller",
+                "annotated-germline-vcf-summary"
+            ],
+            "id": "ACC0000A0",
+            "format": "html"
+        },
+        {
+            "path": "TN_panel/analysis/vep/SV.germline.tumor.manta_germline.vcf.gz_summary.html",
+            "path_index": [],
+            "step": "vep_germline",
+            "tag": [
+                "vcf-summary",
+                "annotated-germline-vcf-summary",
+                "SV",
+                "manta-germline"
+            ],
+            "id": "ACC0000A1",
+            "format": "html"
+        },
+        {
+            "path": "TN_panel/analysis/vep/SNV.germline.normal.dnascope.vcf.gz_summary.html",
+            "path_index": [],
+            "step": "vep_germline",
+            "tag": [
+                "vcf-summary",
+                "SNV",
+                "dnascope",
+                "annotated-germline-vcf-summary"
+            ],
+            "id": "ACC0000A0",
+            "format": "html"
+        },
+        {
+            "path": "TN_panel/analysis/vep/SNV.germline.tumor.haplotypecaller.all.stats",
+            "path_index": [],
+            "step": "vep_germline",
+            "tag": [
+                "SNV",
+                "annotated-germline-bcftools-stats",
+                "haplotypecaller",
+                "bcftools-stats"
+            ],
+            "id": "ACC0000A1",
+            "format": "stats"
+        },
+        {
+            "path": "TN_panel/analysis/vep/SV.germline.tumor.manta_germline.all.stats",
+            "path_index": [],
+            "step": "vep_germline",
+            "tag": [
+                "bcftools-stats",
+                "annotated-germline-bcftools-stats",
+                "SV",
+                "manta-germline"
+            ],
+            "id": "ACC0000A1",
+            "format": "stats"
+        },
+        {
+            "path": "TN_panel/analysis/vep/SNV.germline.normal.haplotypecaller.all.stats",
+            "path_index": [],
+            "step": "vep_germline",
+            "tag": [
+                "SNV",
+                "annotated-germline-bcftools-stats",
+                "haplotypecaller",
+                "bcftools-stats"
+            ],
+            "id": "ACC0000A0",
+            "format": "stats"
+        },
+        {
+            "path": "TN_panel/analysis/vep/SNV.germline.tumor.dnascope.all.stats",
+            "path_index": [],
+            "step": "vep_germline",
+            "tag": [
+                "SNV",
+                "annotated-germline-bcftools-stats",
+                "dnascope",
+                "bcftools-stats"
+            ],
+            "id": "ACC0000A1",
+            "format": "stats"
+        },
+        {
+            "path": "TN_panel/analysis/vep/SNV.germline.normal.dnascope.all.stats",
+            "path_index": [],
+            "step": "vep_germline",
+            "tag": [
+                "SNV",
+                "annotated-germline-bcftools-stats",
+                "dnascope",
+                "bcftools-stats"
+            ],
+            "id": "ACC0000A0",
+            "format": "stats"
+        },
+        {
+            "path": "TN_panel/analysis/vep/SV.germline.normal.manta_germline.all.stats",
+            "path_index": [],
+            "step": "vep_germline",
+            "tag": [
+                "bcftools-stats",
+                "annotated-germline-bcftools-stats",
+                "SV",
+                "manta-germline"
+            ],
+            "id": "ACC0000A0",
+            "format": "stats"
         },
         {
             "path": "TN_panel/analysis/delivery_report/TN_panel_report.html",
@@ -930,15 +1260,6 @@
             "format": "html",
             "tag": [
                 "balsamic-report"
-            ],
-            "id": "TN_panel"
-        },
-        {
-            "path": "TN_panel/analysis/delivery_report/TN_panel_metrics_deliverables.yaml",
-            "step": "balsamic_delivery",
-            "format": "yaml",
-            "tag": [
-                "qc-metrics-yaml"
             ],
             "id": "TN_panel"
         },
@@ -952,11 +1273,29 @@
             "id": "TN_panel"
         },
         {
-            "path": "TN_panel/TN_panel_BALSAMIC_7.2.2_graph.pdf",
+            "path": "TN_panel/TN_panel_BALSAMIC_8.2.2_graph.pdf",
             "step": "case_config",
             "format": "pdf",
             "tag": [
                 "balsamic-dag"
+            ],
+            "id": "TN_panel"
+        },
+        {
+            "path": "TN_panel/analysis/delivery_report/TN_panel_qc_report.html",
+            "step": "balsamic_delivery",
+            "format": "html",
+            "tag": [
+                "coverage-qc-report"
+            ],
+            "id": "TN_panel"
+        },
+        {
+            "path": "TN_panel/analysis/delivery_report/TN_panel_metrics_deliverables.yaml",
+            "step": "balsamic_delivery",
+            "format": "yaml",
+            "tag": [
+                "qc-metrics-yaml"
             ],
             "id": "TN_panel"
         }
