@@ -117,12 +117,12 @@ MIP_RNA_TAGS = {
     },
     frozenset(["stringtie_ar"]): {
         "tags": ["stringtie", "assembly"],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": ["storage"],
     },
     frozenset(["gffcompare_ar"]): {
         "tags": ["gffcompare"],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": ["storage"],
     },
     frozenset(["gatk_asereadcounter"]): {
