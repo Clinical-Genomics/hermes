@@ -446,8 +446,8 @@
             "step": "bcftools_filter_TNscope_umi_tumor_normal",
             "tag": [
                 "SNV",
-                "vcf-filtered-tnscope-umi",
-                "research-vcf-filtered-tnscope-umi",
+                "vcf-filtered-TNscope-umi",
+                "research-vcf-filtered-TNscope-umi",
                 "TN-panel"
             ],
             "id": "TN_panel",
@@ -459,8 +459,8 @@
             "step": "bcftools_filter_TNscope_umi_tumor_normal",
             "tag": [
                 "SNV",
-                "vcf-filtered-tnscope-umi",
-                "research-vcf-filtered-tnscope-umi-index",
+                "vcf-filtered-TNscope-umi",
+                "research-vcf-filtered-TNscope-umi-index",
                 "TN-panel"
             ],
             "id": "TN_panel",
@@ -474,9 +474,9 @@
             "step": "bcftools_filter_TNscope_umi_tumor_normal",
             "tag": [
                 "SNV",
-                "research-vcf-pass-tnscope-umi",
+                "research-vcf-pass-TNscope-umi",
                 "TN-panel",
-                "vcf-pass-tnscope-umi"
+                "vcf-pass-TNscope-umi"
             ],
             "id": "TN_panel",
             "format": "vcf.gz"
@@ -487,9 +487,9 @@
             "step": "bcftools_filter_TNscope_umi_tumor_normal",
             "tag": [
                 "SNV",
-                "research-vcf-pass-tnscope-umi-index",
+                "research-vcf-pass-TNscope-umi-index",
                 "TN-panel",
-                "vcf-pass-tnscope-umi"
+                "vcf-pass-TNscope-umi"
             ],
             "id": "TN_panel",
             "format": "vcf.gz.tbi"
