@@ -248,7 +248,7 @@ BALSAMIC_COMMON_TAGS = {
     frozenset(TAGS["multiqc_data.json"]): {  # MultiQC json
         "tags": ["multiqc-json"],
         "is_mandatory": True,
-        "used_by": ["vogue", "audit"],
+        "used_by": ["audit"],
     },
     frozenset(TAGS["report.html"]): {  # BALSAMIC report html
         "tags": ["balsamic-report"],
@@ -265,20 +265,20 @@ BALSAMIC_COMMON_TAGS = {
         "is_mandatory": True,
         "used_by": ["audit"],
     },
-    frozenset(TAGS["metrics_deliverables.yaml"]): {
-        "tags": ["qc-metrics", "deliverable"],
-        "is_mandatory": True,
-        "used_by": ["vogue"],
-    },
     frozenset(TAGS["concatenated_*_R_fastp.html"]): {  # fastq html
         "tags": ["fastq", "visualization"],
         "is_mandatory": True,
         "used_by": ["audit"],
     },
     frozenset(TAGS["concatenated_*_R_fastp.json"]): {  # fastq json
-        "tags": ["fastq", "metrics"],
+        "tags": ["fastq", "visualization"],
         "is_mandatory": True,
         "used_by": ["audit"],
+    },
+    frozenset(TAGS["metrics_deliverables.yaml"]): {  # QC metrics
+        "tags": ["qc-metrics", "deliverable"],
+        "is_mandatory": True,
+        "used_by": ["vogue"],
     },
     # Raw data & alignment files
     frozenset(TAGS["concatenated_*_R_1.fp.fastq.gz"]): {  # fastq (read1)
@@ -315,42 +315,42 @@ BALSAMIC_COMMON_TAGS = {
     frozenset(TAGS["tnscope.all.vcf.gz"]): {  # tnscope (WGS)
         "tags": ["tnscope", "vcf-snv-research", "somatic"],
         "is_mandatory": False,
-        "used_by": ["deliver", "scout"],
+        "used_by": ["deliver"],
     },
     frozenset(TAGS["tnscope.all.vcf.gz.tbi"]): {
         "tags": ["tnscope", "vcf-snv-research-index", "somatic"],
         "is_mandatory": False,
-        "used_by": ["deliver", "scout"],
+        "used_by": ["deliver"],
+    },
+    frozenset(TAGS["tnscope.balsamic_stat"]): {
+        "tags": ["tmb", "tnscope", "somatic"],
+        "is_mandatory": False,
+        "used_by": ["deliver"],
     },
     frozenset(TAGS["tnscope.all.vcf.gz_summary.html"]): {
-        "tags": ["sention", "tnscope", "vcf-report", "somatic"],
+        "tags": ["tnscope", "vcf-report", "somatic"],
         "is_mandatory": False,
         "used_by": ["audit"],
     },
-    frozenset(TAGS["tnscope.balsamic_stat"]): {
-        "tags": ["tnscope", "tmb", "somatic"],
-        "is_mandatory": False,
-        "used_by": ["storage"],
-    },
     frozenset(TAGS["vardict.all.vcf.gz"]): {  # vardict (PANEL)
-        "tags": ["vcf", "vardict", "somatic"],
+        "tags": ["vardict", "vcf", "somatic"],
         "is_mandatory": False,
-        "used_by": ["storage"],
+        "used_by": ["deliver"],
     },
     frozenset(TAGS["vardict.all.vcf.gz.tbi"]): {
-        "tags": ["vcf-index", "vardict", "somatic"],
+        "tags": ["vardict", "vcf-index", "somatic"],
         "is_mandatory": False,
-        "used_by": ["storage"],
+        "used_by": ["deliver"],
+    },
+    frozenset(TAGS["vardict.balsamic_stat"]): {
+        "tags": ["vardict", "tmb", "somatic"],
+        "is_mandatory": False,
+        "used_by": ["deliver"],
     },
     frozenset(TAGS["vardict.all.vcf.gz_summary.html"]): {
         "tags": ["vardict", "vcf-report", "somatic"],
         "is_mandatory": False,
         "used_by": ["audit"],
-    },
-    frozenset(TAGS["vardict.balsamic_stat"]): {
-        "tags": ["vardict", "tmb", "somatic"],
-        "is_mandatory": False,
-        "used_by": ["storage"],
     },
     frozenset(TAGS["tnscope_vardict.all.filtered.vcf.gz"]): {  # tnscope (WGS)/vardict (PANEL)
         "tags": ["vcf", "vcf-snv-filtered", "somatic"],
@@ -365,53 +365,53 @@ BALSAMIC_COMMON_TAGS = {
     frozenset(TAGS["tnscope_vardict.all.filtered.pass.vcf.gz"]): {  # tnscope (WGS)/vardict (PANEL)
         "tags": ["vcf", "vcf-snv-clinical", "somatic"],
         "is_mandatory": True,
-        "used_by": ["deliver", "scout"],
+        "used_by": ["deliver"],
     },
     frozenset(TAGS["tnscope_vardict.all.filtered.pass.vcf.gz.tbi"]): {
         "tags": ["vcf-index", "vcf-snv-clinical-index", "somatic"],
         "is_mandatory": True,
-        "used_by": ["deliver", "scout"],
+        "used_by": ["deliver"],
     },
     # tnhaplotyper
     frozenset(TAGS["tnhaplotyper.all.vcf.gz"]): {  # tnhaplotyper
-        "tags": ["vcf", "tumor", "haplotype-caller", "somatic"],
+        "tags": ["vcf", "haplotype-caller", "somatic"],
         "is_mandatory": True,
         "used_by": ["storage"],
     },
     frozenset(TAGS["tnhaplotyper.all.vcf.gz.tbi"]): {
-        "tags": ["vcf-index", "tumor", "haplotype-caller", "somatic"],
+        "tags": ["vcf-index", "haplotype-caller", "somatic"],
+        "is_mandatory": True,
+        "used_by": ["storage"],
+    },
+    frozenset(TAGS["tnhaplotyper.balsamic_stat"]): {
+        "tags": ["tmb", "haplotype-caller", "somatic"],
         "is_mandatory": True,
         "used_by": ["storage"],
     },
     frozenset(TAGS["tnhaplotyper.all.vcf.gz_summary.html"]): {
-        "tags": ["sention", "haplotype-caller", "vcf-report", "somatic"],
+        "tags": ["vcf-report", "haplotype-caller", "somatic"],
         "is_mandatory": True,
         "used_by": ["audit"],
     },
-    frozenset(TAGS["tnhaplotyper.balsamic_stat"]): {
-        "tags": ["haplotype-caller", "tmb", "somatic"],
-        "is_mandatory": True,
-        "used_by": ["storage"],
-    },
     frozenset(TAGS["tnhaplotyper.all.filtered.vcf.gz"]): {
-        "tags": ["vcf-snv-research", "filtered", "somatic", "haplotype-caller"],
+        "tags": ["vcf-snv-research", "haplotype-caller", "filtered", "somatic"],
         "is_mandatory": True,
-        "used_by": ["storage"],
+        "used_by": ["deliver"],
     },
     frozenset(TAGS["tnhaplotyper.all.filtered.vcf.gz.tbi"]): {
-        "tags": ["vcf-snv-research-index", "filtered", "somatic", "haplotype-caller"],
+        "tags": ["vcf-snv-research-index", "haplotype-caller", "filtered", "somatic"],
         "is_mandatory": True,
-        "used_by": ["storage"],
+        "used_by": ["deliver"],
     },
     frozenset(TAGS["tnhaplotyper.all.filtered.pass.vcf.gz"]): {
-        "tags": ["vcf", "filtered", "somatic", "haplotype-caller"],
+        "tags": ["vcf", "haplotype-caller", "filtered", "somatic"],
         "is_mandatory": True,
-        "used_by": ["storage"],
+        "used_by": ["deliver"],
     },
     frozenset(TAGS["tnhaplotyper.all.filtered.pass.vcf.gz.tbi"]): {
-        "tags": ["vcf-index", "filtered", "somatic", "haplotype-caller"],
+        "tags": ["vcf-index", "haplotype-caller", "filtered", "somatic"],
         "is_mandatory": True,
-        "used_by": ["storage"],
+        "used_by": ["deliver"],
     },
     # dnascope – germline
     frozenset(TAGS["tumor_normal.dnascope.vcf.gz"]): {
@@ -425,7 +425,7 @@ BALSAMIC_COMMON_TAGS = {
         "used_by": ["storage"],
     },
     frozenset(TAGS["tumor_normal.dnascope.vcf.gz_summary.html"]): {
-        "tags": ["dnascope", "germline", "vcf-report"],
+        "tags": ["vcf-report", "dnascope", "germline"],
         "is_mandatory": True,
         "used_by": ["audit"],
     },
@@ -441,35 +441,35 @@ BALSAMIC_COMMON_TAGS = {
         "used_by": ["storage"],
     },
     frozenset(TAGS["tumor_normal.haplotypecaller.vcf.gz_summary.html"]): {
-        "tags": ["haplotype-caller", "germline", "vcf-report"],
+        "tags": ["vcf-report", "haplotype-caller", "germline"],
         "is_mandatory": False,
         "used_by": ["audit"],
     },
     # manta
     frozenset(TAGS["manta.all.vcf.gz"]): {
-        "tags": ["vcf-sv-research", "manta", "tumor", "somatic"],
+        "tags": ["vcf-sv-research", "manta", "somatic"],
         "is_mandatory": True,
-        "used_by": ["deliver", "scout"],
+        "used_by": ["deliver"],
     },
     frozenset(TAGS["manta.all.vcf.gz.tbi"]): {
-        "tags": ["vcf-sv-research-index", "manta", "tumor", "somatic"],
+        "tags": ["vcf-sv-research-index", "manta", "somatic"],
         "is_mandatory": True,
-        "used_by": ["deliver", "scout"],
+        "used_by": ["deliver"],
     },
     frozenset(TAGS["manta.all.vcf.gz_summary.html"]): {
-        "tags": ["sention", "manta", "vcf-report", "somatic"],
+        "tags": ["vcf-report", "manta", "somatic"],
         "is_mandatory": True,
         "used_by": ["audit"],
     },
     frozenset(TAGS["manta.all.filtered.pass.vcf.gz"]): {
         "tags": ["vcf-sv-clinical", "manta", "filtered"],
         "is_mandatory": True,
-        "used_by": ["deliver", "scout"],
+        "used_by": ["deliver"],
     },
     frozenset(TAGS["manta.all.filtered.pass.vcf.gz.tbi"]): {
         "tags": ["vcf-sv-clinical-index", "manta", "filtered"],
         "is_mandatory": True,
-        "used_by": ["deliver", "scout"],
+        "used_by": ["deliver"],
     },
     frozenset(TAGS["tumor_normal.manta_germline.vcf.gz"]): {  # manta germline
         "tags": ["sv-vcf", "manta", "germline"],
@@ -482,23 +482,23 @@ BALSAMIC_COMMON_TAGS = {
         "used_by": ["storage"],
     },
     frozenset(TAGS["tumor_normal.manta_germline.vcf.gz_summary.html"]): {
-        "tags": ["manta", "germline", "vcf-report"],
+        "tags": ["vcf-report", "manta", "germline"],
         "is_mandatory": True,
         "used_by": ["audit"],
     },
     # delly
     frozenset(TAGS["delly.all.vcf.gz"]): {
-        "tags": ["delly", "vcf", "somatic"],
+        "tags": ["vcf", "delly", "somatic"],
         "is_mandatory": True,
         "used_by": ["deliver"],
     },
     frozenset(TAGS["delly.all.vcf.gz.tbi"]): {
-        "tags": ["delly", "vcf-index", "somatic"],
+        "tags": ["vcf-index", "delly", "somatic"],
         "is_mandatory": True,
         "used_by": ["deliver"],
     },
     frozenset(TAGS["delly.all.vcf.gz_summary.html"]): {
-        "tags": ["delly", "vcf-report", "somatic"],
+        "tags": ["vcf-report", "delly", "somatic"],
         "is_mandatory": True,
         "used_by": ["audit"],
     },
@@ -514,17 +514,17 @@ BALSAMIC_COMMON_TAGS = {
     },
     # cnvkit (PANEL)
     frozenset(TAGS["cnvkit.all.vcf.gz"]): {
-        "tags": ["cnvkit", "sv-vcf", "tumor", "somatic"],
+        "tags": ["sv-vcf", "cnvkit", "somatic"],
         "is_mandatory": False,
         "used_by": ["deliver"],
     },
     frozenset(TAGS["cnvkit.all.vcf.gz.tbi"]): {
-        "tags": ["cnvkit", "sv-vcf-index", "tumor", "somatic"],
+        "tags": ["sv-vcf-index", "cnvkit", "somatic"],
         "is_mandatory": False,
         "used_by": ["deliver"],
     },
     frozenset(TAGS["cnvkit.all.vcf.gz_summary.html"]): {
-        "tags": ["cnvkit", "vcf-report", "somatic"],
+        "tags": ["vcf-report", "cnvkit", "somatic"],
         "is_mandatory": False,
         "used_by": ["audit"],
     },
@@ -558,15 +558,15 @@ BALSAMIC_COMMON_TAGS = {
         "is_mandatory": False,
         "used_by": ["deliver"],
     },
-    frozenset(TAGS[".gene_metrics"]): {
-        "tags": ["cnvkit", "genes", "metrics"],
-        "is_mandatory": False,
-        "used_by": ["deliver"],
-    },
     frozenset(TAGS[".gene_breaks"]): {
         "tags": ["cnvkit", "genes"],
         "is_mandatory": False,
         "used_by": ["storage"],
+    },
+    frozenset(TAGS[".gene_metrics"]): {
+        "tags": ["cnvkit", "genes", "metrics"],
+        "is_mandatory": False,
+        "used_by": ["deliver"],
     },
     # TNscope_umi (PANEL)
     frozenset(TAGS["TNscope_umi.all.vcf.gz"]): {
@@ -585,7 +585,7 @@ BALSAMIC_COMMON_TAGS = {
         "used_by": ["audit"],
     },
     frozenset(TAGS["TNscope_umi.balsamic_stat"]): {
-        "tags": ["tnscope-umi", "tmb", "somatic"],
+        "tags": ["tmb", "tnscope-umi", "somatic"],
         "is_mandatory": False,
         "used_by": ["storage"],
     },
@@ -600,28 +600,28 @@ BALSAMIC_COMMON_TAGS = {
         "used_by": ["storage"],
     },
     frozenset(TAGS["TNscope_umi.all.filtered.pass.vcf.gz"]): {
-        "tags": ["vcf", "filtered", "somatic", "tnscope-umi"],
+        "tags": ["vcf", "tnscope-umi", "filtered", "somatic"],
         "is_mandatory": False,
         "used_by": ["storage"],
     },
     frozenset(TAGS["TNscope_umi.all.filtered.pass.vcf.gz.tbi"]): {
-        "tags": ["vcf-index", "filtered", "somatic", "tnscope-umi"],
+        "tags": ["vcf-index", "tnscope-umi", "filtered", "somatic"],
         "is_mandatory": False,
         "used_by": ["storage"],
     },
     # ascat (TN_WGS)
     frozenset(TAGS["ascat.all.vcf.gz"]): {
-        "tags": ["ascatngs", "vcf", "somatic"],
+        "tags": ["vcf", "ascatngs", "somatic"],
         "is_mandatory": False,
         "used_by": ["deliver"],
     },
     frozenset(TAGS["ascat.all.vcf.gz.tbi"]): {
-        "tags": ["ascatngs", "vcf-index", "somatic"],
+        "tags": ["vcf-index", "ascatngs", "somatic"],
         "is_mandatory": False,
         "used_by": ["deliver"],
     },
     frozenset(TAGS["ascat.all.vcf.gz_summary.html"]): {
-        "tags": ["ascatngs", "vcf-report", "somatic"],
+        "tags": ["vcf-report", "ascatngs", "somatic"],
         "is_mandatory": False,
         "used_by": ["audit"],
     },
