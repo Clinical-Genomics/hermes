@@ -8,8 +8,8 @@
             "step": "bcftools_filter_cnvkit",
             "tag": [
                 "T-panel",
-                "research-vcf-sv-pass",
-                "vcf-sv-pass",
+                "research-vcf-cnv-pass",
+                "vcf-cnv-pass",
                 "CNV"
             ],
             "id": "T_panel",
@@ -21,8 +21,8 @@
             "step": "bcftools_filter_cnvkit",
             "tag": [
                 "T-panel",
-                "vcf-sv-pass",
-                "research-vcf-sv-pass-index",
+                "vcf-cnv-pass",
+                "research-vcf-cnv-pass-index",
                 "CNV"
             ],
             "id": "T_panel",
@@ -484,8 +484,8 @@
             "step": "bcftools_filter_tnhaplotyper_tumor_only",
             "tag": [
                 "SNV",
-                "vcf-filtered",
-                "research-vcf-filtered",
+                "vcf-filtered-tnhaplotyper",
+                "research-vcf-filtered-tnhaplotyper",
                 "T-panel"
             ],
             "id": "T_panel",
@@ -497,8 +497,8 @@
             "step": "bcftools_filter_tnhaplotyper_tumor_only",
             "tag": [
                 "SNV",
-                "research-vcf-filtered-index",
-                "vcf-filtered",
+                "research-vcf-filtered-tnhaplotyper-index",
+                "vcf-filtered-tnhaplotyper",
                 "T-panel"
             ],
             "id": "T_panel",
@@ -511,9 +511,9 @@
             ],
             "step": "bcftools_filter_tnhaplotyper_tumor_only",
             "tag": [
-                "vcf-pass",
+                "vcf-pass-tnhaplotyper",
                 "SNV",
-                "research-vcf-pass",
+                "research-vcf-pass-tnhaplotyper",
                 "T-panel"
             ],
             "id": "T_panel",
@@ -524,9 +524,9 @@
             "path_index": "",
             "step": "bcftools_filter_tnhaplotyper_tumor_only",
             "tag": [
-                "vcf-pass",
+                "vcf-pass-tnhaplotyper",
                 "SNV",
-                "research-vcf-pass-index",
+                "research-vcf-pass-tnhaplotyper-index",
                 "T-panel"
             ],
             "id": "T_panel",
@@ -540,8 +540,8 @@
             "step": "bcftools_filter_TNscope_umi_tumor_only",
             "tag": [
                 "SNV",
-                "vcf-filtered",
-                "research-vcf-filtered",
+                "vcf-filtered-tnscope-umi",
+                "research-vcf-filtered-tnscope-umi",
                 "T-panel"
             ],
             "id": "T_panel",
@@ -553,8 +553,8 @@
             "step": "bcftools_filter_TNscope_umi_tumor_only",
             "tag": [
                 "SNV",
-                "research-vcf-filtered-index",
-                "vcf-filtered",
+                "research-vcf-filtered-tnscope-umi-index",
+                "vcf-filtered-tnscope-umi",
                 "T-panel"
             ],
             "id": "T_panel",
@@ -567,9 +567,9 @@
             ],
             "step": "bcftools_filter_TNscope_umi_tumor_only",
             "tag": [
-                "vcf-pass",
+                "vcf-pass-tnscope-umi",
                 "SNV",
-                "research-vcf-pass",
+                "research-vcf-pass-tnscope-umi",
                 "T-panel"
             ],
             "id": "T_panel",
@@ -580,9 +580,9 @@
             "path_index": "",
             "step": "bcftools_filter_TNscope_umi_tumor_only",
             "tag": [
-                "vcf-pass",
+                "vcf-pass-tnscope-umi",
                 "SNV",
-                "research-vcf-pass-index",
+                "research-vcf-pass-tnscope-umi-index",
                 "T-panel"
             ],
             "id": "T_panel",
@@ -857,8 +857,7 @@
             "tag": [
                 "T-panel",
                 "vcf-sv-pass",
-                "clinical-vcf-sv-pass",
-                "SV"
+                "clinical-vcf-sv-pass"
             ],
             "id": "T_panel",
             "format": "vcf.gz"
@@ -870,8 +869,7 @@
             "tag": [
                 "T-panel",
                 "clinical-vcf-sv-pass-index",
-                "vcf-sv-pass",
-                "SV"
+                "vcf-sv-pass"
             ],
             "id": "T_panel",
             "format": "vcf.gz.tbi"
@@ -996,9 +994,8 @@
             "step": "bcftools_filter_delly",
             "tag": [
                 "T-panel",
-                "research-vcf-sv-pass",
-                "vcf-sv-pass",
-                "SV"
+                "research-vcf-sv-pass-delly",
+                "vcf-sv-pass-delly"
             ],
             "id": "T_panel",
             "format": "vcf.gz"
@@ -1009,9 +1006,8 @@
             "step": "bcftools_filter_delly",
             "tag": [
                 "T-panel",
-                "vcf-sv-pass",
-                "research-vcf-sv-pass-index",
-                "SV"
+                "vcf-sv-pass-delly",
+                "research-vcf-sv-pass-delly-index"
             ],
             "id": "T_panel",
             "format": "vcf.gz.tbi"
@@ -1049,6 +1045,16 @@
             "format": "yaml",
             "tag": [
                 "qc-metrics-yaml"
+            ],
+            "id": "T_panel"
+        },
+                {
+            "path": "T_panel/analysis/delivery_report/T_panel_metrics_deliverables.yaml",
+            "step": "balsamic_delivery",
+            "format": "yaml",
+            "tag": [
+                "qc-metrics-yaml",
+                "yaml"
             ],
             "id": "T_panel"
         }

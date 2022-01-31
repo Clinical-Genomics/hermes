@@ -36,8 +36,8 @@
             "step": "bcftools_filter_ascat",
             "tag": [
                 "TN-wgs",
-                "research-vcf-sv-pass",
-                "vcf-sv-pass"
+                "research-vcf-cnv-pass-ascat",
+                "vcf-cnv-pass-ascat"
             ],
             "id": "TN_wgs",
             "format": "vcf.gz"
@@ -48,8 +48,8 @@
             "step": "bcftools_filter_ascat",
             "tag": [
                 "TN-wgs",
-                "research-vcf-sv-pass-index",
-                "vcf-sv-pass"
+                "research-vcf-cnv-pass-ascat-index",
+                "vcf-cnv-pass-ascat"
             ],
             "id": "TN_wgs",
             "format": "vcf.gz.tbi"
@@ -560,8 +560,8 @@
             "tag": [
                 "TN-wgs",
                 "SNV",
-                "vcf-filtered",
-                "research-vcf-filtered"
+                "vcf-filtered-tnhaplotyper",
+                "research-vcf-filtered-tnhaplotyper"
             ],
             "id": "TN_wgs",
             "format": "vcf.gz"
@@ -572,9 +572,9 @@
             "step": "bcftools_filter_tnhaplotyper_tumor_normal",
             "tag": [
                 "TN-wgs",
-                "research-vcf-filtered-index",
+                "research-vcf-filtered-tnhaplotyper-index",
                 "SNV",
-                "vcf-filtered"
+                "vcf-filtered-tnhaplotyper"
             ],
             "id": "TN_wgs",
             "format": "vcf.gz.tbi"
@@ -587,9 +587,9 @@
             "step": "bcftools_filter_tnhaplotyper_tumor_normal",
             "tag": [
                 "TN-wgs",
-                "vcf-pass",
+                "vcf-pass-tnhaplotyper",
                 "SNV",
-                "research-vcf-pass"
+                "research-vcf-pass-tnhaplotyper"
             ],
             "id": "TN_wgs",
             "format": "vcf.gz"
@@ -600,8 +600,8 @@
             "step": "bcftools_filter_tnhaplotyper_tumor_normal",
             "tag": [
                 "TN-wgs",
-                "vcf-pass",
-                "research-vcf-pass-index",
+                "vcf-pass-tnhaplotyper",
+                "research-vcf-pass-tnhaplotyper-index",
                 "SNV"
             ],
             "id": "TN_wgs",
@@ -831,8 +831,8 @@
             "step": "bcftools_filter_delly",
             "tag": [
                 "TN-wgs",
-                "research-vcf-sv-pass",
-                "vcf-sv-pass"
+                "research-vcf-sv-pass-delly",
+                "vcf-sv-pass-delly"
             ],
             "id": "TN_wgs",
             "format": "vcf.gz"
@@ -843,8 +843,8 @@
             "step": "bcftools_filter_delly",
             "tag": [
                 "TN-wgs",
-                "research-vcf-sv-pass-index",
-                "vcf-sv-pass"
+                "research-vcf-sv-pass-delly-index",
+                "vcf-sv-pass-delly"
             ],
             "id": "TN_wgs",
             "format": "vcf.gz.tbi"
@@ -989,7 +989,8 @@
             "step": "balsamic_delivery",
             "format": "yaml",
             "tag": [
-                "qc-metrics-yaml"
+                "qc-metrics-yaml",
+                "yaml"
             ],
             "id": "TN_wgs"
         }

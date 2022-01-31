@@ -342,8 +342,8 @@
             "step": "bcftools_filter_tnhaplotyper_tumor_only",
             "tag": [
                 "T-wgs",
-                "research-vcf-filtered",
-                "vcf-filtered",
+                "research-vcf-filtered-tnhaplotyper",
+                "vcf-filtered-tnhaplotyper",
                 "SNV"
             ],
             "id": "T_wgs",
@@ -355,9 +355,9 @@
             "step": "bcftools_filter_tnhaplotyper_tumor_only",
             "tag": [
                 "T-wgs",
-                "vcf-filtered",
+                "vcf-filtered-tnhaplotyper",
                 "SNV",
-                "research-vcf-filtered-index"
+                "research-vcf-filtered-tnhaplotyper-index"
             ],
             "id": "T_wgs",
             "format": "vcf.gz.tbi"
@@ -369,9 +369,9 @@
             ],
             "step": "bcftools_filter_tnhaplotyper_tumor_only",
             "tag": [
-                "research-vcf-pass",
+                "research-vcf-pass-tnhaplotyper",
                 "T-wgs",
-                "vcf-pass",
+                "vcf-pass-tnhaplotyper",
                 "SNV"
             ],
             "id": "T_wgs",
@@ -382,9 +382,9 @@
             "path_index": "",
             "step": "bcftools_filter_tnhaplotyper_tumor_only",
             "tag": [
-                "research-vcf-pass-index",
+                "research-vcf-pass-tnhaplotyper-index",
                 "T-wgs",
-                "vcf-pass",
+                "vcf-pass-tnhaplotyper",
                 "SNV"
             ],
             "id": "T_wgs",
@@ -590,8 +590,8 @@
             "step": "bcftools_filter_delly",
             "tag": [
                 "T-wgs",
-                "vcf-sv-pass",
-                "research-vcf-sv-pass"
+                "vcf-sv-pass-delly",
+                "research-vcf-sv-pass-delly"
             ],
             "id": "T_wgs",
             "format": "vcf.gz"
@@ -602,8 +602,8 @@
             "step": "bcftools_filter_delly",
             "tag": [
                 "T-wgs",
-                "vcf-sv-pass",
-                "research-vcf-sv-pass-index"
+                "vcf-sv-pass-delly",
+                "research-vcf-sv-pass-delly-index"
             ],
             "id": "T_wgs",
             "format": "vcf.gz.tbi"
@@ -714,7 +714,8 @@
             "step": "balsamic_delivery",
             "format": "yaml",
             "tag": [
-                "qc-metrics-yaml"
+                "qc-metrics-yaml",
+                "yaml"
             ],
             "id": "T_wgs"
         }
