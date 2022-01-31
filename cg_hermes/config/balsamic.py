@@ -42,6 +42,7 @@ TAGS = {
         "vcf-summary",
         "snv",
     ],
+    "tnscope.balsamic_stat": ["stat-somatic-tmb", "snv", "tmb", "tnscope"],
     "vardict.all.vcf.gz": ["annotated-somatic-vcf-all", "snv", "vardict", "vcf-all"],
     "vardict.all.vcf.gz.tbi": ["snv", "vardict", "vcf-all", "annotated-somatic-vcf-all-index"],
     "vardict.all.vcf.gz_summary.html": [
@@ -50,6 +51,7 @@ TAGS = {
         "vcf-summary",
         "vardict",
     ],
+    "vardict.balsamic_stat": ["tmb", "snv", "stat-somatic-tmb", "vardict"],
     "tnscope_vardict.all.filtered.vcf.gz": ["vcf-filtered", "clinical-vcf-filtered", "snv"],
     "tnscope_vardict.all.filtered.vcf.gz.tbi": [
         "vcf-filtered",
@@ -72,6 +74,7 @@ TAGS = {
         "vcf-summary",
         "snv",
     ],
+    "tnhaplotyper.balsamic_stat": ["tmb", "snv", "stat-somatic-tmb", "tnhaplotyper"],
     "tnhaplotyper.all.filtered.vcf.gz": [
         "research-vcf-filtered-tnhaplotyper",
         "vcf-filtered-tnhaplotyper",
@@ -196,6 +199,7 @@ TAGS = {
         "annotated-somatic-vcf-summary",
         "vcf-summary",
     ],
+    "TNscope_umi.balsamic_stat": ["tmb", "tnscope-umi", "snv", "stat-somatic-tmb"],
     "TNscope_umi.all.filtered.vcf.gz": [
         "research-vcf-filtered-tnscope-umi",
         "vcf-filtered-tnscope-umi",
@@ -323,6 +327,11 @@ BALSAMIC_COMMON_TAGS = {
         "is_mandatory": False,
         "used_by": ["audit"],
     },
+    frozenset(TAGS["tnscope.balsamic_stat"]): {
+        "tags": ["tnscope", "tmb", "somatic"],
+        "is_mandatory": False,
+        "used_by": ["storage"],
+    },
     frozenset(TAGS["vardict.all.vcf.gz"]): {  # vardict (PANEL)
         "tags": ["vcf", "vardict", "somatic"],
         "is_mandatory": False,
@@ -337,6 +346,11 @@ BALSAMIC_COMMON_TAGS = {
         "tags": ["vardict", "vcf-report", "somatic"],
         "is_mandatory": False,
         "used_by": ["audit"],
+    },
+    frozenset(TAGS["vardict.balsamic_stat"]): {
+        "tags": ["vardict", "tmb", "somatic"],
+        "is_mandatory": False,
+        "used_by": ["storage"],
     },
     frozenset(TAGS["tnscope_vardict.all.filtered.vcf.gz"]): {  # tnscope (WGS)/vardict (PANEL)
         "tags": ["vcf", "vcf-snv-filtered", "somatic"],
@@ -373,6 +387,11 @@ BALSAMIC_COMMON_TAGS = {
         "tags": ["sention", "haplotype-caller", "vcf-report", "somatic"],
         "is_mandatory": True,
         "used_by": ["audit"],
+    },
+    frozenset(TAGS["tnhaplotyper.balsamic_stat"]): {
+        "tags": ["haplotype-caller", "tmb", "somatic"],
+        "is_mandatory": True,
+        "used_by": ["storage"],
     },
     frozenset(TAGS["tnhaplotyper.all.filtered.vcf.gz"]): {
         "tags": ["vcf-snv-research", "filtered", "somatic", "haplotype-caller"],
@@ -565,23 +584,28 @@ BALSAMIC_COMMON_TAGS = {
         "is_mandatory": False,
         "used_by": ["audit"],
     },
+    frozenset(TAGS["TNscope_umi.balsamic_stat"]): {
+        "tags": ["tnscope-umi", "tmb", "somatic"],
+        "is_mandatory": False,
+        "used_by": ["storage"],
+    },
     frozenset(TAGS["TNscope_umi.all.filtered.vcf.gz"]): {
-        "tags": ["vcf-snv-research", "filtered", "somatic", "haplotype-caller"],
+        "tags": ["vcf-snv-research", "filtered", "somatic", "tnscope-umi"],
         "is_mandatory": False,
         "used_by": ["storage"],
     },
     frozenset(TAGS["TNscope_umi.all.filtered.vcf.gz.tbi"]): {
-        "tags": ["vcf-snv-research-index", "filtered", "somatic", "haplotype-caller"],
+        "tags": ["vcf-snv-research-index", "filtered", "somatic", "tnscope-umi"],
         "is_mandatory": False,
         "used_by": ["storage"],
     },
     frozenset(TAGS["TNscope_umi.all.filtered.pass.vcf.gz"]): {
-        "tags": ["vcf", "filtered", "somatic", "haplotype-caller"],
+        "tags": ["vcf", "filtered", "somatic", "tnscope-umi"],
         "is_mandatory": False,
         "used_by": ["storage"],
     },
     frozenset(TAGS["TNscope_umi.all.filtered.pass.vcf.gz.tbi"]): {
-        "tags": ["vcf-index", "filtered", "somatic", "haplotype-caller"],
+        "tags": ["vcf-index", "filtered", "somatic", "tnscope-umi"],
         "is_mandatory": False,
         "used_by": ["storage"],
     },
@@ -623,6 +647,7 @@ TUMOR_ONLY_WGS_TAGS = {
     frozenset(TAGS["tnscope.all.vcf.gz"]): {"is_mandatory": True},
     frozenset(TAGS["tnscope.all.vcf.gz.tbi"]): {"is_mandatory": True},
     frozenset(TAGS["tnscope.all.vcf.gz_summary.html"]): {"is_mandatory": True},
+    frozenset(TAGS["tnscope.balsamic_stat"]): {"is_mandatory": True},
 }
 
 TUMOR_NORMAL_WGS_TAGS = {
@@ -633,6 +658,7 @@ TUMOR_NORMAL_WGS_TAGS = {
     frozenset(TAGS["tnscope.all.vcf.gz"]): {"is_mandatory": True},
     frozenset(TAGS["tnscope.all.vcf.gz.tbi"]): {"is_mandatory": True},
     frozenset(TAGS["tnscope.all.vcf.gz_summary.html"]): {"is_mandatory": True},
+    frozenset(TAGS["tnscope.balsamic_stat"]): {"is_mandatory": True},
     # ascat
     frozenset(TAGS["ascat.all.vcf.gz"]): {"is_mandatory": True},
     frozenset(TAGS["ascat.all.vcf.gz.tbi"]): {"is_mandatory": True},
@@ -647,6 +673,7 @@ TUMOR_ONLY_PANEL_TAGS = {
     frozenset(TAGS["vardict.all.vcf.gz"]): {"is_mandatory": True},
     frozenset(TAGS["vardict.all.vcf.gz.tbi"]): {"is_mandatory": True},
     frozenset(TAGS["vardict.all.vcf.gz_summary.html"]): {"is_mandatory": True},
+    frozenset(TAGS["vardict.balsamic_stat"]): {"is_mandatory": True},
     # haplotypecaller – germline
     frozenset(TAGS["tumor_normal.haplotypecaller.vcf.gz"]): {"is_mandatory": True},
     frozenset(TAGS["tumor_normal.haplotypecaller.vcf.gz.tbi"]): {"is_mandatory": True},
@@ -667,6 +694,7 @@ TUMOR_ONLY_PANEL_TAGS = {
     frozenset(TAGS["TNscope_umi.all.vcf.gz"]): {"is_mandatory": True},
     frozenset(TAGS["TNscope_umi.all.vcf.gz.tbi"]): {"is_mandatory": True},
     frozenset(TAGS["TNscope_umi.all.vcf.gz_summary.html"]): {"is_mandatory": True},
+    frozenset(TAGS["TNscope_umi.balsamic_stat"]): {"is_mandatory": True},
     frozenset(TAGS["TNscope_umi.all.filtered.vcf.gz"]): {"is_mandatory": True},
     frozenset(TAGS["TNscope_umi.all.filtered.vcf.gz.tbi"]): {"is_mandatory": True},
     frozenset(TAGS["TNscope_umi.all.filtered.pass.vcf.gz"]): {"is_mandatory": True},
@@ -681,6 +709,7 @@ TUMOR_NORMAL_PANEL_TAGS = {
     frozenset(TAGS["vardict.all.vcf.gz"]): {"is_mandatory": True},
     frozenset(TAGS["vardict.all.vcf.gz.tbi"]): {"is_mandatory": True},
     frozenset(TAGS["vardict.all.vcf.gz_summary.html"]): {"is_mandatory": True},
+    frozenset(TAGS["vardict.balsamic_stat"]): {"is_mandatory": True},
     # haplotypecaller – germline
     frozenset(TAGS["tumor_normal.haplotypecaller.vcf.gz"]): {"is_mandatory": True},
     frozenset(TAGS["tumor_normal.haplotypecaller.vcf.gz.tbi"]): {"is_mandatory": True},
@@ -701,6 +730,7 @@ TUMOR_NORMAL_PANEL_TAGS = {
     frozenset(TAGS["TNscope_umi.all.vcf.gz"]): {"is_mandatory": True},
     frozenset(TAGS["TNscope_umi.all.vcf.gz.tbi"]): {"is_mandatory": True},
     frozenset(TAGS["TNscope_umi.all.vcf.gz_summary.html"]): {"is_mandatory": True},
+    frozenset(TAGS["TNscope_umi.balsamic_stat"]): {"is_mandatory": True},
     frozenset(TAGS["TNscope_umi.all.filtered.vcf.gz"]): {"is_mandatory": True},
     frozenset(TAGS["TNscope_umi.all.filtered.vcf.gz.tbi"]): {"is_mandatory": True},
     frozenset(TAGS["TNscope_umi.all.filtered.pass.vcf.gz"]): {"is_mandatory": True},
