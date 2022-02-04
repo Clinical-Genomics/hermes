@@ -4,7 +4,67 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 About changelog [here](https://keepachangelog.com/en/1.0.0/)
 
-## [1.5.1]
+## [1.6.11]
+### Fixed
+- Workaround to deliver delly and ascat vcfs as a result of producing Balsamic the same labels for both of them
+
+## [1.6.10]
+
+## [1.6.9]
+### Added
+- cnvkit filtered vcf tags
+### Changed:
+- AscatNgs HK tag names
+### Fixed
+- Mantas filtered/passed vcf tags according to CG definition
+
+## [1.6.8]
+### Added
+- Mutant tags for vogue and versions file
+
+## [1.6.7]
+### Fixed
+- Mantas filtered/passed vcf storage for WGS analysis
+
+## [1.6.6]
+### Changed
+- Fixes changelog versions
+
+## [1.6.5]
+### Changed
+- BALSAMICs ascatngs tag (PNG plots) has been changed to the one of the output PDF
+
+## [1.6.4]
+### Added
+- Added BALSAMIC ascatNgs and Delly tags and updated outdated tags
+
+## [1.6.3]
+### Changed
+- Update deployment instructions and move to readme
+
+## [1.6.2]
+### Added
+- Balsamic QC metrics tag for vogue and delivery
+
+## [1.6.1]
+### Changed
+- Removed cnv tags from balsamic common tags
+- Added cnv tags for balsamic panel (tumor-only and tumor-normal)
+- Removed vardic tmb stat tags
+
+## [1.6.0]
+### Changed
+- Stop storing balsamic bam 
+
+## [1.5.4]
+### Added
+- Update BALSAMIC stored file with UMI 
+
+## [1.5.3]
+### Added
+- mitodel tag to mip_dna 
+
+## [1.5.2]
 ### Changed
 - Update to bump2version-ci@v3 
 

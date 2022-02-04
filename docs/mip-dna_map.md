@@ -16,6 +16,7 @@
 | pedigree_fam, mip_analyse           | True        | pedigree                    | scout        |
 | references_info, mip_analyse        | True        | mip-analyse, reference-info | audit        |
 | sample_info, mip_analyse            | True        | sample-info                 | cg, audit    |
+| mitodel                             | False       | mitodel                     | scout        |
 | html, multiqc_ar                    | True        | multiqc-html                | scout        |
 | json, multiqc_ar                    | True        | multiqc-json                | vogue        |
 | peddy_ar, ped_check                 | True        | peddy, ped-check            | audit, scout |

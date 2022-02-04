@@ -50,15 +50,16 @@
 
 ## REPORTING TAGS
 
-| Tag name       | Description                               |
-|----------------|-------------------------------------------|
-| audit          | Audit files                               |
-| deliverable    | CG deliverables file                      |
-| multiqc-html   | Multiqc report for the run in html format |
-| multiqc-json   | Multiqc report for the run in json format |
-| pdf            | Portable document format                  |
-| sambamba-depth | Coverage information from sambamba        |
-| vcf-report     | Results and QC from variant calling       |
+| Tag name          | Description                               |
+|-------------------|-------------------------------------------|
+| audit             | Audit files                               |
+| deliverable       | CG deliverables file                      |
+| multiqc-html      | Multiqc report for the run in html format |
+| multiqc-json      | Multiqc report for the run in json format |
+| pdf               | Portable document format                  |
+| sambamba-depth    | Coverage information from sambamba        |
+| vcf-report        | Results and QC from variant calling       |
+| software-versions | Versions of software used in analysis     |
 
 ## TOOL TAGS
 
@@ -69,18 +70,19 @@
 | chanjo           | Tool to keep track of coverage over specific regions          |
 | chromograph      | Tool to create PNG images from BED and WIG files from mikaell |
 | cnvkit           | Tool to call copy number variations                           |
+| ascatngs         | Tool to identify somatically acquired copy-number alterations |
+| delly            | Structural variant prediction tool                            |
 | cyrius           | Tool to call the problematic CYP2D6 gene                      |
 | deseq2           | Differential expression analysis with DESeq2                  |
 | genotyper        | SNV indel caller from sention                                 |
 | gffcompare       | Compare gff files                                             |
 | haplotype-caller | Call snv and indels                                           |
 | manta            | Tool to call structural variants                              |
-| mutect           | Cancer variant caller                                         |
+| mitodel          | Tool to identify mitochondrial deletion signatures            |
 | peddy            | Tool to check pedigree and ancestral relations                |
 | scope            | Call snv indels                                               |
 | sention          | Sention algorithm                                             |
 | star-fusion      | Fusion caller                                                 |
-| strelka          | Cancer variant caller                                         |
 | stringtie        | Transcript assembler                                          |
 | upd              | Uniparent disomy caller from bjhall                           |
 | vardict          | Cancer variant caller                                         |

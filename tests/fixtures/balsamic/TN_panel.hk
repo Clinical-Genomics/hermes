@@ -405,19 +405,6 @@
             "format": "vcf.gz.tbi"
         },
         {
-            "path": "TN_panel/analysis/vep/SNV.somatic.TN_panel.vardict.balsamic_stat",
-            "path_index": [],
-            "step": "vep_stat",
-            "tag": [
-                "vardict",
-                "stat-somatic-tmb",
-                "tmb",
-                "TN-panel"
-            ],
-            "id": "TN_panel",
-            "format": "balsamic_stat"
-        },
-        {
             "path": "TN_panel/analysis/fastq/ACC123_R_1.fp.fastq.gz",
             "path_index": [],
             "step": "fastp",
@@ -880,11 +867,78 @@
             "format": "vcf.gz.tbi"
         },
         {
+            "path": "TN_panel/analysis/vep/SV.somatic.TN_panel.delly.all.vcf.gz",
+            "path_index": [
+                "TN_panel/analysis/vep/SV.somatic.TN_panel.delly.all.vcf.gz.tbi"
+            ],
+            "step": "vep_somatic",
+            "tag": [
+                "vcf-all",
+                "TN-panel",
+                "delly",
+                "SV",
+                "annotated-somatic-vcf-all"
+            ],
+            "id": "TN_panel",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "TN_panel/analysis/vep/SV.somatic.TN_panel.delly.all.vcf.gz.tbi",
+            "path_index": "",
+            "step": "vep_somatic",
+            "tag": [
+                "annotated-somatic-vcf-all-index",
+                "vcf-all",
+                "TN-panel",
+                "delly",
+                "SV"
+            ],
+            "id": "TN_panel",
+            "format": "vcf.gz.tbi"
+        },
+                {
+            "path": "TN_panel/analysis/vep/SV.somatic.TN_panel.delly.all.filtered.pass.vcf.gz",
+            "path_index": [
+                "TN_panel/analysis/vep/SV.somatic.TN_panel.delly.all.filtered.pass.vcf.gz.tbi"
+            ],
+            "step": "bcftools_filter_delly",
+            "tag": [
+                "SV",
+                "TN-panel",
+                "vcf-sv-pass",
+                "research-vcf-sv-pass"
+            ],
+            "id": "TN_panel",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "TN_panel/analysis/vep/SV.somatic.TN_panel.delly.all.filtered.pass.vcf.gz.tbi",
+            "path_index": "",
+            "step": "bcftools_filter_delly",
+            "tag": [
+                "SV",
+                "TN-panel",
+                "vcf-sv-pass",
+                "research-vcf-sv-pass-index"
+            ],
+            "id": "TN_panel",
+            "format": "vcf.gz.tbi"
+        },
+        {
             "path": "TN_panel/analysis/delivery_report/TN_panel_report.html",
             "step": "balsamic_delivery",
             "format": "html",
             "tag": [
                 "balsamic-report"
+            ],
+            "id": "TN_panel"
+        },
+        {
+            "path": "TN_panel/analysis/delivery_report/TN_panel_metrics_deliverables.yaml",
+            "step": "balsamic_delivery",
+            "format": "yaml",
+            "tag": [
+                "qc-metrics-yaml"
             ],
             "id": "TN_panel"
         },
@@ -905,6 +959,34 @@
                 "balsamic-dag"
             ],
             "id": "TN_panel"
+        },
+        {
+            "path": "TN_panel/analysis/vep/CNV.somatic.TN_panel.cnvkit.all.filtered.pass.vcf.gz",
+            "path_index": [
+                "TN_panel/analysis/vep/CNV.somatic.TN_panel.cnvkit.all.filtered.pass.vcf.gz.tbi"
+            ],
+            "step": "bcftools_filter_cnvkit",
+            "tag": [
+                "CNV",
+                "research-vcf-sv-pass",
+                "vcf-sv-pass",
+                "TN-panel"
+            ],
+            "id": "TN_panel",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "TN_panel/analysis/vep/CNV.somatic.TN_panel.cnvkit.all.filtered.pass.vcf.gz.tbi",
+            "path_index": "",
+            "step": "bcftools_filter_cnvkit",
+            "tag": [
+                "CNV",
+                "research-vcf-sv-pass-index",
+                "vcf-sv-pass",
+                "TN-panel"
+            ],
+            "id": "TN_panel",
+            "format": "vcf.gz.tbi"
         }
     ]
 }
