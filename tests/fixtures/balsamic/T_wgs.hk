@@ -398,8 +398,8 @@
             "step": "bcftools_intersect_tumor_only",
             "tag": [
                 "T-wgs",
-                "vcf-filtered",
-                "clinical-vcf-filtered",
+                "vcf-filtered-tnscope",
+                "clinical-vcf-filtered-tnscope",
                 "SNV"
             ],
             "id": "T_wgs",
@@ -411,8 +411,8 @@
             "step": "bcftools_intersect_tumor_only",
             "tag": [
                 "T-wgs",
-                "vcf-filtered",
-                "clinical-vcf-filtered-index",
+                "vcf-filtered-tnscope",
+                "clinical-vcf-filtered-tnscope-index",
                 "SNV"
             ],
             "id": "T_wgs",
@@ -426,8 +426,8 @@
             "step": "bcftools_intersect_tumor_only",
             "tag": [
                 "T-wgs",
-                "clinical-vcf-pass",
-                "vcf-pass",
+                "clinical-vcf-pass-tnscope",
+                "vcf-pass-tnscope",
                 "SNV"
             ],
             "id": "T_wgs",
@@ -439,8 +439,8 @@
             "step": "bcftools_intersect_tumor_only",
             "tag": [
                 "T-wgs",
-                "clinical-vcf-pass-index",
-                "vcf-pass",
+                "clinical-vcf-pass-tnscope-index",
+                "vcf-pass-tnscope",
                 "SNV"
             ],
             "id": "T_wgs",

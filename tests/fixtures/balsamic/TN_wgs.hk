@@ -909,9 +909,9 @@
             "step": "bcftools_filter_tnscope_tumor_normal",
             "tag": [
                 "TN-wgs",
-                "clinical-vcf-filtered",
+                "clinical-vcf-filtered-tnscope",
                 "SNV",
-                "vcf-filtered"
+                "vcf-filtered-tnscope"
             ],
             "id": "TN_wgs",
             "format": "vcf.gz"
@@ -922,9 +922,9 @@
             "step": "bcftools_filter_tnscope_tumor_normal",
             "tag": [
                 "TN-wgs",
-                "clinical-vcf-filtered-index",
+                "clinical-vcf-filtered-tnscope-index",
                 "SNV",
-                "vcf-filtered"
+                "vcf-filtered-tnscope"
             ],
             "id": "TN_wgs",
             "format": "vcf.gz.tbi"
@@ -937,8 +937,8 @@
             "step": "bcftools_filter_tnscope_tumor_normal",
             "tag": [
                 "TN-wgs",
-                "vcf-pass",
-                "clinical-vcf-pass",
+                "vcf-pass-tnscope",
+                "clinical-vcf-pass-tnscope",
                 "SNV"
             ],
             "id": "TN_wgs",
@@ -950,8 +950,8 @@
             "step": "bcftools_filter_tnscope_tumor_normal",
             "tag": [
                 "TN-wgs",
-                "clinical-vcf-pass-index",
-                "vcf-pass",
+                "clinical-vcf-pass-tnscope-index",
+                "vcf-pass-tnscope",
                 "SNV"
             ],
             "id": "TN_wgs",

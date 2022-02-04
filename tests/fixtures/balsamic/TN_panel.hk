@@ -584,8 +584,8 @@
             "step": "bcftools_filter_vardict_tumor_normal",
             "tag": [
                 "SNV",
-                "vcf-filtered",
-                "clinical-vcf-filtered",
+                "vcf-filtered-vardict",
+                "clinical-vcf-filtered-vardict",
                 "TN-panel"
             ],
             "id": "TN_panel",
@@ -596,9 +596,9 @@
             "path_index": "",
             "step": "bcftools_filter_vardict_tumor_normal",
             "tag": [
-                "clinical-vcf-filtered-index",
+                "clinical-vcf-filtered-vardict-index",
                 "SNV",
-                "vcf-filtered",
+                "vcf-filtered-vardict",
                 "TN-panel"
             ],
             "id": "TN_panel",
@@ -612,9 +612,9 @@
             "step": "bcftools_filter_vardict_tumor_normal",
             "tag": [
                 "SNV",
-                "clinical-vcf-pass",
+                "clinical-vcf-pass-vardict",
                 "TN-panel",
-                "vcf-pass"
+                "vcf-pass-vardict"
             ],
             "id": "TN_panel",
             "format": "vcf.gz"
@@ -625,9 +625,9 @@
             "step": "bcftools_filter_vardict_tumor_normal",
             "tag": [
                 "SNV",
-                "clinical-vcf-pass-index",
+                "clinical-vcf-pass-vardict-index",
                 "TN-panel",
-                "vcf-pass"
+                "vcf-pass-vardict"
             ],
             "id": "TN_panel",
             "format": "vcf.gz.tbi"
