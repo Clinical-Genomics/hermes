@@ -1017,7 +1017,7 @@
         {
             "path": "TN_panel/analysis/umi/normal_umi_consensusfiltered.merged.cram",
             "path_index": [
-                "TN_panel/analysis/umi/normal_umi_consensusfiltered.merged.cram.bai"
+                "TN_panel/analysis/umi/normal_umi_consensusfiltered.merged.cram.crai"
             ],
             "step": "mergeBam_normal_umiconsensus",
             "tag": [
