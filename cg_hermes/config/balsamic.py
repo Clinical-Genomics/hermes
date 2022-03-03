@@ -361,6 +361,26 @@ BALSAMIC_COMMON_TAGS = {
         "is_mandatory": False,
         "used_by": ["deliver"],
     },
+    frozenset({"cram", "umi-tumor-cram"}): {
+        "tags": ["cram", "tumor"],
+        "is_mandatory": False,
+        "used_by": ["storage"],
+    },
+    frozenset({"cram", "umi-tumor-cram-index"}): {
+        "tags": ["cram-index", "tumor"],
+        "is_mandatory": False,
+        "used_by": ["storage"],
+    },
+    frozenset({"cram", "umi-normal-cram"}): {
+        "tags": ["cram", "normal"],
+        "is_mandatory": False,
+        "used_by": ["storage"],
+    },
+    frozenset({"cram", "umi-normal-cram-index"}): {
+        "tags": ["cram-index", "normal"],
+        "is_mandatory": False,
+        "used_by": ["storage"],
+    },
 }
 
 TUMOR_ONLY_WGS_TAGS = {
@@ -499,6 +519,8 @@ TUMOR_ONLY_PANEL_TAGS = {
     frozenset({"research-vcf-sv-pass-index", "vcf-sv-pass", "cnv"}): {"is_mandatory": True},
     frozenset({"research-vcf-sv-pass", "vcf-sv-pass"}): {"is_mandatory": False},  # delly PANEL
     frozenset({"research-vcf-sv-pass-index", "vcf-sv-pass"}): {"is_mandatory": False},
+    frozenset({"cram", "umi-tumor-cram"}): {"is_mandatory": True},
+    frozenset({"cram", "umi-tumor-cram-index"}): {"is_mandatory": True},
 }
 
 TUMOR_NORMAL_PANEL_TAGS = {
@@ -598,4 +620,8 @@ TUMOR_NORMAL_PANEL_TAGS = {
     frozenset({"research-vcf-sv-pass-index", "vcf-sv-pass", "cnv"}): {"is_mandatory": True},
     frozenset({"research-vcf-sv-pass", "vcf-sv-pass"}): {"is_mandatory": False},  # delly PANEL
     frozenset({"research-vcf-sv-pass-index", "vcf-sv-pass"}): {"is_mandatory": False},
+    frozenset({"cram", "umi-tumor-cram"}): {"is_mandatory": True},
+    frozenset({"cram", "umi-tumor-cram-index"}): {"is_mandatory": True},
+    frozenset({"cram", "umi-normal-cram"}): {"is_mandatory": True},
+    frozenset({"cram", "umi-normal-cram-index"}): {"is_mandatory": True},
 }

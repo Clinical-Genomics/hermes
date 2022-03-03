@@ -764,6 +764,32 @@
             ],
             "id": "T_panel",
             "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "T_panel/analysis/umi/tumor_umi_consensusfiltered.merged.cram",
+            "path_index": [
+                "T_panel/analysis/umi/tumor_umi_consensusfiltered.merged.cram.bai"
+            ],
+            "step": "mergeBam_tumor_umiconsensus",
+            "tag": [
+                "T-panel",
+                "cram",
+                "umi-tumor-cram"
+            ],
+            "id": "T_panel",
+            "format": "cram"
+        },
+        {
+            "path": "T_panel/analysis/umi/tumor_umi_consensusfiltered.merged.cram.bai",
+            "path_index": "",
+            "step": "mergeBam_tumor_umiconsensus",
+            "tag": [
+                "T-panel",
+                "cram",
+                "umi-tumor-cram-index"
+            ],
+            "id": "T_panel",
+            "format": "bai"
         }
     ]
 }

@@ -987,6 +987,58 @@
             ],
             "id": "TN_panel",
             "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "TN_panel/analysis/umi/tumor_umi_consensusfiltered.merged.cram",
+            "path_index": [
+                "TN_panel/analysis/umi/tumor_umi_consensusfiltered.merged.cram.bai"
+            ],
+            "step": "mergeBam_tumor_umiconsensus",
+            "tag": [
+                "TN-panel",
+                "cram",
+                "umi-tumor-cram"
+            ],
+            "id": "TN_panel",
+            "format": "cram"
+        },
+        {
+            "path": "TN_panel/analysis/umi/tumor_umi_consensusfiltered.merged.cram.bai",
+            "path_index": "",
+            "step": "mergeBam_tumor_umiconsensus",
+            "tag": [
+                "TN-panel",
+                "cram",
+                "umi-tumor-cram-index"
+            ],
+            "id": "TN_panel",
+            "format": "bai"
+        },
+        {
+            "path": "TN_panel/analysis/umi/normal_umi_consensusfiltered.merged.cram",
+            "path_index": [
+                "TN_panel/analysis/umi/normal_umi_consensusfiltered.merged.cram.bai"
+            ],
+            "step": "mergeBam_normal_umiconsensus",
+            "tag": [
+                "TN-panel",
+                "cram",
+                "umi-normal-cram"
+            ],
+            "id": "TN_panel",
+            "format": "cram"
+        },
+        {
+            "path": "TN_panel/analysis/umi/normal_umi_consensusfiltered.merged.cram.bai",
+            "path_index": "",
+            "step": "mergeBam_normal_umiconsensus",
+            "tag": [
+                "TN-panel",
+                "cram",
+                "umi-normal-cram-index"
+            ],
+            "id": "TN_panel",
+            "format": "bai"
         }
     ]
 }
