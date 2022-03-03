@@ -1038,7 +1038,7 @@
                 "umi-normal-cram-index"
             ],
             "id": "TN_panel",
-            "format": "bai"
+            "format": "crai"
         }
     ]
 }
