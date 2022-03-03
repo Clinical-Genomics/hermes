@@ -362,22 +362,22 @@ BALSAMIC_COMMON_TAGS = {
         "used_by": ["deliver"],
     },
     frozenset({"cram", "umi-tumor-cram"}): {
-        "tags": ["cram", "tumor"],
+        "tags": ["umi", "cram", "tumor"],
         "is_mandatory": False,
         "used_by": ["storage"],
     },
     frozenset({"cram", "umi-tumor-cram-index"}): {
-        "tags": ["cram-index", "tumor"],
+        "tags": ["umi", "cram-index", "tumor"],
         "is_mandatory": False,
         "used_by": ["storage"],
     },
     frozenset({"cram", "umi-normal-cram"}): {
-        "tags": ["cram", "normal"],
+        "tags": ["umi", "cram", "normal"],
         "is_mandatory": False,
         "used_by": ["storage"],
     },
     frozenset({"cram", "umi-normal-cram-index"}): {
-        "tags": ["cram-index", "normal"],
+        "tags": ["umi", "cram-index", "normal"],
         "is_mandatory": False,
         "used_by": ["storage"],
     },
