@@ -1012,7 +1012,7 @@
                 "umi-tumor-cram-index"
             ],
             "id": "TN_panel",
-            "format": "bai"
+            "format": "crai"
         },
         {
             "path": "TN_panel/analysis/umi/normal_umi_consensusfiltered.merged.cram",
