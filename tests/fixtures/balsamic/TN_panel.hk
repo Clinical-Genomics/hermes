@@ -991,7 +991,7 @@
         {
             "path": "TN_panel/analysis/umi/tumor_umi_consensusfiltered.merged.cram",
             "path_index": [
-                "TN_panel/analysis/umi/tumor_umi_consensusfiltered.merged.cram.bai"
+                "TN_panel/analysis/umi/tumor_umi_consensusfiltered.merged.cram.crai"
             ],
             "step": "mergeBam_tumor_umiconsensus",
             "tag": [
