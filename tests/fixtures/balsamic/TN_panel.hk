@@ -1029,7 +1029,7 @@
             "format": "cram"
         },
         {
-            "path": "TN_panel/analysis/umi/normal_umi_consensusfiltered.merged.cram.bai",
+            "path": "TN_panel/analysis/umi/normal_umi_consensusfiltered.merged.cram.crai",
             "path_index": "",
             "step": "mergeBam_normal_umiconsensus",
             "tag": [
