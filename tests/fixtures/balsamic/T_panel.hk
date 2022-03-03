@@ -780,7 +780,7 @@
             "format": "cram"
         },
         {
-            "path": "T_panel/analysis/umi/tumor_umi_consensusfiltered.merged.cram.bai",
+            "path": "T_panel/analysis/umi/tumor_umi_consensusfiltered.merged.cram.crai",
             "path_index": "",
             "step": "mergeBam_tumor_umiconsensus",
             "tag": [
