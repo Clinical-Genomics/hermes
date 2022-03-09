@@ -87,7 +87,7 @@ BALSAMIC_COMMON_TAGS = {
     },
     frozenset(["qc-metrics-yaml"]): {
         "tags": ["qc-metrics", "deliverable"],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": ["vogue", "deliver"],
     },
     frozenset({"multiqc-html", "html"}): {
