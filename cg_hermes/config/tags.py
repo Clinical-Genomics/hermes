@@ -112,6 +112,7 @@ ANALYSIS_COMMON = {
     "tcov": {"description": "Coverage output"},
     "tiddit-coverage": {"description": "Coverage output from tiddit"},
     "visualization": {"description": "Visualizes data"},
+    "umi": {"description": "Files related to UMI workflow"}
 }
 
 TOOLS = {
