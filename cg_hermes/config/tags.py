@@ -126,6 +126,7 @@ TOOLS = {
     "cnvkit": {"description": "Tool to call copy number variations"},
     "ascatngs": {"description": "Tool to identify somatically acquired copy-number alterations"},
     "delly": {"description": "Cancer structural variant prediction tool"},
+    "svdb": {"description": "Tool to merge SV vcf files from multiple callers or individuals"},
     "cyrius": {"description": "Tool to call the problematic CYP2D6 gene"},
     "deseq2": {"description": "Differential expression analysis with DESeq2"},
     "deepvariant": {"description": "Variantcaller"},
