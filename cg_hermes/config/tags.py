@@ -96,6 +96,7 @@ ANALYSIS_COMMON = {
     "config": {"description": "Config file"},
     "coverage": {"description": "Output with coverage information"},
     "diagram": {"description": "Data diagram"},
+    "scatter": {"description": "Scatter plot"},
     "filtered": {"description": "Filtered data"},
     "fracsnp": {"description": "Fraction of reads with snp"},
     "fusion": {"description": "Fusion transcripts"},
@@ -186,7 +187,9 @@ MUTANT_SPECIFIC = {
     "vcf-covid": {"description": "VCF file containing covid data. Distinction req. by production"},
     "instrument-properties": {"description": "Sequencing metadata"},
     "consensus-sample": {"description": "Separate sample consensus fasta"},
-    "pangolin-typing-fohm": {"description": "Pangolin typing report with only qc_pass samples included"},
+    "pangolin-typing-fohm": {
+        "description": "Pangolin typing report with only qc_pass samples included"
+    },
 }
 
 AVAILABLE_USAGES = {
