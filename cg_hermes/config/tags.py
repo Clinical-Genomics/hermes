@@ -96,6 +96,7 @@ ANALYSIS_COMMON = {
     "config": {"description": "Config file"},
     "coverage": {"description": "Output with coverage information"},
     "diagram": {"description": "Data diagram"},
+    "scatter": {"description": "Scatter plot"},
     "filtered": {"description": "Filtered data"},
     "fracsnp": {"description": "Fraction of reads with snp"},
     "fusion": {"description": "Fusion transcripts"},
@@ -114,7 +115,7 @@ ANALYSIS_COMMON = {
     "visualization": {"description": "Visualizes data"},
     "umi": {"description": "Files related to UMI workflow"},
     "umi-cram": {"description": "UMI consensus filtered cram file"},
-    "umi-cram-index": {"description": "Index for the UMI consensus filtered cram file"}
+    "umi-cram-index": {"description": "Index for the UMI consensus filtered cram file"},
 }
 
 TOOLS = {
@@ -189,7 +190,9 @@ MUTANT_SPECIFIC = {
     "vcf-covid": {"description": "VCF file containing covid data. Distinction req. by production"},
     "instrument-properties": {"description": "Sequencing metadata"},
     "consensus-sample": {"description": "Separate sample consensus fasta"},
-    "pangolin-typing-fohm": {"description": "Pangolin typing report with only qc_pass samples included"},
+    "pangolin-typing-fohm": {
+        "description": "Pangolin typing report with only qc_pass samples included"
+    },
 }
 
 AVAILABLE_USAGES = {

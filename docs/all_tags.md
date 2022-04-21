@@ -10,30 +10,37 @@
 
 ## ANALYSIS TAGS
 
-| Tag name        | Description                                   |
-|-----------------|-----------------------------------------------|
-| autozyg         | Autozygous region                             |
-| assembly        | Assembly                                      |
-| bed             | Bed file                                      |
-| bigwig          | Bigwig formated file                          |
-| clinical        | Clinical subset                               |
-| config          | Config file                                   |
-| coverage        | Output with coverage information              |
-| diagram         | Data diagram                                  |
-| filtered        | Filtered data                                 |
-| fracsnp         | Fraction of reads with snp                    |
-| fusion          | Fusion transcripts                            |
-| genes           | Related to genes                              |
-| junction        | Junction data                                 |
-| metrics         | Data metrics                                  |
-| reference-info  | Information about references used in analysis |
-| regions         | Output for regions                            |
-| research        | Research set                                  |
-| segments        | Output for segments                           |
-| sites           | Output for sites                              |
-| tcov            | Coverage output                               |
-| tiddit-coverage | Coverage output from tiddit                   |
-| visualization   | Visualizes data                               |
+| Tag name        | Description                                    |
+|-----------------|------------------------------------------------|
+| assembly        | Assembly                                       |
+| autozyg         | Autozygous region                              |
+| bed             | Bed file                                       |
+| bed-index       | Following index                                |
+| bigwig          | Bigwig formated file                           |
+| clinical        | Clinical subset                                |
+| config          | Config file                                    |
+| coverage        | Output with coverage information               |
+| diagram         | Data diagram                                   |
+| scatter         | Scatter plot                                   |
+| filtered        | Filtered data                                  |
+| fracsnp         | Fraction of reads with snp                     |
+| fusion          | Fusion transcripts                             |
+| genes           | Related to genes                               |
+| junction        | Junction data                                  |
+| metrics         | Data metrics                                   |
+| first-pass      | Data metrics first pass                        |
+| second-pass     | Data metrics second pass                       |
+| reference-info  | Information about references used in analysis  |
+| regions         | Output for regions                             |
+| research        | Research set                                   |
+| segments        | Output for segments                            |
+| sites           | Output for sites                               |
+| tcov            | Coverage output                                |
+| tiddit-coverage | Coverage output from tiddit                    |
+| visualization   | Visualizes data                                |
+| umi             | Files related to UMI workflow                  |
+| umi-cram        | UMI consensus filtered cram file               |
+| umi-cram-index  | Index for the UMI consensus filtered cram file |
 
 ## FAMILY TAGS
 
@@ -44,21 +51,30 @@
 
 ## RAW DATA
 
-| Tag name   | Description                         |
-|------------|-------------------------------------|
-| fastq      | Files with raw data in fastq format |
+| Tag name       | Description                         |
+|----------------|-------------------------------------|
+| fastq          | Files with raw data in fastq format |
+| fasta          | Files with raw data in fasta format |
+| forward-strand | Reads from forward strand           |
+| reverse-strand | Reads from reverse strand           |
+| unpaired-reads | Reads that could not be paired      |
 
 ## REPORTING TAGS
 
-| Tag name          | Description                               |
-|-------------------|-------------------------------------------|
-| deliverable       | CG deliverables file                      |
-| multiqc-html      | Multiqc report for the run in html format |
-| multiqc-json      | Multiqc report for the run in json format |
-| pdf               | Portable document format                  |
-| sambamba-depth    | Coverage information from sambamba        |
-| vcf-report        | Results and QC from variant calling       |
-| software-versions | Versions of software used in analysis     |
+| Tag name          | Description                                     |
+|-------------------|-------------------------------------------------|
+| csv               | Comma separated values                          |
+| deliverable       | Deliverables file                               |
+| delivery-report   | Delivery report with result for upload to Scout |
+| multiqc-html      | Multiqc report for the run in html format       |
+| multiqc-json      | Multiqc report for the run in json format       |
+| pdf               | Portable document format                        |
+| qc-report         | Results and QC                                  |
+| sambamba-depth    | Coverage information from sambamba              |
+| summary           | Overview file without detailed information      |
+| tsv               | Tab separated values                            |
+| vcf-report        | Results and QC from variant calling             |
+| software-versions | Versions of software used in analysis           |
 
 ## TOOL TAGS
 
@@ -70,19 +86,24 @@
 | chromograph      | Tool to create PNG images from BED and WIG files from mikaell |
 | cnvkit           | Tool to call copy number variations                           |
 | ascatngs         | Tool to identify somatically acquired copy-number alterations |
-| delly            | Structural variant prediction tool                            |
+| delly            | Cancer structural variant prediction tool                     |
 | cyrius           | Tool to call the problematic CYP2D6 gene                      |
 | deseq2           | Differential expression analysis with DESeq2                  |
+| deepvariant      | Variantcaller                                                 |
+| dnascope         | Call snv indels                                               |
 | genotyper        | SNV indel caller from sention                                 |
 | gffcompare       | Compare gff files                                             |
 | haplotype-caller | Call snv and indels                                           |
 | manta            | Tool to call structural variants                              |
 | mitodel          | Tool to identify mitochondrial deletion signatures            |
 | peddy            | Tool to check pedigree and ancestral relations                |
-| scope            | Call snv indels                                               |
+| picard           | Picard set of bioinformatic tools                             |
+| salmon-quant     | Transcript quantification                                     |
 | sention          | Sention algorithm                                             |
 | star-fusion      | Fusion caller                                                 |
 | stringtie        | Transcript assembler                                          |
+| tnscope          | Call snv indels                                               |
+| tnscope-umi      | Call snv indels for umi                                       |
 | upd              | Uniparent disomy caller from bjhall                           |
 | vardict          | Cancer variant caller                                         |
 | wisecondor       | NIPT caller                                                   |
@@ -101,8 +122,11 @@
 |------------------------|-----------------------------------------------------|
 | cnv                    | Copy number variants                                |
 | normal                 | Associated with normal sample                       |
+| germline               | Associated with germline variants                   |
+| somatic                | Associated with somatic variants                    |
 | rhocall-viz            | Runs of homozygosity index                          |
 | smn-calling            | Copy number calls for the SMN gene                  |
+| snv                    | Single nucleotide variants and short indels         |
 | snv-bcf                | Gvcf including all SNV variants                     |
 | snv-gbcf               | Gvcf including all SNV variants                     |
 | sv-bcf                 | Gvcf including all SV variants                      |
@@ -114,6 +138,8 @@
 | upd                    | Uniparental disomy variants                         |
 | vcf                    | Variant call formated file                          |
 | vcf-index              | Following index                                     |
+| vcf-snv-filtered       | SNV variants filtered by BALSAMIC                   |
+| vcf-snv-filtered-index | Following index                                     |
 | vcf-snv-clinical       | SNV variants from clinical panels                   |
 | vcf-snv-clinical-index | Following index                                     |
 | vcf-snv-research       | SNV variants from whole genome                      |
@@ -125,4 +151,4 @@
 | vcf-sv-research        | SV variants from whole genome                       |
 | vcf-sv-research-index  | Following index                                     |
 | vcf2cytosure           | Conversion from vcf format to cytosure format       |
-
+| variants               | File pertaining variant information in some way     |
