@@ -358,12 +358,12 @@ BALSAMIC_COMMON_TAGS = {
     frozenset(TAGS["TNscope_umi.all.filtered.pass.vcf.gz"]): {
         "tags": ["tnscope-umi", "vcf-snv-research"],
         "is_mandatory": False,
-        "used_by": ["deliver"],
+        "used_by": ["deliver", "scout"],
     },
     frozenset(TAGS["TNscope_umi.all.filtered.pass.vcf.gz.tbi"]): {
         "tags": ["tnscope-umi", "vcf-snv-research-index"],
         "is_mandatory": False,
-        "used_by": ["deliver"],
+        "used_by": ["deliver", "scout"],
     },
     # CNVs (PANEL)
     frozenset(TAGS["tumor.merged.cns"]): {
