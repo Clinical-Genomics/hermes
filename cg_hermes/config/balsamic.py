@@ -103,7 +103,6 @@ TAGS = {
         "snv",
         "clinical-vcf-pass-tnscope-index",
     ],
-    "tnscope.balsamic_stat": ["tmb", "snv", "tnscope", "stat-somatic-tmb"],
     # CNVs (WGS)
     "ascat.output.pdf": ["ascat-pdf", "clinical-ascat-pdf"],
     "copynumber.txt.gz": ["ascat-copynumber", "clinical-ascat-copynumber"],
@@ -127,7 +126,6 @@ TAGS = {
         "snv",
         "clinical-vcf-pass-vardict-index",
     ],
-    "vardict.balsamic_stat": ["tmb", "snv", "vardict", "stat-somatic-tmb"],
     # TNscope_umi
     "TNscope_umi.vcf.gz": [
         "vcf-tnscope-umi",
@@ -147,7 +145,6 @@ TAGS = {
         "snv",
         "research-vcf-pass-tnscope-umi-index",
     ],
-    "TNscope_umi.balsamic_stat": ["tmb", "snv", "tnscope-umi", "stat-somatic-tmb"],
     # CNVs (PANEL)
     "tumor.merged.cns": ["cns", "cnv-cns"],
     "tumor.merged-scatter.pdf": ["scatter", "cnv-scatter"],
@@ -314,11 +311,6 @@ BALSAMIC_COMMON_TAGS = {
         "is_mandatory": False,
         "used_by": ["deliver", "scout"],
     },
-    frozenset(TAGS["tnscope.balsamic_stat"]): {
-        "tags": ["tnscope", "tmb"],
-        "is_mandatory": False,
-        "used_by": ["deliver"],
-    },
     # CNVs (WGS)
     frozenset(TAGS["ascat.output.pdf"]): {
         "tags": ["ascatngs", "visualization"],
@@ -352,11 +344,6 @@ BALSAMIC_COMMON_TAGS = {
         "is_mandatory": False,
         "used_by": ["deliver", "scout"],
     },
-    frozenset(TAGS["vardict.balsamic_stat"]): {
-        "tags": ["vardict", "tmb"],
-        "is_mandatory": False,
-        "used_by": ["deliver"],
-    },
     # TNscope_umi
     frozenset(TAGS["TNscope_umi.vcf.gz"]): {
         "tags": ["tnscope-umi", "vcf"],
@@ -375,11 +362,6 @@ BALSAMIC_COMMON_TAGS = {
     },
     frozenset(TAGS["TNscope_umi.all.filtered.pass.vcf.gz.tbi"]): {
         "tags": ["tnscope-umi", "vcf-snv-research-index"],
-        "is_mandatory": False,
-        "used_by": ["deliver"],
-    },
-    frozenset(TAGS["TNscope_umi.balsamic_stat"]): {
-        "tags": ["tnscope-umi", "tmb"],
         "is_mandatory": False,
         "used_by": ["deliver"],
     },
@@ -423,7 +405,6 @@ TUMOR_ONLY_WGS_TAGS = {
     frozenset(TAGS["tnscope.vcf.gz.tbi"]): {"is_mandatory": True},
     frozenset(TAGS["tnscope.all.filtered.pass.vcf.gz"]): {"is_mandatory": True},
     frozenset(TAGS["tnscope.all.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
-    frozenset(TAGS["tnscope.balsamic_stat"]): {"is_mandatory": True},
 }
 
 
@@ -442,7 +423,6 @@ TUMOR_NORMAL_WGS_TAGS = {
     frozenset(TAGS["tnscope.vcf.gz.tbi"]): {"is_mandatory": True},
     frozenset(TAGS["tnscope.all.filtered.pass.vcf.gz"]): {"is_mandatory": True},
     frozenset(TAGS["tnscope.all.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
-    frozenset(TAGS["tnscope.balsamic_stat"]): {"is_mandatory": True},
     # CNVs (WGS)
     frozenset(TAGS["ascat.output.pdf"]): {"is_mandatory": True},
     frozenset(TAGS["copynumber.txt.gz"]): {"is_mandatory": True},
@@ -459,13 +439,11 @@ TUMOR_ONLY_PANEL_TAGS = {
     frozenset(TAGS["vardict.vcf.gz.tbi"]): {"is_mandatory": True},
     frozenset(TAGS["vardict.all.filtered.pass.vcf.gz"]): {"is_mandatory": True},
     frozenset(TAGS["vardict.all.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
-    frozenset(TAGS["vardict.balsamic_stat"]): {"is_mandatory": True},
     # TNscope_umi
     frozenset(TAGS["TNscope_umi.vcf.gz"]): {"is_mandatory": True},
     frozenset(TAGS["TNscope_umi.vcf.gz.tbi"]): {"is_mandatory": True},
     frozenset(TAGS["TNscope_umi.all.filtered.pass.vcf.gz"]): {"is_mandatory": True},
     frozenset(TAGS["TNscope_umi.all.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
-    frozenset(TAGS["TNscope_umi.balsamic_stat"]): {"is_mandatory": True},
     # CNVs (PANEL)
     frozenset(TAGS["tumor.merged.cns"]): {"is_mandatory": True},
     frozenset(TAGS["tumor.merged-scatter.pdf"]): {"is_mandatory": True},
@@ -495,13 +473,11 @@ TUMOR_NORMAL_PANEL_TAGS = {
     frozenset(TAGS["vardict.vcf.gz.tbi"]): {"is_mandatory": True},
     frozenset(TAGS["vardict.all.filtered.pass.vcf.gz"]): {"is_mandatory": True},
     frozenset(TAGS["vardict.all.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
-    frozenset(TAGS["vardict.balsamic_stat"]): {"is_mandatory": True},
     # TNscope_umi
     frozenset(TAGS["TNscope_umi.vcf.gz"]): {"is_mandatory": True},
     frozenset(TAGS["TNscope_umi.vcf.gz.tbi"]): {"is_mandatory": True},
     frozenset(TAGS["TNscope_umi.all.filtered.pass.vcf.gz"]): {"is_mandatory": True},
     frozenset(TAGS["TNscope_umi.all.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
-    frozenset(TAGS["TNscope_umi.balsamic_stat"]): {"is_mandatory": True},
     # CNVs (PANEL)
     frozenset(TAGS["tumor.merged.cns"]): {"is_mandatory": True},
     frozenset(TAGS["tumor.merged-scatter.pdf"]): {"is_mandatory": True},
