@@ -105,7 +105,7 @@ TAGS = {
     ],
     # CNVs (WGS)
     "ascat.output.pdf": ["ascat-pdf", "clinical-ascat-pdf"],
-    "copynumber.txt.gz": ["ascat-copynumber", "clinical-ascat-copynumber"],
+    "ascat.copynumber.txt.gz": ["ascat-copynumber", "clinical-ascat-copynumber"],
     # SNVs/INDELs (PANEL)
     # vardict
     "vardict.vcf.gz": [
@@ -317,7 +317,7 @@ BALSAMIC_COMMON_TAGS = {
         "is_mandatory": False,
         "used_by": ["deliver", "scout"],
     },
-    frozenset(TAGS["copynumber.txt.gz"]): {
+    frozenset(TAGS["ascat.copynumber.txt.gz"]): {
         "tags": ["ascatngs", "metrics"],
         "is_mandatory": False,
         "used_by": ["deliver"],
@@ -425,7 +425,7 @@ TUMOR_NORMAL_WGS_TAGS = {
     frozenset(TAGS["tnscope.all.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
     # CNVs (WGS)
     frozenset(TAGS["ascat.output.pdf"]): {"is_mandatory": True},
-    frozenset(TAGS["copynumber.txt.gz"]): {"is_mandatory": True},
+    frozenset(TAGS["ascat.copynumber.txt.gz"]): {"is_mandatory": True},
 }
 
 
