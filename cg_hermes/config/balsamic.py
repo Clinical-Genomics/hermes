@@ -210,22 +210,22 @@ BALSAMIC_COMMON_TAGS = {
     frozenset(TAGS["tumor_umi_consensusfiltered.merged.cram"]): {  # UMI cram (tumor)
         "tags": ["umi-cram", "tumor"],
         "is_mandatory": False,
-        "used_by": ["deliver"],
+        "used_by": ["deliver", "scout"],
     },
     frozenset(TAGS["tumor_umi_consensusfiltered.merged.cram.crai"]): {
         "tags": ["umi-cram-index", "tumor"],
         "is_mandatory": False,
-        "used_by": ["deliver"],
+        "used_by": ["deliver", "scout"],
     },
     frozenset(TAGS["normal_umi_consensusfiltered.merged.cram"]): {  # UMI cram (normal)
         "tags": ["umi-cram", "normal"],
         "is_mandatory": False,
-        "used_by": ["deliver"],
+        "used_by": ["deliver", "scout"],
     },
     frozenset(TAGS["normal_umi_consensusfiltered.merged.cram.crai"]): {
         "tags": ["umi-cram-index", "normal"],
         "is_mandatory": False,
-        "used_by": ["deliver"],
+        "used_by": ["deliver", "scout"],
     },
     # Merged SV (manta, delly) and CNV (cnvkit, ascat) callers
     frozenset(TAGS["svdb.vcf.gz"]): {
