@@ -386,11 +386,6 @@ BALSAMIC_COMMON_TAGS = {
         "is_mandatory": False,
         "used_by": ["deliver"],
     },
-    frozenset(TAGS["gene_metrics"]): {
-        "tags": ["cnvkit", "genes", "metrics"],
-        "is_mandatory": False,
-        "used_by": ["deliver"],
-    },
     frozenset(TAGS["cnvkit.vcf2cytosure.cgh"]): {
         "tags": ["cnvkit", "vcf2cytosure"],
         "is_mandatory": False,
