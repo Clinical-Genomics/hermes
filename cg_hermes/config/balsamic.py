@@ -27,61 +27,29 @@ TAGS = {
     "svdb.all.filtered.pass.vcf.gz": ["vcf-pass-svdb", "clinical-vcf-pass-svdb"],
     "svdb.all.filtered.pass.vcf.gz.tbi": ["vcf-pass-svdb", "clinical-vcf-pass-svdb-index"],
     # Germline SNVs
-    "germline.tumor.dnascope.vcf.gz": [
+    "germline.tumor_normal.dnascope.vcf.gz": [
         "vcf-all",
         "snv",
         "dnascope",
-        "tumor",
         "annotated-germline-vcf-all",
     ],
-    "germline.tumor.dnascope.vcf.gz.tbi": [
+    "germline.tumor_normal.dnascope.vcf.gz.tbi": [
         "vcf-all",
         "snv",
         "dnascope",
-        "tumor",
-        "annotated-germline-vcf-all-index",
-    ],
-    "germline.normal.dnascope.vcf.gz": [
-        "vcf-all",
-        "snv",
-        "dnascope",
-        "normal",
-        "annotated-germline-vcf-all",
-    ],
-    "germline.normal.dnascope.vcf.gz.tbi": [
-        "vcf-all",
-        "snv",
-        "dnascope",
-        "normal",
         "annotated-germline-vcf-all-index",
     ],
     # Germline SVs
-    "germline.tumor.manta_germline.vcf.gz": [
+    "germline.tumor_normal.manta_germline.vcf.gz": [
         "vcf-all",
         "sv",
         "manta-germline",
-        "tumor",
         "annotated-germline-vcf-all",
     ],
-    "germline.tumor.manta_germline.vcf.gz.tbi": [
+    "germline.tumor_normal.manta_germline.vcf.gz.tbi": [
         "vcf-all",
         "sv",
         "manta-germline",
-        "tumor",
-        "annotated-germline-vcf-all-index",
-    ],
-    "germline.normal.manta_germline.vcf.gz": [
-        "vcf-all",
-        "sv",
-        "manta-germline",
-        "normal",
-        "annotated-germline-vcf-all",
-    ],
-    "germline.normal.manta_germline.vcf.gz.tbi": [
-        "vcf-all",
-        "sv",
-        "manta-germline",
-        "normal",
         "annotated-germline-vcf-all-index",
     ],
     # SNVs (WGS)
@@ -249,45 +217,25 @@ BALSAMIC_COMMON_TAGS = {
         "used_by": ["deliver", "scout"],
     },
     # Germline SNVs
-    frozenset(TAGS["germline.tumor.dnascope.vcf.gz"]): {
-        "tags": ["dnascope", "germline", "tumor", "vcf"],
+    frozenset(TAGS["germline.tumor_normal.dnascope.vcf.gz"]): {
+        "tags": ["dnascope", "germline", "vcf"],
         "is_mandatory": True,
         "used_by": ["deliver"],
     },
-    frozenset(TAGS["germline.tumor.dnascope.vcf.gz.tbi"]): {
-        "tags": ["dnascope", "germline", "tumor", "vcf-index"],
+    frozenset(TAGS["germline.tumor_normal.dnascope.vcf.gz.tbi"]): {
+        "tags": ["dnascope", "germline", "vcf-index"],
         "is_mandatory": True,
-        "used_by": ["deliver"],
-    },
-    frozenset(TAGS["germline.normal.dnascope.vcf.gz"]): {
-        "tags": ["dnascope", "germline", "normal", "vcf"],
-        "is_mandatory": False,
-        "used_by": ["deliver"],
-    },
-    frozenset(TAGS["germline.normal.dnascope.vcf.gz.tbi"]): {
-        "tags": ["dnascope", "germline", "normal", "vcf-index"],
-        "is_mandatory": False,
         "used_by": ["deliver"],
     },
     # Germline SVs
-    frozenset(TAGS["germline.tumor.manta_germline.vcf.gz"]): {
-        "tags": ["manta", "germline", "tumor", "vcf"],
+    frozenset(TAGS["germline.tumor_normal.manta_germline.vcf.gz"]): {
+        "tags": ["manta", "germline", "vcf"],
         "is_mandatory": True,
         "used_by": ["deliver"],
     },
-    frozenset(TAGS["germline.tumor.manta_germline.vcf.gz.tbi"]): {
-        "tags": ["manta", "germline", "tumor", "vcf-index"],
+    frozenset(TAGS["germline.tumor_normal.manta_germline.vcf.gz.tbi"]): {
+        "tags": ["manta", "germline", "vcf-index"],
         "is_mandatory": True,
-        "used_by": ["deliver"],
-    },
-    frozenset(TAGS["germline.normal.manta_germline.vcf.gz"]): {
-        "tags": ["manta", "germline", "normal", "vcf"],
-        "is_mandatory": False,
-        "used_by": ["deliver"],
-    },
-    frozenset(TAGS["germline.normal.manta_germline.vcf.gz.tbi"]): {
-        "tags": ["manta", "germline", "normal", "vcf-index"],
-        "is_mandatory": False,
         "used_by": ["deliver"],
     },
     # SNVs (WGS)
@@ -407,12 +355,6 @@ TUMOR_NORMAL_WGS_TAGS = {
     # Alignment files
     frozenset(TAGS["normal.merged.cram"]): {"is_mandatory": True},
     frozenset(TAGS["normal.merged.cram.crai"]): {"is_mandatory": True},
-    # Germline SNVs
-    frozenset(TAGS["germline.normal.dnascope.vcf.gz"]): {"is_mandatory": True},
-    frozenset(TAGS["germline.normal.dnascope.vcf.gz.tbi"]): {"is_mandatory": True},
-    # Germline SVs
-    frozenset(TAGS["germline.normal.manta_germline.vcf.gz"]): {"is_mandatory": True},
-    frozenset(TAGS["germline.normal.manta_germline.vcf.gz.tbi"]): {"is_mandatory": True},
     # SNVs (WGS)
     frozenset(TAGS["tnscope.vcf.gz"]): {"is_mandatory": True},
     frozenset(TAGS["tnscope.vcf.gz.tbi"]): {"is_mandatory": True},
@@ -456,12 +398,6 @@ TUMOR_NORMAL_PANEL_TAGS = {
     frozenset(TAGS["tumor_umi_consensusfiltered.merged.cram.crai"]): {"is_mandatory": True},
     frozenset(TAGS["normal_umi_consensusfiltered.merged.cram"]): {"is_mandatory": True},
     frozenset(TAGS["normal_umi_consensusfiltered.merged.cram.crai"]): {"is_mandatory": True},
-    # Germline SNVs
-    frozenset(TAGS["germline.normal.dnascope.vcf.gz"]): {"is_mandatory": True},
-    frozenset(TAGS["germline.normal.dnascope.vcf.gz.tbi"]): {"is_mandatory": True},
-    # Germline SVs
-    frozenset(TAGS["germline.normal.manta_germline.vcf.gz"]): {"is_mandatory": True},
-    frozenset(TAGS["germline.normal.manta_germline.vcf.gz.tbi"]): {"is_mandatory": True},
     # SNVs/INDELs (PANEL)
     # vardict
     frozenset(TAGS["vardict.vcf.gz"]): {"is_mandatory": True},
