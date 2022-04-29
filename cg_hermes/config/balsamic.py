@@ -120,7 +120,7 @@ TAGS = {
     "ascat.output.pdf": ["ascat-pdf", "clinical-ascat-pdf"],
     "ascat.copynumber.txt.gz": ["ascat-copynumber", "clinical-ascat-copynumber"],
     # CNVs (PANEL & WGS)
-    "dellycnv.cov.gz": ["cnv-delly", "clinical-cnv-delly"],
+    "dellycnv.cov.gz": ["rd-delly", "clinical-rd-delly"],
 }
 
 BALSAMIC_COMMON_TAGS = {
