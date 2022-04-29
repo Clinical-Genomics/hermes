@@ -5,14 +5,14 @@ mandatory by default. However the tags that are available to a particular analys
 """
 
 TAGS = {
-    # Config, QC and reports
+    # Config, QC and reports (PANEL & WGS)
     "config.json": ["balsamic-config"],
     "report.html": ["balsamic-report"],
     "BALSAMIC_X.X.X_graph.pdf": ["balsamic-dag"],
     "metrics_deliverables.yaml": ["yaml", "qc-metrics-yaml"],
     "multiqc_report.html": ["html", "multiqc-html"],
     "multiqc_data.json": ["json", "multiqc-json"],
-    # Alignment files
+    # Alignment files (PANEL & WGS)
     "tumor.merged.cram": ["cram", "tumor-cram"],
     "tumor.merged.cram.crai": ["cram", "tumor-cram-index"],
     "normal.merged.cram": ["cram", "normal-cram"],
@@ -21,12 +21,12 @@ TAGS = {
     "tumor_umi_consensusfiltered.merged.cram.crai": ["cram", "umi-tumor-cram-index"],
     "normal_umi_consensusfiltered.merged.cram": ["cram", "umi-normal-cram"],
     "normal_umi_consensusfiltered.merged.cram.crai": ["cram", "umi-normal-cram-index"],
-    # Merged SV (manta, delly) and CNV (cnvkit, ascat) callers
+    # Merged SV (manta, delly) and CNV (cnvkit, ascat) callers (PANEL & WGS)
     "svdb.vcf.gz": ["vcf-svdb", "research-vcf-svdb"],
     "svdb.vcf.gz.tbi": ["vcf-svdb", "research-vcf-svdb-index"],
     "svdb.all.filtered.pass.vcf.gz": ["vcf-pass-svdb", "clinical-vcf-pass-svdb"],
     "svdb.all.filtered.pass.vcf.gz.tbi": ["vcf-pass-svdb", "clinical-vcf-pass-svdb-index"],
-    # Germline SNVs
+    # Germline SNVs (PANEL & WGS)
     "germline.tumor_normal.dnascope.vcf.gz": [
         "vcf-all",
         "snv",
@@ -39,7 +39,7 @@ TAGS = {
         "dnascope",
         "annotated-germline-vcf-all-index",
     ],
-    # Germline SVs
+    # Germline SVs (PANEL & WGS)
     "germline.tumor_normal.manta_germline.vcf.gz": [
         "vcf-all",
         "sv",
@@ -71,9 +71,6 @@ TAGS = {
         "snv",
         "clinical-vcf-pass-tnscope-index",
     ],
-    # CNVs (WGS)
-    "ascat.output.pdf": ["ascat-pdf", "clinical-ascat-pdf"],
-    "ascat.copynumber.txt.gz": ["ascat-copynumber", "clinical-ascat-copynumber"],
     # SNVs/INDELs (PANEL)
     # vardict
     "vardict.vcf.gz": [
@@ -119,10 +116,15 @@ TAGS = {
     "tumor.merged-diagram.pdf": ["diagram", "cnv-diagram"],
     "gene_metrics": ["gene-metrics", "cnv-gene-metrics"],
     "cnvkit.vcf2cytosure.cgh": ["cgh-file", "cnv-somatic-cgh-file"],
+    # CNVs (WGS)
+    "ascat.output.pdf": ["ascat-pdf", "clinical-ascat-pdf"],
+    "ascat.copynumber.txt.gz": ["ascat-copynumber", "clinical-ascat-copynumber"],
+    # CNVs (PANEL & WGS)
+    "dellycnv.cov.gz": ["cnv-delly", "clinical-cnv-delly"],
 }
 
 BALSAMIC_COMMON_TAGS = {
-    # Config, QC and reports
+    # Config, QC and reports (PANEL & WGS)
     frozenset(TAGS["config.json"]): {  # BALSAMIC config json
         "tags": ["balsamic-config"],
         "is_mandatory": True,
@@ -154,7 +156,7 @@ BALSAMIC_COMMON_TAGS = {
         "is_mandatory": True,
         "used_by": ["audit"],
     },
-    # Alignment files
+    # Alignment files (PANEL & WGS)
     frozenset(TAGS["tumor.merged.cram"]): {  # cram (tumor)
         "tags": ["tumor", "cram"],
         "is_mandatory": True,
@@ -195,7 +197,7 @@ BALSAMIC_COMMON_TAGS = {
         "is_mandatory": False,
         "used_by": ["deliver", "scout"],
     },
-    # Merged SV (manta, delly) and CNV (cnvkit, ascat) callers
+    # Merged SV (manta, delly) and CNV (cnvkit, ascat) callers (PANEL & WGS)
     frozenset(TAGS["svdb.vcf.gz"]): {
         "tags": ["svdb", "vcf-sv-research"],
         "is_mandatory": True,
@@ -216,7 +218,7 @@ BALSAMIC_COMMON_TAGS = {
         "is_mandatory": True,
         "used_by": ["deliver", "scout"],
     },
-    # Germline SNVs
+    # Germline SNVs (PANEL & WGS)
     frozenset(TAGS["germline.tumor_normal.dnascope.vcf.gz"]): {
         "tags": ["dnascope", "germline", "vcf"],
         "is_mandatory": True,
@@ -227,7 +229,7 @@ BALSAMIC_COMMON_TAGS = {
         "is_mandatory": True,
         "used_by": ["deliver"],
     },
-    # Germline SVs
+    # Germline SVs (PANEL & WGS)
     frozenset(TAGS["germline.tumor_normal.manta_germline.vcf.gz"]): {
         "tags": ["manta", "germline", "vcf"],
         "is_mandatory": True,
@@ -339,6 +341,12 @@ BALSAMIC_COMMON_TAGS = {
         "is_mandatory": False,
         "used_by": ["deliver", "scout"],
     },
+    # CNVs (PANEL & WGS)
+    frozenset(TAGS["dellycnv.cov.gz"]): {
+        "tags": ["delly", "metrics"],
+        "is_mandatory": False,
+        "used_by": ["deliver"],
+    },
 }
 
 
@@ -348,11 +356,13 @@ TUMOR_ONLY_WGS_TAGS = {
     frozenset(TAGS["tnscope.vcf.gz.tbi"]): {"is_mandatory": True},
     frozenset(TAGS["tnscope.all.filtered.pass.vcf.gz"]): {"is_mandatory": True},
     frozenset(TAGS["tnscope.all.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
+    # CNVs (PANEL & WGS)
+    frozenset(TAGS["dellycnv.cov.gz"]): {"is_mandatory": True},
 }
 
 
 TUMOR_NORMAL_WGS_TAGS = {
-    # Alignment files
+    # Alignment files (PANEL & WGS)
     frozenset(TAGS["normal.merged.cram"]): {"is_mandatory": True},
     frozenset(TAGS["normal.merged.cram.crai"]): {"is_mandatory": True},
     # SNVs (WGS)
@@ -367,7 +377,7 @@ TUMOR_NORMAL_WGS_TAGS = {
 
 
 TUMOR_ONLY_PANEL_TAGS = {
-    # Alignment files
+    # Alignment files (PANEL & WGS)
     frozenset(TAGS["tumor_umi_consensusfiltered.merged.cram"]): {"is_mandatory": True},
     frozenset(TAGS["tumor_umi_consensusfiltered.merged.cram.crai"]): {"is_mandatory": True},
     # SNVs/INDELs (PANEL)
@@ -387,11 +397,13 @@ TUMOR_ONLY_PANEL_TAGS = {
     frozenset(TAGS["tumor.merged-diagram.pdf"]): {"is_mandatory": True},
     frozenset(TAGS["gene_metrics"]): {"is_mandatory": True},
     frozenset(TAGS["cnvkit.vcf2cytosure.cgh"]): {"is_mandatory": True},
+    # CNVs (PANEL & WGS)
+    frozenset(TAGS["dellycnv.cov.gz"]): {"is_mandatory": True},
 }
 
 
 TUMOR_NORMAL_PANEL_TAGS = {
-    # Alignment files
+    # Alignment files (PANEL & WGS)
     frozenset(TAGS["normal.merged.cram"]): {"is_mandatory": True},
     frozenset(TAGS["normal.merged.cram.crai"]): {"is_mandatory": True},
     frozenset(TAGS["tumor_umi_consensusfiltered.merged.cram"]): {"is_mandatory": True},
