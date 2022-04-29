@@ -87,6 +87,7 @@
 | cnvkit           | Tool to call copy number variations                           |
 | ascatngs         | Tool to identify somatically acquired copy-number alterations |
 | delly            | Cancer structural variant prediction tool                     |
+| svdb             | Tool to merge SV vcf files from multiple variant callers      |
 | cyrius           | Tool to call the problematic CYP2D6 gene                      |
 | deseq2           | Differential expression analysis with DESeq2                  |
 | deepvariant      | Variantcaller                                                 |
