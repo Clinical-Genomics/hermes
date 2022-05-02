@@ -296,28 +296,28 @@ BALSAMIC_COMMON_TAGS = {
     },
     # TNscope_umi
     frozenset(TAGS["TNscope_umi.vcf.gz"]): {
-        "tags": ["tnscope-umi", "vcf"],
+        "tags": ["tnscope-umi", "vcf-snv-research"],
         "is_mandatory": False,
         "used_by": ["deliver"],
     },
     frozenset(TAGS["TNscope_umi.vcf.gz.tbi"]): {
-        "tags": ["tnscope-umi", "vcf-index"],
+        "tags": ["tnscope-umi", "vcf-snv-research-index"],
         "is_mandatory": False,
         "used_by": ["deliver"],
     },
     frozenset(TAGS["TNscope_umi.all.filtered.pass.vcf.gz"]): {
-        "tags": ["tnscope-umi", "vcf-snv-research"],
+        "tags": ["tnscope-umi", "vcf-snv-clinical"],
         "is_mandatory": False,
         "used_by": ["deliver", "scout"],
     },
     frozenset(TAGS["TNscope_umi.all.filtered.pass.vcf.gz.tbi"]): {
-        "tags": ["tnscope-umi", "vcf-snv-research-index"],
+        "tags": ["tnscope-umi", "vcf-snv-clinical-index"],
         "is_mandatory": False,
         "used_by": ["deliver", "scout"],
     },
     # CNVs (PANEL)
     frozenset(TAGS["tumor.merged.cns"]): {
-        "tags": ["cnvkit", "segments"],
+        "tags": ["cnvkit", "metrics", "segments"],
         "is_mandatory": False,
         "used_by": ["deliver"],
     },
@@ -332,7 +332,7 @@ BALSAMIC_COMMON_TAGS = {
         "used_by": ["deliver"],
     },
     frozenset(TAGS["gene_metrics"]): {
-        "tags": ["cnvkit", "genes", "metrics"],
+        "tags": ["cnvkit", "metrics", "genes"],
         "is_mandatory": False,
         "used_by": ["deliver"],
     },
