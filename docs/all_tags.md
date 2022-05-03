@@ -151,5 +151,9 @@
 | vcf-sv-clinical-index  | Following index                                     |
 | vcf-sv-research        | SV variants from whole genome                       |
 | vcf-sv-research-index  | Following index                                     |
+| vcf-umi-clinical       | SNV UMI variants from clinical panels               |
+| vcf-umi-clinical-index | Following index                                     |
+| vcf-umi-research       | SNV UMI variant formatted file                      |
+| vcf-umi-research-index | Following index                                     |
 | vcf2cytosure           | Conversion from vcf format to cytosure format       |
 | variants               | File pertaining variant information in some way     |
