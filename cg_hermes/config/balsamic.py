@@ -79,7 +79,7 @@ TAGS = {
     ],
     "vardict.vcf.gz.tbi": [
         "vcf-vardict",
-        "research-vcf-vardict",
+        "research-vcf-vardict-index",
     ],
     "vardict.all.filtered.pass.vcf.gz": [
         "vcf-pass-vardict",
