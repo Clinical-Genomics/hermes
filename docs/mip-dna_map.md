@@ -1,4 +1,4 @@
-| Mip-dna tags                            | Mandatory   | HK tags                     | Used by      |
+| Mip-dna tags                        | Mandatory   | HK tags                     | Used by      |
 |-------------------------------------|-------------|-----------------------------|--------------|
 | chanjo_sexcheck                     | False       | chanjo, sex-check           | scout        |
 | sites, chromograph_upd              | False       | chromograph, upd, sites     | scout        |
@@ -22,7 +22,8 @@
 | peddy_ar, ped_check                 | True        | peddy, ped-check            | audit, scout |
 | peddy, peddy_ar                     | True        | peddy, ped                  | audit, scout |
 | sex_check, peddy_ar                 | True        | peddy, sex-check            | audit, scout |
-| qccollect_ar                        | True        | qc-metrics                  | audit        |
+| qccollect_ar, deliverable           | True        | qc-metrics, deliverable    | audit        |
+| qccollect_ar, audit                 | True        | qc-metrics, audit           | audit        |
 | rhocall_viz                         | False       | rhocall-viz                 | scout        |
 | coverage, sambamba_depth            | True        | coverage, sambamba-depth    | chanjo       |
 | samtools_subsample_mt               | False       | bam-mt                      | scout        |
