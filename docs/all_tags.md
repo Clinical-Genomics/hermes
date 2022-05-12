@@ -63,6 +63,7 @@
 
 | Tag name          | Description                                     |
 |-------------------|-------------------------------------------------|
+| audit             | Audit file                                      |
 | csv               | Comma separated values                          |
 | deliverable       | Deliverables file                               |
 | delivery-report   | Delivery report with result for upload to Scout |

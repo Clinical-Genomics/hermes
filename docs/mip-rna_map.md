@@ -16,7 +16,8 @@
 | merege_fusion_reports, research     | True        | fusion, pdf, research       | scout        |
 | pedigree, mip_analyse               | True        | pedigree-yaml               | audit        |
 | pedigree_fam, mip_analyse           | True        | pedigree                    | scout        |
-| qccollect_ar                        | True        | qc-metrics                  | audit        |
+| qccollect_ar, deliverable           | True        | qc-metrics, deliverable    | audit        |
+| qccollect_ar, audit                 | True        | qc-metrics, audit           | audit        |
 | references_info, mip_analyse        | True        | mip-analyse, reference-info | audit        |
 | salmon_quant                        | True        | salmon-quant                | storage      |
 | sample_info, mip_analyse            | True        | sample-info                 | cg, audit    |

@@ -70,6 +70,7 @@ FAMILY_COMMON = {
 }
 
 REPORTING_COMMON = {
+    "audit": {"description": "Audit file"},
     "csv": {"description": "Comma separated values"},
     "deliverable": {"description": "Deliverables file"},
     "delivery-report": {"description": "Delivery report with result for upload to Scout"},
