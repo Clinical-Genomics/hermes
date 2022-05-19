@@ -1,84 +1,43 @@
-| Balsamic tags                                                      | Mandatory   | HK tags                                                      | Used by               |
-|--------------------------------------------------------------------|-------------|--------------------------------------------------------------|-----------------------|
-| cnv-cns, cns                                                       | True        | cnvkit, segments                                             | deliver               |
-| cnv-cnr, cnr                                                       | True        | cnvkit, regions                                              | deliver               |
-| cnv-scatter, scatter                                               | True        | cnvkit, visualization                                        | deliver               |
-| diagram, cnv-diagram                                               | True        | cnvkit, visualization, diagram                               | deliver               |
-| gene-breaks, cnv-gene-breaks                                       | True        | cnvkit, genes                                                | storage               |
-| cnv-gene-metrics, gene-metrics                                     | True        | cnvkit, genes, metrics                                       | deliver               |
-| ascat, vcf-all, annotated-somatic-vcf-all, cnv                     | True        | ascatngs, vcf, somatic                                       | deliver               |
-| ascat, vcf-all, annotated-somatic-vcf-all-index, cnv               | True        | ascatngs, vcf-index, somatic                                 | deliver               |
-| research-vcf-sv-pass, vcf-sv-pass                                  | True        | ascatngs, vcf, filtered, somatic                             | deliver               |
-| research-vcf-sv-pass-index, vcf-sv-pass                            | True        | ascatngs, vcf-index, filtered, somatic                       | deliver               |
-| ascat-output-pdf, research-ascat-output-pdf                        | True        | ascatngs, visualization                                      | scout, deliver        |
-| delly, annotated-somatic-vcf-all, sv, vcf-all                      | True        | delly, vcf, somatic                                          | deliver               |
-| delly, annotated-somatic-vcf-all-index, sv, vcf-all                | True        | delly, vcf-index, somatic                                    | deliver               |
-| sv, vcf-sv-pass, research-vcf-sv-pass                              | True        | delly, vcf, filtered, somatic                                | deliver               |
-| sv, vcf-sv-pass, research-vcf-sv-pass-index                        | True        | delly, vcf-index, filtered, somatic                          | deliver               |
-| qc-metrics-yaml                                                    | True        | qc-metrics, deliverable                                      | vogue, deliver        |
-| html, multiqc-html                                                 | True        | multiqc-html                                                 | scout, deliver, audit |
-| multiqc-json, json                                                 | True        | multiqc-json                                                 | vogue, audit          |
-| scout-bam, bam                                                     | False       | bam                                                          | scout                 |
-| scout-bam-index, bam                                               | False       | bam-index                                                    | scout                 |
-| tnhaplotyper, snv, annotated-somatic-vcf-all, vcf-all              | True        | vcf, tumor, haplotype-caller                                 | storage               |
-| tnhaplotyper, annotated-somatic-vcf-all-index, snv, vcf-all        | True        | vcf-index, tumor, haplotype-caller                           | storage               |
-| vcf-filtered, snv, research-vcf-filtered                           | True        | vcf-snv-research, filtered, somatic, haplotype-caller        | storage               |
-| vcf-filtered, snv, research-vcf-filtered-index                     | True        | vcf-snv-research-index, filtered, somatic, haplotype-caller  | storage               |
-| snv, research-vcf-pass, vcf-pass                                   | True        | vcf, filtered, somatic, haplotype-caller                     | storage               |
-| snv, research-vcf-pass-index, vcf-pass                             | True        | vcf-index, filtered, somatic, haplotype-caller               | storage               |
-| tnscope, annotated-somatic-vcf-all, snv, vcf-all                   | False       | tumor, scope, vcf-snv-research                               | scout, deliver        |
-| tnscope, annotated-somatic-vcf-all-index, snv, vcf-all             | False       | tumor, scope, vcf-snv-research-index                         | scout, deliver        |
-| annotated-somatic-vcf-all, tnsnv, snv, vcf-all                     | False       | vcf, tumor, genotyper                                        | storage               |
-| annotated-somatic-vcf-all-index, tnsnv, snv, vcf-all               | False       | vcf-index, tumor, genotyper                                  | storage               |
-| annotated-somatic-vcf-all, sv, manta, vcf-all                      | True        | vcf-sv-research, manta, tumor                                | scout, deliver        |
-| annotated-somatic-vcf-all-index, sv, manta, vcf-all                | True        | vcf-sv-research-index, manta, tumor                          | scout, deliver        |
-| cnv, cnvkit, annotated-somatic-vcf-all, vcf-all                    | True        | cnvkit, sv-vcf, tumor                                        | deliver               |
-| annotated-somatic-vcf-all-index, cnv, cnvkit, vcf-all              | True        | cnvkit, sv-vcf-index, tumor                                  | deliver               |
-| tnscope, vcf-summary, annotated-somatic-vcf-summary, snv           | False       | sention, scope, vcf-report                                   | audit                 |
-| tnhaplotyper, annotated-somatic-vcf-summary, snv, vcf-summary      | True        | sention, haplotype-caller, vcf-report                        | audit                 |
-| vcf-summary, annotated-somatic-vcf-summary, manta, sv              | True        | sention, manta, vcf-report                                   | audit                 |
-| vcf-summary, tnsnv, annotated-somatic-vcf-summary, snv             | False       | sention, genotyper, vcf-report                               | audit                 |
-| vcf-summary, cnv, cnvkit, annotated-somatic-vcf-summary            | True        | cnvkit, vcf-report                                           | audit                 |
-| tnhaplotyper, annotated-somatic-vcf-pass, vcf-pass, snv            | True        | vcf, sention, haplotype-caller, filtered                     | storage               |
-| tnhaplotyper, vcf-pass, snv, annotated-somatic-vcf-pass-index      | True        | vcf-index, sention, haplotype-caller, filtered               | storage               |
-| annotated-somatic-vcf-pass, tnsnv, vcf-pass, snv                   | False       | vcf, sention, genotyper, filtered                            | storage               |
-| tnsnv, vcf-pass, snv, annotated-somatic-vcf-pass-index             | False       | vcf-index, sention, genotyper, filtered                      | storage               |
-| cnv, annotated-somatic-vcf-pass, cnvkit, vcf-pass                  | True        | cnvkit, sv-vcf, filtered                                     | storage               |
-| cnv, cnvkit, vcf-pass, annotated-somatic-vcf-pass-index            | True        | cnvkit, sv-vcf-index, filtered                               | storage               |
-| annotated-somatic-vcf-pass, vcf-pass, manta, sv                    | True        | vcf-sv-clinical, manta, filtered                             | scout                 |
-| manta, vcf-pass, annotated-somatic-vcf-pass-index, sv              | True        | vcf-sv-clinical-index, manta, filtered                       | scout                 |
-| tnscope, annotated-somatic-vcf-pass, vcf-pass, snv                 | False       | vcf-snv-clinical, scope, filtered, sention                   | scout, deliver        |
-| tnscope, vcf-pass, snv, annotated-somatic-vcf-pass-index           | False       | vcf-snv-clinical-index, scope, filtered, sention             | scout, deliver        |
-| quality-trimmed-fastq-read1, read1                                 | True        | fastq                                            | deliver               |
-| read2, quality-trimmed-fastq-read2                                 | True        | fastq                                            | deliver               |
-| quality-trimmed-fastq-json, json                                   | True        | fastq, metrics                                   | audit                 |
-| html, quality-trimmed-fastq-html                                   | True        | fastq, visualization                             | audit                 |
-| balsamic-report                                                    | True        | balsamic-report                                  | audit                 |
-| balsamic-config                                                    | True        | balsamic-config                                  | audit                 |
-| balsamic-dag                                                       | True        | balsamic-dag                                     | audit                 |
-| normal-bam, bam                                                    | False       | bam, normal                                      | scout, deliver        |
-| normal-bam-index, bam                                              | False       | bam-index, normal                                | scout, deliver        |
-| normal-cram, cram                                                  | False       | cram, normal                                     | scout, deliver        |
-| normal-cram-index, cram                                            | False       | cram-index                                       | scout, deliver        |
-| vardict, annotated-somatic-vcf-all, snv, vcf-all                   | False       | vcf, vardict                                     | storage               |
-| vardict, annotated-somatic-vcf-all-index, snv, vcf-all             | False       | vcf-index, vardict                               | storage               |
-| vardict, vcf-summary, annotated-somatic-vcf-summary, snv           | False       | vardict, vcf-report                              | audit                 |
-| vardict, annotated-somatic-vcf-pass, vcf-pass, snv                 | False       | vcf-snv-clinical, vardict, filtered              | scout, deliver        |
-| vardict, vcf-pass, snv, annotated-somatic-vcf-pass-index           | False       | vcf-snv-clinical-index, vardict, filtered        | scout, deliver        |
-| annotated-germline-vcf-all, snv, haplotypecaller, vcf-all          | False       | vcf, haplotype-caller, normal                    | storage               |
-| annotated-germline-vcf-all-index, snv, haplotypecaller, vcf-all    | False       | vcf-index, haplotype-caller, normal              | storage               |
-| manta-germline, annotated-germline-vcf-all, sv, vcf-all            | False       | sv-vcf, manta, normal                            | storage               |
-| annotated-germline-vcf-all-index, sv, manta-germline, vcf-all      | False       | sv-vcf-index, manta, normal                      | storage               |
-| dnascope, annotated-germline-vcf-all, snv, vcf-all                 | False       | vcf, scope, normal                               | storage               |
-| annotated-germline-vcf-all-index, dnascope, snv, vcf-all           | False       | vcf-index, scope, normal                         | storage               |
-| vcf-summary, annotated-germline-vcf-summary, snv, haplotypecaller  | False       | haplotype-caller, normal, vcf-report             | audit                 |
-| dnascope, annotated-germline-vcf-summary, snv, vcf-summary         | False       | scope, normal, vcf-report                        | audit                 |
-| manta-germline, annotated-germline-vcf-summary, sv, vcf-summary    | False       | manta, normal, vcf-report                        | audit                 |
-| tumor-bam, bam                                                     | False       | bam, tumor                                       | scout                 |
-| tumor-bam-index, bam                                               | False       | bam-index, tumor                                 | scout                 |
-| tumor-cram, cram                                                   | False       | cram, tumor                                      | scout                 |
-| tumor-cram-index, cram                                             | False       | cram-index, tumor                                | scout                 |
-| clinical-vcf-filtered, vcf-filtered, snv                           | False       | vcf-snv-clinical, filtered                       | scout, deliver        |
-| clinical-vcf-filtered-index, vcf-filtered, snv                     | False       | vcf-snv-clinical-index, filtered                 | scout, deliver        |
-| clinical-vcf-pass, vcf-pass, snv                                   | False       | vcf, filtered                                    | storage               |
-| vcf-pass, snv, clinical-vcf-pass-index                             | False       | vcf-index, filtered                              | storage               |
+| Balsamic tags                                                  | Mandatory   | HK tags                             | Used by               |
+|----------------------------------------------------------------|-------------|-------------------------------------|-----------------------|
+| balsamic-config                                                | True        | balsamic-config                     | audit, cg             |
+| balsamic-report                                                | True        | balsamic-report                     | audit                 |
+| balsamic-dag                                                   | True        | balsamic-dag                        | audit                 |
+| yaml, qc-metrics-yaml                                          | True        | qc-metrics                          | audit, cg, vogue      |
+| html, multiqc-html                                             | True        | multiqc-html                        | audit, deliver, scout |
+| json, multiqc-json                                             | True        | multiqc-json                        | audit                 |
+| cram, tumor-cram                                               | True        | tumor, cram                         | deliver, scout        |
+| cram, tumor-cram-index                                         | True        | tumor, cram-index                   | deliver, scout        |
+| cram, normal-cram                                              | False       | normal, cram                        | deliver, scout        |
+| normal-cram-index, cram                                        | False       | normal, cram-index                  | deliver, scout        |
+| cram, umi-tumor-cram                                           | False       | umi-cram, tumor                     | deliver, scout        |
+| cram, umi-tumor-cram-index                                     | False       | umi-cram-index, tumor               | deliver, scout        |
+| umi-normal-cram, cram                                          | False       | umi-cram, normal                    | deliver, scout        |
+| cram, umi-normal-cram-index                                    | False       | umi-cram-index, normal              | deliver, scout        |
+| vcf-svdb, research-vcf-svdb                                    | True        | svdb, vcf-sv-research               | deliver               |
+| vcf-svdb, research-vcf-svdb-index                              | True        | svdb, vcf-sv-research-index         | deliver               |
+| clinical-vcf-pass-svdb, vcf-pass-svdb                          | True        | svdb, vcf-sv-clinical               | deliver, scout        |
+| clinical-vcf-pass-svdb-index, vcf-pass-svdb                    | True        | svdb, vcf-sv-clinical-index         | deliver, scout        |
+| snv, vcf-all, dnascope, annotated-germline-vcf-all             | True        | dnascope, germline, vcf             | deliver               |
+| snv, vcf-all, dnascope, annotated-germline-vcf-all-index       | True        | dnascope, germline, vcf-index       | deliver               |
+| sv, vcf-all, manta-germline, annotated-germline-vcf-all        | True        | manta, germline, vcf                | deliver               |
+| sv, vcf-all, manta-germline, annotated-germline-vcf-all-index  | True        | manta, germline, vcf-index          | deliver               |
+| research-vcf-tnscope, vcf-tnscope                              | False       | tnscope, vcf-snv-research           | deliver               |
+| vcf-tnscope, research-vcf-tnscope-index                        | False       | tnscope, vcf-snv-research-index     | deliver               |
+| clinical-vcf-pass-tnscope, snv, vcf-pass-tnscope               | False       | tnscope, vcf-snv-clinical           | deliver, scout        |
+| clinical-vcf-pass-tnscope-index, snv, vcf-pass-tnscope         | False       | tnscope, vcf-snv-clinical-index     | deliver, scout        |
+| ascat-pdf, clinical-ascat-pdf                                  | False       | ascatngs, visualization             | deliver, scout        |
+| clinical-ascat-copynumber, ascat-copynumber                    | False       | ascatngs, metrics                   | deliver               |
+| vcf-vardict, research-vcf-vardict                              | False       | vardict, vcf-snv-research-index     | deliver               |
+| snv, vcf-pass-vardict, clinical-vcf-pass-vardict               | False       | vardict, vcf-snv-clinical           | deliver, scout        |
+| snv, vcf-pass-vardict, clinical-vcf-pass-vardict-index         | False       | vardict, vcf-snv-clinical-index     | deliver, scout        |
+| vcf-tnscope-umi, research-vcf-tnscope-umi                      | False       | tnscope-umi, vcf-umi-research       | deliver               |
+| research-vcf-tnscope-umi-index, vcf-tnscope-umi                | False       | tnscope-umi, vcf-umi-research-index | deliver               |
+| snv, vcf-pass-tnscope-umi, research-vcf-pass-tnscope-umi       | False       | tnscope-umi, vcf-umi-clinical       | deliver, scout        |
+| snv, vcf-pass-tnscope-umi, research-vcf-pass-tnscope-umi-index | False       | tnscope-umi, vcf-umi-clinical-index | deliver, scout        |
+| cns, cnv-cns                                                   | False       | cnvkit, metrics, segments           | deliver               |
+| scatter, cnv-scatter                                           | False       | cnvkit, visualization, scatter      | deliver               |
+| diagram, cnv-diagram                                           | False       | cnvkit, visualization, diagram      | deliver               |
+| cnv-gene-metrics, gene-metrics                                 | False       | cnvkit, metrics, genes              | deliver               |
+| cgh-file, cnv-somatic-cgh-file                                 | False       | cnvkit, vcf2cytosure                | deliver, scout        |
+| clinical-rd-delly, rd-delly                                    | False       | delly, metrics                      | deliver               |

@@ -56,6 +56,10 @@ VARIANT_COMMON = {
     "vcf-sv-clinical-index": {"description": "Following index"},
     "vcf-sv-research": {"description": "SV variants from whole genome"},
     "vcf-sv-research-index": {"description": "Following index"},
+    "vcf-umi-clinical": {"description": "SNV UMI variants from clinical panels"},
+    "vcf-umi-clinical-index": {"description": "Following index"},
+    "vcf-umi-research": {"description": "SNV UMI variant formatted file"},
+    "vcf-umi-research-index": {"description": "Following index"},
     "vcf2cytosure": {"description": "Conversion from vcf format to cytosure format"},
     "variants": {"description": "File pertaining variant information in some way"},
 }
@@ -97,6 +101,7 @@ ANALYSIS_COMMON = {
     "config": {"description": "Config file"},
     "coverage": {"description": "Output with coverage information"},
     "diagram": {"description": "Data diagram"},
+    "scatter": {"description": "Scatter plot"},
     "filtered": {"description": "Filtered data"},
     "fracsnp": {"description": "Fraction of reads with snp"},
     "fusion": {"description": "Fusion transcripts"},
@@ -115,7 +120,7 @@ ANALYSIS_COMMON = {
     "visualization": {"description": "Visualizes data"},
     "umi": {"description": "Files related to UMI workflow"},
     "umi-cram": {"description": "UMI consensus filtered cram file"},
-    "umi-cram-index": {"description": "Index for the UMI consensus filtered cram file"}
+    "umi-cram-index": {"description": "Index for the UMI consensus filtered cram file"},
 }
 
 TOOLS = {
@@ -126,6 +131,7 @@ TOOLS = {
     "cnvkit": {"description": "Tool to call copy number variations"},
     "ascatngs": {"description": "Tool to identify somatically acquired copy-number alterations"},
     "delly": {"description": "Cancer structural variant prediction tool"},
+    "svdb": {"description": "Tool to merge SV vcf files from multiple variant callers"},
     "cyrius": {"description": "Tool to call the problematic CYP2D6 gene"},
     "deseq2": {"description": "Differential expression analysis with DESeq2"},
     "deepvariant": {"description": "Variantcaller"},

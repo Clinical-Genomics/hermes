@@ -1,735 +1,525 @@
 {
     "files": [
         {
-            "path": "TN_WGS/analysis/qc/multiqc_report.html",
+            "path": "TN-wgs/analysis/vep/SV.somatic.TN-wgs.svdb.all.filtered.pass.vcf.gz",
+            "path_index": [
+                "TN-wgs/analysis/vep/SV.somatic.TN-wgs.svdb.all.filtered.pass.vcf.gz.tbi"
+            ],
+            "step": "bcftools_filter_svdb",
+            "tag": [
+                "clinical-vcf-pass-svdb",
+                "vcf-pass-svdb",
+                "TN-wgs"
+            ],
+            "id": "TN-wgs",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "TN-wgs/analysis/vep/SV.somatic.TN-wgs.svdb.all.filtered.pass.vcf.gz.tbi",
+            "path_index": "",
+            "step": "bcftools_filter_svdb",
+            "tag": [
+                "vcf-pass-svdb",
+                "clinical-vcf-pass-svdb-index",
+                "TN-wgs"
+            ],
+            "id": "TN-wgs",
+            "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "TN-wgs/analysis/vep/SV.somatic.TN-wgs.svdb.all.filtered.pass.stats",
+            "path_index": [],
+            "step": "bcftools_filter_svdb",
+            "tag": [
+                "TN-wgs",
+                "clinical-bcftools-counts",
+                "bcftools-counts"
+            ],
+            "id": "TN-wgs",
+            "format": "stats"
+        },
+        {
+            "path": "TN-wgs/analysis/vep/SNV.somatic.TN-wgs.tnscope.all.filtered.vcf.gz",
+            "path_index": [
+                "TN-wgs/analysis/vep/SNV.somatic.TN-wgs.tnscope.all.filtered.vcf.gz.tbi"
+            ],
+            "step": "bcftools_filter_tnscope_tumor_normal",
+            "tag": [
+                "clinical-vcf-filtered",
+                "SNV",
+                "TN-wgs",
+                "vcf-filtered"
+            ],
+            "id": "TN-wgs",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "TN-wgs/analysis/vep/SNV.somatic.TN-wgs.tnscope.all.filtered.vcf.gz.tbi",
+            "path_index": "",
+            "step": "bcftools_filter_tnscope_tumor_normal",
+            "tag": [
+                "clinical-vcf-filtered-index",
+                "SNV",
+                "TN-wgs",
+                "vcf-filtered"
+            ],
+            "id": "TN-wgs",
+            "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "TN-wgs/analysis/vep/SNV.somatic.TN-wgs.tnscope.all.filtered.pass.vcf.gz",
+            "path_index": [
+                "TN-wgs/analysis/vep/SNV.somatic.TN-wgs.tnscope.all.filtered.pass.vcf.gz.tbi"
+            ],
+            "step": "bcftools_filter_tnscope_tumor_normal",
+            "tag": [
+                "vcf-pass-tnscope",
+                "clinical-vcf-pass-tnscope",
+                "SNV",
+                "TN-wgs"
+            ],
+            "id": "TN-wgs",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "TN-wgs/analysis/vep/SNV.somatic.TN-wgs.tnscope.all.filtered.pass.vcf.gz.tbi",
+            "path_index": "",
+            "step": "bcftools_filter_tnscope_tumor_normal",
+            "tag": [
+                "vcf-pass-tnscope",
+                "SNV",
+                "TN-wgs",
+                "clinical-vcf-pass-tnscope-index"
+            ],
+            "id": "TN-wgs",
+            "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "TN-wgs/analysis/vep/SNV.somatic.TN-wgs.tnscope.all.filtered.pass.stats",
+            "path_index": [],
+            "step": "bcftools_filter_tnscope_tumor_normal",
+            "tag": [
+                "SNV",
+                "TN-wgs",
+                "clinical-bcftools-counts",
+                "bcftools-counts"
+            ],
+            "id": "TN-wgs",
+            "format": "stats"
+        },
+        {
+            "path": "TN-wgs/analysis/qc/TN-wgs_metrics_deliverables.yaml",
+            "path_index": [],
+            "step": "collect_custom_qc_metrics",
+            "tag": [
+                "yaml",
+                "qc-metrics-yaml"
+            ],
+            "id": "TN-wgs",
+            "format": "yaml"
+        },
+        {
+            "path": "TN-wgs/analysis/bam/tumor.merged.bam",
+            "path_index": [
+                "TN-wgs/analysis/bam/tumor.merged.bam.bai"
+            ],
+            "step": "mergeBam_tumor",
+            "tag": [
+                "tumor-bam",
+                "bam",
+                "ACC0000A0"
+            ],
+            "id": "ACC0000A0",
+            "format": "bam"
+        },
+        {
+            "path": "TN-wgs/analysis/bam/tumor.merged.bam.bai",
+            "path_index": "",
+            "step": "mergeBam_tumor",
+            "tag": [
+                "tumor-bam-index",
+                "bam",
+                "ACC0000A0"
+            ],
+            "id": "ACC0000A0",
+            "format": "bai"
+        },
+        {
+            "path": "TN-wgs/analysis/bam/tumor.merged.cram",
+            "path_index": [
+                "TN-wgs/analysis/bam/tumor.merged.cram.crai"
+            ],
+            "step": "mergeBam_tumor",
+            "tag": [
+                "cram",
+                "tumor-cram",
+                "ACC0000A0"
+            ],
+            "id": "ACC0000A0",
+            "format": "cram"
+        },
+        {
+            "path": "TN-wgs/analysis/bam/tumor.merged.cram.crai",
+            "path_index": "",
+            "step": "mergeBam_tumor",
+            "tag": [
+                "cram",
+                "ACC0000A0",
+                "tumor-cram-index"
+            ],
+            "id": "ACC0000A0",
+            "format": "crai"
+        },
+        {
+            "path": "TN-wgs/analysis/vcf/sentieon_tnscope/ALL.somatic.TN-wgs.tnscope.vcf.gz",
+            "path_index": [
+                "TN-wgs/analysis/vcf/sentieon_tnscope/ALL.somatic.TN-wgs.tnscope.vcf.gz.tbi"
+            ],
+            "step": "sentieon_TNscope",
+            "tag": [
+                "vcf-tnscope",
+                "research-vcf-tnscope"
+            ],
+            "id": "TN-wgs",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "TN-wgs/analysis/vcf/sentieon_tnscope/ALL.somatic.TN-wgs.tnscope.vcf.gz.tbi",
+            "path_index": "",
+            "step": "sentieon_TNscope",
+            "tag": [
+                "research-vcf-tnscope-index",
+                "vcf-tnscope"
+            ],
+            "id": "TN-wgs",
+            "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "TN-wgs/analysis/vcf/SNV.somatic.TN-wgs.tnscope.sample_name_map",
+            "path_index": [],
+            "step": "sentieon_TNscope",
+            "tag": [
+                "research-namemap-snv",
+                "namemap-snv"
+            ],
+            "id": "TN-wgs",
+            "format": "sample_name_map"
+        },
+        {
+            "path": "TN-wgs/analysis/vcf/SV.somatic.TN-wgs.tnscope.sample_name_map",
+            "path_index": [],
+            "step": "sentieon_TNscope",
+            "tag": [
+                "research-namemap-sv",
+                "namemap-sv"
+            ],
+            "id": "TN-wgs",
+            "format": "sample_name_map"
+        },
+        {
+            "path": "TN-wgs/analysis/vcf/CNV.somatic.TN-wgs.ascat.vcf.gz",
+            "path_index": [
+                "TN-wgs/analysis/vcf/CNV.somatic.TN-wgs.ascat.vcf.gz.tbi"
+            ],
+            "step": "ascat_tumor_normal",
+            "tag": [
+                "clinical-final-vcf",
+                "final-vcf"
+            ],
+            "id": "TN-wgs",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "TN-wgs/analysis/vcf/CNV.somatic.TN-wgs.ascat.vcf.gz.tbi",
+            "path_index": "",
+            "step": "ascat_tumor_normal",
+            "tag": [
+                "clinical-final-vcf-index",
+                "final-vcf"
+            ],
+            "id": "TN-wgs",
+            "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "TN-wgs/analysis/vcf/CNV.somatic.TN-wgs.ascat.copynumber.txt.gz",
+            "path_index": [],
+            "step": "ascat_tumor_normal",
+            "tag": [
+                "ascat-copynumber",
+                "clinical-ascat-copynumber"
+            ],
+            "id": "TN-wgs",
+            "format": "gz"
+        },
+        {
+            "path": "TN-wgs/analysis/vcf/CNV.somatic.TN-wgs.ascat.sample_name_map",
+            "path_index": [],
+            "step": "ascat_tumor_normal",
+            "tag": [
+                "namemap",
+                "clinical-namemap"
+            ],
+            "id": "TN-wgs",
+            "format": "sample_name_map"
+        },
+        {
+            "path": "TN-wgs/analysis/vep/SV.germline.normal.manta_germline.vcf.gz",
+            "path_index": [
+                "TN-wgs/analysis/vep/SV.germline.normal.manta_germline.vcf.gz.tbi"
+            ],
+            "step": "vep_germline",
+            "tag": [
+                "annotated-germline-vcf-all",
+                "vcf-all",
+                "SV",
+                "manta-germline"
+            ],
+            "id": "TN-wgs",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "TN-wgs/analysis/vep/SV.germline.normal.manta_germline.vcf.gz.tbi",
+            "path_index": "",
+            "step": "vep_germline",
+            "tag": [
+                "annotated-germline-vcf-all-index",
+                "vcf-all",
+                "SV",
+                "manta-germline"
+            ],
+            "id": "TN-wgs",
+            "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "TN-wgs/analysis/vep/SV.germline.tumor.manta_germline.vcf.gz",
+            "path_index": [
+                "TN-wgs/analysis/vep/SV.germline.tumor.manta_germline.vcf.gz.tbi"
+            ],
+            "step": "vep_germline",
+            "tag": [
+                "annotated-germline-vcf-all",
+                "vcf-all",
+                "SV",
+                "manta-germline"
+            ],
+            "id": "TN-wgs",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "TN-wgs/analysis/vep/SV.germline.tumor.manta_germline.vcf.gz.tbi",
+            "path_index": "",
+            "step": "vep_germline",
+            "tag": [
+                "annotated-germline-vcf-all-index",
+                "vcf-all",
+                "SV",
+                "manta-germline"
+            ],
+            "id": "TN-wgs",
+            "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "TN-wgs/analysis/vep/SNV.germline.normal.dnascope.vcf.gz",
+            "path_index": [
+                "TN-wgs/analysis/vep/SNV.germline.normal.dnascope.vcf.gz.tbi"
+            ],
+            "step": "vep_germline",
+            "tag": [
+                "dnascope",
+                "annotated-germline-vcf-all",
+                "SNV",
+                "vcf-all"
+            ],
+            "id": "TN-wgs",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "TN-wgs/analysis/vep/SNV.germline.normal.dnascope.vcf.gz.tbi",
+            "path_index": "",
+            "step": "vep_germline",
+            "tag": [
+                "dnascope",
+                "annotated-germline-vcf-all-index",
+                "SNV",
+                "vcf-all"
+            ],
+            "id": "TN-wgs",
+            "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "TN-wgs/analysis/vep/SNV.germline.tumor.dnascope.vcf.gz",
+            "path_index": [
+                "TN-wgs/analysis/vep/SNV.germline.tumor.dnascope.vcf.gz.tbi"
+            ],
+            "step": "vep_germline",
+            "tag": [
+                "dnascope",
+                "annotated-germline-vcf-all",
+                "SNV",
+                "vcf-all"
+            ],
+            "id": "TN-wgs",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "TN-wgs/analysis/vep/SNV.germline.tumor.dnascope.vcf.gz.tbi",
+            "path_index": "",
+            "step": "vep_germline",
+            "tag": [
+                "dnascope",
+                "annotated-germline-vcf-all-index",
+                "SNV",
+                "vcf-all"
+            ],
+            "id": "TN-wgs",
+            "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "TN-wgs/analysis/vcf/SV.somatic.TN-wgs.svdb.vcf.gz",
+            "path_index": [
+                "TN-wgs/analysis/vcf/SV.somatic.TN-wgs.svdb.vcf.gz.tbi"
+            ],
+            "step": "svdb_merge_tumor_normal",
+            "tag": [
+                "vcf-svdb",
+                "research-vcf-svdb"
+            ],
+            "id": "TN-wgs",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "TN-wgs/analysis/vcf/SV.somatic.TN-wgs.svdb.vcf.gz.tbi",
+            "path_index": "",
+            "step": "svdb_merge_tumor_normal",
+            "tag": [
+                "research-vcf-svdb-index",
+                "vcf-svdb"
+            ],
+            "id": "TN-wgs",
+            "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "TN-wgs/analysis/vcf/SV.somatic.TN-wgs.svdb.sample_name_map",
+            "path_index": [],
+            "step": "svdb_merge_tumor_normal",
+            "tag": [
+                "namemap",
+                "research-namemap"
+            ],
+            "id": "TN-wgs",
+            "format": "sample_name_map"
+        },
+        {
+            "path": "TN-wgs/analysis/qc/multiqc_report.html",
             "path_index": [],
             "step": "multiqc",
             "tag": [
-                "multiqc-html",
-                "html"
+                "html",
+                "multiqc-html"
             ],
-            "id": "TN_WGS",
+            "id": "TN-wgs",
             "format": "html"
         },
         {
-            "path": "TN_WGS/analysis/qc/multiqc_data/multiqc_data.json",
+            "path": "TN-wgs/analysis/qc/multiqc_data/multiqc_data.json",
             "path_index": [],
             "step": "multiqc",
             "tag": [
                 "multiqc-json",
                 "json"
             ],
-            "id": "TN_WGS",
+            "id": "TN-wgs",
             "format": "json"
         },
         {
-            "path": "TN_WGS/analysis/fastq/ACC123_R_1.fp.fastq.gz",
-            "path_index": [],
-            "step": "fastp",
-            "tag": [
-                "ACC123",
-                "read1",
-                "quality-trimmed-fastq-read1"
-            ],
-            "id": "ACC123",
-            "format": "fastq.gz"
-        },
-        {
-            "path": "TN_WGS/analysis/fastq/ACC456_R_1.fp.fastq.gz",
-            "path_index": [],
-            "step": "fastp",
-            "tag": [
-                "read1",
-                "quality-trimmed-fastq-read1",
-                "ACC456"
-            ],
-            "id": "ACC456",
-            "format": "fastq.gz"
-        },
-        {
-            "path": "TN_WGS/analysis/fastq/ACC456_R_2.fp.fastq.gz",
-            "path_index": [],
-            "step": "fastp",
-            "tag": [
-                "read2",
-                "quality-trimmed-fastq-read2",
-                "ACC456"
-            ],
-            "id": "ACC456",
-            "format": "fastq.gz"
-        },
-        {
-            "path": "TN_WGS/analysis/fastq/ACC123_R_2.fp.fastq.gz",
-            "path_index": [],
-            "step": "fastp",
-            "tag": [
-                "ACC123",
-                "read2",
-                "quality-trimmed-fastq-read2"
-            ],
-            "id": "ACC123",
-            "format": "fastq.gz"
-        },
-        {
-            "path": "TN_WGS/analysis/qc/fastp/ACC123_R_fastp.json",
-            "path_index": [],
-            "step": "fastp",
-            "tag": [
-                "ACC123",
-                "json",
-                "quality-trimmed-fastq-json"
-            ],
-            "id": "ACC123",
-            "format": "json"
-        },
-        {
-            "path": "TN_WGS/analysis/qc/fastp/ACC456_R_fastp.json",
-            "path_index": [],
-            "step": "fastp",
-            "tag": [
-                "quality-trimmed-fastq-json",
-                "json",
-                "ACC456"
-            ],
-            "id": "ACC456",
-            "format": "json"
-        },
-        {
-            "path": "TN_WGS/analysis/qc/fastp/ACC123_R_fastp.html",
-            "path_index": [],
-            "step": "fastp",
-            "tag": [
-                "ACC123",
-                "quality-trimmed-fastq-html",
-                "html"
-            ],
-            "id": "ACC123",
-            "format": "html"
-        },
-        {
-            "path": "TN_WGS/analysis/qc/fastp/ACC456_R_fastp.html",
-            "path_index": [],
-            "step": "fastp",
-            "tag": [
-                "quality-trimmed-fastq-html",
-                "ACC456",
-                "html"
-            ],
-            "id": "ACC456",
-            "format": "html"
-        },
-        {
-            "path": "TN_WGS/analysis/vep/SNV.somatic.TN_WGS.tnscope.filtered.vcf.gz",
+            "path": "TN-wgs/analysis/bam/normal.merged.bam",
             "path_index": [
-                "TN_WGS/analysis/vep/SNV.somatic.TN_WGS.tnscope.filtered.vcf.gz.tbi"
-            ],
-            "step": "ngs_filter_tnscope",
-            "tag": [
-                "vcf-filtered",
-                "SNV",
-                "clinical-vcf-filtered",
-                "TN-WGS"
-            ],
-            "id": "TN_WGS",
-            "format": "vcf.gz"
-        },
-        {
-            "path": "TN_WGS/analysis/vep/SNV.somatic.TN_WGS.tnscope.filtered.vcf.gz.tbi",
-            "path_index": "",
-            "step": "ngs_filter_tnscope",
-            "tag": [
-                "clinical-vcf-filtered-index",
-                "vcf-filtered",
-                "SNV",
-                "TN-WGS"
-            ],
-            "id": "TN_WGS",
-            "format": "vcf.gz.tbi"
-        },
-        {
-            "path": "TN_WGS/analysis/vep/SNV.somatic.TN_WGS.tnscope.all.filtered.pass.vcf.gz",
-            "path_index": [
-                "TN_WGS/analysis/vep/SNV.somatic.TN_WGS.tnscope.all.filtered.pass.vcf.gz.tbi"
-            ],
-            "step": "bcftools_intersect_tumor_only",
-            "tag": [
-                "SNV",
-                "clinical-vcf-pass",
-                "vcf-pass",
-                "TN-WGS"
-            ],
-            "id": "TN_WGS",
-            "format": "vcf.gz"
-        },
-        {
-            "path": "TN_WGS/analysis/vep/SNV.somatic.TN_WGS.tnscope.all.filtered.pass.vcf.gz.tbi",
-            "path_index": "",
-            "step": "bcftools_intersect_tumor_only",
-            "tag": [
-                "SNV",
-                "vcf-pass",
-                "clinical-vcf-pass-index",
-                "TN-WGS"
-            ],
-            "id": "TN_WGS",
-            "format": "vcf.gz.tbi"
-        },
-        {
-            "path": "TN_WGS/analysis/bam/normal.merged.bam",
-            "path_index": [
-                "TN_WGS/analysis/bam/normal.merged.bam.bai"
+                "TN-wgs/analysis/bam/normal.merged.bam.bai"
             ],
             "step": "mergeBam_normal",
             "tag": [
-                "normal-bam",
-                "ACC456",
-                "bam"
+                "ACC0000A1",
+                "bam",
+                "normal-bam"
             ],
-            "id": "ACC456",
+            "id": "ACC0000A1",
             "format": "bam"
         },
         {
-            "path": "TN_WGS/analysis/bam/normal.merged.bam.bai",
+            "path": "TN-wgs/analysis/bam/normal.merged.bam.bai",
             "path_index": "",
             "step": "mergeBam_normal",
             "tag": [
-                "ACC456",
+                "ACC0000A1",
                 "normal-bam-index",
                 "bam"
             ],
-            "id": "ACC456",
+            "id": "ACC0000A1",
             "format": "bai"
         },
         {
-            "path": "TN_WGS/analysis/bam/normal.merged.cram",
+            "path": "TN-wgs/analysis/bam/normal.merged.cram",
             "path_index": [
-                "TN_WGS/analysis/bam/normal.merged.cram.crai"
+                "TN-wgs/analysis/bam/normal.merged.cram.crai"
             ],
             "step": "mergeBam_normal",
             "tag": [
                 "cram",
-                "normal-cram",
-                "ACC456"
+                "ACC0000A1",
+                "normal-cram"
             ],
-            "id": "ACC456",
+            "id": "ACC0000A1",
             "format": "cram"
         },
         {
-            "path": "TN_WGS/analysis/bam/normal.merged.cram.crai",
+            "path": "TN-wgs/analysis/bam/normal.merged.cram.crai",
             "path_index": "",
             "step": "mergeBam_normal",
             "tag": [
-                "normal-cram-index",
                 "cram",
-                "ACC456"
+                "ACC0000A1",
+                "normal-cram-index"
             ],
-            "id": "ACC456",
+            "id": "ACC0000A1",
             "format": "crai"
         },
         {
-            "path": "TN_WGS/analysis/vep/SNV.germline.normal.dnascope.vcf.gz",
-            "path_index": [
-                "TN_WGS/analysis/vep/SNV.germline.normal.dnascope.vcf.gz.tbi"
-            ],
-            "step": "vep_germline",
-            "tag": [
-                "SNV",
-                "dnascope",
-                "annotated-germline-vcf-all",
-                "vcf-all"
-            ],
-            "id": "ACC456",
-            "format": "vcf.gz"
-        },
-        {
-            "path": "TN_WGS/analysis/vep/SNV.germline.normal.dnascope.vcf.gz.tbi",
-            "path_index": "",
-            "step": "vep_germline",
-            "tag": [
-                "SNV",
-                "annotated-germline-vcf-all-index",
-                "dnascope",
-                "vcf-all"
-            ],
-            "id": "ACC456",
-            "format": "vcf.gz.tbi"
-        },
-        {
-            "path": "TN_WGS/analysis/vep/SNV.germline.tumor.dnascope.vcf.gz",
-            "path_index": [
-                "TN_WGS/analysis/vep/SNV.germline.tumor.dnascope.vcf.gz.tbi"
-            ],
-            "step": "vep_germline",
-            "tag": [
-                "SNV",
-                "dnascope",
-                "annotated-germline-vcf-all",
-                "vcf-all"
-            ],
-            "id": "ACC123",
-            "format": "vcf.gz"
-        },
-        {
-            "path": "TN_WGS/analysis/vep/SNV.germline.tumor.dnascope.vcf.gz.tbi",
-            "path_index": "",
-            "step": "vep_germline",
-            "tag": [
-                "SNV",
-                "annotated-germline-vcf-all-index",
-                "dnascope",
-                "vcf-all"
-            ],
-            "id": "ACC123",
-            "format": "vcf.gz.tbi"
-        },
-        {
-            "path": "TN_WGS/analysis/vep/SNV.germline.tumor.dnascope.vcf.gz_summary.html",
-            "path_index": [],
-            "step": "vep_germline",
-            "tag": [
-                "annotated-germline-vcf-summary",
-                "SNV",
-                "dnascope",
-                "vcf-summary"
-            ],
-            "id": "ACC123",
-            "format": "html"
-        },
-        {
-            "path": "TN_WGS/analysis/vep/SNV.germline.normal.dnascope.vcf.gz_summary.html",
-            "path_index": [],
-            "step": "vep_germline",
-            "tag": [
-                "annotated-germline-vcf-summary",
-                "SNV",
-                "dnascope",
-                "vcf-summary"
-            ],
-            "id": "ACC456",
-            "format": "html"
-        },
-        {
-            "path": "TN_WGS/analysis/vep/SV.somatic.TN_WGS.manta.all.filtered.pass.vcf.gz",
-            "path_index": [
-                "TN_WGS/analysis/vep/SV.somatic.TN_WGS.manta.all.filtered.pass.vcf.gz.tbi"
-            ],
-            "step": "bcftools_filter_manta",
-            "tag": [
-                "clinical-vcf-sv-pass",
-                "vcf-sv-pass",
-                "TN-WGS"
-            ],
-            "id": "TN_WGS",
-            "format": "vcf.gz"
-        },
-        {
-            "path": "TN_WGS/analysis/vep/SV.somatic.TN_WGS.manta.all.filtered.pass.vcf.gz.tbi",
-            "path_index": "",
-            "step": "bcftools_filter_manta",
-            "tag": [
-                "clinical-vcf-sv-pass-index",
-                "vcf-sv-pass",
-                "TN-WGS"
-            ],
-            "id": "TN_WGS",
-            "format": "vcf.gz.tbi"
-        },
-        {
-            "path": "TN_WGS/analysis/vep/SNV.somatic.TN_WGS.tnscope.all.vcf.gz",
-            "path_index": [
-                "TN_WGS/analysis/vep/SNV.somatic.TN_WGS.tnscope.all.vcf.gz.tbi"
-            ],
-            "step": "vep_somatic",
-            "tag": [
-                "TN-WGS",
-                "annotated-somatic-vcf-all",
-                "SNV",
-                "tnscope",
-                "vcf-all"
-            ],
-            "id": "TN_WGS",
-            "format": "vcf.gz"
-        },
-        {
-            "path": "TN_WGS/analysis/vep/SNV.somatic.TN_WGS.tnscope.all.vcf.gz.tbi",
-            "path_index": "",
-            "step": "vep_somatic",
-            "tag": [
-                "annotated-somatic-vcf-all-index",
-                "TN-WGS",
-                "SNV",
-                "tnscope",
-                "vcf-all"
-            ],
-            "id": "TN_WGS",
-            "format": "vcf.gz.tbi"
-        },
-        {
-            "path": "TN_WGS/analysis/vep/SNV.somatic.TN_WGS.tnhaplotyper.all.vcf.gz",
-            "path_index": [
-                "TN_WGS/analysis/vep/SNV.somatic.TN_WGS.tnhaplotyper.all.vcf.gz.tbi"
-            ],
-            "step": "vep_somatic",
-            "tag": [
-                "TN-WGS",
-                "annotated-somatic-vcf-all",
-                "tnhaplotyper",
-                "SNV",
-                "vcf-all"
-            ],
-            "id": "TN_WGS",
-            "format": "vcf.gz"
-        },
-        {
-            "path": "TN_WGS/analysis/vep/SNV.somatic.TN_WGS.tnhaplotyper.all.vcf.gz.tbi",
-            "path_index": "",
-            "step": "vep_somatic",
-            "tag": [
-                "annotated-somatic-vcf-all-index",
-                "TN-WGS",
-                "tnhaplotyper",
-                "SNV",
-                "vcf-all"
-            ],
-            "id": "TN_WGS",
-            "format": "vcf.gz.tbi"
-        },
-        {
-            "path": "TN_WGS/analysis/vep/SNV.somatic.TN_WGS.tnhaplotyper.all.filtered.vcf.gz",
-            "path_index": [
-                "TN_WGS/analysis/vep/SNV.somatic.TN_WGS.tnhaplotyper.all.filtered.vcf.gz.tbi"
-            ],
-            "step": "bcftools_filter_tnhaplotyper_tumor_normal",
-            "tag": [
-                "vcf-filtered",
-                "TN-WGS",
-                "SNV",
-                "research-vcf-filtered"
-            ],
-            "id": "TN_WGS",
-            "format": "vcf.gz"
-        },
-        {
-            "path": "TN_WGS/analysis/vep/SNV.somatic.TN_WGS.tnhaplotyper.all.filtered.vcf.gz.tbi",
-            "path_index": "",
-            "step": "bcftools_filter_tnhaplotyper_tumor_normal",
-            "tag": [
-                "vcf-filtered",
-                "TN-WGS",
-                "SNV",
-                "research-vcf-filtered-index"
-            ],
-            "id": "TN_WGS",
-            "format": "vcf.gz.tbi"
-        },
-        {
-            "path": "TN_WGS/analysis/vep/SNV.somatic.TN_WGS.tnhaplotyper.all.filtered.pass.vcf.gz",
-            "path_index": [
-                "TN_WGS/analysis/vep/SNV.somatic.TN_WGS.tnhaplotyper.all.filtered.pass.vcf.gz.tbi"
-            ],
-            "step": "bcftools_filter_tnhaplotyper_tumor_normal",
-            "tag": [
-                "TN-WGS",
-                "SNV",
-                "research-vcf-pass",
-                "vcf-pass"
-            ],
-            "id": "TN_WGS",
-            "format": "vcf.gz"
-        },
-        {
-            "path": "TN_WGS/analysis/vep/SNV.somatic.TN_WGS.tnhaplotyper.all.filtered.pass.vcf.gz.tbi",
-            "path_index": "",
-            "step": "bcftools_filter_tnhaplotyper_tumor_normal",
-            "tag": [
-                "TN-WGS",
-                "SNV",
-                "research-vcf-pass-index",
-                "vcf-pass"
-            ],
-            "id": "TN_WGS",
-            "format": "vcf.gz.tbi"
-        },
-        {
-            "path": "TN_WGS/analysis/vep/SV.somatic.TN_WGS.manta.all.vcf.gz",
-            "path_index": [
-                "TN_WGS/analysis/vep/SV.somatic.TN_WGS.manta.all.vcf.gz.tbi"
-            ],
-            "step": "vep_somatic",
-            "tag": [
-                "manta",
-                "SV",
-                "TN-WGS",
-                "annotated-somatic-vcf-all",
-                "vcf-all"
-            ],
-            "id": "TN_WGS",
-            "format": "vcf.gz"
-        },
-        {
-            "path": "TN_WGS/analysis/vep/SV.somatic.TN_WGS.manta.all.vcf.gz.tbi",
-            "path_index": "",
-            "step": "vep_somatic",
-            "tag": [
-                "manta",
-                "SV",
-                "annotated-somatic-vcf-all-index",
-                "TN-WGS",
-                "vcf-all"
-            ],
-            "id": "TN_WGS",
-            "format": "vcf.gz.tbi"
-        },
-        {
-            "path": "TN_WGS/analysis/vep/SNV.somatic.TN_WGS.tnhaplotyper.all.vcf.gz_summary.html",
-            "path_index": [],
-            "step": "vep_somatic",
-            "tag": [
-                "annotated-somatic-vcf-summary",
-                "TN-WGS",
-                "tnhaplotyper",
-                "vcf-summary",
-                "SNV"
-            ],
-            "id": "TN_WGS",
-            "format": "html"
-        },
-        {
-            "path": "TN_WGS/analysis/vep/SV.somatic.TN_WGS.manta.all.vcf.gz_summary.html",
-            "path_index": [],
-            "step": "vep_somatic",
-            "tag": [
-                "manta",
-                "SV",
-                "annotated-somatic-vcf-summary",
-                "TN-WGS",
-                "vcf-summary"
-            ],
-            "id": "TN_WGS",
-            "format": "html"
-        },
-        {
-            "path": "TN_WGS/analysis/vep/SNV.somatic.TN_WGS.tnscope.all.vcf.gz_summary.html",
-            "path_index": [],
-            "step": "vep_somatic",
-            "tag": [
-                "annotated-somatic-vcf-summary",
-                "TN-WGS",
-                "vcf-summary",
-                "SNV",
-                "tnscope"
-            ],
-            "id": "TN_WGS",
-            "format": "html"
-        },
-        {
-            "path": "TN_WGS/analysis/bam/tumor.merged.bam",
-            "path_index": [
-                "TN_WGS/analysis/bam/tumor.merged.bam.bai"
-            ],
-            "step": "mergeBam_tumor",
-            "tag": [
-                "ACC123",
-                "tumor-bam",
-                "bam"
-            ],
-            "id": "ACC123",
-            "format": "bam"
-        },
-        {
-            "path": "TN_WGS/analysis/bam/tumor.merged.bam.bai",
-            "path_index": "",
-            "step": "mergeBam_tumor",
-            "tag": [
-                "tumor-bam-index",
-                "ACC123",
-                "bam"
-            ],
-            "id": "ACC123",
-            "format": "bai"
-        },
-        {
-            "path": "TN_WGS/analysis/bam/tumor.merged.cram",
-            "path_index": [
-                "TN_WGS/analysis/bam/tumor.merged.cram.crai"
-            ],
-            "step": "mergeBam_tumor",
-            "tag": [
-                "ACC123",
-                "cram",
-                "tumor-cram"
-            ],
-            "id": "ACC123",
-            "format": "cram"
-        },
-        {
-            "path": "TN_WGS/analysis/bam/tumor.merged.cram.crai",
-            "path_index": "",
-            "step": "mergeBam_tumor",
-            "tag": [
-                "ACC123",
-                "cram",
-                "tumor-cram-index"
-            ],
-            "id": "ACC123",
-            "format": "crai"
-        },
-        {
-            "path": "TN_WGS/analysis/vep/CNV.somatic.TN_WGS.ascat.all.vcf.gz",
-            "path_index": "TN_WGS/analysis/vep/CNV.somatic.TN_WGS.ascat.all.vcf.gz.tbi",
-            "step": "vep_somatic",
-            "tag": [
-                "ascat",
-                "vcf-all",
-                "annotated-somatic-vcf-all",
-                "CNV",
-                "TN-WGS"
-            ],
-            "id": "TN_WGS",
-            "format": "vcf.gz"
-        },
-        {
-            "path": "TN_WGS/analysis/vep/CNV.somatic.TN_WGS.ascat.all.vcf.gz.tbi",
-            "path_index": "",
-            "step": "vep_somatic",
-            "tag": [
-                "ascat",
-                "vcf-all",
-                "annotated-somatic-vcf-all-index",
-                "CNV",
-                "TN-WGS"
-            ],
-            "id": "TN_WGS",
-            "format": "vcf.gz.tbi"
-        },
-        {
-            "path": "TN_WGS/analysis/vep/CNV.somatic.TN_WGS.ascat.all.filtered.pass.vcf.gz",
-            "path_index": [
-                "TN_WGS/analysis/vep/CNV.somatic.TN_WGS.ascat.all.filtered.pass.vcf.gz.tbi"
-            ],
-            "step": "bcftools_filter_ascat",
-            "tag": [
-                "TN-WGS",
-                "research-vcf-sv-pass",
-                "vcf-sv-pass"
-            ],
-            "id": "TN-WGS",
-            "format": "vcf.gz"
-        },
-        {
-            "path": "TN_WGS/analysis/vep/CNV.somatic.TN_WGS.ascat.all.filtered.pass.vcf.gz.tbi",
-            "path_index": "",
-            "step": "bcftools_filter_ascat",
-            "tag": [
-                "TN-WGS",
-                "vcf-sv-pass",
-                "research-vcf-sv-pass-index"
-            ],
-            "id": "TN_WGS",
-            "format": "vcf.gz.tbi"
-        },
-        {
-            "path": "TN_WGS/analysis/vcf/CNV.somatic.TN_WGS.ascat.output.pdf",
+            "path": "TN-wgs/analysis/vcf/CNV.somatic.TN-wgs.ascat.output.pdf",
             "path_index": [],
             "step": "ascat_tumor_normal_merge_output",
             "tag": [
-                "ascat-output-pdf",
-                "research-ascat-output-pdf"
+                "clinical-ascat-pdf",
+                "ascat-pdf"
             ],
-            "id": "TN_WGS",
+            "id": "TN-wgs",
             "format": "pdf"
-    },
-        {
-            "path": "TN_WGS/analysis/vep/SV.somatic.TN_WGS.delly.all.vcf.gz",
-            "path_index": [
-                "TN_WGS/analysis/vep/SV.somatic.TN_WGS.delly.all.vcf.gz.tbi"
-            ],
-            "step": "vep_somatic",
-            "tag": [
-                "annotated-somatic-vcf-all",
-                "SV",
-                "vcf-all",
-                "delly",
-                "TN-WGS"
-            ],
-            "id": "TN_WGS",
-            "format": "vcf.gz"
         },
         {
-            "path": "TN_WGS/analysis/vep/SV.somatic.TN_WGS.delly.all.vcf.gz.tbi",
-            "path_index": "",
-            "step": "vep_somatic",
-            "tag": [
-                "SV",
-                "vcf-all",
-                "annotated-somatic-vcf-all-index",
-                "delly",
-                "TN-WGS"
-            ],
-            "id": "TN_WGS",
-            "format": "vcf.gz.tbi"
-        },
-        {
-            "path": "TN_WGS/analysis/vep/SV.somatic.TN_WGS.delly.all.filtered.pass.vcf.gz",
-            "path_index": [
-                "TN_WGS/analysis/vep/SV.somatic.TN_WGS.delly.all.filtered.pass.vcf.gz.tbi"
-            ],
-            "step": "bcftools_filter_delly",
-            "tag": [
-                "research-vcf-sv-pass",
-                "vcf-sv-pass",
-                "TN-WGS"
-            ],
-            "id": "TN_WGS",
-            "format": "vcf.gz"
-        },
-        {
-            "path": "TN_WGS/analysis/vep/SV.somatic.TN_WGS.",
-            "path_index": "",
-            "step": "bcftools_filter_delly",
-            "tag": [
-                "vcf-sv-pass",
-                "TN-WGS",
-                "research-vcf-sv-pass-index"
-            ],
-            "id": "TN_WGS",
-            "format": "vcf.gz.tbi"
-        },
-        {
-            "path": "TN_WGS/analysis/delivery_report/TN_WGS_report.html",
+            "path": "TN-wgs/analysis/delivery_report/TN-wgs_report.html",
             "step": "balsamic_delivery",
             "format": "html",
             "tag": [
                 "balsamic-report"
             ],
-            "id": "TN_WGS"
+            "id": "TN-wgs"
         },
         {
-            "path": "TN_WGS/analysis/delivery_report/TN_WGS_metrics_deliverables.yaml",
-            "step": "balsamic_delivery",
-            "format": "yaml",
-            "tag": [
-                "qc-metrics-yaml"
-            ],
-            "id": "TN_WGS"
-        },
-        {
-            "path": "TN_WGS/TN_WGS.json",
+            "path": "TN-wgs/TN-wgs.json",
             "step": "case_config",
             "format": "json",
             "tag": [
                 "balsamic-config"
             ],
-            "id": "TN_WGS"
+            "id": "TN-wgs"
         },
         {
-            "path": "TN_WGS/TN_WGS_BALSAMIC_7.2.2_graph.pdf",
+            "path": "TN-wgs/TN-wgs_BALSAMIC_X.X.X_graph.pdf",
             "step": "case_config",
             "format": "pdf",
             "tag": [
                 "balsamic-dag"
             ],
-            "id": "TN_WGS"
+            "id": "TN-wgs"
         }
     ]
 }

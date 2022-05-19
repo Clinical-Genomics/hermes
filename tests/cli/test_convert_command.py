@@ -119,21 +119,43 @@ def test_convert_balsamic_t_only_panel_deliverables(
     assert result.exit_code == 0
 
 
-def test_convert_balsamic_t_wgs_deliverables(
-    cli_runner: CliRunner, balsamic_t_wgs_deliverables: Path
+def test_convert_balsamic_tn_wgs_deliverables(
+    cli_runner: CliRunner, balsamic_tn_wgs_deliverables: Path
 ):
     # GIVEN the path to a balsamic deliverables file
-    assert balsamic_t_wgs_deliverables.exists()
+    assert balsamic_tn_wgs_deliverables.exists()
 
     # WHEN converting the deliverables to CG format
     result = cli_runner.invoke(
         app,
         [
-            str(balsamic_t_wgs_deliverables),
+            str(balsamic_tn_wgs_deliverables),
             "--pipeline",
             "balsamic",
             "--analysis-type",
             "tumor_normal_wgs",
+        ],
+    )
+
+    # THEN assert that the program exits with success
+    assert result.exit_code == 0
+
+
+def test_convert_balsamic_t_only_wgs_deliverables(
+    cli_runner: CliRunner, balsamic_t_only_wgs_deliverables: Path
+):
+    # GIVEN the path to a balsamic deliverables file
+    assert balsamic_t_only_wgs_deliverables.exists()
+
+    # WHEN converting the deliverables to CG format
+    result = cli_runner.invoke(
+        app,
+        [
+            str(balsamic_t_only_wgs_deliverables),
+            "--pipeline",
+            "balsamic",
+            "--analysis-type",
+            "tumor_wgs",
         ],
     )
 
