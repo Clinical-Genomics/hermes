@@ -42,6 +42,8 @@ def test_export_mip_rna_tags(cli_runner: CliRunner):
 
 
 def test_export_balsamic_tags(cli_runner: CliRunner):
+    """Tests export of all the Balsamic tags"""
+
     # GIVEN a cli runner
 
     # WHEN running the export tags command for pipeline balsamic
@@ -49,8 +51,9 @@ def test_export_balsamic_tags(cli_runner: CliRunner):
 
     # THEN assert that the command exits without problems
     assert result.exit_code == 0
-    # THEN assert that the mip_dna tags was exported
+    # THEN assert that the balsamic tags was exported
     assert "Balsamic tags" in result.output
+    assert "umi" in result.output
 
 
 def test_export_fluffy_tags(cli_runner: CliRunner):
