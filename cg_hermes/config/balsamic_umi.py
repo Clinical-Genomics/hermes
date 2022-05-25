@@ -4,6 +4,8 @@ The tag sets that exists in all files are set to mandatory. Tag sets that exists
 mandatory by default. However the tags that are available to a particular analysis is mandatory for that analysis.
 """
 
+import copy
+
 from cg_hermes.config.balsamic import (
     BALSAMIC_TAGS,
     TUMOR_ONLY_PANEL_TAGS,
@@ -84,9 +86,7 @@ BALSAMIC_UMI_TAGS = {
 
 BALSAMIC_UMI_TAGS.update(BALSAMIC_TAGS)
 
-UMI_TUMOR_ONLY_PANEL_TAGS = {}
-
-UMI_TUMOR_ONLY_PANEL_TAGS.update(TUMOR_ONLY_PANEL_TAGS)
+UMI_TUMOR_ONLY_PANEL_TAGS = copy.deepcopy(TUMOR_ONLY_PANEL_TAGS)
 
 UMI_TUMOR_NORMAL_PANEL_TAGS = {
     frozenset(UMI_RAW_TAGS["normal_umi_consensusfiltered.merged.cram"]): {"is_mandatory": True},

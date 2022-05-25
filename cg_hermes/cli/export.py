@@ -3,9 +3,9 @@ import logging
 from enum import Enum
 
 import typer
-from cg_hermes.config.balsamic_umi import BALSAMIC_UMI_TAGS
 from tabulate import tabulate
 
+from cg_hermes.config.balsamic_umi import BALSAMIC_UMI_TAGS
 from cg_hermes.config.fluffy import FLUFFY_COMMON_TAGS
 from cg_hermes.config.microsalt import MICROSALT_COMMON_TAGS
 from cg_hermes.config.mip_dna import MIP_DNA_TAGS

@@ -2,7 +2,7 @@
 import logging
 from typing import Dict, FrozenSet, List, Optional
 
-from cg_hermes.config.pipelines import AnalysisType, Pipeline
+from cg_hermes.config.pipelines import AnalysisType, Pipeline, BALSAMIC_PIPELINES
 from cg_hermes.config.tags import COMMON_TAG_CATEGORIES
 from cg_hermes.deliverables import Deliverables
 from cg_hermes.models.tags import TagMap
@@ -15,7 +15,7 @@ def get_deliverables_obj(
     pipeline: Pipeline,
     analysis_type: Optional[AnalysisType] = None,
 ) -> Deliverables:
-    if pipeline in [Pipeline.BALSAMIC, Pipeline.BALSAMIC_UMI] and not analysis_type:
+    if pipeline in BALSAMIC_PIPELINES and not analysis_type:
         LOG.error(f"Please specify analysis type for {pipeline}")
         raise SyntaxError
     return Deliverables(deliverables=deliverables, pipeline=pipeline, analysis_type=analysis_type)
