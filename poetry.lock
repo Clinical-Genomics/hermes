@@ -453,12 +453,12 @@ attrs = [
     {file = "attrs-20.3.0.tar.gz", hash = "sha256:832aa3cde19744e49938b91fea06d69ecb9e649c93ba974535d08ad92164f700"},
 ]
 bump2version = [
-    {file = "bump2version-1.0.1-py2.py3-none-any.whl", hash = "sha256:f7de660e0a6c648ba4f7fe7f73e028bf6117f729143b3bb3592d5b3cbcb59af0"},
-    {file = "bump2version-1.0.1.tar.gz", hash = "sha256:1dda85320621e00e056230fbfc7d6b5f31b68f169c2a933363deb85092af47c4"},
+    {file = "bump2version-1.0.1-py2.py3-none-any.whl", hash = "sha256:37f927ea17cde7ae2d7baf832f8e80ce3777624554a653006c9144f8017fe410"},
+    {file = "bump2version-1.0.1.tar.gz", hash = "sha256:762cb2bfad61f4ec8e2bdf452c7c267416f8c70dd9ecb1653fd0bbb01fa936e6"},
 ]
 cgmodels = [
-    {file = "cgmodels-0.10.1-py3-none-any.whl", hash = "sha256:85bb4272235f74f7494cd882e942bc067b7b60f57263868fdde9b4b99b075431"},
-    {file = "cgmodels-0.10.1.tar.gz", hash = "sha256:f084885d64f56921190d386070cdc6198c0fd7db3e0e263b7c4c087a1645b610"},
+    {file = "cgmodels-0.10.1-py3-none-any.whl", hash = "sha256:f7de660e0a6c648ba4f7fe7f73e028bf6117f729143b3bb3592d5b3cbcb59af0"},
+    {file = "cgmodels-0.10.1.tar.gz", hash = "sha256:1dda85320621e00e056230fbfc7d6b5f31b68f169c2a933363deb85092af47c4"},
 ]
 click = [
     {file = "click-7.1.2-py2.py3-none-any.whl", hash = "sha256:dacca89f4bfadd5de3d7489b7c8a566eee0d3676333fbb50030263894c38c0dc"},
