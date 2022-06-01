@@ -54,7 +54,6 @@ def test_export_balsamic_tags(cli_runner: CliRunner):
     # THEN assert that the balsamic tags was exported
     assert "Balsamic tags" in result.output
     assert "umi" in result.output
-    print(result.output)
 
 
 def test_export_fluffy_tags(cli_runner: CliRunner):
