@@ -4,95 +4,89 @@ The tag sets that exists in all files are set to mandatory. Tag sets that exists
 mandatory by default. However the tags that are available to a particular analysis is mandatory for that analysis.
 """
 
-import copy
+from cg_hermes.config.balsamic import RAW_TAGS, BALSAMIC_TAGS
 
-from cg_hermes.config.balsamic import (
-    BALSAMIC_TAGS,
-    TUMOR_ONLY_PANEL_TAGS,
-    TUMOR_NORMAL_PANEL_TAGS,
-)
-
-UMI_RAW_TAGS = {
+UMI_ALIGNMENT_TAGS = {
     # Alignment files
-    "tumor_umi_consensusfiltered.merged.cram": ["cram", "umi-tumor-cram"],
-    "tumor_umi_consensusfiltered.merged.cram.crai": ["cram", "umi-tumor-cram-index"],
-    "normal_umi_consensusfiltered.merged.cram": ["cram", "umi-normal-cram"],
-    "normal_umi_consensusfiltered.merged.cram.crai": ["cram", "umi-normal-cram-index"],
-    # SNVs/INDELs
-    "TNscope_umi.vcf.gz": [
-        "vcf-tnscope-umi",
-        "research-vcf-tnscope-umi",
-    ],
-    "TNscope_umi.vcf.gz.tbi": [
-        "vcf-tnscope-umi",
-        "research-vcf-tnscope-umi-index",
-    ],
-    "TNscope_umi.all.filtered.pass.vcf.gz": [
-        "vcf-pass-tnscope-umi",
-        "snv",
-        "research-vcf-pass-tnscope-umi",
-    ],
-    "TNscope_umi.all.filtered.pass.vcf.gz.tbi": [
-        "vcf-pass-tnscope-umi",
-        "snv",
-        "research-vcf-pass-tnscope-umi-index",
-    ],
-}
-
-BALSAMIC_UMI_TAGS = {
-    # Alignment files
-    frozenset(UMI_RAW_TAGS["tumor_umi_consensusfiltered.merged.cram"]): {  # UMI cram (tumor)
+    frozenset(RAW_TAGS["tumor_umi_consensusfiltered.merged.cram"]): {  # UMI cram (tumor)
         "tags": ["umi-cram", "tumor"],
         "is_mandatory": True,
         "used_by": ["deliver", "scout"],
     },
-    frozenset(UMI_RAW_TAGS["tumor_umi_consensusfiltered.merged.cram.crai"]): {
+    frozenset(RAW_TAGS["tumor_umi_consensusfiltered.merged.cram.crai"]): {
         "tags": ["umi-cram-index", "tumor"],
         "is_mandatory": True,
         "used_by": ["deliver", "scout"],
     },
-    frozenset(UMI_RAW_TAGS["normal_umi_consensusfiltered.merged.cram"]): {  # UMI cram (normal)
+    frozenset(RAW_TAGS["normal_umi_consensusfiltered.merged.cram"]): {  # UMI cram (normal)
         "tags": ["umi-cram", "normal"],
         "is_mandatory": False,
         "used_by": ["deliver", "scout"],
     },
-    frozenset(UMI_RAW_TAGS["normal_umi_consensusfiltered.merged.cram.crai"]): {
+    frozenset(RAW_TAGS["normal_umi_consensusfiltered.merged.cram.crai"]): {
         "tags": ["umi-cram-index", "normal"],
         "is_mandatory": False,
         "used_by": ["deliver", "scout"],
     },
+}
+
+UMI_CALLERS_TAGS = {
     # SNVs/INDELs
-    frozenset(UMI_RAW_TAGS["TNscope_umi.vcf.gz"]): {
+    frozenset(RAW_TAGS["TNscope_umi.vcf.gz"]): {
         "tags": ["tnscope-umi", "vcf-umi-snv-research"],
         "is_mandatory": True,
         "used_by": ["deliver"],
     },
-    frozenset(UMI_RAW_TAGS["TNscope_umi.vcf.gz.tbi"]): {
+    frozenset(RAW_TAGS["TNscope_umi.vcf.gz.tbi"]): {
         "tags": ["tnscope-umi", "vcf-umi-snv-research-index"],
         "is_mandatory": True,
         "used_by": ["deliver"],
     },
-    frozenset(UMI_RAW_TAGS["TNscope_umi.all.filtered.pass.vcf.gz"]): {
+    frozenset(RAW_TAGS["TNscope_umi.all.filtered.pass.vcf.gz"]): {
         "tags": ["tnscope-umi", "vcf-umi-snv-clinical"],
         "is_mandatory": True,
         "used_by": ["deliver", "scout"],
     },
-    frozenset(UMI_RAW_TAGS["TNscope_umi.all.filtered.pass.vcf.gz.tbi"]): {
+    frozenset(RAW_TAGS["TNscope_umi.all.filtered.pass.vcf.gz.tbi"]): {
         "tags": ["tnscope-umi", "vcf-umi-snv-clinical-index"],
         "is_mandatory": True,
         "used_by": ["deliver", "scout"],
     },
 }
 
-BALSAMIC_UMI_TAGS.update(BALSAMIC_TAGS)
+BALSAMIC_UMI_TAGS = {**BALSAMIC_TAGS, **UMI_ALIGNMENT_TAGS, **UMI_CALLERS_TAGS}
 
-UMI_TUMOR_ONLY_PANEL_TAGS = copy.deepcopy(TUMOR_ONLY_PANEL_TAGS)
-
-UMI_TUMOR_NORMAL_PANEL_TAGS = {
-    frozenset(UMI_RAW_TAGS["normal_umi_consensusfiltered.merged.cram"]): {"is_mandatory": True},
-    frozenset(UMI_RAW_TAGS["normal_umi_consensusfiltered.merged.cram.crai"]): {
-        "is_mandatory": True
-    },
+UMI_TUMOR_ONLY_PANEL_TAGS = {
+    # SNVs/INDELs (PANEL)
+    frozenset(RAW_TAGS["vardict.vcf.gz"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["vardict.vcf.gz.tbi"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["vardict.all.filtered.pass.vcf.gz"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["vardict.all.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
+    # CNVs (PANEL)
+    frozenset(RAW_TAGS["tumor.merged.cns"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["tumor.merged-scatter.pdf"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["tumor.merged-diagram.pdf"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["gene_metrics"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["cnvkit.vcf2cytosure.cgh"]): {"is_mandatory": True},
+    # CNVs (PANEL & WGS)
+    frozenset(RAW_TAGS["dellycnv.cov.gz"]): {"is_mandatory": True},
 }
 
-UMI_TUMOR_NORMAL_PANEL_TAGS.update(TUMOR_NORMAL_PANEL_TAGS)
+UMI_TUMOR_NORMAL_PANEL_TAGS = {
+    # Alignment files (PANEL & WGS)
+    frozenset(RAW_TAGS["normal.merged.cram"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["normal.merged.cram.crai"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["normal_umi_consensusfiltered.merged.cram"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["normal_umi_consensusfiltered.merged.cram.crai"]): {"is_mandatory": True},
+    # SNVs/INDELs (PANEL)
+    frozenset(RAW_TAGS["vardict.vcf.gz"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["vardict.vcf.gz.tbi"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["vardict.all.filtered.pass.vcf.gz"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["vardict.all.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
+    # CNVs (PANEL)
+    frozenset(RAW_TAGS["tumor.merged.cns"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["tumor.merged-scatter.pdf"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["tumor.merged-diagram.pdf"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["gene_metrics"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["cnvkit.vcf2cytosure.cgh"]): {"is_mandatory": True},
+}

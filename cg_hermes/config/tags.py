@@ -121,6 +121,8 @@ ANALYSIS_COMMON = {
     "umi": {"description": "Files related to UMI workflow"},
     "umi-cram": {"description": "UMI consensus filtered cram file"},
     "umi-cram-index": {"description": "Index for the UMI consensus filtered cram file"},
+    "qc-cram": {"description": "QC alignment file in CRAM format"},
+    "qc-cram-index": {"description": "QC index file for alignment file in CRAM format"},
 }
 
 TOOLS = {

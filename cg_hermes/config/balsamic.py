@@ -4,20 +4,25 @@ The tag sets that exists in all files are set to mandatory. Tag sets that exists
 mandatory by default. However the tags that are available to a particular analysis is mandatory for that analysis.
 """
 
-from cg_hermes.config.balsamic_qc import (
-    BALSAMIC_QC_TAGS,
-    QC_TUMOR_NORMAL_WGS_TAGS,
-    QC_TUMOR_NORMAL_PANEL_TAGS,
-)
-
 RAW_TAGS = {
+    # Config, QC and reports (PANEL & WGS)
+    "config.json": ["balsamic-config"],
+    "report.html": ["balsamic-report"],
+    "BALSAMIC_X.X.X_graph.pdf": ["balsamic-dag"],
+    "multiqc_report.html": ["html", "multiqc-html"],
+    "multiqc_data.json": ["json", "multiqc-json"],
     # Custom QC
     "metrics_deliverables.yaml": ["yaml", "qc-metrics-yaml"],
-    # Merged SV (manta, delly) and CNV (cnvkit, ascat) callers (PANEL & WGS)
-    "svdb.vcf.gz": ["vcf-svdb", "research-vcf-svdb"],
-    "svdb.vcf.gz.tbi": ["vcf-svdb", "research-vcf-svdb-index"],
-    "svdb.all.filtered.pass.vcf.gz": ["vcf-pass-svdb", "clinical-vcf-pass-svdb"],
-    "svdb.all.filtered.pass.vcf.gz.tbi": ["vcf-pass-svdb", "clinical-vcf-pass-svdb-index"],
+    # Alignment files (PANEL & WGS)
+    "tumor.merged.cram": ["cram", "tumor-cram"],
+    "tumor.merged.cram.crai": ["cram", "tumor-cram-index"],
+    "normal.merged.cram": ["cram", "normal-cram"],
+    "normal.merged.cram.crai": ["cram", "normal-cram-index"],
+    # UMI alignment files (PANEL)
+    "tumor_umi_consensusfiltered.merged.cram": ["cram", "umi-tumor-cram"],
+    "tumor_umi_consensusfiltered.merged.cram.crai": ["cram", "umi-tumor-cram-index"],
+    "normal_umi_consensusfiltered.merged.cram": ["cram", "umi-normal-cram"],
+    "normal_umi_consensusfiltered.merged.cram.crai": ["cram", "umi-normal-cram-index"],
     # Germline SNVs (PANEL & WGS)
     "germline.tumor_normal.dnascope.vcf.gz": [
         "vcf-all",
@@ -44,6 +49,11 @@ RAW_TAGS = {
         "manta-germline",
         "annotated-germline-vcf-all-index",
     ],
+    # Merged SV (manta, delly) and CNV (cnvkit, ascat) callers (PANEL & WGS)
+    "svdb.vcf.gz": ["vcf-svdb", "research-vcf-svdb"],
+    "svdb.vcf.gz.tbi": ["vcf-svdb", "research-vcf-svdb-index"],
+    "svdb.all.filtered.pass.vcf.gz": ["vcf-pass-svdb", "clinical-vcf-pass-svdb"],
+    "svdb.all.filtered.pass.vcf.gz.tbi": ["vcf-pass-svdb", "clinical-vcf-pass-svdb-index"],
     # SNVs (WGS)
     "tnscope.vcf.gz": [
         "vcf-tnscope",
@@ -82,6 +92,25 @@ RAW_TAGS = {
         "snv",
         "clinical-vcf-pass-vardict-index",
     ],
+    # UMI SNVs/INDELs (PANEL)
+    "TNscope_umi.vcf.gz": [
+        "vcf-tnscope-umi",
+        "research-vcf-tnscope-umi",
+    ],
+    "TNscope_umi.vcf.gz.tbi": [
+        "vcf-tnscope-umi",
+        "research-vcf-tnscope-umi-index",
+    ],
+    "TNscope_umi.all.filtered.pass.vcf.gz": [
+        "vcf-pass-tnscope-umi",
+        "snv",
+        "research-vcf-pass-tnscope-umi",
+    ],
+    "TNscope_umi.all.filtered.pass.vcf.gz.tbi": [
+        "vcf-pass-tnscope-umi",
+        "snv",
+        "research-vcf-pass-tnscope-umi-index",
+    ],
     # CNVs (PANEL)
     "tumor.merged.cns": ["cns", "cnv-cns"],
     "tumor.merged-scatter.pdf": ["scatter", "cnv-scatter"],
@@ -95,34 +124,67 @@ RAW_TAGS = {
     "dellycnv.cov.gz": ["rd-delly", "clinical-rd-delly"],
 }
 
-BALSAMIC_TAGS = {
+QC_TAGS = {
+    # Config, QC and reports (PANEL & WGS)
+    frozenset(RAW_TAGS["config.json"]): {  # BALSAMIC config json
+        "tags": ["balsamic-config"],
+        "is_mandatory": True,
+        "used_by": ["audit", "cg"],
+    },
+    frozenset(RAW_TAGS["report.html"]): {  # BALSAMIC report html
+        "tags": ["balsamic-report"],
+        "is_mandatory": True,
+        "used_by": ["audit"],
+    },
+    frozenset(RAW_TAGS["BALSAMIC_X.X.X_graph.pdf"]): {  # DAG
+        "tags": ["balsamic-dag"],
+        "is_mandatory": True,
+        "used_by": ["audit"],
+    },
+    frozenset(RAW_TAGS["multiqc_report.html"]): {  # MultiQC html
+        "tags": ["multiqc-html"],
+        "is_mandatory": True,
+        "bundle_id": True,
+        "used_by": ["audit", "deliver", "scout"],
+    },
+    frozenset(RAW_TAGS["multiqc_data.json"]): {  # MultiQC json
+        "tags": ["multiqc-json"],
+        "is_mandatory": True,
+        "used_by": ["audit"],
+    },
     # Custom QC
     frozenset(RAW_TAGS["metrics_deliverables.yaml"]): {  # QC metrics
         "tags": ["qc-metrics"],
         "is_mandatory": True,
         "used_by": ["audit", "cg", "vogue"],
     },
-    # Merged SV (manta, delly) and CNV (cnvkit, ascat) callers (PANEL & WGS)
-    frozenset(RAW_TAGS["svdb.vcf.gz"]): {
-        "tags": ["svdb", "vcf-sv-research"],
-        "is_mandatory": True,
-        "used_by": ["deliver"],
-    },
-    frozenset(RAW_TAGS["svdb.vcf.gz.tbi"]): {
-        "tags": ["svdb", "vcf-sv-research-index"],
-        "is_mandatory": True,
-        "used_by": ["deliver"],
-    },
-    frozenset(RAW_TAGS["svdb.all.filtered.pass.vcf.gz"]): {
-        "tags": ["svdb", "vcf-sv-clinical"],
+}
+
+ALIGNMENT_TAGS = {
+    # Alignment files (PANEL & WGS)
+    frozenset(RAW_TAGS["tumor.merged.cram"]): {  # cram (tumor)
+        "tags": ["tumor", "cram"],
         "is_mandatory": True,
         "used_by": ["deliver", "scout"],
     },
-    frozenset(RAW_TAGS["svdb.all.filtered.pass.vcf.gz.tbi"]): {
-        "tags": ["svdb", "vcf-sv-clinical-index"],
+    frozenset(RAW_TAGS["tumor.merged.cram.crai"]): {
+        "tags": ["tumor", "cram-index"],
         "is_mandatory": True,
         "used_by": ["deliver", "scout"],
     },
+    frozenset(RAW_TAGS["normal.merged.cram"]): {  # cram (normal)
+        "tags": ["normal", "cram"],
+        "is_mandatory": False,
+        "used_by": ["deliver", "scout"],
+    },
+    frozenset(RAW_TAGS["normal.merged.cram.crai"]): {
+        "tags": ["normal", "cram-index"],
+        "is_mandatory": False,
+        "used_by": ["deliver", "scout"],
+    },
+}
+
+GERMLINE_TAGS = {
     # Germline SNVs (PANEL & WGS)
     frozenset(RAW_TAGS["germline.tumor_normal.dnascope.vcf.gz"]): {
         "tags": ["dnascope", "germline", "vcf"],
@@ -144,6 +206,30 @@ BALSAMIC_TAGS = {
         "tags": ["manta", "germline", "vcf-index"],
         "is_mandatory": True,
         "used_by": ["deliver"],
+    },
+}
+
+CALLERS_TAGS = {
+    # Merged SV (manta, delly) and CNV (cnvkit, ascat) callers (PANEL & WGS)
+    frozenset(RAW_TAGS["svdb.vcf.gz"]): {
+        "tags": ["svdb", "vcf-sv-research"],
+        "is_mandatory": True,
+        "used_by": ["deliver"],
+    },
+    frozenset(RAW_TAGS["svdb.vcf.gz.tbi"]): {
+        "tags": ["svdb", "vcf-sv-research-index"],
+        "is_mandatory": True,
+        "used_by": ["deliver"],
+    },
+    frozenset(RAW_TAGS["svdb.all.filtered.pass.vcf.gz"]): {
+        "tags": ["svdb", "vcf-sv-clinical"],
+        "is_mandatory": True,
+        "used_by": ["deliver", "scout"],
+    },
+    frozenset(RAW_TAGS["svdb.all.filtered.pass.vcf.gz.tbi"]): {
+        "tags": ["svdb", "vcf-sv-clinical-index"],
+        "is_mandatory": True,
+        "used_by": ["deliver", "scout"],
     },
     # SNVs (WGS)
     frozenset(RAW_TAGS["tnscope.vcf.gz"]): {
@@ -232,7 +318,12 @@ BALSAMIC_TAGS = {
     },
 }
 
-BALSAMIC_TAGS.update(BALSAMIC_QC_TAGS)  # Config, QC, reports and alignment files (PANEL & WGS)
+BALSAMIC_TAGS = {
+    **QC_TAGS,
+    **ALIGNMENT_TAGS,
+    **GERMLINE_TAGS,
+    **CALLERS_TAGS,
+}
 
 
 TUMOR_ONLY_WGS_TAGS = {
@@ -247,6 +338,9 @@ TUMOR_ONLY_WGS_TAGS = {
 
 
 TUMOR_NORMAL_WGS_TAGS = {
+    # Alignment files (PANEL & WGS)
+    frozenset(RAW_TAGS["normal.merged.cram"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["normal.merged.cram.crai"]): {"is_mandatory": True},
     # SNVs (WGS)
     frozenset(RAW_TAGS["tnscope.vcf.gz"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["tnscope.vcf.gz.tbi"]): {"is_mandatory": True},
@@ -256,9 +350,6 @@ TUMOR_NORMAL_WGS_TAGS = {
     frozenset(RAW_TAGS["ascat.output.pdf"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["ascat.copynumber.txt.gz"]): {"is_mandatory": True},
 }
-
-TUMOR_NORMAL_WGS_TAGS.update(QC_TUMOR_NORMAL_WGS_TAGS)  # Alignment files (PANEL & WGS)
-
 
 TUMOR_ONLY_PANEL_TAGS = {
     # SNVs/INDELs (PANEL)
@@ -278,6 +369,9 @@ TUMOR_ONLY_PANEL_TAGS = {
 
 
 TUMOR_NORMAL_PANEL_TAGS = {
+    # Alignment files (PANEL & WGS)
+    frozenset(RAW_TAGS["normal.merged.cram"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["normal.merged.cram.crai"]): {"is_mandatory": True},
     # SNVs/INDELs (PANEL)
     frozenset(RAW_TAGS["vardict.vcf.gz"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["vardict.vcf.gz.tbi"]): {"is_mandatory": True},
@@ -290,5 +384,3 @@ TUMOR_NORMAL_PANEL_TAGS = {
     frozenset(RAW_TAGS["gene_metrics"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["cnvkit.vcf2cytosure.cgh"]): {"is_mandatory": True},
 }
-
-TUMOR_NORMAL_PANEL_TAGS.update(QC_TUMOR_NORMAL_PANEL_TAGS)  # Alignment files (PANEL & WGS)
