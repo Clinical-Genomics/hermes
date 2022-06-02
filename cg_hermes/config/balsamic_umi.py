@@ -63,22 +63,22 @@ BALSAMIC_UMI_TAGS = {
     },
     # SNVs/INDELs
     frozenset(UMI_RAW_TAGS["TNscope_umi.vcf.gz"]): {
-        "tags": ["tnscope-umi", "vcf-umi-research"],
+        "tags": ["tnscope-umi", "vcf-umi-snv-research"],
         "is_mandatory": True,
         "used_by": ["deliver"],
     },
     frozenset(UMI_RAW_TAGS["TNscope_umi.vcf.gz.tbi"]): {
-        "tags": ["tnscope-umi", "vcf-umi-research-index"],
+        "tags": ["tnscope-umi", "vcf-umi-snv-research-index"],
         "is_mandatory": True,
         "used_by": ["deliver"],
     },
     frozenset(UMI_RAW_TAGS["TNscope_umi.all.filtered.pass.vcf.gz"]): {
-        "tags": ["tnscope-umi", "vcf-umi-clinical"],
+        "tags": ["tnscope-umi", "vcf-umi-snv-clinical"],
         "is_mandatory": True,
         "used_by": ["deliver", "scout"],
     },
     frozenset(UMI_RAW_TAGS["TNscope_umi.all.filtered.pass.vcf.gz.tbi"]): {
-        "tags": ["tnscope-umi", "vcf-umi-clinical-index"],
+        "tags": ["tnscope-umi", "vcf-umi-snv-clinical-index"],
         "is_mandatory": True,
         "used_by": ["deliver", "scout"],
     },
