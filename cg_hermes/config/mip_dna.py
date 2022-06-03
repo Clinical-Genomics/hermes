@@ -73,6 +73,16 @@ MIP_DNA_TAGS = {
         "is_mandatory": True,
         "used_by": ["genotype"],
     },
+    frozenset(["gens_generatedata", "baf"]): {
+        "tags": ["gens", "gens-baf"],
+        "is_mandatory": False,
+        "used_by": ["scout"],
+    },
+    frozenset(["gens_generatedata", "cov"]): {
+        "tags": ["gens", "gens-cov"],
+        "is_mandatory": False,
+        "used_by": ["scout"],
+    },
     frozenset(["mip_analyse", "config"]): {
         "tags": ["mip-analyse", "config"],
         "is_mandatory": True,
