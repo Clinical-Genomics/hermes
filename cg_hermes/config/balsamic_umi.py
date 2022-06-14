@@ -68,8 +68,6 @@ UMI_TUMOR_ONLY_PANEL_TAGS = {
     frozenset(RAW_TAGS["tumor.merged-diagram.pdf"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["gene_metrics"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["cnvkit.vcf2cytosure.cgh"]): {"is_mandatory": True},
-    # CNVs (PANEL & WGS)
-    frozenset(RAW_TAGS["dellycnv.cov.gz"]): {"is_mandatory": True},
 }
 
 UMI_TUMOR_NORMAL_PANEL_TAGS = {

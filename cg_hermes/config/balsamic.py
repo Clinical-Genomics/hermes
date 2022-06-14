@@ -120,8 +120,6 @@ RAW_TAGS = {
     # CNVs (WGS)
     "ascat.output.pdf": ["ascat-pdf", "clinical-ascat-pdf"],
     "ascat.copynumber.txt.gz": ["ascat-copynumber", "clinical-ascat-copynumber"],
-    # CNVs (PANEL & WGS)
-    "dellycnv.cov.gz": ["rd-delly", "clinical-rd-delly"],
 }
 
 QC_TAGS = {
@@ -310,12 +308,6 @@ CALLERS_TAGS = {
         "is_mandatory": False,
         "used_by": ["deliver", "scout"],
     },
-    # CNVs (PANEL & WGS)
-    frozenset(RAW_TAGS["dellycnv.cov.gz"]): {
-        "tags": ["delly", "metrics"],
-        "is_mandatory": False,
-        "used_by": ["deliver"],
-    },
 }
 
 BALSAMIC_TAGS = {
@@ -332,8 +324,6 @@ TUMOR_ONLY_WGS_TAGS = {
     frozenset(RAW_TAGS["tnscope.vcf.gz.tbi"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["tnscope.all.filtered.pass.vcf.gz"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["tnscope.all.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
-    # CNVs (PANEL & WGS)
-    frozenset(RAW_TAGS["dellycnv.cov.gz"]): {"is_mandatory": True},
 }
 
 
@@ -363,8 +353,6 @@ TUMOR_ONLY_PANEL_TAGS = {
     frozenset(RAW_TAGS["tumor.merged-diagram.pdf"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["gene_metrics"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["cnvkit.vcf2cytosure.cgh"]): {"is_mandatory": True},
-    # CNVs (PANEL & WGS)
-    frozenset(RAW_TAGS["dellycnv.cov.gz"]): {"is_mandatory": True},
 }
 
 
