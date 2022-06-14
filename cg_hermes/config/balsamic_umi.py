@@ -32,22 +32,22 @@ UMI_ALIGNMENT_TAGS = {
 
 UMI_CALLERS_TAGS = {
     # SNVs/INDELs
-    frozenset(RAW_TAGS["TNscope_umi.vcf.gz"]): {
+    frozenset(RAW_TAGS["tnscope_umi.vcf.gz"]): {
         "tags": ["tnscope-umi", "vcf-umi-snv-research"],
         "is_mandatory": True,
         "used_by": ["deliver"],
     },
-    frozenset(RAW_TAGS["TNscope_umi.vcf.gz.tbi"]): {
+    frozenset(RAW_TAGS["tnscope_umi.vcf.gz.tbi"]): {
         "tags": ["tnscope-umi", "vcf-umi-snv-research-index"],
         "is_mandatory": True,
         "used_by": ["deliver"],
     },
-    frozenset(RAW_TAGS["TNscope_umi.all.filtered.pass.vcf.gz"]): {
+    frozenset(RAW_TAGS["tnscope_umi.all.filtered.pass.vcf.gz"]): {
         "tags": ["tnscope-umi", "vcf-umi-snv-clinical"],
         "is_mandatory": True,
         "used_by": ["deliver", "scout"],
     },
-    frozenset(RAW_TAGS["TNscope_umi.all.filtered.pass.vcf.gz.tbi"]): {
+    frozenset(RAW_TAGS["tnscope_umi.all.filtered.pass.vcf.gz.tbi"]): {
         "tags": ["tnscope-umi", "vcf-umi-snv-clinical-index"],
         "is_mandatory": True,
         "used_by": ["deliver", "scout"],

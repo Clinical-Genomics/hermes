@@ -93,23 +93,23 @@ RAW_TAGS = {
         "clinical-vcf-pass-vardict-index",
     ],
     # UMI SNVs/INDELs (PANEL)
-    "TNscope_umi.vcf.gz": [
+    "tnscope_umi.vcf.gz": [
         "vcf-tnscope-umi",
         "research-vcf-tnscope-umi",
     ],
-    "TNscope_umi.vcf.gz.tbi": [
+    "tnscope_umi.vcf.gz.tbi": [
         "vcf-tnscope-umi",
         "research-vcf-tnscope-umi-index",
     ],
-    "TNscope_umi.all.filtered.pass.vcf.gz": [
+    "tnscope_umi.all.filtered.pass.vcf.gz": [
         "vcf-pass-tnscope-umi",
         "snv",
-        "research-vcf-pass-tnscope-umi",
+        "clinical-vcf-pass-tnscope-umi",
     ],
-    "TNscope_umi.all.filtered.pass.vcf.gz.tbi": [
+    "tnscope_umi.all.filtered.pass.vcf.gz.tbi": [
         "vcf-pass-tnscope-umi",
         "snv",
-        "research-vcf-pass-tnscope-umi-index",
+        "clinical-vcf-pass-tnscope-umi-index",
     ],
     # CNVs (PANEL)
     "tumor.merged.cns": ["cns", "cnv-cns"],
