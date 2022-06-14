@@ -120,6 +120,9 @@ RAW_TAGS = {
     # CNVs (WGS)
     "ascat.output.pdf": ["ascat-pdf", "clinical-ascat-pdf"],
     "ascat.copynumber.txt.gz": ["ascat-copynumber", "clinical-ascat-copynumber"],
+    # SVs (WGS)
+    "tumor.tiddit_cov.bed": ["cov-tumor-tiddit", "clinical-cov-tumor-tiddit"],
+    "normal.tiddit_cov.bed": ["cov-normal-tiddit", "clinical-cov-normal-tiddit"],
 }
 
 QC_TAGS = {
@@ -308,6 +311,17 @@ CALLERS_TAGS = {
         "is_mandatory": False,
         "used_by": ["deliver", "scout"],
     },
+    # SVs (WGS)
+    frozenset(RAW_TAGS["tumor.tiddit_cov.bed"]): {
+        "tags": ["tiddit", "tumor", "coverage"],
+        "is_mandatory": False,
+        "used_by": ["deliver"],
+    },
+    frozenset(RAW_TAGS["normal.tiddit_cov.bed"]): {
+        "tags": ["tiddit", "normal", "coverage"],
+        "is_mandatory": False,
+        "used_by": ["deliver"],
+    },
 }
 
 BALSAMIC_TAGS = {
@@ -324,6 +338,8 @@ TUMOR_ONLY_WGS_TAGS = {
     frozenset(RAW_TAGS["tnscope.vcf.gz.tbi"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["tnscope.all.filtered.pass.vcf.gz"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["tnscope.all.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
+    # SVs (WGS)
+    frozenset(RAW_TAGS["tumor.tiddit_cov.bed"]): {"is_mandatory": True},
 }
 
 
@@ -339,6 +355,9 @@ TUMOR_NORMAL_WGS_TAGS = {
     # CNVs (WGS)
     frozenset(RAW_TAGS["ascat.output.pdf"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["ascat.copynumber.txt.gz"]): {"is_mandatory": True},
+    # SVs (WGS)
+    frozenset(RAW_TAGS["tumor.tiddit_cov.bed"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["normal.tiddit_cov.bed"]): {"is_mandatory": True},
 }
 
 TUMOR_ONLY_PANEL_TAGS = {

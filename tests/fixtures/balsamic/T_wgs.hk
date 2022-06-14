@@ -341,6 +341,17 @@
             "format": "bcf"
         },
         {
+            "path": "T-wgs/analysis/vcf/SV.somatic.T-wgs.tumor.tiddit_cov.bed",
+            "path_index": [],
+            "step": "tiddit_sv_tumor_only",
+            "tag": [
+                "cov-tumor-tiddit",
+                "clinical-cov-tumor-tiddit"
+            ],
+            "id": "T-wgs",
+            "format": "bed"
+        },
+        {
             "path": "T-wgs/analysis/delivery_report/T-wgs_report.html",
             "step": "balsamic_delivery",
             "format": "html",

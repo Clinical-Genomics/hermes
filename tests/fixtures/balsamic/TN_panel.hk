@@ -203,7 +203,7 @@
             ],
             "step": "bcftools_filter_TNscope_umi_tumor_normal",
             "tag": [
-                "research-vcf-pass-TNscope-umi",
+                "clinical-vcf-pass-TNscope-umi",
                 "vcf-pass-TNscope-umi",
                 "TN-panel",
                 "SNV"
@@ -216,7 +216,7 @@
             "path_index": "",
             "step": "bcftools_filter_TNscope_umi_tumor_normal",
             "tag": [
-                "research-vcf-pass-TNscope-umi-index",
+                "clinical-vcf-pass-TNscope-umi-index",
                 "vcf-pass-TNscope-umi",
                 "TN-panel",
                 "SNV"

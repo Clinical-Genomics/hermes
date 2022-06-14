@@ -154,6 +154,7 @@ TOOLS = {
     "upd": {"description": "Uniparent disomy caller from bjhall"},
     "vardict": {"description": "Cancer variant caller"},
     "wisecondor": {"description": "NIPT caller"},
+    "tiddit": {"description": "Tool to identify chromosomal rearrangements"},
 }
 
 MIP_SPECIFIC = {
