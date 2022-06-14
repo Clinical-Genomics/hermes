@@ -334,8 +334,8 @@
             "path_index": [],
             "step": "vcf2cytosure_convert",
             "tag": [
-                "cnv-somatic-cgh-file",
-                "cgh-file"
+                "cnv-somatic-cgh-tumor",
+                "cgh-tumor"
             ],
             "id": "T-panel",
             "format": "cgh"

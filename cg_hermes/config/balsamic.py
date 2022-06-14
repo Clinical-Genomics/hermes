@@ -116,7 +116,7 @@ RAW_TAGS = {
     "tumor.merged-scatter.pdf": ["scatter", "cnv-scatter"],
     "tumor.merged-diagram.pdf": ["diagram", "cnv-diagram"],
     "gene_metrics": ["gene-metrics", "cnv-gene-metrics"],
-    "cnvkit.vcf2cytosure.cgh": ["cgh-file", "cnv-somatic-cgh-file"],
+    "cnvkit.vcf2cytosure.cgh": ["cgh-tumor", "cnv-somatic-cgh-tumor"],
     # CNVs (WGS)
     "ascat.output.pdf": ["ascat-pdf", "clinical-ascat-pdf"],
     "ascat.copynumber.txt.gz": ["ascat-copynumber", "clinical-ascat-copynumber"],
@@ -307,7 +307,7 @@ CALLERS_TAGS = {
         "used_by": ["deliver"],
     },
     frozenset(RAW_TAGS["cnvkit.vcf2cytosure.cgh"]): {
-        "tags": ["cnvkit", "vcf2cytosure"],
+        "tags": ["cnvkit", "tumor", "vcf2cytosure"],
         "is_mandatory": False,
         "used_by": ["deliver", "scout"],
     },
