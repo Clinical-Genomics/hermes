@@ -352,6 +352,17 @@
             "format": "bed"
         },
         {
+            "path": "T-wgs/analysis/vcf/CNV.somatic.T-wgs.tumor.vcf2cytosure.cgh",
+            "path_index": [],
+            "step": "vcf2cytosure_convert_tumor_only",
+            "tag": [
+                "cgh-tumor",
+                "cnv-somatic-cgh-tumor"
+            ],
+            "id": "T-wgs",
+            "format": "cgh"
+        },
+        {
             "path": "T-wgs/analysis/delivery_report/T-wgs_report.html",
             "step": "balsamic_delivery",
             "format": "html",

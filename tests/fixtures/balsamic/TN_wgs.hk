@@ -517,6 +517,28 @@
             "format": "bed"
         },
         {
+            "path": "TN-wgs/analysis/vcf/CNV.somatic.TN-wgs.tumor.vcf2cytosure.bed",
+            "path_index": [],
+            "step": "vcf2cytosure_convert_tumor_normal",
+            "tag": [
+                "cgh-tumor",
+                "cnv-somatic-cgh-tumor"
+            ],
+            "id": "TN-wgs",
+            "format": "cgh"
+        },
+        {
+            "path": "TN-wgs/analysis/vcf/CNV.somatic.TN-wgs.normal.vcf2cytosure.bed",
+            "path_index": [],
+            "step": "vcf2cytosure_convert_tumor_normal",
+            "tag": [
+                "cgh-normal",
+                "cnv-somatic-cgh-normal"
+            ],
+            "id": "TN-wgs",
+            "format": "cgh"
+        },
+        {
             "path": "TN-wgs/analysis/delivery_report/TN-wgs_report.html",
             "step": "balsamic_delivery",
             "format": "html",
