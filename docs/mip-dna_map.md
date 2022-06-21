@@ -39,5 +39,5 @@
 | version_collect_ar                  | True        | exe-ver                     | audit        |
 | vcf2cytosure_ar                     | False       | vcf2cytosure                | scout        |
 | glnexus_merge                       | False       | deepvariant, snv, vcf       | storage      |
-| gens_generatedata, baf              | False       | gens, gens-baf              | scout        |
-| gens_generatedata, cov              | False       | gens, gens-cov              | scout        |
+| gens_generatedata, baf              | False       | gens, fracsnp               | scout        |
+| gens_generatedata, cov              | False       | gens, coverage              | scout        |
