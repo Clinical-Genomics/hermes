@@ -74,12 +74,14 @@ MIP_DNA_TAGS = {
         "used_by": ["genotype"],
     },
     frozenset(["gens_generatedata", "baf"]): {
-        "tags": ["gens", "fracsnp"],
+        "tags": ["gens", "fracsnp", "bed"],
+        "index_tags": ["gens", "fracsnp", "bed-index"],
         "is_mandatory": False,
         "used_by": ["scout"],
     },
     frozenset(["gens_generatedata", "cov"]): {
-        "tags": ["gens", "coverage"],
+        "tags": ["gens", "coverage", "bed"],
+        "index_tags": ["gens", "coverage", "bed-index"],
         "is_mandatory": False,
         "used_by": ["scout"],
     },
