@@ -746,6 +746,17 @@
             "format": "pdf"
         },
         {
+            "path": "TN-panel/analysis/vcf/CNV.somatic.TN-panel.dellycnv.cov.gz",
+            "path_index": [],
+            "step": "delly_cnv_tumor_only",
+            "tag": [
+                "clinical-rd-delly",
+                "rd-delly"
+            ],
+            "id": "TN-panel",
+            "format": "gz"
+        },
+        {
             "path": "TN-panel/analysis/qc/TN-panel_metrics_deliverables.yaml",
             "path_index": [],
             "step": "collect_custom_qc_metrics",

@@ -108,6 +108,17 @@
             "format": "stats"
         },
         {
+            "path": "TN-wgs/analysis/vcf/CNV.somatic.TN-wgs.dellycnv.cov.gz",
+            "path_index": [],
+            "step": "delly_cnv_tumor_only",
+            "tag": [
+                "rd-delly",
+                "clinical-rd-delly"
+            ],
+            "id": "TN-wgs",
+            "format": "gz"
+        },
+        {
             "path": "TN-wgs/analysis/qc/TN-wgs_metrics_deliverables.yaml",
             "path_index": [],
             "step": "collect_custom_qc_metrics",

@@ -111,6 +111,8 @@ RAW_TAGS = {
         "snv",
         "clinical-vcf-pass-tnscope-umi-index",
     ],
+    # CNVs (PANEL & WGS)
+    "dellycnv.cov.gz": ["rd-delly", "clinical-rd-delly"],
     # CNVs (PANEL)
     "tumor.merged.cns": ["cns", "cnv-cns"],
     "tumor.merged-scatter.pdf": ["scatter", "cnv-scatter"],
@@ -254,6 +256,12 @@ CALLERS_TAGS = {
         "tags": ["tnscope", "vcf-snv-clinical-index"],
         "is_mandatory": False,
         "used_by": ["deliver", "scout"],
+    },
+    # CNVs (PANEL & WGS)
+    frozenset(RAW_TAGS["dellycnv.cov.gz"]): {
+        "tags": ["delly", "metrics"],
+        "is_mandatory": True,
+        "used_by": ["deliver"],
     },
     # CNVs (WGS)
     frozenset(RAW_TAGS["ascat.output.pdf"]): {
