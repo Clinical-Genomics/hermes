@@ -36,6 +36,16 @@ RAW_TAGS = {
         "dnascope",
         "annotated-germline-vcf-all-index",
     ],
+    "normal.dnascope.genotype.vcf.gz": [
+        "vcf-dnascope",
+        "normal",
+        "genotype-vcf-dnascope",
+    ],
+    "normal.dnascope.genotype.vcf.gz.tbi": [
+        "vcf-dnascope",
+        "normal",
+        "genotype-vcf-dnascope-index",
+    ],
     # Germline SVs (PANEL & WGS)
     "germline.tumor_normal.manta_germline.vcf.gz": [
         "vcf-all",
@@ -200,6 +210,16 @@ GERMLINE_TAGS = {
         "tags": ["dnascope", "germline", "vcf-index"],
         "is_mandatory": True,
         "used_by": ["deliver"],
+    },
+    frozenset(RAW_TAGS["normal.dnascope.genotype.vcf.gz"]): {
+        "tags": ["dnascope", "normal", "vcf"],
+        "is_mandatory": True,
+        "used_by": ["cg", "genotype"],
+    },
+    frozenset(RAW_TAGS["normal.dnascope.genotype.vcf.gz.tbi"]): {
+        "tags": ["dnascope", "normal", "vcf-index"],
+        "is_mandatory": True,
+        "used_by": ["cg", "genotype"],
     },
     # Germline SVs (PANEL & WGS)
     frozenset(RAW_TAGS["germline.tumor_normal.manta_germline.vcf.gz"]): {

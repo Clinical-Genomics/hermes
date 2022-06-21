@@ -386,6 +386,30 @@
             "format": "vcf.gz.tbi"
         },
         {
+            "path": "TN-WGS/analysis/vep/SNV.germline.normal.dnascope.genotype.vcf.gz",
+            "path_index": "TN-WGS/analysis/vep/SNV.germline.normal.dnascope.genotype.vcf.gz.tbi",
+            "step": "vcfheader_rename_germline",
+            "tag": [
+                "vcf-dnascope",
+                "normal",
+                "genotype-vcf-dnascope",
+            ],
+            "id": "TN-WGS",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "TN-WGS/analysis/vep/SNV.germline.normal.dnascope.genotype.vcf.gz.tbi",
+            "path_index": "",
+            "step": "vcfheader_rename_germline",
+            "tag": [
+                "vcf-dnascope",
+                "normal",
+                "genotype-vcf-dnascope-index",
+            ],
+            "id": "TN-WGS",
+            "format": "vcf.gz.tbi"
+        },
+        {
             "path": "TN-wgs/analysis/vcf/SV.somatic.TN-wgs.svdb.vcf.gz",
             "path_index": [
                 "TN-wgs/analysis/vcf/SV.somatic.TN-wgs.svdb.vcf.gz.tbi"
