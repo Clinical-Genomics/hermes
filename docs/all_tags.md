@@ -109,6 +109,7 @@
 | upd              | Uniparent disomy caller from bjhall                           |
 | vardict          | Cancer variant caller                                         |
 | wisecondor       | NIPT caller                                                   |
+| gens             | CNV visualization tool                                        |
 
 ## VALIDATION TAGS
 
