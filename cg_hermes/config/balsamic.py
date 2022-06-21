@@ -259,7 +259,7 @@ CALLERS_TAGS = {
     },
     # CNVs (PANEL & WGS)
     frozenset(RAW_TAGS["dellycnv.cov.gz"]): {
-        "tags": ["delly", "metrics"],
+        "tags": ["delly", "coverage"],
         "is_mandatory": True,
         "used_by": ["deliver"],
     },
