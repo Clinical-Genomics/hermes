@@ -208,30 +208,6 @@
             "format": "vcf.gz.tbi"
         },
         {
-            "path": "T-WGS/analysis/vep/SNV.germline.normal.dnascope.genotype.vcf.gz",
-            "path_index": "T-WGS/analysis/vep/SNV.germline.normal.dnascope.genotype.vcf.gz.tbi",
-            "step": "vcfheader_rename_germline",
-            "tag": [
-                "vcf-dnascope",
-                "normal",
-                "genotype-vcf-dnascope",
-            ],
-            "id": "T-WGS",
-            "format": "vcf.gz"
-        },
-        {
-            "path": "T-WGS/analysis/vep/SNV.germline.normal.dnascope.genotype.vcf.gz.tbi",
-            "path_index": "",
-            "step": "vcfheader_rename_germline",
-            "tag": [
-                "vcf-dnascope",
-                "normal",
-                "genotype-vcf-dnascope-index",
-            ],
-            "id": "T-WGS",
-            "format": "vcf.gz.tbi"
-        },
-        {
             "path": "T-wgs/analysis/bam/tumor.merged.bam",
             "path_index": [
                 "T-wgs/analysis/bam/tumor.merged.bam.bai"

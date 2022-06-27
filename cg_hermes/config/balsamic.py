@@ -36,14 +36,12 @@ RAW_TAGS = {
         "dnascope",
         "annotated-germline-vcf-all-index",
     ],
-    "normal.dnascope.genotype.vcf.gz": [
+    "genotype.normal.dnascope.vcf.gz": [
         "vcf-dnascope",
-        "normal",
         "genotype-vcf-dnascope",
     ],
-    "normal.dnascope.genotype.vcf.gz.tbi": [
+    "genotype.normal.dnascope.vcf.gz.tbi": [
         "vcf-dnascope",
-        "normal",
         "genotype-vcf-dnascope-index",
     ],
     # Germline SVs (PANEL & WGS)
@@ -210,14 +208,14 @@ GERMLINE_TAGS = {
         "is_mandatory": True,
         "used_by": ["deliver"],
     },
-    frozenset(RAW_TAGS["normal.dnascope.genotype.vcf.gz"]): {
+    frozenset(RAW_TAGS["genotype.normal.dnascope.vcf.gz"]): {
         "tags": ["dnascope", "normal", "vcf"],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": ["cg", "genotype"],
     },
-    frozenset(RAW_TAGS["normal.dnascope.genotype.vcf.gz.tbi"]): {
+    frozenset(RAW_TAGS["genotype.normal.dnascope.vcf.gz.tbi"]): {
         "tags": ["dnascope", "normal", "vcf-index"],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": ["cg", "genotype"],
     },
     # Germline SVs (PANEL & WGS)
@@ -388,6 +386,9 @@ TUMOR_NORMAL_WGS_TAGS = {
     # Alignment files (PANEL & WGS)
     frozenset(RAW_TAGS["normal.merged.cram"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["normal.merged.cram.crai"]): {"is_mandatory": True},
+    # Germline SNVs (PANEL & WGS)
+    frozenset(RAW_TAGS["genotype.normal.dnascope.vcf.gz"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["genotype.normal.dnascope.vcf.gz.tbi"]): {"is_mandatory": True},
     # SNVs (WGS)
     frozenset(RAW_TAGS["tnscope.vcf.gz"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["tnscope.vcf.gz.tbi"]): {"is_mandatory": True},
@@ -423,6 +424,9 @@ TUMOR_NORMAL_PANEL_TAGS = {
     # Alignment files (PANEL & WGS)
     frozenset(RAW_TAGS["normal.merged.cram"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["normal.merged.cram.crai"]): {"is_mandatory": True},
+    # Germline SNVs (PANEL & WGS)
+    frozenset(RAW_TAGS["genotype.normal.dnascope.vcf.gz"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["genotype.normal.dnascope.vcf.gz.tbi"]): {"is_mandatory": True},
     # SNVs/INDELs (PANEL)
     frozenset(RAW_TAGS["vardict.vcf.gz"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["vardict.vcf.gz.tbi"]): {"is_mandatory": True},

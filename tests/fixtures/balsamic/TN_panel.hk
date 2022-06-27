@@ -590,24 +590,22 @@
             "format": "vcf.gz.tbi"
         },
         {
-            "path": "TN-panel/analysis/vep/SNV.germline.normal.dnascope.genotype.vcf.gz",
-            "path_index": "TN-panel/analysis/vep/SNV.germline.normal.dnascope.genotype.vcf.gz.tbi",
+            "path": "TN-panel/analysis/vep/SNV.genotype.normal.dnascope.vcf.gz",
+            "path_index": "TN-panel/analysis/vep/SNV.genotype.normal.dnascope.vcf.gz.tbi",
             "step": "vcfheader_rename_germline",
             "tag": [
                 "vcf-dnascope",
-                "normal",
                 "genotype-vcf-dnascope",
             ],
             "id": "TN-panel",
             "format": "vcf.gz"
         },
         {
-            "path": "TN-panel/analysis/vep/SNV.germline.normal.dnascope.genotype.vcf.gz.tbi",
+            "path": "TN-panel/analysis/vep/SNV.genotype.normal.dnascope.vcf.gz.tbi",
             "path_index": "",
             "step": "vcfheader_rename_germline",
             "tag": [
                 "vcf-dnascope",
-                "normal",
                 "genotype-vcf-dnascope-index",
             ],
             "id": "TN-panel",
