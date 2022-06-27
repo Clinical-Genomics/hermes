@@ -391,7 +391,6 @@
             "step": "vcfheader_rename_germline",
             "tag": [
                 "vcf-dnascope",
-                "normal",
                 "genotype-vcf-dnascope",
             ],
             "id": "TN-WGS",
@@ -403,7 +402,6 @@
             "step": "vcfheader_rename_germline",
             "tag": [
                 "vcf-dnascope",
-                "normal",
                 "genotype-vcf-dnascope-index",
             ],
             "id": "TN-WGS",
