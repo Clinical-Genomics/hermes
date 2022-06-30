@@ -287,7 +287,7 @@ CALLERS_TAGS = {
     },
     frozenset(RAW_TAGS["dellycnv.cov.gz"]): {
         "tags": ["delly", "coverage"],
-        "is_mandatory": False,
+        "is_mandatory": True,
         "used_by": ["deliver"],
     },
     frozenset(RAW_TAGS["tumor.vcf2cytosure.cgh"]): {
@@ -375,7 +375,6 @@ TUMOR_ONLY_WGS_TAGS = {
     frozenset(RAW_TAGS["tnscope.all.filtered.pass.vcf.gz"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["tnscope.all.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
     # CNVs (WGS)
-    frozenset(RAW_TAGS["dellycnv.cov.gz"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["tumor.vcf2cytosure.cgh"]): {"is_mandatory": True},
     # SVs (WGS)
     frozenset(RAW_TAGS["tumor.tiddit_cov.bed"]): {"is_mandatory": True},
@@ -397,7 +396,6 @@ TUMOR_NORMAL_WGS_TAGS = {
     # CNVs (WGS)
     frozenset(RAW_TAGS["ascat.output.pdf"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["ascat.copynumber.txt.gz"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["dellycnv.cov.gz"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["tumor.vcf2cytosure.cgh"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["normal.vcf2cytosure.cgh"]): {"is_mandatory": True},
     # SVs (WGS)
