@@ -12,22 +12,22 @@ QC_ALIGNMENT_TAGS = {
     frozenset(RAW_TAGS["tumor.merged.cram"]): {  # cram (tumor)
         "tags": ["tumor", "qc-cram"],
         "is_mandatory": True,
-        "used_by": ["deliver", "scout"],
+        "used_by": ["deliver"],
     },
     frozenset(RAW_TAGS["tumor.merged.cram.crai"]): {
         "tags": ["tumor", "qc-cram-index"],
         "is_mandatory": True,
-        "used_by": ["deliver", "scout"],
+        "used_by": ["deliver"],
     },
     frozenset(RAW_TAGS["normal.merged.cram"]): {  # cram (normal)
         "tags": ["normal", "qc-cram"],
         "is_mandatory": False,
-        "used_by": ["deliver", "scout"],
+        "used_by": ["deliver"],
     },
     frozenset(RAW_TAGS["normal.merged.cram.crai"]): {
         "tags": ["normal", "qc-cram-index"],
         "is_mandatory": False,
-        "used_by": ["deliver", "scout"],
+        "used_by": ["deliver"],
     },
 }
 
