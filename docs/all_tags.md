@@ -10,37 +10,39 @@
 
 ## ANALYSIS TAGS
 
-| Tag name        | Description                                    |
-|-----------------|------------------------------------------------|
-| assembly        | Assembly                                       |
-| autozyg         | Autozygous region                              |
-| bed             | Bed file                                       |
-| bed-index       | Following index                                |
-| bigwig          | Bigwig formated file                           |
-| clinical        | Clinical subset                                |
-| config          | Config file                                    |
-| coverage        | Output with coverage information               |
-| diagram         | Data diagram                                   |
-| scatter         | Scatter plot                                   |
-| filtered        | Filtered data                                  |
-| fracsnp         | Fraction of reads with snp                     |
-| fusion          | Fusion transcripts                             |
-| genes           | Related to genes                               |
-| junction        | Junction data                                  |
-| metrics         | Data metrics                                   |
-| first-pass      | Data metrics first pass                        |
-| second-pass     | Data metrics second pass                       |
-| reference-info  | Information about references used in analysis  |
-| regions         | Output for regions                             |
-| research        | Research set                                   |
-| segments        | Output for segments                            |
-| sites           | Output for sites                               |
-| tcov            | Coverage output                                |
-| tiddit-coverage | Coverage output from tiddit                    |
-| visualization   | Visualizes data                                |
-| umi             | Files related to UMI workflow                  |
-| umi-cram        | UMI consensus filtered cram file               |
-| umi-cram-index  | Index for the UMI consensus filtered cram file |
+| Tag name        | Description                                     |
+|-----------------|-------------------------------------------------|
+| assembly        | Assembly                                        |
+| autozyg         | Autozygous region                               |
+| bed             | Bed file                                        |
+| bed-index       | Following index                                 |
+| bigwig          | Bigwig formated file                            |
+| clinical        | Clinical subset                                 |
+| config          | Config file                                     |
+| coverage        | Output with coverage information                |
+| diagram         | Data diagram                                    |
+| scatter         | Scatter plot                                    |
+| filtered        | Filtered data                                   |
+| fracsnp         | Fraction of reads with snp                      |
+| fusion          | Fusion transcripts                              |
+| genes           | Related to genes                                |
+| junction        | Junction data                                   |
+| metrics         | Data metrics                                    |
+| first-pass      | Data metrics first pass                         |
+| second-pass     | Data metrics second pass                        |
+| reference-info  | Information about references used in analysis   |
+| regions         | Output for regions                              |
+| research        | Research set                                    |
+| segments        | Output for segments                             |
+| sites           | Output for sites                                |
+| tcov            | Coverage output                                 |
+| tiddit-coverage | Coverage output from tiddit                     |
+| visualization   | Visualizes data                                 |
+| umi             | Files related to UMI workflow                   |
+| umi-cram        | UMI consensus filtered cram file                |
+| umi-cram-index  | Index for the UMI consensus filtered cram file  |
+| qc-cram         | QC alignment file in CRAM format                |
+| qc-cram-index   | QC index file for alignment file in CRAM format |
 
 ## FAMILY TAGS
 
@@ -110,6 +112,7 @@
 | vardict          | Cancer variant caller                                         |
 | wisecondor       | NIPT caller                                                   |
 | gens             | CNV visualization tool                                        |
+| tiddit           | Tool to identify chromosomal rearrangements                   |
 
 ## VALIDATION TAGS
 
