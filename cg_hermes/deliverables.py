@@ -4,11 +4,21 @@ import logging
 from typing import Dict, FrozenSet, List, Optional, Set
 
 from cg_hermes.config.balsamic import (
-    BALSAMIC_COMMON_TAGS,
+    BALSAMIC_TAGS,
     TUMOR_NORMAL_PANEL_TAGS,
     TUMOR_NORMAL_WGS_TAGS,
     TUMOR_ONLY_PANEL_TAGS,
     TUMOR_ONLY_WGS_TAGS,
+)
+from cg_hermes.config.balsamic_qc import (
+    BALSAMIC_QC_TAGS,
+    QC_TUMOR_NORMAL_WGS_TAGS,
+    QC_TUMOR_NORMAL_PANEL_TAGS,
+)
+from cg_hermes.config.balsamic_umi import (
+    BALSAMIC_UMI_TAGS,
+    UMI_TUMOR_ONLY_PANEL_TAGS,
+    UMI_TUMOR_NORMAL_PANEL_TAGS,
 )
 from cg_hermes.config.fluffy import FLUFFY_COMMON_TAGS
 from cg_hermes.config.microsalt import MICROSALT_COMMON_TAGS
@@ -59,7 +69,7 @@ class Deliverables:
             self.model: FluffyDeliverables = FluffyDeliverables.parse_obj(self.raw_deliverables)
             self.files = self.get_fluffy_files()
             self.configs = Deliverables.build_internal_tag_map(FLUFFY_COMMON_TAGS)
-        elif self.pipeline == Pipeline.BALSAMIC:
+        elif Pipeline.BALSAMIC in self.pipeline:
             self.model: BalsamicDeliverables = BalsamicDeliverables.parse_obj(self.raw_deliverables)
             self.files = self.get_balsamic_files()
             self.configs = Deliverables.build_internal_tag_map(self.get_balsamic_analysis_configs())
@@ -138,14 +148,32 @@ class Deliverables:
         )
 
     def get_balsamic_analysis_configs(self) -> Dict[FrozenSet[str], dict]:
-        if self.analysis_type == AnalysisType.tumor_wgs:
-            tag_set = TUMOR_ONLY_WGS_TAGS
-        elif self.analysis_type == AnalysisType.tumor_normal_wgs:
-            tag_set = TUMOR_NORMAL_WGS_TAGS
-        elif self.analysis_type == AnalysisType.tumor_panel:
-            tag_set = TUMOR_ONLY_PANEL_TAGS
-        else:
-            tag_set = TUMOR_NORMAL_PANEL_TAGS
+        """Extracts all the BALSAMIC mandatory files depending on the analysis workflow and type executed"""
+
+        BALSAMIC_COMMON_TAGS = []
+        tag_set = []
+        if self.pipeline == Pipeline.BALSAMIC:
+            BALSAMIC_COMMON_TAGS = BALSAMIC_TAGS
+            if self.analysis_type == AnalysisType.tumor_wgs:
+                tag_set = TUMOR_ONLY_WGS_TAGS
+            elif self.analysis_type == AnalysisType.tumor_normal_wgs:
+                tag_set = TUMOR_NORMAL_WGS_TAGS
+            elif self.analysis_type == AnalysisType.tumor_panel:
+                tag_set = TUMOR_ONLY_PANEL_TAGS
+            else:
+                tag_set = TUMOR_NORMAL_PANEL_TAGS
+        elif self.pipeline == Pipeline.BALSAMIC_QC:
+            BALSAMIC_COMMON_TAGS = BALSAMIC_QC_TAGS
+            if self.analysis_type == AnalysisType.tumor_normal_wgs:
+                tag_set = QC_TUMOR_NORMAL_WGS_TAGS
+            elif self.analysis_type == AnalysisType.tumor_normal_panel:
+                tag_set = QC_TUMOR_NORMAL_PANEL_TAGS
+        elif self.pipeline == Pipeline.BALSAMIC_UMI:
+            BALSAMIC_COMMON_TAGS = BALSAMIC_UMI_TAGS
+            if self.analysis_type == AnalysisType.tumor_panel:
+                tag_set = UMI_TUMOR_ONLY_PANEL_TAGS
+            else:
+                tag_set = UMI_TUMOR_NORMAL_PANEL_TAGS
 
         updated_tags = copy.deepcopy(BALSAMIC_COMMON_TAGS)
         for tag_name in tag_set:

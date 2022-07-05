@@ -15,8 +15,8 @@ def get_deliverables_obj(
     pipeline: Pipeline,
     analysis_type: Optional[AnalysisType] = None,
 ) -> Deliverables:
-    if pipeline == Pipeline.BALSAMIC and not analysis_type:
-        LOG.info("Please specify analysis type for balsamic")
+    if Pipeline.BALSAMIC in pipeline and not analysis_type:
+        LOG.error(f"Please specify analysis type for {pipeline}")
         raise SyntaxError
     return Deliverables(deliverables=deliverables, pipeline=pipeline, analysis_type=analysis_type)
 

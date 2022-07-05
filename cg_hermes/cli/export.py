@@ -1,10 +1,11 @@
+import copy
 import logging
 from enum import Enum
 
 import typer
 from tabulate import tabulate
 
-from cg_hermes.config.balsamic import BALSAMIC_COMMON_TAGS
+from cg_hermes.config.balsamic_umi import BALSAMIC_UMI_TAGS
 from cg_hermes.config.fluffy import FLUFFY_COMMON_TAGS
 from cg_hermes.config.microsalt import MICROSALT_COMMON_TAGS
 from cg_hermes.config.mip_dna import MIP_DNA_TAGS
@@ -35,6 +36,8 @@ class OutputFormat(str, Enum):
     github = "github"
     plain = "plain"
 
+
+BALSAMIC_COMMON_TAGS = copy.deepcopy(BALSAMIC_UMI_TAGS)
 
 PIPELINE_MAP = {
     Pipeline.MIP_DNA: {

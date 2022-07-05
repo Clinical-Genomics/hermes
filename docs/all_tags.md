@@ -10,37 +10,39 @@
 
 ## ANALYSIS TAGS
 
-| Tag name        | Description                                    |
-|-----------------|------------------------------------------------|
-| assembly        | Assembly                                       |
-| autozyg         | Autozygous region                              |
-| bed             | Bed file                                       |
-| bed-index       | Following index                                |
-| bigwig          | Bigwig formated file                           |
-| clinical        | Clinical subset                                |
-| config          | Config file                                    |
-| coverage        | Output with coverage information               |
-| diagram         | Data diagram                                   |
-| scatter         | Scatter plot                                   |
-| filtered        | Filtered data                                  |
-| fracsnp         | Fraction of reads with snp                     |
-| fusion          | Fusion transcripts                             |
-| genes           | Related to genes                               |
-| junction        | Junction data                                  |
-| metrics         | Data metrics                                   |
-| first-pass      | Data metrics first pass                        |
-| second-pass     | Data metrics second pass                       |
-| reference-info  | Information about references used in analysis  |
-| regions         | Output for regions                             |
-| research        | Research set                                   |
-| segments        | Output for segments                            |
-| sites           | Output for sites                               |
-| tcov            | Coverage output                                |
-| tiddit-coverage | Coverage output from tiddit                    |
-| visualization   | Visualizes data                                |
-| umi             | Files related to UMI workflow                  |
-| umi-cram        | UMI consensus filtered cram file               |
-| umi-cram-index  | Index for the UMI consensus filtered cram file |
+| Tag name        | Description                                     |
+|-----------------|-------------------------------------------------|
+| assembly        | Assembly                                        |
+| autozyg         | Autozygous region                               |
+| bed             | Bed file                                        |
+| bed-index       | Following index                                 |
+| bigwig          | Bigwig formated file                            |
+| clinical        | Clinical subset                                 |
+| config          | Config file                                     |
+| coverage        | Output with coverage information                |
+| diagram         | Data diagram                                    |
+| scatter         | Scatter plot                                    |
+| filtered        | Filtered data                                   |
+| fracsnp         | Fraction of reads with snp                      |
+| fusion          | Fusion transcripts                              |
+| genes           | Related to genes                                |
+| junction        | Junction data                                   |
+| metrics         | Data metrics                                    |
+| first-pass      | Data metrics first pass                         |
+| second-pass     | Data metrics second pass                        |
+| reference-info  | Information about references used in analysis   |
+| regions         | Output for regions                              |
+| research        | Research set                                    |
+| segments        | Output for segments                             |
+| sites           | Output for sites                                |
+| tcov            | Coverage output                                 |
+| tiddit-coverage | Coverage output from tiddit                     |
+| visualization   | Visualizes data                                 |
+| umi             | Files related to UMI workflow                   |
+| umi-cram        | UMI consensus filtered cram file                |
+| umi-cram-index  | Index for the UMI consensus filtered cram file  |
+| qc-cram         | QC alignment file in CRAM format                |
+| qc-cram-index   | QC index file for alignment file in CRAM format |
 
 ## FAMILY TAGS
 
@@ -110,6 +112,7 @@
 | vardict          | Cancer variant caller                                         |
 | wisecondor       | NIPT caller                                                   |
 | gens             | CNV visualization tool                                        |
+| tiddit           | Tool to identify chromosomal rearrangements                   |
 
 ## VALIDATION TAGS
 
@@ -121,41 +124,41 @@
 
 ## VARIANT TAGS
 
-| Tag name               | Description                                         |
-|------------------------|-----------------------------------------------------|
-| cnv                    | Copy number variants                                |
-| normal                 | Associated with normal sample                       |
-| germline               | Associated with germline variants                   |
-| somatic                | Associated with somatic variants                    |
-| rhocall-viz            | Runs of homozygosity index                          |
-| smn-calling            | Copy number calls for the SMN gene                  |
-| snv                    | Single nucleotide variants and short indels         |
-| snv-bcf                | Gvcf including all SNV variants                     |
-| snv-gbcf               | Gvcf including all SNV variants                     |
-| sv-bcf                 | Gvcf including all SV variants                      |
-| sv-vcf                 | Variant call formated file with structural variants |
-| sv-vcf-index           | Following index                                     |
-| telomere-calling       | Variants from telomere calling                      |
-| tmb                    | Tumor mutational burden information                 |
-| tumor                  | Associated with tumor sample                        |
-| upd                    | Uniparental disomy variants                         |
-| vcf                    | Variant call formated file                          |
-| vcf-index              | Following index                                     |
-| vcf-snv-filtered       | SNV variants filtered by BALSAMIC                   |
-| vcf-snv-filtered-index | Following index                                     |
-| vcf-snv-clinical       | SNV variants from clinical panels                   |
-| vcf-snv-clinical-index | Following index                                     |
-| vcf-snv-research       | SNV variants from whole genome                      |
-| vcf-snv-research-index | Following index                                     |
-| vcf-str                | Short tandem repeat variants                        |
-| vcf-str-index          | Following index                                     |
-| vcf-sv-clinical        | SV variants from clinical panels                    |
-| vcf-sv-clinical-index  | Following index                                     |
-| vcf-sv-research        | SV variants from whole genome                       |
-| vcf-sv-research-index  | Following index                                     |
-| vcf-umi-clinical       | SNV UMI variants from clinical panels               |
-| vcf-umi-clinical-index | Following index                                     |
-| vcf-umi-research       | SNV UMI variant formatted file                      |
-| vcf-umi-research-index | Following index                                     |
-| vcf2cytosure           | Conversion from vcf format to cytosure format       |
-| variants               | File pertaining variant information in some way     |
+| Tag name                   | Description                                         |
+|----------------------------|-----------------------------------------------------|
+| cnv                        | Copy number variants                                |
+| normal                     | Associated with normal sample                       |
+| germline                   | Associated with germline variants                   |
+| somatic                    | Associated with somatic variants                    |
+| rhocall-viz                | Runs of homozygosity index                          |
+| smn-calling                | Copy number calls for the SMN gene                  |
+| snv                        | Single nucleotide variants and short indels         |
+| snv-bcf                    | Gvcf including all SNV variants                     |
+| snv-gbcf                   | Gvcf including all SNV variants                     |
+| sv-bcf                     | Gvcf including all SV variants                      |
+| sv-vcf                     | Variant call formated file with structural variants |
+| sv-vcf-index               | Following index                                     |
+| telomere-calling           | Variants from telomere calling                      |
+| tmb                        | Tumor mutational burden information                 |
+| tumor                      | Associated with tumor sample                        |
+| upd                        | Uniparental disomy variants                         |
+| vcf                        | Variant call formated file                          |
+| vcf-index                  | Following index                                     |
+| vcf-snv-filtered           | SNV variants filtered by BALSAMIC                   |
+| vcf-snv-filtered-index     | Following index                                     |
+| vcf-snv-clinical           | SNV variants from clinical panels                   |
+| vcf-snv-clinical-index     | Following index                                     |
+| vcf-snv-research           | SNV variants from whole genome                      |
+| vcf-snv-research-index     | Following index                                     |
+| vcf-str                    | Short tandem repeat variants                        |
+| vcf-str-index              | Following index                                     |
+| vcf-sv-clinical            | SV variants from clinical panels                    |
+| vcf-sv-clinical-index      | Following index                                     |
+| vcf-sv-research            | SV variants from whole genome                       |
+| vcf-sv-research-index      | Following index                                     |
+| vcf-umi-snv-clinical       | SNV UMI variants from clinical panels               |
+| vcf-umi-snv-clinical-index | Following index                                     |
+| vcf-umi-snv-research       | SNV UMI variant formatted file                      |
+| vcf-umi-snv-research-index | Following index                                     |
+| vcf2cytosure               | Conversion from vcf format to cytosure format       |
+| variants                   | File pertaining variant information in some way     |

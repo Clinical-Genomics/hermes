@@ -56,10 +56,10 @@ VARIANT_COMMON = {
     "vcf-sv-clinical-index": {"description": "Following index"},
     "vcf-sv-research": {"description": "SV variants from whole genome"},
     "vcf-sv-research-index": {"description": "Following index"},
-    "vcf-umi-clinical": {"description": "SNV UMI variants from clinical panels"},
-    "vcf-umi-clinical-index": {"description": "Following index"},
-    "vcf-umi-research": {"description": "SNV UMI variant formatted file"},
-    "vcf-umi-research-index": {"description": "Following index"},
+    "vcf-umi-snv-clinical": {"description": "SNV UMI variants from clinical panels"},
+    "vcf-umi-snv-clinical-index": {"description": "Following index"},
+    "vcf-umi-snv-research": {"description": "SNV UMI variant formatted file"},
+    "vcf-umi-snv-research-index": {"description": "Following index"},
     "vcf2cytosure": {"description": "Conversion from vcf format to cytosure format"},
     "variants": {"description": "File pertaining variant information in some way"},
 }
@@ -121,6 +121,8 @@ ANALYSIS_COMMON = {
     "umi": {"description": "Files related to UMI workflow"},
     "umi-cram": {"description": "UMI consensus filtered cram file"},
     "umi-cram-index": {"description": "Index for the UMI consensus filtered cram file"},
+    "qc-cram": {"description": "QC alignment file in CRAM format"},
+    "qc-cram-index": {"description": "QC index file for alignment file in CRAM format"},
 }
 
 TOOLS = {
@@ -153,6 +155,7 @@ TOOLS = {
     "vardict": {"description": "Cancer variant caller"},
     "wisecondor": {"description": "NIPT caller"},
     "gens": {"description": "CNV visualization tool"},
+    "tiddit": {"description": "Tool to identify chromosomal rearrangements"},
 }
 
 MIP_SPECIFIC = {

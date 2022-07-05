@@ -82,9 +82,9 @@
             "format": "sample_name_map"
         },
         {
-            "path": "TN-panel/analysis/vcf/SNV.somatic.TN-panel.TNscope_umi.vcf.gz",
+            "path": "TN-panel/analysis/vcf/SNV.somatic.TN-panel.tnscope_umi.vcf.gz",
             "path_index": [
-                "TN-panel/analysis/vcf/SNV.somatic.TN-panel.TNscope_umi.vcf.gz.tbi"
+                "TN-panel/analysis/vcf/SNV.somatic.TN-panel.tnscope_umi.vcf.gz.tbi"
             ],
             "step": "sentieon_tnscope_umi_tn",
             "tag": [
@@ -95,7 +95,7 @@
             "format": "vcf.gz"
         },
         {
-            "path": "TN-panel/analysis/vcf/SNV.somatic.TN-panel.TNscope_umi.vcf.gz.tbi",
+            "path": "TN-panel/analysis/vcf/SNV.somatic.TN-panel.tnscope_umi.vcf.gz.tbi",
             "path_index": "",
             "step": "sentieon_tnscope_umi_tn",
             "tag": [
@@ -106,7 +106,7 @@
             "format": "vcf.gz.tbi"
         },
         {
-            "path": "TN-panel/analysis/vcf/SNV.somatic.TN-panel.TNscope_umi.sample_name_map",
+            "path": "TN-panel/analysis/vcf/SNV.somatic.TN-panel.tnscope_umi.sample_name_map",
             "path_index": [],
             "step": "sentieon_tnscope_umi_tn",
             "tag": [
@@ -169,9 +169,9 @@
             "format": "crai"
         },
         {
-            "path": "TN-panel/analysis/vep/SNV.somatic.TN-panel.TNscope_umi.all.filtered.vcf.gz",
+            "path": "TN-panel/analysis/vep/SNV.somatic.TN-panel.tnscope_umi.all.filtered.vcf.gz",
             "path_index": [
-                "TN-panel/analysis/vep/SNV.somatic.TN-panel.TNscope_umi.all.filtered.vcf.gz.tbi"
+                "TN-panel/analysis/vep/SNV.somatic.TN-panel.tnscope_umi.all.filtered.vcf.gz.tbi"
             ],
             "step": "bcftools_filter_TNscope_umi_tumor_normal",
             "tag": [
@@ -184,7 +184,7 @@
             "format": "vcf.gz"
         },
         {
-            "path": "TN-panel/analysis/vep/SNV.somatic.TN-panel.TNscope_umi.all.filtered.vcf.gz.tbi",
+            "path": "TN-panel/analysis/vep/SNV.somatic.TN-panel.tnscope_umi.all.filtered.vcf.gz.tbi",
             "path_index": "",
             "step": "bcftools_filter_TNscope_umi_tumor_normal",
             "tag": [
@@ -197,13 +197,13 @@
             "format": "vcf.gz.tbi"
         },
         {
-            "path": "TN-panel/analysis/vep/SNV.somatic.TN-panel.TNscope_umi.all.filtered.pass.vcf.gz",
+            "path": "TN-panel/analysis/vep/SNV.somatic.TN-panel.tnscope_umi.all.filtered.pass.vcf.gz",
             "path_index": [
-                "TN-panel/analysis/vep/SNV.somatic.TN-panel.TNscope_umi.all.filtered.pass.vcf.gz.tbi"
+                "TN-panel/analysis/vep/SNV.somatic.TN-panel.tnscope_umi.all.filtered.pass.vcf.gz.tbi"
             ],
             "step": "bcftools_filter_TNscope_umi_tumor_normal",
             "tag": [
-                "research-vcf-pass-TNscope-umi",
+                "clinical-vcf-pass-TNscope-umi",
                 "vcf-pass-TNscope-umi",
                 "TN-panel",
                 "SNV"
@@ -212,11 +212,11 @@
             "format": "vcf.gz"
         },
         {
-            "path": "TN-panel/analysis/vep/SNV.somatic.TN-panel.TNscope_umi.all.filtered.pass.vcf.gz.tbi",
+            "path": "TN-panel/analysis/vep/SNV.somatic.TN-panel.tnscope_umi.all.filtered.pass.vcf.gz.tbi",
             "path_index": "",
             "step": "bcftools_filter_TNscope_umi_tumor_normal",
             "tag": [
-                "research-vcf-pass-TNscope-umi-index",
+                "clinical-vcf-pass-TNscope-umi-index",
                 "vcf-pass-TNscope-umi",
                 "TN-panel",
                 "SNV"
@@ -225,7 +225,7 @@
             "format": "vcf.gz.tbi"
         },
         {
-            "path": "TN-panel/analysis/vep/SNV.somatic.TN-panel.TNscope_umi.all.filtered.pass.stats",
+            "path": "TN-panel/analysis/vep/SNV.somatic.TN-panel.tnscope_umi.all.filtered.pass.stats",
             "path_index": [],
             "step": "bcftools_filter_TNscope_umi_tumor_normal",
             "tag": [
@@ -363,8 +363,8 @@
             "path_index": [],
             "step": "vcf2cytosure_convert",
             "tag": [
-                "cnv-somatic-cgh-file",
-                "cgh-file"
+                "cnv-somatic-cgh-tumor",
+                "cgh-tumor"
             ],
             "id": "TN-panel",
             "format": "cgh"
@@ -590,6 +590,28 @@
             "format": "vcf.gz.tbi"
         },
         {
+            "path": "TN-panel/analysis/vep/SNV.genotype.normal.dnascope.vcf.gz",
+            "path_index": "TN-panel/analysis/vep/SNV.genotype.normal.dnascope.vcf.gz.tbi",
+            "step": "vcfheader_rename_germline",
+            "tag": [
+                "vcf-dnascope",
+                "genotype-vcf-dnascope",
+            ],
+            "id": "TN-panel",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "TN-panel/analysis/vep/SNV.genotype.normal.dnascope.vcf.gz.tbi",
+            "path_index": "",
+            "step": "vcfheader_rename_germline",
+            "tag": [
+                "vcf-dnascope",
+                "genotype-vcf-dnascope-index",
+            ],
+            "id": "TN-panel",
+            "format": "vcf.gz.tbi"
+        },
+        {
             "path": "TN-panel/analysis/umi/tumor_umi_consensusfiltered.merged.bam",
             "path_index": [
                 "TN-panel/analysis/umi/tumor_umi_consensusfiltered.merged.bam.bai"
@@ -744,6 +766,17 @@
             ],
             "id": "TN-panel",
             "format": "pdf"
+        },
+        {
+            "path": "TN-panel/analysis/vcf/CNV.somatic.TN-panel.dellycnv.cov.gz",
+            "path_index": [],
+            "step": "delly_cnv_tumor_only",
+            "tag": [
+                "clinical-rd-delly",
+                "rd-delly"
+            ],
+            "id": "TN-panel",
+            "format": "gz"
         },
         {
             "path": "TN-panel/analysis/qc/TN-panel_metrics_deliverables.yaml",

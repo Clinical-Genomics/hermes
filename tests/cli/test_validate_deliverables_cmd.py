@@ -54,3 +54,49 @@ def test_validate_balsamic_deliverables_file(
 
     # THEN assert it exits without problem
     assert result.exit_code == 0
+
+
+def test_validate_balsamic_umi_deliverables_file(
+    cli_runner: CliRunner, balsamic_tn_panel_deliverables: Path
+):
+    # GIVEN a existing balsamic deliverables file and a CLI runner
+    assert balsamic_tn_panel_deliverables.exists()
+
+    # WHEN running the validate deliverables command
+    result = cli_runner.invoke(
+        app,
+        [
+            "deliverables",
+            str(balsamic_tn_panel_deliverables),
+            "--pipeline",
+            "balsamic-umi",
+            "--analysis-type",
+            "tumor_normal_panel",
+        ],
+    )
+
+    # THEN assert it exits without problem
+    assert result.exit_code == 0
+
+
+def test_validate_balsamic_qc_deliverables_file(
+    cli_runner: CliRunner, balsamic_tn_panel_deliverables: Path
+):
+    # GIVEN a existing balsamic deliverables file and a CLI runner
+    assert balsamic_tn_panel_deliverables.exists()
+
+    # WHEN running the validate deliverables command
+    result = cli_runner.invoke(
+        app,
+        [
+            "deliverables",
+            str(balsamic_tn_panel_deliverables),
+            "--pipeline",
+            "balsamic-qc",
+            "--analysis-type",
+            "tumor_normal_panel",
+        ],
+    )
+
+    # THEN assert it exits without problem
+    assert result.exit_code == 0

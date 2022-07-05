@@ -108,6 +108,17 @@
             "format": "stats"
         },
         {
+            "path": "TN-wgs/analysis/vcf/CNV.somatic.TN-wgs.dellycnv.cov.gz",
+            "path_index": [],
+            "step": "delly_cnv_tumor_only",
+            "tag": [
+                "rd-delly",
+                "clinical-rd-delly"
+            ],
+            "id": "TN-wgs",
+            "format": "gz"
+        },
+        {
             "path": "TN-wgs/analysis/qc/TN-wgs_metrics_deliverables.yaml",
             "path_index": [],
             "step": "collect_custom_qc_metrics",
@@ -375,6 +386,28 @@
             "format": "vcf.gz.tbi"
         },
         {
+            "path": "TN-WGS/analysis/vep/SNV.germline.normal.dnascope.genotype.vcf.gz",
+            "path_index": "TN-WGS/analysis/vep/SNV.germline.normal.dnascope.genotype.vcf.gz.tbi",
+            "step": "vcfheader_rename_germline",
+            "tag": [
+                "vcf-dnascope",
+                "genotype-vcf-dnascope",
+            ],
+            "id": "TN-WGS",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "TN-WGS/analysis/vep/SNV.germline.normal.dnascope.genotype.vcf.gz.tbi",
+            "path_index": "",
+            "step": "vcfheader_rename_germline",
+            "tag": [
+                "vcf-dnascope",
+                "genotype-vcf-dnascope-index",
+            ],
+            "id": "TN-WGS",
+            "format": "vcf.gz.tbi"
+        },
+        {
             "path": "TN-wgs/analysis/vcf/SV.somatic.TN-wgs.svdb.vcf.gz",
             "path_index": [
                 "TN-wgs/analysis/vcf/SV.somatic.TN-wgs.svdb.vcf.gz.tbi"
@@ -493,6 +526,50 @@
             ],
             "id": "TN-wgs",
             "format": "pdf"
+        },
+        {
+            "path": "TN-wgs/analysis/vcf/SV.somatic.TN-wgs.tumor.tiddit_cov.bed",
+            "path_index": [],
+            "step": "tiddit_sv_tumor_normal",
+            "tag": [
+                "cov-tumor-tiddit",
+                "clinical-cov-tumor-tiddit"
+            ],
+            "id": "TN-wgs",
+            "format": "bed"
+        },
+        {
+            "path": "TN-wgs/analysis/vcf/SV.somatic.TN-wgs.normal.tiddit_cov.bed",
+            "path_index": [],
+            "step": "tiddit_sv_tumor_normal",
+            "tag": [
+                "cov-normal-tiddit",
+                "clinical-cov-normal-tiddit"
+            ],
+            "id": "TN-wgs",
+            "format": "bed"
+        },
+        {
+            "path": "TN-wgs/analysis/vcf/CNV.somatic.TN-wgs.tumor.vcf2cytosure.bed",
+            "path_index": [],
+            "step": "vcf2cytosure_convert_tumor_normal",
+            "tag": [
+                "cgh-tumor",
+                "cnv-somatic-cgh-tumor"
+            ],
+            "id": "TN-wgs",
+            "format": "cgh"
+        },
+        {
+            "path": "TN-wgs/analysis/vcf/CNV.somatic.TN-wgs.normal.vcf2cytosure.bed",
+            "path_index": [],
+            "step": "vcf2cytosure_convert_tumor_normal",
+            "tag": [
+                "cgh-normal",
+                "cnv-somatic-cgh-normal"
+            ],
+            "id": "TN-wgs",
+            "format": "cgh"
         },
         {
             "path": "TN-wgs/analysis/delivery_report/TN-wgs_report.html",

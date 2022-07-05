@@ -30,7 +30,7 @@ python-versions = ">=3.5"
 
 [[package]]
 name = "cgmodels"
-version = "0.4.0"
+version = "0.10.1"
 description = "Models used at clinical genomics"
 category = "main"
 optional = false
@@ -457,8 +457,8 @@ bump2version = [
     {file = "bump2version-1.0.1.tar.gz", hash = "sha256:762cb2bfad61f4ec8e2bdf452c7c267416f8c70dd9ecb1653fd0bbb01fa936e6"},
 ]
 cgmodels = [
-    {file = "cgmodels-0.4.0-py3-none-any.whl", hash = "sha256:420c3a7fd12d5b7c24fa804e414eb6f82ee7ac1f22ae02cd7f3f3b23aebbbdc4"},
-    {file = "cgmodels-0.4.0.tar.gz", hash = "sha256:d81e9eddf3862ff2fece1ffe1ba7bf70c057c446e6057356141bc0e7fdb5c9cb"},
+    {file = "cgmodels-0.10.1-py3-none-any.whl", hash = "sha256:f7de660e0a6c648ba4f7fe7f73e028bf6117f729143b3bb3592d5b3cbcb59af0"},
+    {file = "cgmodels-0.10.1.tar.gz", hash = "sha256:1dda85320621e00e056230fbfc7d6b5f31b68f169c2a933363deb85092af47c4"},
 ]
 click = [
     {file = "click-7.1.2-py2.py3-none-any.whl", hash = "sha256:dacca89f4bfadd5de3d7489b7c8a566eee0d3676333fbb50030263894c38c0dc"},

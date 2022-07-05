@@ -92,6 +92,17 @@
             "format": "json"
         },
         {
+            "path": "T-wgs/analysis/vcf/CNV.somatic.T-wgs.dellycnv.cov.gz",
+            "path_index": [],
+            "step": "delly_cnv_tumor_only",
+            "tag": [
+                "rd-delly",
+                "clinical-rd-delly"
+            ],
+            "id": "T-wgs",
+            "format": "gz"
+        },
+        {
             "path": "T-wgs/analysis/qc/T-wgs_metrics_deliverables.yaml",
             "path_index": [],
             "step": "collect_custom_qc_metrics",
@@ -341,15 +352,26 @@
             "format": "bcf"
         },
         {
-            "path": "T-wgs/analysis/vcf/CNV.somatic.T-wgs.dellycnv.cov.gz",
+            "path": "T-wgs/analysis/vcf/SV.somatic.T-wgs.tumor.tiddit_cov.bed",
             "path_index": [],
-            "step": "delly_cnv_tumor_only",
+            "step": "tiddit_sv_tumor_only",
             "tag": [
-                "rd-delly",
-                "clinical-rd-delly"
+                "cov-tumor-tiddit",
+                "clinical-cov-tumor-tiddit"
             ],
             "id": "T-wgs",
-            "format": "gz"
+            "format": "bed"
+        },
+        {
+            "path": "T-wgs/analysis/vcf/CNV.somatic.T-wgs.tumor.vcf2cytosure.cgh",
+            "path_index": [],
+            "step": "vcf2cytosure_convert_tumor_only",
+            "tag": [
+                "cgh-tumor",
+                "cnv-somatic-cgh-tumor"
+            ],
+            "id": "T-wgs",
+            "format": "cgh"
         },
         {
             "path": "T-wgs/analysis/delivery_report/T-wgs_report.html",
