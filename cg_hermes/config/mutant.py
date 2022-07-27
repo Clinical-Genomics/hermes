@@ -31,7 +31,7 @@ MUTANT_COMMON_TAGS = {
         "used_by": ["storage"],
     },
     frozenset({"reverse-reads", "concatination"}): {
-        "is_mandatory": True,
+        "is_mandatory": False,
         "tags": ["fastq", "reverse-strand"],
         "used_by": ["storage"],
     },
