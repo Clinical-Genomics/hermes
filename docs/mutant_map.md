@@ -6,7 +6,7 @@
 | software-versions, runinfo            | True      | software-versions                                              | storage, audit   |
 | runinfo, logfile                      | True      | mutant-log                                                     | audit            |
 | concatination, forward-reads          | True      | fastq, forward-strand                                          | storage          |
-| concatination, reverse-reads          | True      | fastq, reverse-strand                                          | storage          |
+| concatination, reverse-reads          | False     | fastq, reverse-strand                                          | storage          |
 | SARS-CoV-2-info, report               | False     | fohm-delivery, komplettering, visualization                    | deliver          |
 | SARS-CoV-2-qc, result_aggregation     | False     | fohm-delivery, pangolin-typing, csv, visualization             | audit            |
 | pangolin-typing, report               | False     | fohm-delivery, pangolin-typing, csv, visualization             | audit            |
