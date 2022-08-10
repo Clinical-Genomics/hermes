@@ -29,6 +29,7 @@ RNAFUSION_COMMON_TAGS = {
         "is_mandatory": False,
         "tags": ["star-fusion"],
         "used_by": ["cg"],
+        "bundle_id": True,
     },
     frozenset({"squid"}): {
         "is_mandatory": True,
