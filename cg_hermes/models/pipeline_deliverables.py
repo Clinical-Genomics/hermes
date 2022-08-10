@@ -39,9 +39,9 @@ class MutantFile(FileBase):
 class RnafusionFile(FileBase):
     """Definition for elements in Rnafusion deliverables"""
 
-    format: Optional[str]
-    tag: List[str]
-
+    format: str
+    path_index: Optional[str]
+    step: str
 
 class BalsamicFile(FileBase):
     """Definition of elements in balsamic deliverables"""
