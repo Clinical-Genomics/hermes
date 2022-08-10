@@ -8,12 +8,12 @@ mandatory by default. However the tags that are available to a particular analys
 RNAFUSION_COMMON_TAGS = {
     frozenset({"arriba_fusions"}): {
         "is_mandatory": True,
-        "tags": ["arriba_fusions"],
+        "tags": ["arriba"],
         "used_by": ["cg"],
     },
     frozenset({"fusioncatcher_fusions"}): {
         "is_mandatory": True,
-        "tags": ["fusioncatcher_fusions"],
+        "tags": ["fusioncatcher"],
         "used_by": ["cg"],
     },
     frozenset({"fusioncatcher_summary"}): {
@@ -23,17 +23,17 @@ RNAFUSION_COMMON_TAGS = {
     },
     frozenset({"pizzly_fusions"}): {
         "is_mandatory": True,
-        "tags": ["pizzly_fusions"],
+        "tags": ["pizzly"],
         "used_by": ["cg"],
     },
     frozenset({"starfusions_fusions"}): {
         "is_mandatory": True,
-        "tags": ["starfusions_fusions"],
+        "tags": ["star-fusion"],
         "used_by": ["cg"],
     },
     frozenset({"squid_fusions"}): {
         "is_mandatory": True,
-        "tags": ["squid_fusions"],
+        "tags": ["squid"],
         "used_by": ["cg"],
     },
 }
