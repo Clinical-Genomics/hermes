@@ -7,15 +7,10 @@ mandatory by default. However the tags that are available to a particular analys
 # TODO
 RNAFUSION_COMMON_TAGS = {
     frozenset({"sampleinfo", "runinfo"}): {
-        "is_mandatory": True,
-        "bundle_id": True,
-        "tags": ["config"],
-        "used_by": ["storage", "audit"],
-    },
-    frozenset({"instrument-properties", "report"}): {
         "is_mandatory": False,
-        "tags": ["fohm-delivery", "instrument-properties"],
-        "used_by": ["storage", "audit"],
+        "bundle_id": True,
+        "tags": ["arriba_fusions"],
+        "used_by": ["cg", "storage"],
     },
 }
 #
