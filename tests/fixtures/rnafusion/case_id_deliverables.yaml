@@ -4,7 +4,7 @@ files:
   path: /home/proj/stage/rnafusion/cases/solidfawn/fusioncatcher/solidfawn.fusioncatcher.fusion-genes.txt
   path_index: ~
   step: fusioncatcher
-  tag: fusioncatcher_fusions
+  tag: fusioncatcher
 - format: txt
   id: solidfawn
   path: /home/proj/stage/rnafusion/cases/solidfawn/fusioncatcher/solidfawn.fusioncatcher.summary.txt
@@ -16,22 +16,22 @@ files:
   path: /home/proj/stage/rnafusion/cases/solidfawn/pizzly/solidfawn.pizzly.txt
   path_index: ~
   step: pizzly
-  tag: pizzly_fusions
+  tag: pizzly
 - format: tsv
   id: solidfawn
   path: /home/proj/stage/rnafusion/cases/solidfawn/starfusion/solidfawn.starfusion.fusion_predictions.tsv
   path_index: ~
   step: starfusion
-  tag: starfusions_fusions
+  tag: star-fusion
 - format: tsv
   id: solidfawn
   path: /home/proj/stage/rnafusion/cases/solidfawn/arriba/solidfawn.arriba.fusions.tsv
   path_index: ~
   step: arriba
-  tag: arriba_fusions
+  tag: arriba
 - format: tsv
   id: solidfawn
   path: /home/proj/stage/rnafusion/cases/solidfawn/arriba/solidfawn.squid.fusions.annotated.txt
   path_index: ~
   step: squid
-  tag: squid_fusions
+  tag: squid
