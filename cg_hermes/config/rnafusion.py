@@ -4,7 +4,6 @@ The tag sets that exists in all files are set to mandatory. Tag sets that exists
 mandatory by default. However the tags that are available to a particular analysis is mandatory for that analysis.
 """
 
-# TODO
 RNAFUSION_COMMON_TAGS = {
     frozenset({"arriba"}): {
         "is_mandatory": True,
@@ -27,7 +26,7 @@ RNAFUSION_COMMON_TAGS = {
         "used_by": ["cg"],
     },
     frozenset({"star-fusion"}): {
-        "is_mandatory": True,
+        "is_mandatory": False,
         "tags": ["star-fusion"],
         "used_by": ["cg"],
     },
