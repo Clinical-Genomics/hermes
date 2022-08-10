@@ -66,3 +66,15 @@ def test_export_fluffy_tags(cli_runner: CliRunner):
     assert result.exit_code == 0
     # THEN assert that the mip_dna tags was exported
     assert "Fluffy tags" in result.output
+
+
+def test_export_rnafusion_tags(cli_runner: CliRunner):
+    # GIVEN a cli runner
+
+    # WHEN running the export tags command for pipeline rnafusion
+    result = cli_runner.invoke(app, ["--pipeline", "rnafusion"])
+
+    # THEN assert that the command exits without problems
+    assert result.exit_code == 0
+    # THEN assert that the rnafusion tags was exported
+    assert "Rnafusion tags" in result.output

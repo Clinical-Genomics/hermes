@@ -36,6 +36,12 @@ class MutantFile(FileBase):
     format: str
     step: str
 
+class RnafusionFile(FileBase):
+    """Definition for elements in Rnafusion deliverables"""
+
+    format: Optional[str]
+    tag: List[str]
+
 
 class BalsamicFile(FileBase):
     """Definition of elements in balsamic deliverables"""
@@ -87,6 +93,11 @@ class MutantDeliverables(PipelineDeliverables):
     """Specification for a MUTANT specific deliverables file"""
 
     files: List[MutantFile]
+
+class RnafusionDeliverables(PipelineDeliverables):
+    """Specification for a MUTANT specific deliverables file"""
+
+    files: List[RnafusionFile]
 
 
 class CGDeliverables(PipelineDeliverables):

@@ -100,3 +100,16 @@ def test_validate_balsamic_qc_deliverables_file(
 
     # THEN assert it exits without problem
     assert result.exit_code == 0
+
+
+def test_validate_rnafusion_deliverables_file(cli_runner: CliRunner, rnafusion_deliverables: Path):
+    # GIVEN a existing mip_dna deliverables file and a CLI runner
+    assert rnafusion_deliverables.exists()
+
+    # WHEN running the validate deliverables command
+    result = cli_runner.invoke(
+        app, ["deliverables", str(rnafusion_deliverables), "--pipeline", "rnafusion"]
+    )
+
+    # THEN assert it exits without problem
+    assert result.exit_code == 0

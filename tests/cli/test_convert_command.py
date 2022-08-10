@@ -249,3 +249,14 @@ def test_convert_balsamic_qc_tn_wgs_deliverables(
 
     # THEN assert that the program exits with success
     assert result.exit_code == 0
+
+
+def test_convert_rnafusion_deliverables(cli_runner: CliRunner, rnafusion_deliverables: Path):
+    # GIVEN the path to a rnafusion deliverables file
+    assert rnafusion_deliverables.exists()
+
+    # WHEN converting the deliverables to CG format
+    result = cli_runner.invoke(app, [str(rnafusion_deliverables), "--pipeline", "rnafusion"])
+
+    # THEN assert that the program exits with success
+    assert result.exit_code == 0
