@@ -275,7 +275,7 @@ class Deliverables:
             files.append(TagBase(tags=identifier, subject_id=sample_id, path=file_obj.path))
         return files
 
-def get_rnafusion_files(self) ->  List[TagBase]:
+    def get_rnafusion_files(self) ->  List[TagBase]:
         file_obj: pipeline_deliverables.RnafusionFile
         files: List[TagBase] = []
         for file_obj in self.model.files:
