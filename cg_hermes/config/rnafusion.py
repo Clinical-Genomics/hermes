@@ -17,7 +17,7 @@ RNAFUSION_COMMON_TAGS = {
         "used_by": ["cg"],
     },
     frozenset({"fusioncatcher_summary"}): {
-        "is_mandatory": True,
+        "is_mandatory": False,
         "tags": ["fusioncatcher_summary"],
         "used_by": ["cg"],
     },
@@ -26,7 +26,7 @@ RNAFUSION_COMMON_TAGS = {
         "tags": ["pizzly"],
         "used_by": ["cg"],
     },
-    frozenset({"starfusions"}): {
+    frozenset({"star-fusion"}): {
         "is_mandatory": True,
         "tags": ["star-fusion"],
         "used_by": ["cg"],
