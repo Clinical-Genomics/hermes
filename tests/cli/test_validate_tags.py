@@ -73,4 +73,3 @@ def test_cli_validate_rnafusion_tags(cli_runner: CliRunner):
 
     # THEN assert that the validation was successful
     assert result.exit_code == 0
-

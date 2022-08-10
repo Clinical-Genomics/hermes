@@ -94,7 +94,9 @@ class Deliverables:
             self.files = self.get_mip_files()
             self.configs = Deliverables.build_internal_tag_map(MIP_RNA_TAGS)
         elif self.pipeline == Pipeline.RNAFUSION:
-            self.model: RnafusionDeliverables = RnafusionDeliverables.parse_obj(self.raw_deliverables)
+            self.model: RnafusionDeliverables = RnafusionDeliverables.parse_obj(
+                self.raw_deliverables
+            )
             self.files = self.get_rnafusion_files()
             self.configs = Deliverables.build_internal_tag_map(RNAFUSION_COMMON_TAGS)
         else:
@@ -275,7 +277,7 @@ class Deliverables:
             files.append(TagBase(tags=identifier, subject_id=sample_id, path=file_obj.path))
         return files
 
-    def get_rnafusion_files(self) ->  List[TagBase]:
+    def get_rnafusion_files(self) -> List[TagBase]:
         file_obj: pipeline_deliverables.RnafusionFile
         files: List[TagBase] = []
         for file_obj in self.model.files:

@@ -41,10 +41,10 @@ def fixture_microsalt_files(fixtures_dir: Path) -> Path:
 def fixture_mutant_files(fixtures_dir: Path) -> Path:
     return fixtures_dir / "mutant"
 
+
 @pytest.fixture(name="rnafusion_files")
 def fixture_rnafusion_files(fixtures_dir: Path) -> Path:
     return fixtures_dir / "rnafusion"
-
 
 
 # File fixtures
