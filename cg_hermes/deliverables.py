@@ -57,7 +57,7 @@ class Deliverables:
         self.raw_deliverables = deliverables
         self.pipeline = pipeline
         self.analysis_type = analysis_type
-        self.bundle_id: Optional[str] = None
+        self.bundle_id: Optional[str] = False
         self.configs: Dict[FrozenSet[str], TagMap]
         self.files: List[TagBase]
         self.file_identifiers: Set[FrozenSet[str]]
