@@ -7,6 +7,7 @@ mandatory by default. However the tags that are available to a particular analys
 RNAFUSION_COMMON_TAGS = {
     frozenset({"arriba"}): {
         "is_mandatory": True,
+        "bundle_id": True,
         "tags": ["arriba"],
         "used_by": ["cg"],
     },
