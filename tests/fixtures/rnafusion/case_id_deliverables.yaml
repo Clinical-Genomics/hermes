@@ -21,7 +21,7 @@ files:
   id: solidfawn
   path: /home/proj/stage/rnafusion/cases/solidfawn/starfusion/solidfawn.starfusion.fusion_predictions.tsv
   path_index: ~
-  step: starfusion
+  step: star-fusion
   tag: star-fusion
 - format: tsv
   id: solidfawn
