@@ -129,7 +129,6 @@ class Deliverables:
         file_object: TagBase
         for file_object in self.files:
             pipeline_tags = file_object.tags
-            LOG.info(self.configs)
             if pipeline_tags not in self.configs:
                 LOG.warning("Could not find info for file %s", ", ".join(pipeline_tags))
                 continue

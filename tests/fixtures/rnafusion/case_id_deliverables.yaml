@@ -1,10 +1,28 @@
 files:
 - format: tsv
   id: solidfawn
+  path: /home/proj/stage/rnafusion/cases/solidfawn/fusioncatcher/solidfawn.fusioncatcher.fusion-genes.txt
+  path_index: ~
+  step: fusioncatcher
+  tag: fusioncatcher
+- format: txt
+  id: solidfawn
+  path: /home/proj/stage/rnafusion/cases/solidfawn/fusioncatcher/solidfawn.fusioncatcher.summary.txt
+  path_index: ~
+  step: fusioncatcher
+  tag: fusioncatcher_summary
+- format: tsv
+  id: solidfawn
   path: /home/proj/stage/rnafusion/cases/solidfawn/pizzly/solidfawn.pizzly.txt
   path_index: ~
   step: pizzly
   tag: pizzly
+- format: tsv
+  id: solidfawn
+  path: /home/proj/stage/rnafusion/cases/solidfawn/starfusion/solidfawn.starfusion.fusion_predictions.tsv
+  path_index: ~
+  step: starfusion
+  tag: star-fusion
 - format: tsv
   id: solidfawn
   path: /home/proj/stage/rnafusion/cases/solidfawn/arriba/solidfawn.arriba.fusions.tsv
