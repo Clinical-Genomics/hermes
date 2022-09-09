@@ -30,6 +30,17 @@ files:
     path_index: /path/to/rare-disease/cases/case_id/analysis/case_id/expansionhunter/case_id_exphun.vcf.gz.csi
     step: expansionhunter
     tag: sv_str
+  - format: vcf
+    id: sample_id
+    path: /path/to/rare-disease/cases/case_id/analysis/case_id/expansionhunter/case_id_exphun_sample_id.vcf
+    step: expansionhunter
+    tag: str_variants
+  - format: bam
+    id: sample_id
+    path: /path/to/rare-disease/cases/case_id/analysis/case_id/expansionhunter/case_id_exphun_sample_id.bam
+    path_index: /path/to/rare-disease/cases/case_id/analysis/case_id/expansionhunter/case_id_exphun_sample_id.bam.bai
+    step: expansionhunter
+    tag: str_alignments
   - format: bcf
     id: case_id
     path: /path/to/rare-disease/cases/case_id/analysis/case_id/sv_combinevariantcallsets/case_id_comb.bcf
