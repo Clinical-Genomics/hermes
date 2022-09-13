@@ -16,7 +16,7 @@ RNAFUSION_COMMON_TAGS = {
     frozenset({"arriba-visualisation", "arriba"}): {
         "is_mandatory": True,
         "bundle_id": True,
-        "tags": ["arriba-visualisation", "visualisation", "arriba"],
+        "tags": ["arriba-visualisation", "visualization", "arriba"],
         "used_by": ["cg"],
     },
     frozenset({"fusioncatcher"}): {
