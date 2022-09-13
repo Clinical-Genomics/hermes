@@ -36,7 +36,6 @@ from cg_hermes.models.pipeline_deliverables import (
     MicrosaltDeliverables,
     MipDeliverables,
     MutantDeliverables,
-    NextflowDeliverables,
     RnafusionDeliverables,
     PipelineDeliverables,
     TagBase,
