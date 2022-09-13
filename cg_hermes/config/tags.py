@@ -209,6 +209,11 @@ MUTANT_SPECIFIC = {
     },
 }
 
+NEXTFLOW_SPECIFIC = {
+    "samplesheet-valid": {"description": "Validated samplesheet"},
+    "software-versions": {"description": "List of all software used and their versions"},
+}
+
 AVAILABLE_USAGES = {
     "audit",
     "cg",
@@ -240,6 +245,7 @@ ALL_TAG_CATEGORIES = [
     MIP_SPECIFIC,
     MICROSALT_SPECIFIC,
     MUTANT_SPECIFIC,
+    NEXTFLOW_SPECIFIC,
     RAW_DATA,
     REPORTING_COMMON,
     TOOLS,
