@@ -1,37 +1,55 @@
 files:
 - format: tsv
   id: solidfawn
-  path: /home/proj/stage/rnafusion/cases/solidfawn/fusioncatcher/solidfawn.fusioncatcher.fusion-genes.txt
+  path: /path/to/rnafusion/cases/case_id/fusioncatcher/solidfawn.fusioncatcher.fusion-genes.txt
   path_index: ~
   step: fusioncatcher
   tag: fusioncatcher
 - format: txt
   id: solidfawn
-  path: /home/proj/stage/rnafusion/cases/solidfawn/fusioncatcher/solidfawn.fusioncatcher.summary.txt
+  path: /path/to/rnafusion/cases/case_id/fusioncatcher/solidfawn.fusioncatcher.summary.txt
   path_index: ~
   step: fusioncatcher
   tag: fusioncatcher_summary
 - format: tsv
   id: solidfawn
-  path: /home/proj/stage/rnafusion/cases/solidfawn/pizzly/solidfawn.pizzly.txt
+  path: /path/to/rnafusion/cases/case_id/pizzly/solidfawn.pizzly.txt
   path_index: ~
   step: pizzly
   tag: pizzly
 - format: tsv
   id: solidfawn
-  path: /home/proj/stage/rnafusion/cases/solidfawn/starfusion/solidfawn.starfusion.fusion_predictions.tsv
+  path: /path/to/rnafusion/cases/case_id/starfusion/solidfawn.starfusion.fusion_predictions.tsv
   path_index: ~
   step: star-fusion
   tag: star-fusion
 - format: tsv
   id: solidfawn
-  path: /home/proj/stage/rnafusion/cases/solidfawn/arriba/solidfawn.arriba.fusions.tsv
+  path: /path/to/rnafusion/cases/case_id/arriba/solidfawn.arriba.fusions.tsv
   path_index: ~
   step: arriba
   tag: arriba
 - format: tsv
   id: solidfawn
-  path: /home/proj/stage/rnafusion/cases/solidfawn/arriba/solidfawn.squid.fusions.annotated.txt
+  path: /path/to/rnafusion/cases/case_id/squid/solidfawn.squid.fusions.annotated.txt
   path_index: ~
   step: squid
   tag: squid
+- format: html
+  id: solidfawn
+  path: /path/to/rnafusion/cases/case_id/multiqc/multiqc_report.html
+  path_index: ~
+  step: multiqc-html
+  tag: multiqc-html
+- format: csv
+  id: solidfawn
+  path: /path/to/rnafusion/cases/case_id/pipeline_info/samplesheet.valid.csv
+  path_index: ~
+  step: samplesheet-valid
+  tag: samplesheet-valid
+- format: yml
+  id: solidfawn
+  path: /path/to/rnafusion/cases/case_id/pipeline_info/software_versions.yml
+  path_index: ~
+  step: software-versions
+  tag: software-versions

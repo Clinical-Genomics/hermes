@@ -1,8 +1,10 @@
-"""Tags that are defined in Balsamic deliverables mapped to tags used in CG
+"""Tags that are defined in rnafusion deliverables mapped to tags used in CG
 
 The tag sets that exists in all files are set to mandatory. Tag sets that exists in < 4 deliverables are not
 mandatory by default. However the tags that are available to a particular analysis is mandatory for that analysis.
 """
+
+from cg_hermes.config.nextflow import NEXTFLOW_COMMON_TAGS
 
 RNAFUSION_COMMON_TAGS = {
     frozenset({"arriba"}): {
@@ -36,5 +38,14 @@ RNAFUSION_COMMON_TAGS = {
         "tags": ["squid"],
         "used_by": ["cg"],
     },
+    frozenset({"multiqc-html", "report"}): {
+        "is_mandatory": True,
+        "tags": ["multiqc-html"],
+        "used_by": ["deliver"],
+    },
 }
+
+NXF_RNAFUSION_COMMON_TAGS = {**RNAFUSION_COMMON_TAGS, **NEXTFLOW_COMMON_TAGS}
+
+
 #
