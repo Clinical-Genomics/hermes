@@ -139,7 +139,7 @@ TOOLS = {
     "deepvariant": {"description": "Variantcaller"},
     "dnascope": {"description": "Call snv indels"},
     "fusioncatcher": {"description": "Fusion caller"},
-    "fusioncatcher_summary": {"description": "Fusion caller"},
+    "fusioncatcher-summary": {"description": "Fusion caller summary"},
     "genotyper": {"description": "SNV indel caller from sention"},
     "gffcompare": {"description": "Compare gff files"},
     "haplotype-caller": {"description": "Call snv and indels"},

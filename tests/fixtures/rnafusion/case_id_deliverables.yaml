@@ -10,7 +10,7 @@ files:
   path: /path/to/rnafusion/cases/case_id/fusioncatcher/solidfawn.fusioncatcher.summary.txt
   path_index: ~
   step: fusioncatcher
-  tag: fusioncatcher_summary
+  tag: fusioncatcher-summary
 - format: tsv
   id: solidfawn
   path: /path/to/rnafusion/cases/case_id/pizzly/solidfawn.pizzly.txt
