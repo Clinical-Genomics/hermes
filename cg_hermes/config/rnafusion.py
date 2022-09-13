@@ -44,19 +44,19 @@ RNAFUSION_COMMON_TAGS = {
         "tags": ["squid", "fusion"],
         "used_by": ["cg"],
     },
-    frozenset({"fusionreport"}): {
+    frozenset({"fusionreport", "report"}): {
         "is_mandatory": True,
-        "tags": ["fusionreport", "report"],
+        "tags": ["fusionreport"],
         "used_by": ["cg"],
     },
-    frozenset({"fusioninspector"}): {
+    frozenset({"fusioninspector", "report"}): {
         "is_mandatory": True,
-        "tags": ["fusioninspector", "report"],
+        "tags": ["fusioninspector"],
         "used_by": ["cg"]
     },
     frozenset({"multiqc-html", "report"}): {
         "is_mandatory": True,
-        "tags": ["multiqc-html", "report"],
+        "tags": ["multiqc-html"],
         "used_by": ["deliver"],
     },
 }

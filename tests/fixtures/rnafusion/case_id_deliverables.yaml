@@ -39,7 +39,7 @@ files:
   id: solidfawn
   path: /path/to/rnafusion/cases/case_id/fusionreport/case_id/index.html
   path_index: ~
-  step: fusionreport
+  step: report
   tag: fusionreport
 - format: tsv
   id: solidfawn
