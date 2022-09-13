@@ -18,9 +18,9 @@ RNAFUSION_COMMON_TAGS = {
         "tags": ["fusioncatcher"],
         "used_by": ["cg"],
     },
-    frozenset({"fusioncatcher-summary"}): {
+    frozenset({"fusioncatcher-summary", "fusioncatcher"}): {
         "is_mandatory": True,
-        "tags": ["fusioncatcher-summary", "fusioncatcher"],
+        "tags": ["fusioncatcher-summary"],
         "used_by": ["cg"],
     },
     frozenset({"pizzly"}): {
