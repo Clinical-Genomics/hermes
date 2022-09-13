@@ -39,7 +39,7 @@ files:
   id: solidfawn
   path: /path/to/rnafusion/cases/case_id/multiqc/multiqc_report.html
   path_index: ~
-  step: multiqc-html
+  step: report
   tag: multiqc-html
 - format: csv
   id: solidfawn
