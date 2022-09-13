@@ -30,14 +30,14 @@ poetry install
 
 2. To deploy on stage for testing before merge:
 ```
-source activate S_hermes
-pip install git+https://github.com/Clinical-Genomics/hermes@<BRANCH_NAME>
+bash /home/proj/production/servers/resources/hasta.scilifelab.se/update-hermes-stage.sh <BRANCH NAME>
+
 ```
 4. Deploy in productions by running the following commands:
 
 ```
-up
-cg deploy hermes
+bash /home/proj/production/servers/resources/hasta.scilifelab.se/update-hermes-prod.sh
+
 ```
 
 # Usage
