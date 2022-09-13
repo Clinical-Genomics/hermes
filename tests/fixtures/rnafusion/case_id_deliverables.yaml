@@ -37,6 +37,24 @@ files:
   tag: squid
 - format: html
   id: solidfawn
+  path: /path/to/rnafusion/cases/case_id/fusionreport/case_id/index.html
+  path_index: ~
+  step: fusionreport
+  tag: fusionreport
+- format: tsv
+  id: solidfawn
+  path: /path/to/rnafusion/cases/case_id/fusioninspector/solidfawn.FusionInspector.fusions.tsv
+  path_index: ~
+  step: fusioninspector
+  tag: fusioninspector
+- format: pdf
+  id: solidfawn
+  path: /path/to/rnafusion/cases/case_id/arriba_visualisation/solidfawn.pdf
+  path_index: ~
+  step: arriba
+  tag: arriba-visualisation
+- format: html
+  id: solidfawn
   path: /path/to/rnafusion/cases/case_id/multiqc/multiqc_report.html
   path_index: ~
   step: report

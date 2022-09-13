@@ -140,6 +140,7 @@ TOOLS = {
     "dnascope": {"description": "Call snv indels"},
     "fusioncatcher": {"description": "Fusion caller"},
     "fusioncatcher-summary": {"description": "Fusion caller summary"},
+    "fusioninspector": {"description": "Fusion inspection"},
     "genotyper": {"description": "SNV indel caller from sention"},
     "gffcompare": {"description": "Compare gff files"},
     "haplotype-caller": {"description": "Call snv and indels"},
@@ -209,6 +210,10 @@ MUTANT_SPECIFIC = {
     },
 }
 
+RNAFUSION_SPECIFIC = {
+    "fusionreport": {"description": "Fusion-report analysis"}
+}
+
 NEXTFLOW_SPECIFIC = {
     "samplesheet-valid": {"description": "Validated samplesheet"},
     "software-versions": {"description": "List of all software used and their versions"},
@@ -246,6 +251,7 @@ ALL_TAG_CATEGORIES = [
     MICROSALT_SPECIFIC,
     MUTANT_SPECIFIC,
     NEXTFLOW_SPECIFIC,
+    RNAFUSION_SPECIFIC,
     RAW_DATA,
     REPORTING_COMMON,
     TOOLS,

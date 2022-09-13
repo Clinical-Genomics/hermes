@@ -10,12 +10,18 @@ RNAFUSION_COMMON_TAGS = {
     frozenset({"arriba"}): {
         "is_mandatory": True,
         "bundle_id": True,
-        "tags": ["arriba"],
+        "tags": ["arriba", "fusion"],
+        "used_by": ["cg"],
+    },
+    frozenset({"arriba-visualisation", "arriba"}): {
+        "is_mandatory": True,
+        "bundle_id": True,
+        "tags": ["arriba-visualisation", "visualisation", "arriba"],
         "used_by": ["cg"],
     },
     frozenset({"fusioncatcher"}): {
         "is_mandatory": True,
-        "tags": ["fusioncatcher"],
+        "tags": ["fusioncatcher", "fusion"],
         "used_by": ["cg"],
     },
     frozenset({"fusioncatcher-summary", "fusioncatcher"}): {
@@ -25,22 +31,32 @@ RNAFUSION_COMMON_TAGS = {
     },
     frozenset({"pizzly"}): {
         "is_mandatory": True,
-        "tags": ["pizzly"],
+        "tags": ["pizzly", "fusion"],
         "used_by": ["cg"],
     },
     frozenset({"star-fusion"}): {
         "is_mandatory": True,
-        "tags": ["star-fusion"],
+        "tags": ["star-fusion", "fusion"],
         "used_by": ["cg"],
     },
     frozenset({"squid"}): {
         "is_mandatory": True,
-        "tags": ["squid"],
+        "tags": ["squid", "fusion"],
         "used_by": ["cg"],
+    },
+    frozenset({"fusionreport"}): {
+        "is_mandatory": True,
+        "tags": ["fusionreport", "report"],
+        "used_by": ["cg"],
+    },
+    frozenset({"fusioninspector"}): {
+        "is_mandatory": True,
+        "tags": ["fusioninspector", "report"],
+        "used_by": ["cg"]
     },
     frozenset({"multiqc-html", "report"}): {
         "is_mandatory": True,
-        "tags": ["multiqc-html"],
+        "tags": ["multiqc-html", "report"],
         "used_by": ["deliver"],
     },
 }
