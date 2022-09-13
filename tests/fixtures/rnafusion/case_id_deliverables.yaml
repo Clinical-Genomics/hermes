@@ -45,7 +45,7 @@ files:
   id: solidfawn
   path: /path/to/rnafusion/cases/case_id/fusioninspector/solidfawn.FusionInspector.fusions.tsv
   path_index: ~
-  step: fusioninspector
+  step: report
   tag: fusioninspector
 - format: pdf
   id: solidfawn
