@@ -4,20 +4,19 @@
 ### How to prepare for test
 - [ ] ssh to hasta.scilifelab.se
 - [ ] Use stage: `us`
-- [ ] paxa the environment: `paxa`
-- [ ] install on stage (example for hasta):
-`bash /home/proj/production/servers/resources/hasta.scilifelab.se/update-hermes-stage.sh [THIS-BRANCH-NAME]`
+- [ ] Paxa the environment: `paxa`
+- [ ] Install on stage (example for hasta):
+`bash /home/proj/production/servers/resources/hasta.scilifelab.se/update-tool-stage.sh -e S_hermes -t hermes -b [THIS-BRANCH-NAME]`
 
 ### How to test
-- [ ] do ...
+- [ ] Do ...
 
 ### Expected test outcome
-- [ ] check that ...
+- [ ] Check that ...
 - [ ] Take a screenshot and attach or copy/paste the output.
 
 ## Review
-- [ ] code approved by
-- [ ] tests executed by
+- [ ] Tests executed by
 - [ ] "Merge and deploy" approved by
 Thanks for filling in who performed the code review and the test!
 
