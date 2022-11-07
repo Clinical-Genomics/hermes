@@ -30,7 +30,7 @@ poetry install
 
 2. To deploy on stage for testing before merge:
 ```
-bash /home/proj/production/servers/resources/hasta.scilifelab.se/update-hermes-stage.sh <BRANCH NAME>
+bash /home/proj/production/servers/resources/hasta.scilifelab.se/update-tool-stage.sh -e S_hermes -t hermes -b <BRANCH NAME>
 
 ```
 4. Deploy in productions by running the following commands:
