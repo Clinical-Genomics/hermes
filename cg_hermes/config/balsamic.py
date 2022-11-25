@@ -60,8 +60,10 @@ RAW_TAGS = {
     # Merged SV (manta, delly) and CNV (cnvkit, ascat) callers (PANEL & WGS)
     "svdb.vcf.gz": ["vcf-svdb", "research-vcf-svdb"],
     "svdb.vcf.gz.tbi": ["vcf-svdb", "research-vcf-svdb-index"],
-    "svdb.all.filtered.pass.vcf.gz": ["vcf-pass-svdb", "clinical-vcf-pass-svdb"],
-    "svdb.all.filtered.pass.vcf.gz.tbi": ["vcf-pass-svdb", "clinical-vcf-pass-svdb-index"],
+    "svdb.research.filtered.pass.vcf.gz": ["vcf-pass-svdb", "research-vcf-pass-svdb"],
+    "svdb.research.filtered.pass.vcf.gz.tbi": ["vcf-pass-svdb", "research-vcf-pass-svdb-index"],
+    "svdb.clinical.filtered.pass.vcf.gz": ["vcf-pass-svdb", "clinical-vcf-pass-svdb"],
+    "svdb.clinical.filtered.pass.vcf.gz.tbi": ["vcf-pass-svdb", "clinical-vcf-pass-svdb-index"],
     # SNVs (WGS)
     "tnscope.vcf.gz": [
         "vcf-tnscope",
@@ -234,21 +236,31 @@ GERMLINE_TAGS = {
 CALLERS_TAGS = {
     # Merged SV (manta, delly) and CNV (cnvkit, ascat) callers (PANEL & WGS)
     frozenset(RAW_TAGS["svdb.vcf.gz"]): {
-        "tags": ["svdb", "vcf-sv-research"],
+        "tags": ["svdb", "vcf-sv"],
         "is_mandatory": True,
         "used_by": ["deliver"],
     },
     frozenset(RAW_TAGS["svdb.vcf.gz.tbi"]): {
+        "tags": ["svdb", "vcf-sv-index"],
+        "is_mandatory": True,
+        "used_by": ["deliver"],
+    },
+    frozenset(RAW_TAGS["svdb.research.filtered.pass.vcf.gz"]): {
+        "tags": ["svdb", "vcf-sv-research"],
+        "is_mandatory": True,
+        "used_by": ["deliver"],
+    },
+    frozenset(RAW_TAGS["svdb.research.filtered.pass.vcf.gz.tbi"]): {
         "tags": ["svdb", "vcf-sv-research-index"],
         "is_mandatory": True,
         "used_by": ["deliver"],
     },
-    frozenset(RAW_TAGS["svdb.all.filtered.pass.vcf.gz"]): {
+    frozenset(RAW_TAGS["svdb.clinical.filtered.pass.vcf.gz"]): {
         "tags": ["svdb", "vcf-sv-clinical"],
         "is_mandatory": True,
         "used_by": ["deliver", "scout"],
     },
-    frozenset(RAW_TAGS["svdb.all.filtered.pass.vcf.gz.tbi"]): {
+    frozenset(RAW_TAGS["svdb.clinical.filtered.pass.vcf.gz.tbi"]): {
         "tags": ["svdb", "vcf-sv-clinical-index"],
         "is_mandatory": True,
         "used_by": ["deliver", "scout"],
