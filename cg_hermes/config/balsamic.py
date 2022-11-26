@@ -126,12 +126,22 @@ RAW_TAGS = {
         "vcf-vardict",
         "research-vcf-vardict-index",
     ],
-    "vardict.all.filtered.pass.vcf.gz": [
+    "vardict.research.filtered.pass.vcf.gz": [
+        "vcf-pass-vardict",
+        "snv",
+        "research-vcf-pass-vardict",
+    ],
+    "vardict.research.filtered.pass.vcf.gz.tbi": [
+        "vcf-pass-vardict",
+        "snv",
+        "research-vcf-pass-vardict-index",
+    ],
+    "vardict.clinical.filtered.pass.vcf.gz": [
         "vcf-pass-vardict",
         "snv",
         "clinical-vcf-pass-vardict",
     ],
-    "vardict.all.filtered.pass.vcf.gz.tbi": [
+    "vardict.clinical.filtered.pass.vcf.gz.tbi": [
         "vcf-pass-vardict",
         "snv",
         "clinical-vcf-pass-vardict-index",
@@ -378,21 +388,31 @@ CALLERS_TAGS = {
     },
     # SNVs/INDELs (PANEL)
     frozenset(RAW_TAGS["vardict.vcf.gz"]): {
-        "tags": ["vardict", "vcf-snv-research"],
+        "tags": ["vardict", "vcf-snv"],
         "is_mandatory": False,
         "used_by": ["deliver"],
     },
     frozenset(RAW_TAGS["vardict.vcf.gz.tbi"]): {
+        "tags": ["vardict", "vcf-snv-index"],
+        "is_mandatory": False,
+        "used_by": ["deliver"],
+    },
+    frozenset(RAW_TAGS["vardict.research.filtered.pass.vcf.gz"]): {
+        "tags": ["vardict", "vcf-snv-research"],
+        "is_mandatory": False,
+        "used_by": ["deliver"],
+    },
+    frozenset(RAW_TAGS["vardict.research.filtered.pass.vcf.gz.tbi"]): {
         "tags": ["vardict", "vcf-snv-research-index"],
         "is_mandatory": False,
         "used_by": ["deliver"],
     },
-    frozenset(RAW_TAGS["vardict.all.filtered.pass.vcf.gz"]): {
+    frozenset(RAW_TAGS["vardict.clinical.filtered.pass.vcf.gz"]): {
         "tags": ["vardict", "vcf-snv-clinical"],
         "is_mandatory": False,
         "used_by": ["deliver", "scout"],
     },
-    frozenset(RAW_TAGS["vardict.all.filtered.pass.vcf.gz.tbi"]): {
+    frozenset(RAW_TAGS["vardict.clinical.filtered.pass.vcf.gz.tbi"]): {
         "tags": ["vardict", "vcf-snv-clinical-index"],
         "is_mandatory": False,
         "used_by": ["deliver", "scout"],
@@ -488,8 +508,10 @@ TUMOR_ONLY_PANEL_TAGS = {
     # SNVs/INDELs (PANEL)
     frozenset(RAW_TAGS["vardict.vcf.gz"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["vardict.vcf.gz.tbi"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["vardict.all.filtered.pass.vcf.gz"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["vardict.all.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["vardict.research.filtered.pass.vcf.gz"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["vardict.research.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["vardict.clinical.filtered.pass.vcf.gz"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["vardict.clinical.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
     # CNVs (PANEL)
     frozenset(RAW_TAGS["tumor.merged.cns"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["tumor.merged-scatter.pdf"]): {"is_mandatory": True},
@@ -509,8 +531,10 @@ TUMOR_NORMAL_PANEL_TAGS = {
     # SNVs/INDELs (PANEL)
     frozenset(RAW_TAGS["vardict.vcf.gz"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["vardict.vcf.gz.tbi"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["vardict.all.filtered.pass.vcf.gz"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["vardict.all.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["vardict.research.filtered.pass.vcf.gz"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["vardict.research.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["vardict.clinical.filtered.pass.vcf.gz"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["vardict.clinical.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
     # CNVs (PANEL)
     frozenset(RAW_TAGS["tumor.merged.cns"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["tumor.merged-scatter.pdf"]): {"is_mandatory": True},
