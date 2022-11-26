@@ -255,22 +255,22 @@ ALIGNMENT_TAGS = {
 GERMLINE_TAGS = {
     # Germline SNVs (PANEL & WGS)
     frozenset(RAW_TAGS["germline.tumor.dnascope.vcf.gz"]): {
-        "tags": ["vcf-snv-germline-tumor"],
+        "tags": ["germline", "vcf-snv-germline-tumor"],
         "is_mandatory": True,
         "used_by": ["deliver"],
     },
     frozenset(RAW_TAGS["germline.tumor.dnascope.vcf.gz.tbi"]): {
-        "tags": ["vcf-snv-germline-tumor-index"],
+        "tags": ["germline", "vcf-snv-germline-tumor-index"],
         "is_mandatory": True,
         "used_by": ["deliver"],
     },
     frozenset(RAW_TAGS["germline.normal.dnascope.vcf.gz"]): {
-        "tags": ["vcf-snv-germline-normal"],
+        "tags": ["germline", "vcf-snv-germline-normal"],
         "is_mandatory": True,
         "used_by": ["deliver"],
     },
     frozenset(RAW_TAGS["germline.normal.dnascope.vcf.gz.tbi"]): {
-        "tags": ["vcf-snv-germline-normal-index"],
+        "tags": ["germline", "vcf-snv-germline-normal-index"],
         "is_mandatory": True,
         "used_by": ["deliver"],
     },
@@ -286,22 +286,22 @@ GERMLINE_TAGS = {
     },
     # Germline SVs (PANEL & WGS)
     frozenset(RAW_TAGS["germline.tumor.manta_germline.vcf.gz"]): {
-        "tags": ["vcf-sv-germline-tumor"],
+        "tags": ["germline", "vcf-sv-germline-tumor"],
         "is_mandatory": True,
         "used_by": ["deliver"],
     },
     frozenset(RAW_TAGS["germline.tumor.manta_germline.vcf.gz.tbi"]): {
-        "tags": ["vcf-sv-germline-tumor-index"],
+        "tags": ["germline", "vcf-sv-germline-tumor-index"],
         "is_mandatory": True,
         "used_by": ["deliver"],
     },
     frozenset(RAW_TAGS["germline.normal.manta_germline.vcf.gz"]): {
-        "tags": ["vcf-sv-germline-normal"],
+        "tags": ["germline", "vcf-sv-germline-normal"],
         "is_mandatory": True,
         "used_by": ["deliver"],
     },
     frozenset(RAW_TAGS["germline.normal.manta_germline.vcf.gz.tbi"]): {
-        "tags": ["vcf-sv-germline-normal-index"],
+        "tags": ["germline", "vcf-sv-germline-normal-index"],
         "is_mandatory": True,
         "used_by": ["deliver"],
     },
