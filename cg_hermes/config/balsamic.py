@@ -97,12 +97,22 @@ RAW_TAGS = {
         "vcf-tnscope",
         "research-vcf-tnscope-index",
     ],
-    "tnscope.all.filtered.pass.vcf.gz": [
+    "tnscope.research.filtered.pass.vcf.gz": [
+        "vcf-pass-tnscope",
+        "snv",
+        "research-vcf-pass-tnscope",
+    ],
+    "tnscope.research.filtered.pass.vcf.gz.tbi": [
+        "vcf-pass-tnscope",
+        "snv",
+        "research-vcf-pass-tnscope-index",
+    ],
+    "tnscope.clinical.filtered.pass.vcf.gz": [
         "vcf-pass-tnscope",
         "snv",
         "clinical-vcf-pass-tnscope",
     ],
-    "tnscope.all.filtered.pass.vcf.gz.tbi": [
+    "tnscope.clinical.filtered.pass.vcf.gz.tbi": [
         "vcf-pass-tnscope",
         "snv",
         "clinical-vcf-pass-tnscope-index",
@@ -311,21 +321,31 @@ CALLERS_TAGS = {
     },
     # SNVs (WGS)
     frozenset(RAW_TAGS["tnscope.vcf.gz"]): {
-        "tags": ["tnscope", "vcf-snv-research"],
+        "tags": ["tnscope", "vcf-snv"],
         "is_mandatory": False,
         "used_by": ["deliver"],
     },
     frozenset(RAW_TAGS["tnscope.vcf.gz.tbi"]): {
+        "tags": ["tnscope", "vcf-snv-index"],
+        "is_mandatory": False,
+        "used_by": ["deliver"],
+    },
+    frozenset(RAW_TAGS["tnscope.research.filtered.pass.vcf.gz"]): {
+        "tags": ["tnscope", "vcf-snv-research"],
+        "is_mandatory": False,
+        "used_by": ["deliver"],
+    },
+    frozenset(RAW_TAGS["tnscope.research.filtered.pass.vcf.gz.tbi"]): {
         "tags": ["tnscope", "vcf-snv-research-index"],
         "is_mandatory": False,
         "used_by": ["deliver"],
     },
-    frozenset(RAW_TAGS["tnscope.all.filtered.pass.vcf.gz"]): {
+    frozenset(RAW_TAGS["tnscope.clinical.filtered.pass.vcf.gz"]): {
         "tags": ["tnscope", "vcf-snv-clinical"],
         "is_mandatory": False,
         "used_by": ["deliver", "scout"],
     },
-    frozenset(RAW_TAGS["tnscope.all.filtered.pass.vcf.gz.tbi"]): {
+    frozenset(RAW_TAGS["tnscope.clinical.filtered.pass.vcf.gz.tbi"]): {
         "tags": ["tnscope", "vcf-snv-clinical-index"],
         "is_mandatory": False,
         "used_by": ["deliver", "scout"],
@@ -428,8 +448,10 @@ TUMOR_ONLY_WGS_TAGS = {
     # SNVs (WGS)
     frozenset(RAW_TAGS["tnscope.vcf.gz"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["tnscope.vcf.gz.tbi"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["tnscope.all.filtered.pass.vcf.gz"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["tnscope.all.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["tnscope.research.filtered.pass.vcf.gz"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["tnscope.research.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["tnscope.clinical.filtered.pass.vcf.gz"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["tnscope.clinical.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
     # CNVs (WGS)
     frozenset(RAW_TAGS["tumor.vcf2cytosure.cgh"]): {"is_mandatory": True},
     # SVs (WGS)
@@ -447,8 +469,10 @@ TUMOR_NORMAL_WGS_TAGS = {
     # SNVs (WGS)
     frozenset(RAW_TAGS["tnscope.vcf.gz"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["tnscope.vcf.gz.tbi"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["tnscope.all.filtered.pass.vcf.gz"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["tnscope.all.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["tnscope.research.filtered.pass.vcf.gz"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["tnscope.research.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["tnscope.clinical.filtered.pass.vcf.gz"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["tnscope.clinical.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
     # CNVs (WGS)
     frozenset(RAW_TAGS["ascat.output.pdf"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["ascat.copynumber.txt.gz"]): {"is_mandatory": True},
