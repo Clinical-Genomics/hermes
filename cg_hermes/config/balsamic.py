@@ -372,7 +372,7 @@ CALLERS_TAGS = {
     },
     # CNVs (WGS)
     frozenset(RAW_TAGS["report.pdf"]): {
-        "tags": ["cnv-report"],
+        "tags": ["cnv-report", "visualization"],
         "is_mandatory": False,
         "used_by": ["deliver", "scout"],
     },
