@@ -64,6 +64,10 @@ VARIANT_COMMON = {
     "vcf-umi-snv-clinical-index": {"description": "Following index"},
     "vcf-umi-snv-research": {"description": "SNV UMI variant formatted file"},
     "vcf-umi-snv-research-index": {"description": "Following index"},
+    "vcf-snv-germline-tumor": {"description": "SNV germline tumor variants"},
+    "vcf-snv-germline-tumor-index": {"description": "Following index"},
+    "vcf-snv-germline-normal": {"description": "SNV germline normal variants"},
+    "vcf-snv-germline-normal-index": {"description": "Following index"},
     "vcf2cytosure": {"description": "Conversion from vcf format to cytosure format"},
     "variants": {"description": "File pertaining variant information in some way"},
 }

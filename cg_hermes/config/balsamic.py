@@ -24,17 +24,29 @@ RAW_TAGS = {
     "normal_umi_consensusfiltered.merged.cram": ["cram", "umi-normal-cram"],
     "normal_umi_consensusfiltered.merged.cram.crai": ["cram", "umi-normal-cram-index"],
     # Germline SNVs (PANEL & WGS)
-    "germline.tumor_normal.dnascope.vcf.gz": [
-        "vcf-all",
+    "germline.tumor.dnascope.vcf.gz": [
+        "vcf-tumor",
         "snv",
         "dnascope",
-        "annotated-germline-vcf-all",
+        "germline-vcf-tumor",
     ],
-    "germline.tumor_normal.dnascope.vcf.gz.tbi": [
-        "vcf-all",
+    "germline.tumor.dnascope.vcf.gz.tbi": [
+        "vcf-tumor",
         "snv",
         "dnascope",
-        "annotated-germline-vcf-all-index",
+        "germline-vcf-tumor-index",
+    ],
+    "germline.normal.dnascope.vcf.gz": [
+        "vcf-normal",
+        "snv",
+        "dnascope",
+        "germline-vcf-normal",
+    ],
+    "germline.normal.dnascope.vcf.gz.tbi": [
+        "vcf-normal",
+        "snv",
+        "dnascope",
+        "germline-vcf-normal-index",
     ],
     "genotype.normal.dnascope.vcf.gz": [
         "vcf-dnascope",
@@ -200,13 +212,23 @@ ALIGNMENT_TAGS = {
 
 GERMLINE_TAGS = {
     # Germline SNVs (PANEL & WGS)
-    frozenset(RAW_TAGS["germline.tumor_normal.dnascope.vcf.gz"]): {
-        "tags": ["dnascope", "germline", "vcf"],
+    frozenset(RAW_TAGS["germline.tumor.dnascope.vcf.gz"]): {
+        "tags": ["vcf-snv-germline-tumor"],
         "is_mandatory": True,
         "used_by": ["deliver"],
     },
-    frozenset(RAW_TAGS["germline.tumor_normal.dnascope.vcf.gz.tbi"]): {
-        "tags": ["dnascope", "germline", "vcf-index"],
+    frozenset(RAW_TAGS["germline.tumor.dnascope.vcf.gz.tbi"]): {
+        "tags": ["vcf-snv-germline-tumor-index"],
+        "is_mandatory": True,
+        "used_by": ["deliver"],
+    },
+    frozenset(RAW_TAGS["germline.normal.dnascope.vcf.gz"]): {
+        "tags": ["vcf-snv-germline-normal"],
+        "is_mandatory": True,
+        "used_by": ["deliver"],
+    },
+    frozenset(RAW_TAGS["germline.normal.dnascope.vcf.gz.tbi"]): {
+        "tags": ["vcf-snv-germline-normal-index"],
         "is_mandatory": True,
         "used_by": ["deliver"],
     },
