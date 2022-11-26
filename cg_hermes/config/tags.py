@@ -68,6 +68,10 @@ VARIANT_COMMON = {
     "vcf-snv-germline-tumor-index": {"description": "Following index"},
     "vcf-snv-germline-normal": {"description": "SNV germline normal variants"},
     "vcf-snv-germline-normal-index": {"description": "Following index"},
+    "vcf-sv-germline-tumor": {"description": "SV germline tumor variants"},
+    "vcf-sv-germline-tumor-index": {"description": "Following index"},
+    "vcf-sv-germline-normal": {"description": "SV germline normal variants"},
+    "vcf-sv-germline-normal-index": {"description": "Following index"},
     "vcf2cytosure": {"description": "Conversion from vcf format to cytosure format"},
     "variants": {"description": "File pertaining variant information in some way"},
 }

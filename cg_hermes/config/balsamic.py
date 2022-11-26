@@ -57,17 +57,29 @@ RAW_TAGS = {
         "genotype-vcf-dnascope-index",
     ],
     # Germline SVs (PANEL & WGS)
-    "germline.tumor_normal.manta_germline.vcf.gz": [
-        "vcf-all",
+    "germline.tumor.manta_germline.vcf.gz": [
+        "vcf-tumor",
         "sv",
         "manta-germline",
-        "annotated-germline-vcf-all",
+        "germline-vcf-tumor",
     ],
-    "germline.tumor_normal.manta_germline.vcf.gz.tbi": [
-        "vcf-all",
+    "germline.tumor.manta_germline.vcf.gz.tbi": [
+        "vcf-tumor",
         "sv",
         "manta-germline",
-        "annotated-germline-vcf-all-index",
+        "germline-vcf-tumor-index",
+    ],
+    "germline.normal.manta_germline.vcf.gz": [
+        "vcf-tumor",
+        "sv",
+        "manta-germline",
+        "germline-vcf-normal",
+    ],
+    "germline.normal.manta_germline.vcf.gz.tbi": [
+        "vcf-normal",
+        "sv",
+        "manta-germline",
+        "germline-vcf-normal-index",
     ],
     # Merged SV (manta, delly) and CNV (cnvkit, ascat) callers (PANEL & WGS)
     "svdb.vcf.gz": ["vcf-svdb", "research-vcf-svdb"],
@@ -243,13 +255,23 @@ GERMLINE_TAGS = {
         "used_by": ["cg", "genotype"],
     },
     # Germline SVs (PANEL & WGS)
-    frozenset(RAW_TAGS["germline.tumor_normal.manta_germline.vcf.gz"]): {
-        "tags": ["manta", "germline", "vcf"],
+    frozenset(RAW_TAGS["germline.tumor.manta_germline.vcf.gz"]): {
+        "tags": ["vcf-sv-germline-tumor"],
         "is_mandatory": True,
         "used_by": ["deliver"],
     },
-    frozenset(RAW_TAGS["germline.tumor_normal.manta_germline.vcf.gz.tbi"]): {
-        "tags": ["manta", "germline", "vcf-index"],
+    frozenset(RAW_TAGS["germline.tumor.manta_germline.vcf.gz.tbi"]): {
+        "tags": ["vcf-sv-germline-tumor-index"],
+        "is_mandatory": True,
+        "used_by": ["deliver"],
+    },
+    frozenset(RAW_TAGS["germline.normal.manta_germline.vcf.gz"]): {
+        "tags": ["vcf-sv-germline-normal"],
+        "is_mandatory": True,
+        "used_by": ["deliver"],
+    },
+    frozenset(RAW_TAGS["germline.normal.manta_germline.vcf.gz.tbi"]): {
+        "tags": ["vcf-sv-germline-normal-index"],
         "is_mandatory": True,
         "used_by": ["deliver"],
     },
