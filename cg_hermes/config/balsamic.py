@@ -155,12 +155,22 @@ RAW_TAGS = {
         "vcf-tnscope-umi",
         "research-vcf-tnscope-umi-index",
     ],
-    "tnscope_umi.all.filtered.pass.vcf.gz": [
+    "tnscope_umi.research.filtered.pass.vcf.gz": [
+        "vcf-pass-tnscope-umi",
+        "snv",
+        "research-vcf-pass-tnscope-umi",
+    ],
+    "tnscope_umi.research.filtered.pass.vcf.gz.tbi": [
+        "vcf-pass-tnscope-umi",
+        "snv",
+        "research-vcf-pass-tnscope-umi-index",
+    ],
+    "tnscope_umi.clinical.filtered.pass.vcf.gz": [
         "vcf-pass-tnscope-umi",
         "snv",
         "clinical-vcf-pass-tnscope-umi",
     ],
-    "tnscope_umi.all.filtered.pass.vcf.gz.tbi": [
+    "tnscope_umi.clinical.filtered.pass.vcf.gz.tbi": [
         "vcf-pass-tnscope-umi",
         "snv",
         "clinical-vcf-pass-tnscope-umi-index",
