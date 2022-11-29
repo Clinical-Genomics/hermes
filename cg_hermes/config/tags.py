@@ -166,6 +166,7 @@ MIP_SPECIFIC = {
     "mip-log": {"description": "Logs for MIP analysis"},
     "pedigree-yaml": {"description": "YAML file with pedigree information"},
     "sample-info": {"description": "MIP info file about samples"},
+    "variant-catalog": {"description": "Variant catalog used with expansionhunter"},
 }
 
 BALSAMIC_SPECIFIC = {

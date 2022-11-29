@@ -9,6 +9,7 @@
 | coverage, sambamba_depth            | True        | coverage, sambamba-depth    | chanjo       |
 | expansionhunter, str_alignments     | False       | expansionhunter, bam        | scout        |
 | expansionhunter, str_variants       | False       | expansionhunter, vcf-str    | scout        |
+| expansionhunter, variant_catalog    | False       | expansionhunter, variant-catalog    | scout        |
 | gatk_baserecalibration              | False       | cram                        | scout        |
 | gatk_combinevariantcallsets         | True        | snv-gbcf, snv-bcf           | genotype     |
 | gens_generatedata, baf              | False       | gens, fracsnp               | scout        |

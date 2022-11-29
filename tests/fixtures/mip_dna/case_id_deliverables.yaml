@@ -41,6 +41,11 @@ files:
     path_index: /path/to/rare-disease/cases/case_id/analysis/case_id/expansionhunter/case_id_exphun_sample_id.bam.bai
     step: expansionhunter
     tag: str_alignments
+  - format: meta
+    id: case_id
+    path: /path/to/references/variant_catalog.json
+    step: expansionhunter
+    tag: variant_catalog
   - format: bcf
     id: case_id
     path: /path/to/rare-disease/cases/case_id/analysis/case_id/sv_combinevariantcallsets/case_id_comb.bcf
