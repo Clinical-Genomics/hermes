@@ -89,6 +89,10 @@ UMI_TUMOR_NORMAL_PANEL_TAGS = {
     frozenset(RAW_TAGS["normal_umi_consensusfiltered.merged.cram"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["normal_umi_consensusfiltered.merged.cram.crai"]): {"is_mandatory": True},
     # Germline SNVs (PANEL & WGS)
+    frozenset(RAW_TAGS["germline.normal.dnascope.vcf.gz"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["germline.normal.dnascope.vcf.gz.tbi"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["germline.normal.manta_germline.vcf.gz"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["germline.normal.manta_germline.vcf.gz.tbi"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["genotype.normal.dnascope.vcf.gz"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["genotype.normal.dnascope.vcf.gz.tbi"]): {"is_mandatory": True},
     # SNVs/INDELs (PANEL)
