@@ -70,7 +70,7 @@ RAW_TAGS = {
         "germline-vcf-tumor-index",
     ],
     "germline.normal.manta_germline.vcf.gz": [
-        "vcf-tumor",
+        "vcf-normal",
         "sv",
         "manta-germline",
         "germline-vcf-normal",
