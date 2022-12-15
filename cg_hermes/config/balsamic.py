@@ -24,17 +24,29 @@ RAW_TAGS = {
     "normal_umi_consensusfiltered.merged.cram": ["cram", "umi-normal-cram"],
     "normal_umi_consensusfiltered.merged.cram.crai": ["cram", "umi-normal-cram-index"],
     # Germline SNVs (PANEL & WGS)
-    "germline.tumor_normal.dnascope.vcf.gz": [
-        "vcf-all",
+    "germline.tumor.dnascope.vcf.gz": [
+        "vcf-tumor",
         "snv",
         "dnascope",
-        "annotated-germline-vcf-all",
+        "germline-vcf-tumor",
     ],
-    "germline.tumor_normal.dnascope.vcf.gz.tbi": [
-        "vcf-all",
+    "germline.tumor.dnascope.vcf.gz.tbi": [
+        "vcf-tumor",
         "snv",
         "dnascope",
-        "annotated-germline-vcf-all-index",
+        "germline-vcf-tumor-index",
+    ],
+    "germline.normal.dnascope.vcf.gz": [
+        "vcf-normal",
+        "snv",
+        "dnascope",
+        "germline-vcf-normal",
+    ],
+    "germline.normal.dnascope.vcf.gz.tbi": [
+        "vcf-normal",
+        "snv",
+        "dnascope",
+        "germline-vcf-normal-index",
     ],
     "genotype.normal.dnascope.vcf.gz": [
         "vcf-dnascope",
@@ -45,23 +57,37 @@ RAW_TAGS = {
         "genotype-vcf-dnascope-index",
     ],
     # Germline SVs (PANEL & WGS)
-    "germline.tumor_normal.manta_germline.vcf.gz": [
-        "vcf-all",
+    "germline.tumor.manta_germline.vcf.gz": [
+        "vcf-tumor",
         "sv",
         "manta-germline",
-        "annotated-germline-vcf-all",
+        "germline-vcf-tumor",
     ],
-    "germline.tumor_normal.manta_germline.vcf.gz.tbi": [
-        "vcf-all",
+    "germline.tumor.manta_germline.vcf.gz.tbi": [
+        "vcf-tumor",
         "sv",
         "manta-germline",
-        "annotated-germline-vcf-all-index",
+        "germline-vcf-tumor-index",
+    ],
+    "germline.normal.manta_germline.vcf.gz": [
+        "vcf-normal",
+        "sv",
+        "manta-germline",
+        "germline-vcf-normal",
+    ],
+    "germline.normal.manta_germline.vcf.gz.tbi": [
+        "vcf-normal",
+        "sv",
+        "manta-germline",
+        "germline-vcf-normal-index",
     ],
     # Merged SV (manta, delly) and CNV (cnvkit, ascat) callers (PANEL & WGS)
     "svdb.vcf.gz": ["vcf-svdb", "research-vcf-svdb"],
     "svdb.vcf.gz.tbi": ["vcf-svdb", "research-vcf-svdb-index"],
-    "svdb.all.filtered.pass.vcf.gz": ["vcf-pass-svdb", "clinical-vcf-pass-svdb"],
-    "svdb.all.filtered.pass.vcf.gz.tbi": ["vcf-pass-svdb", "clinical-vcf-pass-svdb-index"],
+    "svdb.research.filtered.pass.vcf.gz": ["vcf-pass-svdb", "research-vcf-pass-svdb"],
+    "svdb.research.filtered.pass.vcf.gz.tbi": ["vcf-pass-svdb", "research-vcf-pass-svdb-index"],
+    "svdb.clinical.filtered.pass.vcf.gz": ["vcf-pass-svdb", "clinical-vcf-pass-svdb"],
+    "svdb.clinical.filtered.pass.vcf.gz.tbi": ["vcf-pass-svdb", "clinical-vcf-pass-svdb-index"],
     # SNVs (WGS)
     "tnscope.vcf.gz": [
         "vcf-tnscope",
@@ -71,12 +97,22 @@ RAW_TAGS = {
         "vcf-tnscope",
         "research-vcf-tnscope-index",
     ],
-    "tnscope.all.filtered.pass.vcf.gz": [
+    "tnscope.research.filtered.pass.vcf.gz": [
+        "vcf-pass-tnscope",
+        "snv",
+        "research-vcf-pass-tnscope",
+    ],
+    "tnscope.research.filtered.pass.vcf.gz.tbi": [
+        "vcf-pass-tnscope",
+        "snv",
+        "research-vcf-pass-tnscope-index",
+    ],
+    "tnscope.clinical.filtered.pass.vcf.gz": [
         "vcf-pass-tnscope",
         "snv",
         "clinical-vcf-pass-tnscope",
     ],
-    "tnscope.all.filtered.pass.vcf.gz.tbi": [
+    "tnscope.clinical.filtered.pass.vcf.gz.tbi": [
         "vcf-pass-tnscope",
         "snv",
         "clinical-vcf-pass-tnscope-index",
@@ -90,12 +126,22 @@ RAW_TAGS = {
         "vcf-vardict",
         "research-vcf-vardict-index",
     ],
-    "vardict.all.filtered.pass.vcf.gz": [
+    "vardict.research.filtered.pass.vcf.gz": [
+        "vcf-pass-vardict",
+        "snv",
+        "research-vcf-pass-vardict",
+    ],
+    "vardict.research.filtered.pass.vcf.gz.tbi": [
+        "vcf-pass-vardict",
+        "snv",
+        "research-vcf-pass-vardict-index",
+    ],
+    "vardict.clinical.filtered.pass.vcf.gz": [
         "vcf-pass-vardict",
         "snv",
         "clinical-vcf-pass-vardict",
     ],
-    "vardict.all.filtered.pass.vcf.gz.tbi": [
+    "vardict.clinical.filtered.pass.vcf.gz.tbi": [
         "vcf-pass-vardict",
         "snv",
         "clinical-vcf-pass-vardict-index",
@@ -109,12 +155,22 @@ RAW_TAGS = {
         "vcf-tnscope-umi",
         "research-vcf-tnscope-umi-index",
     ],
-    "tnscope_umi.all.filtered.pass.vcf.gz": [
+    "tnscope_umi.research.filtered.pass.vcf.gz": [
+        "vcf-pass-tnscope-umi",
+        "snv",
+        "research-vcf-pass-tnscope-umi",
+    ],
+    "tnscope_umi.research.filtered.pass.vcf.gz.tbi": [
+        "vcf-pass-tnscope-umi",
+        "snv",
+        "research-vcf-pass-tnscope-umi-index",
+    ],
+    "tnscope_umi.clinical.filtered.pass.vcf.gz": [
         "vcf-pass-tnscope-umi",
         "snv",
         "clinical-vcf-pass-tnscope-umi",
     ],
-    "tnscope_umi.all.filtered.pass.vcf.gz.tbi": [
+    "tnscope_umi.clinical.filtered.pass.vcf.gz.tbi": [
         "vcf-pass-tnscope-umi",
         "snv",
         "clinical-vcf-pass-tnscope-umi-index",
@@ -126,7 +182,7 @@ RAW_TAGS = {
     "gene_metrics": ["gene-metrics", "cnv-gene-metrics"],
     "cnvkit.vcf2cytosure.cgh": ["cgh-tumor", "cnv-somatic-cgh-tumor"],
     # CNVs (WGS)
-    "ascat.output.pdf": ["ascat-pdf", "clinical-ascat-pdf"],
+    "report.pdf": ["cnv-report-pdf", "clinical-cnv-report-pdf"],
     "ascat.copynumber.txt.gz": ["ascat-copynumber", "clinical-ascat-copynumber"],
     "dellycnv.cov.gz": ["rd-delly", "clinical-rd-delly"],
     "tumor.vcf2cytosure.cgh": ["cgh-tumor", "cnv-somatic-cgh-tumor"],
@@ -198,14 +254,24 @@ ALIGNMENT_TAGS = {
 
 GERMLINE_TAGS = {
     # Germline SNVs (PANEL & WGS)
-    frozenset(RAW_TAGS["germline.tumor_normal.dnascope.vcf.gz"]): {
-        "tags": ["dnascope", "germline", "vcf"],
+    frozenset(RAW_TAGS["germline.tumor.dnascope.vcf.gz"]): {
+        "tags": ["germline", "vcf-snv-germline-tumor"],
         "is_mandatory": True,
         "used_by": ["deliver"],
     },
-    frozenset(RAW_TAGS["germline.tumor_normal.dnascope.vcf.gz.tbi"]): {
-        "tags": ["dnascope", "germline", "vcf-index"],
+    frozenset(RAW_TAGS["germline.tumor.dnascope.vcf.gz.tbi"]): {
+        "tags": ["germline", "vcf-snv-germline-tumor-index"],
         "is_mandatory": True,
+        "used_by": ["deliver"],
+    },
+    frozenset(RAW_TAGS["germline.normal.dnascope.vcf.gz"]): {
+        "tags": ["germline", "vcf-snv-germline-normal"],
+        "is_mandatory": False,
+        "used_by": ["deliver"],
+    },
+    frozenset(RAW_TAGS["germline.normal.dnascope.vcf.gz.tbi"]): {
+        "tags": ["germline", "vcf-snv-germline-normal-index"],
+        "is_mandatory": False,
         "used_by": ["deliver"],
     },
     frozenset(RAW_TAGS["genotype.normal.dnascope.vcf.gz"]): {
@@ -219,14 +285,24 @@ GERMLINE_TAGS = {
         "used_by": ["cg", "genotype"],
     },
     # Germline SVs (PANEL & WGS)
-    frozenset(RAW_TAGS["germline.tumor_normal.manta_germline.vcf.gz"]): {
-        "tags": ["manta", "germline", "vcf"],
+    frozenset(RAW_TAGS["germline.tumor.manta_germline.vcf.gz"]): {
+        "tags": ["germline", "vcf-sv-germline-tumor"],
         "is_mandatory": True,
         "used_by": ["deliver"],
     },
-    frozenset(RAW_TAGS["germline.tumor_normal.manta_germline.vcf.gz.tbi"]): {
-        "tags": ["manta", "germline", "vcf-index"],
+    frozenset(RAW_TAGS["germline.tumor.manta_germline.vcf.gz.tbi"]): {
+        "tags": ["germline", "vcf-sv-germline-tumor-index"],
         "is_mandatory": True,
+        "used_by": ["deliver"],
+    },
+    frozenset(RAW_TAGS["germline.normal.manta_germline.vcf.gz"]): {
+        "tags": ["germline", "vcf-sv-germline-normal"],
+        "is_mandatory": False,
+        "used_by": ["deliver"],
+    },
+    frozenset(RAW_TAGS["germline.normal.manta_germline.vcf.gz.tbi"]): {
+        "tags": ["germline", "vcf-sv-germline-normal-index"],
+        "is_mandatory": False,
         "used_by": ["deliver"],
     },
 }
@@ -234,49 +310,69 @@ GERMLINE_TAGS = {
 CALLERS_TAGS = {
     # Merged SV (manta, delly) and CNV (cnvkit, ascat) callers (PANEL & WGS)
     frozenset(RAW_TAGS["svdb.vcf.gz"]): {
-        "tags": ["svdb", "vcf-sv-research"],
+        "tags": ["svdb", "vcf-sv"],
         "is_mandatory": True,
         "used_by": ["deliver"],
     },
     frozenset(RAW_TAGS["svdb.vcf.gz.tbi"]): {
+        "tags": ["svdb", "vcf-sv-index"],
+        "is_mandatory": True,
+        "used_by": ["deliver"],
+    },
+    frozenset(RAW_TAGS["svdb.research.filtered.pass.vcf.gz"]): {
+        "tags": ["svdb", "vcf-sv-research"],
+        "is_mandatory": True,
+        "used_by": ["deliver"],
+    },
+    frozenset(RAW_TAGS["svdb.research.filtered.pass.vcf.gz.tbi"]): {
         "tags": ["svdb", "vcf-sv-research-index"],
         "is_mandatory": True,
         "used_by": ["deliver"],
     },
-    frozenset(RAW_TAGS["svdb.all.filtered.pass.vcf.gz"]): {
+    frozenset(RAW_TAGS["svdb.clinical.filtered.pass.vcf.gz"]): {
         "tags": ["svdb", "vcf-sv-clinical"],
         "is_mandatory": True,
         "used_by": ["deliver", "scout"],
     },
-    frozenset(RAW_TAGS["svdb.all.filtered.pass.vcf.gz.tbi"]): {
+    frozenset(RAW_TAGS["svdb.clinical.filtered.pass.vcf.gz.tbi"]): {
         "tags": ["svdb", "vcf-sv-clinical-index"],
         "is_mandatory": True,
         "used_by": ["deliver", "scout"],
     },
     # SNVs (WGS)
     frozenset(RAW_TAGS["tnscope.vcf.gz"]): {
-        "tags": ["tnscope", "vcf-snv-research"],
+        "tags": ["tnscope", "vcf-snv"],
         "is_mandatory": False,
         "used_by": ["deliver"],
     },
     frozenset(RAW_TAGS["tnscope.vcf.gz.tbi"]): {
+        "tags": ["tnscope", "vcf-snv-index"],
+        "is_mandatory": False,
+        "used_by": ["deliver"],
+    },
+    frozenset(RAW_TAGS["tnscope.research.filtered.pass.vcf.gz"]): {
+        "tags": ["tnscope", "vcf-snv-research"],
+        "is_mandatory": False,
+        "used_by": ["deliver"],
+    },
+    frozenset(RAW_TAGS["tnscope.research.filtered.pass.vcf.gz.tbi"]): {
         "tags": ["tnscope", "vcf-snv-research-index"],
         "is_mandatory": False,
         "used_by": ["deliver"],
     },
-    frozenset(RAW_TAGS["tnscope.all.filtered.pass.vcf.gz"]): {
+    frozenset(RAW_TAGS["tnscope.clinical.filtered.pass.vcf.gz"]): {
         "tags": ["tnscope", "vcf-snv-clinical"],
         "is_mandatory": False,
         "used_by": ["deliver", "scout"],
     },
-    frozenset(RAW_TAGS["tnscope.all.filtered.pass.vcf.gz.tbi"]): {
+    frozenset(RAW_TAGS["tnscope.clinical.filtered.pass.vcf.gz.tbi"]): {
         "tags": ["tnscope", "vcf-snv-clinical-index"],
         "is_mandatory": False,
         "used_by": ["deliver", "scout"],
     },
     # CNVs (WGS)
-    frozenset(RAW_TAGS["ascat.output.pdf"]): {
-        "tags": ["ascatngs", "visualization"],
+    frozenset(RAW_TAGS["report.pdf"]): {
+        "tags": ["cnv-report", "visualization"],
         "is_mandatory": False,
         "used_by": ["deliver", "scout"],
     },
@@ -302,21 +398,31 @@ CALLERS_TAGS = {
     },
     # SNVs/INDELs (PANEL)
     frozenset(RAW_TAGS["vardict.vcf.gz"]): {
-        "tags": ["vardict", "vcf-snv-research"],
+        "tags": ["vardict", "vcf-snv"],
         "is_mandatory": False,
         "used_by": ["deliver"],
     },
     frozenset(RAW_TAGS["vardict.vcf.gz.tbi"]): {
+        "tags": ["vardict", "vcf-snv-index"],
+        "is_mandatory": False,
+        "used_by": ["deliver"],
+    },
+    frozenset(RAW_TAGS["vardict.research.filtered.pass.vcf.gz"]): {
+        "tags": ["vardict", "vcf-snv-research"],
+        "is_mandatory": False,
+        "used_by": ["deliver"],
+    },
+    frozenset(RAW_TAGS["vardict.research.filtered.pass.vcf.gz.tbi"]): {
         "tags": ["vardict", "vcf-snv-research-index"],
         "is_mandatory": False,
         "used_by": ["deliver"],
     },
-    frozenset(RAW_TAGS["vardict.all.filtered.pass.vcf.gz"]): {
+    frozenset(RAW_TAGS["vardict.clinical.filtered.pass.vcf.gz"]): {
         "tags": ["vardict", "vcf-snv-clinical"],
         "is_mandatory": False,
         "used_by": ["deliver", "scout"],
     },
-    frozenset(RAW_TAGS["vardict.all.filtered.pass.vcf.gz.tbi"]): {
+    frozenset(RAW_TAGS["vardict.clinical.filtered.pass.vcf.gz.tbi"]): {
         "tags": ["vardict", "vcf-snv-clinical-index"],
         "is_mandatory": False,
         "used_by": ["deliver", "scout"],
@@ -372,9 +478,12 @@ TUMOR_ONLY_WGS_TAGS = {
     # SNVs (WGS)
     frozenset(RAW_TAGS["tnscope.vcf.gz"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["tnscope.vcf.gz.tbi"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["tnscope.all.filtered.pass.vcf.gz"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["tnscope.all.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["tnscope.research.filtered.pass.vcf.gz"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["tnscope.research.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["tnscope.clinical.filtered.pass.vcf.gz"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["tnscope.clinical.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
     # CNVs (WGS)
+    frozenset(RAW_TAGS["report.pdf"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["tumor.vcf2cytosure.cgh"]): {"is_mandatory": True},
     # SVs (WGS)
     frozenset(RAW_TAGS["tumor.tiddit_cov.bed"]): {"is_mandatory": True},
@@ -386,15 +495,21 @@ TUMOR_NORMAL_WGS_TAGS = {
     frozenset(RAW_TAGS["normal.merged.cram"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["normal.merged.cram.crai"]): {"is_mandatory": True},
     # Germline SNVs (PANEL & WGS)
+    frozenset(RAW_TAGS["germline.normal.dnascope.vcf.gz"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["germline.normal.dnascope.vcf.gz.tbi"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["germline.normal.manta_germline.vcf.gz"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["germline.normal.manta_germline.vcf.gz.tbi"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["genotype.normal.dnascope.vcf.gz"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["genotype.normal.dnascope.vcf.gz.tbi"]): {"is_mandatory": True},
     # SNVs (WGS)
     frozenset(RAW_TAGS["tnscope.vcf.gz"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["tnscope.vcf.gz.tbi"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["tnscope.all.filtered.pass.vcf.gz"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["tnscope.all.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["tnscope.research.filtered.pass.vcf.gz"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["tnscope.research.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["tnscope.clinical.filtered.pass.vcf.gz"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["tnscope.clinical.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
     # CNVs (WGS)
-    frozenset(RAW_TAGS["ascat.output.pdf"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["report.pdf"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["ascat.copynumber.txt.gz"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["tumor.vcf2cytosure.cgh"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["normal.vcf2cytosure.cgh"]): {"is_mandatory": True},
@@ -407,8 +522,10 @@ TUMOR_ONLY_PANEL_TAGS = {
     # SNVs/INDELs (PANEL)
     frozenset(RAW_TAGS["vardict.vcf.gz"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["vardict.vcf.gz.tbi"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["vardict.all.filtered.pass.vcf.gz"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["vardict.all.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["vardict.research.filtered.pass.vcf.gz"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["vardict.research.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["vardict.clinical.filtered.pass.vcf.gz"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["vardict.clinical.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
     # CNVs (PANEL)
     frozenset(RAW_TAGS["tumor.merged.cns"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["tumor.merged-scatter.pdf"]): {"is_mandatory": True},
@@ -423,13 +540,19 @@ TUMOR_NORMAL_PANEL_TAGS = {
     frozenset(RAW_TAGS["normal.merged.cram"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["normal.merged.cram.crai"]): {"is_mandatory": True},
     # Germline SNVs (PANEL & WGS)
+    frozenset(RAW_TAGS["germline.normal.dnascope.vcf.gz"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["germline.normal.dnascope.vcf.gz.tbi"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["germline.normal.manta_germline.vcf.gz"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["germline.normal.manta_germline.vcf.gz.tbi"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["genotype.normal.dnascope.vcf.gz"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["genotype.normal.dnascope.vcf.gz.tbi"]): {"is_mandatory": True},
     # SNVs/INDELs (PANEL)
     frozenset(RAW_TAGS["vardict.vcf.gz"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["vardict.vcf.gz.tbi"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["vardict.all.filtered.pass.vcf.gz"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["vardict.all.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["vardict.research.filtered.pass.vcf.gz"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["vardict.research.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["vardict.clinical.filtered.pass.vcf.gz"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["vardict.clinical.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
     # CNVs (PANEL)
     frozenset(RAW_TAGS["tumor.merged.cns"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["tumor.merged-scatter.pdf"]): {"is_mandatory": True},
