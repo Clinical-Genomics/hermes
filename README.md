@@ -24,21 +24,7 @@ poetry install
 
 ## Deployment
 
-1. When the pull request is ready to be merged, follow the instructions in
-[Atlas](https://atlas.scilifelab.se/infrastructure/development/bump2version/)
- on how to merge and publish to PyPi automatically
-
-2. To deploy on stage for testing before merge:
-```
-bash /home/proj/production/servers/resources/hasta.scilifelab.se/update-tool-stage.sh -e S_hermes -t hermes -b <BRANCH NAME>
-
-```
-4. Deploy in productions by running the following commands:
-
-```
-bash /home/proj/production/servers/resources/hasta.scilifelab.se/update-hermes-prod.sh
-
-```
+1. See [DEPLOYMENT.md](https://github.com/Clinical-Genomics/hermes/blob/main/DEPLOYMENT.md)
 
 # Usage
 

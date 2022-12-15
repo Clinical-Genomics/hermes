@@ -55,6 +55,22 @@ MIP_DNA_TAGS = {
         "is_mandatory": False,
         "used_by": ["scout"],
     },
+    frozenset(["expansionhunter", "str_variants"]): {
+        "tags": ["expansionhunter", "vcf-str"],
+        "is_mandatory": False,
+        "used_by": ["scout"],
+    },
+    frozenset(["expansionhunter", "str_alignment"]): {
+        "tags": ["expansionhunter", "bam"],
+        "index_tags": ["expansionhunter", "bam-index"],
+        "is_mandatory": False,
+        "used_by": ["scout"],
+    },
+    frozenset(["expansionhunter", "variant_catalog"]): {
+        "tags": ["expansionhunter", "variant-catalog"],
+        "is_mandatory": False,
+        "used_by": ["scout"],
+    },
     frozenset(["glnexus_merge"]): {
         "tags": ["deepvariant", "snv", "vcf"],
         "index_tags": ["deepvariant", "snv", "vcf-index"],

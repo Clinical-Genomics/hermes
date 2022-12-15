@@ -33,21 +33,31 @@ UMI_ALIGNMENT_TAGS = {
 UMI_CALLERS_TAGS = {
     # SNVs/INDELs
     frozenset(RAW_TAGS["tnscope_umi.vcf.gz"]): {
-        "tags": ["tnscope-umi", "vcf-umi-snv-research"],
+        "tags": ["tnscope-umi", "vcf-umi-snv"],
         "is_mandatory": True,
         "used_by": ["deliver"],
     },
     frozenset(RAW_TAGS["tnscope_umi.vcf.gz.tbi"]): {
+        "tags": ["tnscope-umi", "vcf-umi-snv-index"],
+        "is_mandatory": True,
+        "used_by": ["deliver"],
+    },
+    frozenset(RAW_TAGS["tnscope_umi.research.filtered.pass.vcf.gz"]): {
+        "tags": ["tnscope-umi", "vcf-umi-snv-research"],
+        "is_mandatory": True,
+        "used_by": ["deliver"],
+    },
+    frozenset(RAW_TAGS["tnscope_umi.research.filtered.pass.vcf.gz.tbi"]): {
         "tags": ["tnscope-umi", "vcf-umi-snv-research-index"],
         "is_mandatory": True,
         "used_by": ["deliver"],
     },
-    frozenset(RAW_TAGS["tnscope_umi.all.filtered.pass.vcf.gz"]): {
+    frozenset(RAW_TAGS["tnscope_umi.clinical.filtered.pass.vcf.gz"]): {
         "tags": ["tnscope-umi", "vcf-umi-snv-clinical"],
         "is_mandatory": True,
         "used_by": ["deliver", "scout"],
     },
-    frozenset(RAW_TAGS["tnscope_umi.all.filtered.pass.vcf.gz.tbi"]): {
+    frozenset(RAW_TAGS["tnscope_umi.clinical.filtered.pass.vcf.gz.tbi"]): {
         "tags": ["tnscope-umi", "vcf-umi-snv-clinical-index"],
         "is_mandatory": True,
         "used_by": ["deliver", "scout"],
@@ -60,8 +70,10 @@ UMI_TUMOR_ONLY_PANEL_TAGS = {
     # SNVs/INDELs (PANEL)
     frozenset(RAW_TAGS["vardict.vcf.gz"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["vardict.vcf.gz.tbi"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["vardict.all.filtered.pass.vcf.gz"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["vardict.all.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["vardict.research.filtered.pass.vcf.gz"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["vardict.research.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["vardict.clinical.filtered.pass.vcf.gz"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["vardict.clinical.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
     # CNVs (PANEL)
     frozenset(RAW_TAGS["tumor.merged.cns"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["tumor.merged-scatter.pdf"]): {"is_mandatory": True},
@@ -77,13 +89,19 @@ UMI_TUMOR_NORMAL_PANEL_TAGS = {
     frozenset(RAW_TAGS["normal_umi_consensusfiltered.merged.cram"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["normal_umi_consensusfiltered.merged.cram.crai"]): {"is_mandatory": True},
     # Germline SNVs (PANEL & WGS)
+    frozenset(RAW_TAGS["germline.normal.dnascope.vcf.gz"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["germline.normal.dnascope.vcf.gz.tbi"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["germline.normal.manta_germline.vcf.gz"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["germline.normal.manta_germline.vcf.gz.tbi"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["genotype.normal.dnascope.vcf.gz"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["genotype.normal.dnascope.vcf.gz.tbi"]): {"is_mandatory": True},
     # SNVs/INDELs (PANEL)
     frozenset(RAW_TAGS["vardict.vcf.gz"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["vardict.vcf.gz.tbi"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["vardict.all.filtered.pass.vcf.gz"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["vardict.all.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["vardict.research.filtered.pass.vcf.gz"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["vardict.research.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["vardict.clinical.filtered.pass.vcf.gz"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["vardict.clinical.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
     # CNVs (PANEL)
     frozenset(RAW_TAGS["tumor.merged.cns"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["tumor.merged-scatter.pdf"]): {"is_mandatory": True},
