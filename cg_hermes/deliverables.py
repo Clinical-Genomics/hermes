@@ -25,6 +25,7 @@ from cg_hermes.config.microsalt import MICROSALT_COMMON_TAGS
 from cg_hermes.config.mip_dna import MIP_DNA_TAGS
 from cg_hermes.config.mip_rna import MIP_RNA_TAGS
 from cg_hermes.config.mutant import MUTANT_COMMON_TAGS
+from cg_hermes.config.rnafusion import NXF_RNAFUSION_COMMON_TAGS
 from cg_hermes.config.pipelines import AnalysisType, Pipeline
 from cg_hermes.exceptions import MissingFileError
 from cg_hermes.models import pipeline_deliverables
@@ -35,6 +36,7 @@ from cg_hermes.models.pipeline_deliverables import (
     MicrosaltDeliverables,
     MipDeliverables,
     MutantDeliverables,
+    RnafusionDeliverables,
     PipelineDeliverables,
     TagBase,
 )
@@ -91,6 +93,12 @@ class Deliverables:
             self.model: MipDeliverables = MipDeliverables.parse_obj(self.raw_deliverables)
             self.files = self.get_mip_files()
             self.configs = Deliverables.build_internal_tag_map(MIP_RNA_TAGS)
+        elif self.pipeline == Pipeline.RNAFUSION:
+            self.model: RnafusionDeliverables = RnafusionDeliverables.parse_obj(
+                self.raw_deliverables
+            )
+            self.files = self.get_rnafusion_files()
+            self.configs = Deliverables.build_internal_tag_map(NXF_RNAFUSION_COMMON_TAGS)
         else:
             raise Exception(
                 "Invalid pipeline ({}) set for Deliverables object".format(self.pipeline)
@@ -267,4 +275,20 @@ class Deliverables:
 
             LOG.debug("Found tag %s", identifier)
             files.append(TagBase(tags=identifier, subject_id=sample_id, path=file_obj.path))
+        return files
+
+    def get_rnafusion_files(self) -> List[TagBase]:
+        file_obj: pipeline_deliverables.RnafusionFile
+        files: List[TagBase] = []
+        for file_obj in self.model.files:
+            identifier = [file_obj.step]
+            if file_obj.tag:
+                identifier.append(file_obj.tag)
+            files.append(
+                TagBase(
+                    tags=frozenset(identifier),
+                    subject_id=file_obj.id,
+                    path=file_obj.path,
+                )
+            )
         return files

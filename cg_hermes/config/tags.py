@@ -152,6 +152,9 @@ TOOLS = {
     "delly": {"description": "Cancer structural variant prediction tool"},
     "deseq2": {"description": "Differential expression analysis with DESeq2"},
     "dnascope": {"description": "Call snv indels"},
+    "fusioncatcher": {"description": "Fusion caller"},
+    "fusioncatcher-summary": {"description": "Fusion caller summary"},
+    "fusioninspector": {"description": "Fusion inspection"},
     "expansionhunter": {"description": "Call repeat expansions"},
     "genotyper": {"description": "SNV indel caller from sention"},
     "gens": {"description": "CNV visualization tool"},
@@ -161,8 +164,10 @@ TOOLS = {
     "mitodel": {"description": "Tool to identify mitochondrial deletion signatures"},
     "peddy": {"description": "Tool to check pedigree and ancestral relations"},
     "picard": {"description": "Picard set of bioinformatic tools"},
+    "pizzly": {"description": "Fusion caller"},
     "salmon-quant": {"description": "Transcript quantification"},
     "sention": {"description": "Sention algorithm"},
+    "squid": {"description": "Fusion caller"},
     "star-fusion": {"description": "Fusion caller"},
     "stringtie": {"description": "Transcript assembler"},
     "svdb": {"description": "Tool to merge SV vcf files from multiple variant callers"},
@@ -222,6 +227,16 @@ MUTANT_SPECIFIC = {
     },
 }
 
+RNAFUSION_SPECIFIC = {
+    "arriba-visualisation": {"description": "Arriba visualization"},
+    "fusionreport": {"description": "Fusion-report analysis"},
+}
+
+NEXTFLOW_SPECIFIC = {
+    "samplesheet-valid": {"description": "Validated samplesheet"},
+    "software-versions": {"description": "List of all software used and their versions"},
+}
+
 AVAILABLE_USAGES = {
     "audit",
     "cg",
@@ -253,6 +268,8 @@ ALL_TAG_CATEGORIES = [
     MIP_SPECIFIC,
     MICROSALT_SPECIFIC,
     MUTANT_SPECIFIC,
+    NEXTFLOW_SPECIFIC,
+    RNAFUSION_SPECIFIC,
     RAW_DATA,
     REPORTING_COMMON,
     TOOLS,
