@@ -230,6 +230,7 @@ MUTANT_SPECIFIC = {
 RNAFUSION_SPECIFIC = {
     "arriba-visualisation": {"description": "Arriba visualization"},
     "fusionreport": {"description": "Fusion-report analysis"},
+    "fusioninspector-html": {"description": "Fusioninspector report"},
 }
 
 NEXTFLOW_SPECIFIC = {
