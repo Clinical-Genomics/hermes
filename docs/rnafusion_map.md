@@ -2,7 +2,7 @@
 |----------------------------------------------------------------|-------------|---------------------------------------------|-----------------------|
 | arriba                                                         | True        | fusion, arriba                              | deliver               |
 | pizzly                                                         | True        | fusion, pizzly                              | deliver               |
-| starfusions                                                    | True        | fusion, star-fusion                         | deliver               |
+| star-fusion                                                    | True        | fusion, star-fusion                         | deliver               |
 | squid                                                          | True        | fusion, squid                               | deliver               |
 | fusioncatcher                                                  | True        | fusion, fusioncatcher                       | deliver               |
 | fusioncatcher-summary, fusioncatcher                           | True        | fusioncatcher-summary                       | deliver               |
