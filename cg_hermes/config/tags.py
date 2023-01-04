@@ -22,6 +22,7 @@ RAW_DATA = {
     "forward-strand": {"description": "Reads from forward strand"},
     "reverse-strand": {"description": "Reads from reverse strand"},
     "unpaired-reads": {"description": "Reads that could not be paired"},
+    "rna": {"description": "Data generated from RNA samples"},
 }
 
 
