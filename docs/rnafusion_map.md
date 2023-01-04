@@ -10,6 +10,6 @@
 | fusionreport, report                                           | True        | fusionreport                                | deliver, scout        |
 | fusioninspector-html, report                                   | True        | fusioninspector-html                        | deliver, scout        |
 | arriba-visualisation, arriba                                   | True        | visualization, arriba, arriba-visualisation | deliver, scout        |  
-| multiqc-html, report                                           | True        | multiqc-html                                | deliver, scout        |  
+| multiqc-html, report                                           | True        | multiqc-html, rna                           | deliver, scout        |  
 | samplesheet-valid                                              | True        | samplesheet-valid                           | deliver               |  
 | software-versions                                              | True        | software-versions                           | deliver               |  

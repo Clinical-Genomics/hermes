@@ -61,7 +61,7 @@ RNAFUSION_COMMON_TAGS = {
     },
     frozenset({"multiqc-html", "report"}): {
         "is_mandatory": True,
-        "tags": ["multiqc-html"],
+        "tags": ["multiqc-html", "rna"],
         "used_by": ["deliver", "scout"],
     },
 }
