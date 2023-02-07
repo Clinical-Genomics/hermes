@@ -16,7 +16,7 @@ RNAFUSION_COMMON_TAGS = {
     frozenset({"arriba-visualisation", "arriba"}): {
         "is_mandatory": True,
         "bundle_id": True,
-        "tags": ["arriba-visualisation", "visualization", "arriba"],
+        "tags": ["arriba-visualisation", "visualization", "arriba", "research"],
         "used_by": ["deliver", "scout"],
     },
     frozenset({"fusioncatcher"}): {
@@ -46,7 +46,7 @@ RNAFUSION_COMMON_TAGS = {
     },
     frozenset({"fusionreport", "report"}): {
         "is_mandatory": True,
-        "tags": ["fusionreport"],
+        "tags": ["fusionreport", "research"],
         "used_by": ["deliver", "scout"],
     },
     frozenset({"fusioninspector", "report"}): {
@@ -56,7 +56,7 @@ RNAFUSION_COMMON_TAGS = {
     },
     frozenset({"fusioninspector-html", "report"}): {
         "is_mandatory": True,
-        "tags": ["fusioninspector-html"],
+        "tags": ["fusioninspector-html", "research"],
         "used_by": ["deliver", "scout"]
     },
     frozenset({"multiqc-html", "report"}): {
