@@ -22,6 +22,7 @@ RAW_DATA = {
     "forward-strand": {"description": "Reads from forward strand"},
     "reverse-strand": {"description": "Reads from reverse strand"},
     "unpaired-reads": {"description": "Reads that could not be paired"},
+    "rna": {"description": "Data generated from RNA samples"},
 }
 
 
@@ -230,6 +231,7 @@ MUTANT_SPECIFIC = {
 RNAFUSION_SPECIFIC = {
     "arriba-visualisation": {"description": "Arriba visualization"},
     "fusionreport": {"description": "Fusion-report analysis"},
+    "fusioninspector-html": {"description": "Fusioninspector report"},
 }
 
 NEXTFLOW_SPECIFIC = {
