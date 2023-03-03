@@ -177,6 +177,7 @@ RAW_TAGS = {
     ],
     # CNVs (PANEL)
     "tumor.merged.cns": ["cns", "cnv-cns"],
+    "tumor.merged.cnr": ["cnr", "cnv-cnr"],
     "tumor.merged-scatter.pdf": ["scatter", "cnv-scatter"],
     "tumor.merged-diagram.pdf": ["diagram", "cnv-diagram"],
     "gene_metrics": ["gene-metrics", "cnv-gene-metrics"],
@@ -433,6 +434,11 @@ CALLERS_TAGS = {
         "is_mandatory": False,
         "used_by": ["deliver"],
     },
+    frozenset(RAW_TAGS["tumor.merged.cnr"]): {
+        "tags": ["cnvkit", "metrics", "regions"],
+        "is_mandatory": False,
+        "used_by": ["storage"],
+    },
     frozenset(RAW_TAGS["tumor.merged-scatter.pdf"]): {
         "tags": ["cnvkit", "visualization", "scatter"],
         "is_mandatory": False,
@@ -528,6 +534,7 @@ TUMOR_ONLY_PANEL_TAGS = {
     frozenset(RAW_TAGS["vardict.clinical.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
     # CNVs (PANEL)
     frozenset(RAW_TAGS["tumor.merged.cns"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["tumor.merged.cnr"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["tumor.merged-scatter.pdf"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["tumor.merged-diagram.pdf"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["gene_metrics"]): {"is_mandatory": True},
@@ -555,6 +562,7 @@ TUMOR_NORMAL_PANEL_TAGS = {
     frozenset(RAW_TAGS["vardict.clinical.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
     # CNVs (PANEL)
     frozenset(RAW_TAGS["tumor.merged.cns"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["tumor.merged.cnr"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["tumor.merged-scatter.pdf"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["tumor.merged-diagram.pdf"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["gene_metrics"]): {"is_mandatory": True},

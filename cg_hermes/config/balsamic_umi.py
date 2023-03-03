@@ -76,6 +76,7 @@ UMI_TUMOR_ONLY_PANEL_TAGS = {
     frozenset(RAW_TAGS["vardict.clinical.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
     # CNVs (PANEL)
     frozenset(RAW_TAGS["tumor.merged.cns"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["tumor.merged.cnr"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["tumor.merged-scatter.pdf"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["tumor.merged-diagram.pdf"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["gene_metrics"]): {"is_mandatory": True},
@@ -104,6 +105,7 @@ UMI_TUMOR_NORMAL_PANEL_TAGS = {
     frozenset(RAW_TAGS["vardict.clinical.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
     # CNVs (PANEL)
     frozenset(RAW_TAGS["tumor.merged.cns"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["tumor.merged.cnr"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["tumor.merged-scatter.pdf"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["tumor.merged-diagram.pdf"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["gene_metrics"]): {"is_mandatory": True},
