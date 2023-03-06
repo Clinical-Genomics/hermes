@@ -49,8 +49,6 @@ def test_export_balsamic_tags(cli_runner: CliRunner):
     # WHEN running the export tags command for pipeline balsamic
     result = cli_runner.invoke(app, ["--pipeline", "balsamic"])
 
-    print(result.output)
-
     # THEN assert that the command exits without problems
     assert result.exit_code == 0
     # THEN assert that the balsamic tags was exported
