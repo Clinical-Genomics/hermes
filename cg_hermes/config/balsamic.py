@@ -191,6 +191,13 @@ RAW_TAGS = {
     # SVs (WGS)
     "tumor.tiddit_cov.bed": ["cov-tumor-tiddit", "clinical-cov-tumor-tiddit"],
     "normal.tiddit_cov.bed": ["cov-normal-tiddit", "clinical-cov-normal-tiddit"],
+    # TMB (PANEL, WGS)
+    "svdb.research.filtered.pass.stats": ["bcftools-counts", "research-bcftools-counts"],
+    "vardict/tnscope/tnscope_umi.research.filtered.pass.stats": [
+        "snv",
+        "bcftools-counts-research",
+        "research-bcftools-counts-research",
+    ],
 }
 
 QC_TAGS = {
@@ -469,6 +476,17 @@ CALLERS_TAGS = {
         "tags": ["tiddit", "normal", "coverage"],
         "is_mandatory": False,
         "used_by": ["deliver"],
+    },
+    # TMB
+    frozenset(RAW_TAGS["svdb.research.filtered.pass.stats"]): {
+        "tags": ["research", "sv", "tmb"],
+        "is_mandatory": True,
+        "used_by": ["storage"],
+    },
+    frozenset(RAW_TAGS["vardict/tnscope/tnscope_umi.research.filtered.pass.stats"]): {
+        "tags": ["research", "snv", "tmb"],
+        "is_mandatory": True,
+        "used_by": ["storage"],
     },
 }
 
