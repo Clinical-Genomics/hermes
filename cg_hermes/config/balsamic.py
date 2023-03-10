@@ -191,13 +191,11 @@ RAW_TAGS = {
     # SVs (WGS)
     "tumor.tiddit_cov.bed": ["cov-tumor-tiddit", "clinical-cov-tumor-tiddit"],
     "normal.tiddit_cov.bed": ["cov-normal-tiddit", "clinical-cov-normal-tiddit"],
-    # TMB (PANEL, WGS)
-    "svdb.research.filtered.pass.stats": ["bcftools-counts", "research-bcftools-counts"],
-    "vardict/tnscope/tnscope_umi.research.filtered.pass.stats": [
-        "snv",
-        "bcftools-counts-research",
-        "research-bcftools-counts-research",
-    ],
+    # TMB (PANEL)
+    "vardict.balsamic_stat": ["snv", "vardict", "tmb", "research-tmb"],
+    "tnscope_umi.balsamic_stat": ["snv", "tnscope_umi", "tmb", "research-tmb"],
+    # TMB (WGS)
+    "tnscope.balsamic_stat": ["snv", "tnscope", "tmb", "research-tmb"],
 }
 
 QC_TAGS = {
@@ -477,15 +475,16 @@ CALLERS_TAGS = {
         "is_mandatory": False,
         "used_by": ["deliver"],
     },
-    # TMB
-    frozenset(RAW_TAGS["svdb.research.filtered.pass.stats"]): {
-        "tags": ["research", "sv", "tmb"],
-        "is_mandatory": True,
+    # TMB (PANEL)
+    frozenset(RAW_TAGS["vardict.balsamic_stat"]): {
+        "tags": ["research", "vardict", "tmb"],
+        "is_mandatory": False,
         "used_by": ["storage"],
     },
-    frozenset(RAW_TAGS["vardict/tnscope/tnscope_umi.research.filtered.pass.stats"]): {
-        "tags": ["research", "snv", "tmb"],
-        "is_mandatory": True,
+    # TMB (WGS)
+    frozenset(RAW_TAGS["tnscope.balsamic_stat"]): {
+        "tags": ["research", "tnscope", "tmb"],
+        "is_mandatory": False,
         "used_by": ["storage"],
     },
 }
@@ -511,6 +510,8 @@ TUMOR_ONLY_WGS_TAGS = {
     frozenset(RAW_TAGS["tumor.vcf2cytosure.cgh"]): {"is_mandatory": True},
     # SVs (WGS)
     frozenset(RAW_TAGS["tumor.tiddit_cov.bed"]): {"is_mandatory": True},
+    # TMB (WGS)
+    frozenset(RAW_TAGS["tnscope.balsamic_stat"]): {"is_mandatory": True},
 }
 
 
@@ -540,6 +541,8 @@ TUMOR_NORMAL_WGS_TAGS = {
     # SVs (WGS)
     frozenset(RAW_TAGS["tumor.tiddit_cov.bed"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["normal.tiddit_cov.bed"]): {"is_mandatory": True},
+    # TMB (WGS)
+    frozenset(RAW_TAGS["tnscope.balsamic_stat"]): {"is_mandatory": True},
 }
 
 TUMOR_ONLY_PANEL_TAGS = {
@@ -557,6 +560,8 @@ TUMOR_ONLY_PANEL_TAGS = {
     frozenset(RAW_TAGS["tumor.merged-diagram.pdf"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["gene_metrics"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["cnvkit.vcf2cytosure.cgh"]): {"is_mandatory": True},
+    # TMB (PANEL)
+    frozenset(RAW_TAGS["vardict.balsamic_stat"]): {"is_mandatory": True},
 }
 
 
@@ -585,4 +590,6 @@ TUMOR_NORMAL_PANEL_TAGS = {
     frozenset(RAW_TAGS["tumor.merged-diagram.pdf"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["gene_metrics"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["cnvkit.vcf2cytosure.cgh"]): {"is_mandatory": True},
+    # TMB (PANEL)
+    frozenset(RAW_TAGS["vardict.balsamic_stat"]): {"is_mandatory": True},
 }

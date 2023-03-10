@@ -62,6 +62,12 @@ UMI_CALLERS_TAGS = {
         "is_mandatory": True,
         "used_by": ["deliver", "scout"],
     },
+    # TMB
+    frozenset(RAW_TAGS["tnscope_umi.balsamic_stat"]): {
+        "tags": ["research", "tnscope-umi", "tmb"],
+        "is_mandatory": True,
+        "used_by": ["storage"],
+    },
 }
 
 BALSAMIC_UMI_TAGS = {**BALSAMIC_TAGS, **UMI_ALIGNMENT_TAGS, **UMI_CALLERS_TAGS}
@@ -81,6 +87,8 @@ UMI_TUMOR_ONLY_PANEL_TAGS = {
     frozenset(RAW_TAGS["tumor.merged-diagram.pdf"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["gene_metrics"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["cnvkit.vcf2cytosure.cgh"]): {"is_mandatory": True},
+    # TMB
+    frozenset(RAW_TAGS["vardict.balsamic_stat"]): {"is_mandatory": True},
 }
 
 UMI_TUMOR_NORMAL_PANEL_TAGS = {
@@ -110,4 +118,6 @@ UMI_TUMOR_NORMAL_PANEL_TAGS = {
     frozenset(RAW_TAGS["tumor.merged-diagram.pdf"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["gene_metrics"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["cnvkit.vcf2cytosure.cgh"]): {"is_mandatory": True},
+    # TMB
+    frozenset(RAW_TAGS["vardict.balsamic_stat"]): {"is_mandatory": True},
 }
