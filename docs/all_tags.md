@@ -102,6 +102,7 @@
 | mitodel          | Tool to identify mitochondrial deletion signatures            |
 | peddy            | Tool to check pedigree and ancestral relations                |
 | picard           | Picard set of bioinformatic tools                             |
+| retroseq          | Tool to call mobile elements                             |
 | salmon-quant     | Transcript quantification                                     |
 | sention          | Sention algorithm                                             |
 | star-fusion      | Fusion caller                                                 |
@@ -127,6 +128,7 @@
 | Tag name                   | Description                                         |
 |----------------------------|-----------------------------------------------------|
 | cnv                        | Copy number variants                                |
+| mobile-elements            | Mobile elements                                     |
 | normal                     | Associated with normal sample                       |
 | germline                   | Associated with germline variants                   |
 | somatic                    | Associated with somatic variants                    |

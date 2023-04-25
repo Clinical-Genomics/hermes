@@ -28,6 +28,7 @@ RAW_DATA = {
 
 VARIANT_COMMON = {
     "cnv": {"description": "Copy number variants"},
+    "mobile-elements": {"description": "Mobile elements"},
     "normal": {"description": "Associated with normal sample"},
     "germline": {"description": "Associated with germline variants"},
     "somatic": {"description": "Associated with somatic variants"},
@@ -166,6 +167,7 @@ TOOLS = {
     "peddy": {"description": "Tool to check pedigree and ancestral relations"},
     "picard": {"description": "Picard set of bioinformatic tools"},
     "pizzly": {"description": "Fusion caller"},
+    "retroseq": {"description": "Mobile element caller"},
     "salmon-quant": {"description": "Transcript quantification"},
     "sention": {"description": "Sention algorithm"},
     "squid": {"description": "Fusion caller"},
