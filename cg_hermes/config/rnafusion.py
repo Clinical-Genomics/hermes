@@ -29,19 +29,9 @@ RNAFUSION_COMMON_TAGS = {
         "tags": ["fusioncatcher-summary"],
         "used_by": ["deliver"],
     },
-    frozenset({"pizzly"}): {
-        "is_mandatory": True,
-        "tags": ["pizzly", "fusion"],
-        "used_by": ["deliver"],
-    },
     frozenset({"star-fusion"}): {
         "is_mandatory": True,
         "tags": ["star-fusion", "fusion"],
-        "used_by": ["deliver"],
-    },
-    frozenset({"squid"}): {
-        "is_mandatory": True,
-        "tags": ["squid", "fusion"],
         "used_by": ["deliver"],
     },
     frozenset({"fusionreport", "report"}): {
