@@ -54,6 +54,11 @@ RNAFUSION_COMMON_TAGS = {
         "tags": ["multiqc-html", "rna"],
         "used_by": ["deliver", "scout"],
     },
+    frozenset({"star-fusion-cram", "star-fusion"}): {
+        "is_mandatory": True,
+        "tags": ["cram"],
+        "used_by": ["deliver"],
+    },
 }
 
 NXF_RNAFUSION_COMMON_TAGS = {**RNAFUSION_COMMON_TAGS, **NEXTFLOW_COMMON_TAGS}

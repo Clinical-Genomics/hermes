@@ -1,11 +1,10 @@
 | Rnafusion tags                                                 | Mandatory   | HK tags                                     | Used by               |
 |----------------------------------------------------------------|-------------|---------------------------------------------|-----------------------|
 | arriba                                                         | True        | fusion, arriba                              | deliver               |
-| pizzly                                                         | True        | fusion, pizzly                              | deliver               |
 | star-fusion                                                    | True        | fusion, star-fusion                         | deliver               |
-| squid                                                          | True        | fusion, squid                               | deliver               |
 | fusioncatcher                                                  | True        | fusion, fusioncatcher                       | deliver               |
 | fusioncatcher-summary, fusioncatcher                           | True        | fusioncatcher-summary                       | deliver               |
+| star-fusion-cram, star-fusion                           | True        | cram                       | deliver               |
 | fusioninspector, report                                        | True        | fusioninspector                             | deliver               |  
 | fusionreport, report                                           | True        | fusionreport, research                                | deliver, scout        |
 | fusioninspector-html, report                                   | True        | fusioninspector-html, research                        | deliver, scout        |
