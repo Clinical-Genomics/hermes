@@ -13,12 +13,6 @@ files:
   tag: fusioncatcher-summary
 - format: tsv
   id: solidfawn
-  path: /path/to/rnafusion/cases/case_id/pizzly/solidfawn.pizzly.txt
-  path_index: ~
-  step: pizzly
-  tag: pizzly
-- format: tsv
-  id: solidfawn
   path: /path/to/rnafusion/cases/case_id/starfusion/solidfawn.starfusion.fusion_predictions.tsv
   path_index: ~
   step: star-fusion
@@ -29,12 +23,12 @@ files:
   path_index: ~
   step: arriba
   tag: arriba
-- format: tsv
+- format: cram
   id: solidfawn
-  path: /path/to/rnafusion/cases/case_id/squid/solidfawn.squid.fusions.annotated.txt
+  path: /path/to/rnafusion/cases/case_id/cram_starfusion/solidfawn.cram
   path_index: ~
-  step: squid
-  tag: squid
+  step: star-fusion
+  tag: star-fusion-cram
 - format: html
   id: solidfawn
   path: /path/to/rnafusion/cases/case_id/fusionreport/case_id/index.html
