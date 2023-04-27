@@ -44,7 +44,7 @@
 | qc-cram         | QC alignment file in CRAM format                |
 | qc-cram-index   | QC index file for alignment file in CRAM format |
 
-## FAMILY TAGS
+## CASE TAGS
 
 | Tag name | Description          |
 | -------- | -------------------- |
