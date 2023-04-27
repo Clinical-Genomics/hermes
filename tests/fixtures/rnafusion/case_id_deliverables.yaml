@@ -24,7 +24,7 @@ files:
   step: arriba
   tag: arriba
 - format: cram
-  id: CASEID
+  id: solidfawn
   path: /path/to/rnafusion/cases/case_id/cram_starfusion/solidfawn.cram
   path_index: ~
   step: star-fusion
