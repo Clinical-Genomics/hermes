@@ -101,6 +101,24 @@ MIP_DNA_TAGS = {
         "is_mandatory": False,
         "used_by": ["scout"],
     },
+    frozenset(["me_merge_vcfs"]): {
+        "tags": ["retroseq", "vcf"],
+        "index_tags": ["retroseq", "vcf-index"],
+        "is_mandatory": False,
+        "used_by": ["audit"],
+    },
+    frozenset(["me_filter", "clinical"]): {
+        "tags": ["mobile-elements", "clinical", "vcf"],
+        "index_tags": ["mobile-elements", "clinical", "vcf-index"],
+        "is_mandatory": False,
+        "used_by": ["scout"],
+    },
+    frozenset(["me_filter", "research"]): {
+        "tags": ["mobile-elements", "research", "vcf"],
+        "index_tags": ["mobile-elements", "research", "vcf-index"],
+        "is_mandatory": False,
+        "used_by": ["scout"],
+    },
     frozenset(["mip_analyse", "config"]): {
         "tags": ["mip-analyse", "config"],
         "is_mandatory": True,
