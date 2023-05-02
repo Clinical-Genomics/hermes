@@ -198,6 +198,20 @@
             "format": "vcf.gz.tbi"
         },
         {
+            "path": "TN-wgs/analysis/vep/SNV.somatic.TN-wgs.tnscope.balsamic_stat",
+            "path_index": [],
+            "step": "tmb_calculation",
+            "tag": [
+                "research-tmb",
+                "tmb",
+                "tnscope",
+                "SNV",
+                "TN-wgs"
+            ],
+            "id": "TN-wgs",
+            "format": "balsamic_stat"
+        },
+        {
             "path": "TN-WGS/analysis/qc/TN-WGS_metrics_deliverables.yaml",
             "path_index": [],
             "step": "collect_custom_qc_metrics",
