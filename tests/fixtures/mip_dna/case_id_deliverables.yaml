@@ -130,6 +130,24 @@ files:
     path_index: ~
     step: multiqc_ar
     tag: html
+  - format: vcf
+    id: justhusky
+    path: /home/proj/stage/rare-disease/cases/justhusky/analysis/justhusky/me_merge_vcfs/justhusky_me.vcf.gz
+    path_index: /home/proj/stage/rare-disease/cases/justhusky/analysis/justhusky/me_merge_vcfs/justhusky_me.vcf.gz.tbi
+    step: me_filter
+    tag: ~
+  - format: vcf
+    id: case_id
+    path: /path/to/rare-disease/cases/case_id/analysis/case_id/me_filter/case_id_me_ann_vep_filter.selected.vcf.gz
+    path_index: /path/to/rare-disease/cases/case_id/analysis/case_id/me_filter/case_id_me_ann_vep_filter.selected.vcf.gz.tbi
+    step: me_filter
+    tag: clinica~
+  - format: vcf
+    id: case_id
+    path: /path/to/rare-disease/cases/case_id/analysis/case_id/me_filter/case_id_me_ann_vep_filter.vcf.gz
+    path_index: /path/to/rare-disease/cases/case_id/analysis/case_id/me_filter/case_id_me_ann_vep_filter.vcf.gz.tbi
+    step: me_filter
+    tag: research
   - format: meta
     id: case_id
     path: /path/to/rare-disease/cases/case_id/analysis/case_id/multiqc_ar/multiqc_data/multiqc_data.json

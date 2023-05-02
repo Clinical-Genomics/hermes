@@ -1,7 +1,7 @@
 ## ALIGNMENT TAGS
 
 | Tag name   | Description                                                |
-|------------|------------------------------------------------------------|
+| ---------- | ---------------------------------------------------------- |
 | bam        | Alignment file in BAM format                               |
 | bam-index  | Index file for alignment file in BAM format                |
 | bam-mt     | Alignment file in BAM format holding the reaads from chrMT |
@@ -11,7 +11,7 @@
 ## ANALYSIS TAGS
 
 | Tag name        | Description                                     |
-|-----------------|-------------------------------------------------|
+| --------------- | ----------------------------------------------- |
 | assembly        | Assembly                                        |
 | autozyg         | Autozygous region                               |
 | bed             | Bed file                                        |
@@ -44,17 +44,17 @@
 | qc-cram         | QC alignment file in CRAM format                |
 | qc-cram-index   | QC index file for alignment file in CRAM format |
 
-## FAMILY TAGS
+## CASE TAGS
 
-| Tag name   | Description          |
-|------------|----------------------|
-| pedigree   | Pedigree information |
-| ped        | Pedigree information |
+| Tag name | Description          |
+| -------- | -------------------- |
+| pedigree | Pedigree information |
+| ped      | Pedigree information |
 
 ## RAW DATA
 
 | Tag name       | Description                         |
-|----------------|-------------------------------------|
+| -------------- | ----------------------------------- |
 | fastq          | Files with raw data in fastq format |
 | fasta          | Files with raw data in fasta format |
 | forward-strand | Reads from forward strand           |
@@ -64,7 +64,7 @@
 ## REPORTING TAGS
 
 | Tag name          | Description                                     |
-|-------------------|-------------------------------------------------|
+| ----------------- | ----------------------------------------------- |
 | audit             | Audit file                                      |
 | csv               | Comma separated values                          |
 | deliverable       | Deliverables file                               |
@@ -82,7 +82,7 @@
 ## TOOL TAGS
 
 | Tag name         | Description                                                   |
-|------------------|---------------------------------------------------------------|
+| ---------------- | ------------------------------------------------------------- |
 | arriba           | Fusion caller                                                 |
 | asereadcounter   | Count reads mapping to heterozygous sites                     |
 | chanjo           | Tool to keep track of coverage over specific regions          |
@@ -102,6 +102,7 @@
 | mitodel          | Tool to identify mitochondrial deletion signatures            |
 | peddy            | Tool to check pedigree and ancestral relations                |
 | picard           | Picard set of bioinformatic tools                             |
+| retroseq         | Tool to call mobile elements                                  |
 | salmon-quant     | Transcript quantification                                     |
 | sention          | Sention algorithm                                             |
 | star-fusion      | Fusion caller                                                 |
@@ -117,7 +118,7 @@
 ## VALIDATION TAGS
 
 | Tag name   | Description                      |
-|------------|----------------------------------|
+| ---------- | -------------------------------- |
 | ped-check  | Results from pedigree validation |
 | qc-metrics | QC metrics from analysis         |
 | sex-check  | Results from sex validation      |
@@ -125,8 +126,9 @@
 ## VARIANT TAGS
 
 | Tag name                   | Description                                         |
-|----------------------------|-----------------------------------------------------|
+| -------------------------- | --------------------------------------------------- |
 | cnv                        | Copy number variants                                |
+| mobile-elements            | Mobile elements                                     |
 | normal                     | Associated with normal sample                       |
 | germline                   | Associated with germline variants                   |
 | somatic                    | Associated with somatic variants                    |
