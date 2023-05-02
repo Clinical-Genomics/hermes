@@ -193,7 +193,7 @@ RAW_TAGS = {
     "normal.tiddit_cov.bed": ["cov-normal-tiddit", "clinical-cov-normal-tiddit"],
     # TMB (PANEL)
     "vardict.balsamic_stat": ["snv", "vardict", "tmb", "research-tmb"],
-    "tnscope_umi.balsamic_stat": ["snv", "tnscope_umi", "tmb", "research-tmb"],
+    "tnscope_umi.balsamic_stat": ["snv", "tnscope-umi", "tmb", "research-tmb"],
     # TMB (WGS)
     "tnscope.balsamic_stat": ["snv", "tnscope", "tmb", "research-tmb"],
 }
