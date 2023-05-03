@@ -71,3 +71,15 @@ files:
   path_index: ~
   step: software-versions
   tag: software-versions
+- format: json
+  id: solidfawn
+  path: /path/to/rnafusion/cases/case_id/multiqc/multiqc_data/multiqc_data.json
+  path_index: ~
+  step: multiqc-json
+  tag: multiqc-json
+- format: yml
+  id: solidfawn
+  path: /path/to/rnafusion/cases/case_id/solidfawn_metrics_deliverables.yaml
+  path_index: ~
+  step: qc-metrics
+  tag: qc-metrics

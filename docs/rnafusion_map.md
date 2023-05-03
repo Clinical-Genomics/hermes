@@ -12,3 +12,5 @@
 | multiqc-html, report                                           | True        | multiqc-html, rna                           | deliver, scout        |  
 | samplesheet-valid                                              | True        | samplesheet-valid                           | cg               |  
 | software-versions                                              | True        | software-versions                           | cg               |  
+| qc-metrics                                              | True        | qc-metrics                           | cg               |  
+| multiqc-json                                              | True        | multiqc-json                           | deliver               |  
