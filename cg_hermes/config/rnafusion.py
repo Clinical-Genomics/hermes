@@ -59,6 +59,16 @@ RNAFUSION_COMMON_TAGS = {
         "tags": ["cram"],
         "used_by": ["deliver"],
     },
+    frozenset({"multiqc-json"}): {
+        "is_mandatory": True,
+        "tags": ["multiqc-json"],
+        "used_by": ["deliver"],
+    },
+    frozenset({"qc-metrics"}): {
+        "is_mandatory": True,
+        "tags": ["qc-metrics"],
+        "used_by": ["cg"],
+    },
 }
 
 NXF_RNAFUSION_COMMON_TAGS = {**RNAFUSION_COMMON_TAGS, **NEXTFLOW_COMMON_TAGS}
