@@ -5,11 +5,11 @@ description = "Convert information between pipelines and CG"
 authors = ["Måns Magnusson <mans.magnusson@scilifelab.se>"]
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = "^3.11"
 pydantic = "^1.7.3"
 coloredlogs = "^14.0"
 pyyaml = "^5.3.1"
-typing-extensions = "^3.7.4"
+typing-extensions = "^4.5.0"
 tabulate = "^0.8.7"
 typer = "^0.3.2"
 cgmodels = "^0.10.3"
