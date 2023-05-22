@@ -440,7 +440,7 @@ CALLERS_TAGS = {
         "used_by": ["deliver"],
     },
     frozenset(RAW_TAGS["tumor.merged.cnr"]): {
-        "tags": ["cnvkit", "metrics", "regions"],
+        "tags": ["cnvkit", "regions"],
         "is_mandatory": False,
         "used_by": ["storage"],
     },
