@@ -8,7 +8,7 @@ import typer
 
 from cg_hermes.cli import convert, export, validate
 
-app = typer.Typer()
+app = typer.Typer(no_args_is_help=True)
 
 app.add_typer(convert.app, name="convert")
 app.add_typer(validate.app, name="validate")
