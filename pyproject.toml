@@ -9,14 +9,14 @@ python = "^3.11"
 pydantic = "^1.7.3"
 coloredlogs = "^14.0"
 pyyaml = "^5.3.1"
+typer = "^0.9.0"
 typing-extensions = "^4.5.0"
 tabulate = "^0.8.7"
-typer = "^0.3.2"
 cgmodels = "^0.10.3"
 bump2version = "^1.0.1"
 
 [tool.poetry.dev-dependencies]
-pytest = "^5.2"
+pytest = "^7.3.1"
 mkdocs = "^1.1.2"
 pytest-cov = "^2.10.1"
 
