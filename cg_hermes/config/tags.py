@@ -48,6 +48,7 @@ VARIANT_COMMON = {
     "vcf-index": {"description": "Following index"},
     "vcf-snv": {"description": "SNV variant call formated file"},
     "vcf-snv-index": {"description": "Following index"},
+    "sv": {"description": "Structural variants"},
     "vcf-sv": {"description": "SV variant call formated file"},
     "vcf-sv-index": {"description": "Following index"},
     "vcf-snv-filtered": {"description": "SNV variants filtered by BALSAMIC"},
