@@ -73,34 +73,34 @@ MIP_RNA_TAGS = {
     },
     frozenset(["star_fusion"]): {
         "tags": ["fusion", "star-fusion"],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": ["storage"],
     },
     frozenset(["arriba_ar"]): {
         "tags": ["fusion", "arriba"],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": ["storage"],
     },
     frozenset(["megafusion_ar"]): {
         "tags": ["fusion", "vcf"],
         "index_tags": ["fusion", "vcf-index"],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": ["storage"],
     },
     frozenset(["svdb_merge_fusion"]): {
         "tags": ["fusion", "vcf"],
         "index_tags": ["fusion", "vcf-index"],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": ["storage"],
     },
     frozenset(["merge_fusion_reports", "research"]): {
         "tags": ["fusion", "research", "pdf"],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": ["scout"],
     },
     frozenset(["merge_fusion_reports", "clinical"]): {
         "tags": ["fusion", "pdf", "clinical"],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": ["scout"],
     },
     frozenset(["build_sj_tracks", "coverage"]): {
