@@ -80,6 +80,11 @@ MUTANT_COMMON_TAGS = {
         "tags": ["multiqc-json"],
         "used_by": ["vogue"],
     },
+    frozenset({"nextclade-summary", "report"}): {
+        "is_mandatory": True,
+        "tags": ["nextclade-summary"],
+        "used_by": ["deliver"],
+    },
     frozenset({"ks-results", "report"}): {
         "is_mandatory": True,
         "tags": ["ks-delivery", "ks-results", "typing-report", "visualization", "csv"],
