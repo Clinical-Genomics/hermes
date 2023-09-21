@@ -16,7 +16,7 @@
 | vcf-covid, variant-calling            | False     | tsv, vcf-report                                                | deliver          |
 | metrics, result_aggregation           | False     | metrics                                                        | vogue            |
 | multiqc-json, report                  | True      | multiqc-json                                                   | vogue            |
-| nextclade-summary, report             | True      | nextclade-summary                                              | deliver          |
+| nextclade-summary, report             | True      | typing-summary, nextclade                                      | deliver          |
 | ks-results, report                    | True      | ks-delivery, ks-results, typing-report, visualization, csv     | deliver          |
 | ks-aux-results, report                | True      | ks-delivery, ks-aux-results, typing-report, visualization, csv | deliver          |
 | consensus, analysis                   | True      | ks-delivery, fastq, consensus                                  | deliver, storage |
