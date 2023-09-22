@@ -181,6 +181,7 @@ TOOLS = {
     "upd": {"description": "Uniparent disomy caller from bjhall"},
     "vardict": {"description": "Cancer variant caller"},
     "wisecondor": {"description": "NIPT caller"},
+    "nextclade": {"description": "Viral genome clade assignment"},
 }
 
 MIP_SPECIFIC = {

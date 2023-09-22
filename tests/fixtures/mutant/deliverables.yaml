@@ -47,6 +47,12 @@ files:
   path_index: '~'
   step: report
   tag: multiqc-json
+- format: csv
+  id: case_id
+  path: /path/to/mutant/cases/case_id/results/nextclade_summary.csv
+  path_index: '~'
+  step: report
+  tag: nextclade-summary
 - format: yaml
   id: case_id
   path: /path/to/mutant/cases/case_id/results/case_id_metrics_deliverables.yaml
