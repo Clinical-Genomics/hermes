@@ -82,7 +82,7 @@ MUTANT_COMMON_TAGS = {
     },
     frozenset({"nextclade-summary", "report"}): {
         "is_mandatory": True,
-        "tags": ["typing-summary", "nextclade"],
+        "tags": ["ks-delivery", "typing-summary", "nextclade"],
         "used_by": ["deliver"],
     },
     frozenset({"ks-results", "report"}): {
