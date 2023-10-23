@@ -74,6 +74,11 @@ RNAFUSION_COMMON_TAGS = {
         "tags": ["qc-metrics"],
         "used_by": ["cg"],
     },
+    frozenset({"fusion-vcf", "vcf-collect"}): {
+        "is_mandatory": False,
+        "tags": ["fusion-vcf"],
+        "used_by": ["deliver", "scout"],
+    },
 }
 
 NXF_RNAFUSION_COMMON_TAGS = {**RNAFUSION_COMMON_TAGS, **NEXTFLOW_COMMON_TAGS}

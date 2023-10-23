@@ -15,3 +15,4 @@
 | software-versions                                              | True        | software-versions                           | cg               |  
 | qc-metrics                                                     | True        | qc-metrics                           | cg               |  
 | multiqc-json                                                   | True        | multiqc-json                           | deliver               |  
+| fusion-vcf, vcf-collect                                        | False       | fusion-vcf                           | deliver, scout               |  
