@@ -14,7 +14,7 @@ RNAFUSION_COMMON_TAGS = {
         "used_by": ["deliver"],
     },
     frozenset({"arriba-visualisation", "arriba"}): {
-        "is_mandatory": True,
+        "is_mandatory": False,
         "bundle_id": True,
         "tags": ["arriba-visualisation", "visualization", "arriba", "research"],
         "used_by": ["deliver", "scout"],
@@ -40,12 +40,12 @@ RNAFUSION_COMMON_TAGS = {
         "used_by": ["deliver", "scout"],
     },
     frozenset({"fusioninspector", "report"}): {
-        "is_mandatory": True,
+        "is_mandatory": False,
         "tags": ["fusioninspector"],
         "used_by": ["deliver"]
     },
     frozenset({"fusioninspector-html", "report"}): {
-        "is_mandatory": True,
+        "is_mandatory": False,
         "tags": ["fusioninspector-html", "research"],
         "used_by": ["deliver", "scout"]
     },
