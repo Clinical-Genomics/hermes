@@ -57,7 +57,12 @@ RNAFUSION_COMMON_TAGS = {
     frozenset({"star-fusion-cram", "star-fusion"}): {
         "is_mandatory": True,
         "tags": ["cram"],
-        "used_by": ["deliver"],
+        "used_by": ["deliver", "scout"],
+    },
+    frozenset({"star-fusion-cram-index", "star-fusion"}): {
+        "is_mandatory": True,
+        "tags": ["cram-index"],
+        "used_by": ["deliver", "scout"],
     },
     frozenset({"multiqc-json"}): {
         "is_mandatory": True,
