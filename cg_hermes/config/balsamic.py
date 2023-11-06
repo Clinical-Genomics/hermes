@@ -188,6 +188,10 @@ RAW_TAGS = {
     "dellycnv.cov.gz": ["rd-delly", "clinical-rd-delly"],
     "tumor.vcf2cytosure.cgh": ["cgh-tumor", "cnv-somatic-cgh-tumor"],
     "normal.vcf2cytosure.cgh": ["cgh-normal", "cnv-somatic-cgh-normal"],
+    "cov.bed.gz": ["cov", "gens-bed", "cnv-gens-bed"],
+    "cov.bed.gz.tbi": ["cov", "gens-bed", "cnv-gens-bed-index"],
+    "baf.bed.gz": ["baf", "gens-bed", "cnv-gens-bed"],
+    "baf.bed.gz.tbi": ["baf", "gens-bed", "cnv-gens-bed-index"],
     # SVs (WGS)
     "tumor.tiddit_cov.bed": ["cov-tumor-tiddit", "clinical-cov-tumor-tiddit"],
     "normal.tiddit_cov.bed": ["cov-normal-tiddit", "clinical-cov-normal-tiddit"],
@@ -402,6 +406,26 @@ CALLERS_TAGS = {
         "is_mandatory": False,
         "used_by": ["deliver", "scout"],
     },
+    frozenset(RAW_TAGS["cov.bed.gz"]): {
+        "tags": ["gens", "coverage", "bed"],
+        "is_mandatory": False,
+        "used_by": ["scout"],
+    },
+    frozenset(RAW_TAGS["cov.bed.gz.tbi"]): {
+        "tags": ["gens", "coverage", "bed-index"],
+        "is_mandatory": False,
+        "used_by": ["scout"],
+    },
+    frozenset(RAW_TAGS["baf.bed.gz"]): {
+        "tags": ["gens", "fracsnp", "bed"],
+        "is_mandatory": False,
+        "used_by": ["scout"],
+    },
+    frozenset(RAW_TAGS["baf.bed.gz.tbi"]): {
+        "tags": ["gens", "fracsnp", "bed-index"],
+        "is_mandatory": False,
+        "used_by": ["scout"],
+    },
     # SNVs/INDELs (PANEL)
     frozenset(RAW_TAGS["vardict.vcf.gz"]): {
         "tags": ["vardict", "vcf-snv"],
@@ -508,6 +532,10 @@ TUMOR_ONLY_WGS_TAGS = {
     # CNVs (WGS)
     frozenset(RAW_TAGS["report.pdf"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["tumor.vcf2cytosure.cgh"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["cov.bed.gz"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["cov.bed.gz.tbi"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["baf.bed.gz"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["baf.bed.gz.tbi"]): {"is_mandatory": True},
     # SVs (WGS)
     frozenset(RAW_TAGS["tumor.tiddit_cov.bed"]): {"is_mandatory": True},
     # TMB (WGS)
@@ -538,6 +566,10 @@ TUMOR_NORMAL_WGS_TAGS = {
     frozenset(RAW_TAGS["ascat.copynumber.txt.gz"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["tumor.vcf2cytosure.cgh"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["normal.vcf2cytosure.cgh"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["cov.bed.gz"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["cov.bed.gz.tbi"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["baf.bed.gz"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["baf.bed.gz.tbi"]): {"is_mandatory": True},
     # SVs (WGS)
     frozenset(RAW_TAGS["tumor.tiddit_cov.bed"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["normal.tiddit_cov.bed"]): {"is_mandatory": True},
