@@ -173,6 +173,7 @@ TOOLS = {
     "sention": {"description": "Sention algorithm"},
     "squid": {"description": "Fusion caller"},
     "star-fusion": {"description": "Fusion caller"},
+    "gene-counts": {"description": "STAR read counts output per gene"},
     "stringtie": {"description": "Transcript assembler"},
     "svdb": {"description": "Tool to merge SV vcf files from multiple variant callers"},
     "tiddit": {"description": "Tool to identify chromosomal rearrangements"},
