@@ -42,12 +42,12 @@ RNAFUSION_COMMON_TAGS = {
     frozenset({"fusioninspector", "report"}): {
         "is_mandatory": False,
         "tags": ["fusioninspector"],
-        "used_by": ["deliver"]
+        "used_by": ["deliver"],
     },
     frozenset({"fusioninspector-html", "report"}): {
         "is_mandatory": False,
         "tags": ["fusioninspector-html", "research"],
-        "used_by": ["deliver", "scout"]
+        "used_by": ["deliver", "scout"],
     },
     frozenset({"multiqc-html", "report"}): {
         "is_mandatory": True,
@@ -63,6 +63,11 @@ RNAFUSION_COMMON_TAGS = {
         "is_mandatory": True,
         "tags": ["cram-index"],
         "used_by": ["deliver", "scout"],
+    },
+    frozenset({"star-align-gene-counts", "star-align"}): {
+        "is_mandatory": True,
+        "tags": ["gene-counts"],
+        "used_by": ["deliver"],
     },
     frozenset({"multiqc-json"}): {
         "is_mandatory": True,
