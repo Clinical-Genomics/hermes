@@ -83,7 +83,7 @@ files:
   path: /CASE_ID/vcf/CASE_ID_fusion_data.vcf.gz
   path_index: null
   step: vcf-collect
-  tag: fusion-vcf
+  tag: vcf-fusion
 - format: tab
   id: CASE_ID
   path: /CASE_ID/star_for_starfusion/CASE_ID.ReadsPerGene.out.tab

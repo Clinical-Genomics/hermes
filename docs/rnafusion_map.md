@@ -14,6 +14,6 @@
 | star-align, star-align-gene-counts   | True        | gene-counts                                           | deliver        |
 | multiqc-json                         | True        | multiqc-json                                          | deliver        |
 | qc-metrics                           | True        | qc-metrics                                            | cg             |
-| fusion-vcf, vcf-collect              | False       | fusion-vcf                                            | deliver, scout |
+| vcf-fusion, vcf-collect              | False       | vcf-fusion                                            | deliver, scout |
 | samplesheet-valid                    | True        | samplesheet-valid                                     | cg             |
 | software-versions                    | True        | software-versions                                     | cg             |

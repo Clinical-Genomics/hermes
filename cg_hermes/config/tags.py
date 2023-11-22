@@ -142,7 +142,7 @@ ANALYSIS_COMMON = {
     "umi-cram-index": {"description": "Index for the UMI consensus filtered cram file"},
     "qc-cram": {"description": "QC alignment file in CRAM format"},
     "qc-cram-index": {"description": "QC index file for alignment file in CRAM format"},
-    "fusion-vcf": {"description": "Converted RNA fusion file to SV VCF"},
+    "vcf-fusion": {"description": "Converted RNA fusion file to SV VCF"},
 }
 
 TOOLS = {

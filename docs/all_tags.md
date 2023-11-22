@@ -43,7 +43,7 @@
 | umi-cram-index  | Index for the UMI consensus filtered cram file  |
 | qc-cram         | QC alignment file in CRAM format                |
 | qc-cram-index   | QC index file for alignment file in CRAM format |
-| fusion-vcf      | Converted RNA fusion file to SV VCF             |
+| vcf-fusion      | Converted RNA fusion file to SV VCF             |
 
 ## FAMILY TAGS
 

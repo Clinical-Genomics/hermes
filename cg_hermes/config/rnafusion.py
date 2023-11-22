@@ -79,9 +79,9 @@ RNAFUSION_COMMON_TAGS = {
         "tags": ["qc-metrics"],
         "used_by": ["cg"],
     },
-    frozenset({"fusion-vcf", "vcf-collect"}): {
+    frozenset({"vcf-fusion", "vcf-collect"}): {
         "is_mandatory": False,
-        "tags": ["fusion-vcf"],
+        "tags": ["vcf-fusion"],
         "used_by": ["deliver", "scout"],
     },
 }
