@@ -42,12 +42,12 @@ RNAFUSION_COMMON_TAGS = {
     frozenset({"fusioninspector", "report"}): {
         "is_mandatory": True,
         "tags": ["fusioninspector"],
-        "used_by": ["deliver"]
+        "used_by": ["deliver"],
     },
     frozenset({"fusioninspector-html", "report"}): {
         "is_mandatory": True,
         "tags": ["fusioninspector-html", "research"],
-        "used_by": ["deliver", "scout"]
+        "used_by": ["deliver", "scout"],
     },
     frozenset({"multiqc-html", "report"}): {
         "is_mandatory": True,

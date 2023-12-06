@@ -36,6 +36,7 @@ class MutantFile(FileBase):
     format: str
     step: str
 
+
 class RnafusionFile(FileBase):
     """Definition for elements in Rnafusion deliverables"""
 
@@ -94,6 +95,7 @@ class MutantDeliverables(PipelineDeliverables):
     """Specification for a MUTANT specific deliverables file"""
 
     files: List[MutantFile]
+
 
 class RnafusionDeliverables(PipelineDeliverables):
     """Specification for a RNAFUSION specific deliverables file"""
