@@ -25,7 +25,6 @@ RAW_DATA = {
     "rna": {"description": "Data generated from RNA samples"},
 }
 
-
 VARIANT_COMMON = {
     "cnv": {"description": "Copy number variants"},
     "mobile-elements": {"description": "Mobile elements"},
@@ -118,8 +117,6 @@ ANALYSIS_COMMON = {
     "clinical": {"description": "Clinical subset"},
     "config": {"description": "Config file"},
     "coverage": {"description": "Output with coverage information"},
-    "diagram": {"description": "Data diagram"},
-    "scatter": {"description": "Scatter plot"},
     "filtered": {"description": "Filtered data"},
     "fracsnp": {"description": "Fraction of reads with snp"},
     "fusion": {"description": "Fusion transcripts"},
@@ -284,7 +281,6 @@ ALL_TAG_CATEGORIES = [
 ]
 
 ALL_TAGS = {tag for category in ALL_TAG_CATEGORIES for tag in category.keys()}
-
 
 if __name__ == "__main__":
     print(ALL_TAGS)

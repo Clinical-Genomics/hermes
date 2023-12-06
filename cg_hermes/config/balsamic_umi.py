@@ -4,7 +4,7 @@ The tag sets that exists in all files are set to mandatory. Tag sets that exists
 mandatory by default. However the tags that are available to a particular analysis is mandatory for that analysis.
 """
 
-from cg_hermes.config.balsamic import RAW_TAGS, BALSAMIC_TAGS
+from cg_hermes.config.balsamic import BALSAMIC_TAGS, RAW_TAGS
 
 UMI_ALIGNMENT_TAGS = {
     # Alignment files
@@ -83,8 +83,6 @@ UMI_TUMOR_ONLY_PANEL_TAGS = {
     # CNVs (PANEL)
     frozenset(RAW_TAGS["tumor.merged.cns"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["tumor.merged.cnr"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["tumor.merged-scatter.pdf"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["tumor.merged-diagram.pdf"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["gene_metrics"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["cnvkit.vcf2cytosure.cgh"]): {"is_mandatory": True},
     # TMB
@@ -114,8 +112,6 @@ UMI_TUMOR_NORMAL_PANEL_TAGS = {
     # CNVs (PANEL)
     frozenset(RAW_TAGS["tumor.merged.cns"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["tumor.merged.cnr"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["tumor.merged-scatter.pdf"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["tumor.merged-diagram.pdf"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["gene_metrics"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["cnvkit.vcf2cytosure.cgh"]): {"is_mandatory": True},
     # TMB

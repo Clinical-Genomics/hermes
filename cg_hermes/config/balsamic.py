@@ -178,8 +178,6 @@ RAW_TAGS = {
     # CNVs (PANEL)
     "tumor.merged.cns": ["cns", "cnv-cns"],
     "tumor.merged.cnr": ["cnr", "cnv-cnr"],
-    "tumor.merged-scatter.pdf": ["scatter", "cnv-scatter"],
-    "tumor.merged-diagram.pdf": ["diagram", "cnv-diagram"],
     "gene_metrics": ["gene-metrics", "cnv-gene-metrics"],
     "cnvkit.vcf2cytosure.cgh": ["cgh-tumor", "cnv-somatic-cgh-tumor"],
     # CNVs (WGS)
@@ -468,16 +466,6 @@ CALLERS_TAGS = {
         "is_mandatory": False,
         "used_by": ["storage"],
     },
-    frozenset(RAW_TAGS["tumor.merged-scatter.pdf"]): {
-        "tags": ["cnvkit", "visualization", "scatter"],
-        "is_mandatory": False,
-        "used_by": ["deliver"],
-    },
-    frozenset(RAW_TAGS["tumor.merged-diagram.pdf"]): {
-        "tags": ["cnvkit", "visualization", "diagram"],
-        "is_mandatory": False,
-        "used_by": ["deliver"],
-    },
     frozenset(RAW_TAGS["gene_metrics"]): {
         "tags": ["cnvkit", "metrics", "genes"],
         "is_mandatory": False,
@@ -520,7 +508,6 @@ BALSAMIC_TAGS = {
     **CALLERS_TAGS,
 }
 
-
 TUMOR_ONLY_WGS_TAGS = {
     # SNVs (WGS)
     frozenset(RAW_TAGS["tnscope.vcf.gz"]): {"is_mandatory": True},
@@ -541,7 +528,6 @@ TUMOR_ONLY_WGS_TAGS = {
     # TMB (WGS)
     frozenset(RAW_TAGS["tnscope.balsamic_stat"]): {"is_mandatory": True},
 }
-
 
 TUMOR_NORMAL_WGS_TAGS = {
     # Alignment files (PANEL & WGS)
@@ -588,14 +574,11 @@ TUMOR_ONLY_PANEL_TAGS = {
     # CNVs (PANEL)
     frozenset(RAW_TAGS["tumor.merged.cns"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["tumor.merged.cnr"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["tumor.merged-scatter.pdf"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["tumor.merged-diagram.pdf"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["gene_metrics"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["cnvkit.vcf2cytosure.cgh"]): {"is_mandatory": True},
     # TMB (PANEL)
     frozenset(RAW_TAGS["vardict.balsamic_stat"]): {"is_mandatory": True},
 }
-
 
 TUMOR_NORMAL_PANEL_TAGS = {
     # Alignment files (PANEL & WGS)
@@ -618,8 +601,6 @@ TUMOR_NORMAL_PANEL_TAGS = {
     # CNVs (PANEL)
     frozenset(RAW_TAGS["tumor.merged.cns"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["tumor.merged.cnr"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["tumor.merged-scatter.pdf"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["tumor.merged-diagram.pdf"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["gene_metrics"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["cnvkit.vcf2cytosure.cgh"]): {"is_mandatory": True},
     # TMB (PANEL)
