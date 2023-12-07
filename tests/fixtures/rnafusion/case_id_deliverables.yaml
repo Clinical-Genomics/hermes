@@ -1,85 +1,105 @@
+---
 files:
 - format: tsv
-  id: solidfawn
-  path: /path/to/rnafusion/cases/case_id/fusioncatcher/solidfawn.fusioncatcher.fusion-genes.txt
-  path_index: ~
+  id: CASE_ID
+  path: /CASE_ID/fusioncatcher/CASE_ID.fusioncatcher.fusion-genes.txt
+  path_index: null
   step: fusioncatcher
   tag: fusioncatcher
 - format: txt
-  id: solidfawn
-  path: /path/to/rnafusion/cases/case_id/fusioncatcher/solidfawn.fusioncatcher.summary.txt
-  path_index: ~
+  id: CASE_ID
+  path: /CASE_ID/fusioncatcher/CASE_ID.fusioncatcher.summary.txt
+  path_index: null
   step: fusioncatcher
   tag: fusioncatcher-summary
 - format: tsv
-  id: solidfawn
-  path: /path/to/rnafusion/cases/case_id/starfusion/solidfawn.starfusion.fusion_predictions.tsv
-  path_index: ~
+  id: CASE_ID
+  path: /CASE_ID/starfusion/CASE_ID.starfusion.fusion_predictions.tsv
+  path_index: null
   step: star-fusion
   tag: star-fusion
 - format: tsv
-  id: solidfawn
-  path: /path/to/rnafusion/cases/case_id/arriba/solidfawn.arriba.fusions.tsv
-  path_index: ~
+  id: CASE_ID
+  path: /CASE_ID/arriba/CASE_ID.arriba.fusions.tsv
+  path_index: null
   step: arriba
   tag: arriba
 - format: cram
-  id: solidfawn
-  path: /path/to/rnafusion/cases/case_id/cram_starfusion/solidfawn.cram
-  path_index: ~
+  id: SAMPLE_ID
+  path: /CASE_ID/cram_starfusion/CASE_ID.star_for_starfusion.Aligned.sortedByCoord.out.cram
+  path_index: null
   step: star-fusion
   tag: star-fusion-cram
+- format: cram
+  id: SAMPLE_ID
+  path: /CASE_ID/cram_starfusion/CASE_ID.star_for_starfusion.Aligned.sortedByCoord.out.cram.crai
+  path_index: null
+  step: star-fusion
+  tag: star-fusion-cram-index
 - format: html
-  id: solidfawn
-  path: /path/to/rnafusion/cases/case_id/fusionreport/case_id/index.html
-  path_index: ~
+  id: CASE_ID
+  path: /CASE_ID/fusionreport/CASE_ID/CASE_ID_fusionreport_index.html
+  path_index: null
   step: report
   tag: fusionreport
 - format: tsv
-  id: solidfawn
-  path: /path/to/rnafusion/cases/case_id/fusioninspector/solidfawn.FusionInspector.fusions.tsv
-  path_index: ~
+  id: CASE_ID
+  path: /CASE_ID/fusioninspector/CASE_ID.FusionInspector.fusions.tsv
+  path_index: null
   step: report
   tag: fusioninspector
 - format: html
-  id: solidfawn
-  path: /path/to/rnafusion/cases/case_id/fusioninspector/solidfawn.fusion_inspector_web.html
-  path_index: ~
+  id: CASE_ID
+  path: /CASE_ID/fusioninspector/CASE_ID.fusion_inspector_web.html
+  path_index: null
   step: report
   tag: fusioninspector-html
 - format: pdf
-  id: solidfawn
-  path: /path/to/rnafusion/cases/case_id/arriba_visualisation/solidfawn.pdf
-  path_index: ~
+  id: CASE_ID
+  path: /CASE_ID/arriba_visualisation/CASE_ID_combined_fusions_arriba_visualisation.pdf
+  path_index: null
   step: arriba
   tag: arriba-visualisation
 - format: html
-  id: solidfawn
-  path: /path/to/rnafusion/cases/case_id/multiqc/multiqc_report.html
-  path_index: ~
+  id: CASE_ID
+  path: /CASE_ID/multiqc/multiqc_report.html
+  path_index: null
   step: report
   tag: multiqc-html
 - format: csv
-  id: solidfawn
-  path: /path/to/rnafusion/cases/case_id/pipeline_info/samplesheet.valid.csv
-  path_index: ~
+  id: CASE_ID
+  path: /CASE_ID/pipeline_info/samplesheet.valid.csv
+  path_index: null
   step: samplesheet-valid
   tag: samplesheet-valid
 - format: yml
-  id: solidfawn
-  path: /path/to/rnafusion/cases/case_id/pipeline_info/software_versions.yml
-  path_index: ~
+  id: CASE_ID
+  path: /CASE_ID/pipeline_info/software_versions.yml
+  path_index: null
   step: software-versions
   tag: software-versions
+- format: vcf
+  id: CASE_ID
+  path: /CASE_ID/vcf/CASE_ID_fusion_data.vcf.gz
+  path_index: null
+  step: vcf-collect
+  tag: vcf-fusion
+- format: tab
+  id: CASE_ID
+  path: /CASE_ID/star_for_starfusion/CASE_ID.ReadsPerGene.out.tab
+  path_index: null
+  step: star-align
+  tag: star-align-gene-counts
 - format: json
-  id: solidfawn
-  path: /path/to/rnafusion/cases/case_id/multiqc/multiqc_data/multiqc_data.json
-  path_index: ~
+  id: CASE_ID
+  path: /CASE_ID/multiqc/multiqc_data/multiqc_data.json
+  path_index: null
   step: multiqc-json
   tag: multiqc-json
 - format: yml
-  id: solidfawn
-  path: /path/to/rnafusion/cases/case_id/solidfawn_metrics_deliverables.yaml
-  path_index: ~
+  id: CASE_ID
+  path: /CASE_ID/CASE_ID_metrics_deliverables.yaml
+  path_index: null
   step: qc-metrics
   tag: qc-metrics
+
