@@ -181,7 +181,6 @@ RAW_TAGS = {
     "gene_metrics": ["gene-metrics", "cnv-gene-metrics"],
     "cnvkit.vcf2cytosure.cgh": ["cgh-tumor", "cnv-somatic-cgh-tumor"],
     # CNVs (WGS)
-    "report.pdf": ["cnv-report-pdf", "clinical-cnv-report-pdf"],
     "ascat.copynumber.txt.gz": ["ascat-copynumber", "clinical-ascat-copynumber"],
     "dellycnv.cov.gz": ["rd-delly", "clinical-rd-delly"],
     "tumor.vcf2cytosure.cgh": ["cgh-tumor", "cnv-somatic-cgh-tumor"],
@@ -190,6 +189,8 @@ RAW_TAGS = {
     "cov.bed.gz.tbi": ["cov", "gens-bed", "cnv-gens-bed-index"],
     "baf.bed.gz": ["baf", "gens-bed", "cnv-gens-bed"],
     "baf.bed.gz.tbi": ["baf", "gens-bed", "cnv-gens-bed-index"],
+    # CNV report
+    "report.pdf": ["cnv-report-pdf", "clinical-cnv-report-pdf"],
     # SVs (WGS)
     "tumor.tiddit_cov.bed": ["cov-tumor-tiddit", "clinical-cov-tumor-tiddit"],
     "normal.tiddit_cov.bed": ["cov-normal-tiddit", "clinical-cov-normal-tiddit"],
@@ -379,11 +380,6 @@ CALLERS_TAGS = {
         "used_by": ["deliver", "scout"],
     },
     # CNVs (WGS)
-    frozenset(RAW_TAGS["report.pdf"]): {
-        "tags": ["cnv-report", "visualization"],
-        "is_mandatory": False,
-        "used_by": ["deliver", "scout"],
-    },
     frozenset(RAW_TAGS["ascat.copynumber.txt.gz"]): {
         "tags": ["ascatngs", "metrics"],
         "is_mandatory": False,
@@ -476,6 +472,12 @@ CALLERS_TAGS = {
         "is_mandatory": False,
         "used_by": ["deliver", "scout"],
     },
+    # CNV report
+    frozenset(RAW_TAGS["report.pdf"]): {
+        "tags": ["cnv-report", "visualization"],
+        "is_mandatory": True,
+        "used_by": ["deliver", "scout"],
+    },
     # SVs (WGS)
     frozenset(RAW_TAGS["tumor.tiddit_cov.bed"]): {
         "tags": ["tiddit", "tumor", "coverage"],
@@ -517,7 +519,6 @@ TUMOR_ONLY_WGS_TAGS = {
     frozenset(RAW_TAGS["tnscope.clinical.filtered.pass.vcf.gz"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["tnscope.clinical.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
     # CNVs (WGS)
-    frozenset(RAW_TAGS["report.pdf"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["tumor.vcf2cytosure.cgh"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["cov.bed.gz"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["cov.bed.gz.tbi"]): {"is_mandatory": True},
@@ -548,7 +549,6 @@ TUMOR_NORMAL_WGS_TAGS = {
     frozenset(RAW_TAGS["tnscope.clinical.filtered.pass.vcf.gz"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["tnscope.clinical.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
     # CNVs (WGS)
-    frozenset(RAW_TAGS["report.pdf"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["ascat.copynumber.txt.gz"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["tumor.vcf2cytosure.cgh"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["normal.vcf2cytosure.cgh"]): {"is_mandatory": True},
