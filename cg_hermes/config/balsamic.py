@@ -474,7 +474,7 @@ CALLERS_TAGS = {
     },
     # CNV report
     frozenset(RAW_TAGS["report.pdf"]): {
-        "tags": ["cnv-report", "visualization"],
+        "tags": ["cnv-report"],
         "is_mandatory": True,
         "used_by": ["deliver", "scout"],
     },
