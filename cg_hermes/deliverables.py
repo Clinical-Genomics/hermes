@@ -1,7 +1,7 @@
 """Class to represent deliverables file"""
 import copy
 import logging
-from typing import FrozenSet, Optional, Set
+from typing import FrozenSet, Optional
 
 from cg_hermes.config.balsamic import (
     BALSAMIC_TAGS,
@@ -60,7 +60,7 @@ class Deliverables:
         self.bundle_id: Optional[str] = None
         self.configs: dict[FrozenSet[str], TagMap]
         self.files: list[TagBase]
-        self.file_identifiers: Set[FrozenSet[str]]
+        self.file_identifiers: set[FrozenSet[str]]
         self.model: PipelineDeliverables
         self.set_pipeline_specific_variables()
         self.file_identifiers = {file_obj.tags for file_obj in self.files}
