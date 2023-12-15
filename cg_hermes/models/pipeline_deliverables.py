@@ -1,4 +1,4 @@
-from typing import FrozenSet, List, Optional
+from typing import FrozenSet, Optional
 
 from pydantic import BaseModel, validator
 
@@ -49,7 +49,7 @@ class BalsamicFile(FileBase):
     """Definition of elements in balsamic deliverables"""
 
     format: Optional[str]
-    tag: List[str]
+    tag: list[str]
 
     @validator("tag", pre=True)
     def split_str(cls, v):
@@ -64,43 +64,43 @@ class BalsamicFile(FileBase):
 class PipelineDeliverables(BaseModel):
     """Specification for a general deliverables file"""
 
-    files: List[FileBase]
+    files: list[FileBase]
 
 
 class MipDeliverables(PipelineDeliverables):
     """Specification for a MIP specific deliverables file"""
 
-    files: List[MipFile]
+    files: list[MipFile]
 
 
 class MicrosaltDeliverables(PipelineDeliverables):
     """Specification for a MIP specific deliverables file"""
 
-    files: List[MicrosaltFile]
+    files: list[MicrosaltFile]
 
 
 class BalsamicDeliverables(PipelineDeliverables):
     """Specification for a BALSAMIC specific deliverables file"""
 
-    files: List[BalsamicFile]
+    files: list[BalsamicFile]
 
 
 class FluffyDeliverables(PipelineDeliverables):
     """Specification for a FLUFFY specific deliverables file"""
 
-    files: List[FileBase]
+    files: list[FileBase]
 
 
 class MutantDeliverables(PipelineDeliverables):
     """Specification for a MUTANT specific deliverables file"""
 
-    files: List[MutantFile]
+    files: list[MutantFile]
 
 
 class RnafusionDeliverables(PipelineDeliverables):
     """Specification for a RNAFUSION specific deliverables file"""
 
-    files: List[RnafusionFile]
+    files: list[RnafusionFile]
 
 
 class CGDeliverables(PipelineDeliverables):
@@ -108,7 +108,7 @@ class CGDeliverables(PipelineDeliverables):
 
     pipeline: str
     bundle_id: str
-    files: List[CGTag]
+    files: list[CGTag]
 
 
 class TagBase(BaseModel):
