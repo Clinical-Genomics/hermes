@@ -1,7 +1,7 @@
 """Class to represent deliverables file"""
 import copy
 import logging
-from typing import Dict, FrozenSet, List, Optional, Set
+from typing import FrozenSet, Optional
 
 from cg_hermes.config.balsamic import (
     BALSAMIC_TAGS,
@@ -12,21 +12,21 @@ from cg_hermes.config.balsamic import (
 )
 from cg_hermes.config.balsamic_qc import (
     BALSAMIC_QC_TAGS,
-    QC_TUMOR_NORMAL_WGS_TAGS,
     QC_TUMOR_NORMAL_PANEL_TAGS,
+    QC_TUMOR_NORMAL_WGS_TAGS,
 )
 from cg_hermes.config.balsamic_umi import (
     BALSAMIC_UMI_TAGS,
-    UMI_TUMOR_ONLY_PANEL_TAGS,
     UMI_TUMOR_NORMAL_PANEL_TAGS,
+    UMI_TUMOR_ONLY_PANEL_TAGS,
 )
 from cg_hermes.config.fluffy import FLUFFY_COMMON_TAGS
 from cg_hermes.config.microsalt import MICROSALT_COMMON_TAGS
 from cg_hermes.config.mip_dna import MIP_DNA_TAGS
 from cg_hermes.config.mip_rna import MIP_RNA_TAGS
 from cg_hermes.config.mutant import MUTANT_COMMON_TAGS
-from cg_hermes.config.rnafusion import NXF_RNAFUSION_COMMON_TAGS
 from cg_hermes.config.pipelines import AnalysisType, Pipeline
+from cg_hermes.config.rnafusion import NXF_RNAFUSION_COMMON_TAGS
 from cg_hermes.exceptions import MissingFileError
 from cg_hermes.models import pipeline_deliverables
 from cg_hermes.models.pipeline_deliverables import (
@@ -36,8 +36,8 @@ from cg_hermes.models.pipeline_deliverables import (
     MicrosaltDeliverables,
     MipDeliverables,
     MutantDeliverables,
-    RnafusionDeliverables,
     PipelineDeliverables,
+    RnafusionDeliverables,
     TagBase,
 )
 from cg_hermes.models.tags import CGTag, TagMap
@@ -50,7 +50,7 @@ class Deliverables:
 
     def __init__(
         self,
-        deliverables: Dict[str, List[Dict[str, str]]],
+        deliverables: dict[str, list[dict[str, str]]],
         pipeline: Pipeline,
         analysis_type: Optional[AnalysisType] = None,
     ):
@@ -58,9 +58,9 @@ class Deliverables:
         self.pipeline = pipeline
         self.analysis_type = analysis_type
         self.bundle_id: Optional[str] = None
-        self.configs: Dict[FrozenSet[str], TagMap]
-        self.files: List[TagBase]
-        self.file_identifiers: Set[FrozenSet[str]]
+        self.configs: dict[FrozenSet[str], TagMap]
+        self.files: list[TagBase]
+        self.file_identifiers: set[FrozenSet[str]]
         self.model: PipelineDeliverables
         self.set_pipeline_specific_variables()
         self.file_identifiers = {file_obj.tags for file_obj in self.files}
@@ -105,10 +105,10 @@ class Deliverables:
             )
 
     @staticmethod
-    def build_internal_tag_map(tag_map: Dict[FrozenSet[str], dict]) -> Dict[FrozenSet[str], TagMap]:
+    def build_internal_tag_map(tag_map: dict[FrozenSet[str], dict]) -> dict[FrozenSet[str], TagMap]:
         """Convert and validate a tag map to TagMap objects"""
         LOG.debug("Build internal tag map")
-        internal_tag_map: Dict[FrozenSet[str], TagMap] = dict()
+        internal_tag_map: dict[FrozenSet[str], TagMap] = dict()
         for pipeline_tags in tag_map:
             internal_tag_map[pipeline_tags] = TagMap.parse_obj(tag_map[pipeline_tags])
         return internal_tag_map
@@ -116,7 +116,7 @@ class Deliverables:
     @staticmethod
     def convert_to_cg_tag(conversion_info: TagMap, subject_id: str, path: str) -> CGTag:
         """Convert tags from pipeline specific tags to CG tags"""
-        cg_tags: List[str] = copy.deepcopy(conversion_info.tags)
+        cg_tags: list[str] = copy.deepcopy(conversion_info.tags)
         cg_tags.append(subject_id)
         cg_tags.extend(
             [tool for tool in conversion_info.used_by if tool not in ["cg", "audit", "store"]]
@@ -125,7 +125,7 @@ class Deliverables:
 
     def convert_to_cg_deliverables(self) -> CGDeliverables:
         """Convert pipeline specific information from deliverables file to CG formatted information"""
-        cg_files: List[CGTag] = []
+        cg_files: list[CGTag] = []
         file_object: TagBase
         for file_object in self.files:
             pipeline_tags = file_object.tags
@@ -155,7 +155,7 @@ class Deliverables:
             pipeline=self.pipeline.value, files=cg_files, bundle_id=self.bundle_id
         )
 
-    def get_balsamic_analysis_configs(self) -> Dict[FrozenSet[str], dict]:
+    def get_balsamic_analysis_configs(self) -> dict[FrozenSet[str], dict]:
         """Extracts all the BALSAMIC mandatory files depending on the analysis workflow and type executed"""
 
         BALSAMIC_COMMON_TAGS = []
@@ -203,9 +203,9 @@ class Deliverables:
                 files=missing_mandatory_files, message="Deliverables is missing mandatory files"
             )
 
-    def get_mip_files(self) -> List[TagBase]:
+    def get_mip_files(self) -> list[TagBase]:
         file_obj: pipeline_deliverables.MipFile
-        files: List[TagBase] = []
+        files: list[TagBase] = []
         for file_obj in self.model.files:
             identifier = [file_obj.step]
             if file_obj.tag:
@@ -220,9 +220,9 @@ class Deliverables:
             )
         return files
 
-    def get_microsalt_files(self) -> List[TagBase]:
+    def get_microsalt_files(self) -> list[TagBase]:
         file_obj: pipeline_deliverables.MicrosaltFile
-        files: List[TagBase] = []
+        files: list[TagBase] = []
         for file_obj in self.model.files:
             identifier = [file_obj.step]
             if file_obj.tag:
@@ -236,9 +236,9 @@ class Deliverables:
             )
         return files
 
-    def get_mutant_files(self) -> List[TagBase]:
+    def get_mutant_files(self) -> list[TagBase]:
         file_obj: pipeline_deliverables.MutantFile
-        files: List[TagBase] = []
+        files: list[TagBase] = []
         for file_obj in self.model.files:
             identifier = [file_obj.step]
             if file_obj.tag:
@@ -252,22 +252,22 @@ class Deliverables:
             )
         return files
 
-    def get_fluffy_files(self) -> List[TagBase]:
+    def get_fluffy_files(self) -> list[TagBase]:
         file_obj: pipeline_deliverables.FileBase
-        files: List[TagBase] = []
+        files: list[TagBase] = []
         for file_obj in self.model.files:
             identifier = frozenset([file_obj.tag.lower()])
             files.append(TagBase(tags=identifier, subject_id=file_obj.id, path=file_obj.path))
         return files
 
-    def get_balsamic_files(self) -> List[TagBase]:
+    def get_balsamic_files(self) -> list[TagBase]:
         file_obj: pipeline_deliverables.BalsamicFile
-        files: List[TagBase] = []
+        files: list[TagBase] = []
         for file_obj in self.model.files:
             sample_id: str = file_obj.id
             tag_sample_id: str = sample_id.replace("_", "-")
             # This is due to older balsamic format
-            split_id: List[str] = sample_id.split("_")
+            split_id: list[str] = sample_id.split("_")
             if len(split_id) > 2:
                 sample_id = split_id[1]
                 tag_sample_id: str = "-".join(split_id)
@@ -277,9 +277,9 @@ class Deliverables:
             files.append(TagBase(tags=identifier, subject_id=sample_id, path=file_obj.path))
         return files
 
-    def get_rnafusion_files(self) -> List[TagBase]:
+    def get_rnafusion_files(self) -> list[TagBase]:
         file_obj: pipeline_deliverables.RnafusionFile
-        files: List[TagBase] = []
+        files: list[TagBase] = []
         for file_obj in self.model.files:
             identifier = [file_obj.step]
             if file_obj.tag:

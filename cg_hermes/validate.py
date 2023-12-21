@@ -1,6 +1,6 @@
 """Code for validating files from different sources"""
 import logging
-from typing import Dict, FrozenSet, List, Optional
+from typing import FrozenSet, Optional
 
 from cg_hermes.config.pipelines import AnalysisType, Pipeline
 from cg_hermes.config.tags import COMMON_TAG_CATEGORIES
@@ -11,7 +11,7 @@ LOG = logging.getLogger(__name__)
 
 
 def get_deliverables_obj(
-    deliverables: Dict[str, List[Dict[str, str]]],
+    deliverables: dict[str, list[dict[str, str]]],
     pipeline: Pipeline,
     analysis_type: Optional[AnalysisType] = None,
 ) -> Deliverables:
@@ -24,7 +24,7 @@ def get_deliverables_obj(
 def validate_common_tags() -> bool:
     """Validate the common tags"""
     for category in COMMON_TAG_CATEGORIES:
-        tag_map: Dict[str, Dict[str, str]] = COMMON_TAG_CATEGORIES[category]
+        tag_map: dict[str, dict[str, str]] = COMMON_TAG_CATEGORIES[category]
         for tag_name, value in tag_map.items():
             try:
                 assert isinstance(tag_map[tag_name], dict)
@@ -39,7 +39,7 @@ def validate_common_tags() -> bool:
     return True
 
 
-def validate_tag_map(tag_map: Dict[FrozenSet[str], dict]) -> bool:
+def validate_tag_map(tag_map: dict[FrozenSet[str], dict]) -> bool:
     """Validate if a tag map is on the correct format"""
     for pipeline_tags, value in tag_map.items():
         assert isinstance(pipeline_tags, frozenset)
