@@ -1,4 +1,4 @@
-from typing import FrozenSet, Optional
+from typing import FrozenSet
 
 from pydantic import BaseModel, validator
 
@@ -11,7 +11,7 @@ class FileBase(BaseModel):
     """Definition for elements in deliverables file"""
 
     path: str
-    tag: Optional[str]
+    tag: str | None
     id: str
 
 
@@ -19,7 +19,7 @@ class MipFile(FileBase):
     """Definition for elements in MIP deliverables"""
 
     format: str
-    path_index: Optional[str]
+    path_index: str | None
     step: str
 
 
@@ -41,14 +41,14 @@ class RnafusionFile(FileBase):
     """Definition for elements in Rnafusion deliverables"""
 
     format: str
-    path_index: Optional[str]
+    path_index: str | None
     step: str
 
 
 class BalsamicFile(FileBase):
     """Definition of elements in balsamic deliverables"""
 
-    format: Optional[str]
+    format: str | None
     tag: list[str]
 
     @validator("tag", pre=True)
@@ -117,4 +117,4 @@ class TagBase(BaseModel):
     tags: FrozenSet[str]
     subject_id: str
     path: str
-    path_index: Optional[str]
+    path_index: str | None

@@ -1,6 +1,5 @@
 import logging
 from pathlib import Path
-from typing import Optional
 
 import typer
 from pydantic import ValidationError
@@ -13,10 +12,10 @@ from cg_hermes.config.fluffy import FLUFFY_COMMON_TAGS
 from cg_hermes.config.mip_dna import MIP_DNA_TAGS
 from cg_hermes.config.mip_rna import MIP_RNA_TAGS
 from cg_hermes.config.mutant import MUTANT_COMMON_TAGS
-from cg_hermes.config.rnafusion import NXF_RNAFUSION_COMMON_TAGS
 from cg_hermes.config.pipelines import AnalysisType, Pipeline
+from cg_hermes.config.rnafusion import NXF_RNAFUSION_COMMON_TAGS
 from cg_hermes.exceptions import MissingFileError
-from cg_hermes.validate import get_deliverables_obj, validate_common_tags, validate_tag_map
+from cg_hermes.validate import get_deliverables_obj, validate_tag_map
 
 LOG = logging.getLogger(__name__)
 
