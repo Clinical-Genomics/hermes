@@ -43,6 +43,7 @@
 | umi-cram-index  | Index for the UMI consensus filtered cram file  |
 | qc-cram         | QC alignment file in CRAM format                |
 | qc-cram-index   | QC index file for alignment file in CRAM format |
+| vcf-fusion      | Converted RNA fusion file to SV VCF             |
 
 ## FAMILY TAGS
 
@@ -80,6 +81,7 @@
 | vcf-report        | Results and QC from variant calling             |
 | cnv-report        | CNV variant calling report                      |
 | software-versions | Versions of software used in analysis           |
+| gene-counts       | STAR read counts output per gene                |
 
 ## TOOL TAGS
 

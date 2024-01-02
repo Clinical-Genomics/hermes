@@ -1,4 +1,4 @@
-from typing import List, Optional
+from typing import Optional
 
 from pydantic import validator
 from pydantic.main import BaseModel
@@ -7,9 +7,9 @@ from cg_hermes.config.tags import ALL_TAGS, AVAILABLE_USAGES
 
 
 class TagMap(BaseModel):
-    tags: List[str]
+    tags: list[str]
     is_mandatory: bool
-    used_by: List[str]
+    used_by: list[str]
     bundle_id: Optional[bool] = False
 
     @validator("tags", each_item=True)
@@ -25,5 +25,5 @@ class TagMap(BaseModel):
 
 class CGTag(BaseModel):
     path: str
-    tags: List[str]
+    tags: list[str]
     mandatory: bool

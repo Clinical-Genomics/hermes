@@ -100,6 +100,7 @@ REPORTING_COMMON = {
     "vcf-report": {"description": "Results and QC from variant calling"},
     "cnv-report": {"description": "CNV variant calling report"},
     "software-versions": {"description": "Versions of software used in analysis"},
+    "gene-counts": {"description": "STAR read counts output per gene"},
 }
 
 VALIDATIONS_COMMON = {
@@ -138,6 +139,7 @@ ANALYSIS_COMMON = {
     "umi-cram-index": {"description": "Index for the UMI consensus filtered cram file"},
     "qc-cram": {"description": "QC alignment file in CRAM format"},
     "qc-cram-index": {"description": "QC index file for alignment file in CRAM format"},
+    "vcf-fusion": {"description": "Converted RNA fusion file to SV VCF"},
 }
 
 TOOLS = {
