@@ -151,6 +151,7 @@ ANALYSIS_COMMON = {
 TOOLS = {
     "arriba": {"description": "Fusion caller"},
     "ascatngs": {"description": "Tool to identify somatically acquired copy-number alterations"},
+    "cnvpytor": {"description": "Tool for CNV/CNA analysis from depth-of-coverage by mapped reads"},
     "asereadcounter": {"description": "Count reads mapping to heterozygous sites"},
     "chanjo": {"description": "Tool to keep track of coverage over specific regions"},
     "chromograph": {"description": "Tool to create PNG images from BED and WIG files from mikaell"},
