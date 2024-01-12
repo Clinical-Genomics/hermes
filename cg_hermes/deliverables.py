@@ -153,9 +153,7 @@ class Deliverables:
                         path=file_object.path_index,
                     )
                 )
-        return CGDeliverables(
-            pipeline=self.pipeline.value, files=cg_files, bundle_id=self.bundle_id
-        )
+        return CGDeliverables(pipeline=self.pipeline, files=cg_files, bundle_id=self.bundle_id)
 
     def get_balsamic_analysis_configs(self) -> dict[FrozenSet[str], dict]:
         """Extracts all the BALSAMIC mandatory files depending on the analysis workflow and type executed"""

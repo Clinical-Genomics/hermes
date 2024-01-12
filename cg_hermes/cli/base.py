@@ -41,4 +41,4 @@ def main(
     Manage users in the awesome CLI app.
     """
     LOG.info("Running hermes")
-    coloredlogs.install(level=loglevel.value)
+    coloredlogs.install(level=loglevel)

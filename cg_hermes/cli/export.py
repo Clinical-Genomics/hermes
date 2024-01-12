@@ -84,7 +84,7 @@ def export_tags_cmd(
         header = ["Tag name", "Description"]
         for category in COMMON_TAG_CATEGORIES:
             table_name = category.upper().replace("_", " ")
-            if output.value == "github":
+            if output == "github":
                 typer.echo(f"## {table_name}")
             else:
                 typer.echo(table_name)
@@ -97,14 +97,14 @@ def export_tags_cmd(
                 for tag_name in COMMON_TAG_CATEGORIES[category]
             ]
 
-            typer.echo(tabulate(table, headers=header, tablefmt=output.value))
+            typer.echo(tabulate(table, headers=header, tablefmt=output))
             typer.echo()
         raise typer.Exit()
-    if pipeline.value not in PIPELINE_MAP:
+    if pipeline not in PIPELINE_MAP:
         LOG.info("Could not recognize pipeline")
         raise typer.Exit(code=1)
 
     header = PIPELINE_MAP[pipeline]["header"]
     table = get_table(PIPELINE_MAP[pipeline]["tags"])
 
-    typer.echo(tabulate(table, headers=header, tablefmt=output.value))
+    typer.echo(tabulate(table, headers=header, tablefmt=output))
