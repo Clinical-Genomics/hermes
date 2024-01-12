@@ -1,4 +1,4 @@
-from cgmodels.cg.constants import Pipeline, StrEnum
+from enum import StrEnum
 
 
 class AnalysisType(StrEnum):

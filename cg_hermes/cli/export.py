@@ -1,8 +1,9 @@
 import copy
 import logging
-from enum import Enum
+from enum import StrEnum
 
 import typer
+from cgmodels.cg.constants import Pipeline
 from tabulate import tabulate
 
 from cg_hermes.config.balsamic_umi import BALSAMIC_UMI_TAGS
@@ -12,7 +13,6 @@ from cg_hermes.config.mip_dna import MIP_DNA_TAGS
 from cg_hermes.config.mip_rna import MIP_RNA_TAGS
 from cg_hermes.config.mutant import MUTANT_COMMON_TAGS
 from cg_hermes.config.rnafusion import NXF_RNAFUSION_COMMON_TAGS
-from cg_hermes.config.pipelines import Pipeline
 from cg_hermes.config.tags import COMMON_TAG_CATEGORIES
 
 app = typer.Typer()
@@ -33,7 +33,7 @@ def get_table(tags: dict):
     return table
 
 
-class OutputFormat(str, Enum):
+class OutputFormat(StrEnum):
     github = "github"
     plain = "plain"
 
