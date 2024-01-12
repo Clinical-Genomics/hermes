@@ -1,6 +1,6 @@
-"""Code for validating files from different sources"""
+"""Code for validating files from different sources."""
 import logging
-from typing import FrozenSet, Optional
+from typing import FrozenSet
 
 from cg_hermes.config.pipelines import AnalysisType, Pipeline
 from cg_hermes.config.tags import COMMON_TAG_CATEGORIES
@@ -13,7 +13,7 @@ LOG = logging.getLogger(__name__)
 def get_deliverables_obj(
     deliverables: dict[str, list[dict[str, str]]],
     pipeline: Pipeline,
-    analysis_type: Optional[AnalysisType] = None,
+    analysis_type: AnalysisType | None = None,
 ) -> Deliverables:
     if Pipeline.BALSAMIC in pipeline and not analysis_type:
         LOG.error(f"Please specify analysis type for {pipeline}")
