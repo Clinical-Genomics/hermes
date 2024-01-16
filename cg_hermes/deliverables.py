@@ -3,6 +3,8 @@ import copy
 import logging
 from typing import FrozenSet
 
+from cgmodels.cg.constants import Pipeline
+
 from cg_hermes.config.balsamic import (
     BALSAMIC_TAGS,
     TUMOR_NORMAL_PANEL_TAGS,
@@ -25,7 +27,7 @@ from cg_hermes.config.microsalt import MICROSALT_COMMON_TAGS
 from cg_hermes.config.mip_dna import MIP_DNA_TAGS
 from cg_hermes.config.mip_rna import MIP_RNA_TAGS
 from cg_hermes.config.mutant import MUTANT_COMMON_TAGS
-from cg_hermes.config.pipelines import AnalysisType, Pipeline
+from cg_hermes.config.pipelines import AnalysisType
 from cg_hermes.config.rnafusion import NXF_RNAFUSION_COMMON_TAGS
 from cg_hermes.exceptions import MissingFileError
 from cg_hermes.models import pipeline_deliverables
@@ -151,9 +153,7 @@ class Deliverables:
                         path=file_object.path_index,
                     )
                 )
-        return CGDeliverables(
-            pipeline=self.pipeline.value, files=cg_files, bundle_id=self.bundle_id
-        )
+        return CGDeliverables(pipeline=self.pipeline, files=cg_files, bundle_id=self.bundle_id)
 
     def get_balsamic_analysis_configs(self) -> dict[FrozenSet[str], dict]:
         """Extracts all the BALSAMIC mandatory files depending on the analysis workflow and type executed"""

@@ -2,7 +2,9 @@
 import logging
 from typing import FrozenSet
 
-from cg_hermes.config.pipelines import AnalysisType, Pipeline
+from cgmodels.cg.constants import Pipeline
+
+from cg_hermes.config.pipelines import AnalysisType
 from cg_hermes.config.tags import COMMON_TAG_CATEGORIES
 from cg_hermes.deliverables import Deliverables
 from cg_hermes.models.tags import TagMap

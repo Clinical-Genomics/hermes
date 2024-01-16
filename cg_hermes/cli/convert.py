@@ -5,10 +5,11 @@ import logging
 from pathlib import Path
 
 import typer
+from cgmodels.cg.constants import Pipeline
 from pydantic import ValidationError
 
 from cg_hermes.cli.common import get_deliverables
-from cg_hermes.config.pipelines import AnalysisType, Pipeline
+from cg_hermes.config.pipelines import AnalysisType
 from cg_hermes.deliverables import Deliverables
 from cg_hermes.exceptions import MissingFileError
 from cg_hermes.validate import get_deliverables_obj
