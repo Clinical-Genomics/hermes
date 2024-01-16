@@ -1,7 +1,9 @@
-"""Class to represent deliverables file"""
+"""Class to represent deliverables file."""
 import copy
 import logging
-from typing import FrozenSet, Optional
+from typing import FrozenSet
+
+from cgmodels.cg.constants import Pipeline
 
 from cg_hermes.config.balsamic import (
     BALSAMIC_TAGS,
@@ -25,7 +27,7 @@ from cg_hermes.config.microsalt import MICROSALT_COMMON_TAGS
 from cg_hermes.config.mip_dna import MIP_DNA_TAGS
 from cg_hermes.config.mip_rna import MIP_RNA_TAGS
 from cg_hermes.config.mutant import MUTANT_COMMON_TAGS
-from cg_hermes.config.pipelines import AnalysisType, Pipeline
+from cg_hermes.config.pipelines import AnalysisType
 from cg_hermes.config.rnafusion import NXF_RNAFUSION_COMMON_TAGS
 from cg_hermes.exceptions import MissingFileError
 from cg_hermes.models import pipeline_deliverables
@@ -52,12 +54,12 @@ class Deliverables:
         self,
         deliverables: dict[str, list[dict[str, str]]],
         pipeline: Pipeline,
-        analysis_type: Optional[AnalysisType] = None,
+        analysis_type: AnalysisType | None = None,
     ):
         self.raw_deliverables = deliverables
         self.pipeline = pipeline
         self.analysis_type = analysis_type
-        self.bundle_id: Optional[str] = None
+        self.bundle_id: str | None = None
         self.configs: dict[FrozenSet[str], TagMap]
         self.files: list[TagBase]
         self.file_identifiers: set[FrozenSet[str]]
@@ -151,9 +153,7 @@ class Deliverables:
                         path=file_object.path_index,
                     )
                 )
-        return CGDeliverables(
-            pipeline=self.pipeline.value, files=cg_files, bundle_id=self.bundle_id
-        )
+        return CGDeliverables(pipeline=self.pipeline, files=cg_files, bundle_id=self.bundle_id)
 
     def get_balsamic_analysis_configs(self) -> dict[FrozenSet[str], dict]:
         """Extracts all the BALSAMIC mandatory files depending on the analysis workflow and type executed"""
