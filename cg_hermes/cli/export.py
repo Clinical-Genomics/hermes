@@ -3,7 +3,6 @@ import logging
 from enum import StrEnum
 
 import typer
-from cgmodels.cg.constants import Pipeline
 from tabulate import tabulate
 
 from cg_hermes.config.balsamic_umi import BALSAMIC_UMI_TAGS
@@ -14,6 +13,7 @@ from cg_hermes.config.mip_rna import MIP_RNA_TAGS
 from cg_hermes.config.mutant import MUTANT_COMMON_TAGS
 from cg_hermes.config.rnafusion import NXF_RNAFUSION_COMMON_TAGS
 from cg_hermes.config.tags import COMMON_TAG_CATEGORIES
+from cg_hermes.constants.workflow import Workflow
 
 app = typer.Typer()
 
@@ -41,31 +41,31 @@ class OutputFormat(StrEnum):
 BALSAMIC_COMMON_TAGS = copy.deepcopy(BALSAMIC_UMI_TAGS)
 
 PIPELINE_MAP = {
-    Pipeline.MIP_DNA: {
+    Workflow.MIP_DNA: {
         "header": ["Mip-dna tags", "Mandatory", "HK tags", "Used by"],
         "tags": MIP_DNA_TAGS,
     },
-    Pipeline.MIP_RNA: {
+    Workflow.MIP_RNA: {
         "header": ["Mip-rna tags", "Mandatory", "HK tags", "Used by"],
         "tags": MIP_RNA_TAGS,
     },
-    Pipeline.FLUFFY: {
+    Workflow.FLUFFY: {
         "header": ["Fluffy tags", "Mandatory", "HK tags", "Used by"],
         "tags": FLUFFY_COMMON_TAGS,
     },
-    Pipeline.MICROSALT: {
+    Workflow.MICROSALT: {
         "header": ["Microsalt tags", "Mandatory", "HK tags", "Used by"],
         "tags": MICROSALT_COMMON_TAGS,
     },
-    Pipeline.BALSAMIC: {
+    Workflow.BALSAMIC: {
         "header": ["Balsamic tags", "Mandatory", "HK tags", "Used by"],
         "tags": BALSAMIC_COMMON_TAGS,
     },
-    Pipeline.SARS_COV_2: {
+    Workflow.SARS_COV_2: {
         "header": ["Mutant tags", "Mandatory", "HK tags", "Used by"],
         "tags": MUTANT_COMMON_TAGS,
     },
-    Pipeline.RNAFUSION: {
+    Workflow.RNAFUSION: {
         "header": ["Rnafusion tags", "Mandatory", "HK tags", "Used by"],
         "tags": NXF_RNAFUSION_COMMON_TAGS,
     },
@@ -75,7 +75,7 @@ PIPELINE_MAP = {
 @app.command(name="tags")
 def export_tags_cmd(
     output: OutputFormat = typer.Option(OutputFormat.github),
-    pipeline: Pipeline = None,
+    pipeline: Workflow = None,
 ):
     """Export tag definitions from hermes"""
     LOG.info("Running export tags for pipeline %s", pipeline)

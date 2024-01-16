@@ -2,7 +2,6 @@ import logging
 from pathlib import Path
 
 import typer
-from cgmodels.cg.constants import Pipeline
 from pydantic import ValidationError
 
 from cg_hermes.cli.common import get_deliverables
@@ -15,6 +14,7 @@ from cg_hermes.config.mip_rna import MIP_RNA_TAGS
 from cg_hermes.config.mutant import MUTANT_COMMON_TAGS
 from cg_hermes.config.pipelines import AnalysisType
 from cg_hermes.config.rnafusion import NXF_RNAFUSION_COMMON_TAGS
+from cg_hermes.constants.workflow import Workflow
 from cg_hermes.exceptions import MissingFileError
 from cg_hermes.validate import get_deliverables_obj, validate_tag_map
 
@@ -26,7 +26,7 @@ app = typer.Typer()
 @app.command("deliverables")
 def validate_deliverables(
     infile: Path,
-    pipeline: Pipeline = typer.Option(Pipeline.FLUFFY, help="Specify pipeline"),
+    pipeline: Workflow = typer.Option(Workflow.FLUFFY, help="Specify pipeline"),
     analysis_type: AnalysisType = typer.Option(None, help="Specify the analysis type"),
 ):
     """Validate a deliverables file"""
@@ -50,26 +50,26 @@ def validate_deliverables(
 
 
 @app.command("tags")
-def validate_tags_cmd(pipeline: Pipeline):
+def validate_tags_cmd(pipeline: Workflow):
     """Validate the tag maps for one of the definitions"""
     LOG.info("Validating %s common tags", pipeline)
     exit_code = 0
 
-    if pipeline == str(Pipeline.MIP_DNA):
+    if pipeline == str(Workflow.MIP_DNA):
         tag_map = MIP_DNA_TAGS
-    elif pipeline == str(Pipeline.MIP_RNA):
+    elif pipeline == str(Workflow.MIP_RNA):
         tag_map = MIP_RNA_TAGS
-    elif pipeline == str(Pipeline.BALSAMIC):
+    elif pipeline == str(Workflow.BALSAMIC):
         tag_map = BALSAMIC_TAGS
-    elif pipeline == str(Pipeline.BALSAMIC_UMI):
+    elif pipeline == str(Workflow.BALSAMIC_UMI):
         tag_map = BALSAMIC_UMI_TAGS
-    elif pipeline == str(Pipeline.BALSAMIC_QC):
+    elif pipeline == str(Workflow.BALSAMIC_QC):
         tag_map = BALSAMIC_QC_TAGS
-    elif pipeline == str(Pipeline.FLUFFY):
+    elif pipeline == str(Workflow.FLUFFY):
         tag_map = FLUFFY_COMMON_TAGS
-    elif pipeline == str(Pipeline.SARS_COV_2):
+    elif pipeline == str(Workflow.SARS_COV_2):
         tag_map = MUTANT_COMMON_TAGS
-    elif pipeline == str(Pipeline.RNAFUSION):
+    elif pipeline == str(Workflow.RNAFUSION):
         tag_map = NXF_RNAFUSION_COMMON_TAGS
     else:
         LOG.info("Could not find pipeline tags for %s", pipeline)
