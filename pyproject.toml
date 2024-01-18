@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "cg-hermes"
-version = "1.14.5"
+version = "1.14.6"
 description = "Convert information between pipelines and CG"
 authors = ["Måns Magnusson <mans.magnusson@scilifelab.se>"]
 
