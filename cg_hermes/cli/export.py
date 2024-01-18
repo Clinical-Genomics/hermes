@@ -75,7 +75,7 @@ PIPELINE_MAP = {
 @app.command(name="tags")
 def export_tags_cmd(
     output: OutputFormat = typer.Option(OutputFormat.github),
-    pipeline: Workflow = None,
+    pipeline: Workflow | None = None,
 ):
     """Export tag definitions from hermes"""
     LOG.info("Running export tags for pipeline %s", pipeline)
