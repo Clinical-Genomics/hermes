@@ -2,10 +2,9 @@
 import logging
 from typing import FrozenSet
 
-from cgmodels.cg.constants import Pipeline
-
 from cg_hermes.config.pipelines import AnalysisType
 from cg_hermes.config.tags import COMMON_TAG_CATEGORIES
+from cg_hermes.constants.workflow import Workflow
 from cg_hermes.deliverables import Deliverables
 from cg_hermes.models.tags import TagMap
 
@@ -14,10 +13,10 @@ LOG = logging.getLogger(__name__)
 
 def get_deliverables_obj(
     deliverables: dict[str, list[dict[str, str]]],
-    pipeline: Pipeline,
+    pipeline: Workflow,
     analysis_type: AnalysisType | None = None,
 ) -> Deliverables:
-    if Pipeline.BALSAMIC in pipeline and not analysis_type:
+    if Workflow.BALSAMIC in pipeline and not analysis_type:
         LOG.error(f"Please specify analysis type for {pipeline}")
         raise SyntaxError
     return Deliverables(deliverables=deliverables, pipeline=pipeline, analysis_type=analysis_type)
