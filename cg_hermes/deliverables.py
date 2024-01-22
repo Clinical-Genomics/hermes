@@ -3,8 +3,6 @@ import copy
 import logging
 from typing import FrozenSet
 
-from cgmodels.cg.constants import Pipeline
-
 from cg_hermes.config.balsamic import (
     BALSAMIC_TAGS,
     TUMOR_NORMAL_PANEL_TAGS,
@@ -29,6 +27,7 @@ from cg_hermes.config.mip_rna import MIP_RNA_TAGS
 from cg_hermes.config.mutant import MUTANT_COMMON_TAGS
 from cg_hermes.config.pipelines import AnalysisType
 from cg_hermes.config.rnafusion import NXF_RNAFUSION_COMMON_TAGS
+from cg_hermes.constants.workflow import Workflow
 from cg_hermes.exceptions import MissingFileError
 from cg_hermes.models import pipeline_deliverables
 from cg_hermes.models.pipeline_deliverables import (
@@ -53,7 +52,7 @@ class Deliverables:
     def __init__(
         self,
         deliverables: dict[str, list[dict[str, str]]],
-        pipeline: Pipeline,
+        pipeline: Workflow,
         analysis_type: AnalysisType | None = None,
     ):
         self.raw_deliverables = deliverables
@@ -69,33 +68,33 @@ class Deliverables:
 
     def set_pipeline_specific_variables(self):
         LOG.info("Parsing deliverables for %s", self.pipeline)
-        if self.pipeline == Pipeline.FLUFFY:
+        if self.pipeline == Workflow.FLUFFY:
             self.model: FluffyDeliverables = FluffyDeliverables.parse_obj(self.raw_deliverables)
             self.files = self.get_fluffy_files()
             self.configs = Deliverables.build_internal_tag_map(FLUFFY_COMMON_TAGS)
-        elif Pipeline.BALSAMIC in self.pipeline:
+        elif Workflow.BALSAMIC in self.pipeline:
             self.model: BalsamicDeliverables = BalsamicDeliverables.parse_obj(self.raw_deliverables)
             self.files = self.get_balsamic_files()
             self.configs = Deliverables.build_internal_tag_map(self.get_balsamic_analysis_configs())
-        elif self.pipeline == Pipeline.MICROSALT:
+        elif self.pipeline == Workflow.MICROSALT:
             self.model: MicrosaltDeliverables = MicrosaltDeliverables.parse_obj(
                 self.raw_deliverables
             )
             self.files = self.get_microsalt_files()
             self.configs = Deliverables.build_internal_tag_map(MICROSALT_COMMON_TAGS)
-        elif self.pipeline == Pipeline.SARS_COV_2:
+        elif self.pipeline == Workflow.SARS_COV_2:
             self.model: MutantDeliverables = MutantDeliverables.parse_obj(self.raw_deliverables)
             self.files = self.get_mutant_files()
             self.configs = Deliverables.build_internal_tag_map(MUTANT_COMMON_TAGS)
-        elif self.pipeline == Pipeline.MIP_DNA:
+        elif self.pipeline == Workflow.MIP_DNA:
             self.model: MipDeliverables = MipDeliverables.parse_obj(self.raw_deliverables)
             self.files = self.get_mip_files()
             self.configs = Deliverables.build_internal_tag_map(MIP_DNA_TAGS)
-        elif self.pipeline == Pipeline.MIP_RNA:
+        elif self.pipeline == Workflow.MIP_RNA:
             self.model: MipDeliverables = MipDeliverables.parse_obj(self.raw_deliverables)
             self.files = self.get_mip_files()
             self.configs = Deliverables.build_internal_tag_map(MIP_RNA_TAGS)
-        elif self.pipeline == Pipeline.RNAFUSION:
+        elif self.pipeline == Workflow.RNAFUSION:
             self.model: RnafusionDeliverables = RnafusionDeliverables.parse_obj(
                 self.raw_deliverables
             )
@@ -160,7 +159,7 @@ class Deliverables:
 
         BALSAMIC_COMMON_TAGS = []
         tag_set = []
-        if self.pipeline == Pipeline.BALSAMIC:
+        if self.pipeline == Workflow.BALSAMIC:
             BALSAMIC_COMMON_TAGS = BALSAMIC_TAGS
             if self.analysis_type == AnalysisType.tumor_wgs:
                 tag_set = TUMOR_ONLY_WGS_TAGS
@@ -170,13 +169,13 @@ class Deliverables:
                 tag_set = TUMOR_ONLY_PANEL_TAGS
             else:
                 tag_set = TUMOR_NORMAL_PANEL_TAGS
-        elif self.pipeline == Pipeline.BALSAMIC_QC:
+        elif self.pipeline == Workflow.BALSAMIC_QC:
             BALSAMIC_COMMON_TAGS = BALSAMIC_QC_TAGS
             if self.analysis_type == AnalysisType.tumor_normal_wgs:
                 tag_set = QC_TUMOR_NORMAL_WGS_TAGS
             elif self.analysis_type == AnalysisType.tumor_normal_panel:
                 tag_set = QC_TUMOR_NORMAL_PANEL_TAGS
-        elif self.pipeline == Pipeline.BALSAMIC_UMI:
+        elif self.pipeline == Workflow.BALSAMIC_UMI:
             BALSAMIC_COMMON_TAGS = BALSAMIC_UMI_TAGS
             if self.analysis_type == AnalysisType.tumor_panel:
                 tag_set = UMI_TUMOR_ONLY_PANEL_TAGS

@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "cg-hermes"
-version = "1.14.5"
+version = "1.14.6"
 description = "Convert information between pipelines and CG"
 authors = ["Måns Magnusson <mans.magnusson@scilifelab.se>"]
 
@@ -12,7 +12,6 @@ pyyaml = "^6.0.1"
 typer = "^0.9.0"
 typing-extensions = "^4.5.0"
 tabulate = "^0.8.7"
-cgmodels = "^0.10.3"
 bump2version = "^1.0.1"
 
 [tool.poetry.dev-dependencies]
