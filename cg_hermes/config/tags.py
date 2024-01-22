@@ -25,7 +25,6 @@ RAW_DATA = {
     "rna": {"description": "Data generated from RNA samples"},
 }
 
-
 VARIANT_COMMON = {
     "cnv": {"description": "Copy number variants"},
     "mobile-elements": {"description": "Mobile elements"},
@@ -119,8 +118,14 @@ ANALYSIS_COMMON = {
     "clinical": {"description": "Clinical subset"},
     "config": {"description": "Config file"},
     "coverage": {"description": "Output with coverage information"},
-    "diagram": {"description": "Data diagram"},
-    "scatter": {"description": "Scatter plot"},
+    "scatter-plot": {"description": "Scatter plot"},
+    "circular-plot": {"description": "Circular plot"},
+    "profile-plot": {"description": "Copy number profile plot"},
+    "raw-profile-plot": {"description": "Copy number profile without rounding to whole numbers"},
+    "aspcf-plot": {"description": "Plot of LogR and BAF values"},
+    "sunrise-plot": {"description": "Sunrise plot"},
+    "tumor-plot": {"description": "Plot of LogR and BAF values for tumor sample"},
+    "germline-plot": {"description": "Plot of LogR and BAF values for normal sample"},
     "filtered": {"description": "Filtered data"},
     "fracsnp": {"description": "Fraction of reads with snp"},
     "fusion": {"description": "Fusion transcripts"},
@@ -148,6 +153,7 @@ ANALYSIS_COMMON = {
 TOOLS = {
     "arriba": {"description": "Fusion caller"},
     "ascatngs": {"description": "Tool to identify somatically acquired copy-number alterations"},
+    "cnvpytor": {"description": "Tool for CNV/CNA analysis from depth-of-coverage by mapped reads"},
     "asereadcounter": {"description": "Count reads mapping to heterozygous sites"},
     "chanjo": {"description": "Tool to keep track of coverage over specific regions"},
     "chromograph": {"description": "Tool to create PNG images from BED and WIG files from mikaell"},
@@ -286,7 +292,6 @@ ALL_TAG_CATEGORIES = [
 ]
 
 ALL_TAGS = {tag for category in ALL_TAG_CATEGORIES for tag in category.keys()}
-
 
 if __name__ == "__main__":
     print(ALL_TAGS)

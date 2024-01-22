@@ -10,40 +10,46 @@
 
 ## ANALYSIS TAGS
 
-| Tag name        | Description                                     |
-|-----------------|-------------------------------------------------|
-| assembly        | Assembly                                        |
-| autozyg         | Autozygous region                               |
-| bed             | Bed file                                        |
-| bed-index       | Following index                                 |
-| bigwig          | Bigwig formated file                            |
-| clinical        | Clinical subset                                 |
-| config          | Config file                                     |
-| coverage        | Output with coverage information                |
-| diagram         | Data diagram                                    |
-| scatter         | Scatter plot                                    |
-| filtered        | Filtered data                                   |
-| fracsnp         | Fraction of reads with snp                      |
-| fusion          | Fusion transcripts                              |
-| genes           | Related to genes                                |
-| junction        | Junction data                                   |
-| metrics         | Data metrics                                    |
-| first-pass      | Data metrics first pass                         |
-| second-pass     | Data metrics second pass                        |
-| reference-info  | Information about references used in analysis   |
-| regions         | Output for regions                              |
-| research        | Research set                                    |
-| segments        | Output for segments                             |
-| sites           | Output for sites                                |
-| tcov            | Coverage output                                 |
-| tiddit-coverage | Coverage output from tiddit                     |
-| visualization   | Visualizes data                                 |
-| umi             | Files related to UMI workflow                   |
-| umi-cram        | UMI consensus filtered cram file                |
-| umi-cram-index  | Index for the UMI consensus filtered cram file  |
-| qc-cram         | QC alignment file in CRAM format                |
-| qc-cram-index   | QC index file for alignment file in CRAM format |
-| vcf-fusion      | Converted RNA fusion file to SV VCF             |
+| Tag name         | Description                                           |
+|------------------|-------------------------------------------------------|
+| assembly         | Assembly                                              |
+| autozyg          | Autozygous region                                     |
+| bed              | Bed file                                              |
+| bed-index        | Following index                                       |
+| bigwig           | Bigwig formated file                                  |
+| clinical         | Clinical subset                                       |
+| config           | Config file                                           |
+| coverage         | Output with coverage information                      |
+| scatter-plot     | Scatter plot                                          |
+| circular-plot    | Circular plot                                         |
+| profile-plot     | Copy number profile plot                              |
+| raw-profile-plot | Copy number profile without rounding to whole numbers |
+| aspcf-plot       | Plot of LogR and BAF values                           |
+| sunrise-plot     | Sunrise plot                                          |
+| tumor-plot       | Plot of LogR and BAF values for tumor sample          |
+| germline-plot    | Plot of LogR and BAF values for normal sample         |
+| filtered         | Filtered data                                         |
+| fracsnp          | Fraction of reads with snp                            |
+| fusion           | Fusion transcripts                                    |
+| genes            | Related to genes                                      |
+| junction         | Junction data                                         |
+| metrics          | Data metrics                                          |
+| first-pass       | Data metrics first pass                               |
+| second-pass      | Data metrics second pass                              |
+| reference-info   | Information about references used in analysis         |
+| regions          | Output for regions                                    |
+| research         | Research set                                          |
+| segments         | Output for segments                                   |
+| sites            | Output for sites                                      |
+| tcov             | Coverage output                                       |
+| tiddit-coverage  | Coverage output from tiddit                           |
+| visualization    | Visualizes data                                       |
+| umi              | Files related to UMI workflow                         |
+| umi-cram         | UMI consensus filtered cram file                      |
+| umi-cram-index   | Index for the UMI consensus filtered cram file        |
+| qc-cram          | QC alignment file in CRAM format                      |
+| qc-cram-index    | QC index file for alignment file in CRAM format       |
+| vcf-fusion       | Converted RNA fusion file to SV VCF                   |
 
 ## FAMILY TAGS
 
@@ -85,46 +91,47 @@
 
 ## TOOL TAGS
 
-| Tag name              | Description                                                   |
-|-----------------------|---------------------------------------------------------------|
-| arriba                | Fusion caller                                                 |
-| ascatngs              | Tool to identify somatically acquired copy-number alterations |
-| asereadcounter        | Count reads mapping to heterozygous sites                     |
-| chanjo                | Tool to keep track of coverage over specific regions          |
-| chromograph           | Tool to create PNG images from BED and WIG files from mikaell |
-| cnvkit                | Tool to call copy number variations                           |
-| cyrius                | Tool to call the problematic CYP2D6 gene                      |
-| deepvariant           | Variantcaller                                                 |
-| delly                 | Cancer structural variant prediction tool                     |
-| deseq2                | Differential expression analysis with DESeq2                  |
-| dnascope              | Call snv indels                                               |
-| fusioncatcher         | Fusion caller                                                 |
-| fusioncatcher-summary | Fusion caller summary                                         |
-| fusioninspector       | Fusion inspection                                             |
-| expansionhunter       | Call repeat expansions                                        |
-| genotyper             | SNV indel caller from sention                                 |
-| gens                  | CNV visualization tool                                        |
-| gffcompare            | Compare gff files                                             |
-| haplotype-caller      | Call snv and indels                                           |
-| manta                 | Tool to call structural variants                              |
-| mitodel               | Tool to identify mitochondrial deletion signatures            |
-| peddy                 | Tool to check pedigree and ancestral relations                |
-| picard                | Picard set of bioinformatic tools                             |
-| pizzly                | Fusion caller                                                 |
-| retroseq              | Mobile element caller                                         |
-| salmon-quant          | Transcript quantification                                     |
-| sention               | Sention algorithm                                             |
-| squid                 | Fusion caller                                                 |
-| star-fusion           | Fusion caller                                                 |
-| stringtie             | Transcript assembler                                          |
-| svdb                  | Tool to merge SV vcf files from multiple variant callers      |
-| tiddit                | Tool to identify chromosomal rearrangements                   |
-| tnscope               | Call snv indels                                               |
-| tnscope-umi           | Call snv indels for umi                                       |
-| upd                   | Uniparent disomy caller from bjhall                           |
-| vardict               | Cancer variant caller                                         |
-| wisecondor            | NIPT caller                                                   |
-| nextclade             | Viral genome clade assignment                                 |
+| Tag name              | Description                                                      |
+|-----------------------|------------------------------------------------------------------|
+| arriba                | Fusion caller                                                    |
+| ascatngs              | Tool to identify somatically acquired copy-number alterations    |
+| cnvpytor              | Tool for CNV/CNA analysis from depth-of-coverage by mapped reads |
+| asereadcounter        | Count reads mapping to heterozygous sites                        |
+| chanjo                | Tool to keep track of coverage over specific regions             |
+| chromograph           | Tool to create PNG images from BED and WIG files from mikaell    |
+| cnvkit                | Tool to call copy number variations                              |
+| cyrius                | Tool to call the problematic CYP2D6 gene                         |
+| deepvariant           | Variantcaller                                                    |
+| delly                 | Cancer structural variant prediction tool                        |
+| deseq2                | Differential expression analysis with DESeq2                     |
+| dnascope              | Call snv indels                                                  |
+| fusioncatcher         | Fusion caller                                                    |
+| fusioncatcher-summary | Fusion caller summary                                            |
+| fusioninspector       | Fusion inspection                                                |
+| expansionhunter       | Call repeat expansions                                           |
+| genotyper             | SNV indel caller from sention                                    |
+| gens                  | CNV visualization tool                                           |
+| gffcompare            | Compare gff files                                                |
+| haplotype-caller      | Call snv and indels                                              |
+| manta                 | Tool to call structural variants                                 |
+| mitodel               | Tool to identify mitochondrial deletion signatures               |
+| peddy                 | Tool to check pedigree and ancestral relations                   |
+| picard                | Picard set of bioinformatic tools                                |
+| pizzly                | Fusion caller                                                    |
+| retroseq              | Mobile element caller                                            |
+| salmon-quant          | Transcript quantification                                        |
+| sention               | Sention algorithm                                                |
+| squid                 | Fusion caller                                                    |
+| star-fusion           | Fusion caller                                                    |
+| stringtie             | Transcript assembler                                             |
+| svdb                  | Tool to merge SV vcf files from multiple variant callers         |
+| tiddit                | Tool to identify chromosomal rearrangements                      |
+| tnscope               | Call snv indels                                                  |
+| tnscope-umi           | Call snv indels for umi                                          |
+| upd                   | Uniparent disomy caller from bjhall                              |
+| vardict               | Cancer variant caller                                            |
+| wisecondor            | NIPT caller                                                      |
+| nextclade             | Viral genome clade assignment                                    |
 
 ## VALIDATION TAGS
 
