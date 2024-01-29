@@ -67,7 +67,7 @@ def validate_tags_cmd(pipeline: Workflow):
         tag_map = BALSAMIC_QC_TAGS
     elif pipeline == Workflow.FLUFFY:
         tag_map = FLUFFY_COMMON_TAGS
-    elif pipeline == Workflow.SARS_COV_2:
+    elif pipeline == Workflow.MUTANT:
         tag_map = MUTANT_COMMON_TAGS
     elif pipeline == Workflow.RNAFUSION:
         tag_map = NXF_RNAFUSION_COMMON_TAGS

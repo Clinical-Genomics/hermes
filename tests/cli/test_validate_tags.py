@@ -3,6 +3,7 @@
 from typer.testing import CliRunner
 
 from cg_hermes.cli.validate import app
+from cg_hermes.constants.workflow import Workflow
 
 
 def test_cli_validate_mip_tags(cli_runner: CliRunner):
@@ -59,7 +60,7 @@ def test_cli_validate_mutant_tags(cli_runner: CliRunner):
     # GIVEN a CLI runner
 
     # WHEN testing to validate the common tags from the CLI
-    result = cli_runner.invoke(app, ["tags", "sars-cov-2"])
+    result = cli_runner.invoke(app, ["tags", Workflow.MUTANT])
 
     # THEN assert that the validation was successful
     assert result.exit_code == 0

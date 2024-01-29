@@ -5,6 +5,7 @@ from pathlib import Path
 from typer.testing import CliRunner
 
 from cg_hermes.cli.convert import app
+from cg_hermes.constants.workflow import Workflow
 
 
 def test_convert_mip_dna_deliverables(cli_runner: CliRunner, mip_dna_deliverables: Path):
@@ -58,7 +59,7 @@ def test_convert_mutant_deliverables(cli_runner: CliRunner, mutant_deliverables:
     assert mutant_deliverables.exists()
 
     # WHEN converting the deliverables to CG format
-    result = cli_runner.invoke(app, [str(mutant_deliverables), "--pipeline", "sars-cov-2"])
+    result = cli_runner.invoke(app, [str(mutant_deliverables), "--pipeline", Workflow.MUTANT])
 
     # THEN assert that the program exits with success
     assert result.exit_code == 0
