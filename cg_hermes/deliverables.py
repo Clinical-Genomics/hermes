@@ -82,7 +82,7 @@ class Deliverables:
             )
             self.files = self.get_microsalt_files()
             self.configs = Deliverables.build_internal_tag_map(MICROSALT_COMMON_TAGS)
-        elif self.pipeline == Workflow.SARS_COV_2:
+        elif self.pipeline == Workflow.MUTANT:
             self.model: MutantDeliverables = MutantDeliverables.parse_obj(self.raw_deliverables)
             self.files = self.get_mutant_files()
             self.configs = Deliverables.build_internal_tag_map(MUTANT_COMMON_TAGS)

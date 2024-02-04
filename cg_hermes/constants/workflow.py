@@ -14,6 +14,6 @@ class Workflow(StrEnum):
     MIP_RNA: str = "mip-rna"
     RNAFUSION: str = "rnafusion"
     RSYNC: str = "rsync"
-    SARS_COV_2: str = "sars-cov-2"
+    MUTANT: str = "mutant"
     SPRING: str = "spring"
     TAXPROFILER: str = "taxprofiler"

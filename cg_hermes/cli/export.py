@@ -61,7 +61,7 @@ PIPELINE_MAP = {
         "header": ["Balsamic tags", "Mandatory", "HK tags", "Used by"],
         "tags": BALSAMIC_COMMON_TAGS,
     },
-    Workflow.SARS_COV_2: {
+    Workflow.MUTANT: {
         "header": ["Mutant tags", "Mandatory", "HK tags", "Used by"],
         "tags": MUTANT_COMMON_TAGS,
     },

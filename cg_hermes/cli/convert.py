@@ -1,4 +1,4 @@
-"""CLI for converting between formats"""
+"""CLI for converting between formats."""
 
 import json
 import logging
@@ -12,6 +12,7 @@ from cg_hermes.config.pipelines import AnalysisType
 from cg_hermes.constants.workflow import Workflow
 from cg_hermes.deliverables import Deliverables
 from cg_hermes.exceptions import MissingFileError
+from cg_hermes.models.pipeline_deliverables import CGDeliverables
 from cg_hermes.validate import get_deliverables_obj
 
 LOG = logging.getLogger(__name__)
@@ -25,25 +26,21 @@ def convert_cmd(
     pipeline: Workflow = typer.Option(..., help="Specify the analysis type"),
     analysis_type: AnalysisType = typer.Option(None, help="Specify the analysis type"),
 ):
-    LOG.info(
-        "Convert deliverable file %s from workflow %s to CG format",
-        infile,
-        pipeline,
-    )
-    # Read raw file into dict
-    deliverables_raw = get_deliverables(infile)
+    LOG.info(f"Convert deliverable file: {infile} from workflow {pipeline} to CG format")
+
+    raw_deliverables: dict[str, list[dict[str, str]]] = get_deliverables(infile)
     try:
-        deliverables_obj: Deliverables = get_deliverables_obj(
-            deliverables=deliverables_raw, pipeline=pipeline, analysis_type=analysis_type
+        deliverables: Deliverables = get_deliverables_obj(
+            deliverables=raw_deliverables, pipeline=pipeline, analysis_type=analysis_type
         )
-        deliverables_obj.validate_mandatory_files()
+        deliverables.validate_mandatory_files()
     except SyntaxError:
         raise typer.Abort()
     except (ValidationError, MissingFileError) as err:
         LOG.error(err)
-        LOG.warning("File %s does not follow the spec", infile)
+        LOG.warning(f"File: {infile} does not follow the specification")
         raise typer.Abort()
 
-    cg_deliverables = deliverables_obj.convert_to_cg_deliverables()
+    cg_deliverables: CGDeliverables = deliverables.convert_to_cg_deliverables()
 
     typer.echo(json.dumps(cg_deliverables.dict(), indent=2))
