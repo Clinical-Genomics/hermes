@@ -26,7 +26,7 @@ def convert_cmd(
     analysis_type: AnalysisType = typer.Option(None, help="Specify the analysis type"),
 ):
     LOG.info(
-        "Convert deliverable file %s from pipeline %s to CG format",
+        "Convert deliverable file %s from workflow %s to CG format",
         infile,
         pipeline,
     )

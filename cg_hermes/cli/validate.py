@@ -27,11 +27,11 @@ app = typer.Typer()
 @app.command("deliverables")
 def validate_deliverables(
     infile: Path,
-    pipeline: Workflow = typer.Option(Workflow.FLUFFY, help="Specify pipeline"),
+    pipeline: Workflow = typer.Option(Workflow.FLUFFY, help="Specify workflow"),
     analysis_type: AnalysisType = typer.Option(None, help="Specify the analysis type"),
 ):
     """Validate a deliverables file."""
-    LOG.info(f"Validating file: {infile} from pipeline: {pipeline}")
+    LOG.info(f"Validating file: {infile} from workflow: {pipeline}")
 
     raw_deliverables: dict[str, list[dict[str, str]]] = get_deliverables(infile)
 
@@ -72,7 +72,7 @@ def validate_tags_cmd(pipeline: Workflow):
     elif pipeline == Workflow.RNAFUSION:
         tag_map = NXF_RNAFUSION_COMMON_TAGS
     else:
-        LOG.info(f"Could not find pipeline tags for {pipeline}")
+        LOG.info(f"Could not find workflow tags for {pipeline}")
         raise typer.Exit(code=exit_code)
 
     try:

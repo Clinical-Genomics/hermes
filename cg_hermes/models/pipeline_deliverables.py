@@ -106,7 +106,7 @@ class RnafusionDeliverables(PipelineDeliverables):
 class CGDeliverables(PipelineDeliverables):
     """Class that specifies the output to CG"""
 
-    pipeline: str
+    workflow: str
     bundle_id: str
     files: list[CGTag]
 

@@ -1,4 +1,4 @@
-"""Tags that are used in the fluffy pipeline"""
+"""Tags that are used in the fluffy workflow"""
 
 FLUFFY_COMMON_TAGS = {
     frozenset(["multiqc"]): {

@@ -35,7 +35,7 @@ def test_convert_mip_deliverables_microsalt_file(
     # GIVEN the path to a microsalt deliverables file
     assert microsalt_deliverables.exists()
 
-    # WHEN converting the deliverables to CG format using mip as pipeline
+    # WHEN converting the deliverables to CG format using mip as workflow
     result = cli_runner.invoke(app, [str(microsalt_deliverables), "--pipeline", "mip-dna"])
 
     # THEN assert that the program exits without success

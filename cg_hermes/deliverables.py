@@ -102,7 +102,7 @@ class Deliverables:
             self.configs = Deliverables.build_internal_tag_map(NXF_RNAFUSION_COMMON_TAGS)
         else:
             raise Exception(
-                "Invalid pipeline ({}) set for Deliverables object".format(self.pipeline)
+                "Invalid workflow ({}) set for Deliverables object".format(self.pipeline)
             )
 
     @staticmethod
@@ -116,7 +116,7 @@ class Deliverables:
 
     @staticmethod
     def convert_to_cg_tag(conversion_info: TagMap, subject_id: str, path: str) -> CGTag:
-        """Convert tags from pipeline specific tags to CG tags"""
+        """Convert tags from workflow specific tags to CG tags"""
         cg_tags: list[str] = copy.deepcopy(conversion_info.tags)
         cg_tags.append(subject_id)
         cg_tags.extend(
@@ -125,7 +125,7 @@ class Deliverables:
         return CGTag(path=path, tags=cg_tags, mandatory=conversion_info.is_mandatory)
 
     def convert_to_cg_deliverables(self) -> CGDeliverables:
-        """Convert pipeline specific information from deliverables file to CG formatted information"""
+        """Convert workflow specific information from deliverables file to CG formatted information"""
         cg_files: list[CGTag] = []
         file_object: TagBase
         for file_object in self.files:
@@ -152,7 +152,7 @@ class Deliverables:
                         path=file_object.path_index,
                     )
                 )
-        return CGDeliverables(pipeline=self.pipeline, files=cg_files, bundle_id=self.bundle_id)
+        return CGDeliverables(workflow=self.pipeline, files=cg_files, bundle_id=self.bundle_id)
 
     def get_balsamic_analysis_configs(self) -> dict[FrozenSet[str], dict]:
         """Extracts all the BALSAMIC mandatory files depending on the analysis workflow and type executed"""
