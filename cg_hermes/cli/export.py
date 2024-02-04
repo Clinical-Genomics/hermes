@@ -77,8 +77,8 @@ def export_tags_cmd(
     output: OutputFormat = typer.Option(OutputFormat.github),
     pipeline: Workflow = None,
 ):
-    """Export tag definitions from hermes"""
-    LOG.info("Running export tags for workflow %s", pipeline)
+    """Export tag definitions from Hermes."""
+    LOG.info(f"Running export tags for workflow: {pipeline}")
 
     if not pipeline:
         header = ["Tag name", "Description"]
