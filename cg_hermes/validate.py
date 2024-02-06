@@ -41,8 +41,8 @@ def validate_common_tags() -> bool:
 
 
 def validate_tag_map(tag_map: dict[FrozenSet[str], dict]) -> bool:
-    """Validate if a tag map is on the correct format"""
-    for pipeline_tags, value in tag_map.items():
-        assert isinstance(pipeline_tags, frozenset)
+    """Validate if a tag map is on the correct format."""
+    for workflow_tags, value in tag_map.items():
+        assert isinstance(workflow_tags, frozenset)
         TagMap.validate(value)
     return True
