@@ -13,7 +13,7 @@ def test_validate_mip_deliverables_file(cli_runner: CliRunner, mip_dna_deliverab
 
     # WHEN running the validate deliverables command
     result = cli_runner.invoke(
-        app, ["deliverables", str(mip_dna_deliverables), "--pipeline", "mip-dna"]
+        app, ["deliverables", str(mip_dna_deliverables), "--workflow", "mip-dna"]
     )
 
     # THEN assert it exits without problem
@@ -26,7 +26,7 @@ def test_validate_mip_rna_deliverables_file(cli_runner: CliRunner, mip_rna_deliv
 
     # WHEN running the validate deliverables command
     result = cli_runner.invoke(
-        app, ["deliverables", str(mip_rna_deliverables), "--pipeline", "mip-rna"]
+        app, ["deliverables", str(mip_rna_deliverables), "--workflow", "mip-rna"]
     )
 
     # THEN assert it exits without problem
@@ -45,7 +45,7 @@ def test_validate_balsamic_deliverables_file(
         [
             "deliverables",
             str(balsamic_tn_wgs_deliverables),
-            "--pipeline",
+            "--workflow",
             "balsamic",
             "--analysis-type",
             "tumor_normal_wgs",
@@ -68,7 +68,7 @@ def test_validate_balsamic_umi_deliverables_file(
         [
             "deliverables",
             str(balsamic_tn_panel_deliverables),
-            "--pipeline",
+            "--workflow",
             "balsamic-umi",
             "--analysis-type",
             "tumor_normal_panel",
@@ -91,7 +91,7 @@ def test_validate_balsamic_qc_deliverables_file(
         [
             "deliverables",
             str(balsamic_tn_panel_deliverables),
-            "--pipeline",
+            "--workflow",
             "balsamic-qc",
             "--analysis-type",
             "tumor_normal_panel",
@@ -108,7 +108,7 @@ def test_validate_rnafusion_deliverables_file(cli_runner: CliRunner, rnafusion_d
 
     # WHEN running the validate deliverables command
     result = cli_runner.invoke(
-        app, ["deliverables", str(rnafusion_deliverables), "--pipeline", "rnafusion"]
+        app, ["deliverables", str(rnafusion_deliverables), "--workflow", "rnafusion"]
     )
 
     # THEN assert it exits without problem

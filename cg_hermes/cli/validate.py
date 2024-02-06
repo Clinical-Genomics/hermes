@@ -27,17 +27,17 @@ app = typer.Typer()
 @app.command("deliverables")
 def validate_deliverables(
     infile: Path,
-    pipeline: Workflow = typer.Option(Workflow.FLUFFY, help="Specify workflow"),
+    workflow: Workflow = typer.Option(Workflow.FLUFFY, help="Specify workflow"),
     analysis_type: AnalysisType = typer.Option(None, help="Specify the analysis type"),
 ):
     """Validate a deliverables file."""
-    LOG.info(f"Validating file: {infile} from workflow: {pipeline}")
+    LOG.info(f"Validating file: {infile} from workflow: {workflow}")
 
     raw_deliverables: dict[str, list[dict[str, str]]] = get_deliverables(infile)
 
     try:
         deliverables: Deliverables = get_deliverables_obj(
-            deliverables=raw_deliverables, pipeline=pipeline, analysis_type=analysis_type
+            deliverables=raw_deliverables, pipeline=workflow, analysis_type=analysis_type
         )
         deliverables.validate_mandatory_files()
     except SyntaxError:

@@ -21,11 +21,11 @@ def test_export_mip_dna_tags(cli_runner: CliRunner):
     # GIVEN a cli runner
 
     # WHEN running the export tags command for workflow mip
-    result = cli_runner.invoke(app, ["--pipeline", "mip-dna"])
+    result = cli_runner.invoke(app, ["--workflow", "mip-dna"])
 
     # THEN assert that the command exits without problems
     assert result.exit_code == 0
-    # THEN assert that the mip_dna tags was exported
+    # THEN assert that the mip_dna tags were exported
     assert "Mip-dna tags" in result.output
 
 
@@ -33,7 +33,7 @@ def test_export_mip_rna_tags(cli_runner: CliRunner):
     # GIVEN a cli runner
 
     # WHEN running the export tags command for workflow mip
-    result = cli_runner.invoke(app, ["--pipeline", "mip-rna"])
+    result = cli_runner.invoke(app, ["--workflow", "mip-rna"])
 
     # THEN assert that the command exits without problems
     assert result.exit_code == 0
@@ -47,7 +47,7 @@ def test_export_balsamic_tags(cli_runner: CliRunner):
     # GIVEN a cli runner
 
     # WHEN running the export tags command for workflow balsamic
-    result = cli_runner.invoke(app, ["--pipeline", "balsamic"])
+    result = cli_runner.invoke(app, ["--workflow", "balsamic"])
 
     # THEN assert that the command exits without problems
     assert result.exit_code == 0
@@ -60,7 +60,7 @@ def test_export_fluffy_tags(cli_runner: CliRunner):
     # GIVEN a cli runner
 
     # WHEN running the export tags command for workflow balsamic
-    result = cli_runner.invoke(app, ["--pipeline", "fluffy"])
+    result = cli_runner.invoke(app, ["--workflow", "fluffy"])
 
     # THEN assert that the command exits without problems
     assert result.exit_code == 0
@@ -72,7 +72,7 @@ def test_export_rnafusion_tags(cli_runner: CliRunner):
     # GIVEN a cli runner
 
     # WHEN running the export tags command for workflow rnafusion
-    result = cli_runner.invoke(app, ["--pipeline", "rnafusion"])
+    result = cli_runner.invoke(app, ["--workflow", "rnafusion"])
 
     # THEN assert that the command exits without problems
     assert result.exit_code == 0

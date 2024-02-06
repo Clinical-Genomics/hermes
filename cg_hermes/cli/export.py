@@ -75,12 +75,12 @@ PIPELINE_MAP = {
 @app.command(name="tags")
 def export_tags_cmd(
     output: OutputFormat = typer.Option(OutputFormat.github),
-    pipeline: Workflow = None,
+    workflow: Workflow = None,
 ):
     """Export tag definitions from Hermes."""
-    LOG.info(f"Running export tags for workflow: {pipeline}")
+    LOG.info(f"Running export tags for workflow: {workflow}")
 
-    if not pipeline:
+    if not workflow:
         header = ["Tag name", "Description"]
         for category in COMMON_TAG_CATEGORIES:
             table_name = category.upper().replace("_", " ")
@@ -100,11 +100,11 @@ def export_tags_cmd(
             typer.echo(tabulate(table, headers=header, tablefmt=output))
             typer.echo()
         raise typer.Exit()
-    if pipeline not in PIPELINE_MAP:
+    if workflow not in PIPELINE_MAP:
         LOG.info("Could not recognize workflow")
         raise typer.Exit(code=1)
 
-    header = PIPELINE_MAP[pipeline]["header"]
-    table = get_table(PIPELINE_MAP[pipeline]["tags"])
+    header = PIPELINE_MAP[workflow]["header"]
+    table = get_table(PIPELINE_MAP[workflow]["tags"])
 
     typer.echo(tabulate(table, headers=header, tablefmt=output))

@@ -1,7 +1,7 @@
 # Hermes 
 ![Tests][tests-badge] [![codecov][codecov-badge]][codecov-url][![CodeFactor][codefactor-badge]][codefactor-url][![Code style: black][black-badge]][black-url]
 
-Hermes :postal_horn: is a package to handle the communication between pipelines and CG.
+Hermes :postal_horn: is a package to handle the communication between workflows and CG.
 
 The name [Hermes][hermes-name] comes from greek mythology, he was considered to be the messenger between the humans and the gods, feel free to interpret that as you like:). Hermes was moving swiftly between the worlds aided by his winged sandals.
 
@@ -30,13 +30,13 @@ poetry install
 
 ## Deliverables
 
-Each pipeline specifies it's output, or result files, in some way. CG want to have this input in a certain way to know how to fetch files from housekeeper etc. Hermes is used to convert the deliverables specification from the pipeline to the CG format so that CG safely can store the information without parsing different files in different ways.
+Each workflow specifies its output, or result files, in some way. CG wants to have this input in a certain way to know how to fetch files from housekeeper etc. Hermes is used to convert the deliverables specification from the workflow to the CG format so that CG safely can store the information without parsing different files in different ways.
 
-Also this is the place where pipeline developers can communicate around tags, what to deliver etc without understanding how CG works.
+Also, this is the place where workflow developers can communicate around tags, what to deliver etc without understanding how CG works.
 
-## Starting pipelines
+## Starting workflows
 
-I think it would be a good idea to have Hermes starting the pipelines as well as it is the pipeline developers who know this best, following the reasoning above.
+I think it would be a good idea to have Hermes starting the workflows as well as it is the workflow developers who know this best, following the reasoning above.
 
 
 [black-badge]: https://img.shields.io/badge/code%20style-black-000000.svg
