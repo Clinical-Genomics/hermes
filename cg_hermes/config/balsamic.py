@@ -16,7 +16,7 @@ RAW_TAGS = {
     "multiqc_picard_HsMetrics.json": ["multiqc", "picard", "hsmetrics"],
     "multiqc_picard_insertSize.json": ["multiqc", "picard", "insertsize"],
     "multiqc_picard_wgsmetrics.json": ["multiqc", "picard", "wgsmetrics"],
-    "multiqc_samtools_stats.json": ["multiqc", "samtool", "stats"],
+    "multiqc_samtools_stats.json": ["multiqc", "samtools", "stats"],
     "multiqc_somalier.json": ["multiqc", "somalier"],
     # Custom QC
     "metrics_deliverables.yaml": ["yaml", "qc-metrics-yaml"],
