@@ -40,7 +40,7 @@ class OutputFormat(StrEnum):
 
 BALSAMIC_COMMON_TAGS = copy.deepcopy(BALSAMIC_UMI_TAGS)
 
-PIPELINE_MAP = {
+WORKFLOW_MAP = {
     Workflow.MIP_DNA: {
         "header": ["Mip-dna tags", "Mandatory", "HK tags", "Used by"],
         "tags": MIP_DNA_TAGS,
@@ -100,11 +100,11 @@ def export_tags_cmd(
             typer.echo(tabulate(table, headers=header, tablefmt=output))
             typer.echo()
         raise typer.Exit()
-    if workflow not in PIPELINE_MAP:
+    if workflow not in WORKFLOW_MAP:
         LOG.info("Could not recognize workflow")
         raise typer.Exit(code=1)
 
-    header = PIPELINE_MAP[workflow]["header"]
-    table = get_table(PIPELINE_MAP[workflow]["tags"])
+    header = WORKFLOW_MAP[workflow]["header"]
+    table = get_table(WORKFLOW_MAP[workflow]["tags"])
 
     typer.echo(tabulate(table, headers=header, tablefmt=output))
