@@ -112,11 +112,11 @@ class Deliverables:
 
     @staticmethod
     def build_internal_tag_map(tag_map: dict[FrozenSet[str], dict]) -> dict[FrozenSet[str], TagMap]:
-        """Convert and validate a tag map to TagMap objects"""
+        """Convert and validate a tag map to TagMap objects."""
         LOG.debug("Build internal tag map")
         internal_tag_map: dict[FrozenSet[str], TagMap] = dict()
-        for pipeline_tags in tag_map:
-            internal_tag_map[pipeline_tags] = TagMap.parse_obj(tag_map[pipeline_tags])
+        for workflow_tags in tag_map:
+            internal_tag_map[workflow_tags] = TagMap.parse_obj(tag_map[workflow_tags])
         return internal_tag_map
 
     @staticmethod
@@ -130,17 +130,17 @@ class Deliverables:
         return CGTag(path=path, tags=cg_tags, mandatory=conversion_info.is_mandatory)
 
     def convert_to_cg_deliverables(self) -> CGDeliverables:
-        """Convert workflow specific information from deliverables file to CG formatted information"""
+        """Convert workflow-specific information from deliverables file to CG formatted information."""
         cg_files: list[CGTag] = []
         file_object: TagBase
         for file_object in self.files:
-            pipeline_tags = file_object.tags
-            if pipeline_tags not in self.configs:
-                LOG.warning("Could not find info for file %s", ", ".join(pipeline_tags))
+            workflow_tags = file_object.tags
+            if workflow_tags not in self.configs:
+                LOG.warning("Could not find info for file %s", ", ".join(workflow_tags))
                 continue
-            conversion_info: TagMap = self.configs[pipeline_tags]
+            conversion_info: TagMap = self.configs[workflow_tags]
             if conversion_info.bundle_id is True:
-                LOG.info("Set bundle id to %s", conversion_info.bundle_id)
+                LOG.info(f"Set bundle id to {conversion_info.bundle_id}")
                 self.bundle_id = file_object.subject_id
             cg_files.append(
                 Deliverables.convert_to_cg_tag(
