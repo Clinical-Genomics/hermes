@@ -26,7 +26,7 @@ def convert_cmd(
     pipeline: Workflow = typer.Option(..., help="Specify the analysis type"),
     analysis_type: AnalysisType = typer.Option(None, help="Specify the analysis type"),
 ):
-    LOG.info(f"Convert deliverable file: {infile} from pipeline {pipeline} to CG format")
+    LOG.info(f"Convert deliverable file: {infile} from workflow {pipeline} to CG format")
 
     raw_deliverables: dict[str, list[dict[str, str]]] = get_deliverables(infile)
     try:

@@ -20,7 +20,7 @@ def test_export_common_tags(cli_runner: CliRunner):
 def test_export_mip_dna_tags(cli_runner: CliRunner):
     # GIVEN a cli runner
 
-    # WHEN running the export tags command for pipeline mip
+    # WHEN running the export tags command for workflow mip
     result = cli_runner.invoke(app, ["--pipeline", "mip-dna"])
 
     # THEN assert that the command exits without problems
@@ -32,7 +32,7 @@ def test_export_mip_dna_tags(cli_runner: CliRunner):
 def test_export_mip_rna_tags(cli_runner: CliRunner):
     # GIVEN a cli runner
 
-    # WHEN running the export tags command for pipeline mip
+    # WHEN running the export tags command for workflow mip
     result = cli_runner.invoke(app, ["--pipeline", "mip-rna"])
 
     # THEN assert that the command exits without problems
@@ -46,7 +46,7 @@ def test_export_balsamic_tags(cli_runner: CliRunner):
 
     # GIVEN a cli runner
 
-    # WHEN running the export tags command for pipeline balsamic
+    # WHEN running the export tags command for workflow balsamic
     result = cli_runner.invoke(app, ["--pipeline", "balsamic"])
 
     # THEN assert that the command exits without problems
@@ -59,7 +59,7 @@ def test_export_balsamic_tags(cli_runner: CliRunner):
 def test_export_fluffy_tags(cli_runner: CliRunner):
     # GIVEN a cli runner
 
-    # WHEN running the export tags command for pipeline balsamic
+    # WHEN running the export tags command for workflow balsamic
     result = cli_runner.invoke(app, ["--pipeline", "fluffy"])
 
     # THEN assert that the command exits without problems
@@ -71,7 +71,7 @@ def test_export_fluffy_tags(cli_runner: CliRunner):
 def test_export_rnafusion_tags(cli_runner: CliRunner):
     # GIVEN a cli runner
 
-    # WHEN running the export tags command for pipeline rnafusion
+    # WHEN running the export tags command for workflow rnafusion
     result = cli_runner.invoke(app, ["--pipeline", "rnafusion"])
 
     # THEN assert that the command exits without problems

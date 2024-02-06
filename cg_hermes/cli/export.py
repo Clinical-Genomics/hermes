@@ -77,8 +77,8 @@ def export_tags_cmd(
     output: OutputFormat = typer.Option(OutputFormat.github),
     pipeline: Workflow = None,
 ):
-    """Export tag definitions from hermes"""
-    LOG.info("Running export tags for pipeline %s", pipeline)
+    """Export tag definitions from Hermes."""
+    LOG.info(f"Running export tags for workflow: {pipeline}")
 
     if not pipeline:
         header = ["Tag name", "Description"]
@@ -101,7 +101,7 @@ def export_tags_cmd(
             typer.echo()
         raise typer.Exit()
     if pipeline not in PIPELINE_MAP:
-        LOG.info("Could not recognize pipeline")
+        LOG.info("Could not recognize workflow")
         raise typer.Exit(code=1)
 
     header = PIPELINE_MAP[pipeline]["header"]
