@@ -90,8 +90,9 @@ REPORTING_COMMON = {
     "csv": {"description": "Comma separated values"},
     "deliverable": {"description": "Deliverables file"},
     "delivery-report": {"description": "Delivery report with result for upload to Scout"},
-    "multiqc-html": {"description": "Multiqc report for the run in html format"},
-    "multiqc-json": {"description": "Multiqc report for the run in json format"},
+    "multiqc": {"description": "MultiQC related files"},
+    "multiqc-html": {"description": "MultiQC analysis report in HTML format"},
+    "multiqc-json": {"description": "MultiQC analysis report in JSON format"},
     "pdf": {"description": "Portable document format"},
     "qc-report": {"description": "Results and QC"},
     "sambamba-depth": {"description": "Coverage information from sambamba"},
@@ -101,6 +102,12 @@ REPORTING_COMMON = {
     "cnv-report": {"description": "CNV variant calling report"},
     "software-versions": {"description": "Versions of software used in analysis"},
     "gene-counts": {"description": "STAR read counts output per gene"},
+    "picard-alignment": {"description": "High level metrics about the alignment of reads"},
+    "picard-duplicates": {"description": "Metrics calculated during marking duplicates"},
+    "picard-hs": {"description": "Metrics for the analysis of target-capture sequencing"},
+    "picard-insert-size": {"description": "Metrics about the insert size distribution"},
+    "picard-wgs": {"description": "Metrics for evaluating the performance of WGS analysis"},
+    "samtools-stats": {"description": "Comprehensive statistics from alignment file"},
 }
 
 VALIDATIONS_COMMON = {
@@ -175,6 +182,7 @@ TOOLS = {
     "mitodel": {"description": "Tool to identify mitochondrial deletion signatures"},
     "peddy": {"description": "Tool to check pedigree and ancestral relations"},
     "picard": {"description": "Picard set of bioinformatic tools"},
+    "somalier": {"description": "Tool for sample-swap and relatedness checks"},
     "pizzly": {"description": "Fusion caller"},
     "retroseq": {"description": "Mobile element caller"},
     "salmon-quant": {"description": "Transcript quantification"},
