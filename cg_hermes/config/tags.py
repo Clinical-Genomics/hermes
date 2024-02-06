@@ -260,7 +260,7 @@ AVAILABLE_USAGES = {
     "nipt",
     "scout",
     "storage",
-    "vogue",
+    "janus",
 }
 
 COMMON_TAG_CATEGORIES = {
