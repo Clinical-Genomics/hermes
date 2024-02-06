@@ -8,11 +8,11 @@ import typer
 from pydantic import ValidationError
 
 from cg_hermes.cli.common import get_deliverables
-from cg_hermes.config.pipelines import AnalysisType
+from cg_hermes.config.workflows import AnalysisType
 from cg_hermes.constants.workflow import Workflow
 from cg_hermes.deliverables import Deliverables
 from cg_hermes.exceptions import MissingFileError
-from cg_hermes.models.pipeline_deliverables import CGDeliverables
+from cg_hermes.models.workflow_deliverables import CGDeliverables
 from cg_hermes.validate import get_deliverables_obj
 
 LOG = logging.getLogger(__name__)

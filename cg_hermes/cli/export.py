@@ -22,9 +22,9 @@ LOG = logging.getLogger(__name__)
 
 def get_table(tags: dict):
     table = []
-    for pipeline_tags, tag_info in tags.items():
+    for workflow_tags, tag_info in tags.items():
         row = [
-            ", ".join(pipeline_tags),
+            ", ".join(workflow_tags),
             str(tag_info["is_mandatory"]),
             ", ".join(tag_info["tags"]),
             ", ".join(tag_info["used_by"]),

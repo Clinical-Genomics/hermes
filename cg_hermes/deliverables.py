@@ -25,23 +25,28 @@ from cg_hermes.config.microsalt import MICROSALT_COMMON_TAGS
 from cg_hermes.config.mip_dna import MIP_DNA_TAGS
 from cg_hermes.config.mip_rna import MIP_RNA_TAGS
 from cg_hermes.config.mutant import MUTANT_COMMON_TAGS
-from cg_hermes.config.pipelines import AnalysisType
 from cg_hermes.config.rnafusion import NXF_RNAFUSION_COMMON_TAGS
+from cg_hermes.config.workflows import AnalysisType
 from cg_hermes.constants.workflow import Workflow
 from cg_hermes.exceptions import MissingFileError
-from cg_hermes.models import pipeline_deliverables
-from cg_hermes.models.pipeline_deliverables import (
+from cg_hermes.models.tags import CGTag, TagMap
+from cg_hermes.models.workflow_deliverables import (
     BalsamicDeliverables,
+    BalsamicFile,
     CGDeliverables,
+    FileBase,
     FluffyDeliverables,
     MicrosaltDeliverables,
+    MicrosaltFile,
     MipDeliverables,
+    MipFile,
     MutantDeliverables,
+    MutantFile,
     PipelineDeliverables,
     RnafusionDeliverables,
+    RnafusionFile,
     TagBase,
 )
-from cg_hermes.models.tags import CGTag, TagMap
 
 LOG = logging.getLogger(__name__)
 
@@ -203,7 +208,7 @@ class Deliverables:
             )
 
     def get_mip_files(self) -> list[TagBase]:
-        file_obj: pipeline_deliverables.MipFile
+        file_obj: MipFile
         files: list[TagBase] = []
         for file_obj in self.model.files:
             identifier = [file_obj.step]
@@ -220,7 +225,7 @@ class Deliverables:
         return files
 
     def get_microsalt_files(self) -> list[TagBase]:
-        file_obj: pipeline_deliverables.MicrosaltFile
+        file_obj: MicrosaltFile
         files: list[TagBase] = []
         for file_obj in self.model.files:
             identifier = [file_obj.step]
@@ -236,7 +241,7 @@ class Deliverables:
         return files
 
     def get_mutant_files(self) -> list[TagBase]:
-        file_obj: pipeline_deliverables.MutantFile
+        file_obj: MutantFile
         files: list[TagBase] = []
         for file_obj in self.model.files:
             identifier = [file_obj.step]
@@ -252,7 +257,7 @@ class Deliverables:
         return files
 
     def get_fluffy_files(self) -> list[TagBase]:
-        file_obj: pipeline_deliverables.FileBase
+        file_obj: FileBase
         files: list[TagBase] = []
         for file_obj in self.model.files:
             identifier = frozenset([file_obj.tag.lower()])
@@ -260,7 +265,7 @@ class Deliverables:
         return files
 
     def get_balsamic_files(self) -> list[TagBase]:
-        file_obj: pipeline_deliverables.BalsamicFile
+        file_obj: BalsamicFile
         files: list[TagBase] = []
         for file_obj in self.model.files:
             sample_id: str = file_obj.id
@@ -277,7 +282,7 @@ class Deliverables:
         return files
 
     def get_rnafusion_files(self) -> list[TagBase]:
-        file_obj: pipeline_deliverables.RnafusionFile
+        file_obj: RnafusionFile
         files: list[TagBase] = []
         for file_obj in self.model.files:
             identifier = [file_obj.step]
