@@ -42,10 +42,10 @@ from cg_hermes.models.workflow_deliverables import (
     MipFile,
     MutantDeliverables,
     MutantFile,
-    PipelineDeliverables,
     RnafusionDeliverables,
     RnafusionFile,
     TagBase,
+    WorkflowDeliverables,
 )
 
 LOG = logging.getLogger(__name__)
@@ -57,49 +57,49 @@ class Deliverables:
     def __init__(
         self,
         deliverables: dict[str, list[dict[str, str]]],
-        pipeline: Workflow,
+        workflow: Workflow,
         analysis_type: AnalysisType | None = None,
     ):
         self.raw_deliverables = deliverables
-        self.pipeline = pipeline
+        self.workflow = workflow
         self.analysis_type = analysis_type
         self.bundle_id: str | None = None
         self.configs: dict[FrozenSet[str], TagMap]
         self.files: list[TagBase]
         self.file_identifiers: set[FrozenSet[str]]
-        self.model: PipelineDeliverables
-        self.set_pipeline_specific_variables()
+        self.model: WorkflowDeliverables
+        self.set_workflow_specific_variables()
         self.file_identifiers = {file_obj.tags for file_obj in self.files}
 
-    def set_pipeline_specific_variables(self):
-        LOG.info("Parsing deliverables for %s", self.pipeline)
-        if self.pipeline == Workflow.FLUFFY:
+    def set_workflow_specific_variables(self):
+        LOG.info(f"Parsing deliverables for {self.workflow}")
+        if self.workflow == Workflow.FLUFFY:
             self.model: FluffyDeliverables = FluffyDeliverables.parse_obj(self.raw_deliverables)
             self.files = self.get_fluffy_files()
             self.configs = Deliverables.build_internal_tag_map(FLUFFY_COMMON_TAGS)
-        elif Workflow.BALSAMIC in self.pipeline:
+        elif Workflow.BALSAMIC in self.workflow:
             self.model: BalsamicDeliverables = BalsamicDeliverables.parse_obj(self.raw_deliverables)
             self.files = self.get_balsamic_files()
             self.configs = Deliverables.build_internal_tag_map(self.get_balsamic_analysis_configs())
-        elif self.pipeline == Workflow.MICROSALT:
+        elif self.workflow == Workflow.MICROSALT:
             self.model: MicrosaltDeliverables = MicrosaltDeliverables.parse_obj(
                 self.raw_deliverables
             )
             self.files = self.get_microsalt_files()
             self.configs = Deliverables.build_internal_tag_map(MICROSALT_COMMON_TAGS)
-        elif self.pipeline == Workflow.MUTANT:
+        elif self.workflow == Workflow.MUTANT:
             self.model: MutantDeliverables = MutantDeliverables.parse_obj(self.raw_deliverables)
             self.files = self.get_mutant_files()
             self.configs = Deliverables.build_internal_tag_map(MUTANT_COMMON_TAGS)
-        elif self.pipeline == Workflow.MIP_DNA:
+        elif self.workflow == Workflow.MIP_DNA:
             self.model: MipDeliverables = MipDeliverables.parse_obj(self.raw_deliverables)
             self.files = self.get_mip_files()
             self.configs = Deliverables.build_internal_tag_map(MIP_DNA_TAGS)
-        elif self.pipeline == Workflow.MIP_RNA:
+        elif self.workflow == Workflow.MIP_RNA:
             self.model: MipDeliverables = MipDeliverables.parse_obj(self.raw_deliverables)
             self.files = self.get_mip_files()
             self.configs = Deliverables.build_internal_tag_map(MIP_RNA_TAGS)
-        elif self.pipeline == Workflow.RNAFUSION:
+        elif self.workflow == Workflow.RNAFUSION:
             self.model: RnafusionDeliverables = RnafusionDeliverables.parse_obj(
                 self.raw_deliverables
             )
@@ -107,7 +107,7 @@ class Deliverables:
             self.configs = Deliverables.build_internal_tag_map(NXF_RNAFUSION_COMMON_TAGS)
         else:
             raise Exception(
-                "Invalid workflow ({}) set for Deliverables object".format(self.pipeline)
+                "Invalid workflow ({}) set for Deliverables object".format(self.workflow)
             )
 
     @staticmethod
@@ -157,14 +157,14 @@ class Deliverables:
                         path=file_object.path_index,
                     )
                 )
-        return CGDeliverables(workflow=self.pipeline, files=cg_files, bundle_id=self.bundle_id)
+        return CGDeliverables(workflow=self.workflow, files=cg_files, bundle_id=self.bundle_id)
 
     def get_balsamic_analysis_configs(self) -> dict[FrozenSet[str], dict]:
         """Extracts all the BALSAMIC mandatory files depending on the analysis workflow and type executed"""
 
         BALSAMIC_COMMON_TAGS = []
         tag_set = []
-        if self.pipeline == Workflow.BALSAMIC:
+        if self.workflow == Workflow.BALSAMIC:
             BALSAMIC_COMMON_TAGS = BALSAMIC_TAGS
             if self.analysis_type == AnalysisType.tumor_wgs:
                 tag_set = TUMOR_ONLY_WGS_TAGS
@@ -174,13 +174,13 @@ class Deliverables:
                 tag_set = TUMOR_ONLY_PANEL_TAGS
             else:
                 tag_set = TUMOR_NORMAL_PANEL_TAGS
-        elif self.pipeline == Workflow.BALSAMIC_QC:
+        elif self.workflow == Workflow.BALSAMIC_QC:
             BALSAMIC_COMMON_TAGS = BALSAMIC_QC_TAGS
             if self.analysis_type == AnalysisType.tumor_normal_wgs:
                 tag_set = QC_TUMOR_NORMAL_WGS_TAGS
             elif self.analysis_type == AnalysisType.tumor_normal_panel:
                 tag_set = QC_TUMOR_NORMAL_PANEL_TAGS
-        elif self.pipeline == Workflow.BALSAMIC_UMI:
+        elif self.workflow == Workflow.BALSAMIC_UMI:
             BALSAMIC_COMMON_TAGS = BALSAMIC_UMI_TAGS
             if self.analysis_type == AnalysisType.tumor_panel:
                 tag_set = UMI_TUMOR_ONLY_PANEL_TAGS

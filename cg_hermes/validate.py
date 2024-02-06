@@ -13,13 +13,13 @@ LOG = logging.getLogger(__name__)
 
 def get_deliverables_obj(
     deliverables: dict[str, list[dict[str, str]]],
-    pipeline: Workflow,
+    workflow: Workflow,
     analysis_type: AnalysisType | None = None,
 ) -> Deliverables:
-    if Workflow.BALSAMIC in pipeline and not analysis_type:
-        LOG.error(f"Please specify analysis type for {pipeline}")
+    if Workflow.BALSAMIC in workflow and not analysis_type:
+        LOG.error(f"Please specify analysis type for {workflow}")
         raise SyntaxError
-    return Deliverables(deliverables=deliverables, pipeline=pipeline, analysis_type=analysis_type)
+    return Deliverables(deliverables=deliverables, workflow=workflow, analysis_type=analysis_type)
 
 
 def validate_common_tags() -> bool:

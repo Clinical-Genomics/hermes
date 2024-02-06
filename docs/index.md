@@ -1,6 +1,6 @@
 # Hermes
 
-Hermes :postal_horn: is a package to handle the communication between pipelines and CG.
+Hermes :postal_horn: is a package to handle the communication between workflows and CG.
 
 The name [Hermes][hermes-name] comes from greek mythology, he was considered to be the messenger between the humans and the gods, feel free to interpret that as you like:). Hermes was moving swiftly between the worlds aided by his winged sandals.
 

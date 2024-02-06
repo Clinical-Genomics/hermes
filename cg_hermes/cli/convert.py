@@ -31,7 +31,7 @@ def convert_cmd(
     raw_deliverables: dict[str, list[dict[str, str]]] = get_deliverables(infile)
     try:
         deliverables: Deliverables = get_deliverables_obj(
-            deliverables=raw_deliverables, pipeline=workflow, analysis_type=analysis_type
+            deliverables=raw_deliverables, workflow=workflow, analysis_type=analysis_type
         )
         deliverables.validate_mandatory_files()
     except SyntaxError:

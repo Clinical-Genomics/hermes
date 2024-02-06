@@ -37,7 +37,7 @@ def validate_deliverables(
 
     try:
         deliverables: Deliverables = get_deliverables_obj(
-            deliverables=raw_deliverables, pipeline=workflow, analysis_type=analysis_type
+            deliverables=raw_deliverables, workflow=workflow, analysis_type=analysis_type
         )
         deliverables.validate_mandatory_files()
     except SyntaxError:
@@ -50,29 +50,29 @@ def validate_deliverables(
 
 
 @app.command("tags")
-def validate_tags_cmd(pipeline: Workflow):
+def validate_tags_cmd(workflow: Workflow):
     """Validate the tag maps for one of the definitions."""
-    LOG.info(f"Validating {pipeline} common tags")
+    LOG.info(f"Validating {workflow} common tags")
     exit_code = 0
 
-    if pipeline == Workflow.MIP_DNA:
+    if workflow == Workflow.MIP_DNA:
         tag_map = MIP_DNA_TAGS
-    elif pipeline == Workflow.MIP_RNA:
+    elif workflow == Workflow.MIP_RNA:
         tag_map = MIP_RNA_TAGS
-    elif pipeline == Workflow.BALSAMIC:
+    elif workflow == Workflow.BALSAMIC:
         tag_map = BALSAMIC_TAGS
-    elif pipeline == Workflow.BALSAMIC_UMI:
+    elif workflow == Workflow.BALSAMIC_UMI:
         tag_map = BALSAMIC_UMI_TAGS
-    elif pipeline == Workflow.BALSAMIC_QC:
+    elif workflow == Workflow.BALSAMIC_QC:
         tag_map = BALSAMIC_QC_TAGS
-    elif pipeline == Workflow.FLUFFY:
+    elif workflow == Workflow.FLUFFY:
         tag_map = FLUFFY_COMMON_TAGS
-    elif pipeline == Workflow.MUTANT:
+    elif workflow == Workflow.MUTANT:
         tag_map = MUTANT_COMMON_TAGS
-    elif pipeline == Workflow.RNAFUSION:
+    elif workflow == Workflow.RNAFUSION:
         tag_map = NXF_RNAFUSION_COMMON_TAGS
     else:
-        LOG.info(f"Could not find workflow tags for {pipeline}")
+        LOG.info(f"Could not find workflow tags for {workflow}")
         raise typer.Exit(code=exit_code)
 
     try:
