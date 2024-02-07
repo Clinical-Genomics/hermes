@@ -78,3 +78,27 @@ def test_export_rnafusion_tags(cli_runner: CliRunner):
     assert result.exit_code == 0
     # THEN assert that the rnafusion tags was exported
     assert "Rnafusion tags" in result.output
+
+
+def test_export_microsalt_tags(cli_runner: CliRunner):
+    # GIVEN a cli runner
+
+    # WHEN running the export tags command for MicroSALT
+    result = cli_runner.invoke(app, ["--pipeline", "microsalt"])
+
+    # THEN assert that the command exits without problems
+    assert result.exit_code == 0
+    # THEN assert that the MicroSALT tags was exported
+    assert "Microsalt tags" in result.output
+
+
+def test_export_mutant_tags(cli_runner: CliRunner):
+    # GIVEN a cli runner
+
+    # WHEN running the export tags command for Mutant
+    result = cli_runner.invoke(app, ["--pipeline", "mutant"])
+
+    # THEN assert that the command exits without problems
+    assert result.exit_code == 0
+    # THEN assert that the MicroSALT tags was exported
+    assert "Mutant tags" in result.output
