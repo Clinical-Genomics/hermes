@@ -247,37 +247,37 @@ QC_TAGS = {
     frozenset(RAW_TAGS["multiqc_picard_AlignmentSummaryMetrics.json"]): {
         "tags": ["qc-metrics", "multiqc", "picard-alignment"],
         "is_mandatory": True,
-        "used_by": ["storage"],
+        "used_by": ["storage", "janus"],
     },
     frozenset(RAW_TAGS["multiqc_picard_dups.json"]): {
         "tags": ["qc-metrics", "multiqc", "picard-duplicates"],
         "is_mandatory": True,
-        "used_by": ["storage"],
+        "used_by": ["storage", "janus"],
     },
     frozenset(RAW_TAGS["multiqc_picard_HsMetrics.json"]): {
         "tags": ["qc-metrics", "multiqc", "picard-hs"],
         "is_mandatory": True,
-        "used_by": ["storage"],
+        "used_by": ["storage", "janus"],
     },
     frozenset(RAW_TAGS["multiqc_picard_insertSize.json"]): {
         "tags": ["qc-metrics", "multiqc", "picard-insert-size"],
         "is_mandatory": True,
-        "used_by": ["storage"],
+        "used_by": ["storage", "janus"],
     },
     frozenset(RAW_TAGS["multiqc_picard_wgsmetrics.json"]): {
         "tags": ["qc-metrics", "multiqc", "picard-wgs"],
         "is_mandatory": False,
-        "used_by": ["storage"],
+        "used_by": ["storage", "janus"],
     },
     frozenset(RAW_TAGS["multiqc_samtools_stats.json"]): {
         "tags": ["qc-metrics", "multiqc", "samtools-stats"],
         "is_mandatory": True,
-        "used_by": ["storage"],
+        "used_by": ["storage", "janus"],
     },
     frozenset(RAW_TAGS["multiqc_somalier.json"]): {
         "tags": ["qc-metrics", "multiqc", "somalier"],
         "is_mandatory": False,
-        "used_by": ["storage"],
+        "used_by": ["storage", "janus"],
     },
     # Custom QC
     frozenset(RAW_TAGS["metrics_deliverables.yaml"]): {  # QC metrics
