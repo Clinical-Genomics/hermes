@@ -241,7 +241,7 @@ QC_TAGS = {
     frozenset(RAW_TAGS["metrics_deliverables.yaml"]): {  # QC metrics
         "tags": ["qc-metrics"],
         "is_mandatory": True,
-        "used_by": ["audit", "cg", "vogue"],
+        "used_by": ["audit", "cg"],
     },
 }
 
