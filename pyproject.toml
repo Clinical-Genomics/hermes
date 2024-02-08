@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "cg-hermes"
-version = "3.0.0"
-description = "Convert information between workflows and CG"
+version = "3.0.1"
+description = "Convert information between pipelines and CG"
 authors = ["Måns Magnusson <mans.magnusson@scilifelab.se>"]
 
 [tool.poetry.dependencies]

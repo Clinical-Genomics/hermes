@@ -73,12 +73,12 @@ MUTANT_COMMON_TAGS = {
     frozenset({"metrics", "result_aggregation"}): {
         "is_mandatory": False,
         "tags": ["metrics"],
-        "used_by": ["vogue"],
+        "used_by": ["storage"],
     },
     frozenset({"multiqc-json", "report"}): {
         "is_mandatory": True,
         "tags": ["multiqc-json"],
-        "used_by": ["vogue"],
+        "used_by": ["storage"],
     },
     frozenset({"nextclade-summary", "report"}): {
         "is_mandatory": True,
