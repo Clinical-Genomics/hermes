@@ -161,6 +161,7 @@ TOOLS = {
     "deseq2": {"description": "Differential expression analysis with DESeq2"},
     "dnascope": {"description": "Call snv indels"},
     "expansionhunter": {"description": "Call repeat expansions"},
+    "fastp": {"description": "Preprocessing tool for FastQ files"},
     "fusioncatcher": {"description": "Fusion caller"},
     "fusioncatcher-summary": {"description": "Fusion caller summary"},
     "fusioninspector": {"description": "Fusion inspection"},

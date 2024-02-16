@@ -16,6 +16,7 @@ RAW_TAGS = {
     "multiqc_picard_HsMetrics.json": ["multiqc", "picard", "hsmetrics"],
     "multiqc_picard_insertSize.json": ["multiqc", "picard", "insertsize"],
     "multiqc_picard_wgsmetrics.json": ["multiqc", "picard", "wgsmetrics"],
+    "multiqc_fastp.json": ["multiqc", "fastp"],
     "multiqc_samtools_stats.json": ["multiqc", "samtools", "stats"],
     "multiqc_somalier.json": ["multiqc", "somalier"],
     # Custom QC
@@ -267,6 +268,11 @@ QC_TAGS = {
     frozenset(RAW_TAGS["multiqc_picard_wgsmetrics.json"]): {
         "tags": ["qc-metrics", "multiqc", "picard-wgs"],
         "is_mandatory": False,
+        "used_by": ["storage", "janus"],
+    },
+    frozenset(RAW_TAGS["multiqc_fastp.json"]): {
+        "tags": ["qc-metrics", "multiqc", "fastp"],
+        "is_mandatory": True,
         "used_by": ["storage", "janus"],
     },
     frozenset(RAW_TAGS["multiqc_samtools_stats.json"]): {
