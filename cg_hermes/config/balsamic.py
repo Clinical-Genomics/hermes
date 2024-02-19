@@ -287,7 +287,7 @@ QC_TAGS = {
     },
     # Custom QC
     frozenset(RAW_TAGS["metrics_deliverables.yaml"]): {  # QC metrics
-        "tags": ["qc-metrics"],
+        "tags": ["qc-metrics", "deliverable"],
         "is_mandatory": True,
         "used_by": ["audit", "cg"],
     },
