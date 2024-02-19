@@ -68,13 +68,13 @@ files:
   tag: multiqc-html
 - format: csv
   id: CASE_ID
-  path: /CASE_ID/pipeline_info/samplesheet.valid.csv
+  path: /CASE_ID/workflow_info/samplesheet.valid.csv
   path_index: null
   step: samplesheet-valid
   tag: samplesheet-valid
 - format: yml
   id: CASE_ID
-  path: /CASE_ID/pipeline_info/software_versions.yml
+  path: /CASE_ID/workflow_info/software_versions.yml
   path_index: null
   step: software-versions
   tag: software-versions

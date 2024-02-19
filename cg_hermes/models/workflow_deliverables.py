@@ -61,49 +61,49 @@ class BalsamicFile(FileBase):
 # Classes to represent deliverable files
 
 
-class PipelineDeliverables(BaseModel):
+class WorkflowDeliverables(BaseModel):
     """Specification for a general deliverables file"""
 
     files: list[FileBase]
 
 
-class MipDeliverables(PipelineDeliverables):
+class MipDeliverables(WorkflowDeliverables):
     """Specification for a MIP specific deliverables file"""
 
     files: list[MipFile]
 
 
-class MicrosaltDeliverables(PipelineDeliverables):
+class MicrosaltDeliverables(WorkflowDeliverables):
     """Specification for a MIP specific deliverables file"""
 
     files: list[MicrosaltFile]
 
 
-class BalsamicDeliverables(PipelineDeliverables):
+class BalsamicDeliverables(WorkflowDeliverables):
     """Specification for a BALSAMIC specific deliverables file"""
 
     files: list[BalsamicFile]
 
 
-class FluffyDeliverables(PipelineDeliverables):
+class FluffyDeliverables(WorkflowDeliverables):
     """Specification for a FLUFFY specific deliverables file"""
 
     files: list[FileBase]
 
 
-class MutantDeliverables(PipelineDeliverables):
+class MutantDeliverables(WorkflowDeliverables):
     """Specification for a MUTANT specific deliverables file"""
 
     files: list[MutantFile]
 
 
-class RnafusionDeliverables(PipelineDeliverables):
+class RnafusionDeliverables(WorkflowDeliverables):
     """Specification for a RNAFUSION specific deliverables file"""
 
     files: list[RnafusionFile]
 
 
-class CGDeliverables(PipelineDeliverables):
+class CGDeliverables(WorkflowDeliverables):
     """Class that specifies the output to CG"""
 
     workflow: str
