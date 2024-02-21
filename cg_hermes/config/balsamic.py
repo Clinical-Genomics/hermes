@@ -11,6 +11,14 @@ RAW_TAGS = {
     "BALSAMIC_X.X.X_graph.pdf": ["balsamic-dag"],
     "multiqc_report.html": ["html", "multiqc-html"],
     "multiqc_data.json": ["json", "multiqc-json"],
+    "multiqc_picard_AlignmentSummaryMetrics.json": ["multiqc", "picard", "alignmentsummarymetrics"],
+    "multiqc_picard_dups.json": ["multiqc", "picard", "dups"],
+    "multiqc_picard_HsMetrics.json": ["multiqc", "picard", "hsmetrics"],
+    "multiqc_picard_insertSize.json": ["multiqc", "picard", "insertsize"],
+    "multiqc_picard_wgsmetrics.json": ["multiqc", "picard", "wgsmetrics"],
+    "multiqc_fastp.json": ["multiqc", "fastp"],
+    "multiqc_samtools_stats.json": ["multiqc", "samtools", "stats"],
+    "multiqc_somalier.json": ["multiqc", "somalier"],
     # Custom QC
     "metrics_deliverables.yaml": ["yaml", "qc-metrics-yaml"],
     # Alignment files (PANEL & WGS)
@@ -237,9 +245,49 @@ QC_TAGS = {
         "is_mandatory": True,
         "used_by": ["audit"],
     },
+    frozenset(RAW_TAGS["multiqc_picard_AlignmentSummaryMetrics.json"]): {
+        "tags": ["qc-metrics", "multiqc", "picard-alignment"],
+        "is_mandatory": True,
+        "used_by": ["storage", "janus"],
+    },
+    frozenset(RAW_TAGS["multiqc_picard_dups.json"]): {
+        "tags": ["qc-metrics", "multiqc", "picard-duplicates"],
+        "is_mandatory": True,
+        "used_by": ["storage", "janus"],
+    },
+    frozenset(RAW_TAGS["multiqc_picard_HsMetrics.json"]): {
+        "tags": ["qc-metrics", "multiqc", "picard-hs"],
+        "is_mandatory": True,
+        "used_by": ["storage", "janus"],
+    },
+    frozenset(RAW_TAGS["multiqc_picard_insertSize.json"]): {
+        "tags": ["qc-metrics", "multiqc", "picard-insert-size"],
+        "is_mandatory": True,
+        "used_by": ["storage", "janus"],
+    },
+    frozenset(RAW_TAGS["multiqc_picard_wgsmetrics.json"]): {
+        "tags": ["qc-metrics", "multiqc", "picard-wgs"],
+        "is_mandatory": False,
+        "used_by": ["storage", "janus"],
+    },
+    frozenset(RAW_TAGS["multiqc_fastp.json"]): {
+        "tags": ["qc-metrics", "multiqc", "fastp"],
+        "is_mandatory": True,
+        "used_by": ["storage", "janus"],
+    },
+    frozenset(RAW_TAGS["multiqc_samtools_stats.json"]): {
+        "tags": ["qc-metrics", "multiqc", "samtools-stats"],
+        "is_mandatory": True,
+        "used_by": ["storage", "janus"],
+    },
+    frozenset(RAW_TAGS["multiqc_somalier.json"]): {
+        "tags": ["qc-metrics", "multiqc", "somalier"],
+        "is_mandatory": False,
+        "used_by": ["storage", "janus"],
+    },
     # Custom QC
     frozenset(RAW_TAGS["metrics_deliverables.yaml"]): {  # QC metrics
-        "tags": ["qc-metrics"],
+        "tags": ["qc-metrics", "deliverable"],
         "is_mandatory": True,
         "used_by": ["audit", "cg"],
     },
@@ -559,6 +607,8 @@ BALSAMIC_TAGS = {
 }
 
 TUMOR_ONLY_WGS_TAGS = {
+    # QC
+    frozenset(RAW_TAGS["multiqc_picard_wgsmetrics.json"]): {"is_mandatory": True},
     # SNVs (WGS)
     frozenset(RAW_TAGS["tnscope.vcf.gz"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["tnscope.vcf.gz.tbi"]): {"is_mandatory": True},
@@ -581,6 +631,9 @@ TUMOR_ONLY_WGS_TAGS = {
 }
 
 TUMOR_NORMAL_WGS_TAGS = {
+    # QC
+    frozenset(RAW_TAGS["multiqc_picard_wgsmetrics.json"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["multiqc_somalier.json"]): {"is_mandatory": True},
     # Alignment files (PANEL & WGS)
     frozenset(RAW_TAGS["normal.merged.cram"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["normal.merged.cram.crai"]): {"is_mandatory": True},
@@ -637,6 +690,8 @@ TUMOR_ONLY_PANEL_TAGS = {
 }
 
 TUMOR_NORMAL_PANEL_TAGS = {
+    # QC
+    frozenset(RAW_TAGS["multiqc_somalier.json"]): {"is_mandatory": True},
     # Alignment files (PANEL & WGS)
     frozenset(RAW_TAGS["normal.merged.cram"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["normal.merged.cram.crai"]): {"is_mandatory": True},
