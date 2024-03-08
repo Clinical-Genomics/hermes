@@ -272,4 +272,3 @@ def test_convert_taxprofiler_deliverables(cli_runner: CliRunner, taxprofiler_del
 
     # THEN assert that the program exits with success
     assert result.exit_code == 0
-

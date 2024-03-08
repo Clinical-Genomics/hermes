@@ -115,7 +115,9 @@ def test_validate_rnafusion_deliverables_file(cli_runner: CliRunner, rnafusion_d
     assert result.exit_code == 0
 
 
-def test_validate_taxprofiler_deliverables_file(cli_runner: CliRunner, taxprofiler_deliverables: Path):
+def test_validate_taxprofiler_deliverables_file(
+    cli_runner: CliRunner, taxprofiler_deliverables: Path
+):
     # GIVEN a existing mip_dna deliverables file and a CLI runner
     assert taxprofiler_deliverables.exists()
 

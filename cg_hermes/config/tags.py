@@ -151,7 +151,9 @@ TOOLS = {
     "arriba": {"description": "Fusion caller"},
     "ascatngs": {"description": "Tool to identify somatically acquired copy-number alterations"},
     "asereadcounter": {"description": "Count reads mapping to heterozygous sites"},
-    "bracken": {"description": "Tool to compute the abundance of species and is companion program to kraken2"},
+    "bracken": {
+        "description": "Tool to compute the abundance of species and is companion program to kraken2"
+    },
     "chanjo": {"description": "Tool to keep track of coverage over specific regions"},
     "centrifuge": {"description": "Taxonomic sequence classifier"},
     "chromograph": {"description": "Tool to create PNG images from BED and WIG files from mikaell"},

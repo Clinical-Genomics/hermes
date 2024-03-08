@@ -65,6 +65,7 @@ class TaxprofilerFile(FileBase):
     path_index: str | None
     step: str
 
+
 # Classes to represent deliverable files
 
 

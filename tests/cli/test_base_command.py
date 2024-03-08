@@ -1,4 +1,5 @@
 """Tests for the hermes base command"""
+
 import pkg_resources
 from typer.testing import CliRunner
 
