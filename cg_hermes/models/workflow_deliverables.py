@@ -58,6 +58,13 @@ class BalsamicFile(FileBase):
         return v
 
 
+class TaxprofilerFile(FileBase):
+    """Definition for elements in Taxprofiler deliverables"""
+
+    format: str
+    path_index: str | None
+    step: str
+
 # Classes to represent deliverable files
 
 
@@ -101,6 +108,12 @@ class RnafusionDeliverables(WorkflowDeliverables):
     """Specification for a RNAFUSION specific deliverables file"""
 
     files: list[RnafusionFile]
+
+
+class TaxprofilerDeliverables(WorkflowDeliverables):
+    """Specification for a RNAFUSION specific deliverables file"""
+
+    files: list[TaxprofilerFile]
 
 
 class CGDeliverables(WorkflowDeliverables):

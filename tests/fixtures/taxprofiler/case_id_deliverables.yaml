@@ -1,0 +1,14 @@
+---
+files:
+- format: txt
+  id: CASE_ID
+  path: /CASE_ID/kraken2/kraken2_k2_pluspf_combined_reports.txt
+  path_index: null
+  step: kraken2
+  tag: kraken2_combined_report
+- format: yml
+  id: CASE_ID
+  path: /CASE_ID/pipeline_info/software_versions.yml
+  path_index: ~
+  step: software-versions
+  tag: software-versions

@@ -102,3 +102,15 @@ def test_export_mutant_tags(cli_runner: CliRunner):
     assert result.exit_code == 0
     # THEN assert that the MicroSALT tags were exported
     assert "Mutant tags" in result.output
+
+
+def test_export_taxprofiler_tags(cli_runner: CliRunner):
+    # GIVEN a cli runner
+
+    # WHEN running the export tags command for Mutant
+    result = cli_runner.invoke(app, ["--workflow", "taxprofiler"])
+
+    # THEN assert that the command exits without problems
+    assert result.exit_code == 0
+    # THEN assert that the MicroSALT tags were exported
+    assert "Taxprofiler tags" in result.output

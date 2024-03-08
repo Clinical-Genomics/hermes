@@ -171,6 +171,7 @@ TOOLS = {
     "gens": {"description": "CNV visualization tool"},
     "gffcompare": {"description": "Compare gff files"},
     "haplotype-caller": {"description": "Call snv and indels"},
+    "krona": {"description": "Visualisation tool"},
     "manta": {"description": "Tool to call structural variants"},
     "mitodel": {"description": "Tool to identify mitochondrial deletion signatures"},
     "peddy": {"description": "Tool to check pedigree and ancestral relations"},
@@ -246,6 +247,13 @@ RNAFUSION_SPECIFIC = {
     "fusioninspector-html": {"description": "Fusioninspector report"},
 }
 
+TAXPROFILER_SPECIFIC = {
+    "bracken": {"description": "Tool to compute the abundance of species and is companion program to kraken2"},
+    "centrifuge": {"description": "Taxonomic sequence classifier"},
+    "kraken2": {"description": "Taxonomic sequence classifier"},
+}
+
+
 NEXTFLOW_SPECIFIC = {
     "samplesheet-valid": {"description": "Validated samplesheet"},
     "software-versions": {"description": "List of all software used and their versions"},
@@ -284,6 +292,7 @@ ALL_TAG_CATEGORIES = [
     MUTANT_SPECIFIC,
     NEXTFLOW_SPECIFIC,
     RNAFUSION_SPECIFIC,
+    TAXPROFILER_SPECIFIC,
     RAW_DATA,
     REPORTING_COMMON,
     TOOLS,
