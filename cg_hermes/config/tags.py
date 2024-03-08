@@ -151,7 +151,9 @@ TOOLS = {
     "arriba": {"description": "Fusion caller"},
     "ascatngs": {"description": "Tool to identify somatically acquired copy-number alterations"},
     "asereadcounter": {"description": "Count reads mapping to heterozygous sites"},
+    "bracken": {"description": "Tool to compute the abundance of species and is companion program to kraken2"},
     "chanjo": {"description": "Tool to keep track of coverage over specific regions"},
+    "centrifuge": {"description": "Taxonomic sequence classifier"},
     "chromograph": {"description": "Tool to create PNG images from BED and WIG files from mikaell"},
     "cnvkit": {"description": "Tool to call copy number variations"},
     "cnvpytor": {"description": "Tool for CNV/CNA analysis from depth-of-coverage by mapped reads"},
@@ -169,6 +171,7 @@ TOOLS = {
     "gens": {"description": "CNV visualization tool"},
     "gffcompare": {"description": "Compare gff files"},
     "haplotype-caller": {"description": "Call snv and indels"},
+    "kraken2": {"description": "Taxonomic sequence classifier"},
     "krona": {"description": "Visualisation tool"},
     "manta": {"description": "Tool to call structural variants"},
     "mitodel": {"description": "Tool to identify mitochondrial deletion signatures"},
@@ -247,9 +250,9 @@ RNAFUSION_SPECIFIC = {
 }
 
 TAXPROFILER_SPECIFIC = {
-    "bracken": {"description": "Tool to compute the abundance of species and is companion program to kraken2"},
-    "centrifuge": {"description": "Taxonomic sequence classifier"},
-    "kraken2": {"description": "Taxonomic sequence classifier"},
+    "brackenreport": {"description": "Bracken report analysis"},
+    "kraken2report": {"description": "Kraken2 report analysis"},
+    "centrifugereport": {"description": "Centrifuge report analysis"},
 }
 
 
