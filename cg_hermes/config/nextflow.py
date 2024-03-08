@@ -6,7 +6,7 @@ mandatory by default. However the tags that are available to a particular analys
 
 NEXTFLOW_COMMON_TAGS = {
     frozenset({"samplesheet-valid"}): {
-        "is_mandatory": True,
+        "is_mandatory": False,
         "bundle_id": True,
         "tags": ["samplesheet-valid"],
         "used_by": ["cg"],

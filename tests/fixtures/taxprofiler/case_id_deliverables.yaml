@@ -60,12 +60,6 @@ files:
   path_index: null
   step: multiqc-json
   tag: multiqc-json
-- format: csv
-  id: CASE_ID
-  path: /CASE_ID/workflow_info/samplesheet.valid.csv
-  path_index: null
-  step: samplesheet-valid
-  tag: samplesheet-valid
 - format: yml
   id: CASE_ID
   path: /CASE_ID/CASE_ID_metrics_deliverables.yaml
