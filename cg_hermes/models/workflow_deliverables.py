@@ -59,7 +59,7 @@ class BalsamicFile(FileBase):
 
 
 class TaxprofilerFile(FileBase):
-    """Definition for elements in Taxprofiler deliverables"""
+    """Definition for elements in Taxprofiler deliverables."""
 
     format: str
     path_index: str | None
