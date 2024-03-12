@@ -6,13 +6,13 @@ TAXPROFILER_COMMON_TAGS = {
     frozenset({"kraken2_combined_report", "kraken2"}): {
         "is_mandatory": True,
         "bundle_id": True,
-        "tags": ["kraken2", "metagenomics-report"],
+        "tags": ["kraken2", "combined-report"],
         "used_by": ["deliver", "storage"],
     },
     frozenset({"kraken2_report", "kraken2"}): {
         "is_mandatory": True,
         "bundle_id": True,
-        "tags": ["kraken2", "combined-report"],
+        "tags": ["kraken2", "metagenomics-report"],
         "used_by": ["deliver", "storage"],
     },
     frozenset({"krona_kraken_plot", "krona"}): {
