@@ -43,7 +43,7 @@ TAXPROFILER_COMMON_TAGS = {
         "is_mandatory": True,
         "bundle_id": True,
         "tags": ["centrifuge", "centrifugereport"],
-        "used_by": ["deliver"],
+        "used_by": ["deliver", "storage"],
     },
     frozenset({"multiqc-html", "report"}): {
         "is_mandatory": True,
