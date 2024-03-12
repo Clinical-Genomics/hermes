@@ -173,8 +173,12 @@ TOOLS = {
     "gens": {"description": "CNV visualization tool"},
     "gffcompare": {"description": "Compare gff files"},
     "haplotype-caller": {"description": "Call snv and indels"},
-    "kraken2": {"description": "Taxonomic sequence classifier"},
-    "krona": {"description": "Visualisation tool"},
+    "kraken2": {
+        "description": "Taxonomic sequence classifier that assigns taxonomic labels to metagenomic DNA sequences"
+    },
+    "krona": {
+        "description": "Visualisation tool that allows to explore relative abundances and confidences within metagenomic classifications"
+    },
     "manta": {"description": "Tool to call structural variants"},
     "mitodel": {"description": "Tool to identify mitochondrial deletion signatures"},
     "nextclade": {"description": "Viral genome clade assignment"},
