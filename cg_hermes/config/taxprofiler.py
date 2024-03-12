@@ -54,7 +54,7 @@ TAXPROFILER_COMMON_TAGS = {
     frozenset({"multiqc-json"}): {
         "is_mandatory": True,
         "tags": ["multiqc-json"],
-        "used_by": ["deliver"],
+        "used_by": ["deliver", "storage"],
     },
     frozenset({"qc-metrics"}): {
         "is_mandatory": True,
