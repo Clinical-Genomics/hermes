@@ -112,7 +112,7 @@ class RnafusionDeliverables(WorkflowDeliverables):
 
 
 class TaxprofilerDeliverables(WorkflowDeliverables):
-    """Specification for a RNAFUSION specific deliverables file"""
+    """Specification for a Taxprofiler specific deliverables file."""
 
     files: list[TaxprofilerFile]
 
