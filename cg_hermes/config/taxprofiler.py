@@ -1,6 +1,6 @@
 """Tags that are defined in taxprofiler deliverables mapped to tags used in CG"""
 
-from cg_hermes.config.nextflow import NEXTFLOW_COMMON_TAGS
+from cg_hermes.config.nextflow import NEXTFLOW_TAGS
 
 TAXPROFILER_COMMON_TAGS = {
     frozenset({"kraken2_combined_report", "kraken2"}): {
@@ -63,4 +63,4 @@ TAXPROFILER_COMMON_TAGS = {
     },
 }
 
-NXF_TAXPROFILER_COMMON_TAGS = {**TAXPROFILER_COMMON_TAGS, **NEXTFLOW_COMMON_TAGS}
+NXF_TAXPROFILER_TAGS = {**TAXPROFILER_COMMON_TAGS, **NEXTFLOW_TAGS}

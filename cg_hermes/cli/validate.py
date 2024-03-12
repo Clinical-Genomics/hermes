@@ -12,8 +12,8 @@ from cg_hermes.config.fluffy import FLUFFY_COMMON_TAGS
 from cg_hermes.config.mip_dna import MIP_DNA_TAGS
 from cg_hermes.config.mip_rna import MIP_RNA_TAGS
 from cg_hermes.config.mutant import MUTANT_COMMON_TAGS
-from cg_hermes.config.rnafusion import NXF_RNAFUSION_COMMON_TAGS
-from cg_hermes.config.taxprofiler import NXF_TAXPROFILER_COMMON_TAGS
+from cg_hermes.config.rnafusion import NXF_RNAFUSION_TAGS
+from cg_hermes.config.taxprofiler import NXF_TAXPROFILER_TAGS
 from cg_hermes.config.workflows import AnalysisType
 from cg_hermes.constants.workflow import Workflow
 from cg_hermes.deliverables import Deliverables
@@ -71,9 +71,9 @@ def validate_tags_cmd(workflow: Workflow):
     elif workflow == Workflow.MUTANT:
         tag_map = MUTANT_COMMON_TAGS
     elif workflow == Workflow.RNAFUSION:
-        tag_map = NXF_RNAFUSION_COMMON_TAGS
+        tag_map = NXF_RNAFUSION_TAGS
     elif workflow == Workflow.TAXPROFILER:
-        tag_map = NXF_TAXPROFILER_COMMON_TAGS
+        tag_map = NXF_TAXPROFILER_TAGS
     else:
         LOG.info(f"Could not find workflow tags for {workflow}")
         raise typer.Exit(code=exit_code)

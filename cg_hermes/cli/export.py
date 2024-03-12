@@ -11,8 +11,8 @@ from cg_hermes.config.microsalt import MICROSALT_COMMON_TAGS
 from cg_hermes.config.mip_dna import MIP_DNA_TAGS
 from cg_hermes.config.mip_rna import MIP_RNA_TAGS
 from cg_hermes.config.mutant import MUTANT_COMMON_TAGS
-from cg_hermes.config.rnafusion import NXF_RNAFUSION_COMMON_TAGS
-from cg_hermes.config.taxprofiler import NXF_TAXPROFILER_COMMON_TAGS
+from cg_hermes.config.rnafusion import NXF_RNAFUSION_TAGS
+from cg_hermes.config.taxprofiler import NXF_TAXPROFILER_TAGS
 from cg_hermes.config.tags import COMMON_TAG_CATEGORIES
 from cg_hermes.constants.workflow import Workflow
 
@@ -68,11 +68,11 @@ WORKFLOW_MAP = {
     },
     Workflow.RNAFUSION: {
         "header": ["Rnafusion tags", "Mandatory", "HK tags", "Used by"],
-        "tags": NXF_RNAFUSION_COMMON_TAGS,
+        "tags": NXF_RNAFUSION_TAGS,
     },
     Workflow.TAXPROFILER: {
         "header": ["Taxprofiler tags", "Mandatory", "HK tags", "Used by"],
-        "tags": NXF_TAXPROFILER_COMMON_TAGS,
+        "tags": NXF_TAXPROFILER_TAGS,
     },
 }
 
