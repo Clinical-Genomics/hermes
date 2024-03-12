@@ -59,7 +59,7 @@ TAXPROFILER_COMMON_TAGS = {
     frozenset({"qc-metrics"}): {
         "is_mandatory": True,
         "tags": ["qc-metrics"],
-        "used_by": ["cg"],
+        "used_by": ["cg", "storage"],
     },
 }
 
