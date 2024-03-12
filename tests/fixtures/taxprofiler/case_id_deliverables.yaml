@@ -42,6 +42,12 @@ files:
   path_index: null
   step: centrifuge
   tag: centrifuge_combined_report
+- format: txt
+  id: SAMPLE_ID
+  path: /CASE_ID/centrifuge/p_compressed+h+v/SAMPLE_ID_pe_p_compressed+h+v.centrifuge.txt
+  path_index: null
+  step: centrifuge
+  tag: centrifuge_report
 - format: yml
   id: CASE_ID
   path: /CASE_ID/pipeline_info/software_versions.yml

@@ -6,20 +6,20 @@ TAXPROFILER_COMMON_TAGS = {
     frozenset({"kraken2_combined_report", "kraken2"}): {
         "is_mandatory": True,
         "bundle_id": True,
-        "tags": ["kraken2", "kraken2report"],
+        "tags": ["kraken2", "metagenomics-report"],
         "used_by": ["deliver", "storage"],
     },
     frozenset({"kraken2_report", "kraken2"}): {
         "is_mandatory": True,
         "bundle_id": True,
-        "tags": ["kraken2", "kraken2report"],
+        "tags": ["kraken2", "combined-report"],
         "used_by": ["deliver", "storage"],
     },
     frozenset({"krona_kraken_plot", "krona"}): {
         "is_mandatory": True,
         "bundle_id": True,
         "tags": ["kraken2", "krona", "visualization"],
-        "used_by": ["deliver"],
+        "used_by": ["deliver", "storage"],
     },
     frozenset({"krona_centrifuge_plot", "krona"}): {
         "is_mandatory": True,
@@ -30,20 +30,26 @@ TAXPROFILER_COMMON_TAGS = {
     frozenset({"bracken_combined_report", "bracken"}): {
         "is_mandatory": True,
         "bundle_id": True,
-        "tags": ["bracken", "brackenreport"],
+        "tags": ["bracken", "combined-report"],
         "used_by": ["deliver"],
     },
     frozenset({"bracken_report", "bracken"}): {
         "is_mandatory": True,
         "bundle_id": True,
-        "tags": ["bracken", "brackenreport"],
+        "tags": ["bracken", "metagenomics-report"],
         "used_by": ["deliver"],
     },
     frozenset({"centrifuge_combined_report", "centrifuge"}): {
         "is_mandatory": True,
         "bundle_id": True,
-        "tags": ["centrifuge", "centrifugereport"],
-        "used_by": ["deliver", "storage"],
+        "tags": ["centrifuge", "combined-report"],
+        "used_by": ["deliver"],
+    },
+    frozenset({"centrifuge_report", "centrifuge"}): {
+        "is_mandatory": True,
+        "bundle_id": True,
+        "tags": ["centrifuge", "metagenomics-report"],
+        "used_by": ["deliver"],
     },
     frozenset({"multiqc-html", "report"}): {
         "is_mandatory": True,

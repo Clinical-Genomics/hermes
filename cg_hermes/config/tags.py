@@ -151,11 +151,7 @@ TOOLS = {
     "arriba": {"description": "Fusion caller"},
     "ascatngs": {"description": "Tool to identify somatically acquired copy-number alterations"},
     "asereadcounter": {"description": "Count reads mapping to heterozygous sites"},
-    "bracken": {
-        "description": "Tool to compute the abundance of species and is companion program to kraken2"
-    },
     "chanjo": {"description": "Tool to keep track of coverage over specific regions"},
-    "centrifuge": {"description": "Taxonomic sequence classifier"},
     "chromograph": {"description": "Tool to create PNG images from BED and WIG files from mikaell"},
     "cnvkit": {"description": "Tool to call copy number variations"},
     "cnvpytor": {"description": "Tool for CNV/CNA analysis from depth-of-coverage by mapped reads"},
@@ -173,12 +169,6 @@ TOOLS = {
     "gens": {"description": "CNV visualization tool"},
     "gffcompare": {"description": "Compare gff files"},
     "haplotype-caller": {"description": "Call snv and indels"},
-    "kraken2": {
-        "description": "Taxonomic sequence classifier that assigns taxonomic labels to metagenomic DNA sequences"
-    },
-    "krona": {
-        "description": "Visualisation tool that allows to explore relative abundances and confidences within metagenomic classifications"
-    },
     "manta": {"description": "Tool to call structural variants"},
     "mitodel": {"description": "Tool to identify mitochondrial deletion signatures"},
     "nextclade": {"description": "Viral genome clade assignment"},
@@ -256,9 +246,18 @@ RNAFUSION_SPECIFIC = {
 }
 
 TAXPROFILER_SPECIFIC = {
-    "brackenreport": {"description": "Bracken report analysis"},
-    "kraken2report": {"description": "Kraken2 report analysis"},
-    "centrifugereport": {"description": "Centrifuge report analysis"},
+    "bracken": {
+        "description": "Tool to compute the abundance of species and is companion program to kraken2"
+    },
+    "centrifuge": {"description": "Taxonomic sequence classifier"},
+    "combined-report": {"description": "A summary of metagenomics reports"},
+    "kraken2": {
+        "description": "Taxonomic sequence classifier that assigns taxonomic labels to metagenomic DNA sequences"
+    },
+    "krona": {
+        "description": "Visualisation tool that allows to explore relative abundances and confidences within metagenomic classifications"
+    },
+    "metagenomics-report": {"description": "Report analysis from different classifiers"},
 }
 
 
