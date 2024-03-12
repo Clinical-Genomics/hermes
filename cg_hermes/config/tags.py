@@ -249,15 +249,15 @@ TAXPROFILER_SPECIFIC = {
     "bracken": {
         "description": "Tool to compute the abundance of species and is companion program to kraken2"
     },
-    "centrifuge": {"description": "Taxonomic sequence classifier"},
-    "combined-report": {"description": "A summary of metagenomics reports"},
+    "centrifuge": {"description": "Taxonomic sequence classifier for metagenomic sequences"},
+    "combined-report": {"description": "A combined report of taxonomic classification from all samples"},
     "kraken2": {
         "description": "Taxonomic sequence classifier that assigns taxonomic labels to metagenomic DNA sequences"
     },
     "krona": {
         "description": "Visualisation tool that allows to explore relative abundances and confidences within metagenomic classifications"
     },
-    "metagenomics-report": {"description": "Report analysis from different classifiers"},
+    "metagenomics-report": {"description": "Report describing taxonomic classification results"},
 }
 
 
