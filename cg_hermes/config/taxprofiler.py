@@ -7,7 +7,7 @@ TAXPROFILER_COMMON_TAGS = {
         "is_mandatory": True,
         "bundle_id": True,
         "tags": ["kraken2", "kraken2report"],
-        "used_by": ["deliver"],
+        "used_by": ["deliver", "storage"],
     },
     frozenset({"kraken2_report", "kraken2"}): {
         "is_mandatory": True,
