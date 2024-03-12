@@ -49,7 +49,7 @@ TAXPROFILER_COMMON_TAGS = {
         "is_mandatory": True,
         "bundle_id": True,
         "tags": ["multiqc-html"],
-        "used_by": ["deliver"],
+        "used_by": ["deliver", "storage"],
     },
     frozenset({"multiqc-json"}): {
         "is_mandatory": True,
