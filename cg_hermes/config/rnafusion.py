@@ -84,6 +84,12 @@ RNAFUSION_COMMON_TAGS = {
         "tags": ["vcf-fusion"],
         "used_by": ["deliver", "scout"],
     },
+    frozenset({"samplesheet-valid"}): {
+        "is_mandatory": True,
+        "bundle_id": True,
+        "tags": ["samplesheet-valid"],
+        "used_by": ["cg"],
+    },
 }
 
 NXF_RNAFUSION_TAGS = {**RNAFUSION_COMMON_TAGS, **NEXTFLOW_TAGS}
