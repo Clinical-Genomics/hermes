@@ -1,4 +1,4 @@
-"""Tags that are defined in taxprofiler deliverables mapped to tags used in CG"""
+"""Tags that are defined in Taxprofiler deliverables mapped to tags stored in Housekeeper."""
 
 from cg_hermes.config.nextflow import NEXTFLOW_TAGS
 
