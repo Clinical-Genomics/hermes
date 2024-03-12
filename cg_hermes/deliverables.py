@@ -25,8 +25,8 @@ from cg_hermes.config.microsalt import MICROSALT_COMMON_TAGS
 from cg_hermes.config.mip_dna import MIP_DNA_TAGS
 from cg_hermes.config.mip_rna import MIP_RNA_TAGS
 from cg_hermes.config.mutant import MUTANT_COMMON_TAGS
-from cg_hermes.config.rnafusion import NXF_RNAFUSION_TAGS
-from cg_hermes.config.taxprofiler import NXF_TAXPROFILER_TAGS
+from cg_hermes.config.rnafusion import RNAFUSION_TAGS
+from cg_hermes.config.taxprofiler import TAXPROFILER_TAGS
 from cg_hermes.config.workflows import AnalysisType
 from cg_hermes.constants.workflow import Workflow
 from cg_hermes.exceptions import MissingFileError
@@ -107,13 +107,13 @@ class Deliverables:
                 self.raw_deliverables
             )
             self.files = self.get_rnafusion_files()
-            self.configs = Deliverables.build_internal_tag_map(NXF_RNAFUSION_TAGS)
+            self.configs = Deliverables.build_internal_tag_map(RNAFUSION_TAGS)
         elif self.workflow == Workflow.TAXPROFILER:
             self.model: TaxprofilerDeliverables = TaxprofilerDeliverables.parse_obj(
                 self.raw_deliverables
             )
             self.files = self.get_taxprofiler_files()
-            self.configs = Deliverables.build_internal_tag_map(NXF_TAXPROFILER_TAGS)
+            self.configs = Deliverables.build_internal_tag_map(TAXPROFILER_TAGS)
         else:
             raise Exception(
                 "Invalid workflow ({}) set for Deliverables object".format(self.workflow)
