@@ -250,7 +250,9 @@ TAXPROFILER_SPECIFIC = {
         "description": "Tool to compute the abundance of species and is companion program to kraken2"
     },
     "centrifuge": {"description": "Taxonomic sequence classifier for metagenomic sequences"},
-    "combined-report": {"description": "A combined report of taxonomic classification from all samples"},
+    "combined-report": {
+        "description": "A combined report of taxonomic classification from all samples"
+    },
     "kraken2": {
         "description": "Taxonomic sequence classifier that assigns taxonomic labels to metagenomic DNA sequences"
     },
