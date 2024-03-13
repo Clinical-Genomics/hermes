@@ -22,6 +22,10 @@ git clone https://github.com/Clinical-Genomics/cg-hermes
 poetry install 
 ```
 
+## Contributing
+
+Please check out our [guide for contributing to Hermes](CONTRIBUTING.md).
+
 ## Deployment
 
 1. See [DEPLOYMENT.md](https://github.com/Clinical-Genomics/hermes/blob/main/DEPLOYMENT.md)
