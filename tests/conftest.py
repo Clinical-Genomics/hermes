@@ -47,6 +47,11 @@ def fixture_rnafusion_files(fixtures_dir: Path) -> Path:
     return fixtures_dir / "rnafusion"
 
 
+@pytest.fixture(name="taxprofiler_files")
+def fixture_taxprofiler_files(fixtures_dir: Path) -> Path:
+    return fixtures_dir / "taxprofiler"
+
+
 # File fixtures
 
 
@@ -98,3 +103,8 @@ def fixture_balsamic_t_only_panel_deliverables(balsamic_files: Path) -> Path:
 @pytest.fixture(name="rnafusion_deliverables")
 def fixture_rnafusion_deliverables(rnafusion_files: Path) -> Path:
     return rnafusion_files / "case_id_deliverables.yaml"
+
+
+@pytest.fixture(name="taxprofiler_deliverables")
+def fixture_taxprofiler_deliverables(taxprofiler_files: Path) -> Path:
+    return taxprofiler_files / "case_id_deliverables.yaml"

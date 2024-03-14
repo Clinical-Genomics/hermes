@@ -261,3 +261,14 @@ def test_convert_rnafusion_deliverables(cli_runner: CliRunner, rnafusion_deliver
 
     # THEN assert that the program exits with success
     assert result.exit_code == 0
+
+
+def test_convert_taxprofiler_deliverables(cli_runner: CliRunner, taxprofiler_deliverables: Path):
+    # GIVEN the path to a taxprofiler deliverables file
+    assert taxprofiler_deliverables.exists()
+
+    # WHEN converting the deliverables to CG format
+    result = cli_runner.invoke(app, [str(taxprofiler_deliverables), "--workflow", "taxprofiler"])
+
+    # THEN assert that the program exits with success
+    assert result.exit_code == 0

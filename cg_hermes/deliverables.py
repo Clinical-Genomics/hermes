@@ -25,7 +25,8 @@ from cg_hermes.config.microsalt import MICROSALT_COMMON_TAGS
 from cg_hermes.config.mip_dna import MIP_DNA_TAGS
 from cg_hermes.config.mip_rna import MIP_RNA_TAGS
 from cg_hermes.config.mutant import MUTANT_COMMON_TAGS
-from cg_hermes.config.rnafusion import NXF_RNAFUSION_COMMON_TAGS
+from cg_hermes.config.rnafusion import RNAFUSION_TAGS
+from cg_hermes.config.taxprofiler import TAXPROFILER_TAGS
 from cg_hermes.config.workflows import AnalysisType
 from cg_hermes.constants.workflow import Workflow
 from cg_hermes.exceptions import MissingFileError
@@ -45,6 +46,8 @@ from cg_hermes.models.workflow_deliverables import (
     RnafusionDeliverables,
     RnafusionFile,
     TagBase,
+    TaxprofilerDeliverables,
+    TaxprofilerFile,
     WorkflowDeliverables,
 )
 
@@ -104,7 +107,13 @@ class Deliverables:
                 self.raw_deliverables
             )
             self.files = self.get_rnafusion_files()
-            self.configs = Deliverables.build_internal_tag_map(NXF_RNAFUSION_COMMON_TAGS)
+            self.configs = Deliverables.build_internal_tag_map(RNAFUSION_TAGS)
+        elif self.workflow == Workflow.TAXPROFILER:
+            self.model: TaxprofilerDeliverables = TaxprofilerDeliverables.parse_obj(
+                self.raw_deliverables
+            )
+            self.files = self.get_taxprofiler_files()
+            self.configs = Deliverables.build_internal_tag_map(TAXPROFILER_TAGS)
         else:
             raise Exception(
                 "Invalid workflow ({}) set for Deliverables object".format(self.workflow)
@@ -283,6 +292,22 @@ class Deliverables:
 
     def get_rnafusion_files(self) -> list[TagBase]:
         file_obj: RnafusionFile
+        files: list[TagBase] = []
+        for file_obj in self.model.files:
+            identifier = [file_obj.step]
+            if file_obj.tag:
+                identifier.append(file_obj.tag)
+            files.append(
+                TagBase(
+                    tags=frozenset(identifier),
+                    subject_id=file_obj.id,
+                    path=file_obj.path,
+                )
+            )
+        return files
+
+    def get_taxprofiler_files(self) -> list[TagBase]:
+        file_obj: TaxprofilerFile
         files: list[TagBase] = []
         for file_obj in self.model.files:
             identifier = [file_obj.step]

@@ -4,7 +4,7 @@ The tag sets that exists in all files are set to mandatory. Tag sets that exists
 mandatory by default. However the tags that are available to a particular analysis is mandatory for that analysis.
 """
 
-from cg_hermes.config.nextflow import NEXTFLOW_COMMON_TAGS
+from cg_hermes.config.nextflow import NEXTFLOW_TAGS
 
 RNAFUSION_COMMON_TAGS = {
     frozenset({"arriba"}): {
@@ -84,6 +84,12 @@ RNAFUSION_COMMON_TAGS = {
         "tags": ["vcf-fusion"],
         "used_by": ["deliver", "scout"],
     },
+    frozenset({"samplesheet-valid"}): {
+        "is_mandatory": True,
+        "bundle_id": True,
+        "tags": ["samplesheet-valid"],
+        "used_by": ["cg"],
+    },
 }
 
-NXF_RNAFUSION_COMMON_TAGS = {**RNAFUSION_COMMON_TAGS, **NEXTFLOW_COMMON_TAGS}
+RNAFUSION_TAGS = {**RNAFUSION_COMMON_TAGS, **NEXTFLOW_TAGS}

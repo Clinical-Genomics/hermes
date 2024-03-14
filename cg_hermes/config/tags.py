@@ -245,6 +245,24 @@ RNAFUSION_SPECIFIC = {
     "fusionreport": {"description": "Fusion-report analysis"},
 }
 
+TAXPROFILER_SPECIFIC = {
+    "bracken": {
+        "description": "Tool to compute the abundance of species and is companion program to kraken2"
+    },
+    "centrifuge": {"description": "Taxonomic sequence classifier for metagenomic sequences"},
+    "combined-report": {
+        "description": "A combined report of taxonomic classification from all samples"
+    },
+    "kraken2": {
+        "description": "Taxonomic sequence classifier that assigns taxonomic labels to metagenomic DNA sequences"
+    },
+    "krona": {
+        "description": "Visualisation tool that allows to explore relative abundances and confidences within metagenomic classifications"
+    },
+    "metagenomics-report": {"description": "Report describing taxonomic classification results"},
+}
+
+
 NEXTFLOW_SPECIFIC = {
     "samplesheet-valid": {"description": "Validated samplesheet"},
     "software-versions": {"description": "List of all software used and their versions"},
@@ -283,6 +301,7 @@ ALL_TAG_CATEGORIES = [
     MUTANT_SPECIFIC,
     NEXTFLOW_SPECIFIC,
     RNAFUSION_SPECIFIC,
+    TAXPROFILER_SPECIFIC,
     RAW_DATA,
     REPORTING_COMMON,
     TOOLS,

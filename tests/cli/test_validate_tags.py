@@ -74,3 +74,13 @@ def test_cli_validate_rnafusion_tags(cli_runner: CliRunner):
 
     # THEN assert that the validation was successful
     assert result.exit_code == 0
+
+
+def test_cli_validate_taxprofiler_tags(cli_runner: CliRunner):
+    # GIVEN a CLI runner
+
+    # WHEN testing to validate the common tags from the CLI
+    result = cli_runner.invoke(app, ["tags", "taxprofiler"])
+
+    # THEN assert that the validation was successful
+    assert result.exit_code == 0
