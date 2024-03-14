@@ -272,12 +272,14 @@ AVAILABLE_USAGES = {
     "audit",
     "cg",
     "chanjo",
-    "deliver",
+    "deliver",  # Deprecated
     "genotype",
     "nipt",
     "scout",
-    "storage",
+    "storage",  # Deprecated
     "janus",
+    "long-term-storage",
+    "clinical-delivery",
 }
 
 COMMON_TAG_CATEGORIES = {
