@@ -4,13 +4,7 @@ The tag sets that exists in all files are set to mandatory. Tag sets that exists
 mandatory by default. However the tags that are available to a particular analysis is mandatory for that analysis.
 """
 
-NEXTFLOW_COMMON_TAGS = {
-    frozenset({"samplesheet-valid"}): {
-        "is_mandatory": True,
-        "bundle_id": True,
-        "tags": ["samplesheet-valid"],
-        "used_by": ["cg"],
-    },
+NEXTFLOW_TAGS = {
     frozenset({"software-versions"}): {
         "is_mandatory": True,
         "bundle_id": True,
