@@ -17,7 +17,7 @@ When adding or modifying tags, please follow these guidelines:
   - Maintain a consistent syntax for individual tags, such as using lowercase letters and hyphens to separate words
     (e.g., `qc-metrics`, `vcf-snv-clinical`). Whenever possible, limit the tag syntax to a maximum of three words.
   - Ensure that each tag set uniquely describes a file to facilitate individual retrieval by other tools if needed.
-    Therefore, strictly avoid adding the same tag list to multiple files to prevent ambiguity.
+    Therefore, strictly avoid adding the same set of tags to multiple files to prevent ambiguity.
   - Ensure compatibility with the tag format required by [CG] for long-term storage (`long-term-storage`) and delivery 
     (`clinical-delivery`).
 
