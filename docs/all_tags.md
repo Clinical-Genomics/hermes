@@ -71,81 +71,76 @@
 
 ## REPORTING TAGS
 
-| Tag name            | Description                                                    |
-|---------------------|----------------------------------------------------------------|
-| audit               | Audit file                                                     |
-| cnv-report          | CNV variant calling report                                     |
-| csv                 | Comma separated values                                         |
-| combined-report     | A combined report of taxonomic classification from all samples |
-| deliverable         | Deliverables file                                              |
-| delivery-report     | Delivery report with result for upload to Scout                |
-| gene-counts         | STAR read counts output per gene                               |
-| metagenomics-report | Report describing taxonomic classification results             |
-| multiqc             | MultiQC related files                                          |
-| multiqc-html        | MultiQC analysis report in HTML format                         |
-| multiqc-json        | MultiQC analysis report in JSON format                         |
-| pdf                 | Portable document format                                       |
-| picard-alignment    | High level metrics about the alignment of reads                |
-| picard-duplicates   | Metrics calculated during marking duplicates                   |
-| picard-hs           | Metrics for the analysis of target-capture sequencing          |
-| picard-insert-size  | Metrics about the insert size distribution                     |
-| picard-wgs          | Metrics for evaluating the performance of WGS analysis         |
-| qc-report           | Results and QC                                                 |
-| sambamba-depth      | Coverage information from sambamba                             |
-| samtools-stats      | Comprehensive statistics from alignment file                   |
-| software-versions   | Versions of software used in analysis                          |
-| summary             | Overview file without detailed information                     |
-| tsv                 | Tab separated values                                           |
-| vcf-report          | Results and QC from variant calling                            |
+| Tag name           | Description                                            |
+|--------------------|--------------------------------------------------------|
+| audit              | Audit file                                             |
+| cnv-report         | CNV variant calling report                             |
+| csv                | Comma separated values                                 |
+| deliverable        | Deliverables file                                      |
+| delivery-report    | Delivery report with result for upload to Scout        |
+| gene-counts        | STAR read counts output per gene                       |
+| multiqc            | MultiQC related files                                  |
+| multiqc-html       | MultiQC analysis report in HTML format                 |
+| multiqc-json       | MultiQC analysis report in JSON format                 |
+| pdf                | Portable document format                               |
+| picard-alignment   | High level metrics about the alignment of reads        |
+| picard-duplicates  | Metrics calculated during marking duplicates           |
+| picard-hs          | Metrics for the analysis of target-capture sequencing  |
+| picard-insert-size | Metrics about the insert size distribution             |
+| picard-wgs         | Metrics for evaluating the performance of WGS analysis |
+| qc-report          | Results and QC                                         |
+| sambamba-depth     | Coverage information from sambamba                     |
+| samtools-stats     | Comprehensive statistics from alignment file           |
+| software-versions  | Versions of software used in analysis                  |
+| summary            | Overview file without detailed information             |
+| tsv                | Tab separated values                                   |
+| vcf-report         | Results and QC from variant calling                    |
 
 ## TOOL TAGS
 
-| Tag name              | Description                                                                               |
-|-----------------------|-------------------------------------------------------------------------------------------|
-| arriba                | Fusion caller                                                                             |
-| ascatngs              | Tool to identify somatically acquired copy-number alterations                             |
-| asereadcounter        | Count reads mapping to heterozygous sites                                                 |
-| bracken               | Tool to compute the abundance of species and is companion program to kraken2              |
-| centrifuge            | Taxonomic sequence classifier for metagenomic sequences                                   |
-| chanjo                | Tool to keep track of coverage over specific regions                                      |
-| chromograph           | Tool to create PNG images from BED and WIG files from mikaell                             |
-| cnvkit                | Tool to call copy number variations                                                       |
-| cnvpytor              | Tool for CNV/CNA analysis from depth-of-coverage by mapped reads                          |
-| cyrius                | Tool to call the problematic CYP2D6 gene                                                  |
-| deepvariant           | Variantcaller                                                                             |
-| delly                 | Cancer structural variant prediction tool                                                 |
-| deseq2                | Differential expression analysis with DESeq2                                              |
-| dnascope              | Call snv indels                                                                           |
-| expansionhunter       | Call repeat expansions                                                                    |
-| fastp                 | Preprocessing tool for FastQ files                                                        |
-| fusioncatcher         | Fusion caller                                                                             |
-| fusioncatcher-summary | Fusion caller summary                                                                     |
-| fusioninspector       | Fusion inspection                                                                         |
-| genotyper             | SNV indel caller from sention                                                             |
-| gens                  | CNV visualization tool                                                                    |
-| gffcompare            | Compare gff files                                                                         |
-| haplotype-caller      | Call snv and indels                                                                       |
-| kraken2               | Taxonomic sequence classifier that assigns taxonomic labels to metagenomic DNA sequences  |
-| manta                 | Tool to call structural variants                                                          |
-| mitodel               | Tool to identify mitochondrial deletion signatures                                        |
-| nextclade             | Viral genome clade assignment                                                             |
-| peddy                 | Tool to check pedigree and ancestral relations                                            |
-| picard                | Picard set of bioinformatic tools                                                         |
-| pizzly                | Fusion caller                                                                             |
-| retroseq              | Mobile element caller                                                                     |
-| salmon-quant          | Transcript quantification                                                                 |
-| sention               | Sention algorithm                                                                         |
-| somalier              | Tool for sample-swap and relatedness checks                                               |
-| squid                 | Fusion caller                                                                             |
-| star-fusion           | Fusion caller                                                                             |
-| stringtie             | Transcript assembler                                                                      |
-| svdb                  | Tool to merge SV vcf files from multiple variant callers                                  |
-| tiddit                | Tool to identify chromosomal rearrangements                                               |
-| tnscope               | Call snv indels                                                                           |
-| tnscope-umi           | Call snv indels for umi                                                                   |
-| upd                   | Uniparent disomy caller from bjhall                                                       |
-| vardict               | Cancer variant caller                                                                     |
-| wisecondor            | NIPT caller                                                                               |
+| Tag name              | Description                                                      |
+|-----------------------|------------------------------------------------------------------|
+| arriba                | Fusion caller                                                    |
+| ascatngs              | Tool to identify somatically acquired copy-number alterations    |
+| asereadcounter        | Count reads mapping to heterozygous sites                        |
+| chanjo                | Tool to keep track of coverage over specific regions             |
+| chromograph           | Tool to create PNG images from BED and WIG files from mikaell    |
+| cnvkit                | Tool to call copy number variations                              |
+| cnvpytor              | Tool for CNV/CNA analysis from depth-of-coverage by mapped reads |
+| cyrius                | Tool to call the problematic CYP2D6 gene                         |
+| deepvariant           | Variantcaller                                                    |
+| delly                 | Cancer structural variant prediction tool                        |
+| deseq2                | Differential expression analysis with DESeq2                     |
+| dnascope              | Call snv indels                                                  |
+| expansionhunter       | Call repeat expansions                                           |
+| fastp                 | Preprocessing tool for FastQ files                               |
+| fusioncatcher         | Fusion caller                                                    |
+| fusioncatcher-summary | Fusion caller summary                                            |
+| fusioninspector       | Fusion inspection                                                |
+| genotyper             | SNV indel caller from sention                                    |
+| gens                  | CNV visualization tool                                           |
+| gffcompare            | Compare gff files                                                |
+| haplotype-caller      | Call snv and indels                                              |
+| manta                 | Tool to call structural variants                                 |
+| mitodel               | Tool to identify mitochondrial deletion signatures               |
+| nextclade             | Viral genome clade assignment                                    |
+| peddy                 | Tool to check pedigree and ancestral relations                   |
+| picard                | Picard set of bioinformatic tools                                |
+| pizzly                | Fusion caller                                                    |
+| retroseq              | Mobile element caller                                            |
+| salmon-quant          | Transcript quantification                                        |
+| sention               | Sention algorithm                                                |
+| somalier              | Tool for sample-swap and relatedness checks                      |
+| squid                 | Fusion caller                                                    |
+| star-fusion           | Fusion caller                                                    |
+| stringtie             | Transcript assembler                                             |
+| svdb                  | Tool to merge SV vcf files from multiple variant callers         |
+| tiddit                | Tool to identify chromosomal rearrangements                      |
+| tnscope               | Call snv indels                                                  |
+| tnscope-umi           | Call snv indels for umi                                          |
+| upd                   | Uniparent disomy caller from bjhall                              |
+| vardict               | Cancer variant caller                                            |
+| wisecondor            | NIPT caller                                                      |
 
 ## VALIDATION TAGS
 
