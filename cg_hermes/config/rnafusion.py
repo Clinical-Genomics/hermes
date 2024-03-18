@@ -90,6 +90,36 @@ RNAFUSION_COMMON_TAGS = {
         "tags": ["samplesheet-valid"],
         "used_by": ["cg"],
     },
+    frozenset({"multiqc-fastp", "multiqc"}): {
+        "is_mandatory": True,
+        "tags": ["qc-metrics", "multiqc", "fastp"],
+        "used_by": ["janus"],
+    },
+    frozenset({"multiqc-picard-duplicates", "multiqc"}): {
+        "is_mandatory": True,
+        "tags": ["qc-metrics", "multiqc", "picard-duplicates"],
+        "used_by": ["janus"],
+    },
+    frozenset({"multiqc-picard-insert-size", "multiqc"}): {
+        "is_mandatory": True,
+        "tags": ["qc-metrics", "multiqc", "picard-insert-size"],
+        "used_by": ["janus"],
+    },
+    frozenset({"multiqc-picard-rnaseq", "multiqc"}): {
+        "is_mandatory": True,
+        "tags": ["qc-metrics", "multiqc", "picard-rnaseq"],
+        "used_by": ["janus"],
+    },
+    frozenset({"multiqc-general-stats", "multiqc"}): {
+        "is_mandatory": True,
+        "tags": ["qc-metrics", "multiqc", "general-stats"],
+        "used_by": ["janus"],
+    },
+    frozenset({"multiqc-star", "multiqc"}): {
+        "is_mandatory": True,
+        "tags": ["qc-metrics", "multiqc", "star"],
+        "used_by": ["janus"],
+    },
 }
 
 RNAFUSION_TAGS = {**RNAFUSION_COMMON_TAGS, **NEXTFLOW_TAGS}

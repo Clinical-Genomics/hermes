@@ -79,6 +79,7 @@
 | deliverable        | Deliverables file                                      |
 | delivery-report    | Delivery report with result for upload to Scout        |
 | gene-counts        | STAR read counts output per gene                       |
+| general-stats      | General statistics reported from MultiQC               |
 | multiqc            | MultiQC related files                                  |
 | multiqc-html       | MultiQC analysis report in HTML format                 |
 | multiqc-json       | MultiQC analysis report in JSON format                 |
@@ -87,11 +88,13 @@
 | picard-duplicates  | Metrics calculated during marking duplicates           |
 | picard-hs          | Metrics for the analysis of target-capture sequencing  |
 | picard-insert-size | Metrics about the insert size distribution             |
+| picard-rnaseq      | Metrics about the alignment of RNA-seq reads           |
 | picard-wgs         | Metrics for evaluating the performance of WGS analysis |
 | qc-report          | Results and QC                                         |
 | sambamba-depth     | Coverage information from sambamba                     |
 | samtools-stats     | Comprehensive statistics from alignment file           |
 | software-versions  | Versions of software used in analysis                  |
+| star               | Files related to Star aligner                          |
 | summary            | Overview file without detailed information             |
 | tsv                | Tab separated values                                   |
 | vcf-report         | Results and QC from variant calling                    |
