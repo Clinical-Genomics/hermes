@@ -17,9 +17,9 @@
 | vcf-fusion, vcf-collect              | False       | vcf-fusion                                            | deliver, scout |
 | samplesheet-valid                    | True        | samplesheet-valid                                     | cg             |
 | software-versions                    | True        | software-versions                                     | cg             |
-| multiqc-fastp, multiqc               | True        | qc-metrics, multiqc, fastp                            | storage, janus |
-| multiqc-picard-duplicates, multiqc   | True        | qc-metrics, multiqc, picard-duplicates                | storage, janus |
-| multiqc-picard-insert-size, multiqc  | True        | qc-metrics, multiqc, picard-insert-size               | storage, janus |
-| multiqc-picard-rnaseq, multiqc       | True        | qc-metrics, multiqc, picard-rnaseq                    | storage, janus |
-| multiqc-general-stats, multiqc       | True        | qc-metrics, multiqc, general-stats                    | storage, janus |
-| multiqc-star, multiqc                | True        | qc-metrics, multiqc, star                             | storage, janus |
+| multiqc-fastp, multiqc               | True        | qc-metrics, multiqc, fastp                            | janus          |
+| multiqc-picard-duplicates, multiqc   | True        | qc-metrics, multiqc, picard-duplicates                | janus          |
+| multiqc-picard-insert-size, multiqc  | True        | qc-metrics, multiqc, picard-insert-size               | janus          |
+| multiqc-picard-rnaseq, multiqc       | True        | qc-metrics, multiqc, picard-rnaseq                    | janus          |
+| multiqc-general-stats, multiqc       | True        | qc-metrics, multiqc, general-stats                    | janus          |
+| multiqc-star, multiqc                | True        | qc-metrics, multiqc, star                             | janus          |
