@@ -1,4 +1,4 @@
-"""Tests for the validate tags CLI."""
+"""Tests for the validate tags command."""
 
 from typer.testing import CliRunner
 

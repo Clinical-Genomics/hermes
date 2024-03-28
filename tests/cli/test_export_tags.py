@@ -1,4 +1,4 @@
-"""Tests for the export cli command"""
+"""Tests for the export command."""
 
 from typer.testing import CliRunner
 

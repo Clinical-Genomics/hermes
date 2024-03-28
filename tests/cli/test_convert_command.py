@@ -1,4 +1,4 @@
-"""Tests for the convert command"""
+"""Tests for the convert command."""
 
 from pathlib import Path
 
