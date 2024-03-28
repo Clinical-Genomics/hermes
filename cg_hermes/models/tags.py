@@ -1,8 +1,7 @@
 from pydantic import validator
 from pydantic.main import BaseModel
 
-from cg_hermes.config.tags import ALL_TAGS
-from cg_hermes.constants.tags import USAGE_TAGS
+from cg_hermes.constants.tags import ALL_TAGS, USAGE_TAGS
 
 
 class TagMap(BaseModel):
