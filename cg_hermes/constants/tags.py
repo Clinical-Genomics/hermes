@@ -588,6 +588,9 @@ class UsageTags(StrEnum):
     STORAGE: str = "storage"  # Deprecated
 
 
+USAGE_TAGS: set[str] = {tag.value for tag in UsageTags}
+
+
 TAG_CATEGORIES: list[Any] = [
     AlignmentTags,
     AnalysisTags,

@@ -271,20 +271,6 @@ NEXTFLOW_SPECIFIC = {
     "software-versions": {"description": "List of all software used and their versions"},
 }
 
-AVAILABLE_USAGES = {
-    "audit",
-    "cg",
-    "chanjo",
-    "deliver",  # Deprecated
-    "genotype",
-    "nipt",
-    "scout",
-    "storage",  # Deprecated
-    "janus",
-    "long-term-storage",
-    "clinical-delivery",
-}
-
 COMMON_TAG_CATEGORIES = {
     "alignment_tags": ALIGNMENT_COMMON,
     "analysis_tags": ANALYSIS_COMMON,

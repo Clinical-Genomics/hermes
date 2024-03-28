@@ -1,7 +1,8 @@
 from pydantic import validator
 from pydantic.main import BaseModel
 
-from cg_hermes.config.tags import ALL_TAGS, AVAILABLE_USAGES
+from cg_hermes.config.tags import ALL_TAGS
+from cg_hermes.constants.tags import USAGE_TAGS
 
 
 class TagMap(BaseModel):
@@ -17,7 +18,7 @@ class TagMap(BaseModel):
 
     @validator("used_by", each_item=True)
     def check_usage(cls, usage):
-        assert usage in AVAILABLE_USAGES, f"{usage} not a valid usage"
+        assert usage in USAGE_TAGS, f"{usage} not a valid usage"
         return usage
 
 
