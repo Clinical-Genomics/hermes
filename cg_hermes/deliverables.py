@@ -28,7 +28,7 @@ from cg_hermes.config.mip_rna import MIP_RNA_TAGS
 from cg_hermes.config.mutant import MUTANT_COMMON_TAGS
 from cg_hermes.config.rnafusion import RNAFUSION_TAGS
 from cg_hermes.config.taxprofiler import TAXPROFILER_TAGS
-from cg_hermes.constants.workflow import AnalysisType, Workflow
+from cg_hermes.constants.workflow import CancerAnalysisType, Workflow
 from cg_hermes.exceptions import MissingFileError
 from cg_hermes.models.tags import CGTag, TagMap
 from cg_hermes.models.workflow_deliverables import (
@@ -61,7 +61,7 @@ class Deliverables:
         self,
         deliverables: dict[str, list[dict[str, str]]],
         workflow: Workflow,
-        analysis_type: AnalysisType | None = None,
+        analysis_type: CancerAnalysisType | None = None,
     ):
         self.raw_deliverables = deliverables
         self.workflow = workflow
@@ -175,23 +175,23 @@ class Deliverables:
         tag_set = []
         if self.workflow == Workflow.BALSAMIC:
             BALSAMIC_COMMON_TAGS = BALSAMIC_TAGS
-            if self.analysis_type == AnalysisType.TUMOR_WGS:
+            if self.analysis_type == CancerAnalysisType.TUMOR_WGS:
                 tag_set = TUMOR_ONLY_WGS_TAGS
-            elif self.analysis_type == AnalysisType.TUMOR_NORMAL_WGS:
+            elif self.analysis_type == CancerAnalysisType.TUMOR_NORMAL_WGS:
                 tag_set = TUMOR_NORMAL_WGS_TAGS
-            elif self.analysis_type == AnalysisType.TUMOR_PANEL:
+            elif self.analysis_type == CancerAnalysisType.TUMOR_PANEL:
                 tag_set = TUMOR_ONLY_PANEL_TAGS
             else:
                 tag_set = TUMOR_NORMAL_PANEL_TAGS
         elif self.workflow == Workflow.BALSAMIC_QC:
             BALSAMIC_COMMON_TAGS = BALSAMIC_QC_TAGS
-            if self.analysis_type == AnalysisType.TUMOR_NORMAL_WGS:
+            if self.analysis_type == CancerAnalysisType.TUMOR_NORMAL_WGS:
                 tag_set = QC_TUMOR_NORMAL_WGS_TAGS
-            elif self.analysis_type == AnalysisType.TUMOR_NORMAL_PANEL:
+            elif self.analysis_type == CancerAnalysisType.TUMOR_NORMAL_PANEL:
                 tag_set = QC_TUMOR_NORMAL_PANEL_TAGS
         elif self.workflow == Workflow.BALSAMIC_UMI:
             BALSAMIC_COMMON_TAGS = BALSAMIC_UMI_TAGS
-            if self.analysis_type == AnalysisType.TUMOR_PANEL:
+            if self.analysis_type == CancerAnalysisType.TUMOR_PANEL:
                 tag_set = UMI_TUMOR_ONLY_PANEL_TAGS
             else:
                 tag_set = UMI_TUMOR_NORMAL_PANEL_TAGS

@@ -4,7 +4,7 @@ import logging
 from typing import FrozenSet
 
 from cg_hermes.config.tags import COMMON_TAG_CATEGORIES
-from cg_hermes.constants.workflow import AnalysisType, Workflow
+from cg_hermes.constants.workflow import CancerAnalysisType, Workflow
 from cg_hermes.deliverables import Deliverables
 from cg_hermes.models.tags import TagMap
 
@@ -14,7 +14,7 @@ LOG = logging.getLogger(__name__)
 def get_deliverables_obj(
     deliverables: dict[str, list[dict[str, str]]],
     workflow: Workflow,
-    analysis_type: AnalysisType | None = None,
+    analysis_type: CancerAnalysisType | None = None,
 ) -> Deliverables:
     if Workflow.BALSAMIC in workflow and not analysis_type:
         LOG.error(f"Please specify analysis type for {workflow}")

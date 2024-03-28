@@ -19,7 +19,7 @@ class Workflow(StrEnum):
     TAXPROFILER: str = "taxprofiler"
 
 
-class AnalysisType(StrEnum):
+class CancerAnalysisType(StrEnum):
     TUMOR_NORMAL_PANEL: str = "tumor_normal_panel"
     TUMOR_NORMAL_WGS: str = "tumor_normal_wgs"
     TUMOR_PANEL: str = "tumor_panel"

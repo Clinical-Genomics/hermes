@@ -8,7 +8,7 @@ import typer
 from pydantic import ValidationError
 
 from cg_hermes.cli.common import get_deliverables
-from cg_hermes.constants.workflow import AnalysisType, Workflow
+from cg_hermes.constants.workflow import CancerAnalysisType, Workflow
 from cg_hermes.deliverables import Deliverables
 from cg_hermes.exceptions import MissingFileError
 from cg_hermes.models.workflow_deliverables import CGDeliverables
@@ -23,7 +23,7 @@ app = typer.Typer()
 def convert_cmd(
     infile: Path,
     workflow: Workflow = typer.Option(..., help="Specify the workflow"),
-    analysis_type: AnalysisType = typer.Option(None, help="Specify the analysis type"),
+    analysis_type: CancerAnalysisType = typer.Option(None, help="Specify the analysis type"),
 ):
     LOG.info(f"Convert deliverable file: {infile} from workflow {workflow} to CG format")
 
