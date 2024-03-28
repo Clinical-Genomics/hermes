@@ -590,23 +590,26 @@ class UsageTags(StrEnum):
 
 USAGE_TAGS: set[str] = {tag.value for tag in UsageTags}
 
-
-TAG_CATEGORIES: list[Any] = [
+COMMON_TAG_CATEGORIES: list[Any] = [
     AlignmentTags,
     AnalysisTags,
-    BalsamicTags,
     BioinfoToolsTags,
     FamilyTags,
+    QCTags,
+    RawDataTags,
+    ReportTags,
+    VariantTags,
+]
+
+
+TAG_CATEGORIES: list[Any] = COMMON_TAG_CATEGORIES + [
+    BalsamicTags,
     MicrosaltTags,
     MipTags,
     MutantTags,
     NextflowTags,
-    QCTags,
-    RawDataTags,
-    ReportTags,
     RnafusionTags,
     TaxprofilerTags,
-    VariantTags,
 ]
 
 ALL_TAGS: set[str] = {tag.value for category in TAG_CATEGORIES for tag in category}

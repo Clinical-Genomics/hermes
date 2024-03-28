@@ -13,8 +13,19 @@ def test_export_common_tags(cli_runner: CliRunner):
 
     # THEN assert that the command exits without problems
     assert result.exit_code == 0
-    # THEN assert that the common cg tags was exported
-    assert "VARIANT TAGS" in result.output
+
+    # THEN assert that the common tags were exported
+    for table_name in [
+        "Alignment Tags",
+        "Analysis Tags",
+        "Bioinfo Tools Tags",
+        "Family Tags",
+        "QC Tags",
+        "Raw Data Tags",
+        "Report Tags",
+        "Variant Tags",
+    ]:
+        assert table_name in result.output
 
 
 def test_export_mip_dna_tags(cli_runner: CliRunner):
