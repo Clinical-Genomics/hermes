@@ -1,7 +1,7 @@
 site_name: Hermes documentation
 nav:
     - Home: index.md
-    - Available tags: all_tags.md
+    - Common tags: common_map.md
     - Mip-dna tag map: mip-dna_map.md
     - Mip-rna tag map: mip-rna_map.md
     - Balsamic tag map: balsamic_map.md
