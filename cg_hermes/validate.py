@@ -1,10 +1,10 @@
 """Code for validating files from different sources."""
+
 import logging
 from typing import FrozenSet
 
 from cg_hermes.config.tags import COMMON_TAG_CATEGORIES
-from cg_hermes.config.workflows import AnalysisType
-from cg_hermes.constants.workflow import Workflow
+from cg_hermes.constants.workflow import AnalysisType, Workflow
 from cg_hermes.deliverables import Deliverables
 from cg_hermes.models.tags import TagMap
 

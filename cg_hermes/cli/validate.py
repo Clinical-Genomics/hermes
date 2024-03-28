@@ -14,8 +14,7 @@ from cg_hermes.config.mip_rna import MIP_RNA_TAGS
 from cg_hermes.config.mutant import MUTANT_COMMON_TAGS
 from cg_hermes.config.rnafusion import RNAFUSION_TAGS
 from cg_hermes.config.taxprofiler import TAXPROFILER_TAGS
-from cg_hermes.config.workflows import AnalysisType
-from cg_hermes.constants.workflow import Workflow
+from cg_hermes.constants.workflow import AnalysisType, Workflow
 from cg_hermes.deliverables import Deliverables
 from cg_hermes.exceptions import MissingFileError
 from cg_hermes.validate import get_deliverables_obj, validate_tag_map
