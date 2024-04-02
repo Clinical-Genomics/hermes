@@ -2,61 +2,61 @@
 files:
 - format: tsv
   id: CASE_ID
-  path: /CASE_ID/fusioncatcher/CASE_ID.fusioncatcher.fusion-genes.txt
+  path: /CASE_ID/fusioncatcher/SAMPLE_ID.fusioncatcher.fusion-genes.txt
   path_index: null
   step: fusioncatcher
   tag: fusioncatcher
 - format: txt
   id: CASE_ID
-  path: /CASE_ID/fusioncatcher/CASE_ID.fusioncatcher.summary.txt
+  path: /CASE_ID/fusioncatcher/SAMPLE_ID.fusioncatcher.summary.txt
   path_index: null
   step: fusioncatcher
   tag: fusioncatcher-summary
 - format: tsv
   id: CASE_ID
-  path: /CASE_ID/starfusion/CASE_ID.starfusion.fusion_predictions.tsv
+  path: /CASE_ID/starfusion/SAMPLE_ID.starfusion.fusion_predictions.tsv
   path_index: null
   step: star-fusion
   tag: star-fusion
 - format: tsv
   id: CASE_ID
-  path: /CASE_ID/arriba/CASE_ID.arriba.fusions.tsv
+  path: /CASE_ID/arriba/SAMPLE_ID.arriba.fusions.tsv
   path_index: null
   step: arriba
   tag: arriba
 - format: cram
   id: SAMPLE_ID
-  path: /CASE_ID/cram_starfusion/CASE_ID.star_for_starfusion.Aligned.sortedByCoord.out.cram
+  path: /CASE_ID/cram_starfusion/SAMPLE_ID.star_for_starfusion.Aligned.sortedByCoord.out.cram
   path_index: null
   step: star-fusion
   tag: star-fusion-cram
 - format: cram
   id: SAMPLE_ID
-  path: /CASE_ID/cram_starfusion/CASE_ID.star_for_starfusion.Aligned.sortedByCoord.out.cram.crai
+  path: /CASE_ID/cram_starfusion/SAMPLE_ID.star_for_starfusion.Aligned.sortedByCoord.out.cram.crai
   path_index: null
   step: star-fusion
   tag: star-fusion-cram-index
 - format: html
   id: CASE_ID
-  path: /CASE_ID/fusionreport/CASE_ID/CASE_ID_fusionreport_index.html
+  path: /CASE_ID/fusionreport/SAMPLE_ID/SAMPLE_ID_fusionreport_index.html
   path_index: null
   step: report
   tag: fusionreport
 - format: tsv
   id: CASE_ID
-  path: /CASE_ID/fusioninspector/CASE_ID.FusionInspector.fusions.tsv
+  path: /CASE_ID/fusioninspector/SAMPLE_ID.FusionInspector.fusions.tsv
   path_index: null
   step: report
   tag: fusioninspector
 - format: html
   id: CASE_ID
-  path: /CASE_ID/fusioninspector/CASE_ID.fusion_inspector_web.html
+  path: /CASE_ID/fusioninspector/SAMPLE_ID.fusion_inspector_web.html
   path_index: null
   step: report
   tag: fusioninspector-html
 - format: pdf
   id: CASE_ID
-  path: /CASE_ID/arriba_visualisation/CASE_ID_combined_fusions_arriba_visualisation.pdf
+  path: /CASE_ID/arriba_visualisation/SAMPLE_ID_combined_fusions_arriba_visualisation.pdf
   path_index: null
   step: arriba
   tag: arriba-visualisation
@@ -80,13 +80,13 @@ files:
   tag: software-versions
 - format: vcf
   id: CASE_ID
-  path: /CASE_ID/vcf/CASE_ID_fusion_data.vcf.gz
+  path: /CASE_ID/vcf/SAMPLE_ID_fusion_data.vcf.gz
   path_index: null
   step: vcf-collect
   tag: vcf-fusion
 - format: tab
   id: CASE_ID
-  path: /CASE_ID/star_for_starfusion/CASE_ID.ReadsPerGene.out.tab
+  path: /CASE_ID/star_for_starfusion/SAMPLE_ID.ReadsPerGene.out.tab
   path_index: null
   step: star-align
   tag: star-align-gene-counts
