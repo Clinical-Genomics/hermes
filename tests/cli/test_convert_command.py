@@ -2,6 +2,8 @@
 
 from pathlib import Path
 
+import pytest
+from _pytest.fixtures import FixtureRequest
 from typer.testing import CliRunner
 
 from cg_hermes.cli.convert import app
@@ -252,23 +254,22 @@ def test_convert_balsamic_qc_tn_wgs_deliverables(
     assert result.exit_code == 0
 
 
-def test_convert_rnafusion_deliverables(cli_runner: CliRunner, rnafusion_deliverables: Path):
-    # GIVEN the path to a rnafusion deliverables file
-    assert rnafusion_deliverables.exists()
+@pytest.mark.parametrize(
+    "workflow",
+    Workflow.get_nf_workflows(),
+)
+def test_convert_nf_workflow_deliverables(
+    cli_runner: CliRunner,
+    workflow: Workflow,
+    request: FixtureRequest,
+):
+    """Test that deliverables are converted."""
+    # GIVEN the path to an existing deliverables file
+    deliverables: Path = request.getfixturevalue(f"{workflow}_deliverables")
+    assert deliverables.exists()
 
     # WHEN converting the deliverables to CG format
-    result = cli_runner.invoke(app, [str(rnafusion_deliverables), "--workflow", "rnafusion"])
-
-    # THEN assert that the program exits with success
-    assert result.exit_code == 0
-
-
-def test_convert_taxprofiler_deliverables(cli_runner: CliRunner, taxprofiler_deliverables: Path):
-    # GIVEN the path to a taxprofiler deliverables file
-    assert taxprofiler_deliverables.exists()
-
-    # WHEN converting the deliverables to CG format
-    result = cli_runner.invoke(app, [str(taxprofiler_deliverables), "--workflow", "taxprofiler"])
+    result = cli_runner.invoke(app, [str(deliverables), "--workflow", workflow])
 
     # THEN assert that the program exits with success
     assert result.exit_code == 0

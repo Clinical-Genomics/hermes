@@ -2,9 +2,13 @@
 
 from pathlib import Path
 
+import pytest
+from _pytest.fixtures import FixtureRequest
+from _pytest.logging import LogCaptureFixture
 from typer.testing import CliRunner
 
 from cg_hermes.cli.validate import app
+from cg_hermes.constants.workflow import Workflow
 
 
 def test_validate_mip_deliverables_file(cli_runner: CliRunner, mip_dna_deliverables: Path):
@@ -102,29 +106,23 @@ def test_validate_balsamic_qc_deliverables_file(
     assert result.exit_code == 0
 
 
-def test_validate_rnafusion_deliverables_file(cli_runner: CliRunner, rnafusion_deliverables: Path):
-    # GIVEN a existing mip_dna deliverables file and a CLI runner
-    assert rnafusion_deliverables.exists()
-
-    # WHEN running the validate deliverables command
-    result = cli_runner.invoke(
-        app, ["deliverables", str(rnafusion_deliverables), "--workflow", "rnafusion"]
-    )
-
-    # THEN assert it exits without problem
-    assert result.exit_code == 0
-
-
-def test_validate_taxprofiler_deliverables_file(
-    cli_runner: CliRunner, taxprofiler_deliverables: Path
+@pytest.mark.parametrize(
+    "workflow",
+    Workflow.get_nf_workflows(),
+)
+def test_validate_nf_workflow_deliverables_file(
+    cli_runner: CliRunner,
+    workflow: Workflow,
+    request: FixtureRequest,
+    caplog: LogCaptureFixture,
 ):
-    # GIVEN a existing mip_dna deliverables file and a CLI runner
-    assert taxprofiler_deliverables.exists()
+    """Test validate deliverables file command for workflow."""
+    # GIVEN the path to an existing deliverables file
+    deliverables: Path = request.getfixturevalue(f"{workflow}_deliverables")
+    assert deliverables.exists()
 
-    # WHEN running the validate deliverables command
-    result = cli_runner.invoke(
-        app, ["deliverables", str(taxprofiler_deliverables), "--workflow", "taxprofiler"]
-    )
+    # WHEN invoking the validate deliverables command
+    result = cli_runner.invoke(app, ["deliverables", str(deliverables), "--workflow", workflow])
 
     # THEN assert it exits without problem
     assert result.exit_code == 0
