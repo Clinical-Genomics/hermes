@@ -1,6 +1,5 @@
 import copy
 import logging
-import re
 from enum import StrEnum
 
 import typer
@@ -94,9 +93,7 @@ def export_tags_cmd(
     if not workflow:
         header = ["Tag name", "Description"]
         for category in COMMON_TAG_CATEGORIES:
-            table_name: str = " ".join(
-                re.findall(r"[A-Z](?:[a-z]+|[A-Z]*(?=[A-Z]|$))", category.__name__)
-            )
+            table_name: str = category.name()
             if output == "github":
                 typer.echo(f"## {table_name}")
             else:

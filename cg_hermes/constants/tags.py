@@ -9,8 +9,12 @@ class AlignmentTags(StrEnum):
     CRAM: str = "cram"
     CRAM_INDEX: str = "cram-index"
 
+    @classmethod
+    def name(cls) -> str:
+        return "Alignment Tags"
+
     @property
-    def description(self):
+    def description(self) -> str:
         descriptions: dict[AlignmentTags, str] = {
             self.BAM: "Alignment file in BAM format",
             self.BAM_INDEX: "Index file for alignment file in BAM format",
@@ -29,8 +33,12 @@ class RawDataTags(StrEnum):
     RNA: str = "rna"
     UNPAIRED_READS: str = "unpaired-reads"
 
+    @classmethod
+    def name(cls) -> str:
+        return "Raw Data Tags"
+
     @property
-    def description(self):
+    def description(self) -> str:
         descriptions: dict[RawDataTags, str] = {
             self.FASTA: "Files with raw data in fasta format",
             self.FASTQ: "Files with raw data in fastq format",
@@ -96,8 +104,12 @@ class VariantTags(StrEnum):
     VCF_UMI_SNV_RESEARCH: str = "vcf-umi-snv-research"
     VCF_UMI_SNV_RESEARCH_INDEX: str = "vcf-umi-snv-research-index"
 
+    @classmethod
+    def name(cls) -> str:
+        return "Variant Tags"
+
     @property
-    def description(self):
+    def description(self) -> str:
         descriptions: dict[VariantTags, str] = {
             self.CNV: "Copy number variants",
             self.GERMLINE: "Associated with germline variants",
@@ -159,8 +171,12 @@ class FamilyTags(StrEnum):
     PED: str = "ped"
     PEDIGREE: str = "pedigree"
 
+    @classmethod
+    def name(cls) -> str:
+        return "Family Tags"
+
     @property
-    def description(self):
+    def description(self) -> str:
         descriptions: dict[FamilyTags, str] = {
             self.PED: "Pedigree information",
             self.PEDIGREE: "Pedigree information",
@@ -196,8 +212,12 @@ class ReportTags(StrEnum):
     TSV: str = "tsv"
     VCF_REPORT: str = "vcf-report"
 
+    @classmethod
+    def name(cls) -> str:
+        return "Report Tags"
+
     @property
-    def description(self):
+    def description(self) -> str:
         descriptions: dict[ReportTags, str] = {
             self.AUDIT: "Audit file",
             self.BCFTOOLS_STATS: "BCFtools variant calling metrics",
@@ -234,8 +254,12 @@ class QCTags(StrEnum):
     QC_METRICS: str = "qc-metrics"
     SEX_CHECK: str = "sex-check"
 
+    @classmethod
+    def name(cls) -> str:
+        return "QC Tags"
+
     @property
-    def description(self):
+    def description(self) -> str:
         descriptions: dict[QCTags, str] = {
             self.PED_CHECK: "Results from pedigree validation",
             self.QC_METRICS: "QC metrics from analysis",
@@ -284,8 +308,12 @@ class AnalysisTags(StrEnum):
     VCF_FUSION: str = "vcf-fusion"
     VISUALIZATION: str = "visualization"
 
+    @classmethod
+    def name(cls) -> str:
+        return "Analysis Tags"
+
     @property
-    def description(self):
+    def description(self) -> str:
         descriptions: dict[AnalysisTags, str] = {
             self.ASPCF_PLOT: "Plot of LogR and BAF values",
             self.ASSEMBLY: "Assembly",
@@ -373,8 +401,12 @@ class BioinfoToolsTags(StrEnum):
     VARDICT: str = "vardict"
     WISECONDOR: str = "wisecondor"
 
+    @classmethod
+    def name(cls) -> str:
+        return "Bioinfo Tools Tags"
+
     @property
-    def description(self):
+    def description(self) -> str:
         descriptions: dict[BioinfoToolsTags, str] = {
             self.ARRIBA: "Fusion caller",
             self.ASCATNGS: "Tool to identify somatically acquired copy-number alterations",
@@ -431,8 +463,12 @@ class MipTags(StrEnum):
     SAMPLE_INFO: str = "sample-info"
     VARIANT_CATALOG: str = "variant-catalog"
 
+    @classmethod
+    def name(cls) -> str:
+        return "MIP Tags"
+
     @property
-    def description(self):
+    def description(self) -> str:
         descriptions: dict[MipTags, str] = {
             self.EXE_VER: "Executable versions",
             self.MIP_ANALYSE: "MIP information about analysis",
@@ -450,8 +486,12 @@ class BalsamicTags(StrEnum):
     BALSAMIC_DAG: str = "balsamic-dag"
     BALSAMIC_REPORT: str = "balsamic-report"
 
+    @classmethod
+    def name(cls) -> str:
+        return "BALSAMIC Tags"
+
     @property
-    def description(self):
+    def description(self) -> str:
         descriptions: dict[str, BalsamicTags] = {
             self.BALSAMIC_CONFIG: "Balsamic configs for analysis",
             self.BALSAMIC_DAG: "Balsamic run schema",
@@ -465,8 +505,12 @@ class MicrosaltTags(StrEnum):
     MICROSLAT_LOG: str = "microsalt-log"
     TYPING_REPORT: str = "typing-report"
 
+    @classmethod
+    def name(cls) -> str:
+        return "MicroSalt Tags"
+
     @property
-    def description(self):
+    def description(self) -> str:
         descriptions: dict[str, MicrosaltTags] = {
             self.MICROSLAT_CONFIG: "Config settings for microsalt analysis",
             self.MICROSLAT_LOG: "SLURM log for microsalt analysis",
@@ -498,8 +542,12 @@ class MutantTags(StrEnum):
     TYPING_SUMMARY: str = "typing-summary"
     VCF_COVID: str = "vcf-covid"
 
+    @classmethod
+    def name(cls) -> str:
+        return "Mutant Tags"
+
     @property
-    def description(self):
+    def description(self) -> str:
         descriptions: dict[MutantTags, str] = {
             self.ARTIC_JSON: "GMS-Artic json file",
             self.ARTIC_QC: "GMS-Artic QC file",
@@ -531,8 +579,12 @@ class RnafusionTags(StrEnum):
     FUSIONINSPECTOR_HTML: str = "fusioninspector-html"
     FUSIONREPORT: str = "fusionreport"
 
+    @classmethod
+    def name(cls) -> str:
+        return "Rnafusion Tags"
+
     @property
-    def description(self):
+    def description(self) -> str:
         descriptions: dict[str, RnafusionTags] = {
             self.ARRIBA_VISUALISATION: "Arriba visualization",
             self.FUSIONINSPECTOR_HTML: "Fusioninspector report",
@@ -549,8 +601,12 @@ class TaxprofilerTags(StrEnum):
     KRONA: str = "krona"
     METAGENOMICS_REPORT: str = "metagenomics-report"
 
+    @classmethod
+    def name(cls) -> str:
+        return "Taxprofiler Tags"
+
     @property
-    def description(self):
+    def description(self) -> str:
         descriptions: dict[str, TaxprofilerTags] = {
             self.BRACKEN: "Tool to compute the abundance of species and is companion program to "
             "kraken2",
@@ -569,8 +625,12 @@ class TomteTags(StrEnum):
     FRASER: str = "fraser"
     OUTRIDER: str = "outrider"
 
+    @classmethod
+    def name(cls) -> str:
+        return "Tomte Tags"
+
     @property
-    def description(self):
+    def description(self) -> str:
         descriptions: dict[str, TomteTags] = {
             self.FRASER: "Aberrant splicing calculated with DROP",
             self.OUTRIDER: "Aberrant expression calculated with DROP",
@@ -584,8 +644,12 @@ class NextflowTags(StrEnum):
     SAMPLESHEET_VALID: str = "samplesheet-valid"
     SOFTWARE_VERSIONS: str = "software-versions"
 
+    @classmethod
+    def name(cls) -> str:
+        return "Nextflow Tags"
+
     @property
-    def description(self):
+    def description(self) -> str:
         descriptions: dict[str, NextflowTags] = {
             self.NEXTFLOW_CONFIG: "Nextflow config for analysis",
             self.SAMPLESHEET: "Samplesheet for analysis",
