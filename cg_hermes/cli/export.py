@@ -14,6 +14,7 @@ from cg_hermes.config.mip_rna import MIP_RNA_TAGS
 from cg_hermes.config.mutant import MUTANT_COMMON_TAGS
 from cg_hermes.config.rnafusion import RNAFUSION_TAGS
 from cg_hermes.config.taxprofiler import TAXPROFILER_TAGS
+from cg_hermes.config.tomte import TOMTE_TAGS
 from cg_hermes.constants.tags import COMMON_TAG_CATEGORIES
 from cg_hermes.constants.workflow import Workflow
 
@@ -74,6 +75,10 @@ WORKFLOW_MAP = {
     Workflow.TAXPROFILER: {
         "header": ["Taxprofiler tags", "Mandatory", "HK tags", "Used by"],
         "tags": TAXPROFILER_TAGS,
+    },
+    Workflow.TOMTE: {
+        "header": ["Tomte tags", "Mandatory", "HK tags", "Used by"],
+        "tags": TOMTE_TAGS,
     },
 }
 

@@ -3,20 +3,20 @@ from typing import Any
 
 
 class AlignmentTags(StrEnum):
+    BAM: str = "bam"
     BAM_INDEX: str = "bam-index"
     BAM_MT: str = "bam-mt"
-    BAM: str = "bam"
-    CRAM_INDEX: str = "cram-index"
     CRAM: str = "cram"
+    CRAM_INDEX: str = "cram-index"
 
     @property
     def description(self):
         descriptions: dict[AlignmentTags, str] = {
+            self.BAM: "Alignment file in BAM format",
             self.BAM_INDEX: "Index file for alignment file in BAM format",
             self.BAM_MT: "Alignment file in BAM format holding the reads from chrMT",
-            self.BAM: "Alignment file in BAM format",
-            self.CRAM_INDEX: "Index file for alignment file in CRAM format",
             self.CRAM: "Alignment file in CRAM format",
+            self.CRAM_INDEX: "Index file for alignment file in CRAM format",
         }
         return descriptions.get(self, "Description not available")
 
@@ -49,52 +49,52 @@ class VariantTags(StrEnum):
     NORMAL: str = "normal"
     RHOCALL_VIZ: str = "rhocall-viz"
     SMN_CALLING: str = "smn-calling"
+    SNV: str = "snv"
     SNV_BCF: str = "snv-bcf"
     SNV_GBCF: str = "snv-gbcf"
-    SNV: str = "snv"
     SOMATIC: str = "somatic"
-    SV_BCF: str = "sv-bcf"
-    SV_VCF_INDEX: str = "sv-vcf-index"
-    SV_VCF: str = "sv-vcf"
     SV: str = "sv"
+    SV_BCF: str = "sv-bcf"
+    SV_VCF: str = "sv-vcf"
+    SV_VCF_INDEX: str = "sv-vcf-index"
     TELOMERE_CALLING: str = "telomere-calling"
     TMB: str = "tmb"
     TUMOR: str = "tumor"
     UPD: str = "upd"
     VARIANTS: str = "variants"
-    VCF_INDEX: str = "vcf-index"
-    VCF_SNV_CLINICAL_INDEX: str = "vcf-snv-clinical-index"
-    VCF_SNV_CLINICAL: str = "vcf-snv-clinical"
-    VCF_SNV_FILTERED_INDEX: str = "vcf-snv-filtered-index"
-    VCF_SNV_FILTERED: str = "vcf-snv-filtered"
-    VCF_SNV_GERMLINE_NORMAL_INDEX: str = "vcf-snv-germline-normal-index"
-    VCF_SNV_GERMLINE_NORMAL: str = "vcf-snv-germline-normal"
-    VCF_SNV_GERMLINE_TUMOR_INDEX: str = "vcf-snv-germline-tumor-index"
-    VCF_SNV_GERMLINE_TUMOR: str = "vcf-snv-germline-tumor"
-    VCF_SNV_INDEX: str = "vcf-snv-index"
-    VCF_SNV_RESEARCH_INDEX: str = "vcf-snv-research-index"
-    VCF_SNV_RESEARCH: str = "vcf-snv-research"
-    VCF_SNV: str = "vcf-snv"
-    VCF_STR_INDEX: str = "vcf-str-index"
-    VCF_STR: str = "vcf-str"
-    VCF_SV_CLINICAL_INDEX: str = "vcf-sv-clinical-index"
-    VCF_SV_CLINICAL: str = "vcf-sv-clinical"
-    VCF_SV_GERMLINE_NORMAL_INDEX: str = "vcf-sv-germline-normal-index"
-    VCF_SV_GERMLINE_NORMAL: str = "vcf-sv-germline-normal"
-    VCF_SV_GERMLINE_TUMOR_INDEX: str = "vcf-sv-germline-tumor-index"
-    VCF_SV_GERMLINE_TUMOR: str = "vcf-sv-germline-tumor"
-    VCF_SV_INDEX: str = "vcf-sv-index"
-    VCF_SV_RESEARCH_INDEX: str = "vcf-sv-research-index"
-    VCF_SV_RESEARCH: str = "vcf-sv-research"
-    VCF_SV: str = "vcf-sv"
-    VCF_UMI_SNV_CLINICAL_INDEX: str = "vcf-umi-snv-clinical-index"
-    VCF_UMI_SNV_CLINICAL: str = "vcf-umi-snv-clinical"
-    VCF_UMI_SNV_INDEX: str = "vcf-umi-snv-index"
-    VCF_UMI_SNV_RESEARCH_INDEX: str = "vcf-umi-snv-research-index"
-    VCF_UMI_SNV_RESEARCH: str = "vcf-umi-snv-research"
-    VCF_UMI_SNV: str = "vcf-umi-snv"
-    VCF: str = "vcf"
     VCF2CYTOSURE: str = "vcf2cytosure"
+    VCF: str = "vcf"
+    VCF_INDEX: str = "vcf-index"
+    VCF_SNV: str = "vcf-snv"
+    VCF_SNV_CLINICAL: str = "vcf-snv-clinical"
+    VCF_SNV_CLINICAL_INDEX: str = "vcf-snv-clinical-index"
+    VCF_SNV_FILTERED: str = "vcf-snv-filtered"
+    VCF_SNV_FILTERED_INDEX: str = "vcf-snv-filtered-index"
+    VCF_SNV_GERMLINE_NORMAL: str = "vcf-snv-germline-normal"
+    VCF_SNV_GERMLINE_NORMAL_INDEX: str = "vcf-snv-germline-normal-index"
+    VCF_SNV_GERMLINE_TUMOR: str = "vcf-snv-germline-tumor"
+    VCF_SNV_GERMLINE_TUMOR_INDEX: str = "vcf-snv-germline-tumor-index"
+    VCF_SNV_INDEX: str = "vcf-snv-index"
+    VCF_SNV_RESEARCH: str = "vcf-snv-research"
+    VCF_SNV_RESEARCH_INDEX: str = "vcf-snv-research-index"
+    VCF_STR: str = "vcf-str"
+    VCF_STR_INDEX: str = "vcf-str-index"
+    VCF_SV: str = "vcf-sv"
+    VCF_SV_CLINICAL: str = "vcf-sv-clinical"
+    VCF_SV_CLINICAL_INDEX: str = "vcf-sv-clinical-index"
+    VCF_SV_GERMLINE_NORMAL: str = "vcf-sv-germline-normal"
+    VCF_SV_GERMLINE_NORMAL_INDEX: str = "vcf-sv-germline-normal-index"
+    VCF_SV_GERMLINE_TUMOR: str = "vcf-sv-germline-tumor"
+    VCF_SV_GERMLINE_TUMOR_INDEX: str = "vcf-sv-germline-tumor-index"
+    VCF_SV_INDEX: str = "vcf-sv-index"
+    VCF_SV_RESEARCH: str = "vcf-sv-research"
+    VCF_SV_RESEARCH_INDEX: str = "vcf-sv-research-index"
+    VCF_UMI_SNV: str = "vcf-umi-snv"
+    VCF_UMI_SNV_CLINICAL: str = "vcf-umi-snv-clinical"
+    VCF_UMI_SNV_CLINICAL_INDEX: str = "vcf-umi-snv-clinical-index"
+    VCF_UMI_SNV_INDEX: str = "vcf-umi-snv-index"
+    VCF_UMI_SNV_RESEARCH: str = "vcf-umi-snv-research"
+    VCF_UMI_SNV_RESEARCH_INDEX: str = "vcf-umi-snv-research-index"
 
     @property
     def description(self):
@@ -105,52 +105,52 @@ class VariantTags(StrEnum):
             self.NORMAL: "Associated with normal sample",
             self.RHOCALL_VIZ: "Runs of homozygosity index",
             self.SMN_CALLING: "Copy number calls for the SMN gene",
+            self.SNV: "Single nucleotide variants and short indels",
             self.SNV_BCF: "Gvcf including all SNV variants",
             self.SNV_GBCF: "Gvcf including all SNV variants",
-            self.SNV: "Single nucleotide variants and short indels",
             self.SOMATIC: "Associated with somatic variants",
-            self.SV_BCF: "Gvcf including all SV variants",
-            self.SV_VCF_INDEX: "Following index",
-            self.SV_VCF: "Variant call formatted file with structural variants",
             self.SV: "Structural variants",
+            self.SV_BCF: "Gvcf including all SV variants",
+            self.SV_VCF: "Variant call formatted file with structural variants",
+            self.SV_VCF_INDEX: "Following index",
             self.TELOMERE_CALLING: "Variants from telomere calling",
             self.TMB: "Tumor mutational burden information",
             self.TUMOR: "Associated with tumor sample",
             self.UPD: "Uniparental disomy variants",
             self.VARIANTS: "File pertaining variant information in some way",
-            self.VCF_INDEX: "Following index",
-            self.VCF_SNV_CLINICAL_INDEX: "Following index",
-            self.VCF_SNV_CLINICAL: "SNV variants from clinical panels",
-            self.VCF_SNV_FILTERED_INDEX: "Following index",
-            self.VCF_SNV_FILTERED: "SNV variants filtered by BALSAMIC",
-            self.VCF_SNV_GERMLINE_NORMAL_INDEX: "Following index",
-            self.VCF_SNV_GERMLINE_NORMAL: "SNV germline normal variants",
-            self.VCF_SNV_GERMLINE_TUMOR_INDEX: "Following index",
-            self.VCF_SNV_GERMLINE_TUMOR: "SNV germline tumor variants",
-            self.VCF_SNV_INDEX: "Following index",
-            self.VCF_SNV_RESEARCH_INDEX: "Following index",
-            self.VCF_SNV_RESEARCH: "SNV variants from whole genome",
-            self.VCF_SNV: "SNV variant call formatted file",
-            self.VCF_STR_INDEX: "Following index",
-            self.VCF_STR: "Short tandem repeat variants",
-            self.VCF_SV_CLINICAL_INDEX: "Following index",
-            self.VCF_SV_CLINICAL: "SV variants from clinical panels",
-            self.VCF_SV_GERMLINE_NORMAL_INDEX: "Following index",
-            self.VCF_SV_GERMLINE_NORMAL: "SV germline normal variants",
-            self.VCF_SV_GERMLINE_TUMOR_INDEX: "Following index",
-            self.VCF_SV_GERMLINE_TUMOR: "SV germline tumor variants",
-            self.VCF_SV_INDEX: "Following index",
-            self.VCF_SV_RESEARCH_INDEX: "Following index",
-            self.VCF_SV_RESEARCH: "SV variants from whole genome",
-            self.VCF_SV: "SV variant call formatted file",
-            self.VCF_UMI_SNV_CLINICAL_INDEX: "Following index",
-            self.VCF_UMI_SNV_CLINICAL: "SNV UMI variants from clinical panels",
-            self.VCF_UMI_SNV_INDEX: "Following index",
-            self.VCF_UMI_SNV_RESEARCH_INDEX: "Following index",
-            self.VCF_UMI_SNV_RESEARCH: "SNV UMI variant formatted file",
-            self.VCF_UMI_SNV: "Raw SNV UMI variant formatted file",
-            self.VCF: "Variant call formatted file",
             self.VCF2CYTOSURE: "Conversion from VCF format to cytosure format",
+            self.VCF: "Variant call formatted file",
+            self.VCF_INDEX: "Following index",
+            self.VCF_SNV: "SNV variant call formatted file",
+            self.VCF_SNV_CLINICAL: "SNV variants from clinical panels",
+            self.VCF_SNV_CLINICAL_INDEX: "Following index",
+            self.VCF_SNV_FILTERED: "SNV variants filtered by BALSAMIC",
+            self.VCF_SNV_FILTERED_INDEX: "Following index",
+            self.VCF_SNV_GERMLINE_NORMAL: "SNV germline normal variants",
+            self.VCF_SNV_GERMLINE_NORMAL_INDEX: "Following index",
+            self.VCF_SNV_GERMLINE_TUMOR: "SNV germline tumor variants",
+            self.VCF_SNV_GERMLINE_TUMOR_INDEX: "Following index",
+            self.VCF_SNV_INDEX: "Following index",
+            self.VCF_SNV_RESEARCH: "SNV variants from whole genome",
+            self.VCF_SNV_RESEARCH_INDEX: "Following index",
+            self.VCF_STR: "Short tandem repeat variants",
+            self.VCF_STR_INDEX: "Following index",
+            self.VCF_SV: "SV variant call formatted file",
+            self.VCF_SV_CLINICAL: "SV variants from clinical panels",
+            self.VCF_SV_CLINICAL_INDEX: "Following index",
+            self.VCF_SV_GERMLINE_NORMAL: "SV germline normal variants",
+            self.VCF_SV_GERMLINE_NORMAL_INDEX: "Following index",
+            self.VCF_SV_GERMLINE_TUMOR: "SV germline tumor variants",
+            self.VCF_SV_GERMLINE_TUMOR_INDEX: "Following index",
+            self.VCF_SV_INDEX: "Following index",
+            self.VCF_SV_RESEARCH: "SV variants from whole genome",
+            self.VCF_SV_RESEARCH_INDEX: "Following index",
+            self.VCF_UMI_SNV: "Raw SNV UMI variant formatted file",
+            self.VCF_UMI_SNV_CLINICAL: "SNV UMI variants from clinical panels",
+            self.VCF_UMI_SNV_CLINICAL_INDEX: "Following index",
+            self.VCF_UMI_SNV_INDEX: "Following index",
+            self.VCF_UMI_SNV_RESEARCH: "SNV UMI variant formatted file",
+            self.VCF_UMI_SNV_RESEARCH_INDEX: "Following index",
         }
         return descriptions.get(self, "Description not available")
 
@@ -170,15 +170,16 @@ class FamilyTags(StrEnum):
 
 class ReportTags(StrEnum):
     AUDIT: str = "audit"
+    BCFTOOLS_STATS: str = "bcftools-stats"
     CNV_REPORT: str = "cnv-report"
     CSV: str = "csv"
     DELIVERABLE: str = "deliverable"
     DELIVERY_REPORT: str = "delivery-report"
     GENE_COUNTS: str = "gene-counts"
     GENERAL_STATS: str = "general-stats"
+    MULTIQC: str = "multiqc"
     MULTIQC_HTML: str = "multiqc-html"
     MULTIQC_JSON: str = "multiqc-json"
-    MULTIQC: str = "multiqc"
     PDF: str = "pdf"
     PICARD_ALIGNMENT: str = "picard-alignment"
     PICARD_DUPLICATES: str = "picard-duplicates"
@@ -199,15 +200,16 @@ class ReportTags(StrEnum):
     def description(self):
         descriptions: dict[ReportTags, str] = {
             self.AUDIT: "Audit file",
+            self.BCFTOOLS_STATS: "BCFtools variant calling metrics",
             self.CNV_REPORT: "CNV variant calling report",
             self.CSV: "Comma separated values",
             self.DELIVERABLE: "Deliverables file",
             self.DELIVERY_REPORT: "Delivery report with result for upload to Scout",
             self.GENE_COUNTS: "STAR read counts output per gene",
             self.GENERAL_STATS: "General statistics reported from MultiQC",
+            self.MULTIQC: "MultiQC related files",
             self.MULTIQC_HTML: "MultiQC analysis report in HTML format",
             self.MULTIQC_JSON: "MultiQC analysis report in JSON format",
-            self.MULTIQC: "MultiQC related files",
             self.PDF: "Portable document format",
             self.PICARD_ALIGNMENT: "High level metrics about the alignment of reads",
             self.PICARD_DUPLICATES: "Metrics calculated during marking duplicates",
@@ -246,8 +248,8 @@ class AnalysisTags(StrEnum):
     ASPCF_PLOT: str = "aspcf-plot"
     ASSEMBLY: str = "assembly"
     AUTOZYG: str = "autozyg"
-    BED_INDEX: str = "bed-index"
     BED: str = "bed"
+    BED_INDEX: str = "bed-index"
     BIGWIG: str = "bigwig"
     CIRCULAR_PLOT: str = "circular-plot"
     CLINICAL: str = "clinical"
@@ -262,8 +264,8 @@ class AnalysisTags(StrEnum):
     JUNCTION: str = "junction"
     METRICS: str = "metrics"
     PROFILE_PLOT: str = "profile-plot"
-    QC_CRAM_INDEX: str = "qc-cram-index"
     QC_CRAM: str = "qc-cram"
+    QC_CRAM_INDEX: str = "qc-cram-index"
     RAW_PROFILE_PLOT: str = "raw-profile-plot"
     REFERENCE_INFO: str = "reference-info"
     REGIONS: str = "regions"
@@ -276,9 +278,9 @@ class AnalysisTags(StrEnum):
     TCOV: str = "tcov"
     TIDDIT_COVERAGE: str = "tiddit-coverage"
     TUMOR_PLOT: str = "tumor-plot"
-    UMI_CRAM_INDEX: str = "umi-cram-index"
-    UMI_CRAM: str = "umi-cram"
     UMI: str = "umi"
+    UMI_CRAM: str = "umi-cram"
+    UMI_CRAM_INDEX: str = "umi-cram-index"
     VCF_FUSION: str = "vcf-fusion"
     VISUALIZATION: str = "visualization"
 
@@ -288,8 +290,8 @@ class AnalysisTags(StrEnum):
             self.ASPCF_PLOT: "Plot of LogR and BAF values",
             self.ASSEMBLY: "Assembly",
             self.AUTOZYG: "Autozygous region",
-            self.BED_INDEX: "Following index",
             self.BED: "Bed file",
+            self.BED_INDEX: "Following index",
             self.BIGWIG: "Bigwig formatted file",
             self.CIRCULAR_PLOT: "Circular plot",
             self.CLINICAL: "Clinical subset",
@@ -304,8 +306,8 @@ class AnalysisTags(StrEnum):
             self.JUNCTION: "Junction data",
             self.METRICS: "Data metrics",
             self.PROFILE_PLOT: "Copy number profile plot",
-            self.QC_CRAM_INDEX: "QC index file for alignment file in CRAM format",
             self.QC_CRAM: "QC alignment file in CRAM format",
+            self.QC_CRAM_INDEX: "QC index file for alignment file in CRAM format",
             self.RAW_PROFILE_PLOT: "Copy number profile without rounding to whole numbers",
             self.REFERENCE_INFO: "Information about references used in analysis",
             self.REGIONS: "Output for regions",
@@ -318,9 +320,9 @@ class AnalysisTags(StrEnum):
             self.TCOV: "Coverage output",
             self.TIDDIT_COVERAGE: "Coverage output from tiddit",
             self.TUMOR_PLOT: "Plot of LogR and BAF values for tumor sample",
-            self.UMI_CRAM_INDEX: "Index for the UMI consensus filtered cram file",
-            self.UMI_CRAM: "UMI consensus filtered cram file",
             self.UMI: "Files related to UMI workflow",
+            self.UMI_CRAM: "UMI consensus filtered cram file",
+            self.UMI_CRAM_INDEX: "Index for the UMI consensus filtered cram file",
             self.VCF_FUSION: "Converted RNA fusion file to SV VCF",
             self.VISUALIZATION: "Visualizes data",
         }
@@ -342,8 +344,9 @@ class BioinfoToolsTags(StrEnum):
     DNASCOP: str = "dnascope"
     EXPANSIONHUNTER: str = "expansionhunter"
     FASTP: str = "fastp"
-    FUSIONCATCHER_SUMMARY: str = "fusioncatcher-summary"
+    FASTQC: str = "fastqc"
     FUSIONCATCHER: str = "fusioncatcher"
+    FUSIONCATCHER_SUMMARY: str = "fusioncatcher-summary"
     FUSIONINSPECTOR: str = "fusioninspector"
     GENOTYPER: str = "genotyper"
     GENS: str = "gens"
@@ -364,8 +367,8 @@ class BioinfoToolsTags(StrEnum):
     STRINGTIE: str = "stringtie"
     SVDB: str = "svdb"
     TIDDIT: str = "tiddit"
-    TNSCOPE_UMI: str = "tnscope-umi"
     TNSCOPE: str = "tnscope"
+    TNSCOPE_UMI: str = "tnscope-umi"
     UPD: str = "upd"
     VARDICT: str = "vardict"
     WISECONDOR: str = "wisecondor"
@@ -387,8 +390,9 @@ class BioinfoToolsTags(StrEnum):
             self.DNASCOP: "Call snv indels",
             self.EXPANSIONHUNTER: "Call repeat expansions",
             self.FASTP: "Preprocessing tool for FastQ files",
-            self.FUSIONCATCHER_SUMMARY: "Fusion caller summary",
+            self.FASTQC: "Quality control tool for high throughput sequence data",
             self.FUSIONCATCHER: "Fusion caller",
+            self.FUSIONCATCHER_SUMMARY: "Fusion caller summary",
             self.FUSIONINSPECTOR: "Fusion inspection",
             self.GENOTYPER: "SNV indel caller from sention",
             self.GENS: "CNV visualization tool",
@@ -409,8 +413,8 @@ class BioinfoToolsTags(StrEnum):
             self.STRINGTIE: "Transcript assembler",
             self.SVDB: "Tool to merge SV vcf files from multiple variant callers",
             self.TIDDIT: "Tool to identify chromosomal rearrangements",
-            self.TNSCOPE_UMI: "Call snv indels for umi",
             self.TNSCOPE: "Call snv indels",
+            self.TNSCOPE_UMI: "Call snv indels for umi",
             self.UPD: "Uniparent disomy caller from bjhall",
             self.VARDICT: "Cancer variant caller",
             self.WISECONDOR: "NIPT caller",
@@ -477,8 +481,8 @@ class MutantTags(StrEnum):
     ARTIC_SUM: str = "artic-sum"
     ARTIC_TYPE: str = "artic-type"
     ARTIC_VAR: str = "artic-var"
-    CONSENSUS_SAMPLE: str = "consensus-sample"
     CONSENSUS: str = "consensus"
+    CONSENSUS_SAMPLE: str = "consensus-sample"
     FOHM_DELIVERY: str = "fohm-delivery"
     INSTRUMENT_PROPERTIES: str = "instrument-properties"
     KOMPLETTERING: str = "komplettering"
@@ -487,9 +491,9 @@ class MutantTags(StrEnum):
     KS_RESULTS: str = "ks-results"
     MUTANT_CONFIG: str = "mutant-config"
     MUTANT_LOG: str = "mutant-log"
-    PANGOLIN_TYPING_FOHM: str = "pangolin-typing-fohm"
-    PANGOLIN_TYPING: str = "pangolin-typing"
     PANGOLIN: str = "pangolin"
+    PANGOLIN_TYPING: str = "pangolin-typing"
+    PANGOLIN_TYPING_FOHM: str = "pangolin-typing-fohm"
     TYPING_REPORT: str = "typing-report"
     TYPING_SUMMARY: str = "typing-summary"
     VCF_COVID: str = "vcf-covid"
@@ -502,8 +506,8 @@ class MutantTags(StrEnum):
             self.ARTIC_SUM: "GMS-Artic summary file",
             self.ARTIC_TYPE: "GMS-Artic typing file",
             self.ARTIC_VAR: "GMS-Artic variant file",
-            self.CONSENSUS_SAMPLE: "Separate sample consensus fasta",
             self.CONSENSUS: "Consensus sequence",
+            self.CONSENSUS_SAMPLE: "Separate sample consensus fasta",
             self.FOHM_DELIVERY: "Relevant for FoHM",
             self.INSTRUMENT_PROPERTIES: "Sequencing metadata",
             self.KOMPLETTERING: "Filetype specific for national uploading of microbial data",
@@ -512,9 +516,9 @@ class MutantTags(StrEnum):
             self.KS_RESULTS: "KS modification of pangolin typing results",
             self.MUTANT_CONFIG: "Config settings for mutant analysis",
             self.MUTANT_LOG: "SLURM log for mutant analysis",
-            self.PANGOLIN_TYPING_FOHM: "Pangolin typing report with only qc_pass samples included",
-            self.PANGOLIN_TYPING: "Pangolin typing results",
             self.PANGOLIN: "Pangolin specific output",
+            self.PANGOLIN_TYPING: "Pangolin typing results",
+            self.PANGOLIN_TYPING_FOHM: "Pangolin typing report with only qc_pass samples included",
             self.TYPING_REPORT: "Results from typing",
             self.TYPING_SUMMARY: "Summary of results from typing",
             self.VCF_COVID: "VCF file containing covid data. Distinction req. by production",
@@ -561,13 +565,30 @@ class TaxprofilerTags(StrEnum):
         return descriptions.get(self, "Description not available")
 
 
+class TomteTags(StrEnum):
+    FRASER: str = "fraser"
+    OUTRIDER: str = "outrider"
+
+    @property
+    def description(self):
+        descriptions: dict[str, TomteTags] = {
+            self.FRASER: "Aberrant splicing calculated with DROP",
+            self.OUTRIDER: "Aberrant expression calculated with DROP",
+        }
+        return descriptions.get(self, "Description not available")
+
+
 class NextflowTags(StrEnum):
+    NEXTFLOW_CONFIG: str = "nextflow-config"
+    SAMPLESHEET: str = "samplesheet"
     SAMPLESHEET_VALID: str = "samplesheet-valid"
     SOFTWARE_VERSIONS: str = "software-versions"
 
     @property
     def description(self):
         descriptions: dict[str, NextflowTags] = {
+            self.NEXTFLOW_CONFIG: "Nextflow config for analysis",
+            self.SAMPLESHEET: "Samplesheet for analysis",
             self.SAMPLESHEET_VALID: "Validated samplesheet",
             self.SOFTWARE_VERSIONS: "List of all software used and their versions",
         }
@@ -610,6 +631,7 @@ TAG_CATEGORIES: list[Any] = COMMON_TAG_CATEGORIES + [
     NextflowTags,
     RnafusionTags,
     TaxprofilerTags,
+    TomteTags,
 ]
 
 ALL_TAGS: set[str] = {tag.value for category in TAG_CATEGORIES for tag in category}

@@ -37,8 +37,8 @@ class MutantFile(FileBase):
     step: str
 
 
-class RnafusionFile(FileBase):
-    """Definition for elements in Rnafusion deliverables"""
+class NfAnalysisFile(FileBase):
+    """Definition for elements in deliverables for nextflow workflows."""
 
     format: str
     path_index: str | None
@@ -56,14 +56,6 @@ class BalsamicFile(FileBase):
         if isinstance(v, str):
             return v.split(",")
         return v
-
-
-class TaxprofilerFile(FileBase):
-    """Definition for elements in Taxprofiler deliverables."""
-
-    format: str
-    path_index: str | None
-    step: str
 
 
 # Classes to represent deliverable files
@@ -105,16 +97,10 @@ class MutantDeliverables(WorkflowDeliverables):
     files: list[MutantFile]
 
 
-class RnafusionDeliverables(WorkflowDeliverables):
-    """Specification for a RNAFUSION specific deliverables file"""
+class NfAnalysisDeliverables(WorkflowDeliverables):
+    """Specification for a deliverables file for a nextflow workflow."""
 
-    files: list[RnafusionFile]
-
-
-class TaxprofilerDeliverables(WorkflowDeliverables):
-    """Specification for a Taxprofiler specific deliverables file."""
-
-    files: list[TaxprofilerFile]
+    files: list[NfAnalysisFile]
 
 
 class CGDeliverables(WorkflowDeliverables):

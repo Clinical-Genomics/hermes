@@ -2,10 +2,10 @@ from enum import StrEnum
 
 
 class Workflow(StrEnum):
+    BALSAMIC: str = "balsamic"
     BALSAMIC_PON: str = "balsamic-pon"
     BALSAMIC_QC: str = "balsamic-qc"
     BALSAMIC_UMI: str = "balsamic-umi"
-    BALSAMIC: str = "balsamic"
     DEMULTIPLEX: str = "demultiplex"
     FASTQ: str = "fastq"
     FLUFFY: str = "fluffy"
@@ -17,6 +17,11 @@ class Workflow(StrEnum):
     RSYNC: str = "rsync"
     SPRING: str = "spring"
     TAXPROFILER: str = "taxprofiler"
+    TOMTE: str = "tomte"
+
+    @classmethod
+    def get_nf_workflows(cls) -> set:
+        return {cls.RNAFUSION, cls.TAXPROFILER, cls.TOMTE}
 
 
 class CancerAnalysisType(StrEnum):
