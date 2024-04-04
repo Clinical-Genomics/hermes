@@ -77,6 +77,7 @@ FAMILY_COMMON = {
 
 REPORTING_COMMON = {
     "audit": {"description": "Audit file"},
+    "bcftools-stats": {"description": "Variant calling metrics"},
     "cnv-report": {"description": "CNV variant calling report"},
     "csv": {"description": "Comma separated values"},
     "deliverable": {"description": "Deliverables file"},
@@ -165,6 +166,7 @@ TOOLS = {
     "dnascope": {"description": "Call snv indels"},
     "expansionhunter": {"description": "Call repeat expansions"},
     "fastp": {"description": "Preprocessing tool for FastQ files"},
+    "fastqc": {"description": "Quality control tool for high throughput sequence data"},
     "fusioncatcher": {"description": "Fusion caller"},
     "fusioncatcher-summary": {"description": "Fusion caller summary"},
     "fusioninspector": {"description": "Fusion inspection"},
@@ -271,6 +273,14 @@ NEXTFLOW_SPECIFIC = {
     "software-versions": {"description": "List of all software used and their versions"},
 }
 
+TOMTE_SPECIFIC = {
+    "fraser": {"description": "Aberrant splicing calculated with DROP"},
+    "nextflow-config": {"description": "Nextflow config for analysis"},
+    "outrider": {"description": "Aberrant expression calculated with DROP"},
+    "samplesheet": {"description": "Samplesheet for analysis"},
+}
+
+
 AVAILABLE_USAGES = {
     "audit",
     "cg",
@@ -306,9 +316,10 @@ ALL_TAG_CATEGORIES = [
     MUTANT_SPECIFIC,
     NEXTFLOW_SPECIFIC,
     RNAFUSION_SPECIFIC,
-    TAXPROFILER_SPECIFIC,
     RAW_DATA,
     REPORTING_COMMON,
+    TAXPROFILER_SPECIFIC,
+    TOMTE_SPECIFIC,
     TOOLS,
     VALIDATIONS_COMMON,
     VARIANT_COMMON,

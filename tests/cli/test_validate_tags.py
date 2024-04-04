@@ -1,5 +1,6 @@
 """Tests for the validate tags cli"""
 
+import pytest
 from typer.testing import CliRunner
 
 from cg_hermes.cli.validate import app
@@ -66,21 +67,17 @@ def test_cli_validate_mutant_tags(cli_runner: CliRunner):
     assert result.exit_code == 0
 
 
-def test_cli_validate_rnafusion_tags(cli_runner: CliRunner):
-    # GIVEN a CLI runner
-
-    # WHEN testing to validate the common tags from the CLI
-    result = cli_runner.invoke(app, ["tags", "rnafusion"])
-
-    # THEN assert that the validation was successful
-    assert result.exit_code == 0
-
-
-def test_cli_validate_taxprofiler_tags(cli_runner: CliRunner):
-    # GIVEN a CLI runner
-
-    # WHEN testing to validate the common tags from the CLI
-    result = cli_runner.invoke(app, ["tags", "taxprofiler"])
+@pytest.mark.parametrize(
+    "workflow",
+    Workflow.get_nf_workflows(),
+)
+def test_cli_validate_nf_workflow_tags(
+    cli_runner: CliRunner,
+    workflow: Workflow,
+):
+    """Test validate tags command for workflow."""
+    # WHEN invoking validate tags command
+    result = cli_runner.invoke(app, ["tags", workflow])
 
     # THEN assert that the validation was successful
     assert result.exit_code == 0

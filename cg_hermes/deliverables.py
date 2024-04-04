@@ -1,4 +1,5 @@
 """Class to represent deliverables file."""
+
 import copy
 import logging
 from typing import FrozenSet
@@ -27,6 +28,7 @@ from cg_hermes.config.mip_rna import MIP_RNA_TAGS
 from cg_hermes.config.mutant import MUTANT_COMMON_TAGS
 from cg_hermes.config.rnafusion import RNAFUSION_TAGS
 from cg_hermes.config.taxprofiler import TAXPROFILER_TAGS
+from cg_hermes.config.tomte import TOMTE_TAGS
 from cg_hermes.config.workflows import AnalysisType
 from cg_hermes.constants.workflow import Workflow
 from cg_hermes.exceptions import MissingFileError
@@ -43,12 +45,10 @@ from cg_hermes.models.workflow_deliverables import (
     MipFile,
     MutantDeliverables,
     MutantFile,
-    RnafusionDeliverables,
-    RnafusionFile,
     TagBase,
-    TaxprofilerDeliverables,
-    TaxprofilerFile,
     WorkflowDeliverables,
+    NfAnalysisFile,
+    NfAnalysisDeliverables,
 )
 
 LOG = logging.getLogger(__name__)
@@ -102,18 +102,17 @@ class Deliverables:
             self.model: MipDeliverables = MipDeliverables.parse_obj(self.raw_deliverables)
             self.files = self.get_mip_files()
             self.configs = Deliverables.build_internal_tag_map(MIP_RNA_TAGS)
-        elif self.workflow == Workflow.RNAFUSION:
-            self.model: RnafusionDeliverables = RnafusionDeliverables.parse_obj(
+        elif self.workflow in Workflow.get_nf_workflows():
+            self.model: NfAnalysisDeliverables = NfAnalysisDeliverables.parse_obj(
                 self.raw_deliverables
             )
-            self.files = self.get_rnafusion_files()
-            self.configs = Deliverables.build_internal_tag_map(RNAFUSION_TAGS)
-        elif self.workflow == Workflow.TAXPROFILER:
-            self.model: TaxprofilerDeliverables = TaxprofilerDeliverables.parse_obj(
-                self.raw_deliverables
-            )
-            self.files = self.get_taxprofiler_files()
-            self.configs = Deliverables.build_internal_tag_map(TAXPROFILER_TAGS)
+            self.files = self.get_nf_analysis_files()
+            if self.workflow == Workflow.RNAFUSION:
+                self.configs = Deliverables.build_internal_tag_map(RNAFUSION_TAGS)
+            elif self.workflow == Workflow.TAXPROFILER:
+                self.configs = Deliverables.build_internal_tag_map(TAXPROFILER_TAGS)
+            elif self.workflow == Workflow.TOMTE:
+                self.configs = Deliverables.build_internal_tag_map(TOMTE_TAGS)
         else:
             raise Exception(
                 "Invalid workflow ({}) set for Deliverables object".format(self.workflow)
@@ -290,24 +289,8 @@ class Deliverables:
             files.append(TagBase(tags=identifier, subject_id=sample_id, path=file_obj.path))
         return files
 
-    def get_rnafusion_files(self) -> list[TagBase]:
-        file_obj: RnafusionFile
-        files: list[TagBase] = []
-        for file_obj in self.model.files:
-            identifier = [file_obj.step]
-            if file_obj.tag:
-                identifier.append(file_obj.tag)
-            files.append(
-                TagBase(
-                    tags=frozenset(identifier),
-                    subject_id=file_obj.id,
-                    path=file_obj.path,
-                )
-            )
-        return files
-
-    def get_taxprofiler_files(self) -> list[TagBase]:
-        file_obj: TaxprofilerFile
+    def get_nf_analysis_files(self) -> list[TagBase]:
+        file_obj: NfAnalysisFile
         files: list[TagBase] = []
         for file_obj in self.model.files:
             identifier = [file_obj.step]

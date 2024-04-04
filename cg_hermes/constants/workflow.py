@@ -17,3 +17,8 @@ class Workflow(StrEnum):
     MUTANT: str = "mutant"
     SPRING: str = "spring"
     TAXPROFILER: str = "taxprofiler"
+    TOMTE: str = "tomte"
+
+    @classmethod
+    def get_nf_workflows(cls) -> set:
+        return {cls.RNAFUSION, cls.TAXPROFILER, cls.TOMTE}
