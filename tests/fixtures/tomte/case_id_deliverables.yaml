@@ -1,3 +1,5 @@
+---
+files:
 - format: tsv
   id: CASE_ID
   path: /CASE_ID/analyse_transcripts/drop/CASE_ID_fraser_top_hits_clinical.tsv
@@ -92,13 +94,13 @@
   id: CASE_ID
   path: /CASE_ID/multiqc/multiqc_report.html
   path_index: null
-  step: report
+  step: multiqc
   tag: multiqc-html
 - format: json
   id: CASE_ID
   path: /CASE_ID/multiqc/multiqc_data/multiqc_data.json
   path_index: null
-  step: multiqc-json
+  step: multiqc
   tag: multiqc-json
 - format: json
   id: CASE_ID
@@ -148,3 +150,9 @@
   path_index: null
   step: multiqc
   tag: multiqc-picard-insert-size
+- format: tab
+  id: SAMPLE_ID
+  path: /CASE_ID/alignment/SAMPLE_ID.ReadsPerGene.out.tab
+  path_index: null
+  step: star
+  tag: raw-gene-counts
