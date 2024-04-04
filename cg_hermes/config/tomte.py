@@ -10,22 +10,22 @@ TOMTE_COMMON_TAGS = {
     frozenset({"fraser", "fraser-clinical"}): {
         "is_mandatory": False,
         "tags": ["fraser", "clinical"],
-        "used_by": ["clinical-delivery"],
+        "used_by": ["clinical-delivery", "long-term-storage"],
     },
     frozenset({"fraser", "fraser-research"}): {
         "is_mandatory": False,
         "tags": ["fraser", "research"],
-        "used_by": ["clinical-delivery"],
+        "used_by": ["clinical-delivery", "long-term-storage"],
     },
     frozenset({"outrider", "outrider-clinical"}): {
         "is_mandatory": False,
         "tags": ["outrider", "clinical"],
-        "used_by": ["clinical-delivery"],
+        "used_by": ["clinical-delivery", "long-term-storage"],
     },
     frozenset({"outrider", "outrider-research"}): {
         "is_mandatory": False,
         "tags": ["outrider", "research"],
-        "used_by": ["clinical-delivery"],
+        "used_by": ["clinical-delivery", "long-term-storage"],
     },
     frozenset({"star", "star-cram"}): {
         "is_mandatory": True,
@@ -40,12 +40,12 @@ TOMTE_COMMON_TAGS = {
     frozenset({"coverage", "bigwig"}): {
         "is_mandatory": True,
         "tags": ["coverage", "bigwig"],
-        "used_by": ["clinical-delivery", "scout"],
+        "used_by": ["clinical-delivery", "scout", "long-term-storage"],
     },
     frozenset({"junction", "bed"}): {
         "is_mandatory": True,
         "tags": ["junction", "bed"],
-        "used_by": ["clinical-delivery", "scout"],
+        "used_by": ["clinical-delivery", "scout", "long-term-storage"],
     },
     frozenset({"junction", "bed-index"}): {
         "is_mandatory": True,
@@ -55,42 +55,42 @@ TOMTE_COMMON_TAGS = {
     frozenset({"stringtie", "assembly"}): {
         "is_mandatory": True,
         "tags": ["stringtie", "assembly"],
-        "used_by": ["clinical-delivery"],
+        "used_by": ["clinical-delivery", "long-term-storage"],
     },
     frozenset({"gffcompare"}): {
         "is_mandatory": True,
         "tags": ["gffcompare"],
-        "used_by": ["clinical-delivery"],
+        "used_by": ["clinical-delivery", "long-term-storage"],
     },
     frozenset({"star", "raw-gene-counts"}): {
         "is_mandatory": True,
         "tags": ["gene-counts"],
-        "used_by": ["clinical-delivery"],
+        "used_by": ["clinical-delivery", "long-term-storage"],
     },
     frozenset({"samplesheet"}): {
         "is_mandatory": True,
         "tags": ["samplesheet"],
-        "used_by": ["cg"],
+        "used_by": ["cg", "long-term-storage"],
     },
     frozenset({"nextflow-config"}): {
         "is_mandatory": True,
         "tags": ["nextflow-config"],
-        "used_by": ["cg"],
+        "used_by": ["cg", "long-term-storage"],
     },
     frozenset({"qc-metrics"}): {
         "is_mandatory": True,
         "tags": ["qc-metrics"],
-        "used_by": ["cg"],
+        "used_by": ["cg", "long-term-storage"],
     },
     frozenset({"multiqc", "multiqc-html"}): {
         "is_mandatory": True,
         "tags": ["multiqc-html", "rna"],
-        "used_by": ["clinical-delivery", "scout"],
+        "used_by": ["clinical-delivery", "scout", "long-term-storage"],
     },
     frozenset({"multiqc", "multiqc-json"}): {
         "is_mandatory": True,
         "tags": ["multiqc-json"],
-        "used_by": ["clinical-delivery"],
+        "used_by": ["clinical-delivery", "long-term-storage"],
     },
     frozenset({"multiqc", "multiqc-fastp"}): {
         "is_mandatory": True,

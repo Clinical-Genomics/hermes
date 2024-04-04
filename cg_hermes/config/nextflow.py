@@ -9,7 +9,7 @@ NEXTFLOW_TAGS = {
         "is_mandatory": True,
         "bundle_id": True,
         "tags": ["software-versions"],
-        "used_by": ["cg"],
+        "used_by": ["cg", "long-term-storage"],
     },
 }
 #
