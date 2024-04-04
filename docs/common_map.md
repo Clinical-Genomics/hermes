@@ -1,14 +1,14 @@
-## ALIGNMENT TAGS
+## Alignment Tags
 
-| Tag name   | Description                                                |
-|------------|------------------------------------------------------------|
-| bam        | Alignment file in BAM format                               |
-| bam-index  | Index file for alignment file in BAM format                |
-| bam-mt     | Alignment file in BAM format holding the reaads from chrMT |
-| cram       | Alignment file in CRAM format                              |
-| cram-index | Index file for alignment file in CRAM format               |
+| Tag name   | Description                                               |
+|------------|-----------------------------------------------------------|
+| bam        | Alignment file in BAM format                              |
+| bam-index  | Index file for alignment file in BAM format               |
+| bam-mt     | Alignment file in BAM format holding the reads from chrMT |
+| cram       | Alignment file in CRAM format                             |
+| cram-index | Index file for alignment file in CRAM format              |
 
-## ANALYSIS TAGS
+## Analysis Tags
 
 | Tag name         | Description                                           |
 |------------------|-------------------------------------------------------|
@@ -17,14 +17,14 @@
 | autozyg          | Autozygous region                                     |
 | bed              | Bed file                                              |
 | bed-index        | Following index                                       |
-| bigwig           | Bigwig formated file                                  |
+| bigwig           | Bigwig formatted file                                 |
 | circular-plot    | Circular plot                                         |
 | clinical         | Clinical subset                                       |
 | config           | Config file                                           |
 | coverage         | Output with coverage information                      |
 | filtered         | Filtered data                                         |
 | first-pass       | Data metrics first pass                               |
-| fracsnp          | Fraction of reads with snp                            |
+| fracsnp          | Fraction of reads with SNP                            |
 | fusion           | Fusion transcripts                                    |
 | genes            | Related to genes                                      |
 | germline-plot    | Plot of LogR and BAF values for normal sample         |
@@ -51,55 +51,7 @@
 | vcf-fusion       | Converted RNA fusion file to SV VCF                   |
 | visualization    | Visualizes data                                       |
 
-## FAMILY TAGS
-
-| Tag name   | Description          |
-|------------|----------------------|
-| ped        | Pedigree information |
-| pedigree   | Pedigree information |
-
-## RAW DATA
-
-| Tag name       | Description                         |
-|----------------|-------------------------------------|
-| fasta          | Files with raw data in fasta format |
-| fastq          | Files with raw data in fastq format |
-| forward-strand | Reads from forward strand           |
-| reverse-strand | Reads from reverse strand           |
-| rna            | Data generated from RNA samples     |
-| unpaired-reads | Reads that could not be paired      |
-
-## REPORTING TAGS
-
-| Tag name           | Description                                            |
-|--------------------|--------------------------------------------------------|
-| audit              | Audit file                                             |
-| cnv-report         | CNV variant calling report                             |
-| csv                | Comma separated values                                 |
-| deliverable        | Deliverables file                                      |
-| delivery-report    | Delivery report with result for upload to Scout        |
-| gene-counts        | STAR read counts output per gene                       |
-| general-stats      | General statistics reported from MultiQC               |
-| multiqc            | MultiQC related files                                  |
-| multiqc-html       | MultiQC analysis report in HTML format                 |
-| multiqc-json       | MultiQC analysis report in JSON format                 |
-| pdf                | Portable document format                               |
-| picard-alignment   | High level metrics about the alignment of reads        |
-| picard-duplicates  | Metrics calculated during marking duplicates           |
-| picard-hs          | Metrics for the analysis of target-capture sequencing  |
-| picard-insert-size | Metrics about the insert size distribution             |
-| picard-rnaseq      | Metrics about the alignment of RNA-seq reads           |
-| picard-wgs         | Metrics for evaluating the performance of WGS analysis |
-| qc-report          | Results and QC                                         |
-| sambamba-depth     | Coverage information from sambamba                     |
-| samtools-stats     | Comprehensive statistics from alignment file           |
-| software-versions  | Versions of software used in analysis                  |
-| star               | Files related to Star aligner                          |
-| summary            | Overview file without detailed information             |
-| tsv                | Tab separated values                                   |
-| vcf-report         | Results and QC from variant calling                    |
-
-## TOOL TAGS
+## Bioinfo Tools Tags
 
 | Tag name              | Description                                                      |
 |-----------------------|------------------------------------------------------------------|
@@ -117,6 +69,7 @@
 | dnascope              | Call snv indels                                                  |
 | expansionhunter       | Call repeat expansions                                           |
 | fastp                 | Preprocessing tool for FastQ files                               |
+| fastqc                | Quality control tool for high throughput sequence data           |
 | fusioncatcher         | Fusion caller                                                    |
 | fusioncatcher-summary | Fusion caller summary                                            |
 | fusioninspector       | Fusion inspection                                                |
@@ -145,7 +98,14 @@
 | vardict               | Cancer variant caller                                            |
 | wisecondor            | NIPT caller                                                      |
 
-## VALIDATION TAGS
+## Family Tags
+
+| Tag name   | Description          |
+|------------|----------------------|
+| ped        | Pedigree information |
+| pedigree   | Pedigree information |
+
+## QC Tags
 
 | Tag name   | Description                      |
 |------------|----------------------------------|
@@ -153,59 +113,101 @@
 | qc-metrics | QC metrics from analysis         |
 | sex-check  | Results from sex validation      |
 
-## VARIANT TAGS
+## Raw Data Tags
 
-| Tag name                      | Description                                         |
-|-------------------------------|-----------------------------------------------------|
-| cnv                           | Copy number variants                                |
-| germline                      | Associated with germline variants                   |
-| mobile-elements               | Mobile elements                                     |
-| normal                        | Associated with normal sample                       |
-| rhocall-viz                   | Runs of homozygosity index                          |
-| smn-calling                   | Copy number calls for the SMN gene                  |
-| snv                           | Single nucleotide variants and short indels         |
-| snv-bcf                       | Gvcf including all SNV variants                     |
-| snv-gbcf                      | Gvcf including all SNV variants                     |
-| somatic                       | Associated with somatic variants                    |
-| sv                            | Structural variants                                 |
-| sv-bcf                        | Gvcf including all SV variants                      |
-| sv-vcf                        | Variant call formated file with structural variants |
-| sv-vcf-index                  | Following index                                     |
-| telomere-calling              | Variants from telomere calling                      |
-| tmb                           | Tumor mutational burden information                 |
-| tumor                         | Associated with tumor sample                        |
-| upd                           | Uniparental disomy variants                         |
-| variants                      | File pertaining variant information in some way     |
-| vcf                           | Variant call formated file                          |
-| vcf-index                     | Following index                                     |
-| vcf-snv                       | SNV variant call formated file                      |
-| vcf-snv-clinical              | SNV variants from clinical panels                   |
-| vcf-snv-clinical-index        | Following index                                     |
-| vcf-snv-filtered              | SNV variants filtered by BALSAMIC                   |
-| vcf-snv-filtered-index        | Following index                                     |
-| vcf-snv-germline-normal       | SNV germline normal variants                        |
-| vcf-snv-germline-normal-index | Following index                                     |
-| vcf-snv-germline-tumor        | SNV germline tumor variants                         |
-| vcf-snv-germline-tumor-index  | Following index                                     |
-| vcf-snv-index                 | Following index                                     |
-| vcf-snv-research              | SNV variants from whole genome                      |
-| vcf-snv-research-index        | Following index                                     |
-| vcf-str                       | Short tandem repeat variants                        |
-| vcf-str-index                 | Following index                                     |
-| vcf-sv                        | SV variant call formated file                       |
-| vcf-sv-clinical               | SV variants from clinical panels                    |
-| vcf-sv-clinical-index         | Following index                                     |
-| vcf-sv-germline-normal        | SV germline normal variants                         |
-| vcf-sv-germline-normal-index  | Following index                                     |
-| vcf-sv-germline-tumor         | SV germline tumor variants                          |
-| vcf-sv-germline-tumor-index   | Following index                                     |
-| vcf-sv-index                  | Following index                                     |
-| vcf-sv-research               | SV variants from whole genome                       |
-| vcf-sv-research-index         | Following index                                     |
-| vcf-umi-snv                   | Raw SNV UMI variant formatted file                  |
-| vcf-umi-snv-clinical          | SNV UMI variants from clinical panels               |
-| vcf-umi-snv-clinical-index    | Following index                                     |
-| vcf-umi-snv-index             | Following index                                     |
-| vcf-umi-snv-research          | SNV UMI variant formatted file                      |
-| vcf-umi-snv-research-index    | Following index                                     |
-| vcf2cytosure                  | Conversion from vcf format to cytosure format       |
+| Tag name       | Description                         |
+|----------------|-------------------------------------|
+| fasta          | Files with raw data in fasta format |
+| fastq          | Files with raw data in fastq format |
+| forward-strand | Reads from forward strand           |
+| reverse-strand | Reads from reverse strand           |
+| rna            | Data generated from RNA samples     |
+| unpaired-reads | Reads that could not be paired      |
+
+## Report Tags
+
+| Tag name           | Description                                            |
+|--------------------|--------------------------------------------------------|
+| audit              | Audit file                                             |
+| bcftools-stats     | BCFtools variant calling metrics                       |
+| cnv-report         | CNV variant calling report                             |
+| csv                | Comma separated values                                 |
+| deliverable        | Deliverables file                                      |
+| delivery-report    | Delivery report with result for upload to Scout        |
+| gene-counts        | STAR read counts output per gene                       |
+| general-stats      | General statistics reported from MultiQC               |
+| multiqc            | MultiQC related files                                  |
+| multiqc-html       | MultiQC analysis report in HTML format                 |
+| multiqc-json       | MultiQC analysis report in JSON format                 |
+| pdf                | Portable document format                               |
+| picard-alignment   | High level metrics about the alignment of reads        |
+| picard-duplicates  | Metrics calculated during marking duplicates           |
+| picard-hs          | Metrics for the analysis of target-capture sequencing  |
+| picard-insert-size | Metrics about the insert size distribution             |
+| picard-rnaseq      | Metrics about the alignment of RNA-seq reads           |
+| picard-wgs         | Metrics for evaluating the performance of WGS analysis |
+| qc-report          | Results and QC                                         |
+| sambamba-depth     | Coverage information from sambamba                     |
+| samtools-stats     | Comprehensive statistics from alignment file           |
+| software-versions  | Versions of software used in analysis                  |
+| star               | Files related to Star aligner                          |
+| summary            | Overview file without detailed information             |
+| tsv                | Tab separated values                                   |
+| vcf-report         | Results and QC from variant calling                    |
+
+## Variant Tags
+
+| Tag name                      | Description                                          |
+|-------------------------------|------------------------------------------------------|
+| cnv                           | Copy number variants                                 |
+| germline                      | Associated with germline variants                    |
+| mobile-elements               | Mobile elements                                      |
+| normal                        | Associated with normal sample                        |
+| rhocall-viz                   | Runs of homozygosity index                           |
+| smn-calling                   | Copy number calls for the SMN gene                   |
+| snv                           | Single nucleotide variants and short indels          |
+| snv-bcf                       | Gvcf including all SNV variants                      |
+| snv-gbcf                      | Gvcf including all SNV variants                      |
+| somatic                       | Associated with somatic variants                     |
+| sv                            | Structural variants                                  |
+| sv-bcf                        | Gvcf including all SV variants                       |
+| sv-vcf                        | Variant call formatted file with structural variants |
+| sv-vcf-index                  | Following index                                      |
+| telomere-calling              | Variants from telomere calling                       |
+| tmb                           | Tumor mutational burden information                  |
+| tumor                         | Associated with tumor sample                         |
+| upd                           | Uniparental disomy variants                          |
+| variants                      | File pertaining variant information in some way      |
+| vcf2cytosure                  | Conversion from VCF format to cytosure format        |
+| vcf                           | Variant call formatted file                          |
+| vcf-index                     | Following index                                      |
+| vcf-snv                       | SNV variant call formatted file                      |
+| vcf-snv-clinical              | SNV variants from clinical panels                    |
+| vcf-snv-clinical-index        | Following index                                      |
+| vcf-snv-filtered              | SNV variants filtered by BALSAMIC                    |
+| vcf-snv-filtered-index        | Following index                                      |
+| vcf-snv-germline-normal       | SNV germline normal variants                         |
+| vcf-snv-germline-normal-index | Following index                                      |
+| vcf-snv-germline-tumor        | SNV germline tumor variants                          |
+| vcf-snv-germline-tumor-index  | Following index                                      |
+| vcf-snv-index                 | Following index                                      |
+| vcf-snv-research              | SNV variants from whole genome                       |
+| vcf-snv-research-index        | Following index                                      |
+| vcf-str                       | Short tandem repeat variants                         |
+| vcf-str-index                 | Following index                                      |
+| vcf-sv                        | SV variant call formatted file                       |
+| vcf-sv-clinical               | SV variants from clinical panels                     |
+| vcf-sv-clinical-index         | Following index                                      |
+| vcf-sv-germline-normal        | SV germline normal variants                          |
+| vcf-sv-germline-normal-index  | Following index                                      |
+| vcf-sv-germline-tumor         | SV germline tumor variants                           |
+| vcf-sv-germline-tumor-index   | Following index                                      |
+| vcf-sv-index                  | Following index                                      |
+| vcf-sv-research               | SV variants from whole genome                        |
+| vcf-sv-research-index         | Following index                                      |
+| vcf-umi-snv                   | Raw SNV UMI variant formatted file                   |
+| vcf-umi-snv-clinical          | SNV UMI variants from clinical panels                |
+| vcf-umi-snv-clinical-index    | Following index                                      |
+| vcf-umi-snv-index             | Following index                                      |
+| vcf-umi-snv-research          | SNV UMI variant formatted file                       |
+| vcf-umi-snv-research-index    | Following index                                      |
