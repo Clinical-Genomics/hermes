@@ -52,6 +52,11 @@ def fixture_taxprofiler_files(fixtures_dir: Path) -> Path:
     return fixtures_dir / "taxprofiler"
 
 
+@pytest.fixture(name="tomte_files")
+def fixture_tomte_files(fixtures_dir: Path) -> Path:
+    return fixtures_dir / "tomte"
+
+
 # File fixtures
 
 
@@ -108,3 +113,8 @@ def fixture_rnafusion_deliverables(rnafusion_files: Path) -> Path:
 @pytest.fixture(name="taxprofiler_deliverables")
 def fixture_taxprofiler_deliverables(taxprofiler_files: Path) -> Path:
     return taxprofiler_files / "case_id_deliverables.yaml"
+
+
+@pytest.fixture(name="tomte_deliverables")
+def fixture_tomte_deliverables(tomte_files: Path) -> Path:
+    return tomte_files / "case_id_deliverables.yaml"
