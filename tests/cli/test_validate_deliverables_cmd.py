@@ -1,4 +1,4 @@
-"""Tests for the validate deliverables cli command"""
+"""Tests for the validate deliverables command."""
 
 from pathlib import Path
 

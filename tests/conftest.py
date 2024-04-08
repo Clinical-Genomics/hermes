@@ -1,4 +1,4 @@
-"""Common fixtures for hermes"""
+"""Common fixtures for Hermes."""
 
 from pathlib import Path
 

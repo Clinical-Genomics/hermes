@@ -1,4 +1,4 @@
-"""Fixtures for cli tests"""
+"""Fixtures for CLI tests."""
 
 import pytest
 from typer.testing import CliRunner

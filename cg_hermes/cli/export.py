@@ -13,8 +13,8 @@ from cg_hermes.config.mip_rna import MIP_RNA_TAGS
 from cg_hermes.config.mutant import MUTANT_COMMON_TAGS
 from cg_hermes.config.rnafusion import RNAFUSION_TAGS
 from cg_hermes.config.taxprofiler import TAXPROFILER_TAGS
-from cg_hermes.config.tags import COMMON_TAG_CATEGORIES
 from cg_hermes.config.tomte import TOMTE_TAGS
+from cg_hermes.constants.tags import COMMON_TAG_CATEGORIES
 from cg_hermes.constants.workflow import Workflow
 
 app = typer.Typer()
@@ -93,20 +93,13 @@ def export_tags_cmd(
     if not workflow:
         header = ["Tag name", "Description"]
         for category in COMMON_TAG_CATEGORIES:
-            table_name = category.upper().replace("_", " ")
+            table_name: str = category.name()
             if output == "github":
                 typer.echo(f"## {table_name}")
             else:
                 typer.echo(table_name)
             typer.echo()
-            table = [
-                [
-                    tag_name,
-                    COMMON_TAG_CATEGORIES[category][tag_name]["description"],
-                ]
-                for tag_name in COMMON_TAG_CATEGORIES[category]
-            ]
-
+            table = [[tag.value, tag.description] for tag in category]
             typer.echo(tabulate(table, headers=header, tablefmt=output))
             typer.echo()
         raise typer.Exit()

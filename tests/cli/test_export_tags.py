@@ -1,7 +1,6 @@
-"""Tests for the export cli command"""
+"""Tests for the export command."""
 
 import pytest
-from _pytest.fixtures import FixtureRequest
 from typer.testing import CliRunner
 
 from cg_hermes.cli.export import app
@@ -16,8 +15,19 @@ def test_export_common_tags(cli_runner: CliRunner):
 
     # THEN assert that the command exits without problems
     assert result.exit_code == 0
-    # THEN assert that the common cg tags was exported
-    assert "VARIANT TAGS" in result.output
+
+    # THEN assert that the common tags were exported
+    for table_name in [
+        "Alignment Tags",
+        "Analysis Tags",
+        "Bioinfo Tools Tags",
+        "Family Tags",
+        "QC Tags",
+        "Raw Data Tags",
+        "Report Tags",
+        "Variant Tags",
+    ]:
+        assert table_name in result.output
 
 
 def test_export_mip_dna_tags(cli_runner: CliRunner):
@@ -95,15 +105,8 @@ def test_export_mutant_tags(cli_runner: CliRunner):
     assert "Mutant tags" in result.output
 
 
-@pytest.mark.parametrize(
-    "workflow",
-    Workflow.get_nf_workflows(),
-)
-def test_export_nf_workflow_tags(
-    cli_runner: CliRunner,
-    workflow: Workflow,
-    request: FixtureRequest,
-):
+@pytest.mark.parametrize("workflow", Workflow.get_nf_workflows())
+def test_export_nf_workflow_tags(cli_runner: CliRunner, workflow: Workflow):
     """Test that tags are exported for nextflow workflows."""
     # WHEN invoking the export tags command
     result = cli_runner.invoke(app, ["--workflow", workflow])

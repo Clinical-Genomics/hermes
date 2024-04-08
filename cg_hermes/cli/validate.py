@@ -15,8 +15,7 @@ from cg_hermes.config.mutant import MUTANT_COMMON_TAGS
 from cg_hermes.config.rnafusion import RNAFUSION_TAGS
 from cg_hermes.config.taxprofiler import TAXPROFILER_TAGS
 from cg_hermes.config.tomte import TOMTE_TAGS
-from cg_hermes.config.workflows import AnalysisType
-from cg_hermes.constants.workflow import Workflow
+from cg_hermes.constants.workflow import CancerAnalysisType, Workflow
 from cg_hermes.deliverables import Deliverables
 from cg_hermes.exceptions import MissingFileError
 from cg_hermes.validate import get_deliverables_obj, validate_tag_map
@@ -30,7 +29,7 @@ app = typer.Typer()
 def validate_deliverables(
     infile: Path,
     workflow: Workflow = typer.Option(Workflow.FLUFFY, help="Specify workflow"),
-    analysis_type: AnalysisType = typer.Option(None, help="Specify the analysis type"),
+    analysis_type: CancerAnalysisType = typer.Option(None, help="Specify the analysis type"),
 ):
     """Validate a deliverables file."""
     LOG.info(f"Validating file: {infile} from workflow: {workflow}")
