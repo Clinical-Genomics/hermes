@@ -67,6 +67,26 @@ TAXPROFILER_COMMON_TAGS = {
         "tags": ["qc-metrics"],
         "used_by": ["cg", "long-term-storage"],
     },
+    frozenset({"multiqc-general-stats", "multiqc"}): {
+        "is_mandatory": True,
+        "tags": ["qc-metrics", "multiqc", "general-stats"],
+        "used_by": ["janus"],
+    },
+    frozenset({"multiqc-fastp", "multiqc"}): {
+        "is_mandatory": True,
+        "tags": ["qc-metrics", "multiqc", "fastp"],
+        "used_by": ["janus"],
+    },
+    frozenset({"multiqc-samtools-stats", "multiqc"}): {
+        "is_mandatory": True,
+        "tags": ["qc-metrics", "multiqc", "samtools-stats"],
+        "used_by": ["janus"],
+    },
+    frozenset({"multiqc-kraken", "multiqc"}): {
+        "is_mandatory": True,
+        "tags": ["qc-metrics", "multiqc", "kraken2"],
+        "used_by": ["janus"],
+    },
 }
 
 TAXPROFILER_TAGS = {**TAXPROFILER_COMMON_TAGS, **NEXTFLOW_TAGS}
