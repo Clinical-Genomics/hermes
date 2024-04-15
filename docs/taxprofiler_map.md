@@ -12,7 +12,7 @@
 | multiqc-json                           | True      | multiqc-json                        | clinical-delivery, long-term-storage |
 | qc-metrics                             | True      | qc-metrics                          | cg, long-term-storage                |
 | software-versions                      | True      | software-versions                   | cg                                   |
-| multiqc-general-stats, multiqc         | True      | qc-metrics, multiqc, general-stats  | janus                                |
-| multiqc-fastp, multiqc                 | True      | qc-metrics, multiqc, fastp          | janus                                |
-| multiqc-samtools-stats, multiqc        | True      | qc-metrics, multiqc, samtools-stats | janus                                |
-| multiqc-kraken, multiqc                | True      | qc-metrics, multiqc, kraken2        | janus                                |
+| multiqc-general-stats, multiqc-json    | True      | qc-metrics, multiqc, general-stats  | janus                                |
+| multiqc-fastp, multiqc-json            | True      | qc-metrics, multiqc, fastp          | janus                                |
+| multiqc-samtools-stats, multiqc-json   | True      | qc-metrics, multiqc, samtools-stats | janus                                |
+| multiqc-kraken, multiqc-json           | True      | qc-metrics, multiqc, kraken2        | janus                                |
