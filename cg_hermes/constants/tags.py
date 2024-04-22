@@ -593,7 +593,6 @@ class RarediseaseTags(StrEnum):
         return descriptions.get(self, "Description not available")
 
 
-
 class RnafusionTags(StrEnum):
     ARRIBA_VISUALISATION: str = "arriba-visualisation"
     FUSIONINSPECTOR_HTML: str = "fusioninspector-html"

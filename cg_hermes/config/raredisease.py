@@ -116,7 +116,6 @@ RAREDISEASE_COMMON_TAGS = {
         "is_mandatory": True,
         "used_by": ["audit", "scout"],
     },
-
     frozenset(["annotate_snv", "rhocall_viz"]): {
         "tags": ["rhocall-viz"],
         "is_mandatory": False,

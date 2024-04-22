@@ -1,4 +1,5 @@
 """Store common utilities."""
+
 import json
 import logging
 from json.decoder import JSONDecodeError
