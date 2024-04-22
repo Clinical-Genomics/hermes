@@ -42,7 +42,7 @@ def fixture_mutant_files(fixtures_dir: Path) -> Path:
     return fixtures_dir / "mutant"
 
 
-@pytest.fixture(name="rarediease_files")
+@pytest.fixture(name="raredisease_files")
 def fixture_raredisease_files(fixtures_dir: Path) -> Path:
     return fixtures_dir / "raredisease"
 
