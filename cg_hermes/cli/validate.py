@@ -12,6 +12,7 @@ from cg_hermes.config.fluffy import FLUFFY_COMMON_TAGS
 from cg_hermes.config.mip_dna import MIP_DNA_TAGS
 from cg_hermes.config.mip_rna import MIP_RNA_TAGS
 from cg_hermes.config.mutant import MUTANT_COMMON_TAGS
+from cg_hermes.config.raredisease import RAREDISEASE_TAGS
 from cg_hermes.config.rnafusion import RNAFUSION_TAGS
 from cg_hermes.config.taxprofiler import TAXPROFILER_TAGS
 from cg_hermes.config.tomte import TOMTE_TAGS
@@ -70,6 +71,8 @@ def validate_tags_cmd(workflow: Workflow):
         tag_map = FLUFFY_COMMON_TAGS
     elif workflow == Workflow.MUTANT:
         tag_map = MUTANT_COMMON_TAGS
+    elif workflow == Workflow.RAREDISEASE:
+        tag_map = RAREDISEASE_TAGS
     elif workflow == Workflow.RNAFUSION:
         tag_map = RNAFUSION_TAGS
     elif workflow == Workflow.TAXPROFILER:

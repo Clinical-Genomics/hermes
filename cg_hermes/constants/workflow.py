@@ -13,6 +13,7 @@ class Workflow(StrEnum):
     MIP_DNA: str = "mip-dna"
     MIP_RNA: str = "mip-rna"
     MUTANT: str = "mutant"
+    RAREDISEASE: str = "raredisease"
     RNAFUSION: str = "rnafusion"
     RSYNC: str = "rsync"
     SPRING: str = "spring"
@@ -21,7 +22,7 @@ class Workflow(StrEnum):
 
     @classmethod
     def get_nf_workflows(cls) -> set:
-        return {cls.RNAFUSION, cls.TAXPROFILER, cls.TOMTE}
+        return {cls.RAREDISEASE, cls.RNAFUSION, cls.TAXPROFILER, cls.TOMTE}
 
 
 class CancerAnalysisType(StrEnum):
