@@ -1,3 +1,5 @@
+---
+files:
 - format: cram
   id: SAMPLE_ID
   path: /CASE_ID/alignment/SAMPLE_ID_sorted_md.cram
