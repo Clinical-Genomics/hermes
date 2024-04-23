@@ -63,7 +63,7 @@ RAREDISEASE_COMMON_TAGS = {
         "is_mandatory": False,
         "used_by": ["scout"],
     },
-    frozenset(["alignment"]): {
+    frozenset(["alignment", "alignment"]): {
         "tags": ["cram"],
         "index_tags": ["cram-index"],
         "is_mandatory": False,
@@ -127,17 +127,17 @@ RAREDISEASE_COMMON_TAGS = {
         "is_mandatory": False,
         "used_by": ["scout"],
     },
-    frozenset(["smncopynumbercaller"]): {
+    frozenset(["smncopynumbercaller", "tsv"]): {
         "tags": ["smn-calling"],
         "is_mandatory": False,
         "used_by": ["scout"],
     },
-    frozenset(["tiddit_coverage"]): {
+    frozenset(["tiddit_coverage", "tiddit_coverage"]): {
         "tags": ["tiddit-coverage", "bigwig"],
         "is_mandatory": False,
         "used_by": ["scout"],
     },
-    frozenset(["vcf2cytosure"]): {
+    frozenset(["vcf2cytosure", "vcf2cytosure"]): {
         "tags": ["vcf2cytosure"],
         "is_mandatory": False,
         "used_by": ["scout"],
