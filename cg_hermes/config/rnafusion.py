@@ -74,21 +74,10 @@ RNAFUSION_COMMON_TAGS = {
         "tags": ["multiqc-json"],
         "used_by": ["deliver"],
     },
-    frozenset({"qc-metrics"}): {
-        "is_mandatory": True,
-        "tags": ["qc-metrics"],
-        "used_by": ["cg"],
-    },
     frozenset({"vcf-fusion", "vcf-collect"}): {
         "is_mandatory": False,
         "tags": ["vcf-fusion"],
         "used_by": ["deliver", "scout"],
-    },
-    frozenset({"samplesheet-valid"}): {
-        "is_mandatory": True,
-        "bundle_id": True,
-        "tags": ["samplesheet-valid"],
-        "used_by": ["cg"],
     },
     frozenset({"multiqc-fastp", "multiqc"}): {
         "is_mandatory": True,

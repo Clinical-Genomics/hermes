@@ -67,19 +67,9 @@ TOMTE_COMMON_TAGS = {
         "tags": ["gene-counts"],
         "used_by": ["clinical-delivery", "long-term-storage"],
     },
-    frozenset({"samplesheet"}): {
-        "is_mandatory": True,
-        "tags": ["samplesheet"],
-        "used_by": ["cg", "long-term-storage"],
-    },
     frozenset({"nextflow-config"}): {
         "is_mandatory": True,
         "tags": ["nextflow-config"],
-        "used_by": ["cg", "long-term-storage"],
-    },
-    frozenset({"qc-metrics"}): {
-        "is_mandatory": True,
-        "tags": ["qc-metrics"],
         "used_by": ["cg", "long-term-storage"],
     },
     frozenset({"multiqc", "multiqc-html"}): {
