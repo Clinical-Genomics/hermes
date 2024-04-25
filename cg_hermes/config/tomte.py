@@ -5,10 +5,45 @@ mandatory by default. However, the tags that are available to a particular analy
 """
 
 from cg_hermes.config.nextflow import NEXTFLOW_TAGS
-from cg_hermes.constants.tags import AlignmentTags, UsageTags, QCTags, ReportTags, BioinfoToolsTags, RawDataTags, \
-    NextflowTags, AnalysisTags, TomteTags
+from cg_hermes.constants.tags import (
+    AlignmentTags,
+    UsageTags,
+    QCTags,
+    ReportTags,
+    BioinfoToolsTags,
+    RawDataTags,
+    NextflowTags,
+    AnalysisTags,
+    TomteTags,
+    VariantTags,
+)
 
 TOMTE_COMMON_TAGS = {
+    frozenset({"transcript-counts", "salmon"}): {
+        "is_mandatory": True,
+        "tags": [BioinfoToolsTags.SALMON_QUANT],
+        "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
+    },
+    frozenset({"research-vcf", "snv"}): {
+        "is_mandatory": True,
+        "tags": [AnalysisTags.RESEARCH, VariantTags.VCF, VariantTags.SNV],
+        "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
+    },
+    frozenset({"research-vcf-index", "snv"}): {
+        "is_mandatory": True,
+        "tags": [AnalysisTags.RESEARCH, VariantTags.VCF_INDEX, VariantTags.SNV],
+        "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
+    },
+    frozenset({"clinical-vcf", "snv"}): {
+        "is_mandatory": True,
+        "tags": [AnalysisTags.CLINICAL, VariantTags.VCF, VariantTags.SNV],
+        "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.SCOUT, UsageTags.LONG_TERM_STORAGE],
+    },
+    frozenset({"clinical-vcf-index", "snv"}): {
+        "is_mandatory": True,
+        "tags": [AnalysisTags.CLINICAL, VariantTags.VCF_INDEX, VariantTags.SNV],
+        "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.SCOUT, UsageTags.LONG_TERM_STORAGE],
+    },
     frozenset({"fraser", "fraser-clinical"}): {
         "is_mandatory": False,
         "tags": [TomteTags.FRASER, AnalysisTags.CLINICAL],
