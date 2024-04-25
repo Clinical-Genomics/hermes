@@ -69,7 +69,7 @@ TOMTE_COMMON_TAGS = {
     },
     frozenset({"samplesheet"}): {
         "is_mandatory": True,
-        "tags": ["samplesheet"],
+        "tags": ["nextflow-samplesheet"],
         "used_by": ["cg", "long-term-storage"],
     },
     frozenset({"nextflow-config"}): {
