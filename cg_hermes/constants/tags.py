@@ -622,8 +622,7 @@ class RarediseaseTags(StrEnum):
             self.HAPLOGREP: "Haplogrep",
             self.NGSBITS: "Result of determination of sample gender",
             self.SVDBQUERY: "Query of SVDB results",
-            self.SVDBQUERY_INDEX: "Query of SVDB results, index"
-
+            self.SVDBQUERY_INDEX: "Query of SVDB results, index",
         }
         return descriptions.get(self, "Description not available")
 

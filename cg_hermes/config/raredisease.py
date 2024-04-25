@@ -115,12 +115,12 @@ RAREDISEASE_COMMON_TAGS = {
         "is_mandatory": False,
         "used_by": [UsageTags.SCOUT],
     },
-     frozenset(["call_mobile_elements", "call_mobile_elements"]): {
+    frozenset(["call_mobile_elements", "call_mobile_elements"]): {
         "tags": [VariantTags.MOBILE_ELEMENTS, VariantTags.VCF],
         "is_mandatory": False,
         "used_by": [UsageTags.SCOUT],
     },
-     frozenset(["call_mobile_elements", "call_mobile_elements_index"]): {
+    frozenset(["call_mobile_elements", "call_mobile_elements_index"]): {
         "tags": [VariantTags.MOBILE_ELEMENTS, VariantTags.VCF_INDEX],
         "is_mandatory": False,
         "used_by": [UsageTags.SCOUT],
@@ -140,47 +140,47 @@ RAREDISEASE_COMMON_TAGS = {
         "is_mandatory": False,
         "used_by": [UsageTags.SCOUT],
     },
-        frozenset(["annotate_mobile_elements", "research_index"]): {
+    frozenset(["annotate_mobile_elements", "research_index"]): {
         "tags": [VariantTags.MOBILE_ELEMENTS, AnalysisTags.RESEARCH, VariantTags.VCF_INDEX],
         "is_mandatory": False,
         "used_by": [UsageTags.SCOUT],
     },
-        frozenset(["call_snv", "call_snv"]): {
+    frozenset(["call_snv", "call_snv"]): {
         "tags": [VariantTags.VCF_SNV],
         "is_mandatory": False,
         "used_by": [UsageTags.CG],
     },
-        frozenset(["call_snv", "call_snv_index"]): {
+    frozenset(["call_snv", "call_snv_index"]): {
         "tags": [VariantTags.VCF_SNV_INDEX],
         "is_mandatory": False,
         "used_by": [UsageTags.CG],
     },
-        frozenset(["call_snv", "call_snv_mt"]): {
+    frozenset(["call_snv", "call_snv_mt"]): {
         "tags": [VariantTags.VCF_SNV, AnalysisTags.MITOCHONDRIA],
         "is_mandatory": False,
         "used_by": [UsageTags.CG],
     },
-        frozenset(["call_snv", "call_snv_mt_index"]): {
+    frozenset(["call_snv", "call_snv_mt_index"]): {
         "tags": [VariantTags.VCF_SNV_INDEX, AnalysisTags.MITOCHONDRIA],
         "is_mandatory": False,
         "used_by": [UsageTags.CG],
     },
-        frozenset(["call_sv", "call_sv"]): {
+    frozenset(["call_sv", "call_sv"]): {
         "tags": [VariantTags.VCF_SV],
         "is_mandatory": False,
         "used_by": [UsageTags.CG],
     },
-        frozenset(["call_sv", "call_sv_index"]): {
+    frozenset(["call_sv", "call_sv_index"]): {
         "tags": [VariantTags.VCF_SV_INDEX],
         "is_mandatory": False,
         "used_by": [UsageTags.CG],
     },
-        frozenset(["call_sv_mt", "call_sv_mt"]): {
+    frozenset(["call_sv_mt", "call_sv_mt"]): {
         "tags": [VariantTags.VCF_SV, AnalysisTags.MITOCHONDRIA],
         "is_mandatory": False,
         "used_by": [UsageTags.CG],
     },
-        frozenset(["call_sv_mt", "call_sv_mt_index"]): {
+    frozenset(["call_sv_mt", "call_sv_mt_index"]): {
         "tags": [VariantTags.VCF_SV_INDEX, AnalysisTags.MITOCHONDRIA],
         "is_mandatory": False,
         "used_by": [UsageTags.CG],
@@ -439,12 +439,12 @@ RAREDISEASE_COMMON_TAGS = {
         "tags": [QCTags.QC_METRICS, ReportTags.MULTIQC, ReportTags.PICARD_WGS],
         "used_by": [UsageTags.JANUS],
     },
-        frozenset({"nextflow-params"}): {
+    frozenset({"nextflow-params"}): {
         "is_mandatory": True,
         "tags": [NextflowTags.NEXTFLOW_PARAMS],
         "used_by": [UsageTags.CG, UsageTags.LONG_TERM_STORAGE],
     },
-        frozenset({"nextflow-config"}): {
+    frozenset({"nextflow-config"}): {
         "is_mandatory": True,
         "tags": [NextflowTags.NEXTFLOW_CONFIG],
         "used_by": [UsageTags.CG, UsageTags.LONG_TERM_STORAGE],
