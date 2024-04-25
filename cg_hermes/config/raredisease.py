@@ -147,8 +147,8 @@ RAREDISEASE_COMMON_TAGS = {
     },
     frozenset(["call_snv", "call_snv"]): {
         "tags": [VariantTags.VCF_SNV],
-        "is_mandatory": False,
-        "used_by": [UsageTags.CG],
+        "is_mandatory": True,
+        "used_by": [UsageTags.GENOTYPE],
     },
     frozenset(["call_snv", "call_snv_index"]): {
         "tags": [VariantTags.VCF_SNV_INDEX],

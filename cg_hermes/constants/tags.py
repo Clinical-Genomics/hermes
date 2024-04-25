@@ -282,7 +282,7 @@ class QCTags(StrEnum):
     def description(self) -> str:
         descriptions: dict[QCTags, str] = {
             self.PED_CHECK: "Results from pedigree validation",
-            self.QC_METRICS: "QC metrics from analysis",
+            self.QC_METRICS: "QC metrics from analysis",   # metrics_deliverables file
             self.SEX_CHECK: "Results from sex validation",
         }
         return descriptions.get(self, "Description not available")

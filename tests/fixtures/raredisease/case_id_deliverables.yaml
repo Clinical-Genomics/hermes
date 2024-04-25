@@ -426,25 +426,25 @@ files:
   path: /CASE_ID/rank_and_filter/CASE_ID_mt_ranked_clinical.vcf.gz
   path_index: ~
   step: rank_and_filter
-  tag: clinical_mt
+  tag: mt_clinical
 - format: vcf
   id: CASE_ID
   path: /CASE_ID/rank_and_filter/CASE_ID_mt_ranked_clinical.vcf.gz.tbi
   path_index: ~
   step: rank_and_filter
-  tag: clinical_mt_index
+  tag: mt_clinical_index
 - format: vcf
   id: CASE_ID
   path: /CASE_ID/rank_and_filter/CASE_ID_mt_ranked_research.vcf.gz
   path_index: ~
   step: rank_and_filter
-  tag: research_mt
+  tag: mt_research
 - format: vcf
   id: CASE_ID
   path: /CASE_ID/rank_and_filter/CASE_ID_mt_ranked_research.vcf.gz.tbi
   path_index: ~
   step: rank_and_filter
-  tag: research_mt_index
+  tag: mt_research_index
 - format: tsv
   id: CASE_ID
   path: /CASE_ID/ngsbits_samplegender/CASE_ID_ngsbits_sex.tsv

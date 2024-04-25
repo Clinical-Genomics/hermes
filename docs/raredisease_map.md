@@ -25,7 +25,7 @@
 | annotate_mobile_elements, clinical_index          | False       | mobile-elements, clinical, vcf_index    | scout        |
 | annotate_mobile_elements, research                | False       | mobile-elements, research, vcf          | scout        |
 | annotate_mobile_elements, research_index          | False       | mobile-elements, research, vcf_index    | scout        |
-| call_snv, call_snv                                | False       | vcf_snv                                 | scout        |
+| call_snv, call_snv                                | True        | vcf_snv                                 | genotype     |
 | call_snv, call_snv_index                          | False       | vcf_snv_index                           | scout        |
 | call_snv, call_snv_mt                             | False       | vcf_snv, mitochondria                   | scout        |
 | call_snv, call_snv_mt_index                       | False       | vcf_snv_index, mitochondria             | scout        |
