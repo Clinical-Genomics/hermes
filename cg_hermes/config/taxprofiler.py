@@ -70,11 +70,6 @@ TAXPROFILER_COMMON_TAGS = {
         "tags": [ReportTags.MULTIQC_JSON],
         "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
-    frozenset({"qc-metrics"}): {
-        "is_mandatory": True,
-        "tags": [QCTags.QC_METRICS],
-        "used_by": [UsageTags.CG, UsageTags.LONG_TERM_STORAGE],
-    },
     frozenset({"multiqc-json", "multiqc-general-stats"}): {
         "is_mandatory": True,
         "tags": [QCTags.QC_METRICS, ReportTags.MULTIQC, ReportTags.GENERAL_STATS],
