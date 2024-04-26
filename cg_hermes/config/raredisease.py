@@ -325,12 +325,12 @@ RAREDISEASE_COMMON_TAGS = {
         "used_by": [UsageTags.SCOUT],
     },
     frozenset(["annotate_snv_mt", "annotate_snv_mt"]): {
-        "tags": [VariantTags.VCF_MT, RarediseaseTags.ANNOTATION],
+        "tags": [VariantTags.VCF, AnalysisTags.MITOCHONDRIA, RarediseaseTags.ANNOTATION],
         "is_mandatory": False,
         "used_by": [UsageTags.SCOUT],
     },
     frozenset(["annotate_snv_mt", "annotate_snv_mt_index"]): {
-        "tags": [VariantTags.VCF_MT_INDEX, RarediseaseTags.ANNOTATION],
+        "tags": [VariantTags.VCF_INDEX, AnalysisTags.MITOCHONDRIA, RarediseaseTags.ANNOTATION],
         "is_mandatory": False,
         "used_by": [UsageTags.SCOUT],
     },
