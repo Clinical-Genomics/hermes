@@ -8,25 +8,25 @@ files:
   tag: transcript-counts
 - format: vcf
   id: CASE_ID
-  path: /CASE_ID/annotate_vep/{CASE_ID}_research.vcf.gz
+  path: /CASE_ID/annotate_vep/CASE_ID_vep_research.vcf.gz
   path_index: null
   step: snv
   tag: research-vcf
 - format: vcf
   id: CASE_ID
-  path: /CASE_ID/annotate_vep/{CASE_ID}_research.vcf.gz.tbi
+  path: /CASE_ID/annotate_vep/CASE_ID_vep_research.vcf.gz.tbi
   path_index: null
   step: snv
   tag: research-vcf-index
 - format: vcf
   id: CASE_ID
-  path: /CASE_ID/annotate_vep/{CASE_ID}_clinical.vcf.gz
+  path: /CASE_ID/annotate_vep/CASE_ID_vep_clinical.vcf.gz
   path_index: null
   step: snv
   tag: clinical-vcf
 - format: vcf
   id: CASE_ID
-  path: /CASE_ID/annotate_vep/{CASE_ID}_clinical.vcf.gz.tbi
+  path: /CASE_ID/annotate_vep/CASE_ID_vep_clinical.vcf.gz.tbi
   path_index: null
   step: snv
   tag: clinical-vcf-index
