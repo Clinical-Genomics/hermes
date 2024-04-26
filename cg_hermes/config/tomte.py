@@ -122,6 +122,11 @@ TOMTE_COMMON_TAGS = {
         "tags": ["qc-metrics", "multiqc", "picard-insert-size"],
         "used_by": ["janus"],
     },
+    frozenset({"samplesheet"}): {
+        "is_mandatory": True,
+        "tags": ["samplesheet"],
+        "used_by": ["cg", "long-term-storage"],
+    },
 }
 
 TOMTE_TAGS = {**TOMTE_COMMON_TAGS, **NEXTFLOW_TAGS}

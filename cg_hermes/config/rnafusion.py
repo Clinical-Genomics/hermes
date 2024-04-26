@@ -109,6 +109,12 @@ RNAFUSION_COMMON_TAGS = {
         "tags": ["qc-metrics", "multiqc", "star"],
         "used_by": ["janus"],
     },
+    frozenset({"samplesheet-valid"}): {
+        "is_mandatory": True,
+        "bundle_id": True,
+        "tags": ["samplesheet-valid"],
+        "used_by": ["cg"],
+    },
 }
 
 RNAFUSION_TAGS = {**RNAFUSION_COMMON_TAGS, **NEXTFLOW_TAGS}
