@@ -40,7 +40,7 @@ RAREDISEASE_COMMON_TAGS = {
         "is_mandatory": False,
         "used_by": [UsageTags.SCOUT],
     },
-    frozenset(["tiddit_coverage", "tiddit_coverage"]): {
+    frozenset(["tiddit_coverage"]): {
         "tags": [AnalysisTags.TIDDIT_COVERAGE, AnalysisTags.BIGWIG],
         "is_mandatory": False,
         "used_by": [UsageTags.SCOUT],
