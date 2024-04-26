@@ -23,10 +23,5 @@ NEXTFLOW_TAGS = {
         "tags": [QCTags.QC_METRICS],
         "used_by": [UsageTags.CG, UsageTags.LONG_TERM_STORAGE],
     },
-    frozenset({"samplesheet"}): {
-        "is_mandatory": True,
-        "tags": [NextflowTags.SAMPLESHEET],
-        "used_by": [UsageTags.CG, UsageTags.LONG_TERM_STORAGE],
-    },
 }
 #

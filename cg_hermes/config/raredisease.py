@@ -449,6 +449,11 @@ RAREDISEASE_COMMON_TAGS = {
         "tags": [NextflowTags.NEXTFLOW_CONFIG],
         "used_by": [UsageTags.CG, UsageTags.LONG_TERM_STORAGE],
     },
+    frozenset({"samplesheet"}): {
+        "is_mandatory": True,
+        "tags": [NextflowTags.SAMPLESHEET],
+        "used_by": [UsageTags.CG, UsageTags.LONG_TERM_STORAGE],
+    },
 }
 
 RAREDISEASE_TAGS = {**RAREDISEASE_COMMON_TAGS, **NEXTFLOW_TAGS}
