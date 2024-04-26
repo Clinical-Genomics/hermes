@@ -614,7 +614,7 @@ class RarediseaseTags(StrEnum):
             self.EKLIPSE_GENES: "Mitochondrial eKLIPse genes",
             self.EKLIPSE_PNG: "Mitochondrial eKLIPse png",
             self.HAPLOGREP: "Haplogrep",
-            self.NGSBITS: "Result of determination of sample gender",
+            self.NGSBITS: "Result from SampleGender tool to determine sample sex",
             self.SVDBQUERY: "Query of SVDB results",
             self.SVDBQUERY_INDEX: "Query of SVDB results, index",
         }
