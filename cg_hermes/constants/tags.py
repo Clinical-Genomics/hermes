@@ -598,9 +598,9 @@ class RarediseaseTags(StrEnum):
     EKLIPSE_GENES: str = "eklipse-gene"
     EKLIPSE_PNG: str = "eklipse-png"
     HAPLOGREP: str = "haplogrep"
-    NGSBITS: str = "ngsbits_samplegender"
+    NGSBITS: str = "ngsbits-samplegender"
     SVDBQUERY: str = "svdbquery"
-    SVDBQUERY_INDEX: str = "svdbquery_index"
+    SVDBQUERY_INDEX: str = "svdbquery-index"
 
     @classmethod
     def name(cls) -> str:
