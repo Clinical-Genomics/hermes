@@ -1,6 +1,36 @@
 ---
 files:
 - format: tsv
+  id: SAMPLE_ID
+  path: /CASE_ID/alignment/SAMPLE_ID_quant.sf
+  path_index: null
+  step: salmon
+  tag: transcript-counts
+- format: vcf
+  id: CASE_ID
+  path: /CASE_ID/annotate_vep/CASE_ID_vep_research.vcf.gz
+  path_index: null
+  step: snv
+  tag: research-vcf
+- format: vcf
+  id: CASE_ID
+  path: /CASE_ID/annotate_vep/CASE_ID_vep_research.vcf.gz.tbi
+  path_index: null
+  step: snv
+  tag: research-vcf-index
+- format: vcf
+  id: CASE_ID
+  path: /CASE_ID/annotate_vep/CASE_ID_vep_clinical.vcf.gz
+  path_index: null
+  step: snv
+  tag: clinical-vcf
+- format: vcf
+  id: CASE_ID
+  path: /CASE_ID/annotate_vep/CASE_ID_vep_clinical.vcf.gz.tbi
+  path_index: null
+  step: snv
+  tag: clinical-vcf-index
+- format: tsv
   id: CASE_ID
   path: /CASE_ID/analyse_transcripts/drop/CASE_ID_fraser_top_hits_clinical.tsv
   path_index: null

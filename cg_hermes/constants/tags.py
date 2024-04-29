@@ -688,7 +688,7 @@ class TomteTags(StrEnum):
 class NextflowTags(StrEnum):
     NEXTFLOW_CONFIG: str = "nextflow-config"
     NEXTFLOW_PARAMS: str = "nextflow-params"
-    SAMPLESHEET: str = "samplesheet"
+    SAMPLESHEET: str = "nextflow-samplesheet"
     SAMPLESHEET_VALID: str = "samplesheet-valid"
     SOFTWARE_VERSIONS: str = "software-versions"
 
