@@ -420,17 +420,17 @@ RAREDISEASE_COMMON_TAGS = {
         "used_by": [UsageTags.JANUS],
     },
     frozenset({"multiqc", "multiqc-picard-histogram1"}): {
-        "is_mandatory": True,
+        "is_mandatory": False,
         "tags": [QCTags.QC_METRICS, ReportTags.MULTIQC, ReportTags.PICARD_HISTOGRAM],
         "used_by": [UsageTags.JANUS],
     },
     frozenset({"multiqc", "multiqc-picard-histogram2"}): {
-        "is_mandatory": True,
+        "is_mandatory": False,
         "tags": [QCTags.QC_METRICS, ReportTags.MULTIQC, ReportTags.PICARD_HISTOGRAM],
         "used_by": [UsageTags.JANUS],
     },
     frozenset({"multiqc", "multiqc-picard-histogram3"}): {
-        "is_mandatory": True,
+        "is_mandatory": False,
         "tags": [QCTags.QC_METRICS, ReportTags.MULTIQC, ReportTags.PICARD_HISTOGRAM],
         "used_by": [UsageTags.JANUS],
     },
