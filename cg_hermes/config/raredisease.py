@@ -53,7 +53,7 @@ RAREDISEASE_COMMON_TAGS = {
     frozenset(["smncopynumbercaller", "tsv"]): {
         "tags": [VariantTags.SMN_CALLING],
         "is_mandatory": False,
-        "used_by": [UsageTags.SCOUT],
+        "used_by": [UsageTags.SCOUT, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["expansionhunter", "variant_catalog"]): {
         "tags": [BioinfoToolsTags.EXPANSIONHUNTER, MipTags.VARIANT_CATALOG],
@@ -63,7 +63,7 @@ RAREDISEASE_COMMON_TAGS = {
     frozenset(["expansionhunter_stranger", "case_sv_str"]): {
         "tags": [VariantTags.VCF_STR],
         "is_mandatory": False,
-        "used_by": [UsageTags.SCOUT],
+        "used_by": [UsageTags.SCOUT, UsageTags.LONG_TERM_STORAGE, UsageTags.CLINICAL_DELIVERY],
     },
     frozenset(["expansionhunter_stranger", "case_sv_str_index"]): {
         "tags": [VariantTags.VCF_STR_INDEX],
@@ -93,27 +93,27 @@ RAREDISEASE_COMMON_TAGS = {
     frozenset(["vcf2cytosure", "vcf2cytosure"]): {
         "tags": [VariantTags.VCF2CYTOSURE],
         "is_mandatory": False,
-        "used_by": [UsageTags.SCOUT],
+        "used_by": [UsageTags.SCOUT, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["gens_generatedata", "baf"]): {
         "tags": [BioinfoToolsTags.GENS, AnalysisTags.FRACSNP, AnalysisTags.BED],
         "is_mandatory": False,
-        "used_by": [UsageTags.SCOUT],
+        "used_by": [UsageTags.SCOUT, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["gens_generatedata", "baf_index"]): {
         "tags": [BioinfoToolsTags.GENS, AnalysisTags.FRACSNP, AnalysisTags.BED_INDEX],
         "is_mandatory": False,
-        "used_by": [UsageTags.SCOUT],
+        "used_by": [UsageTags.SCOUT, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["gens_generatedata", "cov"]): {
         "tags": [BioinfoToolsTags.GENS, AnalysisTags.COVERAGE, AnalysisTags.BED],
         "is_mandatory": False,
-        "used_by": [UsageTags.SCOUT],
+        "used_by": [UsageTags.SCOUT, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["gens_generatedata", "cov_index"]): {
         "tags": [BioinfoToolsTags.GENS, AnalysisTags.COVERAGE, AnalysisTags.BED_INDEX],
         "is_mandatory": False,
-        "used_by": [UsageTags.SCOUT],
+        "used_by": [UsageTags.SCOUT, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["call_mobile_elements", "call_mobile_elements"]): {
         "tags": [VariantTags.MOBILE_ELEMENTS, VariantTags.VCF],
@@ -128,32 +128,32 @@ RAREDISEASE_COMMON_TAGS = {
     frozenset(["annotate_mobile_elements", "clinical"]): {
         "tags": [VariantTags.MOBILE_ELEMENTS, AnalysisTags.CLINICAL, VariantTags.VCF],
         "is_mandatory": False,
-        "used_by": [UsageTags.SCOUT],
+        "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["annotate_mobile_elements", "clinical_index"]): {
         "tags": [VariantTags.MOBILE_ELEMENTS, AnalysisTags.CLINICAL, VariantTags.VCF_INDEX],
         "is_mandatory": False,
-        "used_by": [UsageTags.SCOUT],
+        "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["annotate_mobile_elements", "research"]): {
         "tags": [VariantTags.MOBILE_ELEMENTS, AnalysisTags.RESEARCH, VariantTags.VCF],
         "is_mandatory": False,
-        "used_by": [UsageTags.SCOUT],
+        "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["annotate_mobile_elements", "research_index"]): {
         "tags": [VariantTags.MOBILE_ELEMENTS, AnalysisTags.RESEARCH, VariantTags.VCF_INDEX],
         "is_mandatory": False,
-        "used_by": [UsageTags.SCOUT],
+        "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["call_snv", "call_snv"]): {
         "tags": [VariantTags.VCF_SNV],
         "is_mandatory": True,
-        "used_by": [UsageTags.GENOTYPE],
+        "used_by": [UsageTags.GENOTYPE, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["call_snv", "call_snv_index"]): {
         "tags": [VariantTags.VCF_SNV_INDEX],
         "is_mandatory": False,
-        "used_by": [UsageTags.CG],
+        "used_by": [UsageTags.CG, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["call_snv", "call_snv_mt"]): {
         "tags": [VariantTags.VCF_SNV, AnalysisTags.MITOCHONDRIA],
@@ -219,65 +219,65 @@ RAREDISEASE_COMMON_TAGS = {
         "tags": [VariantTags.VCF_SNV_CLINICAL],
         "is_mandatory": True,
         "bundle_id": True,
-        "used_by": [UsageTags.SCOUT],
+        "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["rank_and_filter", "snv_clinical_index"]): {
         "tags": [VariantTags.VCF_SNV_CLINICAL_INDEX],
         "is_mandatory": True,
         "bundle_id": True,
-        "used_by": [UsageTags.SCOUT],
+        "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["rank_and_filter", "snv_research"]): {
         "tags": [VariantTags.VCF_SNV_RESEARCH],
         "index_tags": ["vcf-snv-research-index"],
         "is_mandatory": True,
-        "used_by": [UsageTags.SCOUT],
+        "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["rank_and_filter", "snv_research_index"]): {
         "tags": [VariantTags.VCF_SNV_RESEARCH_INDEX],
         "is_mandatory": True,
-        "used_by": [UsageTags.SCOUT],
+        "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["rank_and_filter", "sv_clinical"]): {
         "tags": [VariantTags.VCF_SV_CLINICAL],
         "is_mandatory": True,
         "bundle_id": True,
-        "used_by": [UsageTags.SCOUT],
+        "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["rank_and_filter", "sv_clinical_index"]): {
         "tags": [VariantTags.VCF_SV_CLINICAL_INDEX],
         "is_mandatory": True,
         "bundle_id": True,
-        "used_by": [UsageTags.SCOUT],
+        "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["rank_and_filter", "sv_research"]): {
         "tags": [VariantTags.VCF_SV_RESEARCH],
         "index_tags": ["vcf-snv-research-index"],
         "is_mandatory": True,
-        "used_by": [UsageTags.SCOUT],
+        "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["rank_and_filter", "sv_research_index"]): {
         "tags": [VariantTags.VCF_SV_RESEARCH_INDEX],
         "is_mandatory": True,
-        "used_by": [UsageTags.SCOUT],
+        "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["rank_and_filter", "mt_clinical"]): {
         "tags": [VariantTags.VCF_SV_CLINICAL, AnalysisTags.MITOCHONDRIA],
         "is_mandatory": True,
         "bundle_id": True,
-        "used_by": [UsageTags.SCOUT],
+        "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["rank_and_filter", "mt_clinical_index"]): {
         "tags": [VariantTags.VCF_SV_CLINICAL_INDEX, AnalysisTags.MITOCHONDRIA],
         "is_mandatory": True,
         "bundle_id": True,
-        "used_by": [UsageTags.SCOUT],
+        "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY],
     },
     frozenset(["rank_and_filter", "mt_research"]): {
         "tags": [VariantTags.VCF_SV_RESEARCH, AnalysisTags.MITOCHONDRIA],
         "index_tags": ["vcf-snv-research-index"],
         "is_mandatory": True,
-        "used_by": [UsageTags.SCOUT],
+        "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["rank_and_filter", "mt_research_index"]): {
         "tags": [VariantTags.VCF_SV_RESEARCH_INDEX, AnalysisTags.MITOCHONDRIA],
@@ -357,7 +357,7 @@ RAREDISEASE_COMMON_TAGS = {
     frozenset({"multiqc", "multiqc-html"}): {
         "is_mandatory": True,
         "tags": [ReportTags.MULTIQC_HTML],
-        "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
+        "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset({"multiqc", "multiqc-json"}): {
         "is_mandatory": True,

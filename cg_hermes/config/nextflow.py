@@ -17,7 +17,7 @@ NEXTFLOW_TAGS = {
         "is_mandatory": True,
         "bundle_id": True,
         "tags": [NextflowTags.SOFTWARE_VERSIONS],
-        "used_by": [UsageTags.CG, UsageTags.LONG_TERM_STORAGE],
+        "used_by": [UsageTags.CG, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset({"qc-metrics"}): {
         "is_mandatory": True,
