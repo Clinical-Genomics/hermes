@@ -161,8 +161,8 @@ TOMTE_COMMON_TAGS = {
     },
     frozenset({"samplesheet"}): {
         "is_mandatory": True,
-        "tags": ["samplesheet"],
-        "used_by": ["cg", "long-term-storage"],
+        "tags": [NextflowTags.SAMPLESHEET],
+        "used_by": [UsageTags.CG, UsageTags.LONG_TERM_STORAGE],
     },
 }
 
