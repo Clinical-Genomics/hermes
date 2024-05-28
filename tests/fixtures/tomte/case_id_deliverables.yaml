@@ -116,6 +116,12 @@ files:
   tag: nextflow-config
 - format: yml
   id: CASE_ID
+  path: /CASE_ID/CASE_ID_params_file.yaml
+  path_index: ~
+  step: nextflow-params
+  tag: nextflow-params
+- format: yml
+  id: CASE_ID
   path: /CASE_ID/CASE_ID_metrics_deliverables.yaml
   path_index: null
   step: qc-metrics

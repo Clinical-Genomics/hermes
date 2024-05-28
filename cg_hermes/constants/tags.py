@@ -640,6 +640,7 @@ class TomteTags(StrEnum):
 
 class NextflowTags(StrEnum):
     NEXTFLOW_CONFIG: str = "nextflow-config"
+    NEXTFLOW_PARAMS: str = "nextflow-params"
     SAMPLESHEET: str = "nextflow-samplesheet"
     SAMPLESHEET_VALID: str = "samplesheet-valid"
     SOFTWARE_VERSIONS: str = "software-versions"
@@ -652,6 +653,7 @@ class NextflowTags(StrEnum):
     def description(self) -> str:
         descriptions: dict[str, NextflowTags] = {
             self.NEXTFLOW_CONFIG: "Nextflow config for analysis",
+            self.NEXTFLOW_PARAMS: "Nextflow parameters file for analysis",
             self.SAMPLESHEET: "Samplesheet for analysis",
             self.SAMPLESHEET_VALID: "Validated samplesheet",
             self.SOFTWARE_VERSIONS: "List of all software used and their versions",
