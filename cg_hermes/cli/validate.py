@@ -27,25 +27,24 @@ app = typer.Typer()
 
 @app.command("deliverables")
 def validate_deliverables(
-    infile: Path,
+    deliverables_file: Path,
     workflow: Workflow = typer.Option(Workflow.FLUFFY, help="Specify workflow"),
     analysis_type: CancerAnalysisType = typer.Option(None, help="Specify the analysis type"),
+    force: bool = typer.Option(False, "--force", "-f", help="Bypass deliverables file validation"),
 ):
     """Validate a deliverables file."""
-    LOG.info(f"Validating file: {infile} from workflow: {workflow}")
-
-    raw_deliverables: dict[str, list[dict[str, str]]] = get_deliverables(infile)
-
+    LOG.info(f"Validating file: {deliverables_file} from workflow: {workflow}")
+    raw_deliverables: dict[str, list[dict[str, str]]] = get_deliverables(deliverables_file)
     try:
         deliverables: Deliverables = get_deliverables_obj(
             deliverables=raw_deliverables, workflow=workflow, analysis_type=analysis_type
         )
-        deliverables.validate_mandatory_files()
+        deliverables.validate_mandatory_files(force)
     except SyntaxError:
         raise typer.Abort()
     except (ValidationError, MissingFileError) as err:
         LOG.error(err)
-        LOG.warning(f"File {infile} does not follow the spec")
+        LOG.warning(f"File {deliverables_file} does not follow the spec")
         raise typer.Abort()
     LOG.info("Deliverables file has the correct format")
 
