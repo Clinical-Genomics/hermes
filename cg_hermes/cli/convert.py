@@ -33,13 +33,13 @@ def convert_cmd(
             deliverables=raw_deliverables, workflow=workflow, analysis_type=analysis_type
         )
         deliverables.validate_mandatory_files(force)
-    except SyntaxError:
+    except SyntaxError as error:
+        LOG.error(error)
         raise typer.Abort()
-    except (ValidationError, MissingFileError) as err:
-        LOG.error(err)
-        LOG.warning(f"File: {deliverables_file} does not follow the specification")
+    except (ValidationError, MissingFileError) as error:
+        LOG.error(error)
+        LOG.error(f"File: {deliverables_file} does not follow the specification")
         raise typer.Abort()
 
     cg_deliverables: CGDeliverables = deliverables.convert_to_cg_deliverables()
-
     typer.echo(json.dumps(cg_deliverables.dict(), indent=2))
