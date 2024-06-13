@@ -17,13 +17,13 @@ def get_deliverables(deliverables_file: Path) -> dict[str, list[dict[str, str]]]
     with open(deliverables_file, "r") as handle:
         try:
             deliverables = yaml.load(handle, Loader=yaml.SafeLoader)
-        except ParserError as err:
-            LOG.error(err)
+        except ParserError as error:
+            LOG.error(error)
             LOG.warning(f"File {deliverables_file} is not in YAML format")
             try:
                 deliverables = json.load(handle)
-            except JSONDecodeError as err:
-                LOG.error(err)
+            except JSONDecodeError as error:
+                LOG.error(error)
                 LOG.warning(f"File {deliverables_file} is not in JSON format")
                 LOG.warning("Can not parse file")
                 raise typer.Abort()
