@@ -13,7 +13,12 @@ LOG = logging.getLogger(__name__)
 
 
 def get_deliverables(deliverables_file: Path) -> dict[str, list[dict[str, str]]]:
-    """Open file and load into a dictionary. Try to first open YAML, then JSON."""
+    """
+    Open file and load into a dictionary. Try to first open YAML, then JSON.
+
+    Raises:
+        typer.Abort: If the file cannot be parsed as YAML or JSON.
+    """
     with open(deliverables_file, "r") as handle:
         try:
             deliverables = yaml.load(handle, Loader=yaml.SafeLoader)
