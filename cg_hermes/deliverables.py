@@ -203,16 +203,19 @@ class Deliverables:
             updated_tags[tag_name]["is_mandatory"] = tag_info["is_mandatory"]
         return updated_tags
 
-    def validate_mandatory_files(self) -> None:
-        """Validate that all mandatory files are present in deliverables"""
+    def validate_mandatory_files(self, force: bool = False) -> None:
+        """Validate that all mandatory files are present in deliverables."""
         missing_mandatory_files = []
         for file_tags in self.configs:
             if not self.configs[file_tags].is_mandatory:
                 continue
             if file_tags not in self.file_identifiers:
-                LOG.warning("Mandatory file (%s) is missing", ", ".join(file_tags))
+                LOG.warning(f"Mandatory file ({', '.join(file_tags)}) is missing")
                 missing_mandatory_files.append(", ".join(file_tags))
         if missing_mandatory_files:
+            if force:
+                LOG.warning("Ignoring deliverables file validation")
+                return
             raise MissingFileError(
                 files=missing_mandatory_files, message="Deliverables is missing mandatory files"
             )

@@ -700,6 +700,7 @@ class NextflowTags(StrEnum):
     def description(self) -> str:
         descriptions: dict[str, NextflowTags] = {
             self.NEXTFLOW_CONFIG: "Nextflow config for analysis",
+            self.NEXTFLOW_PARAMS: "Nextflow parameters file for analysis",
             self.SAMPLESHEET: "Samplesheet for analysis",
             self.SAMPLESHEET_VALID: "Validated samplesheet",
             self.SOFTWARE_VERSIONS: "List of all software used and their versions",
