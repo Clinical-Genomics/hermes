@@ -27,31 +27,36 @@ app = typer.Typer()
 
 @app.command("deliverables")
 def validate_deliverables(
-    infile: Path,
+    deliverables_file: Path,
     workflow: Workflow = typer.Option(Workflow.FLUFFY, help="Specify workflow"),
     analysis_type: CancerAnalysisType = typer.Option(None, help="Specify the analysis type"),
-):
-    """Validate a deliverables file."""
-    LOG.info(f"Validating file: {infile} from workflow: {workflow}")
+    force: bool = typer.Option(False, "--force", "-f", help="Bypass deliverables file validation"),
+) -> None:
+    """
+    Validate a deliverables file.
 
-    raw_deliverables: dict[str, list[dict[str, str]]] = get_deliverables(infile)
-
+    Raises:
+        typer.Abort: If there is an error in parsing or validating the deliverables file.
+    """
+    LOG.info(f"Validating file: {deliverables_file} from workflow: {workflow}")
+    raw_deliverables: dict[str, list[dict[str, str]]] = get_deliverables(deliverables_file)
     try:
         deliverables: Deliverables = get_deliverables_obj(
             deliverables=raw_deliverables, workflow=workflow, analysis_type=analysis_type
         )
-        deliverables.validate_mandatory_files()
-    except SyntaxError:
+        deliverables.validate_mandatory_files(force)
+    except SyntaxError as error:
+        LOG.error(error)
         raise typer.Abort()
-    except (ValidationError, MissingFileError) as err:
-        LOG.error(err)
-        LOG.warning(f"File {infile} does not follow the spec")
+    except (ValidationError, MissingFileError) as error:
+        LOG.error(error)
+        LOG.error(f"File: {deliverables_file} does not follow the specification")
         raise typer.Abort()
     LOG.info("Deliverables file has the correct format")
 
 
 @app.command("tags")
-def validate_tags_cmd(workflow: Workflow):
+def validate_tags_cmd(workflow: Workflow) -> None:
     """Validate the tag maps for one of the definitions."""
     LOG.info(f"Validating {workflow} common tags")
     exit_code = 0
