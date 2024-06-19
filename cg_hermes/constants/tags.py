@@ -6,6 +6,7 @@ class AlignmentTags(StrEnum):
     BAM: str = "bam"
     BAM_INDEX: str = "bam-index"
     BAM_MT: str = "bam-mt"
+    BAM_MT_INDEX: str = "bam-mt-index"
     CRAM: str = "cram"
     CRAM_INDEX: str = "cram-index"
 
@@ -193,14 +194,21 @@ class ReportTags(StrEnum):
     DELIVERY_REPORT: str = "delivery-report"
     GENE_COUNTS: str = "gene-counts"
     GENERAL_STATS: str = "general-stats"
+    MOSDEPTH_COVDIST: str = "mosdepth-covdist"
+    MOSDEPTH_CUMCOV: str = "mosdepth-cumcov"
+    MOSDEPTH_PERCHROM: str = "mosdepth-perchrom"
     MULTIQC: str = "multiqc"
     MULTIQC_HTML: str = "multiqc-html"
     MULTIQC_JSON: str = "multiqc-json"
     PDF: str = "pdf"
     PICARD_ALIGNMENT: str = "picard-alignment"
+    PICARD_BAMQC: str = "picard-bamqc"
     PICARD_DUPLICATES: str = "picard-duplicates"
+    PICARD_HISTOGRAM: str = "picard-histogram"
     PICARD_HS: str = "picard-hs"
     PICARD_INSERT_SIZE: str = "picard-insert-size"
+    PICARD_QUALITYCYCLE: str = "picard-qualitycycle"
+    PICARD_QUALITYDISTR: str = "picard-qualitydistr"
     PICARD_RNASEQ: str = "picard-rnaseq"
     PICARD_WGS: str = "picard-wgs"
     QC_REPORT: str = "qc-report"
@@ -227,14 +235,20 @@ class ReportTags(StrEnum):
             self.DELIVERY_REPORT: "Delivery report with result for upload to Scout",
             self.GENE_COUNTS: "STAR read counts output per gene",
             self.GENERAL_STATS: "General statistics reported from MultiQC",
+            self.MOSDEPTH_COVDIST: "Coverage distribution profile from mosdepth",
+            self.MOSDEPTH_CUMCOV: "Cumulative coverage distribution profile from mosdepth",
+            self.MOSDEPTH_PERCHROM: "Depth per chromosome from mosdepth",
             self.MULTIQC: "MultiQC related files",
             self.MULTIQC_HTML: "MultiQC analysis report in HTML format",
             self.MULTIQC_JSON: "MultiQC analysis report in JSON format",
             self.PDF: "Portable document format",
             self.PICARD_ALIGNMENT: "High level metrics about the alignment of reads",
+            self.PICARD_BAMQC: "Qualimap BAMQC metrics",
             self.PICARD_DUPLICATES: "Metrics calculated during marking duplicates",
+            self.PICARD_HISTOGRAM: "Picard histograms in JSON format",
             self.PICARD_HS: "Metrics for the analysis of target-capture sequencing",
             self.PICARD_INSERT_SIZE: "Metrics about the insert size distribution",
+            self.PICARD_QUALITYCYCLE: "Picard MeanQualityByCycle Metrics",
             self.PICARD_RNASEQ: "Metrics about the alignment of RNA-seq reads",
             self.PICARD_WGS: "Metrics for evaluating the performance of WGS analysis",
             self.QC_REPORT: "Results and QC",
@@ -287,6 +301,7 @@ class AnalysisTags(StrEnum):
     GERMLINE_PLOT: str = "germline-plot"
     JUNCTION: str = "junction"
     METRICS: str = "metrics"
+    MITOCHONDRIA: str = "mitochondria"
     PROFILE_PLOT: str = "profile-plot"
     QC_CRAM: str = "qc-cram"
     QC_CRAM_INDEX: str = "qc-cram-index"
@@ -333,6 +348,7 @@ class AnalysisTags(StrEnum):
             self.GERMLINE_PLOT: "Plot of LogR and BAF values for normal sample",
             self.JUNCTION: "Junction data",
             self.METRICS: "Data metrics",
+            self.MITOCHONDRIA: "Mitochondria related",
             self.PROFILE_PLOT: "Copy number profile plot",
             self.QC_CRAM: "QC alignment file in CRAM format",
             self.QC_CRAM_INDEX: "QC index file for alignment file in CRAM format",
@@ -370,6 +386,7 @@ class BioinfoToolsTags(StrEnum):
     DELLY: str = "delly"
     DESEQ2: str = "deseq2"
     DNASCOP: str = "dnascope"
+    EKLIPSE: str = "eklipse"
     EXPANSIONHUNTER: str = "expansionhunter"
     FASTP: str = "fastp"
     FASTQC: str = "fastqc"
@@ -420,6 +437,7 @@ class BioinfoToolsTags(StrEnum):
             self.DELLY: "Cancer structural variant prediction tool",
             self.DESEQ2: "Differential expression analysis with DESeq2",
             self.DNASCOP: "Call snv indels",
+            self.EKLIPSE: "Detection and quantification of mitochondrial DNA deletions",
             self.EXPANSIONHUNTER: "Call repeat expansions",
             self.FASTP: "Preprocessing tool for FastQ files",
             self.FASTQC: "Quality control tool for high throughput sequence data",
@@ -574,6 +592,35 @@ class MutantTags(StrEnum):
         return descriptions.get(self, "Description not available")
 
 
+class RarediseaseTags(StrEnum):
+    ANNOTATION: str = "annotation"
+    EKLIPSE_DEL: str = "eklipse-del"
+    EKLIPSE_GENES: str = "eklipse-gene"
+    EKLIPSE_PNG: str = "eklipse-png"
+    HAPLOGREP: str = "haplogrep"
+    NGSBITS: str = "ngsbits-samplegender"
+    SVDBQUERY: str = "svdbquery"
+    SVDBQUERY_INDEX: str = "svdbquery-index"
+
+    @classmethod
+    def name(cls) -> str:
+        return "Raredisease Tags"
+
+    @property
+    def description(self) -> str:
+        descriptions: dict[str, RarediseaseTags] = {
+            self.ANNOTATION: "Annotation tag",
+            self.EKLIPSE_DEL: "Mitochondrial eKLIPse deletions",
+            self.EKLIPSE_GENES: "Mitochondrial eKLIPse genes",
+            self.EKLIPSE_PNG: "Mitochondrial eKLIPse png",
+            self.HAPLOGREP: "Haplogrep",
+            self.NGSBITS: "Result from SampleGender tool to determine sample sex",
+            self.SVDBQUERY: "Query of SVDB results",
+            self.SVDBQUERY_INDEX: "Query of SVDB results, index",
+        }
+        return descriptions.get(self, "Description not available")
+
+
 class RnafusionTags(StrEnum):
     ARRIBA_VISUALISATION: str = "arriba-visualisation"
     FUSIONINSPECTOR_HTML: str = "fusioninspector-html"
@@ -695,6 +742,7 @@ TAG_CATEGORIES: list[Any] = COMMON_TAG_CATEGORIES + [
     MipTags,
     MutantTags,
     NextflowTags,
+    RarediseaseTags,
     RnafusionTags,
     TaxprofilerTags,
     TomteTags,

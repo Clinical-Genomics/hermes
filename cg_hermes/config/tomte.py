@@ -104,11 +104,6 @@ TOMTE_COMMON_TAGS = {
         "tags": [ReportTags.GENE_COUNTS],
         "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
-    frozenset({"samplesheet"}): {
-        "is_mandatory": True,
-        "tags": [NextflowTags.SAMPLESHEET],
-        "used_by": [UsageTags.CG, UsageTags.LONG_TERM_STORAGE],
-    },
     frozenset({"nextflow-config"}): {
         "is_mandatory": True,
         "tags": [NextflowTags.NEXTFLOW_CONFIG],
@@ -117,11 +112,6 @@ TOMTE_COMMON_TAGS = {
     frozenset({"nextflow-params"}): {
         "is_mandatory": True,
         "tags": [NextflowTags.NEXTFLOW_PARAMS],
-        "used_by": [UsageTags.CG, UsageTags.LONG_TERM_STORAGE],
-    },
-    frozenset({QCTags.QC_METRICS}): {
-        "is_mandatory": True,
-        "tags": [QCTags.QC_METRICS],
         "used_by": [UsageTags.CG, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset({"multiqc", "multiqc-html"}): {
@@ -173,6 +163,11 @@ TOMTE_COMMON_TAGS = {
         "is_mandatory": True,
         "tags": [QCTags.QC_METRICS, ReportTags.MULTIQC, ReportTags.PICARD_INSERT_SIZE],
         "used_by": [UsageTags.JANUS],
+    },
+    frozenset({"samplesheet"}): {
+        "is_mandatory": True,
+        "tags": [NextflowTags.SAMPLESHEET],
+        "used_by": [UsageTags.CG, UsageTags.LONG_TERM_STORAGE],
     },
 }
 

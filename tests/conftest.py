@@ -42,6 +42,11 @@ def fixture_mutant_files(fixtures_dir: Path) -> Path:
     return fixtures_dir / "mutant"
 
 
+@pytest.fixture(name="raredisease_files")
+def fixture_raredisease_files(fixtures_dir: Path) -> Path:
+    return fixtures_dir / "raredisease"
+
+
 @pytest.fixture(name="rnafusion_files")
 def fixture_rnafusion_files(fixtures_dir: Path) -> Path:
     return fixtures_dir / "rnafusion"
@@ -103,6 +108,11 @@ def fixture_balsamic_tn_panel_deliverables(balsamic_files: Path) -> Path:
 @pytest.fixture(name="balsamic_t_only_panel_deliverables")
 def fixture_balsamic_t_only_panel_deliverables(balsamic_files: Path) -> Path:
     return balsamic_files / "T_panel.hk"
+
+
+@pytest.fixture(name="raredisease_deliverables")
+def fixture_raredisease_deliverables(raredisease_files: Path) -> Path:
+    return raredisease_files / "case_id_deliverables.yaml"
 
 
 @pytest.fixture(name="rnafusion_deliverables")
