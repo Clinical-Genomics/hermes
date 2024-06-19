@@ -109,6 +109,11 @@ TOMTE_COMMON_TAGS = {
         "tags": [NextflowTags.NEXTFLOW_CONFIG],
         "used_by": [UsageTags.CG, UsageTags.LONG_TERM_STORAGE],
     },
+    frozenset({"nextflow-params"}): {
+        "is_mandatory": True,
+        "tags": [NextflowTags.NEXTFLOW_PARAMS],
+        "used_by": [UsageTags.CG, UsageTags.LONG_TERM_STORAGE],
+    },
     frozenset({"multiqc", "multiqc-html"}): {
         "is_mandatory": True,
         "tags": [ReportTags.MULTIQC_HTML, RawDataTags.RNA],

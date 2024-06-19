@@ -19,6 +19,7 @@
 | raw-gene-counts, star               | True      | gene-counts                             | clinical-delivery, long-term-storage         |
 | samplesheet                         | True      | nextflow-samplesheet                    | cg, long-term-storage                        |
 | nextflow-config                     | True      | nextflow-config                         | cg, long-term-storage                        |
+| nextflow-params                     | True      | nextflow-params                         | cg, long-term-storage                        |
 | qc-metrics                          | True      | qc-metrics                              | cg, long-term-storage                        |
 | multiqc-html, multiqc               | True      | multiqc-html, rna                       | clinical-delivery, scout, long-term-storage  |
 | multiqc, multiqc-json               | True      | multiqc-json                            | clinical-delivery, long-term-storage         |
