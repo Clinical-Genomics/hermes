@@ -75,11 +75,6 @@ RAREDISEASE_COMMON_TAGS = {
         "is_mandatory": False,
         "used_by": [UsageTags.SCOUT],
     },
-    frozenset(["expansionhunter", "str_variants_index"]): {
-        "tags": [BioinfoToolsTags.EXPANSIONHUNTER, VariantTags.VCF_STR_INDEX],
-        "is_mandatory": False,
-        "used_by": [UsageTags.SCOUT],
-    },
     frozenset(["expansionhunter", "str_alignment"]): {
         "tags": [BioinfoToolsTags.EXPANSIONHUNTER, AlignmentTags.BAM],
         "is_mandatory": False,

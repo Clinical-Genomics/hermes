@@ -210,12 +210,6 @@ files:
   path_index: ~
   step: expansionhunter
   tag: str_variants
-- format: vcf
-  id: SAMPLE_ID
-  path: /CASE_ID/repeat_expansions/SAMPLE_ID_repeat_expansion.vcf.gz.tbi
-  path_index: ~
-  step: expansionhunter
-  tag: str_variants_index
 - format: bam
   id: SAMPLE_ID
   path: /CASE_ID/repeat_expansions/SAMPLE_ID_exphunter_sorted.bam

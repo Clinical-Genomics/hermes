@@ -20,7 +20,7 @@ NEXTFLOW_TAGS = {
         "tags": [NextflowTags.SOFTWARE_VERSIONS],
         "used_by": [UsageTags.CG, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
-    frozenset({"qc-metrics"}): {
+    frozenset({QCTags.QC_METRICS}): {
         "is_mandatory": True,
         "tags": [QCTags.QC_METRICS],
         "used_by": [UsageTags.CG, UsageTags.LONG_TERM_STORAGE],
