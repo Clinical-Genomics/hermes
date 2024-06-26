@@ -9,6 +9,7 @@ from cg_hermes.constants.tags import UsageTags, NextflowTags
 from cg_hermes.constants.tags import (
     NextflowTags,
     QCTags,
+    ReportTags,
     UsageTags,
 )
 
@@ -22,7 +23,7 @@ NEXTFLOW_TAGS = {
     },
     frozenset({QCTags.QC_METRICS}): {
         "is_mandatory": True,
-        "tags": [QCTags.QC_METRICS],
+        "tags": [QCTags.QC_METRICS, ReportTags.DELIVERABLE],
         "used_by": [UsageTags.CG, UsageTags.LONG_TERM_STORAGE],
     },
 }
