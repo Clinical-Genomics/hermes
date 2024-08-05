@@ -1,4 +1,4 @@
-"""Common fixtures for hermes"""
+"""Common fixtures for Hermes."""
 
 from pathlib import Path
 
@@ -42,6 +42,11 @@ def fixture_mutant_files(fixtures_dir: Path) -> Path:
     return fixtures_dir / "mutant"
 
 
+@pytest.fixture(name="raredisease_files")
+def fixture_raredisease_files(fixtures_dir: Path) -> Path:
+    return fixtures_dir / "raredisease"
+
+
 @pytest.fixture(name="rnafusion_files")
 def fixture_rnafusion_files(fixtures_dir: Path) -> Path:
     return fixtures_dir / "rnafusion"
@@ -50,6 +55,11 @@ def fixture_rnafusion_files(fixtures_dir: Path) -> Path:
 @pytest.fixture(name="taxprofiler_files")
 def fixture_taxprofiler_files(fixtures_dir: Path) -> Path:
     return fixtures_dir / "taxprofiler"
+
+
+@pytest.fixture(name="tomte_files")
+def fixture_tomte_files(fixtures_dir: Path) -> Path:
+    return fixtures_dir / "tomte"
 
 
 # File fixtures
@@ -100,6 +110,11 @@ def fixture_balsamic_t_only_panel_deliverables(balsamic_files: Path) -> Path:
     return balsamic_files / "T_panel.hk"
 
 
+@pytest.fixture(name="raredisease_deliverables")
+def fixture_raredisease_deliverables(raredisease_files: Path) -> Path:
+    return raredisease_files / "case_id_deliverables.yaml"
+
+
 @pytest.fixture(name="rnafusion_deliverables")
 def fixture_rnafusion_deliverables(rnafusion_files: Path) -> Path:
     return rnafusion_files / "case_id_deliverables.yaml"
@@ -108,3 +123,8 @@ def fixture_rnafusion_deliverables(rnafusion_files: Path) -> Path:
 @pytest.fixture(name="taxprofiler_deliverables")
 def fixture_taxprofiler_deliverables(taxprofiler_files: Path) -> Path:
     return taxprofiler_files / "case_id_deliverables.yaml"
+
+
+@pytest.fixture(name="tomte_deliverables")
+def fixture_tomte_deliverables(tomte_files: Path) -> Path:
+    return tomte_files / "case_id_deliverables.yaml"

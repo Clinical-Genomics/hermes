@@ -1,4 +1,5 @@
 """Class to represent deliverables file."""
+
 import copy
 import logging
 from typing import FrozenSet
@@ -25,10 +26,11 @@ from cg_hermes.config.microsalt import MICROSALT_COMMON_TAGS
 from cg_hermes.config.mip_dna import MIP_DNA_TAGS
 from cg_hermes.config.mip_rna import MIP_RNA_TAGS
 from cg_hermes.config.mutant import MUTANT_COMMON_TAGS
+from cg_hermes.config.raredisease import RAREDISEASE_TAGS
 from cg_hermes.config.rnafusion import RNAFUSION_TAGS
 from cg_hermes.config.taxprofiler import TAXPROFILER_TAGS
-from cg_hermes.config.workflows import AnalysisType
-from cg_hermes.constants.workflow import Workflow
+from cg_hermes.config.tomte import TOMTE_TAGS
+from cg_hermes.constants.workflow import CancerAnalysisType, Workflow
 from cg_hermes.exceptions import MissingFileError
 from cg_hermes.models.tags import CGTag, TagMap
 from cg_hermes.models.workflow_deliverables import (
@@ -43,11 +45,9 @@ from cg_hermes.models.workflow_deliverables import (
     MipFile,
     MutantDeliverables,
     MutantFile,
-    RnafusionDeliverables,
-    RnafusionFile,
+    NfAnalysisDeliverables,
+    NfAnalysisFile,
     TagBase,
-    TaxprofilerDeliverables,
-    TaxprofilerFile,
     WorkflowDeliverables,
 )
 
@@ -61,7 +61,7 @@ class Deliverables:
         self,
         deliverables: dict[str, list[dict[str, str]]],
         workflow: Workflow,
-        analysis_type: AnalysisType | None = None,
+        analysis_type: CancerAnalysisType | None = None,
     ):
         self.raw_deliverables = deliverables
         self.workflow = workflow
@@ -102,18 +102,19 @@ class Deliverables:
             self.model: MipDeliverables = MipDeliverables.parse_obj(self.raw_deliverables)
             self.files = self.get_mip_files()
             self.configs = Deliverables.build_internal_tag_map(MIP_RNA_TAGS)
-        elif self.workflow == Workflow.RNAFUSION:
-            self.model: RnafusionDeliverables = RnafusionDeliverables.parse_obj(
+        elif self.workflow in Workflow.get_nf_workflows():
+            self.model: NfAnalysisDeliverables = NfAnalysisDeliverables.parse_obj(
                 self.raw_deliverables
             )
-            self.files = self.get_rnafusion_files()
-            self.configs = Deliverables.build_internal_tag_map(RNAFUSION_TAGS)
-        elif self.workflow == Workflow.TAXPROFILER:
-            self.model: TaxprofilerDeliverables = TaxprofilerDeliverables.parse_obj(
-                self.raw_deliverables
-            )
-            self.files = self.get_taxprofiler_files()
-            self.configs = Deliverables.build_internal_tag_map(TAXPROFILER_TAGS)
+            self.files = self.get_nf_analysis_files()
+            if self.workflow == Workflow.RAREDISEASE:
+                self.configs = Deliverables.build_internal_tag_map(RAREDISEASE_TAGS)
+            elif self.workflow == Workflow.RNAFUSION:
+                self.configs = Deliverables.build_internal_tag_map(RNAFUSION_TAGS)
+            elif self.workflow == Workflow.TAXPROFILER:
+                self.configs = Deliverables.build_internal_tag_map(TAXPROFILER_TAGS)
+            elif self.workflow == Workflow.TOMTE:
+                self.configs = Deliverables.build_internal_tag_map(TOMTE_TAGS)
         else:
             raise Exception(
                 "Invalid workflow ({}) set for Deliverables object".format(self.workflow)
@@ -175,23 +176,23 @@ class Deliverables:
         tag_set = []
         if self.workflow == Workflow.BALSAMIC:
             BALSAMIC_COMMON_TAGS = BALSAMIC_TAGS
-            if self.analysis_type == AnalysisType.tumor_wgs:
+            if self.analysis_type == CancerAnalysisType.TUMOR_WGS:
                 tag_set = TUMOR_ONLY_WGS_TAGS
-            elif self.analysis_type == AnalysisType.tumor_normal_wgs:
+            elif self.analysis_type == CancerAnalysisType.TUMOR_NORMAL_WGS:
                 tag_set = TUMOR_NORMAL_WGS_TAGS
-            elif self.analysis_type == AnalysisType.tumor_panel:
+            elif self.analysis_type == CancerAnalysisType.TUMOR_PANEL:
                 tag_set = TUMOR_ONLY_PANEL_TAGS
             else:
                 tag_set = TUMOR_NORMAL_PANEL_TAGS
         elif self.workflow == Workflow.BALSAMIC_QC:
             BALSAMIC_COMMON_TAGS = BALSAMIC_QC_TAGS
-            if self.analysis_type == AnalysisType.tumor_normal_wgs:
+            if self.analysis_type == CancerAnalysisType.TUMOR_NORMAL_WGS:
                 tag_set = QC_TUMOR_NORMAL_WGS_TAGS
-            elif self.analysis_type == AnalysisType.tumor_normal_panel:
+            elif self.analysis_type == CancerAnalysisType.TUMOR_NORMAL_PANEL:
                 tag_set = QC_TUMOR_NORMAL_PANEL_TAGS
         elif self.workflow == Workflow.BALSAMIC_UMI:
             BALSAMIC_COMMON_TAGS = BALSAMIC_UMI_TAGS
-            if self.analysis_type == AnalysisType.tumor_panel:
+            if self.analysis_type == CancerAnalysisType.TUMOR_PANEL:
                 tag_set = UMI_TUMOR_ONLY_PANEL_TAGS
             else:
                 tag_set = UMI_TUMOR_NORMAL_PANEL_TAGS
@@ -202,16 +203,19 @@ class Deliverables:
             updated_tags[tag_name]["is_mandatory"] = tag_info["is_mandatory"]
         return updated_tags
 
-    def validate_mandatory_files(self) -> None:
-        """Validate that all mandatory files are present in deliverables"""
+    def validate_mandatory_files(self, force: bool = False) -> None:
+        """Validate that all mandatory files are present in deliverables."""
         missing_mandatory_files = []
         for file_tags in self.configs:
             if not self.configs[file_tags].is_mandatory:
                 continue
             if file_tags not in self.file_identifiers:
-                LOG.warning("Mandatory file (%s) is missing", ", ".join(file_tags))
+                LOG.warning(f"Mandatory file ({', '.join(file_tags)}) is missing")
                 missing_mandatory_files.append(", ".join(file_tags))
         if missing_mandatory_files:
+            if force:
+                LOG.warning("Ignoring deliverables file validation")
+                return
             raise MissingFileError(
                 files=missing_mandatory_files, message="Deliverables is missing mandatory files"
             )
@@ -290,24 +294,8 @@ class Deliverables:
             files.append(TagBase(tags=identifier, subject_id=sample_id, path=file_obj.path))
         return files
 
-    def get_rnafusion_files(self) -> list[TagBase]:
-        file_obj: RnafusionFile
-        files: list[TagBase] = []
-        for file_obj in self.model.files:
-            identifier = [file_obj.step]
-            if file_obj.tag:
-                identifier.append(file_obj.tag)
-            files.append(
-                TagBase(
-                    tags=frozenset(identifier),
-                    subject_id=file_obj.id,
-                    path=file_obj.path,
-                )
-            )
-        return files
-
-    def get_taxprofiler_files(self) -> list[TagBase]:
-        file_obj: TaxprofilerFile
+    def get_nf_analysis_files(self) -> list[TagBase]:
+        file_obj: NfAnalysisFile
         files: list[TagBase] = []
         for file_obj in self.model.files:
             identifier = [file_obj.step]
