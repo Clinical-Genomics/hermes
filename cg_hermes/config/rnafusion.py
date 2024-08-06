@@ -5,115 +5,130 @@ mandatory by default. However the tags that are available to a particular analys
 """
 
 from cg_hermes.config.nextflow import NEXTFLOW_TAGS
-from cg_hermes.constants.tags import UsageTags
+from cg_hermes.constants.tags import (
+    AlignmentTags,
+    AnalysisTags,
+    BioinfoToolsTags,
+    NextflowTags,
+    QCTags,
+    RawDataTags,
+    ReportTags,
+    RnafusionTags,
+    UsageTags,
+)
 
 RNAFUSION_COMMON_TAGS = {
     frozenset({"arriba"}): {
         "is_mandatory": True,
         "bundle_id": True,
-        "tags": ["arriba", "fusion"],
+        "tags": [BioinfoToolsTags.ARRIBA, AnalysisTags.FUSION],
         "used_by": [UsageTags.CLINICAL_DELIVERY],
     },
     frozenset({"arriba-visualisation", "arriba"}): {
         "is_mandatory": False,
         "bundle_id": True,
-        "tags": ["arriba-visualisation", "visualization", "arriba", "research"],
+        "tags": [
+            RnafusionTags.ARRIBA_VISUALISATION,
+            AnalysisTags.VISUALIZATION,
+            BioinfoToolsTags.ARRIBA,
+            AnalysisTags.RESEARCH,
+        ],
         "used_by": [UsageTags.CLINICAL_DELIVERY],
     },
     frozenset({"fusioncatcher"}): {
         "is_mandatory": True,
-        "tags": ["fusioncatcher", "fusion"],
+        "tags": [BioinfoToolsTags.FUSIONCATCHER, AnalysisTags.FUSION],
         "used_by": [UsageTags.CLINICAL_DELIVERY],
     },
     frozenset({"fusioncatcher-summary", "fusioncatcher"}): {
         "is_mandatory": True,
-        "tags": ["fusioncatcher-summary"],
+        "tags": [BioinfoToolsTags.FUSIONCATCHER_SUMMARY],
         "used_by": [UsageTags.CLINICAL_DELIVERY],
     },
     frozenset({"star-fusion"}): {
         "is_mandatory": True,
-        "tags": ["star-fusion", "fusion"],
+        "tags": [BioinfoToolsTags.STAR_FUSION, AnalysisTags.FUSION],
         "used_by": [UsageTags.CLINICAL_DELIVERY],
     },
     frozenset({"fusionreport", "report"}): {
         "is_mandatory": True,
-        "tags": ["fusionreport", "research"],
+        "tags": [RnafusionTags.FUSIONREPORT, AnalysisTags.RESEARCH],
         "used_by": [UsageTags.CLINICAL_DELIVERY],
     },
     frozenset({"fusioninspector", "report"}): {
         "is_mandatory": False,
-        "tags": ["fusioninspector"],
+        "tags": [BioinfoToolsTags.FUSIONINSPECTOR],
         "used_by": [UsageTags.CLINICAL_DELIVERY],
     },
     frozenset({"fusioninspector-html", "report"}): {
         "is_mandatory": False,
-        "tags": ["fusioninspector-html", "research"],
+        "tags": [RnafusionTags.FUSIONINSPECTOR_HTML, AnalysisTags.RESEARCH],
         "used_by": [UsageTags.CLINICAL_DELIVERY],
     },
     frozenset({"multiqc-html", "report"}): {
         "is_mandatory": True,
-        "tags": ["multiqc-html", "rna"],
+        "tags": [ReportTags.MULTIQC_HTML, RawDataTags.RNA],
         "used_by": [UsageTags.CLINICAL_DELIVERY],
     },
     frozenset({"star-fusion-cram", "star-fusion"}): {
         "is_mandatory": True,
-        "tags": ["cram"],
+        "tags": [AlignmentTags.CRAM],
         "used_by": [UsageTags.CLINICAL_DELIVERY],
     },
     frozenset({"star-fusion-cram-index", "star-fusion"}): {
         "is_mandatory": True,
-        "tags": ["cram-index"],
+        "tags": [AlignmentTags.CRAM_INDEX],
         "used_by": [UsageTags.CLINICAL_DELIVERY],
     },
     frozenset({"star-align-gene-counts", "star-align"}): {
         "is_mandatory": True,
-        "tags": ["gene-counts"],
+        "tags": [ReportTags.GENE_COUNTS],
         "used_by": [UsageTags.CLINICAL_DELIVERY],
     },
     frozenset({"multiqc-json"}): {
         "is_mandatory": True,
-        "tags": ["multiqc-json"],
+        "tags": [ReportTags.MULTIQC_JSON],
         "used_by": [UsageTags.CG],
     },
     frozenset({"vcf-fusion", "vcf-collect"}): {
         "is_mandatory": False,
-        "tags": ["vcf-fusion"],
+        "tags": [AnalysisTags.VCF_FUSION],
         "used_by": [UsageTags.CLINICAL_DELIVERY],
     },
     frozenset({"multiqc-fastp", "multiqc"}): {
         "is_mandatory": True,
-        "tags": ["qc-metrics", "multiqc", "fastp"],
+        "tags": [QCTags.QC_METRICS, ReportTags.MULTIQC, BioinfoToolsTags.FASTP],
         "used_by": [UsageTags.JANUS],
     },
     frozenset({"multiqc-picard-duplicates", "multiqc"}): {
         "is_mandatory": True,
-        "tags": ["qc-metrics", "multiqc", "picard-duplicates"],
+        "tags": [QCTags.QC_METRICS, ReportTags.MULTIQC, ReportTags.PICARD_DUPLICATES],
         "used_by": [UsageTags.JANUS],
     },
     frozenset({"multiqc-picard-insert-size", "multiqc"}): {
         "is_mandatory": True,
-        "tags": ["qc-metrics", "multiqc", "picard-insert-size"],
+        "tags": [QCTags.QC_METRICS, ReportTags.MULTIQC, ReportTags.PICARD_INSERT_SIZE],
         "used_by": [UsageTags.JANUS],
     },
     frozenset({"multiqc-picard-rnaseq", "multiqc"}): {
         "is_mandatory": True,
-        "tags": ["qc-metrics", "multiqc", "picard-rnaseq"],
+        "tags": [QCTags.QC_METRICS, ReportTags.MULTIQC, ReportTags.PICARD_RNASEQ],
         "used_by": [UsageTags.JANUS],
     },
     frozenset({"multiqc-general-stats", "multiqc"}): {
         "is_mandatory": True,
-        "tags": ["qc-metrics", "multiqc", "general-stats"],
+        "tags": [QCTags.QC_METRICS, ReportTags.MULTIQC, ReportTags.GENERAL_STATS],
         "used_by": [UsageTags.JANUS],
     },
     frozenset({"multiqc-star", "multiqc"}): {
         "is_mandatory": True,
-        "tags": ["qc-metrics", "multiqc", "star"],
+        "tags": [QCTags.QC_METRICS, ReportTags.MULTIQC, ReportTags.STAR],
         "used_by": [UsageTags.JANUS],
     },
     frozenset({"samplesheet-valid"}): {
         "is_mandatory": True,
         "bundle_id": True,
-        "tags": ["samplesheet-valid"],
+        "tags": [NextflowTags.SAMPLESHEET_VALID],
         "used_by": [UsageTags.CG],
     },
 }
