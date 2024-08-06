@@ -1,25 +1,25 @@
 ---
 files:
 - format: tsv
-  id: CASE_ID
+  id: SAMPLE_ID
   path: /CASE_ID/fusioncatcher/SAMPLE_ID.fusioncatcher.fusion-genes.txt
   path_index: null
   step: fusioncatcher
   tag: fusioncatcher
 - format: txt
-  id: CASE_ID
+  id: SAMPLE_ID
   path: /CASE_ID/fusioncatcher/SAMPLE_ID.fusioncatcher.summary.txt
   path_index: null
   step: fusioncatcher
   tag: fusioncatcher-summary
 - format: tsv
-  id: CASE_ID
+  id: SAMPLE_ID
   path: /CASE_ID/starfusion/SAMPLE_ID.starfusion.fusion_predictions.tsv
   path_index: null
   step: star-fusion
   tag: star-fusion
 - format: tsv
-  id: CASE_ID
+  id: SAMPLE_ID
   path: /CASE_ID/arriba/SAMPLE_ID.arriba.fusions.tsv
   path_index: null
   step: arriba
@@ -37,25 +37,25 @@ files:
   step: star-fusion
   tag: star-fusion-cram-index
 - format: html
-  id: CASE_ID
+  id: SAMPLE_ID
   path: /CASE_ID/fusionreport/SAMPLE_ID/SAMPLE_ID_fusionreport_index.html
   path_index: null
   step: report
   tag: fusionreport
 - format: tsv
-  id: CASE_ID
+  id: SAMPLE_ID
   path: /CASE_ID/fusioninspector/SAMPLE_ID.FusionInspector.fusions.tsv
   path_index: null
   step: report
   tag: fusioninspector
 - format: html
-  id: CASE_ID
+  id: SAMPLE_ID
   path: /CASE_ID/fusioninspector/SAMPLE_ID.fusion_inspector_web.html
   path_index: null
   step: report
   tag: fusioninspector-html
 - format: pdf
-  id: CASE_ID
+  id: SAMPLE_ID
   path: /CASE_ID/arriba_visualisation/SAMPLE_ID_combined_fusions_arriba_visualisation.pdf
   path_index: null
   step: arriba
@@ -79,13 +79,13 @@ files:
   step: software-versions
   tag: software-versions
 - format: vcf
-  id: CASE_ID
+  id: SAMPLE_ID
   path: /CASE_ID/vcf/SAMPLE_ID_fusion_data.vcf.gz
   path_index: null
   step: vcf-collect
   tag: vcf-fusion
 - format: tab
-  id: CASE_ID
+  id: SAMPLE_ID
   path: /CASE_ID/star_for_starfusion/SAMPLE_ID.ReadsPerGene.out.tab
   path_index: null
   step: star-align
