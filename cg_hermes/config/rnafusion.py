@@ -73,7 +73,7 @@ RNAFUSION_COMMON_TAGS = {
     frozenset({"multiqc-json"}): {
         "is_mandatory": True,
         "tags": ["multiqc-json"],
-        "used_by": ["deliver"],
+        "used_by": [UsageTags.CG],
     },
     frozenset({"vcf-fusion", "vcf-collect"}): {
         "is_mandatory": False,
@@ -83,38 +83,38 @@ RNAFUSION_COMMON_TAGS = {
     frozenset({"multiqc-fastp", "multiqc"}): {
         "is_mandatory": True,
         "tags": ["qc-metrics", "multiqc", "fastp"],
-        "used_by": ["janus"],
+        "used_by": [UsageTags.JANUS],
     },
     frozenset({"multiqc-picard-duplicates", "multiqc"}): {
         "is_mandatory": True,
         "tags": ["qc-metrics", "multiqc", "picard-duplicates"],
-        "used_by": ["janus"],
+        "used_by": [UsageTags.JANUS],
     },
     frozenset({"multiqc-picard-insert-size", "multiqc"}): {
         "is_mandatory": True,
         "tags": ["qc-metrics", "multiqc", "picard-insert-size"],
-        "used_by": ["janus"],
+        "used_by": [UsageTags.JANUS],
     },
     frozenset({"multiqc-picard-rnaseq", "multiqc"}): {
         "is_mandatory": True,
         "tags": ["qc-metrics", "multiqc", "picard-rnaseq"],
-        "used_by": ["janus"],
+        "used_by": [UsageTags.JANUS],
     },
     frozenset({"multiqc-general-stats", "multiqc"}): {
         "is_mandatory": True,
         "tags": ["qc-metrics", "multiqc", "general-stats"],
-        "used_by": ["janus"],
+        "used_by": [UsageTags.JANUS],
     },
     frozenset({"multiqc-star", "multiqc"}): {
         "is_mandatory": True,
         "tags": ["qc-metrics", "multiqc", "star"],
-        "used_by": ["janus"],
+        "used_by": [UsageTags.JANUS],
     },
     frozenset({"samplesheet-valid"}): {
         "is_mandatory": True,
         "bundle_id": True,
         "tags": ["samplesheet-valid"],
-        "used_by": ["cg"],
+        "used_by": [UsageTags.CG],
     },
 }
 
