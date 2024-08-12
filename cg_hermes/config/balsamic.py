@@ -22,10 +22,10 @@ RAW_TAGS = {
     # Custom QC
     "metrics_deliverables.yaml": ["yaml", "qc-metrics-yaml"],
     # Alignment files (PANEL & WGS)
-    "tumor.merged.cram": ["cram", "tumor-cram"],
-    "tumor.merged.cram.crai": ["cram", "tumor-cram-index"],
-    "normal.merged.cram": ["cram", "normal-cram"],
-    "normal.merged.cram.crai": ["cram", "normal-cram-index"],
+    "tumor.cram": ["cram", "tumor-cram"],
+    "tumor.cram.crai": ["cram", "tumor-cram-index"],
+    "normal.cram": ["cram", "normal-cram"],
+    "normal.cram.crai": ["cram", "normal-cram-index"],
     # UMI alignment files (PANEL)
     "tumor_umi_consensusfiltered.merged.cram": ["cram", "umi-tumor-cram"],
     "tumor_umi_consensusfiltered.merged.cram.crai": ["cram", "umi-tumor-cram-index"],
@@ -96,7 +96,7 @@ RAW_TAGS = {
     "svdb.research.filtered.pass.vcf.gz.tbi": ["vcf-pass-svdb", "research-vcf-pass-svdb-index"],
     "svdb.clinical.filtered.pass.vcf.gz": ["vcf-pass-svdb", "clinical-vcf-pass-svdb"],
     "svdb.clinical.filtered.pass.vcf.gz.tbi": ["vcf-pass-svdb", "clinical-vcf-pass-svdb-index"],
-    # SNVs (WGS)
+    # SNVs/InDels
     "tnscope.vcf.gz": [
         "vcf-tnscope",
         "research-vcf-tnscope",
@@ -124,35 +124,6 @@ RAW_TAGS = {
         "vcf-pass-tnscope",
         "snv",
         "clinical-vcf-pass-tnscope-index",
-    ],
-    # SNVs/INDELs (PANEL)
-    "vardict.vcf.gz": [
-        "vcf-vardict",
-        "research-vcf-vardict",
-    ],
-    "vardict.vcf.gz.tbi": [
-        "vcf-vardict",
-        "research-vcf-vardict-index",
-    ],
-    "vardict.research.filtered.pass.vcf.gz": [
-        "vcf-pass-vardict",
-        "snv",
-        "research-vcf-pass-vardict",
-    ],
-    "vardict.research.filtered.pass.vcf.gz.tbi": [
-        "vcf-pass-vardict",
-        "snv",
-        "research-vcf-pass-vardict-index",
-    ],
-    "vardict.clinical.filtered.pass.vcf.gz": [
-        "vcf-pass-vardict",
-        "snv",
-        "clinical-vcf-pass-vardict",
-    ],
-    "vardict.clinical.filtered.pass.vcf.gz.tbi": [
-        "vcf-pass-vardict",
-        "snv",
-        "clinical-vcf-pass-vardict-index",
     ],
     # UMI SNVs/INDELs (PANEL)
     "tnscope_umi.vcf.gz": [
@@ -295,22 +266,22 @@ QC_TAGS = {
 
 ALIGNMENT_TAGS = {
     # Alignment files (PANEL & WGS)
-    frozenset(RAW_TAGS["tumor.merged.cram"]): {  # cram (tumor)
+    frozenset(RAW_TAGS["tumor.cram"]): {  # cram (tumor)
         "tags": ["tumor", "cram"],
         "is_mandatory": True,
         "used_by": ["deliver", "scout"],
     },
-    frozenset(RAW_TAGS["tumor.merged.cram.crai"]): {
+    frozenset(RAW_TAGS["tumor.cram.crai"]): {
         "tags": ["tumor", "cram-index"],
         "is_mandatory": True,
         "used_by": ["deliver", "scout"],
     },
-    frozenset(RAW_TAGS["normal.merged.cram"]): {  # cram (normal)
+    frozenset(RAW_TAGS["normal.cram"]): {  # cram (normal)
         "tags": ["normal", "cram"],
         "is_mandatory": False,
         "used_by": ["deliver", "scout"],
     },
-    frozenset(RAW_TAGS["normal.merged.cram.crai"]): {
+    frozenset(RAW_TAGS["normal.cram.crai"]): {
         "tags": ["normal", "cram-index"],
         "is_mandatory": False,
         "used_by": ["deliver", "scout"],
@@ -407,32 +378,32 @@ CALLERS_TAGS = {
     # SNVs (WGS)
     frozenset(RAW_TAGS["tnscope.vcf.gz"]): {
         "tags": ["tnscope", "vcf-snv"],
-        "is_mandatory": False,
+        "is_mandatory": True,
         "used_by": ["deliver"],
     },
     frozenset(RAW_TAGS["tnscope.vcf.gz.tbi"]): {
         "tags": ["tnscope", "vcf-snv-index"],
-        "is_mandatory": False,
+        "is_mandatory": True,
         "used_by": ["deliver"],
     },
     frozenset(RAW_TAGS["tnscope.research.filtered.pass.vcf.gz"]): {
         "tags": ["tnscope", "vcf-snv-research"],
-        "is_mandatory": False,
+        "is_mandatory": True,
         "used_by": ["deliver"],
     },
     frozenset(RAW_TAGS["tnscope.research.filtered.pass.vcf.gz.tbi"]): {
         "tags": ["tnscope", "vcf-snv-research-index"],
-        "is_mandatory": False,
+        "is_mandatory": True,
         "used_by": ["deliver"],
     },
     frozenset(RAW_TAGS["tnscope.clinical.filtered.pass.vcf.gz"]): {
         "tags": ["tnscope", "vcf-snv-clinical"],
-        "is_mandatory": False,
+        "is_mandatory": True,
         "used_by": ["deliver", "scout"],
     },
     frozenset(RAW_TAGS["tnscope.clinical.filtered.pass.vcf.gz.tbi"]): {
         "tags": ["tnscope", "vcf-snv-clinical-index"],
-        "is_mandatory": False,
+        "is_mandatory": True,
         "used_by": ["deliver", "scout"],
     },
     # CNVs (WGS)
@@ -456,57 +427,6 @@ CALLERS_TAGS = {
         "is_mandatory": False,
         "used_by": ["deliver", "scout"],
     },
-    frozenset(RAW_TAGS["cov.bed.gz"]): {
-        "tags": ["gens", "coverage", "bed"],
-        "is_mandatory": False,
-        "used_by": ["scout"],
-    },
-    frozenset(RAW_TAGS["cov.bed.gz.tbi"]): {
-        "tags": ["gens", "coverage", "bed-index"],
-        "is_mandatory": False,
-        "used_by": ["scout"],
-    },
-    frozenset(RAW_TAGS["baf.bed.gz"]): {
-        "tags": ["gens", "fracsnp", "bed"],
-        "is_mandatory": False,
-        "used_by": ["scout"],
-    },
-    frozenset(RAW_TAGS["baf.bed.gz.tbi"]): {
-        "tags": ["gens", "fracsnp", "bed-index"],
-        "is_mandatory": False,
-        "used_by": ["scout"],
-    },
-    # SNVs/INDELs (PANEL)
-    frozenset(RAW_TAGS["vardict.vcf.gz"]): {
-        "tags": ["vardict", "vcf-snv"],
-        "is_mandatory": False,
-        "used_by": ["deliver"],
-    },
-    frozenset(RAW_TAGS["vardict.vcf.gz.tbi"]): {
-        "tags": ["vardict", "vcf-snv-index"],
-        "is_mandatory": False,
-        "used_by": ["deliver"],
-    },
-    frozenset(RAW_TAGS["vardict.research.filtered.pass.vcf.gz"]): {
-        "tags": ["vardict", "vcf-snv-research"],
-        "is_mandatory": False,
-        "used_by": ["deliver"],
-    },
-    frozenset(RAW_TAGS["vardict.research.filtered.pass.vcf.gz.tbi"]): {
-        "tags": ["vardict", "vcf-snv-research-index"],
-        "is_mandatory": False,
-        "used_by": ["deliver"],
-    },
-    frozenset(RAW_TAGS["vardict.clinical.filtered.pass.vcf.gz"]): {
-        "tags": ["vardict", "vcf-snv-clinical"],
-        "is_mandatory": False,
-        "used_by": ["deliver", "scout"],
-    },
-    frozenset(RAW_TAGS["vardict.clinical.filtered.pass.vcf.gz.tbi"]): {
-        "tags": ["vardict", "vcf-snv-clinical-index"],
-        "is_mandatory": False,
-        "used_by": ["deliver", "scout"],
-    },
     # CNVs (PANEL)
     frozenset(RAW_TAGS["tumor.merged.cns"]): {
         "tags": ["cnvkit", "metrics", "segments"],
@@ -527,6 +447,27 @@ CALLERS_TAGS = {
         "tags": ["cnvkit", "tumor", "vcf2cytosure"],
         "is_mandatory": False,
         "used_by": ["deliver", "scout"],
+    },
+    # CNVs visualization in GENS
+    frozenset(RAW_TAGS["cov.bed.gz"]): {
+        "tags": ["gens", "coverage", "bed"],
+        "is_mandatory": True,
+        "used_by": ["scout"],
+    },
+    frozenset(RAW_TAGS["cov.bed.gz.tbi"]): {
+        "tags": ["gens", "coverage", "bed-index"],
+        "is_mandatory": True,
+        "used_by": ["scout"],
+    },
+    frozenset(RAW_TAGS["baf.bed.gz"]): {
+        "tags": ["gens", "fracsnp", "bed"],
+        "is_mandatory": True,
+        "used_by": ["scout"],
+    },
+    frozenset(RAW_TAGS["baf.bed.gz.tbi"]): {
+        "tags": ["gens", "fracsnp", "bed-index"],
+        "is_mandatory": True,
+        "used_by": ["scout"],
     },
     # CNV report
     frozenset(RAW_TAGS["report.pdf"]): {
@@ -585,12 +526,6 @@ CALLERS_TAGS = {
         "is_mandatory": False,
         "used_by": ["deliver"],
     },
-    # TMB (PANEL)
-    frozenset(RAW_TAGS["vardict.balsamic_stat"]): {
-        "tags": ["research", "vardict", "tmb"],
-        "is_mandatory": False,
-        "used_by": ["storage"],
-    },
     # TMB (WGS)
     frozenset(RAW_TAGS["tnscope.balsamic_stat"]): {
         "tags": ["research", "tnscope", "tmb"],
@@ -618,10 +553,6 @@ TUMOR_ONLY_WGS_TAGS = {
     frozenset(RAW_TAGS["tnscope.clinical.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
     # CNVs (WGS)
     frozenset(RAW_TAGS["tumor.vcf2cytosure.cgh"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["cov.bed.gz"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["cov.bed.gz.tbi"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["baf.bed.gz"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["baf.bed.gz.tbi"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["cnvpytor.circular.png"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["cnvpytor.scatter.png"]): {"is_mandatory": True},
     # SVs (WGS)
@@ -635,8 +566,8 @@ TUMOR_NORMAL_WGS_TAGS = {
     frozenset(RAW_TAGS["multiqc_picard_wgsmetrics.json"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["multiqc_somalier.json"]): {"is_mandatory": True},
     # Alignment files (PANEL & WGS)
-    frozenset(RAW_TAGS["normal.merged.cram"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["normal.merged.cram.crai"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["normal.cram"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["normal.cram.crai"]): {"is_mandatory": True},
     # Germline SNVs (PANEL & WGS)
     frozenset(RAW_TAGS["germline.normal.dnascope.vcf.gz"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["germline.normal.dnascope.vcf.gz.tbi"]): {"is_mandatory": True},
@@ -655,10 +586,6 @@ TUMOR_NORMAL_WGS_TAGS = {
     frozenset(RAW_TAGS["ascat.copynumber.txt.gz"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["tumor.vcf2cytosure.cgh"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["normal.vcf2cytosure.cgh"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["cov.bed.gz"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["cov.bed.gz.tbi"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["baf.bed.gz"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["baf.bed.gz.tbi"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["ascat.ascatprofile.png"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["ascat.rawprofile.png"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["ascat.ASPCF.png"]): {"is_mandatory": True},
@@ -668,33 +595,24 @@ TUMOR_NORMAL_WGS_TAGS = {
     # SVs (WGS)
     frozenset(RAW_TAGS["tumor.tiddit_cov.bed"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["normal.tiddit_cov.bed"]): {"is_mandatory": True},
-    # TMB (WGS)
-    frozenset(RAW_TAGS["tnscope.balsamic_stat"]): {"is_mandatory": True},
 }
 
 TUMOR_ONLY_PANEL_TAGS = {
     # SNVs/INDELs (PANEL)
-    frozenset(RAW_TAGS["vardict.vcf.gz"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["vardict.vcf.gz.tbi"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["vardict.research.filtered.pass.vcf.gz"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["vardict.research.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["vardict.clinical.filtered.pass.vcf.gz"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["vardict.clinical.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
     # CNVs (PANEL)
     frozenset(RAW_TAGS["tumor.merged.cns"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["tumor.merged.cnr"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["gene_metrics"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["cnvkit.vcf2cytosure.cgh"]): {"is_mandatory": True},
     # TMB (PANEL)
-    frozenset(RAW_TAGS["vardict.balsamic_stat"]): {"is_mandatory": True},
 }
 
 TUMOR_NORMAL_PANEL_TAGS = {
     # QC
     frozenset(RAW_TAGS["multiqc_somalier.json"]): {"is_mandatory": True},
     # Alignment files (PANEL & WGS)
-    frozenset(RAW_TAGS["normal.merged.cram"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["normal.merged.cram.crai"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["normal.cram"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["normal.cram.crai"]): {"is_mandatory": True},
     # Germline SNVs (PANEL & WGS)
     frozenset(RAW_TAGS["germline.normal.dnascope.vcf.gz"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["germline.normal.dnascope.vcf.gz.tbi"]): {"is_mandatory": True},
@@ -703,17 +621,10 @@ TUMOR_NORMAL_PANEL_TAGS = {
     frozenset(RAW_TAGS["genotype.normal.dnascope.vcf.gz"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["genotype.normal.dnascope.vcf.gz.tbi"]): {"is_mandatory": True},
     # SNVs/INDELs (PANEL)
-    frozenset(RAW_TAGS["vardict.vcf.gz"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["vardict.vcf.gz.tbi"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["vardict.research.filtered.pass.vcf.gz"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["vardict.research.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["vardict.clinical.filtered.pass.vcf.gz"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["vardict.clinical.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
     # CNVs (PANEL)
     frozenset(RAW_TAGS["tumor.merged.cns"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["tumor.merged.cnr"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["gene_metrics"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["cnvkit.vcf2cytosure.cgh"]): {"is_mandatory": True},
     # TMB (PANEL)
-    frozenset(RAW_TAGS["vardict.balsamic_stat"]): {"is_mandatory": True},
 }

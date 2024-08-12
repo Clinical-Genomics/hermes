@@ -74,12 +74,7 @@ BALSAMIC_UMI_TAGS = {**BALSAMIC_TAGS, **UMI_ALIGNMENT_TAGS, **UMI_CALLERS_TAGS}
 
 UMI_TUMOR_ONLY_PANEL_TAGS = {
     # SNVs/INDELs (PANEL)
-    frozenset(RAW_TAGS["vardict.vcf.gz"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["vardict.vcf.gz.tbi"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["vardict.research.filtered.pass.vcf.gz"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["vardict.research.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["vardict.clinical.filtered.pass.vcf.gz"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["vardict.clinical.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
+
     # CNVs (PANEL)
     frozenset(RAW_TAGS["tumor.merged.cns"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["tumor.merged.cnr"]): {"is_mandatory": True},
