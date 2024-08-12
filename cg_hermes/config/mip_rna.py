@@ -44,7 +44,7 @@ MIP_RNA_TAGS = {
     frozenset(["multiqc_ar", "json"]): {
         "tags": ["multiqc-json"],
         "is_mandatory": True,
-        "used_by": ["vogue"],
+        "used_by": ["storage"],
     },
     frozenset(["qccollect_ar", "deliverable"]): {
         "tags": ["qc-metrics", "deliverable"],

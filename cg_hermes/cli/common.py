@@ -1,4 +1,5 @@
-"""Store common utilities"""
+"""Store common utilities."""
+
 import json
 import logging
 from json.decoder import JSONDecodeError
@@ -11,22 +12,24 @@ from yaml.parser import ParserError
 LOG = logging.getLogger(__name__)
 
 
-def get_deliverables(infile: Path) -> dict:
-    """Open file and load into dict
-
-    Try first open yaml, then json.
+def get_deliverables(deliverables_file: Path) -> dict[str, list[dict[str, str]]]:
     """
-    with open(infile, "r") as handle:
+    Open file and load into a dictionary. Try to first open YAML, then JSON.
+
+    Raises:
+        typer.Abort: If the file cannot be parsed as YAML or JSON.
+    """
+    with open(deliverables_file, "r") as handle:
         try:
             deliverables = yaml.load(handle, Loader=yaml.SafeLoader)
-        except ParserError as err:
-            LOG.error(err)
-            LOG.warning("File %s is not in yaml format", infile)
+        except ParserError as error:
+            LOG.error(error)
+            LOG.warning(f"File {deliverables_file} is not in YAML format")
             try:
                 deliverables = json.load(handle)
-            except JSONDecodeError as err:
-                LOG.error(err)
-                LOG.warning("File %s is not in json format", infile)
+            except JSONDecodeError as error:
+                LOG.error(error)
+                LOG.warning(f"File {deliverables_file} is not in JSON format")
                 LOG.warning("Can not parse file")
                 raise typer.Abort()
         return deliverables

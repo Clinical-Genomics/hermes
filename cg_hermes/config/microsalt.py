@@ -18,7 +18,7 @@ MICROSALT_COMMON_TAGS = {
     frozenset({"microsalt-json", "result_aggregation"}): {
         "is_mandatory": False,
         "tags": ["typing-report", "qc-metrics"],
-        "used_by": ["vogue"],
+        "used_by": ["storage"],
     },
     frozenset({"runtime-settings", "analysis"}): {
         "is_mandatory": True,

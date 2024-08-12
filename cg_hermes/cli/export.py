@@ -1,6 +1,6 @@
 import copy
 import logging
-from enum import Enum
+from enum import StrEnum
 
 import typer
 from tabulate import tabulate
@@ -11,9 +11,12 @@ from cg_hermes.config.microsalt import MICROSALT_COMMON_TAGS
 from cg_hermes.config.mip_dna import MIP_DNA_TAGS
 from cg_hermes.config.mip_rna import MIP_RNA_TAGS
 from cg_hermes.config.mutant import MUTANT_COMMON_TAGS
-from cg_hermes.config.rnafusion import NXF_RNAFUSION_COMMON_TAGS
-from cg_hermes.config.pipelines import Pipeline
-from cg_hermes.config.tags import COMMON_TAG_CATEGORIES
+from cg_hermes.config.raredisease import RAREDISEASE_TAGS
+from cg_hermes.config.rnafusion import RNAFUSION_TAGS
+from cg_hermes.config.taxprofiler import TAXPROFILER_TAGS
+from cg_hermes.config.tomte import TOMTE_TAGS
+from cg_hermes.constants.tags import COMMON_TAG_CATEGORIES
+from cg_hermes.constants.workflow import Workflow
 
 app = typer.Typer()
 
@@ -22,9 +25,9 @@ LOG = logging.getLogger(__name__)
 
 def get_table(tags: dict):
     table = []
-    for pipeline_tags, tag_info in tags.items():
+    for workflow_tags, tag_info in tags.items():
         row = [
-            ", ".join(pipeline_tags),
+            ", ".join(workflow_tags),
             str(tag_info["is_mandatory"]),
             ", ".join(tag_info["tags"]),
             ", ".join(tag_info["used_by"]),
@@ -33,41 +36,53 @@ def get_table(tags: dict):
     return table
 
 
-class OutputFormat(str, Enum):
+class OutputFormat(StrEnum):
     github = "github"
     plain = "plain"
 
 
 BALSAMIC_COMMON_TAGS = copy.deepcopy(BALSAMIC_UMI_TAGS)
 
-PIPELINE_MAP = {
-    Pipeline.MIP_DNA: {
+WORKFLOW_MAP = {
+    Workflow.MIP_DNA: {
         "header": ["Mip-dna tags", "Mandatory", "HK tags", "Used by"],
         "tags": MIP_DNA_TAGS,
     },
-    Pipeline.MIP_RNA: {
+    Workflow.MIP_RNA: {
         "header": ["Mip-rna tags", "Mandatory", "HK tags", "Used by"],
         "tags": MIP_RNA_TAGS,
     },
-    Pipeline.FLUFFY: {
+    Workflow.FLUFFY: {
         "header": ["Fluffy tags", "Mandatory", "HK tags", "Used by"],
         "tags": FLUFFY_COMMON_TAGS,
     },
-    Pipeline.MICROSALT: {
+    Workflow.MICROSALT: {
         "header": ["Microsalt tags", "Mandatory", "HK tags", "Used by"],
         "tags": MICROSALT_COMMON_TAGS,
     },
-    Pipeline.BALSAMIC: {
+    Workflow.BALSAMIC: {
         "header": ["Balsamic tags", "Mandatory", "HK tags", "Used by"],
         "tags": BALSAMIC_COMMON_TAGS,
     },
-    Pipeline.SARS_COV_2: {
+    Workflow.MUTANT: {
         "header": ["Mutant tags", "Mandatory", "HK tags", "Used by"],
         "tags": MUTANT_COMMON_TAGS,
     },
-    Pipeline.RNAFUSION: {
+    Workflow.RAREDISEASE: {
+        "header": ["Raredisease tags", "Mandatory", "HK tags", "Used by"],
+        "tags": RAREDISEASE_TAGS,
+    },
+    Workflow.RNAFUSION: {
         "header": ["Rnafusion tags", "Mandatory", "HK tags", "Used by"],
-        "tags": NXF_RNAFUSION_COMMON_TAGS,
+        "tags": RNAFUSION_TAGS,
+    },
+    Workflow.TAXPROFILER: {
+        "header": ["Taxprofiler tags", "Mandatory", "HK tags", "Used by"],
+        "tags": TAXPROFILER_TAGS,
+    },
+    Workflow.TOMTE: {
+        "header": ["Tomte tags", "Mandatory", "HK tags", "Used by"],
+        "tags": TOMTE_TAGS,
     },
 }
 
@@ -75,36 +90,29 @@ PIPELINE_MAP = {
 @app.command(name="tags")
 def export_tags_cmd(
     output: OutputFormat = typer.Option(OutputFormat.github),
-    pipeline: Pipeline = None,
+    workflow: Workflow = None,
 ):
-    """Export tag definitions from hermes"""
-    LOG.info("Running export tags for pipeline %s", pipeline)
+    """Export tag definitions from Hermes."""
+    LOG.info(f"Running export tags for workflow: {workflow}")
 
-    if not pipeline:
+    if not workflow:
         header = ["Tag name", "Description"]
         for category in COMMON_TAG_CATEGORIES:
-            table_name = category.upper().replace("_", " ")
-            if output.value == "github":
+            table_name: str = category.name()
+            if output == "github":
                 typer.echo(f"## {table_name}")
             else:
                 typer.echo(table_name)
             typer.echo()
-            table = [
-                [
-                    tag_name,
-                    COMMON_TAG_CATEGORIES[category][tag_name]["description"],
-                ]
-                for tag_name in COMMON_TAG_CATEGORIES[category]
-            ]
-
-            typer.echo(tabulate(table, headers=header, tablefmt=output.value))
+            table = [[tag.value, tag.description] for tag in category]
+            typer.echo(tabulate(table, headers=header, tablefmt=output))
             typer.echo()
         raise typer.Exit()
-    if pipeline.value not in PIPELINE_MAP:
-        LOG.info("Could not recognize pipeline")
+    if workflow not in WORKFLOW_MAP:
+        LOG.info("Could not recognize workflow")
         raise typer.Exit(code=1)
 
-    header = PIPELINE_MAP[pipeline]["header"]
-    table = get_table(PIPELINE_MAP[pipeline]["tags"])
+    header = WORKFLOW_MAP[workflow]["header"]
+    table = get_table(WORKFLOW_MAP[workflow]["tags"])
 
-    typer.echo(tabulate(table, headers=header, tablefmt=output.value))
+    typer.echo(tabulate(table, headers=header, tablefmt=output))

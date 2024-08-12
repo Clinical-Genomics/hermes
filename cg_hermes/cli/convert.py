@@ -1,4 +1,4 @@
-"""CLI for converting between formats"""
+"""CLI for converting between formats."""
 
 import json
 import logging
@@ -8,9 +8,10 @@ import typer
 from pydantic import ValidationError
 
 from cg_hermes.cli.common import get_deliverables
-from cg_hermes.config.pipelines import AnalysisType, Pipeline
+from cg_hermes.constants.workflow import CancerAnalysisType, Workflow
 from cg_hermes.deliverables import Deliverables
 from cg_hermes.exceptions import MissingFileError
+from cg_hermes.models.workflow_deliverables import CGDeliverables
 from cg_hermes.validate import get_deliverables_obj
 
 LOG = logging.getLogger(__name__)
@@ -20,29 +21,30 @@ app = typer.Typer()
 
 @app.command(name="deliverables")
 def convert_cmd(
-    infile: Path,
-    pipeline: Pipeline = typer.Option(..., help="Specify the analysis type"),
-    analysis_type: AnalysisType = typer.Option(None, help="Specify the analysis type"),
-):
-    LOG.info(
-        "Convert deliverable file %s from pipeline %s to CG format",
-        infile,
-        pipeline,
-    )
-    # Read raw file into dict
-    deliverables_raw = get_deliverables(infile)
+    deliverables_file: Path,
+    workflow: Workflow = typer.Option(..., help="Specify the workflow"),
+    analysis_type: CancerAnalysisType = typer.Option(None, help="Specify the analysis type"),
+    force: bool = typer.Option(False, "--force", "-f", help="Bypass deliverables file validation"),
+) -> None:
+    """
+    Convert deliverable file to CG format.
+
+    Raises:
+        typer.Abort: If an error occurs during conversion or validation.
+    """
+    LOG.info(f"Convert deliverable file: {deliverables_file} from workflow {workflow} to CG format")
+    raw_deliverables: dict[str, list[dict[str, str]]] = get_deliverables(deliverables_file)
     try:
-        deliverables_obj: Deliverables = get_deliverables_obj(
-            deliverables=deliverables_raw, pipeline=pipeline, analysis_type=analysis_type
+        deliverables: Deliverables = get_deliverables_obj(
+            deliverables=raw_deliverables, workflow=workflow, analysis_type=analysis_type
         )
-        deliverables_obj.validate_mandatory_files()
-    except SyntaxError:
+        deliverables.validate_mandatory_files(force)
+    except SyntaxError as error:
+        LOG.error(error)
         raise typer.Abort()
-    except (ValidationError, MissingFileError) as err:
-        LOG.error(err)
-        LOG.warning("File %s does not follow the spec", infile)
+    except (ValidationError, MissingFileError) as error:
+        LOG.error(error)
+        LOG.error(f"File: {deliverables_file} does not follow the specification")
         raise typer.Abort()
-
-    cg_deliverables = deliverables_obj.convert_to_cg_deliverables()
-
+    cg_deliverables: CGDeliverables = deliverables.convert_to_cg_deliverables()
     typer.echo(json.dumps(cg_deliverables.dict(), indent=2))

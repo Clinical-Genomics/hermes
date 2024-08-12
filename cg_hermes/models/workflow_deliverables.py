@@ -1,4 +1,4 @@
-from typing import FrozenSet, List, Optional
+from typing import FrozenSet
 
 from pydantic import BaseModel, validator
 
@@ -11,7 +11,7 @@ class FileBase(BaseModel):
     """Definition for elements in deliverables file"""
 
     path: str
-    tag: Optional[str]
+    tag: str | None
     id: str
 
 
@@ -19,7 +19,7 @@ class MipFile(FileBase):
     """Definition for elements in MIP deliverables"""
 
     format: str
-    path_index: Optional[str]
+    path_index: str | None
     step: str
 
 
@@ -36,19 +36,20 @@ class MutantFile(FileBase):
     format: str
     step: str
 
-class RnafusionFile(FileBase):
-    """Definition for elements in Rnafusion deliverables"""
+
+class NfAnalysisFile(FileBase):
+    """Definition for elements in deliverables for nextflow workflows."""
 
     format: str
-    path_index: Optional[str]
+    path_index: str | None
     step: str
 
 
 class BalsamicFile(FileBase):
     """Definition of elements in balsamic deliverables"""
 
-    format: Optional[str]
-    tag: List[str]
+    format: str | None
+    tag: list[str]
 
     @validator("tag", pre=True)
     def split_str(cls, v):
@@ -60,53 +61,54 @@ class BalsamicFile(FileBase):
 # Classes to represent deliverable files
 
 
-class PipelineDeliverables(BaseModel):
+class WorkflowDeliverables(BaseModel):
     """Specification for a general deliverables file"""
 
-    files: List[FileBase]
+    files: list[FileBase]
 
 
-class MipDeliverables(PipelineDeliverables):
+class MipDeliverables(WorkflowDeliverables):
     """Specification for a MIP specific deliverables file"""
 
-    files: List[MipFile]
+    files: list[MipFile]
 
 
-class MicrosaltDeliverables(PipelineDeliverables):
+class MicrosaltDeliverables(WorkflowDeliverables):
     """Specification for a MIP specific deliverables file"""
 
-    files: List[MicrosaltFile]
+    files: list[MicrosaltFile]
 
 
-class BalsamicDeliverables(PipelineDeliverables):
+class BalsamicDeliverables(WorkflowDeliverables):
     """Specification for a BALSAMIC specific deliverables file"""
 
-    files: List[BalsamicFile]
+    files: list[BalsamicFile]
 
 
-class FluffyDeliverables(PipelineDeliverables):
+class FluffyDeliverables(WorkflowDeliverables):
     """Specification for a FLUFFY specific deliverables file"""
 
-    files: List[FileBase]
+    files: list[FileBase]
 
 
-class MutantDeliverables(PipelineDeliverables):
+class MutantDeliverables(WorkflowDeliverables):
     """Specification for a MUTANT specific deliverables file"""
 
-    files: List[MutantFile]
-
-class RnafusionDeliverables(PipelineDeliverables):
-    """Specification for a RNAFUSION specific deliverables file"""
-
-    files: List[RnafusionFile]
+    files: list[MutantFile]
 
 
-class CGDeliverables(PipelineDeliverables):
+class NfAnalysisDeliverables(WorkflowDeliverables):
+    """Specification for a deliverables file for a nextflow workflow."""
+
+    files: list[NfAnalysisFile]
+
+
+class CGDeliverables(WorkflowDeliverables):
     """Class that specifies the output to CG"""
 
-    pipeline: str
+    workflow: str
     bundle_id: str
-    files: List[CGTag]
+    files: list[CGTag]
 
 
 class TagBase(BaseModel):
@@ -115,4 +117,4 @@ class TagBase(BaseModel):
     tags: FrozenSet[str]
     subject_id: str
     path: str
-    path_index: Optional[str]
+    path_index: str | None

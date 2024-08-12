@@ -1,5 +1,5 @@
 import logging
-from enum import Enum
+from enum import StrEnum
 from typing import Optional
 
 import coloredlogs
@@ -18,7 +18,7 @@ __version__ = pkg_resources.get_distribution("cg_hermes").version
 LOG = logging.getLogger(__name__)
 
 
-class LogLevel(str, Enum):
+class LogLevel(StrEnum):
     debug = "DEBUG"
     info = "INFO"
     warning = "WARNING"
@@ -41,4 +41,4 @@ def main(
     Manage users in the awesome CLI app.
     """
     LOG.info("Running hermes")
-    coloredlogs.install(level=loglevel.value)
+    coloredlogs.install(level=loglevel)

@@ -1,10 +1,14 @@
-"""Tests for the validate deliverables cli command"""
+"""Tests for the validate deliverables command."""
 
 from pathlib import Path
 
+import pytest
+from _pytest.fixtures import FixtureRequest
+from _pytest.logging import LogCaptureFixture
 from typer.testing import CliRunner
 
 from cg_hermes.cli.validate import app
+from cg_hermes.constants.workflow import Workflow
 
 
 def test_validate_mip_deliverables_file(cli_runner: CliRunner, mip_dna_deliverables: Path):
@@ -13,7 +17,7 @@ def test_validate_mip_deliverables_file(cli_runner: CliRunner, mip_dna_deliverab
 
     # WHEN running the validate deliverables command
     result = cli_runner.invoke(
-        app, ["deliverables", str(mip_dna_deliverables), "--pipeline", "mip-dna"]
+        app, ["deliverables", str(mip_dna_deliverables), "--workflow", "mip-dna"]
     )
 
     # THEN assert it exits without problem
@@ -26,7 +30,7 @@ def test_validate_mip_rna_deliverables_file(cli_runner: CliRunner, mip_rna_deliv
 
     # WHEN running the validate deliverables command
     result = cli_runner.invoke(
-        app, ["deliverables", str(mip_rna_deliverables), "--pipeline", "mip-rna"]
+        app, ["deliverables", str(mip_rna_deliverables), "--workflow", "mip-rna"]
     )
 
     # THEN assert it exits without problem
@@ -45,7 +49,7 @@ def test_validate_balsamic_deliverables_file(
         [
             "deliverables",
             str(balsamic_tn_wgs_deliverables),
-            "--pipeline",
+            "--workflow",
             "balsamic",
             "--analysis-type",
             "tumor_normal_wgs",
@@ -68,7 +72,7 @@ def test_validate_balsamic_umi_deliverables_file(
         [
             "deliverables",
             str(balsamic_tn_panel_deliverables),
-            "--pipeline",
+            "--workflow",
             "balsamic-umi",
             "--analysis-type",
             "tumor_normal_panel",
@@ -91,7 +95,7 @@ def test_validate_balsamic_qc_deliverables_file(
         [
             "deliverables",
             str(balsamic_tn_panel_deliverables),
-            "--pipeline",
+            "--workflow",
             "balsamic-qc",
             "--analysis-type",
             "tumor_normal_panel",
@@ -102,14 +106,23 @@ def test_validate_balsamic_qc_deliverables_file(
     assert result.exit_code == 0
 
 
-def test_validate_rnafusion_deliverables_file(cli_runner: CliRunner, rnafusion_deliverables: Path):
-    # GIVEN a existing mip_dna deliverables file and a CLI runner
-    assert rnafusion_deliverables.exists()
+@pytest.mark.parametrize(
+    "workflow",
+    Workflow.get_nf_workflows(),
+)
+def test_validate_nf_workflow_deliverables_file(
+    cli_runner: CliRunner,
+    workflow: Workflow,
+    request: FixtureRequest,
+    caplog: LogCaptureFixture,
+):
+    """Test validate deliverables file command for workflow."""
+    # GIVEN the path to an existing deliverables file
+    deliverables: Path = request.getfixturevalue(f"{workflow}_deliverables")
+    assert deliverables.exists()
 
-    # WHEN running the validate deliverables command
-    result = cli_runner.invoke(
-        app, ["deliverables", str(rnafusion_deliverables), "--pipeline", "rnafusion"]
-    )
+    # WHEN invoking the validate deliverables command
+    result = cli_runner.invoke(app, ["deliverables", str(deliverables), "--workflow", workflow])
 
     # THEN assert it exits without problem
     assert result.exit_code == 0

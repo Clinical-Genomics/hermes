@@ -1,7 +1,7 @@
 site_name: Hermes documentation
 nav:
     - Home: index.md
-    - Available tags: all_tags.md
+    - Common tags: common_map.md
     - Mip-dna tag map: mip-dna_map.md
     - Mip-rna tag map: mip-rna_map.md
     - Balsamic tag map: balsamic_map.md
@@ -10,3 +10,4 @@ nav:
     - Microsalt tag map: microsalt_map.md
     - Mutant tag map: mutant_map.md
     - Rnafusion tag map: rnafusion_map.md
+    - Taxprofiler tag map: taxprofiler_map.md

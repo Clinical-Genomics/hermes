@@ -1,16 +1,14 @@
-from typing import List, Optional
-
 from pydantic import validator
 from pydantic.main import BaseModel
 
-from cg_hermes.config.tags import ALL_TAGS, AVAILABLE_USAGES
+from cg_hermes.constants.tags import ALL_TAGS, USAGE_TAGS
 
 
 class TagMap(BaseModel):
-    tags: List[str]
+    tags: list[str]
     is_mandatory: bool
-    used_by: List[str]
-    bundle_id: Optional[bool] = False
+    used_by: list[str]
+    bundle_id: bool | None = False
 
     @validator("tags", each_item=True)
     def check_tags(cls, tag):
@@ -19,11 +17,11 @@ class TagMap(BaseModel):
 
     @validator("used_by", each_item=True)
     def check_usage(cls, usage):
-        assert usage in AVAILABLE_USAGES, f"{usage} not a valid usage"
+        assert usage in USAGE_TAGS, f"{usage} not a valid usage"
         return usage
 
 
 class CGTag(BaseModel):
     path: str
-    tags: List[str]
+    tags: list[str]
     mandatory: bool

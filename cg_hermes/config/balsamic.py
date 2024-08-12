@@ -11,6 +11,14 @@ RAW_TAGS = {
     "BALSAMIC_X.X.X_graph.pdf": ["balsamic-dag"],
     "multiqc_report.html": ["html", "multiqc-html"],
     "multiqc_data.json": ["json", "multiqc-json"],
+    "multiqc_picard_AlignmentSummaryMetrics.json": ["multiqc", "picard", "alignmentsummarymetrics"],
+    "multiqc_picard_dups.json": ["multiqc", "picard", "dups"],
+    "multiqc_picard_HsMetrics.json": ["multiqc", "picard", "hsmetrics"],
+    "multiqc_picard_insertSize.json": ["multiqc", "picard", "insertsize"],
+    "multiqc_picard_wgsmetrics.json": ["multiqc", "picard", "wgsmetrics"],
+    "multiqc_fastp.json": ["multiqc", "fastp"],
+    "multiqc_samtools_stats.json": ["multiqc", "samtools", "stats"],
+    "multiqc_somalier.json": ["multiqc", "somalier"],
     # Custom QC
     "metrics_deliverables.yaml": ["yaml", "qc-metrics-yaml"],
     # Alignment files (PANEL & WGS)
@@ -178,16 +186,27 @@ RAW_TAGS = {
     # CNVs (PANEL)
     "tumor.merged.cns": ["cns", "cnv-cns"],
     "tumor.merged.cnr": ["cnr", "cnv-cnr"],
-    "tumor.merged-scatter.pdf": ["scatter", "cnv-scatter"],
-    "tumor.merged-diagram.pdf": ["diagram", "cnv-diagram"],
     "gene_metrics": ["gene-metrics", "cnv-gene-metrics"],
     "cnvkit.vcf2cytosure.cgh": ["cgh-tumor", "cnv-somatic-cgh-tumor"],
     # CNVs (WGS)
-    "report.pdf": ["cnv-report-pdf", "clinical-cnv-report-pdf"],
     "ascat.copynumber.txt.gz": ["ascat-copynumber", "clinical-ascat-copynumber"],
     "dellycnv.cov.gz": ["rd-delly", "clinical-rd-delly"],
     "tumor.vcf2cytosure.cgh": ["cgh-tumor", "cnv-somatic-cgh-tumor"],
     "normal.vcf2cytosure.cgh": ["cgh-normal", "cnv-somatic-cgh-normal"],
+    "cov.bed.gz": ["cov", "gens-bed", "cnv-gens-bed"],
+    "cov.bed.gz.tbi": ["cov", "gens-bed", "cnv-gens-bed-index"],
+    "baf.bed.gz": ["baf", "gens-bed", "cnv-gens-bed"],
+    "baf.bed.gz.tbi": ["baf", "gens-bed", "cnv-gens-bed-index"],
+    # CNV report
+    "report.pdf": ["cnv-report-pdf", "clinical-cnv-report-pdf"],
+    "cnvpytor.circular.png": ["circular-cnvpytor", "clinical-circular-cnvpytor"],
+    "cnvpytor.scatter.png": ["scatter-cnvpytor", "clinical-scatter-cnvpytor"],
+    "ascat.ascatprofile.png": ["plot-ascat-profile", "clinical-plot-ascat-profile"],
+    "ascat.rawprofile.png": ["plot-raw-profile", "clinical-plot-raw-profile"],
+    "ascat.ASPCF.png": ["plot-aspcf", "clinical-plot-aspcf"],
+    "ascat.tumor.png": ["plot-tumor", "clinical-plot-tumor"],
+    "ascat.germline.png": ["plot-germline", "clinical-plot-germline"],
+    "ascat.sunrise.png": ["plot-sunrise", "clinical-plot-sunrise"],
     # SVs (WGS)
     "tumor.tiddit_cov.bed": ["cov-tumor-tiddit", "clinical-cov-tumor-tiddit"],
     "normal.tiddit_cov.bed": ["cov-normal-tiddit", "clinical-cov-normal-tiddit"],
@@ -226,11 +245,51 @@ QC_TAGS = {
         "is_mandatory": True,
         "used_by": ["audit"],
     },
+    frozenset(RAW_TAGS["multiqc_picard_AlignmentSummaryMetrics.json"]): {
+        "tags": ["qc-metrics", "multiqc", "picard-alignment"],
+        "is_mandatory": True,
+        "used_by": ["storage", "janus"],
+    },
+    frozenset(RAW_TAGS["multiqc_picard_dups.json"]): {
+        "tags": ["qc-metrics", "multiqc", "picard-duplicates"],
+        "is_mandatory": True,
+        "used_by": ["storage", "janus"],
+    },
+    frozenset(RAW_TAGS["multiqc_picard_HsMetrics.json"]): {
+        "tags": ["qc-metrics", "multiqc", "picard-hs"],
+        "is_mandatory": True,
+        "used_by": ["storage", "janus"],
+    },
+    frozenset(RAW_TAGS["multiqc_picard_insertSize.json"]): {
+        "tags": ["qc-metrics", "multiqc", "picard-insert-size"],
+        "is_mandatory": True,
+        "used_by": ["storage", "janus"],
+    },
+    frozenset(RAW_TAGS["multiqc_picard_wgsmetrics.json"]): {
+        "tags": ["qc-metrics", "multiqc", "picard-wgs"],
+        "is_mandatory": False,
+        "used_by": ["storage", "janus"],
+    },
+    frozenset(RAW_TAGS["multiqc_fastp.json"]): {
+        "tags": ["qc-metrics", "multiqc", "fastp"],
+        "is_mandatory": True,
+        "used_by": ["storage", "janus"],
+    },
+    frozenset(RAW_TAGS["multiqc_samtools_stats.json"]): {
+        "tags": ["qc-metrics", "multiqc", "samtools-stats"],
+        "is_mandatory": True,
+        "used_by": ["storage", "janus"],
+    },
+    frozenset(RAW_TAGS["multiqc_somalier.json"]): {
+        "tags": ["qc-metrics", "multiqc", "somalier"],
+        "is_mandatory": False,
+        "used_by": ["storage", "janus"],
+    },
     # Custom QC
     frozenset(RAW_TAGS["metrics_deliverables.yaml"]): {  # QC metrics
-        "tags": ["qc-metrics"],
+        "tags": ["qc-metrics", "deliverable"],
         "is_mandatory": True,
-        "used_by": ["audit", "cg", "vogue"],
+        "used_by": ["audit", "cg"],
     },
 }
 
@@ -377,11 +436,6 @@ CALLERS_TAGS = {
         "used_by": ["deliver", "scout"],
     },
     # CNVs (WGS)
-    frozenset(RAW_TAGS["report.pdf"]): {
-        "tags": ["cnv-report", "visualization"],
-        "is_mandatory": False,
-        "used_by": ["deliver", "scout"],
-    },
     frozenset(RAW_TAGS["ascat.copynumber.txt.gz"]): {
         "tags": ["ascatngs", "metrics"],
         "is_mandatory": False,
@@ -401,6 +455,26 @@ CALLERS_TAGS = {
         "tags": ["tiddit", "normal", "vcf2cytosure"],
         "is_mandatory": False,
         "used_by": ["deliver", "scout"],
+    },
+    frozenset(RAW_TAGS["cov.bed.gz"]): {
+        "tags": ["gens", "coverage", "bed"],
+        "is_mandatory": False,
+        "used_by": ["scout"],
+    },
+    frozenset(RAW_TAGS["cov.bed.gz.tbi"]): {
+        "tags": ["gens", "coverage", "bed-index"],
+        "is_mandatory": False,
+        "used_by": ["scout"],
+    },
+    frozenset(RAW_TAGS["baf.bed.gz"]): {
+        "tags": ["gens", "fracsnp", "bed"],
+        "is_mandatory": False,
+        "used_by": ["scout"],
+    },
+    frozenset(RAW_TAGS["baf.bed.gz.tbi"]): {
+        "tags": ["gens", "fracsnp", "bed-index"],
+        "is_mandatory": False,
+        "used_by": ["scout"],
     },
     # SNVs/INDELs (PANEL)
     frozenset(RAW_TAGS["vardict.vcf.gz"]): {
@@ -444,16 +518,6 @@ CALLERS_TAGS = {
         "is_mandatory": False,
         "used_by": ["storage"],
     },
-    frozenset(RAW_TAGS["tumor.merged-scatter.pdf"]): {
-        "tags": ["cnvkit", "visualization", "scatter"],
-        "is_mandatory": False,
-        "used_by": ["deliver"],
-    },
-    frozenset(RAW_TAGS["tumor.merged-diagram.pdf"]): {
-        "tags": ["cnvkit", "visualization", "diagram"],
-        "is_mandatory": False,
-        "used_by": ["deliver"],
-    },
     frozenset(RAW_TAGS["gene_metrics"]): {
         "tags": ["cnvkit", "metrics", "genes"],
         "is_mandatory": False,
@@ -463,6 +527,52 @@ CALLERS_TAGS = {
         "tags": ["cnvkit", "tumor", "vcf2cytosure"],
         "is_mandatory": False,
         "used_by": ["deliver", "scout"],
+    },
+    # CNV report
+    frozenset(RAW_TAGS["report.pdf"]): {
+        "tags": ["cnv-report"],
+        "is_mandatory": True,
+        "used_by": ["deliver", "scout"],
+    },
+    frozenset(RAW_TAGS["cnvpytor.circular.png"]): {
+        "tags": ["circular-plot", "cnvpytor", "visualization"],
+        "is_mandatory": False,
+        "used_by": ["storage"],
+    },
+    frozenset(RAW_TAGS["cnvpytor.scatter.png"]): {
+        "tags": ["scatter-plot", "cnvpytor", "visualization"],
+        "is_mandatory": False,
+        "used_by": ["storage"],
+    },
+    frozenset(RAW_TAGS["ascat.ascatprofile.png"]): {
+        "tags": ["profile-plot", "ascatngs", "visualization"],
+        "is_mandatory": False,
+        "used_by": ["storage"],
+    },
+    frozenset(RAW_TAGS["ascat.rawprofile.png"]): {
+        "tags": ["raw-profile-plot", "ascatngs", "visualization"],
+        "is_mandatory": False,
+        "used_by": ["storage"],
+    },
+    frozenset(RAW_TAGS["ascat.ASPCF.png"]): {
+        "tags": ["aspcf-plot", "ascatngs", "visualization"],
+        "is_mandatory": False,
+        "used_by": ["storage"],
+    },
+    frozenset(RAW_TAGS["ascat.tumor.png"]): {
+        "tags": ["tumor-plot", "ascatngs", "visualization"],
+        "is_mandatory": False,
+        "used_by": ["storage"],
+    },
+    frozenset(RAW_TAGS["ascat.germline.png"]): {
+        "tags": ["germline-plot", "ascatngs", "visualization"],
+        "is_mandatory": False,
+        "used_by": ["storage"],
+    },
+    frozenset(RAW_TAGS["ascat.sunrise.png"]): {
+        "tags": ["sunrise-plot", "ascatngs", "visualization"],
+        "is_mandatory": False,
+        "used_by": ["storage"],
     },
     # SVs (WGS)
     frozenset(RAW_TAGS["tumor.tiddit_cov.bed"]): {
@@ -496,8 +606,9 @@ BALSAMIC_TAGS = {
     **CALLERS_TAGS,
 }
 
-
 TUMOR_ONLY_WGS_TAGS = {
+    # QC
+    frozenset(RAW_TAGS["multiqc_picard_wgsmetrics.json"]): {"is_mandatory": True},
     # SNVs (WGS)
     frozenset(RAW_TAGS["tnscope.vcf.gz"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["tnscope.vcf.gz.tbi"]): {"is_mandatory": True},
@@ -506,16 +617,23 @@ TUMOR_ONLY_WGS_TAGS = {
     frozenset(RAW_TAGS["tnscope.clinical.filtered.pass.vcf.gz"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["tnscope.clinical.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
     # CNVs (WGS)
-    frozenset(RAW_TAGS["report.pdf"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["tumor.vcf2cytosure.cgh"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["cov.bed.gz"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["cov.bed.gz.tbi"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["baf.bed.gz"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["baf.bed.gz.tbi"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["cnvpytor.circular.png"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["cnvpytor.scatter.png"]): {"is_mandatory": True},
     # SVs (WGS)
     frozenset(RAW_TAGS["tumor.tiddit_cov.bed"]): {"is_mandatory": True},
     # TMB (WGS)
     frozenset(RAW_TAGS["tnscope.balsamic_stat"]): {"is_mandatory": True},
 }
 
-
 TUMOR_NORMAL_WGS_TAGS = {
+    # QC
+    frozenset(RAW_TAGS["multiqc_picard_wgsmetrics.json"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["multiqc_somalier.json"]): {"is_mandatory": True},
     # Alignment files (PANEL & WGS)
     frozenset(RAW_TAGS["normal.merged.cram"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["normal.merged.cram.crai"]): {"is_mandatory": True},
@@ -534,10 +652,19 @@ TUMOR_NORMAL_WGS_TAGS = {
     frozenset(RAW_TAGS["tnscope.clinical.filtered.pass.vcf.gz"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["tnscope.clinical.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
     # CNVs (WGS)
-    frozenset(RAW_TAGS["report.pdf"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["ascat.copynumber.txt.gz"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["tumor.vcf2cytosure.cgh"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["normal.vcf2cytosure.cgh"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["cov.bed.gz"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["cov.bed.gz.tbi"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["baf.bed.gz"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["baf.bed.gz.tbi"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["ascat.ascatprofile.png"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["ascat.rawprofile.png"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["ascat.ASPCF.png"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["ascat.tumor.png"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["ascat.germline.png"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["ascat.sunrise.png"]): {"is_mandatory": True},
     # SVs (WGS)
     frozenset(RAW_TAGS["tumor.tiddit_cov.bed"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["normal.tiddit_cov.bed"]): {"is_mandatory": True},
@@ -556,16 +683,15 @@ TUMOR_ONLY_PANEL_TAGS = {
     # CNVs (PANEL)
     frozenset(RAW_TAGS["tumor.merged.cns"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["tumor.merged.cnr"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["tumor.merged-scatter.pdf"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["tumor.merged-diagram.pdf"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["gene_metrics"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["cnvkit.vcf2cytosure.cgh"]): {"is_mandatory": True},
     # TMB (PANEL)
     frozenset(RAW_TAGS["vardict.balsamic_stat"]): {"is_mandatory": True},
 }
 
-
 TUMOR_NORMAL_PANEL_TAGS = {
+    # QC
+    frozenset(RAW_TAGS["multiqc_somalier.json"]): {"is_mandatory": True},
     # Alignment files (PANEL & WGS)
     frozenset(RAW_TAGS["normal.merged.cram"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["normal.merged.cram.crai"]): {"is_mandatory": True},
@@ -586,8 +712,6 @@ TUMOR_NORMAL_PANEL_TAGS = {
     # CNVs (PANEL)
     frozenset(RAW_TAGS["tumor.merged.cns"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["tumor.merged.cnr"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["tumor.merged-scatter.pdf"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["tumor.merged-diagram.pdf"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["gene_metrics"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["cnvkit.vcf2cytosure.cgh"]): {"is_mandatory": True},
     # TMB (PANEL)

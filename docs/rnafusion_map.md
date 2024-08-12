@@ -1,16 +1,25 @@
-| Rnafusion tags                                                 | Mandatory   | HK tags                                     | Used by               |
-|----------------------------------------------------------------|-------------|---------------------------------------------|-----------------------|
-| arriba                                                         | True        | fusion, arriba                              | deliver               |
-| star-fusion                                                    | True        | fusion, star-fusion                         | deliver               |
-| fusioncatcher                                                  | True        | fusion, fusioncatcher                       | deliver               |
-| fusioncatcher-summary, fusioncatcher                           | True        | fusioncatcher-summary                       | deliver               |
-| star-fusion-cram, star-fusion                           | True        | cram                       | deliver               |
-| fusioninspector, report                                        | True        | fusioninspector                             | deliver               |  
-| fusionreport, report                                           | True        | fusionreport, research                                | deliver, scout        |
-| fusioninspector-html, report                                   | True        | fusioninspector-html, research                        | deliver, scout        |
-| arriba-visualisation, arriba                                   | True        | visualization, arriba, arriba-visualisation, research | deliver, scout        |  
-| multiqc-html, report                                           | True        | multiqc-html, rna                           | deliver, scout        |  
-| samplesheet-valid                                              | True        | samplesheet-valid                           | cg               |  
-| software-versions                                              | True        | software-versions                           | cg               |  
-| qc-metrics                                              | True        | qc-metrics                           | cg               |  
-| multiqc-json                                              | True        | multiqc-json                           | deliver               |  
+| Rnafusion tags                       | Mandatory   | HK tags                                               | Used by        |
+|--------------------------------------|-------------|-------------------------------------------------------|----------------|
+| arriba                               | True        | arriba, fusion                                        | deliver        |
+| arriba, arriba-visualisation         | False       | arriba-visualisation, visualization, arriba, research | deliver, scout |
+| fusioncatcher                        | True        | fusioncatcher, fusion                                 | deliver        |
+| fusioncatcher-summary, fusioncatcher | True        | fusioncatcher-summary                                 | deliver        |
+| star-fusion                          | True        | star-fusion, fusion                                   | deliver        |
+| report, fusionreport                 | True        | fusionreport, research                                | deliver, scout |
+| report, fusioninspector              | False       | fusioninspector                                       | deliver        |
+| report, fusioninspector-html         | False       | fusioninspector-html, research                        | deliver, scout |
+| report, multiqc-html                 | True        | multiqc-html, rna                                     | deliver, scout |
+| star-fusion-cram, star-fusion        | True        | cram                                                  | deliver, scout |
+| star-fusion-cram-index, star-fusion  | True        | cram-index                                            | deliver, scout |
+| star-align-gene-counts, star-align   | True        | gene-counts                                           | deliver        |
+| multiqc-json                         | True        | multiqc-json                                          | deliver        |
+| qc-metrics                           | True        | qc-metrics                                            | cg             |
+| vcf-fusion, vcf-collect              | False       | vcf-fusion                                            | deliver, scout |
+| samplesheet-valid                    | True        | samplesheet-valid                                     | cg             |
+| software-versions                    | True        | software-versions                                     | cg             |
+| multiqc-fastp, multiqc               | True        | qc-metrics, multiqc, fastp                            | janus          |
+| multiqc-picard-duplicates, multiqc   | True        | qc-metrics, multiqc, picard-duplicates                | janus          |
+| multiqc-picard-insert-size, multiqc  | True        | qc-metrics, multiqc, picard-insert-size               | janus          |
+| multiqc-picard-rnaseq, multiqc       | True        | qc-metrics, multiqc, picard-rnaseq                    | janus          |
+| multiqc-general-stats, multiqc       | True        | qc-metrics, multiqc, general-stats                    | janus          |
+| multiqc-star, multiqc                | True        | qc-metrics, multiqc, star                             | janus          |

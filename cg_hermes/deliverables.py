@@ -1,7 +1,8 @@
-"""Class to represent deliverables file"""
+"""Class to represent deliverables file."""
+
 import copy
 import logging
-from typing import Dict, FrozenSet, List, Optional, Set
+from typing import FrozenSet
 
 from cg_hermes.config.balsamic import (
     BALSAMIC_TAGS,
@@ -12,35 +13,43 @@ from cg_hermes.config.balsamic import (
 )
 from cg_hermes.config.balsamic_qc import (
     BALSAMIC_QC_TAGS,
-    QC_TUMOR_NORMAL_WGS_TAGS,
     QC_TUMOR_NORMAL_PANEL_TAGS,
+    QC_TUMOR_NORMAL_WGS_TAGS,
 )
 from cg_hermes.config.balsamic_umi import (
     BALSAMIC_UMI_TAGS,
-    UMI_TUMOR_ONLY_PANEL_TAGS,
     UMI_TUMOR_NORMAL_PANEL_TAGS,
+    UMI_TUMOR_ONLY_PANEL_TAGS,
 )
 from cg_hermes.config.fluffy import FLUFFY_COMMON_TAGS
 from cg_hermes.config.microsalt import MICROSALT_COMMON_TAGS
 from cg_hermes.config.mip_dna import MIP_DNA_TAGS
 from cg_hermes.config.mip_rna import MIP_RNA_TAGS
 from cg_hermes.config.mutant import MUTANT_COMMON_TAGS
-from cg_hermes.config.rnafusion import NXF_RNAFUSION_COMMON_TAGS
-from cg_hermes.config.pipelines import AnalysisType, Pipeline
+from cg_hermes.config.raredisease import RAREDISEASE_TAGS
+from cg_hermes.config.rnafusion import RNAFUSION_TAGS
+from cg_hermes.config.taxprofiler import TAXPROFILER_TAGS
+from cg_hermes.config.tomte import TOMTE_TAGS
+from cg_hermes.constants.workflow import CancerAnalysisType, Workflow
 from cg_hermes.exceptions import MissingFileError
-from cg_hermes.models import pipeline_deliverables
-from cg_hermes.models.pipeline_deliverables import (
+from cg_hermes.models.tags import CGTag, TagMap
+from cg_hermes.models.workflow_deliverables import (
     BalsamicDeliverables,
+    BalsamicFile,
     CGDeliverables,
+    FileBase,
     FluffyDeliverables,
     MicrosaltDeliverables,
+    MicrosaltFile,
     MipDeliverables,
+    MipFile,
     MutantDeliverables,
-    RnafusionDeliverables,
-    PipelineDeliverables,
+    MutantFile,
+    NfAnalysisDeliverables,
+    NfAnalysisFile,
     TagBase,
+    WorkflowDeliverables,
 )
-from cg_hermes.models.tags import CGTag, TagMap
 
 LOG = logging.getLogger(__name__)
 
@@ -50,73 +59,80 @@ class Deliverables:
 
     def __init__(
         self,
-        deliverables: Dict[str, List[Dict[str, str]]],
-        pipeline: Pipeline,
-        analysis_type: Optional[AnalysisType] = None,
+        deliverables: dict[str, list[dict[str, str]]],
+        workflow: Workflow,
+        analysis_type: CancerAnalysisType | None = None,
     ):
         self.raw_deliverables = deliverables
-        self.pipeline = pipeline
+        self.workflow = workflow
         self.analysis_type = analysis_type
-        self.bundle_id: Optional[str] = None
-        self.configs: Dict[FrozenSet[str], TagMap]
-        self.files: List[TagBase]
-        self.file_identifiers: Set[FrozenSet[str]]
-        self.model: PipelineDeliverables
-        self.set_pipeline_specific_variables()
+        self.bundle_id: str | None = None
+        self.configs: dict[FrozenSet[str], TagMap]
+        self.files: list[TagBase]
+        self.file_identifiers: set[FrozenSet[str]]
+        self.model: WorkflowDeliverables
+        self.set_workflow_specific_variables()
         self.file_identifiers = {file_obj.tags for file_obj in self.files}
 
-    def set_pipeline_specific_variables(self):
-        LOG.info("Parsing deliverables for %s", self.pipeline)
-        if self.pipeline == Pipeline.FLUFFY:
+    def set_workflow_specific_variables(self):
+        LOG.info(f"Parsing deliverables for {self.workflow}")
+        if self.workflow == Workflow.FLUFFY:
             self.model: FluffyDeliverables = FluffyDeliverables.parse_obj(self.raw_deliverables)
             self.files = self.get_fluffy_files()
             self.configs = Deliverables.build_internal_tag_map(FLUFFY_COMMON_TAGS)
-        elif Pipeline.BALSAMIC in self.pipeline:
+        elif Workflow.BALSAMIC in self.workflow:
             self.model: BalsamicDeliverables = BalsamicDeliverables.parse_obj(self.raw_deliverables)
             self.files = self.get_balsamic_files()
             self.configs = Deliverables.build_internal_tag_map(self.get_balsamic_analysis_configs())
-        elif self.pipeline == Pipeline.MICROSALT:
+        elif self.workflow == Workflow.MICROSALT:
             self.model: MicrosaltDeliverables = MicrosaltDeliverables.parse_obj(
                 self.raw_deliverables
             )
             self.files = self.get_microsalt_files()
             self.configs = Deliverables.build_internal_tag_map(MICROSALT_COMMON_TAGS)
-        elif self.pipeline == Pipeline.SARS_COV_2:
+        elif self.workflow == Workflow.MUTANT:
             self.model: MutantDeliverables = MutantDeliverables.parse_obj(self.raw_deliverables)
             self.files = self.get_mutant_files()
             self.configs = Deliverables.build_internal_tag_map(MUTANT_COMMON_TAGS)
-        elif self.pipeline == Pipeline.MIP_DNA:
+        elif self.workflow == Workflow.MIP_DNA:
             self.model: MipDeliverables = MipDeliverables.parse_obj(self.raw_deliverables)
             self.files = self.get_mip_files()
             self.configs = Deliverables.build_internal_tag_map(MIP_DNA_TAGS)
-        elif self.pipeline == Pipeline.MIP_RNA:
+        elif self.workflow == Workflow.MIP_RNA:
             self.model: MipDeliverables = MipDeliverables.parse_obj(self.raw_deliverables)
             self.files = self.get_mip_files()
             self.configs = Deliverables.build_internal_tag_map(MIP_RNA_TAGS)
-        elif self.pipeline == Pipeline.RNAFUSION:
-            self.model: RnafusionDeliverables = RnafusionDeliverables.parse_obj(
+        elif self.workflow in Workflow.get_nf_workflows():
+            self.model: NfAnalysisDeliverables = NfAnalysisDeliverables.parse_obj(
                 self.raw_deliverables
             )
-            self.files = self.get_rnafusion_files()
-            self.configs = Deliverables.build_internal_tag_map(NXF_RNAFUSION_COMMON_TAGS)
+            self.files = self.get_nf_analysis_files()
+            if self.workflow == Workflow.RAREDISEASE:
+                self.configs = Deliverables.build_internal_tag_map(RAREDISEASE_TAGS)
+            elif self.workflow == Workflow.RNAFUSION:
+                self.configs = Deliverables.build_internal_tag_map(RNAFUSION_TAGS)
+            elif self.workflow == Workflow.TAXPROFILER:
+                self.configs = Deliverables.build_internal_tag_map(TAXPROFILER_TAGS)
+            elif self.workflow == Workflow.TOMTE:
+                self.configs = Deliverables.build_internal_tag_map(TOMTE_TAGS)
         else:
             raise Exception(
-                "Invalid pipeline ({}) set for Deliverables object".format(self.pipeline)
+                "Invalid workflow ({}) set for Deliverables object".format(self.workflow)
             )
 
     @staticmethod
-    def build_internal_tag_map(tag_map: Dict[FrozenSet[str], dict]) -> Dict[FrozenSet[str], TagMap]:
-        """Convert and validate a tag map to TagMap objects"""
+    def build_internal_tag_map(tag_map: dict[FrozenSet[str], dict]) -> dict[FrozenSet[str], TagMap]:
+        """Convert and validate a tag map to TagMap objects."""
         LOG.debug("Build internal tag map")
-        internal_tag_map: Dict[FrozenSet[str], TagMap] = dict()
-        for pipeline_tags in tag_map:
-            internal_tag_map[pipeline_tags] = TagMap.parse_obj(tag_map[pipeline_tags])
+        internal_tag_map: dict[FrozenSet[str], TagMap] = dict()
+        for workflow_tags in tag_map:
+            internal_tag_map[workflow_tags] = TagMap.parse_obj(tag_map[workflow_tags])
         return internal_tag_map
 
     @staticmethod
     def convert_to_cg_tag(conversion_info: TagMap, subject_id: str, path: str) -> CGTag:
-        """Convert tags from pipeline specific tags to CG tags"""
-        cg_tags: List[str] = copy.deepcopy(conversion_info.tags)
+        """Convert tags from workflow specific tags to CG tags"""
+        cg_tags: list[str] = copy.deepcopy(conversion_info.tags)
         cg_tags.append(subject_id)
         cg_tags.extend(
             [tool for tool in conversion_info.used_by if tool not in ["cg", "audit", "store"]]
@@ -124,17 +140,17 @@ class Deliverables:
         return CGTag(path=path, tags=cg_tags, mandatory=conversion_info.is_mandatory)
 
     def convert_to_cg_deliverables(self) -> CGDeliverables:
-        """Convert pipeline specific information from deliverables file to CG formatted information"""
-        cg_files: List[CGTag] = []
+        """Convert workflow-specific information from deliverables file to CG formatted information."""
+        cg_files: list[CGTag] = []
         file_object: TagBase
         for file_object in self.files:
-            pipeline_tags = file_object.tags
-            if pipeline_tags not in self.configs:
-                LOG.warning("Could not find info for file %s", ", ".join(pipeline_tags))
+            workflow_tags = file_object.tags
+            if workflow_tags not in self.configs:
+                LOG.warning("Could not find info for file %s", ", ".join(workflow_tags))
                 continue
-            conversion_info: TagMap = self.configs[pipeline_tags]
+            conversion_info: TagMap = self.configs[workflow_tags]
             if conversion_info.bundle_id is True:
-                LOG.info("Set bundle id to %s", conversion_info.bundle_id)
+                LOG.info(f"Set bundle id to {conversion_info.bundle_id}")
                 self.bundle_id = file_object.subject_id
             cg_files.append(
                 Deliverables.convert_to_cg_tag(
@@ -151,34 +167,32 @@ class Deliverables:
                         path=file_object.path_index,
                     )
                 )
-        return CGDeliverables(
-            pipeline=self.pipeline.value, files=cg_files, bundle_id=self.bundle_id
-        )
+        return CGDeliverables(workflow=self.workflow, files=cg_files, bundle_id=self.bundle_id)
 
-    def get_balsamic_analysis_configs(self) -> Dict[FrozenSet[str], dict]:
+    def get_balsamic_analysis_configs(self) -> dict[FrozenSet[str], dict]:
         """Extracts all the BALSAMIC mandatory files depending on the analysis workflow and type executed"""
 
         BALSAMIC_COMMON_TAGS = []
         tag_set = []
-        if self.pipeline == Pipeline.BALSAMIC:
+        if self.workflow == Workflow.BALSAMIC:
             BALSAMIC_COMMON_TAGS = BALSAMIC_TAGS
-            if self.analysis_type == AnalysisType.tumor_wgs:
+            if self.analysis_type == CancerAnalysisType.TUMOR_WGS:
                 tag_set = TUMOR_ONLY_WGS_TAGS
-            elif self.analysis_type == AnalysisType.tumor_normal_wgs:
+            elif self.analysis_type == CancerAnalysisType.TUMOR_NORMAL_WGS:
                 tag_set = TUMOR_NORMAL_WGS_TAGS
-            elif self.analysis_type == AnalysisType.tumor_panel:
+            elif self.analysis_type == CancerAnalysisType.TUMOR_PANEL:
                 tag_set = TUMOR_ONLY_PANEL_TAGS
             else:
                 tag_set = TUMOR_NORMAL_PANEL_TAGS
-        elif self.pipeline == Pipeline.BALSAMIC_QC:
+        elif self.workflow == Workflow.BALSAMIC_QC:
             BALSAMIC_COMMON_TAGS = BALSAMIC_QC_TAGS
-            if self.analysis_type == AnalysisType.tumor_normal_wgs:
+            if self.analysis_type == CancerAnalysisType.TUMOR_NORMAL_WGS:
                 tag_set = QC_TUMOR_NORMAL_WGS_TAGS
-            elif self.analysis_type == AnalysisType.tumor_normal_panel:
+            elif self.analysis_type == CancerAnalysisType.TUMOR_NORMAL_PANEL:
                 tag_set = QC_TUMOR_NORMAL_PANEL_TAGS
-        elif self.pipeline == Pipeline.BALSAMIC_UMI:
+        elif self.workflow == Workflow.BALSAMIC_UMI:
             BALSAMIC_COMMON_TAGS = BALSAMIC_UMI_TAGS
-            if self.analysis_type == AnalysisType.tumor_panel:
+            if self.analysis_type == CancerAnalysisType.TUMOR_PANEL:
                 tag_set = UMI_TUMOR_ONLY_PANEL_TAGS
             else:
                 tag_set = UMI_TUMOR_NORMAL_PANEL_TAGS
@@ -189,23 +203,26 @@ class Deliverables:
             updated_tags[tag_name]["is_mandatory"] = tag_info["is_mandatory"]
         return updated_tags
 
-    def validate_mandatory_files(self) -> None:
-        """Validate that all mandatory files are present in deliverables"""
+    def validate_mandatory_files(self, force: bool = False) -> None:
+        """Validate that all mandatory files are present in deliverables."""
         missing_mandatory_files = []
         for file_tags in self.configs:
             if not self.configs[file_tags].is_mandatory:
                 continue
             if file_tags not in self.file_identifiers:
-                LOG.warning("Mandatory file (%s) is missing", ", ".join(file_tags))
+                LOG.warning(f"Mandatory file ({', '.join(file_tags)}) is missing")
                 missing_mandatory_files.append(", ".join(file_tags))
         if missing_mandatory_files:
+            if force:
+                LOG.warning("Ignoring deliverables file validation")
+                return
             raise MissingFileError(
                 files=missing_mandatory_files, message="Deliverables is missing mandatory files"
             )
 
-    def get_mip_files(self) -> List[TagBase]:
-        file_obj: pipeline_deliverables.MipFile
-        files: List[TagBase] = []
+    def get_mip_files(self) -> list[TagBase]:
+        file_obj: MipFile
+        files: list[TagBase] = []
         for file_obj in self.model.files:
             identifier = [file_obj.step]
             if file_obj.tag:
@@ -220,9 +237,9 @@ class Deliverables:
             )
         return files
 
-    def get_microsalt_files(self) -> List[TagBase]:
-        file_obj: pipeline_deliverables.MicrosaltFile
-        files: List[TagBase] = []
+    def get_microsalt_files(self) -> list[TagBase]:
+        file_obj: MicrosaltFile
+        files: list[TagBase] = []
         for file_obj in self.model.files:
             identifier = [file_obj.step]
             if file_obj.tag:
@@ -236,9 +253,9 @@ class Deliverables:
             )
         return files
 
-    def get_mutant_files(self) -> List[TagBase]:
-        file_obj: pipeline_deliverables.MutantFile
-        files: List[TagBase] = []
+    def get_mutant_files(self) -> list[TagBase]:
+        file_obj: MutantFile
+        files: list[TagBase] = []
         for file_obj in self.model.files:
             identifier = [file_obj.step]
             if file_obj.tag:
@@ -252,22 +269,22 @@ class Deliverables:
             )
         return files
 
-    def get_fluffy_files(self) -> List[TagBase]:
-        file_obj: pipeline_deliverables.FileBase
-        files: List[TagBase] = []
+    def get_fluffy_files(self) -> list[TagBase]:
+        file_obj: FileBase
+        files: list[TagBase] = []
         for file_obj in self.model.files:
             identifier = frozenset([file_obj.tag.lower()])
             files.append(TagBase(tags=identifier, subject_id=file_obj.id, path=file_obj.path))
         return files
 
-    def get_balsamic_files(self) -> List[TagBase]:
-        file_obj: pipeline_deliverables.BalsamicFile
-        files: List[TagBase] = []
+    def get_balsamic_files(self) -> list[TagBase]:
+        file_obj: BalsamicFile
+        files: list[TagBase] = []
         for file_obj in self.model.files:
             sample_id: str = file_obj.id
             tag_sample_id: str = sample_id.replace("_", "-")
             # This is due to older balsamic format
-            split_id: List[str] = sample_id.split("_")
+            split_id: list[str] = sample_id.split("_")
             if len(split_id) > 2:
                 sample_id = split_id[1]
                 tag_sample_id: str = "-".join(split_id)
@@ -277,9 +294,9 @@ class Deliverables:
             files.append(TagBase(tags=identifier, subject_id=sample_id, path=file_obj.path))
         return files
 
-    def get_rnafusion_files(self) -> List[TagBase]:
-        file_obj: pipeline_deliverables.RnafusionFile
-        files: List[TagBase] = []
+    def get_nf_analysis_files(self) -> list[TagBase]:
+        file_obj: NfAnalysisFile
+        files: list[TagBase] = []
         for file_obj in self.model.files:
             identifier = [file_obj.step]
             if file_obj.tag:

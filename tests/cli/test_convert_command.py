@@ -1,10 +1,13 @@
-"""Tests for the convert command"""
+"""Tests for the convert command."""
 
 from pathlib import Path
 
+import pytest
+from _pytest.fixtures import FixtureRequest
 from typer.testing import CliRunner
 
 from cg_hermes.cli.convert import app
+from cg_hermes.constants.workflow import Workflow
 
 
 def test_convert_mip_dna_deliverables(cli_runner: CliRunner, mip_dna_deliverables: Path):
@@ -12,7 +15,7 @@ def test_convert_mip_dna_deliverables(cli_runner: CliRunner, mip_dna_deliverable
     assert mip_dna_deliverables.exists()
 
     # WHEN converting the deliverables to CG format
-    result = cli_runner.invoke(app, [str(mip_dna_deliverables), "--pipeline", "mip-dna"])
+    result = cli_runner.invoke(app, [str(mip_dna_deliverables), "--workflow", "mip-dna"])
 
     # THEN assert that the program exits with success
     assert result.exit_code == 0
@@ -23,7 +26,7 @@ def test_convert_mip_rna_deliverables(cli_runner: CliRunner, mip_rna_deliverable
     assert mip_rna_deliverables.exists()
 
     # WHEN converting the deliverables to CG format
-    result = cli_runner.invoke(app, [str(mip_rna_deliverables), "--pipeline", "mip-rna"])
+    result = cli_runner.invoke(app, [str(mip_rna_deliverables), "--workflow", "mip-rna"])
 
     # THEN assert that the program exits with success
     assert result.exit_code == 0
@@ -35,8 +38,8 @@ def test_convert_mip_deliverables_microsalt_file(
     # GIVEN the path to a microsalt deliverables file
     assert microsalt_deliverables.exists()
 
-    # WHEN converting the deliverables to CG format using mip as pipeline
-    result = cli_runner.invoke(app, [str(microsalt_deliverables), "--pipeline", "mip-dna"])
+    # WHEN converting the deliverables to CG format using mip as workflow
+    result = cli_runner.invoke(app, [str(microsalt_deliverables), "--workflow", "mip-dna"])
 
     # THEN assert that the program exits without success
     assert result.exit_code == 1
@@ -47,7 +50,7 @@ def test_convert_microsalt_deliverables(cli_runner: CliRunner, microsalt_deliver
     assert microsalt_deliverables.exists()
 
     # WHEN converting the deliverables to CG format
-    result = cli_runner.invoke(app, [str(microsalt_deliverables), "--pipeline", "microsalt"])
+    result = cli_runner.invoke(app, [str(microsalt_deliverables), "--workflow", "microsalt"])
 
     # THEN assert that the program exits with success
     assert result.exit_code == 0
@@ -58,7 +61,7 @@ def test_convert_mutant_deliverables(cli_runner: CliRunner, mutant_deliverables:
     assert mutant_deliverables.exists()
 
     # WHEN converting the deliverables to CG format
-    result = cli_runner.invoke(app, [str(mutant_deliverables), "--pipeline", "sars-cov-2"])
+    result = cli_runner.invoke(app, [str(mutant_deliverables), "--workflow", Workflow.MUTANT])
 
     # THEN assert that the program exits with success
     assert result.exit_code == 0
@@ -69,7 +72,7 @@ def test_convert_fluffy_deliverables(cli_runner: CliRunner, fluffy_deliverables:
     assert fluffy_deliverables.exists()
 
     # WHEN converting the deliverables to CG format
-    result = cli_runner.invoke(app, [str(fluffy_deliverables), "--pipeline", "fluffy"])
+    result = cli_runner.invoke(app, [str(fluffy_deliverables), "--workflow", "fluffy"])
 
     # THEN assert that the program exits with success
     assert result.exit_code == 0
@@ -86,7 +89,7 @@ def test_convert_balsamic_tn_panel_deliverables(
         app,
         [
             str(balsamic_tn_panel_deliverables),
-            "--pipeline",
+            "--workflow",
             "balsamic",
             "--analysis-type",
             "tumor_normal_panel",
@@ -108,7 +111,7 @@ def test_convert_balsamic_t_only_panel_deliverables(
         app,
         [
             str(balsamic_t_only_panel_deliverables),
-            "--pipeline",
+            "--workflow",
             "balsamic",
             "--analysis-type",
             "tumor_panel",
@@ -130,7 +133,7 @@ def test_convert_balsamic_tn_wgs_deliverables(
         app,
         [
             str(balsamic_tn_wgs_deliverables),
-            "--pipeline",
+            "--workflow",
             "balsamic",
             "--analysis-type",
             "tumor_normal_wgs",
@@ -152,7 +155,7 @@ def test_convert_balsamic_t_only_wgs_deliverables(
         app,
         [
             str(balsamic_t_only_wgs_deliverables),
-            "--pipeline",
+            "--workflow",
             "balsamic",
             "--analysis-type",
             "tumor_wgs",
@@ -174,7 +177,7 @@ def test_convert_balsamic_umi_tn_deliverables(
         app,
         [
             str(balsamic_tn_panel_deliverables),
-            "--pipeline",
+            "--workflow",
             "balsamic-umi",
             "--analysis-type",
             "tumor_normal_panel",
@@ -196,7 +199,7 @@ def test_convert_balsamic_umi_t_only_deliverables(
         app,
         [
             str(balsamic_t_only_panel_deliverables),
-            "--pipeline",
+            "--workflow",
             "balsamic-umi",
             "--analysis-type",
             "tumor_panel",
@@ -218,7 +221,7 @@ def test_convert_balsamic_qc_tn_panel_deliverables(
         app,
         [
             str(balsamic_tn_panel_deliverables),
-            "--pipeline",
+            "--workflow",
             "balsamic-qc",
             "--analysis-type",
             "tumor_normal_panel",
@@ -240,7 +243,7 @@ def test_convert_balsamic_qc_tn_wgs_deliverables(
         app,
         [
             str(balsamic_tn_wgs_deliverables),
-            "--pipeline",
+            "--workflow",
             "balsamic-qc",
             "--analysis-type",
             "tumor_normal_wgs",
@@ -251,12 +254,22 @@ def test_convert_balsamic_qc_tn_wgs_deliverables(
     assert result.exit_code == 0
 
 
-def test_convert_rnafusion_deliverables(cli_runner: CliRunner, rnafusion_deliverables: Path):
-    # GIVEN the path to a rnafusion deliverables file
-    assert rnafusion_deliverables.exists()
+@pytest.mark.parametrize(
+    "workflow",
+    Workflow.get_nf_workflows(),
+)
+def test_convert_nf_workflow_deliverables(
+    cli_runner: CliRunner,
+    workflow: Workflow,
+    request: FixtureRequest,
+):
+    """Test that deliverables are converted."""
+    # GIVEN the path to an existing deliverables file
+    deliverables: Path = request.getfixturevalue(f"{workflow}_deliverables")
+    assert deliverables.exists()
 
     # WHEN converting the deliverables to CG format
-    result = cli_runner.invoke(app, [str(rnafusion_deliverables), "--pipeline", "rnafusion"])
+    result = cli_runner.invoke(app, [str(deliverables), "--workflow", workflow])
 
     # THEN assert that the program exits with success
     assert result.exit_code == 0
