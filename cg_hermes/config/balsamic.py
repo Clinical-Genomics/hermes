@@ -545,12 +545,6 @@ TUMOR_ONLY_WGS_TAGS = {
     # QC
     frozenset(RAW_TAGS["multiqc_picard_wgsmetrics.json"]): {"is_mandatory": True},
     # SNVs (WGS)
-    frozenset(RAW_TAGS["tnscope.vcf.gz"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["tnscope.vcf.gz.tbi"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["tnscope.research.filtered.pass.vcf.gz"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["tnscope.research.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["tnscope.clinical.filtered.pass.vcf.gz"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["tnscope.clinical.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
     # CNVs (WGS)
     frozenset(RAW_TAGS["tumor.vcf2cytosure.cgh"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["cnvpytor.circular.png"]): {"is_mandatory": True},
@@ -576,12 +570,6 @@ TUMOR_NORMAL_WGS_TAGS = {
     frozenset(RAW_TAGS["genotype.normal.dnascope.vcf.gz"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["genotype.normal.dnascope.vcf.gz.tbi"]): {"is_mandatory": True},
     # SNVs (WGS)
-    frozenset(RAW_TAGS["tnscope.vcf.gz"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["tnscope.vcf.gz.tbi"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["tnscope.research.filtered.pass.vcf.gz"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["tnscope.research.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["tnscope.clinical.filtered.pass.vcf.gz"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["tnscope.clinical.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
     # CNVs (WGS)
     frozenset(RAW_TAGS["ascat.copynumber.txt.gz"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["tumor.vcf2cytosure.cgh"]): {"is_mandatory": True},
