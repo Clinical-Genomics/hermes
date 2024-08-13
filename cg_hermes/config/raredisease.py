@@ -45,6 +45,11 @@ RAREDISEASE_COMMON_TAGS = {
         "is_mandatory": False,
         "used_by": [UsageTags.SCOUT],
     },
+    frozenset(["qc_bam", "mosdepth_d4"]): {
+        "tags": [AnalysisTags.COVERAGE, ReportTags.D4],
+        "is_mandatory": False,
+        "used_by": [UsageTags.SCOUT],
+    },
     frozenset(["chromograph_cov", "tcov"]): {
         "tags": [BioinfoToolsTags.CHROMOGRAPH, AnalysisTags.TCOV],
         "is_mandatory": False,
