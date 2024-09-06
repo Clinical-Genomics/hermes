@@ -693,6 +693,7 @@ class NextflowTags(StrEnum):
     SAMPLESHEET: str = "nextflow-samplesheet"
     SAMPLESHEET_VALID: str = "samplesheet-valid"
     SOFTWARE_VERSIONS: str = "software-versions"
+    MANIFEST: str = "manifest"
 
     @classmethod
     def name(cls) -> str:
