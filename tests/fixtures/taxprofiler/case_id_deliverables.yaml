@@ -96,4 +96,9 @@ files:
   path_index: null
   step: multiqc-json
   tag: multiqc-samtools-stats
-
+- format: json
+  id: CASEID
+  path: PATHTOCASE/manifest.json
+  path_index: ~
+  step: manifest
+  tag: manifest
