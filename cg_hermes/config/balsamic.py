@@ -11,14 +11,6 @@ RAW_TAGS = {
     "BALSAMIC_X.X.X_graph.pdf": ["balsamic-dag"],
     "multiqc_report.html": ["html", "multiqc-html"],
     "multiqc_data.json": ["json", "multiqc-json"],
-    "multiqc_picard_AlignmentSummaryMetrics.json": ["multiqc", "picard", "alignmentsummarymetrics"],
-    "multiqc_picard_dups.json": ["multiqc", "picard", "dups"],
-    "multiqc_picard_HsMetrics.json": ["multiqc", "picard", "hsmetrics"],
-    "multiqc_picard_insertSize.json": ["multiqc", "picard", "insertsize"],
-    "multiqc_picard_wgsmetrics.json": ["multiqc", "picard", "wgsmetrics"],
-    "multiqc_fastp.json": ["multiqc", "fastp"],
-    "multiqc_samtools_stats.json": ["multiqc", "samtools", "stats"],
-    "multiqc_somalier.json": ["multiqc", "somalier"],
     # Custom QC
     "metrics_deliverables.yaml": ["yaml", "qc-metrics-yaml"],
     # Alignment files (PANEL & WGS)
@@ -97,6 +89,14 @@ RAW_TAGS = {
     "svdb.clinical.filtered.pass.vcf.gz": ["vcf-pass-svdb", "clinical-vcf-pass-svdb"],
     "svdb.clinical.filtered.pass.vcf.gz.tbi": ["vcf-pass-svdb", "clinical-vcf-pass-svdb-index"],
     # SNVs/InDels
+    "vardict.vcf.gz": [
+        "vcf-vardict",
+        "research-vcf-vardict",
+    ],
+    "vardict.vcf.gz.tbi": [
+        "vcf-vardict",
+        "research-vcf-vardict-index",
+    ],
     "tnscope.vcf.gz": [
         "vcf-tnscope",
         "research-vcf-tnscope",
@@ -124,6 +124,31 @@ RAW_TAGS = {
         "vcf-pass-tnscope",
         "snv",
         "clinical-vcf-pass-tnscope-index",
+    ],
+    "merged.research.filtered.pass.vcf.gz": [
+        "vcf-pass-merged",
+        "snv",
+        "research-vcf-pass-merged",
+    ],
+    "merged.research.filtered.pass.vcf.gz.tbi": [
+        "vcf-pass-merged",
+        "snv",
+        "research-vcf-pass-merged-index",
+    ],
+    "merged.clinical.filtered.pass.vcf.gz": [
+        "vcf-pass-merged",
+        "snv",
+        "clinical-vcf-pass-merged",
+    ],
+    "merged.clinical.filtered.pass.vcf.gz.tbi": [
+        "vcf-pass-merged",
+        "snv",
+        "clinical-vcf-pass-merged-index",
+    ],
+    "merged.clinical.ranked.vcf.gz": [
+        "vcf-pass-merged",
+        "snv",
+        "clinical-vcf-pass-merged",
     ],
     # UMI SNVs/INDELs (PANEL)
     "tnscope_umi.vcf.gz": [
@@ -215,46 +240,6 @@ QC_TAGS = {
         "tags": ["multiqc-json"],
         "is_mandatory": True,
         "used_by": ["audit"],
-    },
-    frozenset(RAW_TAGS["multiqc_picard_AlignmentSummaryMetrics.json"]): {
-        "tags": ["qc-metrics", "multiqc", "picard-alignment"],
-        "is_mandatory": True,
-        "used_by": ["storage", "janus"],
-    },
-    frozenset(RAW_TAGS["multiqc_picard_dups.json"]): {
-        "tags": ["qc-metrics", "multiqc", "picard-duplicates"],
-        "is_mandatory": True,
-        "used_by": ["storage", "janus"],
-    },
-    frozenset(RAW_TAGS["multiqc_picard_HsMetrics.json"]): {
-        "tags": ["qc-metrics", "multiqc", "picard-hs"],
-        "is_mandatory": True,
-        "used_by": ["storage", "janus"],
-    },
-    frozenset(RAW_TAGS["multiqc_picard_insertSize.json"]): {
-        "tags": ["qc-metrics", "multiqc", "picard-insert-size"],
-        "is_mandatory": True,
-        "used_by": ["storage", "janus"],
-    },
-    frozenset(RAW_TAGS["multiqc_picard_wgsmetrics.json"]): {
-        "tags": ["qc-metrics", "multiqc", "picard-wgs"],
-        "is_mandatory": False,
-        "used_by": ["storage", "janus"],
-    },
-    frozenset(RAW_TAGS["multiqc_fastp.json"]): {
-        "tags": ["qc-metrics", "multiqc", "fastp"],
-        "is_mandatory": True,
-        "used_by": ["storage", "janus"],
-    },
-    frozenset(RAW_TAGS["multiqc_samtools_stats.json"]): {
-        "tags": ["qc-metrics", "multiqc", "samtools-stats"],
-        "is_mandatory": True,
-        "used_by": ["storage", "janus"],
-    },
-    frozenset(RAW_TAGS["multiqc_somalier.json"]): {
-        "tags": ["qc-metrics", "multiqc", "somalier"],
-        "is_mandatory": False,
-        "used_by": ["storage", "janus"],
     },
     # Custom QC
     frozenset(RAW_TAGS["metrics_deliverables.yaml"]): {  # QC metrics
@@ -543,7 +528,6 @@ BALSAMIC_TAGS = {
 
 TUMOR_ONLY_WGS_TAGS = {
     # QC
-    frozenset(RAW_TAGS["multiqc_picard_wgsmetrics.json"]): {"is_mandatory": True},
     # SNVs (WGS)
     # CNVs (WGS)
     frozenset(RAW_TAGS["tumor.vcf2cytosure.cgh"]): {"is_mandatory": True},
@@ -557,8 +541,6 @@ TUMOR_ONLY_WGS_TAGS = {
 
 TUMOR_NORMAL_WGS_TAGS = {
     # QC
-    frozenset(RAW_TAGS["multiqc_picard_wgsmetrics.json"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["multiqc_somalier.json"]): {"is_mandatory": True},
     # Alignment files (PANEL & WGS)
     frozenset(RAW_TAGS["normal.cram"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["normal.cram.crai"]): {"is_mandatory": True},
@@ -597,7 +579,6 @@ TUMOR_ONLY_PANEL_TAGS = {
 
 TUMOR_NORMAL_PANEL_TAGS = {
     # QC
-    frozenset(RAW_TAGS["multiqc_somalier.json"]): {"is_mandatory": True},
     # Alignment files (PANEL & WGS)
     frozenset(RAW_TAGS["normal.cram"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["normal.cram.crai"]): {"is_mandatory": True},
