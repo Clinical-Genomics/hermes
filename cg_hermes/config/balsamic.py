@@ -19,10 +19,10 @@ RAW_TAGS = {
     "normal.cram": ["cram", "normal-cram"],
     "normal.cram.crai": ["cram", "normal-cram-index"],
     # UMI alignment files (PANEL)
-    "tumor_umi_consensusfiltered.merged.cram": ["cram", "umi-tumor-cram"],
-    "tumor_umi_consensusfiltered.merged.cram.crai": ["cram", "umi-tumor-cram-index"],
-    "normal_umi_consensusfiltered.merged.cram": ["cram", "umi-normal-cram"],
-    "normal_umi_consensusfiltered.merged.cram.crai": ["cram", "umi-normal-cram-index"],
+    "tumor_umi_consensusfiltered.cram": ["cram", "umi-tumor-cram"],
+    "tumor_umi_consensusfiltered.cram.crai": ["cram", "umi-tumor-cram-index"],
+    "normal_umi_consensusfiltered.cram": ["cram", "umi-normal-cram"],
+    "normal_umi_consensusfiltered.cram.crai": ["cram", "umi-normal-cram-index"],
     # Germline SNVs (PANEL & WGS)
     "germline.tumor.dnascope.vcf.gz": [
         "vcf-tumor",
@@ -146,7 +146,7 @@ RAW_TAGS = {
         "clinical-vcf-pass-merged-index",
     ],
     "merged.clinical.ranked.vcf.gz": [
-        "vcf-pass-merged",
+        "vcf-clinical-ranked",
         "snv",
         "clinical-vcf-pass-merged",
     ],
