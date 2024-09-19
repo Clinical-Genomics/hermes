@@ -55,12 +55,12 @@ UMI_CALLERS_TAGS = {
     frozenset(RAW_TAGS["tnscope_umi.clinical.scored.vcf.gz"]): {
         "tags": ["tnscope-umi", "vcf-umi-snv-clinical-scored"],
         "is_mandatory": True,
-        "used_by": ["deliver", "scout"],
+        "used_by": ["storage"],
     },
     frozenset(RAW_TAGS["tnscope_umi.clinical.scored.vcf.gz.tbi"]): {
         "tags": ["tnscope-umi", "vcf-umi-snv-clinical-scored-index"],
         "is_mandatory": True,
-        "used_by": ["deliver", "scout"],
+        "used_by": ["storage"],
     },
     frozenset(RAW_TAGS["tnscope_umi.clinical.filtered.pass.vcf.gz"]): {
         "tags": ["tnscope-umi", "vcf-umi-snv-clinical"],

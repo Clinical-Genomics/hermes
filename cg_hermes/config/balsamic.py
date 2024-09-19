@@ -127,15 +127,15 @@ RAW_TAGS = {
     ],
     "tnscope.clinical.scored.vcf.gz": [
         "tnscope",
-        "clinical-vcf-clinical-scored",
+        "scored-vcf-clinical",
         "snv",
-        "vcf-clinical-scored",
+        "vcf-clinical",
     ],
     "tnscope.clinical.scored.vcf.gz.tbi": [
         "tnscope",
-        "clinical-vcf-clinical-scored-index",
+        "scored-vcf-clinical-index",
         "snv",
-        "vcf-clinical-scored",
+        "vcf-clinical",
     ],
     "merged.research.filtered.pass.vcf.gz": [
         "vcf-pass-merged",
@@ -159,15 +159,15 @@ RAW_TAGS = {
     ],
     "merged.clinical.scored.vcf.gz": [
         "merged",
-        "clinical-vcf-clinical-scored",
+        "scored-vcf-clinical",
         "snv",
-        "vcf-clinical-scored",
+        "vcf-clinical",
     ],
     "merged.clinical.scored.vcf.gz.tbi": [
         "merged",
-        "clinical-vcf-clinical-scored-index",
+        "scored-vcf-clinical-index",
         "snv",
-        "vcf-clinical-scored",
+        "vcf-clinical",
     ],
     # UMI SNVs/INDELs (PANEL)
     "tnscope_umi.vcf.gz": [
@@ -199,16 +199,16 @@ RAW_TAGS = {
         "clinical-vcf-pass-tnscope-umi-index",
     ],
     "tnscope_umi.clinical.scored.vcf.gz": [
-        "clinical-vcf-clinical-scored",
+        "scored-vcf-clinical",
         "tnscope-umi",
         "snv",
-        "vcf-clinical-scored",
+        "vcf-clinical",
     ],
     "tnscope_umi.clinical.scored.vcf.gz.tbi": [
-        "clinical-vcf-clinical-scored-index",
+        "scored-vcf-clinical-index",
         "tnscope-umi",
         "snv",
-        "vcf-clinical-scored",
+        "vcf-clinical",
     ],
     # CNVs (PANEL)
     "tumor.merged.cns": ["cns", "cnv-cns"],
@@ -404,32 +404,32 @@ CALLERS_TAGS = {
     },
     frozenset(RAW_TAGS["tnscope.research.filtered.pass.vcf.gz"]): {
         "tags": ["tnscope", "vcf-snv-research"],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": ["deliver"],
     },
     frozenset(RAW_TAGS["tnscope.research.filtered.pass.vcf.gz.tbi"]): {
         "tags": ["tnscope", "vcf-snv-research-index"],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": ["deliver"],
     },
     frozenset(RAW_TAGS["tnscope.clinical.filtered.pass.vcf.gz"]): {
         "tags": ["tnscope", "vcf-snv-clinical"],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": ["deliver", "scout"],
     },
     frozenset(RAW_TAGS["tnscope.clinical.filtered.pass.vcf.gz.tbi"]): {
         "tags": ["tnscope", "vcf-snv-clinical-index"],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": ["deliver", "scout"],
     },
     frozenset(RAW_TAGS["tnscope.clinical.scored.vcf.gz"]): {
         "tags": ["tnscope", "vcf-snv-clinical-scored"],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": ["storage"],
     },
     frozenset(RAW_TAGS["tnscope.clinical.scored.vcf.gz.tbi"]): {
         "tags": ["tnscope", "vcf-snv-clinical-scored-index"],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": ["storage"],
     },
     # CNVs (WGS)
