@@ -52,13 +52,13 @@ UMI_CALLERS_TAGS = {
         "is_mandatory": True,
         "used_by": ["deliver"],
     },
-    frozenset(RAW_TAGS["tnscope_umi.clinical.ranked.vcf.gz"]): {
-        "tags": ["tnscope-umi", "vcf-umi-snv-clinical-ranked"],
+    frozenset(RAW_TAGS["tnscope_umi.clinical.scored.vcf.gz"]): {
+        "tags": ["tnscope-umi", "vcf-umi-snv-clinical-scored"],
         "is_mandatory": True,
         "used_by": ["deliver", "scout"],
     },
-    frozenset(RAW_TAGS["tnscope_umi.clinical.ranked.vcf.gz.tbi"]): {
-        "tags": ["tnscope-umi", "vcf-umi-snv-clinical-ranked-index"],
+    frozenset(RAW_TAGS["tnscope_umi.clinical.scored.vcf.gz.tbi"]): {
+        "tags": ["tnscope-umi", "vcf-umi-snv-clinical-scored-index"],
         "is_mandatory": True,
         "used_by": ["deliver", "scout"],
     },
@@ -86,6 +86,10 @@ UMI_TUMOR_ONLY_PANEL_TAGS = {
     # SNVs/INDELs (PANEL)
     frozenset(RAW_TAGS["vardict.vcf.gz"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["vardict.vcf.gz.tbi"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["tnscope.vcf.gz"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["tnscope.vcf.gz.tbi"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["merged.clinical.scored.vcf.gz"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["merged.clinical.scored.vcf.gz.tbi"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["merged.research.filtered.pass.vcf.gz"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["merged.research.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["merged.clinical.filtered.pass.vcf.gz"]): {"is_mandatory": True},
@@ -115,6 +119,10 @@ UMI_TUMOR_NORMAL_PANEL_TAGS = {
     # SNVs/INDELs (PANEL)
     frozenset(RAW_TAGS["vardict.vcf.gz"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["vardict.vcf.gz.tbi"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["tnscope.vcf.gz"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["tnscope.vcf.gz.tbi"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["merged.clinical.scored.vcf.gz"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["merged.clinical.scored.vcf.gz.tbi"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["merged.research.filtered.pass.vcf.gz"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["merged.research.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["merged.clinical.filtered.pass.vcf.gz"]): {"is_mandatory": True},

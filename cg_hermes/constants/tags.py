@@ -77,6 +77,8 @@ class VariantTags(StrEnum):
     VCF_SNV: str = "vcf-snv"
     VCF_SNV_CLINICAL: str = "vcf-snv-clinical"
     VCF_SNV_CLINICAL_INDEX: str = "vcf-snv-clinical-index"
+    VCF_SNV_CLINICAL_SCORED: str = "vcf-snv-clinical-scored"
+    VCF_SNV_CLINICAL_SCORED_INDEX: str = "vcf-snv-clinical-index-scored"
     VCF_SNV_FILTERED: str = "vcf-snv-filtered"
     VCF_SNV_FILTERED_INDEX: str = "vcf-snv-filtered-index"
     VCF_SNV_GERMLINE_NORMAL: str = "vcf-snv-germline-normal"
@@ -104,6 +106,8 @@ class VariantTags(StrEnum):
     VCF_UMI_SNV_INDEX: str = "vcf-umi-snv-index"
     VCF_UMI_SNV_RESEARCH: str = "vcf-umi-snv-research"
     VCF_UMI_SNV_RESEARCH_INDEX: str = "vcf-umi-snv-research-index"
+    VCF_UMI_SNV_CLINICAL_RANKED: str ="vcf-umi-snv-clinical-scored"
+    VCF_UMI_SNV_CLINICAL_RANKED_INDEX: str = "vcf-umi-snv-clinical-scored-index"
 
     @classmethod
     def name(cls) -> str:
