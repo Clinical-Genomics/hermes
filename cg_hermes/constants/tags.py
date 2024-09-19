@@ -88,6 +88,8 @@ class VariantTags(StrEnum):
     VCF_SNV_INDEX: str = "vcf-snv-index"
     VCF_SNV_RESEARCH: str = "vcf-snv-research"
     VCF_SNV_RESEARCH_INDEX: str = "vcf-snv-research-index"
+    VCF_SNV_RESEARCH_UNFILTERED: str = "vcf-snv-research-unfiltered"
+    VCF_SNV_RESEARCH_UNFILTERED_INDEX: str = "vcf-snv-research-unfiltered-index"
     VCF_STR: str = "vcf-str"
     VCF_STR_INDEX: str = "vcf-str-index"
     VCF_SV: str = "vcf-sv"
@@ -106,6 +108,8 @@ class VariantTags(StrEnum):
     VCF_UMI_SNV_INDEX: str = "vcf-umi-snv-index"
     VCF_UMI_SNV_RESEARCH: str = "vcf-umi-snv-research"
     VCF_UMI_SNV_RESEARCH_INDEX: str = "vcf-umi-snv-research-index"
+    VCF_UMI_SNV_RESEARCH_UNFILTERED: str = "vcf-umi-snv-research-unfiltered"
+    VCF_UMI_SNV_RESEARCH_UNFILTERED_INDEX: str = "vcf-umi-snv-research-unfiltered-index"
     VCF_UMI_SNV_CLINICAL_RANKED: str = "vcf-umi-snv-clinical-scored"
     VCF_UMI_SNV_CLINICAL_RANKED_INDEX: str = "vcf-umi-snv-clinical-scored-index"
 

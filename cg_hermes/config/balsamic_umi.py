@@ -42,6 +42,16 @@ UMI_CALLERS_TAGS = {
         "is_mandatory": True,
         "used_by": ["deliver"],
     },
+    frozenset(RAW_TAGS["tnscope_umi.research.vcf.gz"]): {
+        "tags": ["tnscope-umi", "vcf-umi-snv-research-unfiltered"],
+        "is_mandatory": True,
+        "used_by": ["deliver"],
+    },
+    frozenset(RAW_TAGS["tnscope_umi.research.vcf.gz.tbi"]): {
+        "tags": ["tnscope-umi", "vcf-umi-snv-research-unfiltered-index"],
+        "is_mandatory": True,
+        "used_by": ["deliver"],
+    },
     frozenset(RAW_TAGS["tnscope_umi.research.filtered.pass.vcf.gz"]): {
         "tags": ["tnscope-umi", "vcf-umi-snv-research"],
         "is_mandatory": True,
