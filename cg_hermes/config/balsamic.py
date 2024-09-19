@@ -148,7 +148,7 @@ RAW_TAGS = {
         "vcf-clinical",
     ],
     "merged.research.vcf.gz": [
-        "vcf-snv",
+        "vcf-snv-unfiltered",
         "merged",
         "research-vcf-snv-unfiltered",
     ],
