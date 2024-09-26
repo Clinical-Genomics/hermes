@@ -1,5 +1,5 @@
-from pydantic import validator
-from pydantic.main import BaseModel
+from pydantic.v1 import validator
+from pydantic.v1.main import BaseModel
 
 from cg_hermes.constants.tags import ALL_TAGS, USAGE_TAGS
 

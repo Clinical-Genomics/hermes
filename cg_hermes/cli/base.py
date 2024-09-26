@@ -3,7 +3,6 @@ from enum import StrEnum
 from typing import Optional
 
 import coloredlogs
-import pkg_resources
 import typer
 
 from cg_hermes.cli import convert, export, validate
@@ -14,7 +13,7 @@ app.add_typer(convert.app, name="convert")
 app.add_typer(validate.app, name="validate")
 app.add_typer(export.app, name="export")
 
-__version__ = pkg_resources.get_distribution("cg_hermes").version
+__version__ = "4.4.13"
 LOG = logging.getLogger(__name__)
 
 

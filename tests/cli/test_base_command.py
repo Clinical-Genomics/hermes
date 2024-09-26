@@ -1,11 +1,10 @@
 """Tests for the Hermes base CLI."""
 
-import pkg_resources
 from typer.testing import CliRunner
 
 from cg_hermes.cli.base import app
 
-version = pkg_resources.get_distribution("cg_hermes").version
+version = "4.4.13"
 
 
 def test_run_base(cli_runner: CliRunner):

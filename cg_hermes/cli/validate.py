@@ -2,7 +2,7 @@ import logging
 from pathlib import Path
 
 import typer
-from pydantic import ValidationError
+from pydantic.v1 import ValidationError
 
 from cg_hermes.cli.common import get_deliverables
 from cg_hermes.config.balsamic import BALSAMIC_TAGS
