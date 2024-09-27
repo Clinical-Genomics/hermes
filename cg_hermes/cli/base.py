@@ -6,6 +6,7 @@ import coloredlogs
 import typer
 
 from cg_hermes.cli import convert, export, validate
+from cg_hermes.constants.hermes import HERMES_VERSION
 
 app = typer.Typer(no_args_is_help=True)
 
@@ -13,7 +14,6 @@ app.add_typer(convert.app, name="convert")
 app.add_typer(validate.app, name="validate")
 app.add_typer(export.app, name="export")
 
-__version__ = "4.4.13"
 LOG = logging.getLogger(__name__)
 
 
@@ -25,7 +25,7 @@ class LogLevel(StrEnum):
 
 def version_callback(value: bool):
     if value:
-        typer.echo(f"hermes version: {__version__}")
+        typer.echo(f"hermes version: {HERMES_VERSION}")
         raise typer.Exit()
 
 
