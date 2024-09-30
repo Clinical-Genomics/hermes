@@ -1,6 +1,6 @@
 from typing import FrozenSet
 
-from pydantic import BaseModel, validator
+from pydantic.v1 import BaseModel, validator
 
 from .tags import CGTag
 
