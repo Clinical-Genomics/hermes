@@ -1,4 +1,4 @@
-"""Fixtures for CLI tests."""
+"""Fixtures for models tests."""
 
 import pytest
 
