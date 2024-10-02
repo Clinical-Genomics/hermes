@@ -15,7 +15,7 @@ def test_instantiate_tag_map(tag_map_raw: dict):
     assert isinstance(tag_map, TagMap)
 
 
-def test_tag_map_tags_validator_tag(tag_map_raw: dict):
+def test_tag_map_tags_validator(tag_map_raw: dict):
     """
     Tests instantiating model."""
     # GIVEN a dictionary with a tag map
@@ -30,7 +30,7 @@ def test_tag_map_tags_validator_tag(tag_map_raw: dict):
         # THEN an error is raised
 
 
-def test_tag_map_tags_validator_usage(tag_map_raw: dict):
+def test_tag_map_usage_validator(tag_map_raw: dict):
     """
     Tests instantiating model."""
     # GIVEN a dictionary with a tag map

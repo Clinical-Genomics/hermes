@@ -1,7 +1,4 @@
-import pytest
-
-from cg_hermes.models.tags import TagMap
-from cg_hermes.models.workflow_deliverables import FileBase
+from cg_hermes.models.workflow_deliverables import BalsamicFile, FileBase
 
 
 def test_instantiate_file_base(file_base_raw: dict):
@@ -16,16 +13,28 @@ def test_instantiate_file_base(file_base_raw: dict):
     assert isinstance(file_base, FileBase)
 
 
-def test_tag_map_tags_validator_tag(tag_map_raw: dict):
+def test_instantiate_balsamic_file(balsamic_file_raw: dict):
     """
     Tests instantiating model."""
-    # GIVEN a dictionary with a tag map
-
-    # GIVEN an incorrect tag
-    tag_map_raw["tags"] = ["an_incorrect_tag"]
+    # GIVEN a dictionary with a Balsamic file base
 
     # WHEN instantiating an object
-    with pytest.raises(ValueError):
-        TagMap.model_validate(tag_map_raw)
+    balsamic_file = BalsamicFile.model_validate(balsamic_file_raw)
 
-        # THEN an error is raised
+    # THEN assert that it was successfully created
+    assert isinstance(balsamic_file, BalsamicFile)
+
+
+def test_balsamic_file_tag_validator(balsamic_file_raw: dict):
+    """
+    Tests instantiating model."""
+    # GIVEN a dictionary with a Balsamic file base
+
+    # GIVEN an incorrect tag
+    balsamic_file_raw["tag"] = "an_incorrect_tag, tag_2"
+
+    # WHEN instantiating an object
+    balsamic_file = BalsamicFile.model_validate(balsamic_file_raw)
+
+    # THEN tag should be a list
+    assert isinstance(balsamic_file.tag, list)
