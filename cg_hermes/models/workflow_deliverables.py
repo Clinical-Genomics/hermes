@@ -46,15 +46,15 @@ class NfAnalysisFile(FileBase):
 
 
 class BalsamicFile(FileBase):
-    """Definition of elements in balsamic deliverables"""
+    """Definition of elements in Balsamic deliverables"""
 
     format: str | None = None
     tag: list[str]
 
     @field_validator("tag", mode="before")
     @classmethod
-    def split_str(cls, value):
-        return value.split(",") if isinstance(value, str) else value
+    def split_str(cls, tag: list[str]):
+        return tag.split(",") if isinstance(tag, str) else tag
 
 
 # Classes to represent deliverable files
