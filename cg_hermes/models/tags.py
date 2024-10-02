@@ -1,5 +1,4 @@
-from pydantic.v1 import validator
-from pydantic.v1.main import BaseModel
+from pydantic import BaseModel, field_validator
 
 from cg_hermes.constants.tags import ALL_TAGS, USAGE_TAGS
 
@@ -10,15 +9,21 @@ class TagMap(BaseModel):
     used_by: list[str]
     bundle_id: bool | None = False
 
-    @validator("tags", each_item=True)
-    def check_tags(cls, tag):
-        assert tag in ALL_TAGS, f"{tag} not a valid tag"
-        return tag
+    @field_validator("tags")
+    @classmethod
+    def check_tags(cls, tags: list[str]):
+        for tag in tags:
+            if tag not in ALL_TAGS:
+                raise ValueError(tags, f"{tag} not a valid tag")
+        return tags
 
-    @validator("used_by", each_item=True)
-    def check_usage(cls, usage):
-        assert usage in USAGE_TAGS, f"{usage} not a valid usage"
-        return usage
+    @field_validator("used_by")
+    @classmethod
+    def check_usage(cls, used_by: list[str]):
+        for user in used_by:
+            if user not in USAGE_TAGS:
+                raise ValueError(used_by, f"{user} not a valid user")
+        return used_by
 
 
 class CGTag(BaseModel):
