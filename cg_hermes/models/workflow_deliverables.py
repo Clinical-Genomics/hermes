@@ -1,8 +1,8 @@
 from typing import FrozenSet
 
-from pydantic.v1 import BaseModel, validator
+from pydantic import BaseModel, field_validator
 
-from .tags import CGTag
+from cg_hermes.models.tags import CGTag
 
 # Classes to represent file entries in the deliverables files
 
@@ -11,7 +11,7 @@ class FileBase(BaseModel):
     """Definition for elements in deliverables file"""
 
     path: str
-    tag: str | None
+    tag: str | None = None
     id: str
 
 
@@ -19,7 +19,7 @@ class MipFile(FileBase):
     """Definition for elements in MIP deliverables"""
 
     format: str
-    path_index: str | None
+    path_index: str | None = None
     step: str
 
 
@@ -41,21 +41,20 @@ class NfAnalysisFile(FileBase):
     """Definition for elements in deliverables for nextflow workflows."""
 
     format: str
-    path_index: str | None
+    path_index: str | None = None
     step: str
 
 
 class BalsamicFile(FileBase):
-    """Definition of elements in balsamic deliverables"""
+    """Definition of elements in Balsamic deliverables."""
 
-    format: str | None
+    format: str | None = None
     tag: list[str]
 
-    @validator("tag", pre=True)
-    def split_str(cls, v):
-        if isinstance(v, str):
-            return v.split(",")
-        return v
+    @field_validator("tag", mode="before")
+    @classmethod
+    def split_str(cls, tag: list[str]):
+        return tag.split(",") if isinstance(tag, str) else tag
 
 
 # Classes to represent deliverable files
@@ -98,7 +97,7 @@ class MutantDeliverables(WorkflowDeliverables):
 
 
 class NfAnalysisDeliverables(WorkflowDeliverables):
-    """Specification for a deliverables file for a nextflow workflow."""
+    """Specification for a deliverable file for a nextflow workflow."""
 
     files: list[NfAnalysisFile]
 
@@ -117,4 +116,4 @@ class TagBase(BaseModel):
     tags: FrozenSet[str]
     subject_id: str
     path: str
-    path_index: str | None
+    path_index: str | None = None
