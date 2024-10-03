@@ -31,7 +31,7 @@ def test_balsamic_file_tag_validator(balsamic_file_raw: dict):
     # GIVEN a dictionary with a Balsamic file base
 
     # GIVEN an incorrect tag
-    balsamic_file_raw["tag"] = "an_incorrect_tag, tag_2"
+    balsamic_file_raw["tag"] = "cg, scout"
 
     # WHEN instantiating an object
     balsamic_file = BalsamicFile.model_validate(balsamic_file_raw)
