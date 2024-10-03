@@ -4,8 +4,7 @@ from cg_hermes.models.tags import TagMap
 
 
 def test_instantiate_tag_map(tag_map_raw: dict):
-    """
-    Tests instantiating model."""
+    """Tests instantiating model."""
     # GIVEN a dictionary with a tag map
 
     # WHEN instantiating an object
@@ -16,8 +15,7 @@ def test_instantiate_tag_map(tag_map_raw: dict):
 
 
 def test_tag_map_tags_validator(tag_map_raw: dict):
-    """
-    Tests instantiating model."""
+    """Tests instantiating model."""
     # GIVEN a dictionary with a tag map
 
     # GIVEN an incorrect tag

@@ -46,7 +46,7 @@ class NfAnalysisFile(FileBase):
 
 
 class BalsamicFile(FileBase):
-    """Definition of elements in Balsamic deliverables"""
+    """Definition of elements in Balsamic deliverables."""
 
     format: str | None = None
     tag: list[str]
