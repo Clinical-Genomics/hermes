@@ -144,4 +144,6 @@ UMI_TUMOR_NORMAL_PANEL_TAGS = {
     frozenset(RAW_TAGS["cnvkit.vcf2cytosure.cgh"]): {"is_mandatory": True},
     # TMB
     frozenset(RAW_TAGS["merged.balsamic_stat"]): {"is_mandatory": True},
+    # MSI (PANEL UMI)
+    frozenset(RAW_TAGS["msisensorpro.msi"]): {"is_mandatory": True},
 }

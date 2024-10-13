@@ -55,6 +55,7 @@ class VariantTags(StrEnum):
     CNV: str = "cnv"
     GERMLINE: str = "germline"
     MOBILE_ELEMENTS: str = "mobile-elements"
+    MSI: str = "msi"
     NORMAL: str = "normal"
     RHOCALL_VIZ: str = "rhocall-viz"
     SMN_CALLING: str = "smn-calling"

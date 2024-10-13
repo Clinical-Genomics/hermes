@@ -272,6 +272,8 @@ RAW_TAGS = {
     "merged.balsamic_stat": ["snv", "merged", "tmb", "research-tmb"],
     # TMB (WGS)
     "tnscope.balsamic_stat": ["snv", "tnscope", "tmb", "research-tmb"],
+    # MSI (PANEL and WGS)
+    "msisensorpro.msi": ["msi-result", "research-msi-result"]
 }
 
 QC_TAGS = {
@@ -665,6 +667,12 @@ CALLERS_TAGS = {
         "is_mandatory": False,
         "used_by": ["storage"],
     },
+    # MSI (WGS and TGA)
+    frozenset(RAW_TAGS["msisensorpro.msi"]): {
+        "tags": ["research", "msi"],
+        "is_mandatory": False,
+        "used_by": ["storage"],
+    }
 }
 
 BALSAMIC_TAGS = {
@@ -733,6 +741,8 @@ TUMOR_NORMAL_WGS_TAGS = {
     # SVs (WGS)
     frozenset(RAW_TAGS["tumor.tiddit_cov.bed"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["normal.tiddit_cov.bed"]): {"is_mandatory": True},
+    # MSI (WGS)
+    frozenset(RAW_TAGS["msisensorpro.msi"]): {"is_mandatory": True},
 }
 
 TUMOR_ONLY_PANEL_TAGS = {
@@ -790,4 +800,6 @@ TUMOR_NORMAL_PANEL_TAGS = {
     frozenset(RAW_TAGS["cnvkit.vcf2cytosure.cgh"]): {"is_mandatory": True},
     # TMB (PANEL)
     frozenset(RAW_TAGS["merged.balsamic_stat"]): {"is_mandatory": True},
+    # MSI (PANEL)
+    frozenset(RAW_TAGS["msisensorpro.msi"]): {"is_mandatory": True},
 }
