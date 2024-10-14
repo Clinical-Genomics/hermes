@@ -423,7 +423,7 @@ CALLERS_TAGS = {
         "is_mandatory": True,
         "used_by": ["deliver", "scout"],
     },
-    # SNVs (WGS)
+    # SNVs (WGS & Panel)
     frozenset(RAW_TAGS["tnscope.vcf.gz"]): {
         "tags": ["tnscope", "vcf-snv"],
         "is_mandatory": True,
@@ -434,6 +434,7 @@ CALLERS_TAGS = {
         "is_mandatory": True,
         "used_by": ["deliver"],
     },
+    # SNVs (WGS)
     frozenset(RAW_TAGS["tnscope.research.vcf.gz"]): {
         "tags": ["tnscope", "vcf-snv-research-unfiltered"],
         "is_mandatory": False,
@@ -503,16 +504,6 @@ CALLERS_TAGS = {
     },
     frozenset(RAW_TAGS["vardict.vcf.gz.tbi"]): {
         "tags": ["vardict", "vcf-snv-index"],
-        "is_mandatory": False,
-        "used_by": ["deliver"],
-    },
-    frozenset(RAW_TAGS["tnscope.vcf.gz"]): {
-        "tags": ["tnscope", "vcf-snv"],
-        "is_mandatory": False,
-        "used_by": ["deliver"],
-    },
-    frozenset(RAW_TAGS["tnscope.vcf.gz.tbi"]): {
-        "tags": ["tnscope", "vcf-snv-index"],
         "is_mandatory": False,
         "used_by": ["deliver"],
     },
