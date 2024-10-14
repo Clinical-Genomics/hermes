@@ -52,16 +52,6 @@ UMI_CALLERS_TAGS = {
         "is_mandatory": True,
         "used_by": ["deliver"],
     },
-    frozenset(RAW_TAGS["tnscope_umi.research.filtered.pass.vcf.gz"]): {
-        "tags": ["tnscope-umi", "vcf-umi-snv-research"],
-        "is_mandatory": True,
-        "used_by": ["deliver"],
-    },
-    frozenset(RAW_TAGS["tnscope_umi.research.filtered.pass.vcf.gz.tbi"]): {
-        "tags": ["tnscope-umi", "vcf-umi-snv-research-index"],
-        "is_mandatory": True,
-        "used_by": ["deliver"],
-    },
     frozenset(RAW_TAGS["tnscope_umi.clinical.scored.vcf.gz"]): {
         "tags": ["tnscope-umi", "vcf-umi-snv-clinical-scored"],
         "is_mandatory": True,
@@ -100,8 +90,6 @@ UMI_TUMOR_ONLY_PANEL_TAGS = {
     frozenset(RAW_TAGS["tnscope.vcf.gz.tbi"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["merged.clinical.scored.vcf.gz"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["merged.clinical.scored.vcf.gz.tbi"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["merged.research.filtered.pass.vcf.gz"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["merged.research.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["merged.clinical.filtered.pass.vcf.gz"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["merged.clinical.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
     # CNVs (PANEL)
@@ -133,8 +121,6 @@ UMI_TUMOR_NORMAL_PANEL_TAGS = {
     frozenset(RAW_TAGS["tnscope.vcf.gz.tbi"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["merged.clinical.scored.vcf.gz"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["merged.clinical.scored.vcf.gz.tbi"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["merged.research.filtered.pass.vcf.gz"]): {"is_mandatory": True},
-    frozenset(RAW_TAGS["merged.research.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["merged.clinical.filtered.pass.vcf.gz"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["merged.clinical.filtered.pass.vcf.gz.tbi"]): {"is_mandatory": True},
     # CNVs (PANEL)

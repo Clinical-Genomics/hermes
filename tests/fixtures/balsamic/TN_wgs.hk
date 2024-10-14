@@ -891,47 +891,6 @@
             "format": "tbi"
         },
         {
-            "path": "TN-wgs/analysis/vep/SNV.somatic.TN-wgs.tnscope.research.filtered.pass.vcf.gz",
-            "path_index": [
-                "TN-wgs/analysis/vep/SNV.somatic.TN-wgs.tnscope.research.filtered.pass.vcf.gz.tbi"
-            ],
-            "step": "bcftools_filter_tnscope_research_tumor_normal",
-            "tag": [
-                "vcf-pass-tnscope",
-                "SNV",
-                "research-vcf-pass-tnscope",
-                "TN-wgs"
-            ],
-            "id": "TN-wgs",
-            "format": "vcf.gz"
-        },
-        {
-            "path": "TN-wgs/analysis/vep/SNV.somatic.TN-wgs.tnscope.research.filtered.pass.vcf.gz.tbi",
-            "path_index": "",
-            "step": "bcftools_filter_tnscope_research_tumor_normal",
-            "tag": [
-                "vcf-pass-tnscope",
-                "SNV",
-                "research-vcf-pass-tnscope-index",
-                "TN-wgs"
-            ],
-            "id": "TN-wgs",
-            "format": "vcf.gz.tbi"
-        },
-        {
-            "path": "TN-wgs/analysis/vep/SNV.somatic.TN-wgs.tnscope.research.filtered.pass.stats",
-            "path_index": [],
-            "step": "bcftools_filter_tnscope_research_tumor_normal",
-            "tag": [
-                "SNV",
-                "research-bcftools-counts-research",
-                "TN-wgs",
-                "bcftools-counts-research"
-            ],
-            "id": "TN-wgs",
-            "format": "stats"
-        },
-        {
             "path": "TN-wgs/analysis/delivery_report/TN-wgs_report.html",
             "step": "balsamic_delivery",
             "format": "html",

@@ -263,47 +263,6 @@
             "format": "stats"
         },
         {
-            "path": "TN-panel/analysis/vep/SNV.somatic.TN-panel.tnscope_umi.research.filtered.pass.vcf.gz",
-            "path_index": [
-                "TN-panel/analysis/vep/SNV.somatic.TN-panel.tnscope_umi.research.filtered.pass.vcf.gz.tbi"
-            ],
-            "step": "bcftools_filter_TNscope_umi_research_tumor_normal",
-            "tag": [
-                "TN-panel",
-                "SNV",
-                "vcf-pass-tnscope-umi",
-                "research-vcf-pass-tnscope-umi"
-            ],
-            "id": "TN-panel",
-            "format": "vcf.gz"
-        },
-        {
-            "path": "TN-panel/analysis/vep/SNV.somatic.TN-panel.tnscope_umi.research.filtered.pass.vcf.gz.tbi",
-            "path_index": "",
-            "step": "bcftools_filter_TNscope_umi_research_tumor_normal",
-            "tag": [
-                "research-vcf-pass-tnscope-umi-index",
-                "TN-panel",
-                "SNV",
-                "vcf-pass-tnscope-umi"
-            ],
-            "id": "TN-panel",
-            "format": "vcf.gz.tbi"
-        },
-        {
-            "path": "TN-panel/analysis/vep/SNV.somatic.TN-panel.tnscope_umi.research.filtered.pass.stats",
-            "path_index": [],
-            "step": "bcftools_filter_TNscope_umi_research_tumor_normal",
-            "tag": [
-                "TN-panel",
-                "bcftools-counts-research",
-                "SNV",
-                "research-bcftools-counts-research"
-            ],
-            "id": "TN-panel",
-            "format": "stats"
-        },
-        {
             "path": "TN-panel/analysis/vep/SV.somatic.TN-panel.svdb.clinical.filtered.pass.vcf.gz",
             "path_index": [
                 "TN-panel/analysis/vep/SV.somatic.TN-panel.svdb.clinical.filtered.pass.vcf.gz.tbi"
