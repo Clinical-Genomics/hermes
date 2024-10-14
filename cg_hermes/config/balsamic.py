@@ -273,7 +273,7 @@ RAW_TAGS = {
     # TMB (WGS)
     "tnscope.balsamic_stat": ["snv", "tnscope", "tmb", "research-tmb"],
     # MSI (PANEL and WGS)
-    "msisensorpro.msi": ["msi-result", "research-msi-result"]
+    "msisensorpro.msi": ["msi-result", "research-msi-result"],
 }
 
 QC_TAGS = {
@@ -672,7 +672,7 @@ CALLERS_TAGS = {
         "tags": ["research", "msi"],
         "is_mandatory": False,
         "used_by": ["storage"],
-    }
+    },
 }
 
 BALSAMIC_TAGS = {
