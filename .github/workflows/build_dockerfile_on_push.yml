@@ -26,5 +26,5 @@ jobs:
          context: ./
          file: ./Dockerfile
          push: true
-         tags: "clinicalgenomics/hermes-stage:${{steps.get_branch_name.outputs.branch}}, clinicalgenomics/hermes-stage:latest"
+         tags: "clinicalgenomics/hermes:${{steps.get_branch_name.outputs.branch}}, clinicalgenomics/hermes:latest"
 
