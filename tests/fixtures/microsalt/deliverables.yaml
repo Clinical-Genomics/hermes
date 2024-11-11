@@ -1,30 +1,30 @@
 files:
 - format: json
-  id: 110124
+  id: "110124"
   path: /home/proj/production/microbial/results/ACC5211_2019.1.14_9.44.23//sampleinfo.json
   path_index: ~
   step: analysis
   tag: sampleinfo
 - format: html
-  id: 110124
+  id: "110124"
   path: /home/proj/production/microbial/results/ACC5211_2019.1.14_9.44.23//110124_QC_1.html
   path_index: ~
   step: result_aggregation
   tag: microsalt-qc
 - format: html
-  id: 110124
+  id: "110124"
   path: /home/proj/production/microbial/results/ACC5211_2019.1.14_9.44.23//110124_Typing_1.html
   path_index: ~
   step: result_aggregation
   tag: microsalt-type
 - format: json
-  id: 110124
+  id: "110124"
   path: /home/proj/production/microbial/results/ACC5211_2019.1.14_9.44.23//ACC5211.json
   path_index: ~
   step: result_aggregation
   tag: microsalt-json
 - format: txt
-  id: 110124
+  id: "110124"
   path: /home/proj/production/microbial/results/ACC5211_2019.1.14_9.44.23//config.log
   path_index: ~
   step: analysis
