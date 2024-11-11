@@ -50,7 +50,7 @@ files:
   tag: centrifuge_report
 - format: yml
   id: CASE_ID
-  path: /CASE_ID/pipeline_info/software_versions.yml
+  path: /CASE_ID/pipeline_info/nf_core_pipeline_software_mqc_versions.yml
   path_index: ~
   step: software-versions
   tag: software-versions
@@ -96,4 +96,9 @@ files:
   path_index: null
   step: multiqc-json
   tag: multiqc-samtools-stats
-
+- format: json
+  id: CASEID
+  path: PATHTOCASE/manifest.json
+  path_index: ~
+  step: manifest
+  tag: manifest

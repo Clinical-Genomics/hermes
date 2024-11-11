@@ -192,3 +192,9 @@ files:
   path_index: null
   step: star
   tag: raw-gene-counts
+- format: json
+  id: CASEID
+  path: PATHTOCASE/manifest.json
+  path_index: ~
+  step: manifest
+  tag: manifest

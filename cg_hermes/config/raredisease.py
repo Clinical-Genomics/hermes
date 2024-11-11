@@ -45,6 +45,11 @@ RAREDISEASE_COMMON_TAGS = {
         "is_mandatory": False,
         "used_by": [UsageTags.SCOUT],
     },
+    frozenset(["qc_bam", "mosdepth_d4"]): {
+        "tags": [AnalysisTags.COVERAGE, ReportTags.D4],
+        "is_mandatory": False,
+        "used_by": [UsageTags.SCOUT],
+    },
     frozenset(["chromograph_cov", "tcov"]): {
         "tags": [BioinfoToolsTags.CHROMOGRAPH, AnalysisTags.TCOV],
         "is_mandatory": False,
@@ -188,12 +193,12 @@ RAREDISEASE_COMMON_TAGS = {
     frozenset(["call_sv_mt", "eklipse_del"]): {
         "tags": [RarediseaseTags.EKLIPSE_DEL, ReportTags.CSV, AnalysisTags.MITOCHONDRIA],
         "is_mandatory": False,
-        "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
+        "used_by": [UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["call_sv_mt", "eklipse_png"]): {
         "tags": [RarediseaseTags.EKLIPSE_PNG, AnalysisTags.MITOCHONDRIA],
         "is_mandatory": False,
-        "used_by": [UsageTags.SCOUT],
+        "used_by": [UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["call_sv_mt", "eklipse_genes"]): {
         "tags": [RarediseaseTags.EKLIPSE_GENES, ReportTags.CSV, AnalysisTags.MITOCHONDRIA],

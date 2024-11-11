@@ -26,4 +26,9 @@ NEXTFLOW_TAGS = {
         "tags": [QCTags.QC_METRICS, ReportTags.DELIVERABLE],
         "used_by": [UsageTags.CG, UsageTags.LONG_TERM_STORAGE],
     },
+    frozenset({"manifest", "manifest"}): {
+        "is_mandatory": False,
+        "tags": [NextflowTags.MANIFEST],
+        "used_by": [UsageTags.SCOUT, UsageTags.LONG_TERM_STORAGE],
+    },
 }

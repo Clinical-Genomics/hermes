@@ -190,6 +190,7 @@ class ReportTags(StrEnum):
     BCFTOOLS_STATS: str = "bcftools-stats"
     CNV_REPORT: str = "cnv-report"
     CSV: str = "csv"
+    D4: str = "d4"
     DELIVERABLE: str = "deliverable"
     DELIVERY_REPORT: str = "delivery-report"
     GENE_COUNTS: str = "gene-counts"
@@ -231,6 +232,7 @@ class ReportTags(StrEnum):
             self.BCFTOOLS_STATS: "BCFtools variant calling metrics",
             self.CNV_REPORT: "CNV variant calling report",
             self.CSV: "Comma separated values",
+            self.D4: "D4 file format coverage file",
             self.DELIVERABLE: "Deliverables file",
             self.DELIVERY_REPORT: "Delivery report with result for upload to Scout",
             self.GENE_COUNTS: "STAR read counts output per gene",
@@ -691,6 +693,7 @@ class NextflowTags(StrEnum):
     SAMPLESHEET: str = "nextflow-samplesheet"
     SAMPLESHEET_VALID: str = "samplesheet-valid"
     SOFTWARE_VERSIONS: str = "software-versions"
+    MANIFEST: str = "manifest"
 
     @classmethod
     def name(cls) -> str:
