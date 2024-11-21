@@ -19,5 +19,3 @@ This will pull the latest image tagged with your branch from Dockerhub and make 
 4. Deploy the latest version to stage and production with `hermes-deploy`.
 5. Take a screenshot or copy log text and post as a comment on the PR. Screenshot should include environment and that it succeeded.
 6. Great job :whale2:
-
-[development-guide]: http://www.clinicalgenomics.se/development/publish/prod/
