@@ -1,52 +1,23 @@
-# Steps
+# Deployment guide
+This includes instructions for deploying Hermes in the Clinical Genomics :hospital: setting.
 
-When all tests done and successful and PR is approved by codeowners, follow these steps:
+## Steps
+When all tests are done and successful and the PR is approved by codeowners, follow these steps:
 
+### Deploy feature branch for testing
+To deploy your feature branch to test it, run
+1. `hermes-test-deploy <branch_name>`
+2. `hermes-test --help` or the command you want to test.
+
+This will pull the latest image tagged with your branch from Dockerhub and make it available with `hermes-test`. Note that it is not necessary to paxa the environment to do this.
+
+
+### Deploy to stage and production
 1. Select "Squash and merge" to merge branch into default branch (master/main).
+2. Append version increment value `( major | minor | patch )` in the commit message to specify what kind of release is to be created.
+3. Review the details and merge the branch into master.
+4. Deploy the latest version to stage and production with `hermes-deploy`.
+5. Take a screenshot or copy log text and post as a comment on the PR. Screenshot should include environment and that it succeeded.
+6. Great job :whale2:
 
-
-2. A prompt for writing merge commit message will pop up.
-
-
-3. Find the title of the pull request already pre-filled in the merge commit title, or copy and paste 
-the title if not.
-
-
-4. Append version increment value `( major | minor | patch )` to specify what kind of release is to be created.
-
-
-5. Fill in markdown formatted changelog in merge commit comment details:
-
-` ### Added `
-
-` ### Changed `
-
-` ### Fixed `
-
-6. Review the details once again and merge the branch into master.
-
-
-7. Wait for GitHub actions to process the event, bump version, create release, publish to Dockerhub and PyPi.
-
-
-8. Deploy master to stage:
-    1. Log in to appropriate server `ssh <server.scilifelab.se>`
-    2. `us`
-    3. Request stage environment `paxa` and follow instructions
-    4. ```shell
-       bash /home/proj/production/servers/resources/hasta.scilifelab.se/update-tool-stage.sh -e S_hermes -t hermes -b main
-       ```
-    5. Make sure that installation was successful
-   
-
-9. Deploy master to production
-     1. Log in to appropriate server `ssh <server.scilifelab.se>`
-     2. `up`
-     3. ```shell
-        bash /home/proj/production/servers/resources/hasta.scilifelab.se/update-tool-prod.sh -e P_hermes -t hermes -b main
-        ```
-     4. Make sure that installation was successful
-
-
-11. Take a screenshot or copy log text and post as a comment on the PR. Screenshot should include environment and that it succeeded.
-
+[development-guide]: http://www.clinicalgenomics.se/development/publish/prod/
