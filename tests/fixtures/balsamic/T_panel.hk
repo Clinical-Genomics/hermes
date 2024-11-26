@@ -1,176 +1,347 @@
 {
     "files": [
         {
-            "path": "/T-panel/analysis/vep/SV.germline.tumor.manta_germline.vcf.gz",
+            "path": "T-panel/analysis/vcf/SNV.somatic.T-panel.vardict.vcf.gz",
             "path_index": [
-                "/T-panel/analysis/vep/SV.germline.tumor.manta_germline.vcf.gz.tbi"
+                "T-panel/analysis/vcf/SNV.somatic.T-panel.vardict.vcf.gz.tbi"
+            ],
+            "step": "gatk_update_vcf_sequence_dictionary",
+            "tag": [
+                "research-vcf-vardict",
+                "vcf-vardict"
+            ],
+            "id": "T-panel",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "T-panel/analysis/vcf/SNV.somatic.T-panel.vardict.vcf.gz.tbi",
+            "path_index": "",
+            "step": "gatk_update_vcf_sequence_dictionary",
+            "tag": [
+                "research-vcf-vardict-index",
+                "vcf-vardict"
+            ],
+            "id": "T-panel",
+            "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "T-panel/analysis/vep/SNV.somatic.T-panel.merged.cadd_indel.research.vcf.gz",
+            "path_index": [
+                "T-panel/analysis/vep/SNV.somatic.T-panel.merged.cadd_indel.research.vcf.gz.tbi"
+            ],
+            "step": "vep_annotate_somaticSNV_research",
+            "tag": [
+                "T-panel.merged",
+                "research-vcf-snv-unfiltered",
+                "vcf-snv-unfiltered",
+                "cadd-indel"
+            ],
+            "id": "T-panel",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "T-panel/analysis/vep/SNV.somatic.T-panel.merged.cadd_indel.research.vcf.gz.tbi",
+            "path_index": "",
+            "step": "vep_annotate_somaticSNV_research",
+            "tag": [
+                "research-vcf-snv-unfiltered-index",
+                "T-panel.merged",
+                "vcf-snv-unfiltered",
+                "cadd-indel"
+            ],
+            "id": "T-panel",
+            "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "T-panel/analysis/vep/SNV.somatic.T-panel.tnscope_umi.cadd_indel.research.vcf.gz",
+            "path_index": [
+                "T-panel/analysis/vep/SNV.somatic.T-panel.tnscope_umi.cadd_indel.research.vcf.gz.tbi"
+            ],
+            "step": "vep_annotate_somaticSNV_research",
+            "tag": [
+                "research-vcf-snv-unfiltered",
+                "T-panel.tnscope-umi",
+                "vcf-snv-unfiltered",
+                "cadd-indel"
+            ],
+            "id": "T-panel",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "T-panel/analysis/vep/SNV.somatic.T-panel.tnscope_umi.cadd_indel.research.vcf.gz.tbi",
+            "path_index": "",
+            "step": "vep_annotate_somaticSNV_research",
+            "tag": [
+                "research-vcf-snv-unfiltered-index",
+                "T-panel.tnscope-umi",
+                "vcf-snv-unfiltered",
+                "cadd-indel"
+            ],
+            "id": "T-panel",
+            "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "T-panel/analysis/vep/SNV.somatic.T-panel.merged.research.vcf.gz",
+            "path_index": [
+                "T-panel/analysis/vep/SNV.somatic.T-panel.merged.research.vcf.gz.tbi"
+            ],
+            "step": "vep_annotate_somaticSNV_research",
+            "tag": [
+                "merged",
+                "T-panel",
+                "vcf-snv-unfiltered",
+                "research-vcf-snv-unfiltered"
+            ],
+            "id": "T-panel",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "T-panel/analysis/vep/SNV.somatic.T-panel.merged.research.vcf.gz.tbi",
+            "path_index": "",
+            "step": "vep_annotate_somaticSNV_research",
+            "tag": [
+                "merged",
+                "T-panel",
+                "research-vcf-snv-unfiltered-index",
+                "vcf-snv-unfiltered"
+            ],
+            "id": "T-panel",
+            "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "T-panel/analysis/vep/SNV.somatic.T-panel.tnscope_umi.research.vcf.gz",
+            "path_index": [
+                "T-panel/analysis/vep/SNV.somatic.T-panel.tnscope_umi.research.vcf.gz.tbi"
+            ],
+            "step": "vep_annotate_somaticSNV_research",
+            "tag": [
+                "tnscope-umi",
+                "T-panel",
+                "vcf-snv-unfiltered",
+                "research-vcf-snv-unfiltered"
+            ],
+            "id": "T-panel",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "T-panel/analysis/vep/SNV.somatic.T-panel.tnscope_umi.research.vcf.gz.tbi",
+            "path_index": "",
+            "step": "vep_annotate_somaticSNV_research",
+            "tag": [
+                "tnscope-umi",
+                "T-panel",
+                "research-vcf-snv-unfiltered-index",
+                "vcf-snv-unfiltered"
+            ],
+            "id": "T-panel",
+            "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "T-panel/analysis/vep/SNV.somatic.T-panel.tnscope_umi_vcfanno_research.toml",
+            "path_index": [],
+            "step": "vep_annotate_somaticSNV_research",
+            "tag": [
+                "tnscope-umi",
+                "T-panel",
+                "research-vcfanno-research-toml",
+                "vcfanno-research-toml"
+            ],
+            "id": "T-panel",
+            "format": "toml"
+        },
+        {
+            "path": "T-panel/analysis/vep/SNV.somatic.T-panel.merged_vcfanno_research.toml",
+            "path_index": [],
+            "step": "vep_annotate_somaticSNV_research",
+            "tag": [
+                "merged",
+                "T-panel",
+                "research-vcfanno-research-toml",
+                "vcfanno-research-toml"
+            ],
+            "id": "T-panel",
+            "format": "toml"
+        },
+        {
+            "path": "T-panel/analysis/bam/tumor.tumorsample.cram",
+            "path_index": [
+                "T-panel/analysis/bam/tumor.tumorsample.cram.crai"
+            ],
+            "step": "bam_compress_tumor",
+            "tag": [
+                "cram",
+                "tumorsample",
+                "tumor-cram"
+            ],
+            "id": "tumorsample",
+            "format": "cram"
+        },
+        {
+            "path": "T-panel/analysis/bam/tumor.tumorsample.cram.crai",
+            "path_index": "",
+            "step": "bam_compress_tumor",
+            "tag": [
+                "cram",
+                "tumorsample",
+                "tumor-cram-index"
+            ],
+            "id": "tumorsample",
+            "format": "crai"
+        },
+        {
+            "path": "T-panel/analysis/vcf/SV.somatic.T-panel.svdb.vcf.gz",
+            "path_index": [
+                "T-panel/analysis/vcf/SV.somatic.T-panel.svdb.vcf.gz.tbi"
+            ],
+            "step": "svdb_merge_tumor_only",
+            "tag": [
+                "research-vcf-svdb",
+                "vcf-svdb"
+            ],
+            "id": "T-panel",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "T-panel/analysis/vcf/SV.somatic.T-panel.svdb.vcf.gz.tbi",
+            "path_index": "",
+            "step": "svdb_merge_tumor_only",
+            "tag": [
+                "research-vcf-svdb-index",
+                "vcf-svdb"
+            ],
+            "id": "T-panel",
+            "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "T-panel/analysis/vcf/SV.somatic.T-panel.svdb.sample_name_map",
+            "path_index": [],
+            "step": "svdb_merge_tumor_only",
+            "tag": [
+                "namemap",
+                "research-namemap"
+            ],
+            "id": "T-panel",
+            "format": "sample_name_map"
+        },
+        {
+            "path": "T-panel/analysis/vep/SNV.somatic.T-panel.merged.balsamic_stat",
+            "path_index": [],
+            "step": "tmb_calculation",
+            "tag": [
+                "research-tmb",
+                "SNV",
+                "T-panel",
+                "merged",
+                "tmb"
+            ],
+            "id": "T-panel",
+            "format": "balsamic_stat"
+        },
+        {
+            "path": "T-panel/analysis/vep/SNV.somatic.T-panel.tnscope_umi.balsamic_stat",
+            "path_index": [],
+            "step": "tmb_calculation",
+            "tag": [
+                "research-tmb",
+                "SNV",
+                "T-panel",
+                "tmb",
+                "tnscope-umi"
+            ],
+            "id": "T-panel",
+            "format": "balsamic_stat"
+        },
+        {
+            "path": "T-panel/analysis/vcf/CNV.somatic.T-panel.delly.bcf",
+            "path_index": [],
+            "step": "delly_cnv_tumor_only",
+            "tag": [
+                "clinical-cnv-delly",
+                "cnv-delly"
+            ],
+            "id": "T-panel",
+            "format": "bcf"
+        },
+        {
+            "path": "T-panel/analysis/vcf/CNV.somatic.T-panel.dellycnv.cov.gz",
+            "path_index": [],
+            "step": "delly_cnv_tumor_only",
+            "tag": [
+                "rd-delly",
+                "clinical-rd-delly"
+            ],
+            "id": "T-panel",
+            "format": "gz"
+        },
+        {
+            "path": "T-panel/analysis/vcf/CNV.somatic.T-panel.dellycnv.sample_name_map",
+            "path_index": [],
+            "step": "delly_cnv_tumor_only",
+            "tag": [
+                "namemap",
+                "clinical-namemap"
+            ],
+            "id": "T-panel",
+            "format": "sample_name_map"
+        },
+        {
+            "path": "T-panel/analysis/vep/SV.germline.tumor.manta_germline.vcf.gz",
+            "path_index": [
+                "T-panel/analysis/vep/SV.germline.tumor.manta_germline.vcf.gz.tbi"
             ],
             "step": "vep_annotate_germlineVAR_tumor",
             "tag": [
                 "germline-vcf-tumor",
-                "vcf-tumor",
                 "SV",
+                "vcf-tumor",
                 "manta-germline"
             ],
             "id": "T-panel",
             "format": "vcf.gz"
         },
         {
-            "path": "/T-panel/analysis/vep/SV.germline.tumor.manta_germline.vcf.gz.tbi",
+            "path": "T-panel/analysis/vep/SV.germline.tumor.manta_germline.vcf.gz.tbi",
             "path_index": "",
             "step": "vep_annotate_germlineVAR_tumor",
             "tag": [
-                "vcf-tumor",
-                "SV",
                 "germline-vcf-tumor-index",
+                "SV",
+                "vcf-tumor",
                 "manta-germline"
             ],
             "id": "T-panel",
             "format": "vcf.gz.tbi"
         },
         {
-            "path": "/T-panel/analysis/vep/SNV.germline.tumor.dnascope.vcf.gz",
+            "path": "T-panel/analysis/vep/SNV.germline.tumor.dnascope.vcf.gz",
             "path_index": [
-                "/T-panel/analysis/vep/SNV.germline.tumor.dnascope.vcf.gz.tbi"
+                "T-panel/analysis/vep/SNV.germline.tumor.dnascope.vcf.gz.tbi"
             ],
             "step": "vep_annotate_germlineVAR_tumor",
             "tag": [
-                "vcf-tumor",
-                "dnascope",
                 "SNV",
-                "germline-vcf-tumor"
+                "germline-vcf-tumor",
+                "dnascope",
+                "vcf-tumor"
             ],
             "id": "T-panel",
             "format": "vcf.gz"
         },
         {
-            "path": "/T-panel/analysis/vep/SNV.germline.tumor.dnascope.vcf.gz.tbi",
+            "path": "T-panel/analysis/vep/SNV.germline.tumor.dnascope.vcf.gz.tbi",
             "path_index": "",
             "step": "vep_annotate_germlineVAR_tumor",
             "tag": [
-                "vcf-tumor",
-                "dnascope",
                 "SNV",
+                "dnascope",
+                "vcf-tumor",
                 "germline-vcf-tumor-index"
             ],
             "id": "T-panel",
             "format": "vcf.gz.tbi"
         },
         {
-            "path": "/T-panel/analysis/bam/tumor.ACC5611A3.cram",
-            "path_index": [
-                "/T-panel/analysis/bam/tumor.ACC5611A3.cram.crai"
-            ],
-            "step": "bam_compress_tumor",
-            "tag": [
-                "ACC5611A3",
-                "tumor-cram",
-                "cram"
-            ],
-            "id": "ACC5611A3",
-            "format": "cram"
-        },
-        {
-            "path": "/T-panel/analysis/bam/tumor.ACC5611A3.cram.crai",
-            "path_index": "",
-            "step": "bam_compress_tumor",
-            "tag": [
-                "tumor-cram-index",
-                "ACC5611A3",
-                "cram"
-            ],
-            "id": "ACC5611A3",
-            "format": "crai"
-        },
-        {
-            "path": "/T-panel/analysis/cnv/CNV.somatic.T-panel.report.pdf",
-            "path_index": [],
-            "step": "merge_cnv_pdf_reports",
-            "tag": [
-                "cnv-report-pdf",
-                "clinical-cnv-report-pdf"
-            ],
-            "id": "T-panel",
-            "format": "pdf"
-        },
-        {
-            "path": "/T-panel/analysis/vcf/SNV.somatic.T-panel.tnscope_umi.vcf.gz",
-            "path_index": [
-                "/T-panel/analysis/vcf/SNV.somatic.T-panel.tnscope_umi.vcf.gz.tbi"
-            ],
-            "step": "sentieon_tnscope_umi",
-            "tag": [
-                "research-vcf-tnscope-umi",
-                "vcf-tnscope-umi"
-            ],
-            "id": "T-panel",
-            "format": "vcf.gz"
-        },
-        {
-            "path": "/T-panel/analysis/vcf/SNV.somatic.T-panel.tnscope_umi.vcf.gz.tbi",
-            "path_index": "",
-            "step": "sentieon_tnscope_umi",
-            "tag": [
-                "vcf-tnscope-umi",
-                "research-vcf-tnscope-umi-index"
-            ],
-            "id": "T-panel",
-            "format": "vcf.gz.tbi"
-        },
-        {
-            "path": "/T-panel/analysis/vcf/SNV.somatic.T-panel.tnscope_umi.sample_name_map",
-            "path_index": [],
-            "step": "sentieon_tnscope_umi",
-            "tag": [
-                "research-namemap",
-                "namemap"
-            ],
-            "id": "T-panel",
-            "format": "sample_name_map"
-        },
-        {
-            "path": "/T-panel/analysis/vep/SNV.somatic.T-panel.tnscope_umi.research.filtered.pass.vcf.gz",
-            "path_index": [
-                "/T-panel/analysis/vep/SNV.somatic.T-panel.tnscope_umi.research.filtered.pass.vcf.gz.tbi"
-            ],
-            "step": "bcftools_filter_TNscope_umi_research_tumor_only",
-            "tag": [
-                "T-panel",
-                "research-vcf-pass-tnscope-umi",
-                "SNV",
-                "vcf-pass-tnscope-umi"
-            ],
-            "id": "T-panel",
-            "format": "vcf.gz"
-        },
-        {
-            "path": "/T-panel/analysis/vep/SNV.somatic.T-panel.tnscope_umi.research.filtered.pass.vcf.gz.tbi",
-            "path_index": "",
-            "step": "bcftools_filter_TNscope_umi_research_tumor_only",
-            "tag": [
-                "T-panel",
-                "research-vcf-pass-tnscope-umi-index",
-                "SNV",
-                "vcf-pass-tnscope-umi"
-            ],
-            "id": "T-panel",
-            "format": "vcf.gz.tbi"
-        },
-        {
-            "path": "/T-panel/analysis/vep/SNV.somatic.T-panel.tnscope_umi.research.filtered.pass.stats",
-            "path_index": [],
-            "step": "bcftools_filter_TNscope_umi_research_tumor_only",
-            "tag": [
-                "T-panel",
-                "research-bcftools-counts-research",
-                "SNV",
-                "bcftools-counts-research"
-            ],
-            "id": "T-panel",
-            "format": "stats"
-        },
-        {
-            "path": "/T-panel/analysis/cnv/tumor.merged.cns",
+            "path": "T-panel/analysis/cnv/tumor.merged.cns",
             "path_index": [],
             "step": "cnvkit_call_CNV_research",
             "tag": [
@@ -181,7 +352,7 @@
             "format": "cns"
         },
         {
-            "path": "/T-panel/analysis/cnv/T-panel.gene_breaks",
+            "path": "T-panel/analysis/cnv/T-panel.gene_breaks",
             "path_index": [],
             "step": "cnvkit_call_CNV_research",
             "tag": [
@@ -192,7 +363,7 @@
             "format": "gene_breaks"
         },
         {
-            "path": "/T-panel/analysis/cnv/T-panel.gene_metrics",
+            "path": "T-panel/analysis/cnv/T-panel.gene_metrics",
             "path_index": [],
             "step": "cnvkit_call_CNV_research",
             "tag": [
@@ -203,7 +374,7 @@
             "format": "gene_metrics"
         },
         {
-            "path": "/T-panel/analysis/cnv/tumor.merged-diagram.pdf",
+            "path": "T-panel/analysis/cnv/tumor.merged-diagram.pdf",
             "path_index": [],
             "step": "cnvkit_call_CNV_research",
             "tag": [
@@ -214,7 +385,7 @@
             "format": "pdf"
         },
         {
-            "path": "/T-panel/analysis/cnv/tumor.merged-scatter.pdf",
+            "path": "T-panel/analysis/cnv/tumor.merged-scatter.pdf",
             "path_index": [],
             "step": "cnvkit_call_CNV_research",
             "tag": [
@@ -225,7 +396,67 @@
             "format": "pdf"
         },
         {
-            "path": "/T-panel/analysis/vcf/CNV.somatic.T-panel.cnvkit.vcf2cytosure.cgh",
+            "path": "T-panel/analysis/vep/SNV.somatic.T-panel.merged.clinical.scored.vcf.gz",
+            "path_index": [
+                "T-panel/analysis/vep/SNV.somatic.T-panel.merged.clinical.scored.vcf.gz.tbi"
+            ],
+            "step": "genmod_score_snvs",
+            "tag": [
+                "SNV",
+                "T-panel",
+                "vcf-clinical",
+                "merged",
+                "scored-vcf-clinical"
+            ],
+            "id": "T-panel",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "T-panel/analysis/vep/SNV.somatic.T-panel.merged.clinical.scored.vcf.gz.tbi",
+            "path_index": "",
+            "step": "genmod_score_snvs",
+            "tag": [
+                "SNV",
+                "scored-vcf-clinical-index",
+                "T-panel",
+                "vcf-clinical",
+                "merged"
+            ],
+            "id": "T-panel",
+            "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "T-panel/analysis/vep/SNV.somatic.T-panel.tnscope_umi.clinical.scored.vcf.gz",
+            "path_index": [
+                "T-panel/analysis/vep/SNV.somatic.T-panel.tnscope_umi.clinical.scored.vcf.gz.tbi"
+            ],
+            "step": "genmod_score_snvs",
+            "tag": [
+                "SNV",
+                "T-panel",
+                "vcf-clinical",
+                "scored-vcf-clinical",
+                "tnscope-umi"
+            ],
+            "id": "T-panel",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "T-panel/analysis/vep/SNV.somatic.T-panel.tnscope_umi.clinical.scored.vcf.gz.tbi",
+            "path_index": "",
+            "step": "genmod_score_snvs",
+            "tag": [
+                "SNV",
+                "scored-vcf-clinical-index",
+                "T-panel",
+                "vcf-clinical",
+                "tnscope-umi"
+            ],
+            "id": "T-panel",
+            "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "T-panel/analysis/vcf/CNV.somatic.T-panel.cnvkit.vcf2cytosure.cgh",
             "path_index": [],
             "step": "vcf2cytosure_convert",
             "tag": [
@@ -236,33 +467,68 @@
             "format": "cgh"
         },
         {
-            "path": "/T-panel/analysis/vep/SV.somatic.T-panel.svdb.clinical.filtered.pass.vcf.gz",
-            "path_index": [
-                "/T-panel/analysis/vep/SV.somatic.T-panel.svdb.clinical.filtered.pass.vcf.gz.tbi"
-            ],
-            "step": "bcftools_filter_sv_clinical",
+            "path": "T-panel/analysis/cnv/CNV.somatic.T-panel.report.pdf",
+            "path_index": [],
+            "step": "merge_cnv_pdf_reports",
             "tag": [
-                "vcf-pass-svdb",
-                "T-panel",
-                "clinical-vcf-pass-svdb"
+                "clinical-cnv-report-pdf",
+                "cnv-report-pdf"
+            ],
+            "id": "T-panel",
+            "format": "pdf"
+        },
+        {
+            "path": "T-panel/analysis/vcf/SNV.somatic.T-panel.tnscope_umi.vcf.gz",
+            "path_index": [
+                "T-panel/analysis/vcf/SNV.somatic.T-panel.tnscope_umi.vcf.gz.tbi"
+            ],
+            "step": "modify_tnscope_infofield_umi",
+            "tag": [
+                "research-vcf-tnscope-umi",
+                "vcf-tnscope-umi"
             ],
             "id": "T-panel",
             "format": "vcf.gz"
         },
         {
-            "path": "/T-panel/analysis/vep/SV.somatic.T-panel.svdb.clinical.filtered.pass.vcf.gz.tbi",
+            "path": "T-panel/analysis/vcf/SNV.somatic.T-panel.tnscope_umi.vcf.gz.tbi",
             "path_index": "",
-            "step": "bcftools_filter_sv_clinical",
+            "step": "modify_tnscope_infofield_umi",
             "tag": [
-                "vcf-pass-svdb",
-                "T-panel",
-                "clinical-vcf-pass-svdb-index"
+                "research-vcf-tnscope-umi-index",
+                "vcf-tnscope-umi"
             ],
             "id": "T-panel",
             "format": "vcf.gz.tbi"
         },
         {
-            "path": "/T-panel/analysis/vep/SV.somatic.T-panel.svdb.clinical.filtered.pass.stats",
+            "path": "T-panel/analysis/vep/SV.somatic.T-panel.svdb.clinical.filtered.pass.vcf.gz",
+            "path_index": [
+                "T-panel/analysis/vep/SV.somatic.T-panel.svdb.clinical.filtered.pass.vcf.gz.tbi"
+            ],
+            "step": "bcftools_filter_sv_clinical",
+            "tag": [
+                "clinical-vcf-pass-svdb",
+                "T-panel",
+                "vcf-pass-svdb"
+            ],
+            "id": "T-panel",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "T-panel/analysis/vep/SV.somatic.T-panel.svdb.clinical.filtered.pass.vcf.gz.tbi",
+            "path_index": "",
+            "step": "bcftools_filter_sv_clinical",
+            "tag": [
+                "T-panel",
+                "clinical-vcf-pass-svdb-index",
+                "vcf-pass-svdb"
+            ],
+            "id": "T-panel",
+            "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "T-panel/analysis/vep/SV.somatic.T-panel.svdb.clinical.filtered.pass.stats",
             "path_index": [],
             "step": "bcftools_filter_sv_clinical",
             "tag": [
@@ -274,7 +540,63 @@
             "format": "stats"
         },
         {
-            "path": "/T-panel/analysis/qc/multiqc_report.html",
+            "path": "T-panel/analysis/cnv/tumorsample.baf.bed.gz",
+            "path_index": [
+                "T-panel/analysis/cnv/tumorsample.baf.bed.gz.tbi"
+            ],
+            "step": "finalize_gens_outputfiles",
+            "tag": [
+                "cnv-gens-bed",
+                "tumorsample",
+                "baf",
+                "gens-bed"
+            ],
+            "id": "tumorsample",
+            "format": "gz"
+        },
+        {
+            "path": "T-panel/analysis/cnv/tumorsample.baf.bed.gz.tbi",
+            "path_index": "",
+            "step": "finalize_gens_outputfiles",
+            "tag": [
+                "tumorsample",
+                "baf",
+                "gens-bed",
+                "cnv-gens-bed-index"
+            ],
+            "id": "tumorsample",
+            "format": "tbi"
+        },
+        {
+            "path": "T-panel/analysis/cnv/tumorsample.cov.bed.gz",
+            "path_index": [
+                "T-panel/analysis/cnv/tumorsample.cov.bed.gz.tbi"
+            ],
+            "step": "finalize_gens_outputfiles",
+            "tag": [
+                "cnv-gens-bed",
+                "tumorsample",
+                "cov",
+                "gens-bed"
+            ],
+            "id": "tumorsample",
+            "format": "gz"
+        },
+        {
+            "path": "T-panel/analysis/cnv/tumorsample.cov.bed.gz.tbi",
+            "path_index": "",
+            "step": "finalize_gens_outputfiles",
+            "tag": [
+                "tumorsample",
+                "cov",
+                "gens-bed",
+                "cnv-gens-bed-index"
+            ],
+            "id": "tumorsample",
+            "format": "tbi"
+        },
+        {
+            "path": "T-panel/analysis/qc/multiqc_report.html",
             "path_index": [],
             "step": "multiqc",
             "tag": [
@@ -285,51 +607,59 @@
             "format": "html"
         },
         {
-            "path": "/T-panel/analysis/qc/multiqc_data/multiqc_data.json",
+            "path": "T-panel/analysis/qc/multiqc_data/multiqc_data.json",
             "path_index": [],
             "step": "multiqc",
             "tag": [
-                "json",
-                "multiqc-json"
+                "multiqc-json",
+                "json"
             ],
             "id": "T-panel",
             "format": "json"
         },
         {
-            "path": "/T-panel/analysis/vcf/CNV.somatic.T-panel.delly.bcf",
-            "path_index": [],
-            "step": "delly_cnv_tumor_only",
+            "path": "T-panel/analysis/vep/SNV.somatic.T-panel.merged.research.filtered.pass.vcf.gz",
+            "path_index": [
+                "T-panel/analysis/vep/SNV.somatic.T-panel.merged.research.filtered.pass.vcf.gz.tbi"
+            ],
+            "step": "bcftools_filter_merged_research_tumor_only",
             "tag": [
-                "clinical-cnv-delly",
-                "cnv-delly"
+                "research-vcf-pass-merged",
+                "SNV",
+                "T-panel",
+                "vcf-pass-merged"
             ],
             "id": "T-panel",
-            "format": "bcf"
+            "format": "vcf.gz"
         },
         {
-            "path": "/T-panel/analysis/vcf/CNV.somatic.T-panel.dellycnv.cov.gz",
-            "path_index": [],
-            "step": "delly_cnv_tumor_only",
+            "path": "T-panel/analysis/vep/SNV.somatic.T-panel.merged.research.filtered.pass.vcf.gz.tbi",
+            "path_index": "",
+            "step": "bcftools_filter_merged_research_tumor_only",
             "tag": [
-                "rd-delly",
-                "clinical-rd-delly"
+                "research-vcf-pass-merged-index",
+                "SNV",
+                "T-panel",
+                "vcf-pass-merged"
             ],
             "id": "T-panel",
-            "format": "gz"
+            "format": "vcf.gz.tbi"
         },
         {
-            "path": "/T-panel/analysis/vcf/CNV.somatic.T-panel.dellycnv.sample_name_map",
+            "path": "T-panel/analysis/vep/SNV.somatic.T-panel.merged.research.filtered.pass.stats",
             "path_index": [],
-            "step": "delly_cnv_tumor_only",
+            "step": "bcftools_filter_merged_research_tumor_only",
             "tag": [
-                "clinical-namemap",
-                "namemap"
+                "SNV",
+                "T-panel",
+                "research-bcftools-counts-research",
+                "bcftools-counts-research"
             ],
             "id": "T-panel",
-            "format": "sample_name_map"
+            "format": "stats"
         },
         {
-            "path": "/T-panel/analysis/cnv/tumor.initial.cns",
+            "path": "T-panel/analysis/cnv/tumor.initial.cns",
             "path_index": [],
             "step": "cnvkit_segment_CNV_research",
             "tag": [
@@ -340,408 +670,94 @@
             "format": "cns"
         },
         {
-            "path": "/T-panel/analysis/cnv/tumor.merged.cnr",
+            "path": "T-panel/analysis/cnv/tumor.merged.cnr",
             "path_index": [],
             "step": "cnvkit_segment_CNV_research",
             "tag": [
-                "cnv-cnr",
-                "cnr"
+                "cnr",
+                "cnv-cnr"
             ],
             "id": "T-panel",
             "format": "cnr"
         },
         {
-            "path": "/T-panel/analysis/cnv/targets.bed",
+            "path": "T-panel/analysis/cnv/tumor.seg",
             "path_index": [],
             "step": "cnvkit_segment_CNV_research",
             "tag": [
-                "targets",
-                "cnv-targets"
-            ],
-            "id": "T-panel",
-            "format": "bed"
-        },
-        {
-            "path": "/T-panel/analysis/cnv/antitarget.bed",
-            "path_index": [],
-            "step": "cnvkit_segment_CNV_research",
-            "tag": [
-                "antitargets",
-                "cnv-antitargets"
-            ],
-            "id": "T-panel",
-            "format": "bed"
-        },
-        {
-            "path": "/T-panel/analysis/cnv/tumor.targetcoverage.cnn",
-            "path_index": [],
-            "step": "cnvkit_segment_CNV_research",
-            "tag": [
-                "cnv-tumor-target-coverage",
-                "tumor-target-coverage"
-            ],
-            "id": "T-panel",
-            "format": "cnn"
-        },
-        {
-            "path": "/T-panel/analysis/cnv/tumor.antitargetcoverage.cnn",
-            "path_index": [],
-            "step": "cnvkit_segment_CNV_research",
-            "tag": [
-                "cnv-tumor-antitarget-coverage",
-                "tumor-antitarget-coverage"
-            ],
-            "id": "T-panel",
-            "format": "cnn"
-        },
-        {
-            "path": "/T-panel/analysis/cnv/tumor.seg",
-            "path_index": [],
-            "step": "cnvkit_segment_CNV_research",
-            "tag": [
-                "segment",
-                "cnv-segment"
+                "cnv-segment",
+                "segment"
             ],
             "id": "T-panel",
             "format": "seg"
         },
         {
-            "path": "/T-panel/analysis/vep/SNV.somatic.T-panel.tnscope_umi.balsamic_stat",
-            "path_index": [],
-            "step": "tmb_calculation",
-            "tag": [
-                "tnscope-umi",
-                "T-panel",
-                "SNV",
-                "tmb",
-                "research-tmb"
-            ],
-            "id": "T-panel",
-            "format": "balsamic_stat"
-        },
-        {
-            "path": "/T-panel/analysis/vep/SNV.somatic.T-panel.vardict.balsamic_stat",
-            "path_index": [],
-            "step": "tmb_calculation",
-            "tag": [
-                "T-panel",
-                "SNV",
-                "tmb",
-                "vardict",
-                "research-tmb"
-            ],
-            "id": "T-panel",
-            "format": "balsamic_stat"
-        },
-        {
-            "path": "/T-panel/analysis/vep/SNV.somatic.T-panel.vardict.clinical.filtered.pass.vcf.gz",
+            "path": "T-panel/analysis/vep/SNV.somatic.T-panel.tnscope_umi.clinical.filtered.pass.vcf.gz",
             "path_index": [
-                "/T-panel/analysis/vep/SNV.somatic.T-panel.vardict.clinical.filtered.pass.vcf.gz.tbi"
-            ],
-            "step": "bcftools_filter_vardict_clinical_tumor_only",
-            "tag": [
-                "clinical-vcf-pass-vardict",
-                "vcf-pass-vardict",
-                "T-panel",
-                "SNV"
-            ],
-            "id": "T-panel",
-            "format": "vcf.gz"
-        },
-        {
-            "path": "/T-panel/analysis/vep/SNV.somatic.T-panel.vardict.clinical.filtered.pass.vcf.gz.tbi",
-            "path_index": "",
-            "step": "bcftools_filter_vardict_clinical_tumor_only",
-            "tag": [
-                "clinical-vcf-pass-vardict-index",
-                "vcf-pass-vardict",
-                "T-panel",
-                "SNV"
-            ],
-            "id": "T-panel",
-            "format": "vcf.gz.tbi"
-        },
-        {
-            "path": "/T-panel/analysis/vep/SNV.somatic.T-panel.vardict.clinical.filtered.pass.stats",
-            "path_index": [],
-            "step": "bcftools_filter_vardict_clinical_tumor_only",
-            "tag": [
-                "bcftools-counts-clinical",
-                "clinical-bcftools-counts-clinical",
-                "T-panel",
-                "SNV"
-            ],
-            "id": "T-panel",
-            "format": "stats"
-        },
-        {
-            "path": "/T-panel/analysis/vcf/SNV.somatic.T-panel.vardict.sample_name_map",
-            "path_index": [],
-            "step": "vardict_merge",
-            "tag": [
-                "research-namemap",
-                "namemap"
-            ],
-            "id": "T-panel",
-            "format": "sample_name_map"
-        },
-        {
-            "path": "/T-panel/analysis/vcf/SNV.somatic.T-panel.vardict.yaml",
-            "path_index": [],
-            "step": "vardict_merge",
-            "tag": [
-                "research-yaml",
-                "yaml"
-            ],
-            "id": "T-panel",
-            "format": "yaml"
-        },
-        {
-            "path": "/T-panel/analysis/vcf/SNV.somatic.T-panel.vardict.vcf.gz",
-            "path_index": [
-                "/T-panel/analysis/vcf/SNV.somatic.T-panel.vardict.vcf.gz.tbi"
-            ],
-            "step": "vardict_merge",
-            "tag": [
-                "vcf-vardict",
-                "research-vcf-vardict"
-            ],
-            "id": "T-panel",
-            "format": "vcf.gz"
-        },
-        {
-            "path": "/T-panel/analysis/vcf/SNV.somatic.T-panel.vardict.vcf.gz.tbi",
-            "path_index": "",
-            "step": "vardict_merge",
-            "tag": [
-                "vcf-vardict",
-                "research-vcf-vardict-index"
-            ],
-            "id": "T-panel",
-            "format": "vcf.gz.tbi"
-        },
-        {
-            "path": "/T-panel/analysis/vcf/SV.somatic.T-panel.svdb.vcf.gz",
-            "path_index": [
-                "/T-panel/analysis/vcf/SV.somatic.T-panel.svdb.vcf.gz.tbi"
-            ],
-            "step": "svdb_merge_tumor_only",
-            "tag": [
-                "research-vcf-svdb",
-                "vcf-svdb"
-            ],
-            "id": "T-panel",
-            "format": "vcf.gz"
-        },
-        {
-            "path": "/T-panel/analysis/vcf/SV.somatic.T-panel.svdb.vcf.gz.tbi",
-            "path_index": "",
-            "step": "svdb_merge_tumor_only",
-            "tag": [
-                "research-vcf-svdb-index",
-                "vcf-svdb"
-            ],
-            "id": "T-panel",
-            "format": "vcf.gz.tbi"
-        },
-        {
-            "path": "/T-panel/analysis/vcf/SV.somatic.T-panel.svdb.sample_name_map",
-            "path_index": [],
-            "step": "svdb_merge_tumor_only",
-            "tag": [
-                "research-namemap",
-                "namemap"
-            ],
-            "id": "T-panel",
-            "format": "sample_name_map"
-        },
-        {
-            "path": "/T-panel/analysis/vep/SNV.somatic.T-panel.vardict.research.filtered.pass.vcf.gz",
-            "path_index": [
-                "/T-panel/analysis/vep/SNV.somatic.T-panel.vardict.research.filtered.pass.vcf.gz.tbi"
-            ],
-            "step": "bcftools_filter_vardict_research_tumor_only",
-            "tag": [
-                "vcf-pass-vardict",
-                "T-panel",
-                "SNV",
-                "research-vcf-pass-vardict"
-            ],
-            "id": "T-panel",
-            "format": "vcf.gz"
-        },
-        {
-            "path": "/T-panel/analysis/vep/SNV.somatic.T-panel.vardict.research.filtered.pass.vcf.gz.tbi",
-            "path_index": "",
-            "step": "bcftools_filter_vardict_research_tumor_only",
-            "tag": [
-                "research-vcf-pass-vardict-index",
-                "vcf-pass-vardict",
-                "T-panel",
-                "SNV"
-            ],
-            "id": "T-panel",
-            "format": "vcf.gz.tbi"
-        },
-        {
-            "path": "/T-panel/analysis/vep/SNV.somatic.T-panel.vardict.research.filtered.pass.stats",
-            "path_index": [],
-            "step": "bcftools_filter_vardict_research_tumor_only",
-            "tag": [
-                "T-panel",
-                "research-bcftools-counts-research",
-                "SNV",
-                "bcftools-counts-research"
-            ],
-            "id": "T-panel",
-            "format": "stats"
-        },
-        {
-            "path": "/T-panel/analysis/vep/SNV.somatic.T-panel.tnscope_umi.clinical.filtered.pass.vcf.gz",
-            "path_index": [
-                "/T-panel/analysis/vep/SNV.somatic.T-panel.tnscope_umi.clinical.filtered.pass.vcf.gz.tbi"
+                "T-panel/analysis/vep/SNV.somatic.T-panel.tnscope_umi.clinical.filtered.pass.vcf.gz.tbi"
             ],
             "step": "bcftools_filter_TNscope_umi_clinical_tumor_only",
             "tag": [
-                "T-panel",
                 "clinical-vcf-pass-tnscope-umi",
                 "SNV",
+                "T-panel",
                 "vcf-pass-tnscope-umi"
             ],
             "id": "T-panel",
             "format": "vcf.gz"
         },
         {
-            "path": "/T-panel/analysis/vep/SNV.somatic.T-panel.tnscope_umi.clinical.filtered.pass.vcf.gz.tbi",
+            "path": "T-panel/analysis/vep/SNV.somatic.T-panel.tnscope_umi.clinical.filtered.pass.vcf.gz.tbi",
             "path_index": "",
             "step": "bcftools_filter_TNscope_umi_clinical_tumor_only",
             "tag": [
-                "clinical-vcf-pass-tnscope-umi-index",
-                "T-panel",
                 "SNV",
-                "vcf-pass-tnscope-umi"
+                "T-panel",
+                "vcf-pass-tnscope-umi",
+                "clinical-vcf-pass-tnscope-umi-index"
             ],
             "id": "T-panel",
             "format": "vcf.gz.tbi"
         },
         {
-            "path": "/T-panel/analysis/vep/SNV.somatic.T-panel.tnscope_umi.clinical.filtered.pass.stats",
+            "path": "T-panel/analysis/vep/SNV.somatic.T-panel.tnscope_umi.clinical.filtered.pass.stats",
             "path_index": [],
             "step": "bcftools_filter_TNscope_umi_clinical_tumor_only",
             "tag": [
                 "bcftools-counts-clinical",
-                "clinical-bcftools-counts-clinical",
+                "SNV",
                 "T-panel",
-                "SNV"
+                "clinical-bcftools-counts-clinical"
             ],
             "id": "T-panel",
             "format": "stats"
         },
         {
-            "path": "/T-panel/analysis/umi/tumor_umi_consensusfiltered.merged.bam",
+            "path": "T-panel/analysis/vcf/SNV.somatic.T-panel.tnscope.vcf.gz",
             "path_index": [
-                "/T-panel/analysis/umi/tumor_umi_consensusfiltered.merged.bai",
-                "/T-panel/analysis/umi/tumor_umi_consensusfiltered.merged.bam.bai"
+                "T-panel/analysis/vcf/SNV.somatic.T-panel.tnscope.vcf.gz.tbi"
             ],
-            "step": "mergeBam_tumor_umiconsensus",
+            "step": "modify_tnscope_infofield",
             "tag": [
-                "umi-tumor-bam",
-                "bam",
-                "ACC5611A3"
-            ],
-            "id": "ACC5611A3",
-            "format": "bam"
-        },
-        {
-            "path": "/T-panel/analysis/umi/tumor_umi_consensusfiltered.merged.bai",
-            "path_index": "",
-            "step": "mergeBam_tumor_umiconsensus",
-            "tag": [
-                "umi-tumor-bam-index",
-                "bam",
-                "ACC5611A3"
-            ],
-            "id": "ACC5611A3",
-            "format": "bai"
-        },
-        {
-            "path": "/T-panel/analysis/umi/tumor_umi_consensusfiltered.merged.bam.bai",
-            "path_index": "",
-            "step": "mergeBam_tumor_umiconsensus",
-            "tag": [
-                "umi-tumor-bam-index",
-                "bam",
-                "ACC5611A3"
-            ],
-            "id": "ACC5611A3",
-            "format": "bai"
-        },
-        {
-            "path": "/T-panel/analysis/umi/tumor_umi_consensusfiltered.merged.cram",
-            "path_index": [
-                "/T-panel/analysis/umi/tumor_umi_consensusfiltered.merged.cram.crai"
-            ],
-            "step": "mergeBam_tumor_umiconsensus",
-            "tag": [
-                "ACC5611A3",
-                "umi-tumor-cram",
-                "cram"
-            ],
-            "id": "ACC5611A3",
-            "format": "cram"
-        },
-        {
-            "path": "/T-panel/analysis/umi/tumor_umi_consensusfiltered.merged.cram.crai",
-            "path_index": "",
-            "step": "mergeBam_tumor_umiconsensus",
-            "tag": [
-                "umi-tumor-cram-index",
-                "ACC5611A3",
-                "cram"
-            ],
-            "id": "ACC5611A3",
-            "format": "crai"
-        },
-        {
-            "path": "/T-panel/analysis/vep/SV.somatic.T-panel.svdb.research.filtered.pass.vcf.gz",
-            "path_index": [
-                "/T-panel/analysis/vep/SV.somatic.T-panel.svdb.research.filtered.pass.vcf.gz.tbi"
-            ],
-            "step": "bcftools_filter_sv_research",
-            "tag": [
-                "vcf-pass-svdb",
-                "T-panel",
-                "research-vcf-pass-svdb"
+                "vcf-tnscope",
+                "research-vcf-tnscope"
             ],
             "id": "T-panel",
             "format": "vcf.gz"
         },
         {
-            "path": "/T-panel/analysis/vep/SV.somatic.T-panel.svdb.research.filtered.pass.vcf.gz.tbi",
+            "path": "T-panel/analysis/vcf/SNV.somatic.T-panel.tnscope.vcf.gz.tbi",
             "path_index": "",
-            "step": "bcftools_filter_sv_research",
+            "step": "modify_tnscope_infofield",
             "tag": [
-                "vcf-pass-svdb",
-                "research-vcf-pass-svdb-index",
-                "T-panel"
+                "vcf-tnscope",
+                "research-vcf-tnscope-index"
             ],
             "id": "T-panel",
             "format": "vcf.gz.tbi"
         },
         {
-            "path": "/T-panel/analysis/vep/SV.somatic.T-panel.svdb.research.filtered.pass.stats",
-            "path_index": [],
-            "step": "bcftools_filter_sv_research",
-            "tag": [
-                "research-bcftools-counts",
-                "T-panel",
-                "bcftools-counts"
-            ],
-            "id": "T-panel",
-            "format": "stats"
-        },
-        {
-            "path": "/T-panel/analysis/qc/T-panel_metrics_deliverables.yaml",
+            "path": "T-panel/analysis/qc/T-panel_metrics_deliverables.yaml",
             "path_index": [],
             "step": "collect_custom_qc_metrics",
             "tag": [
@@ -752,7 +768,112 @@
             "format": "yaml"
         },
         {
-            "path": "/T-panel/analysis/delivery_report/T-panel_report.html",
+            "path": "T-panel/analysis/vep/SNV.somatic.T-panel.merged.clinical.filtered.pass.vcf.gz",
+            "path_index": [
+                "T-panel/analysis/vep/SNV.somatic.T-panel.merged.clinical.filtered.pass.vcf.gz.tbi"
+            ],
+            "step": "bcftools_filter_merged_clinical_tumor_only",
+            "tag": [
+                "SNV",
+                "T-panel",
+                "vcf-pass-merged",
+                "clinical-vcf-pass-merged"
+            ],
+            "id": "T-panel",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "T-panel/analysis/vep/SNV.somatic.T-panel.merged.clinical.filtered.pass.vcf.gz.tbi",
+            "path_index": "",
+            "step": "bcftools_filter_merged_clinical_tumor_only",
+            "tag": [
+                "SNV",
+                "T-panel",
+                "clinical-vcf-pass-merged-index",
+                "vcf-pass-merged"
+            ],
+            "id": "T-panel",
+            "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "T-panel/analysis/vep/SNV.somatic.T-panel.merged.clinical.filtered.pass.stats",
+            "path_index": [],
+            "step": "bcftools_filter_merged_clinical_tumor_only",
+            "tag": [
+                "bcftools-counts-clinical",
+                "SNV",
+                "T-panel",
+                "clinical-bcftools-counts-clinical"
+            ],
+            "id": "T-panel",
+            "format": "stats"
+        },
+        {
+            "path": "T-panel/analysis/vep/SV.somatic.T-panel.svdb.research.filtered.pass.vcf.gz",
+            "path_index": [
+                "T-panel/analysis/vep/SV.somatic.T-panel.svdb.research.filtered.pass.vcf.gz.tbi"
+            ],
+            "step": "bcftools_filter_sv_research",
+            "tag": [
+                "research-vcf-pass-svdb",
+                "T-panel",
+                "vcf-pass-svdb"
+            ],
+            "id": "T-panel",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "T-panel/analysis/vep/SV.somatic.T-panel.svdb.research.filtered.pass.vcf.gz.tbi",
+            "path_index": "",
+            "step": "bcftools_filter_sv_research",
+            "tag": [
+                "T-panel",
+                "research-vcf-pass-svdb-index",
+                "vcf-pass-svdb"
+            ],
+            "id": "T-panel",
+            "format": "vcf.gz.tbi"
+        },
+        {
+            "path": "T-panel/analysis/vep/SV.somatic.T-panel.svdb.research.filtered.pass.stats",
+            "path_index": [],
+            "step": "bcftools_filter_sv_research",
+            "tag": [
+                "T-panel",
+                "bcftools-counts",
+                "research-bcftools-counts"
+            ],
+            "id": "T-panel",
+            "format": "stats"
+        },
+        {
+            "path": "T-panel/analysis/umi/tumor.tumorsample.consensusfiltered_umi.cram",
+            "path_index": [
+                "T-panel/analysis/umi/tumor.tumorsample.consensusfiltered_umi.cram.crai"
+            ],
+            "step": "bam_compress_tumor_umi",
+            "tag": [
+                "umi-tumor-cram",
+                "cram",
+                "tumorsample"
+            ],
+            "id": "tumorsample",
+            "format": "cram"
+        },
+        {
+            "path": "T-panel/analysis/umi/tumor.tumorsample.consensusfiltered_umi.cram.crai",
+            "path_index": "",
+            "step": "bam_compress_tumor_umi",
+            "tag": [
+                "cram",
+                "tumorsample",
+                "umi-tumor-cram-index"
+            ],
+            "id": "tumorsample",
+            "format": "crai"
+        },
+        {
+            "path": "T-panel/analysis/delivery_report/T-panel_report.html",
             "step": "balsamic_delivery",
             "format": "html",
             "tag": [
@@ -761,7 +882,7 @@
             "id": "T-panel"
         },
         {
-            "path": "/T-panel/T-panel.json",
+            "path": "T-panel/T-panel.json",
             "step": "case_config",
             "format": "json",
             "tag": [
@@ -770,7 +891,7 @@
             "id": "T-panel"
         },
         {
-            "path": "/T-panel/T-panel_BALSAMIC_13.0.1_graph.pdf",
+            "path": "T-panel/T-panel_BALSAMIC_15.0.1_graph.pdf",
             "step": "case_config",
             "format": "pdf",
             "tag": [
@@ -779,61 +900,146 @@
             "id": "T-panel"
         },
         {
-            "path": "/T-panel/analysis/qc/multiqc_data/picard_histogram_1.json",
+            "path": "T-panel/analysis/qc/multiqc_data/samtools-idxstats-mapped-reads-plot_Raw_Counts.json",
+            "step": "multiqc",
+            "format": "json",
+            "tag": [
+                "samtools-idxstats-mapped-reads-plot",
+                "raw",
+                "counts"
+            ],
+            "id": "T-panel"
+        },
+        {
+            "path": "T-panel/analysis/qc/multiqc_data/fastp-seq-content-n-plot_Read_1_After_filtering.json",
+            "step": "multiqc",
+            "format": "json",
+            "tag": [
+                "fastp-seq-content-n-plot",
+                "read",
+                "1",
+                "after",
+                "filtering"
+            ],
+            "id": "T-panel"
+        },
+        {
+            "path": "T-panel/analysis/qc/multiqc_data/fastp-seq-quality-plot_Read_2_Before_filtering.json",
+            "step": "multiqc",
+            "format": "json",
+            "tag": [
+                "fastp-seq-quality-plot",
+                "read",
+                "2",
+                "before",
+                "filtering"
+            ],
+            "id": "T-panel"
+        },
+        {
+            "path": "T-panel/analysis/qc/multiqc_data/fastp-seq-quality-plot_Read_2_After_filtering.json",
+            "step": "multiqc",
+            "format": "json",
+            "tag": [
+                "fastp-seq-quality-plot",
+                "read",
+                "2",
+                "after",
+                "filtering"
+            ],
+            "id": "T-panel"
+        },
+        {
+            "path": "T-panel/analysis/qc/multiqc_data/samtools-idxstats-xy-plot.json",
+            "step": "multiqc",
+            "format": "json",
+            "tag": [
+                "samtools-idxstats-xy-plot"
+            ],
+            "id": "T-panel"
+        },
+        {
+            "path": "T-panel/analysis/qc/multiqc_data/mosdepth-cumcoverage-dist-id.json",
+            "step": "multiqc",
+            "format": "json",
+            "tag": [
+                "mosdepth-cumcoverage-dist-id"
+            ],
+            "id": "T-panel"
+        },
+        {
+            "path": "T-panel/analysis/qc/multiqc_data/mosdepth-xy-coverage-plot.json",
+            "step": "multiqc",
+            "format": "json",
+            "tag": [
+                "mosdepth-xy-coverage-plot"
+            ],
+            "id": "T-panel"
+        },
+        {
+            "path": "T-panel/analysis/qc/multiqc_data/fastqc_per_sequence_quality_scores_plot.json",
+            "step": "multiqc",
+            "format": "json",
+            "tag": [
+                "fastqc",
+                "per",
+                "sequence",
+                "quality",
+                "scores",
+                "plot"
+            ],
+            "id": "T-panel"
+        },
+        {
+            "path": "T-panel/analysis/qc/multiqc_data/picard_hybrid_selection_penalty.json",
             "step": "multiqc",
             "format": "json",
             "tag": [
                 "picard",
-                "histogram",
-                "1"
+                "hybrid",
+                "selection",
+                "penalty"
             ],
             "id": "T-panel"
         },
         {
-            "path": "/T-panel/analysis/qc/multiqc_data/multiqc_fastp.json",
+            "path": "T-panel/analysis/qc/multiqc_data/fastqc_per_base_sequence_quality_plot.json",
             "step": "multiqc",
             "format": "json",
             "tag": [
-                "multiqc",
-                "fastp"
+                "fastqc",
+                "per",
+                "base",
+                "sequence",
+                "quality",
+                "plot"
             ],
             "id": "T-panel"
         },
         {
-            "path": "/T-panel/analysis/qc/multiqc_data/multiqc_picard_AlignmentSummaryMetrics.json",
+            "path": "T-panel/analysis/qc/multiqc_data/fastp_filtered_reads_plot.json",
             "step": "multiqc",
             "format": "json",
             "tag": [
-                "multiqc",
+                "fastp",
+                "filtered",
+                "reads",
+                "plot"
+            ],
+            "id": "T-panel"
+        },
+        {
+            "path": "T-panel/analysis/qc/multiqc_data/picard_deduplication.json",
+            "step": "multiqc",
+            "format": "json",
+            "tag": [
                 "picard",
-                "alignmentsummarymetrics"
+                "deduplication"
             ],
             "id": "T-panel"
         },
         {
-            "path": "/T-panel/analysis/qc/multiqc_data/multiqc_picard_insertSize.json",
-            "step": "multiqc",
-            "format": "json",
-            "tag": [
-                "multiqc",
-                "picard",
-                "insertsize"
-            ],
-            "id": "T-panel"
-        },
-        {
-            "path": "/T-panel/analysis/qc/multiqc_data/mosdepth_cov_dist.json",
-            "step": "multiqc",
-            "format": "json",
-            "tag": [
-                "mosdepth",
-                "cov",
-                "dist"
-            ],
-            "id": "T-panel"
-        },
-        {
-            "path": "/T-panel/analysis/qc/multiqc_data/multiqc_citations.json",
+            "path": "T-panel/analysis/qc/multiqc_data/multiqc_citations.json",
             "step": "multiqc",
             "format": "json",
             "tag": [
@@ -843,7 +1049,51 @@
             "id": "T-panel"
         },
         {
-            "path": "/T-panel/analysis/qc/multiqc_data/multiqc_data.json",
+            "path": "T-panel/analysis/qc/multiqc_data/fastqc_sequence_counts_plot.json",
+            "step": "multiqc",
+            "format": "json",
+            "tag": [
+                "fastqc",
+                "sequence",
+                "counts",
+                "plot"
+            ],
+            "id": "T-panel"
+        },
+        {
+            "path": "T-panel/analysis/qc/multiqc_data/picard_percentage_target_bases.json",
+            "step": "multiqc",
+            "format": "json",
+            "tag": [
+                "picard",
+                "percentage",
+                "target",
+                "bases"
+            ],
+            "id": "T-panel"
+        },
+        {
+            "path": "T-panel/analysis/qc/multiqc_data/samtools-idxstats-mapped-reads-plot_Normalised_Counts.json",
+            "step": "multiqc",
+            "format": "json",
+            "tag": [
+                "samtools-idxstats-mapped-reads-plot",
+                "normalised",
+                "counts"
+            ],
+            "id": "T-panel"
+        },
+        {
+            "path": "T-panel/analysis/qc/multiqc_data/mosdepth-coverage-per-contig-multi.json",
+            "step": "multiqc",
+            "format": "json",
+            "tag": [
+                "mosdepth-coverage-per-contig-multi"
+            ],
+            "id": "T-panel"
+        },
+        {
+            "path": "T-panel/analysis/qc/multiqc_data/multiqc_data.json",
             "step": "multiqc",
             "format": "json",
             "tag": [
@@ -853,39 +1103,133 @@
             "id": "T-panel"
         },
         {
-            "path": "/T-panel/analysis/qc/multiqc_data/mosdepth_cumcov_dist.json",
+            "path": "T-panel/analysis/qc/multiqc_data/samtools_alignment_plot.json",
             "step": "multiqc",
             "format": "json",
             "tag": [
-                "mosdepth",
-                "cumcov",
-                "dist"
+                "samtools",
+                "alignment",
+                "plot"
             ],
             "id": "T-panel"
         },
         {
-            "path": "/T-panel/analysis/qc/multiqc_data/multiqc_picard_dups.json",
+            "path": "T-panel/analysis/qc/multiqc_data/fastp-seq-content-gc-plot_Read_1_After_filtering.json",
             "step": "multiqc",
             "format": "json",
             "tag": [
-                "multiqc",
+                "fastp-seq-content-gc-plot",
+                "read",
+                "1",
+                "after",
+                "filtering"
+            ],
+            "id": "T-panel"
+        },
+        {
+            "path": "T-panel/analysis/qc/multiqc_data/picard_hsmetrics_table.json",
+            "step": "multiqc",
+            "format": "json",
+            "tag": [
                 "picard",
-                "dups"
+                "hsmetrics",
+                "table"
             ],
             "id": "T-panel"
         },
         {
-            "path": "/T-panel/analysis/qc/multiqc_data/picard_histogram.json",
+            "path": "T-panel/analysis/qc/multiqc_data/picard_alignment_summary_Aligned_Reads.json",
             "step": "multiqc",
             "format": "json",
             "tag": [
                 "picard",
-                "histogram"
+                "alignment",
+                "summary",
+                "aligned",
+                "reads"
             ],
             "id": "T-panel"
         },
         {
-            "path": "/T-panel/analysis/qc/multiqc_data/multiqc_general_stats.json",
+            "path": "T-panel/analysis/qc/multiqc_data/samtools-flagstat-dp_Percentage_of_total.json",
+            "step": "multiqc",
+            "format": "json",
+            "tag": [
+                "samtools-flagstat-dp",
+                "percentage",
+                "of",
+                "total"
+            ],
+            "id": "T-panel"
+        },
+        {
+            "path": "T-panel/analysis/qc/multiqc_data/fastqc_per_sequence_gc_content_plot_Counts.json",
+            "step": "multiqc",
+            "format": "json",
+            "tag": [
+                "fastqc",
+                "per",
+                "sequence",
+                "gc",
+                "content",
+                "plot",
+                "counts"
+            ],
+            "id": "T-panel"
+        },
+        {
+            "path": "T-panel/analysis/qc/multiqc_data/fastqc_adapter_content_plot.json",
+            "step": "multiqc",
+            "format": "json",
+            "tag": [
+                "fastqc",
+                "adapter",
+                "content",
+                "plot"
+            ],
+            "id": "T-panel"
+        },
+        {
+            "path": "T-panel/analysis/qc/multiqc_data/fastp-seq-content-n-plot_Read_1_Before_filtering.json",
+            "step": "multiqc",
+            "format": "json",
+            "tag": [
+                "fastp-seq-content-n-plot",
+                "read",
+                "1",
+                "before",
+                "filtering"
+            ],
+            "id": "T-panel"
+        },
+        {
+            "path": "T-panel/analysis/qc/multiqc_data/fastp-seq-quality-plot_Read_1_After_filtering.json",
+            "step": "multiqc",
+            "format": "json",
+            "tag": [
+                "fastp-seq-quality-plot",
+                "read",
+                "1",
+                "after",
+                "filtering"
+            ],
+            "id": "T-panel"
+        },
+        {
+            "path": "T-panel/analysis/qc/multiqc_data/picard_alignment_summary_Aligned_Bases.json",
+            "step": "multiqc",
+            "format": "json",
+            "tag": [
+                "picard",
+                "alignment",
+                "summary",
+                "aligned",
+                "bases"
+            ],
+            "id": "T-panel"
+        },
+        {
+            "path": "T-panel/analysis/qc/multiqc_data/multiqc_general_stats.json",
             "step": "multiqc",
             "format": "json",
             "tag": [
@@ -896,49 +1240,125 @@
             "id": "T-panel"
         },
         {
-            "path": "/T-panel/analysis/qc/multiqc_data/multiqc_fastqc.json",
+            "path": "T-panel/analysis/qc/multiqc_data/fastp-insert-size-plot.json",
             "step": "multiqc",
             "format": "json",
             "tag": [
-                "multiqc",
-                "fastqc"
+                "fastp-insert-size-plot"
             ],
             "id": "T-panel"
         },
         {
-            "path": "/T-panel/analysis/qc/multiqc_data/multiqc_picard_HsMetrics.json",
-            "step": "multiqc",
-            "format": "json",
-            "tag": [
-                "multiqc",
-                "picard",
-                "hsmetrics"
-            ],
-            "id": "T-panel"
-        },
-        {
-            "path": "/T-panel/analysis/qc/multiqc_data/picard_histogram_2.json",
+            "path": "T-panel/analysis/qc/multiqc_data/picard_quality_by_cycle.json",
             "step": "multiqc",
             "format": "json",
             "tag": [
                 "picard",
-                "histogram",
-                "2"
+                "quality",
+                "by",
+                "cycle"
             ],
             "id": "T-panel"
         },
         {
-            "path": "/T-panel/analysis/qc/multiqc_data/mosdepth_perchrom.json",
+            "path": "T-panel/analysis/qc/multiqc_data/fastp-seq-content-gc-plot_Read_1_Before_filtering.json",
             "step": "multiqc",
             "format": "json",
             "tag": [
-                "mosdepth",
-                "perchrom"
+                "fastp-seq-content-gc-plot",
+                "read",
+                "1",
+                "before",
+                "filtering"
             ],
             "id": "T-panel"
         },
         {
-            "path": "/T-panel/analysis/qc/multiqc_data/multiqc_sources.json",
+            "path": "T-panel/analysis/qc/multiqc_data/samtools-idxstats-mapped-reads-plot_Observed_over_Expected_Counts.json",
+            "step": "multiqc",
+            "format": "json",
+            "tag": [
+                "samtools-idxstats-mapped-reads-plot",
+                "observed",
+                "over",
+                "expected",
+                "counts"
+            ],
+            "id": "T-panel"
+        },
+        {
+            "path": "T-panel/analysis/qc/multiqc_data/picard_gcbias_plot.json",
+            "step": "multiqc",
+            "format": "json",
+            "tag": [
+                "picard",
+                "gcbias",
+                "plot"
+            ],
+            "id": "T-panel"
+        },
+        {
+            "path": "T-panel/analysis/qc/multiqc_data/fastp-seq-content-gc-plot_Read_2_After_filtering.json",
+            "step": "multiqc",
+            "format": "json",
+            "tag": [
+                "fastp-seq-content-gc-plot",
+                "read",
+                "2",
+                "after",
+                "filtering"
+            ],
+            "id": "T-panel"
+        },
+        {
+            "path": "T-panel/analysis/qc/multiqc_data/fastp-seq-content-n-plot_Read_2_After_filtering.json",
+            "step": "multiqc",
+            "format": "json",
+            "tag": [
+                "fastp-seq-content-n-plot",
+                "read",
+                "2",
+                "after",
+                "filtering"
+            ],
+            "id": "T-panel"
+        },
+        {
+            "path": "T-panel/analysis/qc/multiqc_data/fastp-seq-content-gc-plot_Read_2_Before_filtering.json",
+            "step": "multiqc",
+            "format": "json",
+            "tag": [
+                "fastp-seq-content-gc-plot",
+                "read",
+                "2",
+                "before",
+                "filtering"
+            ],
+            "id": "T-panel"
+        },
+        {
+            "path": "T-panel/analysis/qc/multiqc_data/picard_quality_score_distribution.json",
+            "step": "multiqc",
+            "format": "json",
+            "tag": [
+                "picard",
+                "quality",
+                "score",
+                "distribution"
+            ],
+            "id": "T-panel"
+        },
+        {
+            "path": "T-panel/analysis/qc/multiqc_data/fastqc-status-check-heatmap.json",
+            "step": "multiqc",
+            "format": "json",
+            "tag": [
+                "fastqc-status-check-heatmap"
+            ],
+            "id": "T-panel"
+        },
+        {
+            "path": "T-panel/analysis/qc/multiqc_data/multiqc_sources.json",
             "step": "multiqc",
             "format": "json",
             "tag": [
@@ -948,35 +1368,124 @@
             "id": "T-panel"
         },
         {
-            "path": "/T-panel/analysis/qc/multiqc_data/multiqc_samtools_flagstat.json",
+            "path": "T-panel/analysis/qc/multiqc_data/picard_alignment_readlength_plot.json",
             "step": "multiqc",
             "format": "json",
             "tag": [
-                "multiqc",
-                "samtools",
-                "flagstat"
+                "picard",
+                "alignment",
+                "readlength",
+                "plot"
             ],
             "id": "T-panel"
         },
         {
-            "path": "/T-panel/analysis/qc/multiqc_data/multiqc_samtools_stats.json",
+            "path": "T-panel/analysis/qc/multiqc_data/fastqc_sequence_duplication_levels_plot.json",
             "step": "multiqc",
             "format": "json",
             "tag": [
-                "multiqc",
-                "samtools",
-                "stats"
+                "fastqc",
+                "sequence",
+                "duplication",
+                "levels",
+                "plot"
             ],
             "id": "T-panel"
         },
         {
-            "path": "/T-panel/analysis/qc/multiqc_data/multiqc_samtools_idxstats.json",
+            "path": "T-panel/analysis/qc/multiqc_data/mosdepth-coverage-dist-id.json",
             "step": "multiqc",
             "format": "json",
             "tag": [
-                "multiqc",
-                "samtools",
-                "idxstats"
+                "mosdepth-coverage-dist-id"
+            ],
+            "id": "T-panel"
+        },
+        {
+            "path": "T-panel/analysis/qc/multiqc_data/samtools-flagstat-dp_Read_counts.json",
+            "step": "multiqc",
+            "format": "json",
+            "tag": [
+                "samtools-flagstat-dp",
+                "read",
+                "counts"
+            ],
+            "id": "T-panel"
+        },
+        {
+            "path": "T-panel/analysis/qc/multiqc_data/fastp-seq-content-n-plot_Read_2_Before_filtering.json",
+            "step": "multiqc",
+            "format": "json",
+            "tag": [
+                "fastp-seq-content-n-plot",
+                "read",
+                "2",
+                "before",
+                "filtering"
+            ],
+            "id": "T-panel"
+        },
+        {
+            "path": "T-panel/analysis/qc/multiqc_data/samtools-stats-dp.json",
+            "step": "multiqc",
+            "format": "json",
+            "tag": [
+                "samtools-stats-dp"
+            ],
+            "id": "T-panel"
+        },
+        {
+            "path": "T-panel/analysis/qc/multiqc_data/fastqc_top_overrepresented_sequences_table.json",
+            "step": "multiqc",
+            "format": "json",
+            "tag": [
+                "fastqc",
+                "top",
+                "overrepresented",
+                "sequences",
+                "table"
+            ],
+            "id": "T-panel"
+        },
+        {
+            "path": "T-panel/analysis/qc/multiqc_data/fastqc_per_sequence_gc_content_plot_Percentages.json",
+            "step": "multiqc",
+            "format": "json",
+            "tag": [
+                "fastqc",
+                "per",
+                "sequence",
+                "gc",
+                "content",
+                "plot",
+                "percentages"
+            ],
+            "id": "T-panel"
+        },
+        {
+            "path": "T-panel/analysis/qc/multiqc_data/fastqc_per_base_n_content_plot.json",
+            "step": "multiqc",
+            "format": "json",
+            "tag": [
+                "fastqc",
+                "per",
+                "base",
+                "n",
+                "content",
+                "plot"
+            ],
+            "id": "T-panel"
+        },
+        {
+            "path": "T-panel/analysis/qc/multiqc_data/fastp-seq-quality-plot_Read_1_Before_filtering.json",
+            "step": "multiqc",
+            "format": "json",
+            "tag": [
+                "fastp-seq-quality-plot",
+                "read",
+                "1",
+                "before",
+                "filtering"
             ],
             "id": "T-panel"
         }
