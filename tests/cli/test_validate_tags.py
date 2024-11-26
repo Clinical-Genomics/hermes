@@ -37,16 +37,6 @@ def test_cli_validate_balsamic_umi_tags(cli_runner: CliRunner):
     assert result.exit_code == 0
 
 
-def test_cli_validate_balsamic_qc_tags(cli_runner: CliRunner):
-    # GIVEN a CLI runner
-
-    # WHEN testing to validate the common tags from the CLI
-    result = cli_runner.invoke(app, ["tags", "balsamic-qc"])
-
-    # THEN assert that the validation was successful
-    assert result.exit_code == 0
-
-
 def test_cli_validate_fluffy_tags(cli_runner: CliRunner):
     # GIVEN a CLI runner
 

@@ -210,50 +210,6 @@ def test_convert_balsamic_umi_t_only_deliverables(
     assert result.exit_code == 0
 
 
-def test_convert_balsamic_qc_tn_panel_deliverables(
-    cli_runner: CliRunner, balsamic_tn_panel_deliverables: Path
-):
-    # GIVEN the path to a balsamic deliverables file with TN data
-    assert balsamic_tn_panel_deliverables.exists()
-
-    # WHEN converting the deliverables to CG format
-    result = cli_runner.invoke(
-        app,
-        [
-            str(balsamic_tn_panel_deliverables),
-            "--workflow",
-            "balsamic-qc",
-            "--analysis-type",
-            "tumor_normal_panel",
-        ],
-    )
-
-    # THEN assert that the program exits with success
-    assert result.exit_code == 0
-
-
-def test_convert_balsamic_qc_tn_wgs_deliverables(
-    cli_runner: CliRunner, balsamic_tn_wgs_deliverables: Path
-):
-    # GIVEN the path to a balsamic deliverables file
-    assert balsamic_tn_wgs_deliverables.exists()
-
-    # WHEN converting the deliverables to CG format
-    result = cli_runner.invoke(
-        app,
-        [
-            str(balsamic_tn_wgs_deliverables),
-            "--workflow",
-            "balsamic-qc",
-            "--analysis-type",
-            "tumor_normal_wgs",
-        ],
-    )
-
-    # THEN assert that the program exits with success
-    assert result.exit_code == 0
-
-
 @pytest.mark.parametrize(
     "workflow",
     Workflow.get_nf_workflows(),

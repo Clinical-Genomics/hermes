@@ -11,11 +11,6 @@ from cg_hermes.config.balsamic import (
     TUMOR_ONLY_PANEL_TAGS,
     TUMOR_ONLY_WGS_TAGS,
 )
-from cg_hermes.config.balsamic_qc import (
-    BALSAMIC_QC_TAGS,
-    QC_TUMOR_NORMAL_PANEL_TAGS,
-    QC_TUMOR_NORMAL_WGS_TAGS,
-)
 from cg_hermes.config.balsamic_umi import (
     BALSAMIC_UMI_TAGS,
     UMI_TUMOR_NORMAL_PANEL_TAGS,
@@ -184,12 +179,6 @@ class Deliverables:
                 tag_set = TUMOR_ONLY_PANEL_TAGS
             else:
                 tag_set = TUMOR_NORMAL_PANEL_TAGS
-        elif self.workflow == Workflow.BALSAMIC_QC:
-            BALSAMIC_COMMON_TAGS = BALSAMIC_QC_TAGS
-            if self.analysis_type == CancerAnalysisType.TUMOR_NORMAL_WGS:
-                tag_set = QC_TUMOR_NORMAL_WGS_TAGS
-            elif self.analysis_type == CancerAnalysisType.TUMOR_NORMAL_PANEL:
-                tag_set = QC_TUMOR_NORMAL_PANEL_TAGS
         elif self.workflow == Workflow.BALSAMIC_UMI:
             BALSAMIC_COMMON_TAGS = BALSAMIC_UMI_TAGS
             if self.analysis_type == CancerAnalysisType.TUMOR_PANEL:
