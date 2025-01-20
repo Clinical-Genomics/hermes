@@ -76,7 +76,7 @@ RAREDISEASE_COMMON_TAGS = {
         "used_by": [UsageTags.SCOUT, UsageTags.LONG_TERM_STORAGE, UsageTags.CLINICAL_DELIVERY],
     },
     frozenset(["expansionhunter", "str_variants"]): {
-        "tags": [BioinfoToolsTags.EXPANSIONHUNTER, VariantTags.VCF_STR],
+        "tags": [BioinfoToolsTags.EXPANSIONHUNTER, VariantTags.VCF],
         "is_mandatory": False,
         "used_by": [UsageTags.SCOUT],
     },
