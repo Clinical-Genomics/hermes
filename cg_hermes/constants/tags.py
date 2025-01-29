@@ -208,6 +208,7 @@ class ReportTags(StrEnum):
     DELIVERY_REPORT: str = "delivery-report"
     GENE_COUNTS: str = "gene-counts"
     GENERAL_STATS: str = "general-stats"
+    JSON: str = "json"
     MOSDEPTH_COVDIST: str = "mosdepth-covdist"
     MOSDEPTH_CUMCOV: str = "mosdepth-cumcov"
     MOSDEPTH_PERCHROM: str = "mosdepth-perchrom"
@@ -608,6 +609,45 @@ class MutantTags(StrEnum):
         return descriptions.get(self, "Description not available")
 
 
+class NalloTags(StrEnum):
+    ASSEMBLY_SUMMARY: str = "assembly-summary"
+    HAP1: str = "hap1"
+    HAP2: str = "hap2"
+    UNGROUPED: str = "ungrouped"
+    HAPLOTAGS: str = "haplotags"
+    ASSEMBLY: str = "assembly"
+    MODKIT_PILEUP: str = "modkit-pileup"
+    DEEPVARIANT_REPORT: str = "deepvariant-report"
+    PARAPHASE: str = "paraphase"
+    REPEATS: str = "repeats"
+    SORTED: str = "sorted"
+    SPANNING: str = "spanning"
+    RELATE_HTML: str = "relate-html"
+    RELATE_PAIRS: str = "relate-pairs"
+    RELATE_SAMPLES: str = "relate-samples"
+    BEDGRAPH: str = "bedgraph"
+    HIFICNV: str = "hificnv"
+    MAF: str = "maf"
+
+    @classmethod
+    def name(cls) -> str:
+        return "Nallo Tags"
+
+    @property
+    def description(self) -> str:
+        descriptions: dict[str, NalloTags] = {
+            self.ANNOTATION: "Annotation tag",
+            self.EKLIPSE_DEL: "Mitochondrial eKLIPse deletions",
+            self.EKLIPSE_GENES: "Mitochondrial eKLIPse genes",
+            self.EKLIPSE_PNG: "Mitochondrial eKLIPse png",
+            self.HAPLOGREP: "Haplogrep",
+            self.NGSBITS: "Result from SampleGender tool to determine sample sex",
+            self.SVDBQUERY: "Query of SVDB results",
+            self.SVDBQUERY_INDEX: "Query of SVDB results, index",
+        }
+        return descriptions.get(self, "Description not available")
+
+
 class RarediseaseTags(StrEnum):
     ANNOTATION: str = "annotation"
     EKLIPSE_DEL: str = "eklipse-del"
@@ -758,6 +798,7 @@ TAG_CATEGORIES: list[Any] = COMMON_TAG_CATEGORIES + [
     MicrosaltTags,
     MipTags,
     MutantTags,
+    NalloTags,
     NextflowTags,
     RarediseaseTags,
     RnafusionTags,
