@@ -41,9 +41,11 @@ def fixture_microsalt_files(fixtures_dir: Path) -> Path:
 def fixture_mutant_files(fixtures_dir: Path) -> Path:
     return fixtures_dir / "mutant"
 
+
 @pytest.fixture(name="nallo_files")
 def fixture_nallo_files(fixtures_dir: Path) -> Path:
     return fixtures_dir / "nallo"
+
 
 @pytest.fixture(name="raredisease_files")
 def fixture_raredisease_files(fixtures_dir: Path) -> Path:
@@ -111,6 +113,7 @@ def fixture_balsamic_tn_panel_deliverables(balsamic_files: Path) -> Path:
 @pytest.fixture(name="balsamic_t_only_panel_deliverables")
 def fixture_balsamic_t_only_panel_deliverables(balsamic_files: Path) -> Path:
     return balsamic_files / "T_panel.hk"
+
 
 @pytest.fixture(name="nallo_deliverables")
 def fixture_nallo_deliverables(nallo_files: Path) -> Path:
