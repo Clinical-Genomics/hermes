@@ -413,10 +413,13 @@ class BioinfoToolsTags(StrEnum):
     GENS: str = "gens"
     GFFCOMPARE: str = "gffcompare"
     HAPLOTYPE_CALLER: str = "haplotype-caller"
+    HIFICNV: str = "hificnv"
     MANTA: str = "manta"
     MERGED: str = "merged"
     MITODEL: str = "mitodel"
+    MODKIT_PILEUP: str = "modkit-pileup"
     NEXTCLADE: str = "nextclade"
+    PARAPHASE: str = "paraphase"
     PEDDY: str = "peddy"
     PICARD: str = "picard"
     PIZZLY: str = "pizzly"
@@ -465,9 +468,12 @@ class BioinfoToolsTags(StrEnum):
             self.GENS: "CNV visualization tool",
             self.GFFCOMPARE: "Compare gff files",
             self.HAPLOTYPE_CALLER: "Call snv and indels",
+            self.HIFICNV: "Hificnv tool output",
             self.MANTA: "Tool to call structural variants",
             self.MITODEL: "Tool to identify mitochondrial deletion signatures",
+            self.MODKIT_PILEUP: "Modkit pileup tool output",
             self.NEXTCLADE: "Viral genome clade assignment",
+            self.PARAPHASE: "Paraphase tool output",
             self.PEDDY: "Tool to check pedigree and ancestral relations",
             self.PICARD: "Picard set of bioinformatic tools",
             self.PIZZLY: "Fusion caller",
@@ -616,9 +622,7 @@ class NalloTags(StrEnum):
     UNGROUPED: str = "ungrouped"
     HAPLOTAGS: str = "haplotags"
     ASSEMBLY: str = "assembly"
-    MODKIT_PILEUP: str = "modkit-pileup"
     DEEPVARIANT_REPORT: str = "deepvariant-report"
-    PARAPHASE: str = "paraphase"
     REPEATS: str = "repeats"
     SORTED: str = "sorted"
     SPANNING: str = "spanning"
@@ -626,7 +630,6 @@ class NalloTags(StrEnum):
     RELATE_PAIRS: str = "relate-pairs"
     RELATE_SAMPLES: str = "relate-samples"
     BEDGRAPH: str = "bedgraph"
-    HIFICNV: str = "hificnv"
     MAF: str = "maf"
 
     @classmethod
@@ -642,9 +645,7 @@ class NalloTags(StrEnum):
             self.UNGROUPED: "Ungrouped (not hap1 or hap2)",
             self.HAPLOTAGS: "Haplotags",
             self.ASSEMBLY: "Assembly",
-            self.MODKIT_PILEUP: "Modkit pileup tool output",
             self.DEEPVARIANT_REPORT: "Deepvariant report",
-            self.PARAPHASE: "Paraphase tool output",
             self.REPEATS: "Repeat expansions output",
             self.SORTED: "Sorted output",
             self.SPANNING: "Sorted with spanning reads",
@@ -652,8 +653,7 @@ class NalloTags(StrEnum):
             self.RELATE_PAIRS: "Somelier relate pairs output",
             self.RELATE_SAMPLES: "Somelier relate samples output",
             self.BEDGRAPH: "Copy number in bedgraph format",
-            self.HIFICNV: "Hificnv tool output",
-            self.MAF: "Paraphase tool output",
+            self.MAF: "Minor allele frequencies",
         }
         return descriptions.get(self, "Description not available")
 
