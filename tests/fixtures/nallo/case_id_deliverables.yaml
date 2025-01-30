@@ -1,3 +1,4 @@
+---
 - format: bam
   id: SAMPLEID
   path: /home/proj/stage/analysis/cases/CASEID/aligned_reads/SAMPLENAME/SAMPLENAME_haplotagged.bam
