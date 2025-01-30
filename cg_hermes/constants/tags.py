@@ -636,14 +636,25 @@ class NalloTags(StrEnum):
     @property
     def description(self) -> str:
         descriptions: dict[str, NalloTags] = {
-            self.ANNOTATION: "Annotation tag",
-            self.EKLIPSE_DEL: "Mitochondrial eKLIPse deletions",
-            self.EKLIPSE_GENES: "Mitochondrial eKLIPse genes",
-            self.EKLIPSE_PNG: "Mitochondrial eKLIPse png",
-            self.HAPLOGREP: "Haplogrep",
-            self.NGSBITS: "Result from SampleGender tool to determine sample sex",
-            self.SVDBQUERY: "Query of SVDB results",
-            self.SVDBQUERY_INDEX: "Query of SVDB results, index",
+            self.ASSEMBLY_SUMMARY: "Assembly summary",
+            self.HAP1: "Haplotype 1",
+            self.HAP2: "Haplotype 2",
+            self.UNGROUPED: "Ungrouped (not hap1 or hap2)",
+            self.HAPLOTAGS: "Haplotags",
+            self.ASSEMBLY: "Assembly",
+            self.MODKIT_PILEUP: "Modkit pileup tool output",
+            self.DEEPVARIANT_REPORT: "Deepvariant report",
+            self.PARAPHASE: "Paraphase tool output",
+            self.REPEATS: "Repeat expansions output",
+            self.SORTED: "Sorted output",
+            self.SPANNING: "Sorted with spanning reads",
+            self.RELATE_HTML: "Somelier relate html output",
+            self.RELATE_PAIRS: "Somelier relate pairs output",
+            self.RELATE_SAMPLES: "Somelier relate samples output",
+            self.BEDGRAPH: "Copy number in bedgraph format",
+            self.HIFICNV: "Hificnv tool output",
+            self.MAF: "Paraphase tool output",
+
         }
         return descriptions.get(self, "Description not available")
 
