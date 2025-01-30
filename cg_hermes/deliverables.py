@@ -40,7 +40,6 @@ from cg_hermes.models.workflow_deliverables import (
     CGDeliverables,
     FileBase,
     FluffyDeliverables,
-    NalloDeliverables,
     MicrosaltDeliverables,
     MicrosaltFile,
     MipDeliverables,
