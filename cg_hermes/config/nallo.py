@@ -206,7 +206,7 @@ NALLO_COMMON_TAGS = {
         "is_mandatory": True,
         "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
-    frozenset(["repeats_annotated", "vcf_snv_research_index"]): {
+    frozenset(["snv_annotated", "vcf_snv_research_index"]): {
         "tags": [AnalysisTags.RESEARCH, VariantTags.VCF_SNV_INDEX],
         "is_mandatory": True,
         "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
