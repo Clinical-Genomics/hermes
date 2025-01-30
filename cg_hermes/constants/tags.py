@@ -654,7 +654,6 @@ class NalloTags(StrEnum):
             self.BEDGRAPH: "Copy number in bedgraph format",
             self.HIFICNV: "Hificnv tool output",
             self.MAF: "Paraphase tool output",
-
         }
         return descriptions.get(self, "Description not available")
 
