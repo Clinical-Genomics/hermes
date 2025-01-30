@@ -4,8 +4,6 @@ The tag sets that exists in all files are set to mandatory. Tag sets that exists
 mandatory by default. However, the tags that are available to a particular analysis is mandatory for that analysis.
 """
 
-from cg_hermes.constants.tags import UsageTags, NextflowTags
-
 from cg_hermes.constants.tags import (
     NextflowTags,
     QCTags,
@@ -26,7 +24,7 @@ NEXTFLOW_TAGS = {
         "tags": [QCTags.QC_METRICS, ReportTags.DELIVERABLE],
         "used_by": [UsageTags.CG, UsageTags.LONG_TERM_STORAGE],
     },
-    frozenset({"manifest", "manifest"}): {
+    frozenset({"manifest"}): {
         "is_mandatory": False,
         "tags": [NextflowTags.MANIFEST],
         "used_by": [UsageTags.SCOUT, UsageTags.LONG_TERM_STORAGE],
