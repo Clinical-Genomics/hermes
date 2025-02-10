@@ -55,6 +55,7 @@ class VariantTags(StrEnum):
     CNV: str = "cnv"
     GERMLINE: str = "germline"
     MOBILE_ELEMENTS: str = "mobile-elements"
+    MSI: str = "msi"
     NORMAL: str = "normal"
     RHOCALL_VIZ: str = "rhocall-viz"
     SMN_CALLING: str = "smn-calling"
@@ -77,6 +78,8 @@ class VariantTags(StrEnum):
     VCF_SNV: str = "vcf-snv"
     VCF_SNV_CLINICAL: str = "vcf-snv-clinical"
     VCF_SNV_CLINICAL_INDEX: str = "vcf-snv-clinical-index"
+    VCF_SNV_CLINICAL_SCORED: str = "vcf-snv-clinical-scored"
+    VCF_SNV_CLINICAL_SCORED_INDEX: str = "vcf-snv-clinical-scored-index"
     VCF_SNV_FILTERED: str = "vcf-snv-filtered"
     VCF_SNV_FILTERED_INDEX: str = "vcf-snv-filtered-index"
     VCF_SNV_GERMLINE_NORMAL: str = "vcf-snv-germline-normal"
@@ -86,6 +89,8 @@ class VariantTags(StrEnum):
     VCF_SNV_INDEX: str = "vcf-snv-index"
     VCF_SNV_RESEARCH: str = "vcf-snv-research"
     VCF_SNV_RESEARCH_INDEX: str = "vcf-snv-research-index"
+    VCF_SNV_RESEARCH_UNFILTERED: str = "vcf-snv-research-unfiltered"
+    VCF_SNV_RESEARCH_UNFILTERED_INDEX: str = "vcf-snv-research-unfiltered-index"
     VCF_STR: str = "vcf-str"
     VCF_STR_INDEX: str = "vcf-str-index"
     VCF_SV: str = "vcf-sv"
@@ -104,6 +109,10 @@ class VariantTags(StrEnum):
     VCF_UMI_SNV_INDEX: str = "vcf-umi-snv-index"
     VCF_UMI_SNV_RESEARCH: str = "vcf-umi-snv-research"
     VCF_UMI_SNV_RESEARCH_INDEX: str = "vcf-umi-snv-research-index"
+    VCF_UMI_SNV_RESEARCH_UNFILTERED: str = "vcf-umi-snv-research-unfiltered"
+    VCF_UMI_SNV_RESEARCH_UNFILTERED_INDEX: str = "vcf-umi-snv-research-unfiltered-index"
+    VCF_UMI_SNV_CLINICAL_RANKED: str = "vcf-umi-snv-clinical-scored"
+    VCF_UMI_SNV_CLINICAL_RANKED_INDEX: str = "vcf-umi-snv-clinical-scored-index"
 
     @classmethod
     def name(cls) -> str:
@@ -137,6 +146,8 @@ class VariantTags(StrEnum):
             self.VCF_SNV: "SNV variant call formatted file",
             self.VCF_SNV_CLINICAL: "SNV variants from clinical panels",
             self.VCF_SNV_CLINICAL_INDEX: "Following index",
+            self.VCF_SNV_CLINICAL_SCORED: "Scored clinically annotated VCF with SNVs",
+            self.VCF_SNV_CLINICAL_SCORED_INDEX: "Following index",
             self.VCF_SNV_FILTERED: "SNV variants filtered by BALSAMIC",
             self.VCF_SNV_FILTERED_INDEX: "Following index",
             self.VCF_SNV_GERMLINE_NORMAL: "SNV germline normal variants",
@@ -164,6 +175,8 @@ class VariantTags(StrEnum):
             self.VCF_UMI_SNV_INDEX: "Following index",
             self.VCF_UMI_SNV_RESEARCH: "SNV UMI variant formatted file",
             self.VCF_UMI_SNV_RESEARCH_INDEX: "Following index",
+            self.VCF_UMI_SNV_CLINICAL_RANKED: "Scored clinically annotated VCF with SNVs from UMI analysis",
+            self.VCF_UMI_SNV_CLINICAL_RANKED_INDEX: "Following index",
         }
         return descriptions.get(self, "Description not available")
 
@@ -400,6 +413,7 @@ class BioinfoToolsTags(StrEnum):
     GFFCOMPARE: str = "gffcompare"
     HAPLOTYPE_CALLER: str = "haplotype-caller"
     MANTA: str = "manta"
+    MERGED: str = "merged"
     MITODEL: str = "mitodel"
     NEXTCLADE: str = "nextclade"
     PEDDY: str = "peddy"
