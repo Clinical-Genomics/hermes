@@ -873,15 +873,6 @@
             "format": "crai"
         },
         {
-            "path": "T-panel/analysis/delivery_report/T-panel_report.html",
-            "step": "balsamic_delivery",
-            "format": "html",
-            "tag": [
-                "balsamic-report"
-            ],
-            "id": "T-panel"
-        },
-        {
             "path": "T-panel/T-panel.json",
             "step": "case_config",
             "format": "json",

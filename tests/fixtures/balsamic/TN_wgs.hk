@@ -891,15 +891,6 @@
             "format": "tbi"
         },
         {
-            "path": "TN-wgs/analysis/delivery_report/TN-wgs_report.html",
-            "step": "balsamic_delivery",
-            "format": "html",
-            "tag": [
-                "balsamic-report"
-            ],
-            "id": "TN-wgs"
-        },
-        {
             "path": "TN-wgs/TN-wgs.json",
             "step": "case_config",
             "format": "json",
