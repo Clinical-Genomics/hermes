@@ -1083,15 +1083,6 @@
             "format": "stats"
         },
         {
-            "path": "TN-panel/analysis/delivery_report/TN-panel_report.html",
-            "step": "balsamic_delivery",
-            "format": "html",
-            "tag": [
-                "balsamic-report"
-            ],
-            "id": "TN-panel"
-        },
-        {
             "path": "TN-panel/TN-panel.json",
             "step": "case_config",
             "format": "json",

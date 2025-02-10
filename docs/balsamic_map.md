@@ -1,7 +1,6 @@
 | Balsamic tags                                                  | Mandatory   | HK tags                                   | Used by               |
 |----------------------------------------------------------------|-------------|-------------------------------------------|-----------------------|
 | balsamic-config                                                | True        | balsamic-config                           | audit, cg             |
-| balsamic-report                                                | True        | balsamic-report                           | audit                 |
 | balsamic-dag                                                   | True        | balsamic-dag                              | audit                 |
 | html, multiqc-html                                             | True        | multiqc-html                              | audit, deliver, scout |
 | json, multiqc-json                                             | True        | multiqc-json                              | audit                 |
