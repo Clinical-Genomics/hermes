@@ -518,7 +518,6 @@ class MipTags(StrEnum):
 class BalsamicTags(StrEnum):
     BALSAMIC_CONFIG: str = "balsamic-config"
     BALSAMIC_DAG: str = "balsamic-dag"
-    BALSAMIC_REPORT: str = "balsamic-report"
 
     @classmethod
     def name(cls) -> str:
@@ -529,7 +528,6 @@ class BalsamicTags(StrEnum):
         descriptions: dict[str, BalsamicTags] = {
             self.BALSAMIC_CONFIG: "Balsamic configs for analysis",
             self.BALSAMIC_DAG: "Balsamic run schema",
-            self.BALSAMIC_REPORT: "Report from analysis",
         }
         return descriptions.get(self, "Description not available")
 
