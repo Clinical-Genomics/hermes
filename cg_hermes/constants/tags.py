@@ -208,6 +208,7 @@ class ReportTags(StrEnum):
     DELIVERY_REPORT: str = "delivery-report"
     GENE_COUNTS: str = "gene-counts"
     GENERAL_STATS: str = "general-stats"
+    JSON: str = "json"
     MOSDEPTH_COVDIST: str = "mosdepth-covdist"
     MOSDEPTH_CUMCOV: str = "mosdepth-cumcov"
     MOSDEPTH_PERCHROM: str = "mosdepth-perchrom"
@@ -412,10 +413,13 @@ class BioinfoToolsTags(StrEnum):
     GENS: str = "gens"
     GFFCOMPARE: str = "gffcompare"
     HAPLOTYPE_CALLER: str = "haplotype-caller"
+    HIFICNV: str = "hificnv"
     MANTA: str = "manta"
     MERGED: str = "merged"
     MITODEL: str = "mitodel"
+    MODKIT_PILEUP: str = "modkit-pileup"
     NEXTCLADE: str = "nextclade"
+    PARAPHASE: str = "paraphase"
     PEDDY: str = "peddy"
     PICARD: str = "picard"
     PIZZLY: str = "pizzly"
@@ -464,9 +468,12 @@ class BioinfoToolsTags(StrEnum):
             self.GENS: "CNV visualization tool",
             self.GFFCOMPARE: "Compare gff files",
             self.HAPLOTYPE_CALLER: "Call snv and indels",
+            self.HIFICNV: "Hificnv tool output",
             self.MANTA: "Tool to call structural variants",
             self.MITODEL: "Tool to identify mitochondrial deletion signatures",
+            self.MODKIT_PILEUP: "Modkit pileup tool output",
             self.NEXTCLADE: "Viral genome clade assignment",
+            self.PARAPHASE: "Paraphase tool output",
             self.PEDDY: "Tool to check pedigree and ancestral relations",
             self.PICARD: "Picard set of bioinformatic tools",
             self.PIZZLY: "Fusion caller",
@@ -602,6 +609,49 @@ class MutantTags(StrEnum):
             self.TYPING_REPORT: "Results from typing",
             self.TYPING_SUMMARY: "Summary of results from typing",
             self.VCF_COVID: "VCF file containing covid data. Distinction req. by production",
+        }
+        return descriptions.get(self, "Description not available")
+
+
+class NalloTags(StrEnum):
+    ASSEMBLY_SUMMARY: str = "assembly-summary"
+    HAP1: str = "hap1"
+    HAP2: str = "hap2"
+    UNGROUPED: str = "ungrouped"
+    HAPLOTAGS: str = "haplotags"
+    ASSEMBLY: str = "assembly"
+    DEEPVARIANT_REPORT: str = "deepvariant-report"
+    REPEATS: str = "repeats"
+    SORTED: str = "sorted"
+    SPANNING: str = "spanning"
+    RELATE_HTML: str = "relate-html"
+    RELATE_PAIRS: str = "relate-pairs"
+    RELATE_SAMPLES: str = "relate-samples"
+    BEDGRAPH: str = "bedgraph"
+    MAF: str = "maf"
+
+    @classmethod
+    def name(cls) -> str:
+        return "Nallo Tags"
+
+    @property
+    def description(self) -> str:
+        descriptions: dict[str, NalloTags] = {
+            self.ASSEMBLY_SUMMARY: "Assembly summary",
+            self.HAP1: "Haplotype 1",
+            self.HAP2: "Haplotype 2",
+            self.UNGROUPED: "Ungrouped (not hap1 or hap2)",
+            self.HAPLOTAGS: "Haplotags",
+            self.ASSEMBLY: "Assembly",
+            self.DEEPVARIANT_REPORT: "Deepvariant report",
+            self.REPEATS: "Repeat expansions output",
+            self.SORTED: "Sorted output",
+            self.SPANNING: "Sorted with spanning reads",
+            self.RELATE_HTML: "Somelier relate html output",
+            self.RELATE_PAIRS: "Somelier relate pairs output",
+            self.RELATE_SAMPLES: "Somelier relate samples output",
+            self.BEDGRAPH: "Copy number in bedgraph format",
+            self.MAF: "Minor allele frequencies",
         }
         return descriptions.get(self, "Description not available")
 
@@ -756,6 +806,7 @@ TAG_CATEGORIES: list[Any] = COMMON_TAG_CATEGORIES + [
     MicrosaltTags,
     MipTags,
     MutantTags,
+    NalloTags,
     NextflowTags,
     RarediseaseTags,
     RnafusionTags,

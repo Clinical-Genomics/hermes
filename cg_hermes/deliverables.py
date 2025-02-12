@@ -21,6 +21,7 @@ from cg_hermes.config.microsalt import MICROSALT_COMMON_TAGS
 from cg_hermes.config.mip_dna import MIP_DNA_TAGS
 from cg_hermes.config.mip_rna import MIP_RNA_TAGS
 from cg_hermes.config.mutant import MUTANT_COMMON_TAGS
+from cg_hermes.config.nallo import NALLO_TAGS
 from cg_hermes.config.raredisease import RAREDISEASE_TAGS
 from cg_hermes.config.rnafusion import RNAFUSION_TAGS
 from cg_hermes.config.taxprofiler import TAXPROFILER_TAGS
@@ -102,7 +103,9 @@ class Deliverables:
                 self.raw_deliverables
             )
             self.files = self.get_nf_analysis_files()
-            if self.workflow == Workflow.RAREDISEASE:
+            if self.workflow == Workflow.NALLO:
+                self.configs = Deliverables.build_internal_tag_map(NALLO_TAGS)
+            elif self.workflow == Workflow.RAREDISEASE:
                 self.configs = Deliverables.build_internal_tag_map(RAREDISEASE_TAGS)
             elif self.workflow == Workflow.RNAFUSION:
                 self.configs = Deliverables.build_internal_tag_map(RNAFUSION_TAGS)
