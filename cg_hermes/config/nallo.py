@@ -189,64 +189,60 @@ NALLO_COMMON_TAGS = {
         "used_by": [UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["repeats_annotated", "vcf_str"]): {
-        "tags": [NalloTags.REPEATS, VariantTags.VCF_STR],
+        "tags": [VariantTags.VCF_STR],
         "is_mandatory": True,
         "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["repeats_annotated", "vcf_str_index"]): {
-        "tags": [NalloTags.REPEATS, NalloTags.SORTED, VariantTags.VCF_STR_INDEX],
+        "tags": [VariantTags.VCF_STR_INDEX],
         "is_mandatory": True,
         "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["snv_annotated", "vcf_snv_research"]): {
         "tags": [
-            AnalysisTags.RESEARCH,
-            VariantTags.VCF_SNV,
+            VariantTags.VCF_SNV_RESEARCH
         ],
         "is_mandatory": True,
         "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["snv_annotated", "vcf_snv_research_index"]): {
-        "tags": [AnalysisTags.RESEARCH, VariantTags.VCF_SNV_INDEX],
+        "tags": [VariantTags.VCF_SNV_RESEARCH_INDEX],
         "is_mandatory": True,
         "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["snv_annotated_filtered", "vcf_snv_clinical"]): {
         "tags": [
-            AnalysisTags.CLINICAL,
-            VariantTags.VCF_SNV,
+            VariantTags.VCF_SNV_CLINICAL
         ],
         "is_mandatory": True,
         "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["snv_annotated_filtered", "vcf_snv_clinical_index"]): {
-        "tags": [AnalysisTags.CLINICAL, VariantTags.VCF_SNV_INDEX],
+        "tags": [VariantTags.VCF_SNV_CLINICAL_INDEX],
         "is_mandatory": True,
         "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["sv_annotated_ranked", "vcf_sv_research"]): {
         "tags": [
-            AnalysisTags.RESEARCH,
-            VariantTags.VCF_SV,
+            VariantTags.VCF_SV_RESEARCH
         ],
         "is_mandatory": True,
         "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["sv_annotated_ranked", "vcf_sv_research_index"]): {
-        "tags": [AnalysisTags.RESEARCH, VariantTags.VCF_SV_INDEX],
+        "tags": [VariantTags.VCF_SV_RESEARCH_INDEX],
         "is_mandatory": True,
         "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["sv_annotated_ranked_filtered", "vcf_sv_clinical"]): {
         "tags": [
-            AnalysisTags.CLINICAL,
-            VariantTags.VCF_SV,
+            VariantTags.VCF_SV_CLINICAL
         ],
         "is_mandatory": True,
         "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["sv_annotated_ranked_filtered", "vcf_sv_clinical_index"]): {
-        "tags": [AnalysisTags.CLINICAL, VariantTags.VCF_SV_INDEX],
+        "tags": [VariantTags.VCF_SV_CLINICAL_INDEX],
         "is_mandatory": True,
         "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
