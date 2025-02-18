@@ -84,6 +84,30 @@
             "format": "sample_name_map"
         },
         {
+            "path": "T-wgs/analysis/vcf/SV.somatic.T-wgs.tnscope.research.vcf.gz",
+            "path_index": [
+                "T-wgs/analysis/vcf/SV.somatic.T-wgs.tnscope.research.vcf.gz.tbi"
+            ],
+            "step": "bcftools_split_tnscope_variants",
+            "tag": [
+                "research-vcf-tnscope-sv",
+                "vcf-tnscope-sv"
+            ],
+            "id": "T-wgs",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "T-wgs/analysis/vcf/SV.somatic.T-wgs.tnscope.research.vcf.gz.tbi",
+            "path_index": "",
+            "step": "bcftools_split_tnscope_variants",
+            "tag": [
+                "research-vcf-tnscope-sv-index",
+                "vcf-tnscope-sv"
+            ],
+            "id": "T-wgs",
+            "format": "vcf.gz.tbi"
+        },
+        {
             "path": "T-wgs/analysis/vep/SNV.somatic.T-wgs.tnscope.clinical.scored.vcf.gz",
             "path_index": [
                 "T-wgs/analysis/vep/SNV.somatic.T-wgs.tnscope.clinical.scored.vcf.gz.tbi"

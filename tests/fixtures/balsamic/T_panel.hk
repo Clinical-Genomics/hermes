@@ -846,6 +846,30 @@
             "id": "T-panel",
             "format": "stats"
         },
+                        {
+            "path": "T-panel/analysis/vcf/SV.somatic.T-panel.tnscope.research.vcf.gz",
+            "path_index": [
+                "T-panel/analysis/vcf/SV.somatic.T-panel.tnscope.research.vcf.gz.tbi"
+            ],
+            "step": "bcftools_split_tnscope_variants",
+            "tag": [
+                "research-vcf-tnscope-sv",
+                "vcf-tnscope-sv"
+            ],
+            "id": "T-panel",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "T-panel/analysis/vcf/SV.somatic.T-panel.tnscope.research.vcf.gz.tbi",
+            "path_index": "",
+            "step": "bcftools_split_tnscope_variants",
+            "tag": [
+                "research-vcf-tnscope-sv-index",
+                "vcf-tnscope-sv"
+            ],
+            "id": "T-panel",
+            "format": "vcf.gz.tbi"
+        },
         {
             "path": "T-panel/analysis/umi/tumor.tumorsample.consensusfiltered_umi.cram",
             "path_index": [

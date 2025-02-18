@@ -779,6 +779,30 @@
             "format": "sample_name_map"
         },
         {
+            "path": "TN-wgs/analysis/vcf/SV.somatic.TN-wgs.tnscope.research.vcf.gz",
+            "path_index": [
+                "TN-wgs/analysis/vcf/SV.somatic.TN-wgs.tnscope.research.vcf.gz.tbi"
+            ],
+            "step": "bcftools_split_tnscope_variants",
+            "tag": [
+                "research-vcf-tnscope-sv",
+                "vcf-tnscope-sv"
+            ],
+            "id": "TN-wgs",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "TN-wgs/analysis/vcf/SV.somatic.TN-wgs.tnscope.research.vcf.gz.tbi",
+            "path_index": "",
+            "step": "bcftools_split_tnscope_variants",
+            "tag": [
+                "research-vcf-tnscope-sv-index",
+                "vcf-tnscope-sv"
+            ],
+            "id": "TN-wgs",
+            "format": "vcf.gz.tbi"
+        },
+        {
             "path": "TN-wgs/analysis/cnv/normalsample.baf.bed.gz",
             "path_index": [
                 "TN-wgs/analysis/cnv/normalsample.baf.bed.gz.tbi"

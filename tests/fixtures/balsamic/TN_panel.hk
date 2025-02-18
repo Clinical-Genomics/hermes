@@ -1083,6 +1083,30 @@
             "format": "stats"
         },
         {
+            "path": "TN-panel/analysis/vcf/SV.somatic.TN-panel.tnscope.research.vcf.gz",
+            "path_index": [
+                "TN-panel/analysis/vcf/SV.somatic.TN-panel.tnscope.research.vcf.gz.tbi"
+            ],
+            "step": "bcftools_split_tnscope_variants",
+            "tag": [
+                "research-vcf-tnscope-sv",
+                "vcf-tnscope-sv"
+            ],
+            "id": "TN-panel",
+            "format": "vcf.gz"
+        },
+        {
+            "path": "TN-panel/analysis/vcf/SV.somatic.TN-panel.tnscope.research.vcf.gz.tbi",
+            "path_index": "",
+            "step": "bcftools_split_tnscope_variants",
+            "tag": [
+                "research-vcf-tnscope-sv-index",
+                "vcf-tnscope-sv"
+            ],
+            "id": "TN-panel",
+            "format": "vcf.gz.tbi"
+        },
+        {
             "path": "TN-panel/TN-panel.json",
             "step": "case_config",
             "format": "json",

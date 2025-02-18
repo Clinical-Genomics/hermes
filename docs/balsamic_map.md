@@ -80,3 +80,5 @@
 | vcf-pass-tnscope-umi, snv, clinical-vcf-pass-tnscope-umi       | True        | tnscope-umi, vcf-umi-snv-clinical         | deliver, scout        |
 | vcf-pass-tnscope-umi, snv, clinical-vcf-pass-tnscope-umi-index | True        | tnscope-umi, vcf-umi-snv-clinical-index   | deliver, scout        |
 | tnscope-umi, snv, research-tmb, tmb                            | True        | research, tnscope-umi, tmb                | storage               |
+| research-vcf-tnscope-sv, vcf-tnscope-sv                        | True        | tnscope, vcf-sv                           | storage               |
+| research-vcf-tnscope-sv-index, vcf-tnscope-sv                  | True        | tnscope, vcf-sv-index                     | storage               |

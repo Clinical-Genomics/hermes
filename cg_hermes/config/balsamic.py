@@ -80,6 +80,9 @@ RAW_TAGS = {
         "manta-germline",
         "germline-vcf-normal-index",
     ],
+    # SVs (PANEL & WGS)
+    "sv_tnscope.research.vcf.gz": ["research-vcf-tnscope-sv", "vcf-tnscope-sv"],
+    "sv_tnscope.research.vcf.gz.tbi": ["research-vcf-tnscope-sv-index", "vcf-tnscope-sv"],
     # Merged SV (manta, delly) and CNV (cnvkit, ascat) callers (PANEL & WGS)
     "svdb.vcf.gz": ["vcf-svdb", "research-vcf-svdb"],
     "svdb.vcf.gz.tbi": ["vcf-svdb", "research-vcf-svdb-index"],
@@ -386,6 +389,17 @@ CALLERS_TAGS = {
         "tags": ["svdb", "vcf-sv-clinical-index"],
         "is_mandatory": True,
         "used_by": ["deliver", "scout"],
+    },
+    # SVs (WGS & Panel)
+    frozenset(RAW_TAGS["sv_tnscope.research.vcf.gz"]): {
+        "tags": ["tnscope", "vcf-sv"],
+        "is_mandatory": True,
+        "used_by": ["storage"],
+    },
+    frozenset(RAW_TAGS["sv_tnscope.research.vcf.gz.tbi"]): {
+        "tags": ["tnscope", "vcf-sv-index"],
+        "is_mandatory": True,
+        "used_by": ["storage"],
     },
     # SNVs (WGS & Panel)
     frozenset(RAW_TAGS["tnscope.vcf.gz"]): {
