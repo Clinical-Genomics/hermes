@@ -134,12 +134,12 @@ NALLO_COMMON_TAGS = {
         "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["paraphase", "vcf"]): {
-        "tags": [AlignmentTags.BAM_INDEX, BioinfoToolsTags.PARAPHASE, VariantTags.VCF],
+        "tags": [BioinfoToolsTags.PARAPHASE, VariantTags.VCF],
         "is_mandatory": False,
         "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["paraphase", "vcf_index"]): {
-        "tags": [AlignmentTags.BAM_INDEX, BioinfoToolsTags.PARAPHASE, VariantTags.VCF_INDEX],
+        "tags": [BioinfoToolsTags.PARAPHASE, VariantTags.VCF_INDEX],
         "is_mandatory": False,
         "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
