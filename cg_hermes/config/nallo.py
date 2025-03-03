@@ -43,7 +43,7 @@ NALLO_COMMON_TAGS = {
         "is_mandatory": True,
         "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
-    frozenset(["assembly", "assembly_aligned"]): {
+    frozenset(["assembly", "assembly_aligned_index"]): {
         "tags": [AlignmentTags.BAM_INDEX, NalloTags.ASSEMBLY],
         "is_mandatory": True,
         "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
@@ -87,11 +87,6 @@ NALLO_COMMON_TAGS = {
         "is_mandatory": True,
         "tags": [ReportTags.MULTIQC_HTML],
         "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
-    },
-    frozenset({"multiqc", "multiqc-json"}): {
-        "is_mandatory": True,
-        "tags": [ReportTags.MULTIQC_JSON],
-        "used_by": [UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["pedigree", "pedigree_fam"]): {
         "tags": [FamilyTags.PEDIGREE],
@@ -237,6 +232,11 @@ NALLO_COMMON_TAGS = {
         "tags": [BioinfoToolsTags.HIFICNV, AnalysisTags.BIGWIG, NalloTags.MAF],
         "is_mandatory": True,
         "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
+    },
+    frozenset({"multiqc", "multiqc-json"}): {
+        "is_mandatory": True,
+        "tags": [ReportTags.MULTIQC_JSON],
+        "used_by": [UsageTags.LONG_TERM_STORAGE],
     },
     frozenset({"nextflow-params"}): {
         "is_mandatory": True,
