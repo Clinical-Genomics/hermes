@@ -253,25 +253,25 @@ RAREDISEASE_COMMON_TAGS = {
     },
     frozenset(["rank_and_filter", "mt_clinical"]): {
         "tags": [VariantTags.VCF_SV_CLINICAL, AnalysisTags.MITOCHONDRIA],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "bundle_id": True,
         "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["rank_and_filter", "mt_clinical_index"]): {
         "tags": [VariantTags.VCF_SV_CLINICAL_INDEX, AnalysisTags.MITOCHONDRIA],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "bundle_id": True,
         "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["rank_and_filter", "mt_research"]): {
         "tags": [VariantTags.VCF_SV_RESEARCH, AnalysisTags.MITOCHONDRIA],
         "index_tags": ["vcf-snv-research-index"],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["rank_and_filter", "mt_research_index"]): {
         "tags": [VariantTags.VCF_SV_RESEARCH_INDEX, AnalysisTags.MITOCHONDRIA],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["ngsbits_samplegender", "ngsbits_samplegender"]): {
