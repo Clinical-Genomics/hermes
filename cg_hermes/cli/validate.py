@@ -6,12 +6,12 @@ from pydantic import ValidationError
 
 from cg_hermes.cli.common import get_deliverables
 from cg_hermes.config.balsamic import BALSAMIC_TAGS
-from cg_hermes.config.balsamic_qc import BALSAMIC_QC_TAGS
 from cg_hermes.config.balsamic_umi import BALSAMIC_UMI_TAGS
 from cg_hermes.config.fluffy import FLUFFY_COMMON_TAGS
 from cg_hermes.config.mip_dna import MIP_DNA_TAGS
 from cg_hermes.config.mip_rna import MIP_RNA_TAGS
 from cg_hermes.config.mutant import MUTANT_COMMON_TAGS
+from cg_hermes.config.nallo import NALLO_TAGS
 from cg_hermes.config.raredisease import RAREDISEASE_TAGS
 from cg_hermes.config.rnafusion import RNAFUSION_TAGS
 from cg_hermes.config.taxprofiler import TAXPROFILER_TAGS
@@ -70,12 +70,12 @@ def validate_tags_cmd(workflow: Workflow) -> None:
         tag_map = BALSAMIC_TAGS
     elif workflow == Workflow.BALSAMIC_UMI:
         tag_map = BALSAMIC_UMI_TAGS
-    elif workflow == Workflow.BALSAMIC_QC:
-        tag_map = BALSAMIC_QC_TAGS
     elif workflow == Workflow.FLUFFY:
         tag_map = FLUFFY_COMMON_TAGS
     elif workflow == Workflow.MUTANT:
         tag_map = MUTANT_COMMON_TAGS
+    elif workflow == Workflow.NALLO:
+        tag_map = NALLO_TAGS
     elif workflow == Workflow.RAREDISEASE:
         tag_map = RAREDISEASE_TAGS
     elif workflow == Workflow.RNAFUSION:

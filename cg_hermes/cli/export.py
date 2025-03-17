@@ -11,6 +11,7 @@ from cg_hermes.config.microsalt import MICROSALT_COMMON_TAGS
 from cg_hermes.config.mip_dna import MIP_DNA_TAGS
 from cg_hermes.config.mip_rna import MIP_RNA_TAGS
 from cg_hermes.config.mutant import MUTANT_COMMON_TAGS
+from cg_hermes.config.nallo import NALLO_TAGS
 from cg_hermes.config.raredisease import RAREDISEASE_TAGS
 from cg_hermes.config.rnafusion import RNAFUSION_TAGS
 from cg_hermes.config.taxprofiler import TAXPROFILER_TAGS
@@ -67,6 +68,10 @@ WORKFLOW_MAP = {
     Workflow.MUTANT: {
         "header": ["Mutant tags", "Mandatory", "HK tags", "Used by"],
         "tags": MUTANT_COMMON_TAGS,
+    },
+    Workflow.NALLO: {
+        "header": ["Nallo tags", "Mandatory", "HK tags", "Used by"],
+        "tags": NALLO_TAGS,
     },
     Workflow.RAREDISEASE: {
         "header": ["Raredisease tags", "Mandatory", "HK tags", "Used by"],

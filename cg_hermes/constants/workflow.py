@@ -4,7 +4,6 @@ from enum import StrEnum
 class Workflow(StrEnum):
     BALSAMIC: str = "balsamic"
     BALSAMIC_PON: str = "balsamic-pon"
-    BALSAMIC_QC: str = "balsamic-qc"
     BALSAMIC_UMI: str = "balsamic-umi"
     DEMULTIPLEX: str = "demultiplex"
     FASTQ: str = "fastq"
@@ -13,6 +12,7 @@ class Workflow(StrEnum):
     MIP_DNA: str = "mip-dna"
     MIP_RNA: str = "mip-rna"
     MUTANT: str = "mutant"
+    NALLO: str = "nallo"
     RAREDISEASE: str = "raredisease"
     RNAFUSION: str = "rnafusion"
     RSYNC: str = "rsync"
@@ -22,7 +22,7 @@ class Workflow(StrEnum):
 
     @classmethod
     def get_nf_workflows(cls) -> set:
-        return {cls.RAREDISEASE, cls.RNAFUSION, cls.TAXPROFILER, cls.TOMTE}
+        return {cls.NALLO, cls.RAREDISEASE, cls.RNAFUSION, cls.TAXPROFILER, cls.TOMTE}
 
 
 class CancerAnalysisType(StrEnum):

@@ -7,7 +7,6 @@ mandatory by default. However the tags that are available to a particular analys
 RAW_TAGS = {
     # Config, QC and reports (PANEL & WGS)
     "config.json": ["balsamic-config"],
-    "report.html": ["balsamic-report"],
     "BALSAMIC_X.X.X_graph.pdf": ["balsamic-dag"],
     "multiqc_report.html": ["html", "multiqc-html"],
     "multiqc_data.json": ["json", "multiqc-json"],
@@ -252,11 +251,6 @@ QC_TAGS = {
         "tags": ["balsamic-config"],
         "is_mandatory": True,
         "used_by": ["audit", "cg"],
-    },
-    frozenset(RAW_TAGS["report.html"]): {  # BALSAMIC report html
-        "tags": ["balsamic-report"],
-        "is_mandatory": True,
-        "used_by": ["audit"],
     },
     frozenset(RAW_TAGS["BALSAMIC_X.X.X_graph.pdf"]): {  # DAG
         "tags": ["balsamic-dag"],

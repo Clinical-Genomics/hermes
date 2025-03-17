@@ -11,11 +11,6 @@ from cg_hermes.config.balsamic import (
     TUMOR_ONLY_PANEL_TAGS,
     TUMOR_ONLY_WGS_TAGS,
 )
-from cg_hermes.config.balsamic_qc import (
-    BALSAMIC_QC_TAGS,
-    QC_TUMOR_NORMAL_PANEL_TAGS,
-    QC_TUMOR_NORMAL_WGS_TAGS,
-)
 from cg_hermes.config.balsamic_umi import (
     BALSAMIC_UMI_TAGS,
     UMI_TUMOR_NORMAL_PANEL_TAGS,
@@ -26,6 +21,7 @@ from cg_hermes.config.microsalt import MICROSALT_COMMON_TAGS
 from cg_hermes.config.mip_dna import MIP_DNA_TAGS
 from cg_hermes.config.mip_rna import MIP_RNA_TAGS
 from cg_hermes.config.mutant import MUTANT_COMMON_TAGS
+from cg_hermes.config.nallo import NALLO_TAGS
 from cg_hermes.config.raredisease import RAREDISEASE_TAGS
 from cg_hermes.config.rnafusion import RNAFUSION_TAGS
 from cg_hermes.config.taxprofiler import TAXPROFILER_TAGS
@@ -107,7 +103,9 @@ class Deliverables:
                 self.raw_deliverables
             )
             self.files = self.get_nf_analysis_files()
-            if self.workflow == Workflow.RAREDISEASE:
+            if self.workflow == Workflow.NALLO:
+                self.configs = Deliverables.build_internal_tag_map(NALLO_TAGS)
+            elif self.workflow == Workflow.RAREDISEASE:
                 self.configs = Deliverables.build_internal_tag_map(RAREDISEASE_TAGS)
             elif self.workflow == Workflow.RNAFUSION:
                 self.configs = Deliverables.build_internal_tag_map(RNAFUSION_TAGS)
@@ -184,12 +182,6 @@ class Deliverables:
                 tag_set = TUMOR_ONLY_PANEL_TAGS
             else:
                 tag_set = TUMOR_NORMAL_PANEL_TAGS
-        elif self.workflow == Workflow.BALSAMIC_QC:
-            BALSAMIC_COMMON_TAGS = BALSAMIC_QC_TAGS
-            if self.analysis_type == CancerAnalysisType.TUMOR_NORMAL_WGS:
-                tag_set = QC_TUMOR_NORMAL_WGS_TAGS
-            elif self.analysis_type == CancerAnalysisType.TUMOR_NORMAL_PANEL:
-                tag_set = QC_TUMOR_NORMAL_PANEL_TAGS
         elif self.workflow == Workflow.BALSAMIC_UMI:
             BALSAMIC_COMMON_TAGS = BALSAMIC_UMI_TAGS
             if self.analysis_type == CancerAnalysisType.TUMOR_PANEL:
