@@ -213,6 +213,36 @@ NALLO_COMMON_TAGS = {
         "is_mandatory": True,
         "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
+    frozenset(["svs_per_caller", "vcf_hificnv"]): {
+        "tags": [BioinfoToolsTags.HIFICNV,  VariantTags.VCF],
+        "is_mandatory": True,
+        "used_by": [UsageTags.LONG_TERM_STORAGE],
+    },
+    frozenset(["svs_per_caller", "vcf_hificnv_index"]): {
+        "tags": [BioinfoToolsTags.HIFICNV,  VariantTags.VCF_INDEX],
+        "is_mandatory": True,
+        "used_by": [UsageTags.LONG_TERM_STORAGE],
+    },
+    frozenset(["svs_per_caller", "vcf_severus"]): {
+        "tags": [BioinfoToolsTags.SEVERUS,  VariantTags.VCF],
+        "is_mandatory": True,
+        "used_by": [UsageTags.LONG_TERM_STORAGE],
+    },
+    frozenset(["svs_per_caller", "vcf_severus_index"]): {
+        "tags": [BioinfoToolsTags.SEVERUS,  VariantTags.VCF_INDEX],
+        "is_mandatory": True,
+        "used_by": [UsageTags.LONG_TERM_STORAGE],
+    },
+    frozenset(["svs_per_caller", "sniffles_svs"]): {
+        "tags": [BioinfoToolsTags.SNIFFLES1,  VariantTags.VCF],
+        "is_mandatory": True,
+        "used_by": [UsageTags.LONG_TERM_STORAGE],
+    },
+    frozenset(["svs_per_caller", "sniffles_svs_index"]): {
+        "tags": [BioinfoToolsTags.SNIFFLES1,  VariantTags.VCF_INDEX],
+        "is_mandatory": True,
+        "used_by": [UsageTags.LONG_TERM_STORAGE],
+    },
     frozenset(["qc_bam", "mosdepth_d4"]): {
         "tags": [AnalysisTags.COVERAGE, ReportTags.D4],
         "is_mandatory": True,
