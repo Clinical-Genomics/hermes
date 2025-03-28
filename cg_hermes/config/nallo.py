@@ -233,12 +233,12 @@ NALLO_COMMON_TAGS = {
         "is_mandatory": True,
         "used_by": [UsageTags.LONG_TERM_STORAGE],
     },
-    frozenset(["svs_per_caller", "sniffles_svs"]): {
+    frozenset(["svs_per_caller", "vcf_sniffles"]): {
         "tags": [BioinfoToolsTags.SNIFFLES1, VariantTags.VCF],
         "is_mandatory": True,
         "used_by": [UsageTags.LONG_TERM_STORAGE],
     },
-    frozenset(["svs_per_caller", "sniffles_svs_index"]): {
+    frozenset(["svs_per_caller", "vcf_sniffles_index"]): {
         "tags": [BioinfoToolsTags.SNIFFLES1, VariantTags.VCF_INDEX],
         "is_mandatory": True,
         "used_by": [UsageTags.LONG_TERM_STORAGE],
