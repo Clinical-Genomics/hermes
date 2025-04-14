@@ -114,7 +114,7 @@ NALLO_COMMON_TAGS = {
         "is_mandatory": True,
         "used_by": [UsageTags.SCOUT, UsageTags.LONG_TERM_STORAGE],
     },
-        frozenset(["peddy", "peddy"]): {
+    frozenset(["peddy", "peddy"]): {
         "tags": [BioinfoToolsTags.PEDDY, FamilyTags.PED],
         "is_mandatory": True,
         "used_by": [UsageTags.AUDIT, UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY],
