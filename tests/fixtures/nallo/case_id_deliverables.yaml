@@ -89,12 +89,12 @@
   path: PATHTOCASE/qc/peddy/CASEID/CASEID.peddy.ped
   step: peddy
   tag: peddy
-- format: csv
+- format: meta
   id: CASEID
   path: PATHTOCASE/qc/peddy/CASEID/CASEID.sex_check.csv
   step: peddy
   tag: sex_check
-- format: csv
+- format: meta
   id: CASEID
   path: PATHTOCASE/qc/peddy/CASEID/CASEID.ped_check.csv
   step: peddy
