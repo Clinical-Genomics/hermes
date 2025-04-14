@@ -12,6 +12,7 @@ from cg_hermes.constants.tags import (
     FamilyTags,
     NextflowTags,
     NalloTags,
+    QCTags,
     ReportTags,
     VariantTags,
     UsageTags,
@@ -112,6 +113,21 @@ NALLO_COMMON_TAGS = {
         "tags": [BioinfoToolsTags.SOMALIER, NalloTags.RELATE_SAMPLES],
         "is_mandatory": True,
         "used_by": [UsageTags.SCOUT, UsageTags.LONG_TERM_STORAGE],
+    },
+        frozenset(["peddy", "peddy"]): {
+        "tags": [BioinfoToolsTags.PEDDY, FamilyTags.PED],
+        "is_mandatory": True,
+        "used_by": [UsageTags.AUDIT, UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY],
+    },
+    frozenset(["peddy", "ped_check"]): {
+        "tags": [BioinfoToolsTags.PEDDY, QCTags.PED_CHECK],
+        "is_mandatory": True,
+        "used_by": [UsageTags.AUDIT, UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY],
+    },
+    frozenset(["peddy", "sex_check"]): {
+        "tags": [BioinfoToolsTags.PEDDY, QCTags.SEX_CHECK],
+        "is_mandatory": True,
+        "used_by": [UsageTags.AUDIT, UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY],
     },
     frozenset(["deepvariant", "report"]): {
         "tags": [NalloTags.DEEPVARIANT_REPORT],
