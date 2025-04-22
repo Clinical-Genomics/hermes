@@ -426,6 +426,8 @@ class BioinfoToolsTags(StrEnum):
     RETROSEQ: str = "retroseq"
     SALMON_QUANT: str = "salmon-quant"
     SENTION: str = "sention"
+    SEVERUS: str = "severus"
+    SNIFFLES1: str = "sniffles1"
     SOMALIER: str = "somalier"
     SQUID: str = "squid"
     STAR_FUSION: str = "star-fusion"
