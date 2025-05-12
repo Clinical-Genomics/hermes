@@ -86,6 +86,21 @@ files:
   step: somalier
   tag: relate_samples
 - format: meta
+  id: CASEID
+  path: PATHTOCASE/qc/peddy/CASEID/CASEID.peddy.ped
+  step: peddy
+  tag: peddy
+- format: meta
+  id: CASEID
+  path: PATHTOCASE/qc/peddy/CASEID/CASEID.sex_check.csv
+  step: peddy
+  tag: sex_check
+- format: meta
+  id: CASEID
+  path: PATHTOCASE/qc/peddy/CASEID/CASEID.ped_check.csv
+  step: peddy
+  tag: ped_check
+- format: meta
   id: SAMPLEID
   path: PATHTOCASE/qc/deepvariant_vcfstatsreport/SAMPLEID/SAMPLEID.visual_report.html
   step: deepvariant
@@ -136,12 +151,12 @@ files:
   step: spanning_repeats
   tag: bam_index
 - format: vcf
-  id: SAMPLEID
+  id: CASEID
   path: PATHTOCASE/repeats/family/CASEID/CASEID_repeats_annotated.vcf.gz
   step: repeats_annotated
   tag: vcf_str
 - format: vcf
-  id: SAMPLEID
+  id: CASEID
   path: PATHTOCASE/repeats/family/CASEID/CASEID_repeats_annotated.vcf.gz.tbi
   step: repeats_annotated
   tag: vcf_str_index
@@ -195,6 +210,36 @@ files:
   path: PATHTOCASE/svs/family/CASEID/CASEID_svs_cnvs_merged_annotated_ranked_filtered.vcf.gz.tbi
   step: sv_annotated_ranked_filtered
   tag: vcf_sv_clinical_index
+- format: vcf
+  id: CASEID
+  path: PATHTOCASE/svs/family/CASEID/CASEID_hificnv_cnvs_merged.vcf.gz
+  step: svs_per_caller
+  tag: vcf_hificnv
+- format: vcf
+  id: CASEID
+  path: PATHTOCASE/svs/family/CASEID/CASEID_hificnv_cnvs_merged.vcf.gz.tbi
+  step: svs_per_caller
+  tag: vcf_hificnv_index
+- format: vcf
+  id: CASEID
+  path: PATHTOCASE/svs/family/CASEID/CASEID_severus_svs_merged.vcf.gz
+  step: svs_per_caller
+  tag: vcf_severus
+- format: vcf
+  id: CASEID
+  path: PATHTOCASE/svs/family/CASEID/CASEID_severus_svs_merged.vcf.gz.tbi
+  step: svs_per_caller
+  tag: vcf_severus_index
+- format: vcf
+  id: CASEID
+  path: PATHTOCASE/svs/family/CASEID/CASEID_sniffles_svs_merged.vcf.gz
+  step: svs_per_caller
+  tag: vcf_sniffles
+- format: vcf
+  id: CASEID
+  path: PATHTOCASE/svs/family/CASEID/CASEID_sniffles_svs_merged.vcf.gz.tbi
+  step: svs_per_caller
+  tag: vcf_sniffles_index
 - format: meta
   id: SAMPLEID
   path: PATHTOCASE/visualization_tracks/SAMPLEID/SAMPLEID_hificnv.copynum.bedgraph

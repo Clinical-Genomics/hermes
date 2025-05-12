@@ -253,25 +253,25 @@ RAREDISEASE_COMMON_TAGS = {
     },
     frozenset(["rank_and_filter", "mt_clinical"]): {
         "tags": [VariantTags.VCF_SV_CLINICAL, AnalysisTags.MITOCHONDRIA],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "bundle_id": True,
         "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["rank_and_filter", "mt_clinical_index"]): {
         "tags": [VariantTags.VCF_SV_CLINICAL_INDEX, AnalysisTags.MITOCHONDRIA],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "bundle_id": True,
         "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["rank_and_filter", "mt_research"]): {
         "tags": [VariantTags.VCF_SV_RESEARCH, AnalysisTags.MITOCHONDRIA],
         "index_tags": ["vcf-snv-research-index"],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["rank_and_filter", "mt_research_index"]): {
         "tags": [VariantTags.VCF_SV_RESEARCH_INDEX, AnalysisTags.MITOCHONDRIA],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["ngsbits_samplegender", "ngsbits_samplegender"]): {
@@ -333,81 +333,6 @@ RAREDISEASE_COMMON_TAGS = {
         "is_mandatory": True,
         "tags": [ReportTags.MULTIQC_JSON],
         "used_by": [UsageTags.LONG_TERM_STORAGE],
-    },
-    frozenset({"multiqc", "multiqc-general-stats"}): {
-        "is_mandatory": True,
-        "tags": [QCTags.QC_METRICS, ReportTags.MULTIQC, ReportTags.GENERAL_STATS],
-        "used_by": [UsageTags.JANUS],
-    },
-    frozenset({"multiqc", "multiqc-picard-alignment"}): {
-        "is_mandatory": True,
-        "tags": [QCTags.QC_METRICS, ReportTags.MULTIQC, ReportTags.PICARD_ALIGNMENT],
-        "used_by": [UsageTags.JANUS],
-    },
-    frozenset({"multiqc", "multiqc-picard-bamqc"}): {
-        "is_mandatory": True,
-        "tags": [QCTags.QC_METRICS, ReportTags.MULTIQC, ReportTags.PICARD_BAMQC],
-        "used_by": [UsageTags.JANUS],
-    },
-    frozenset({"multiqc", "multiqc-picard-insertsize"}): {
-        "is_mandatory": True,
-        "tags": [QCTags.QC_METRICS, ReportTags.MULTIQC, ReportTags.PICARD_INSERT_SIZE],
-        "used_by": [UsageTags.JANUS],
-    },
-    frozenset({"multiqc", "multiqc-mosdepth-covdist"}): {
-        "is_mandatory": True,
-        "tags": [QCTags.QC_METRICS, ReportTags.MULTIQC, ReportTags.MOSDEPTH_COVDIST],
-        "used_by": [UsageTags.JANUS],
-    },
-    frozenset({"multiqc", "multiqc-mosdepth-cumcov"}): {
-        "is_mandatory": True,
-        "tags": [QCTags.QC_METRICS, ReportTags.MULTIQC, ReportTags.MOSDEPTH_CUMCOV],
-        "used_by": [UsageTags.JANUS],
-    },
-    frozenset({"multiqc", "multiqc-mosdepth-perchrom"}): {
-        "is_mandatory": True,
-        "tags": [QCTags.QC_METRICS, ReportTags.MULTIQC, ReportTags.MOSDEPTH_PERCHROM],
-        "used_by": [UsageTags.JANUS],
-    },
-    frozenset({"multiqc", "multiqc-picard-qualitycycle"}): {
-        "is_mandatory": True,
-        "tags": [QCTags.QC_METRICS, ReportTags.MULTIQC, ReportTags.PICARD_QUALITYCYCLE],
-        "used_by": [UsageTags.JANUS],
-    },
-    frozenset({"multiqc", "multiqc-picard-qualitydistr"}): {
-        "is_mandatory": True,
-        "tags": [QCTags.QC_METRICS, ReportTags.MULTIQC, ReportTags.PICARD_QUALITYDISTR],
-        "used_by": [UsageTags.JANUS],
-    },
-    frozenset({"multiqc", "multiqc-peddy"}): {
-        "is_mandatory": True,
-        "tags": [QCTags.QC_METRICS, ReportTags.MULTIQC, BioinfoToolsTags.PEDDY],
-        "used_by": [UsageTags.JANUS],
-    },
-    frozenset({"multiqc", "multiqc-picard-hs"}): {
-        "is_mandatory": True,
-        "tags": [QCTags.QC_METRICS, ReportTags.MULTIQC, ReportTags.PICARD_HS],
-        "used_by": [UsageTags.JANUS],
-    },
-    frozenset({"multiqc", "multiqc-picard-histogram1"}): {
-        "is_mandatory": False,
-        "tags": [QCTags.QC_METRICS, ReportTags.MULTIQC, ReportTags.PICARD_HISTOGRAM],
-        "used_by": [UsageTags.JANUS],
-    },
-    frozenset({"multiqc", "multiqc-picard-histogram2"}): {
-        "is_mandatory": False,
-        "tags": [QCTags.QC_METRICS, ReportTags.MULTIQC, ReportTags.PICARD_HISTOGRAM],
-        "used_by": [UsageTags.JANUS],
-    },
-    frozenset({"multiqc", "multiqc-picard-histogram3"}): {
-        "is_mandatory": False,
-        "tags": [QCTags.QC_METRICS, ReportTags.MULTIQC, ReportTags.PICARD_HISTOGRAM],
-        "used_by": [UsageTags.JANUS],
-    },
-    frozenset({"multiqc", "multiqc-picard-wgs"}): {
-        "is_mandatory": True,
-        "tags": [QCTags.QC_METRICS, ReportTags.MULTIQC, ReportTags.PICARD_WGS],
-        "used_by": [UsageTags.JANUS],
     },
     frozenset({"nextflow-params"}): {
         "is_mandatory": True,
