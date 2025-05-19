@@ -24,6 +24,11 @@ FLUFFY_COMMON_TAGS = {
         "is_mandatory": False,
         "used_by": ["nipt"],
     },
+    frozenset(["wcx2cytosure"]): {
+        "tags": ["wcx2cytosure"],
+        "is_mandatory": True,
+        "used_by": ["nipt"],
+    },
     frozenset(["wisecondor_aberrations"]): {
         "tags": ["wisecondor", "cnv"],
         "is_mandatory": True,

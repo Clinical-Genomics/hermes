@@ -438,6 +438,7 @@ class BioinfoToolsTags(StrEnum):
     TNSCOPE_UMI: str = "tnscope-umi"
     UPD: str = "upd"
     VARDICT: str = "vardict"
+    WCX2CYTOSURE: str = "wcx2cytosure"
     WISECONDOR: str = "wisecondor"
 
     @classmethod
@@ -492,6 +493,7 @@ class BioinfoToolsTags(StrEnum):
             self.TNSCOPE_UMI: "Call snv indels for umi",
             self.UPD: "Uniparent disomy caller from bjhall",
             self.VARDICT: "Cancer variant caller",
+            self.WCX2CYTOSURE: "Conversion from wisecondorX to cytosure format",
             self.WISECONDOR: "NIPT caller",
         }
         return descriptions.get(self, "Description not available")
