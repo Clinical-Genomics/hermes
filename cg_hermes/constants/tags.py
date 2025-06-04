@@ -304,6 +304,7 @@ class AnalysisTags(StrEnum):
     AUTOZYG: str = "autozyg"
     BED: str = "bed"
     BED_INDEX: str = "bed-index"
+    BIGBED: str = "bigbed"
     BIGWIG: str = "bigwig"
     CIRCULAR_PLOT: str = "circular-plot"
     CLINICAL: str = "clinical"
@@ -351,6 +352,7 @@ class AnalysisTags(StrEnum):
             self.AUTOZYG: "Autozygous region",
             self.BED: "Bed file",
             self.BED_INDEX: "Following index",
+            self.BIGBED: "BigBed file",
             self.BIGWIG: "Bigwig formatted file",
             self.CIRCULAR_PLOT: "Circular plot",
             self.CLINICAL: "Clinical subset",
