@@ -217,7 +217,6 @@ class Deliverables:
         files: list[TagBase] = []
         for file_obj in self.model.files:
             identifier = [file_obj.step]
-            path = file_obj.path
             if file_obj.tag:
                 identifier.append(file_obj.tag)
             files.append(
