@@ -547,6 +547,7 @@ class MicrosaltTags(StrEnum):
     MICROSLAT_CONFIG: str = "microsalt-config"
     MICROSLAT_LOG: str = "microsalt-log"
     TYPING_REPORT: str = "typing-report"
+    MICROSALT_VERSION: str = "microsalt-version"
 
     @classmethod
     def name(cls) -> str:

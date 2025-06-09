@@ -20,6 +20,11 @@ MICROSALT_COMMON_TAGS = {
         "tags": ["typing-report", "qc-metrics"],
         "used_by": ["storage"],
     },
+    frozenset({"microsalt-version", "result_aggregation"}): {
+        "is_mandatory": False,
+        "tags": ["microsalt-version"],
+        "used_by": ["storage"],
+    },
     frozenset({"runtime-settings", "analysis"}): {
         "is_mandatory": True,
         "tags": ["microsalt-config"],
