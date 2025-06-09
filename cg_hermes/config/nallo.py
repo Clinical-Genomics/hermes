@@ -279,6 +279,16 @@ NALLO_COMMON_TAGS = {
         "is_mandatory": True,
         "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
+    frozenset(["phase_blocks", "gtf"]): {
+        "tags": [BioinfoToolsTags.WHATSHAP, AnalysisTags.PHASE_BLOCKS],
+        "is_mandatory": True,
+        "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
+    },
+    frozenset(["phase_blocks", "gtf_index"]): {
+        "tags": [BioinfoToolsTags.WHATSHAP, AnalysisTags.PHASE_BLOCKS_INDEX],
+        "is_mandatory": True,
+        "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
+    },
     frozenset({"multiqc", "multiqc-json"}): {
         "is_mandatory": True,
         "tags": [ReportTags.MULTIQC_JSON],
