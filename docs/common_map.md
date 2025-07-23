@@ -96,6 +96,7 @@
 | tnscope-umi           | Call snv indels for umi                                          |
 | upd                   | Uniparent disomy caller from bjhall                              |
 | vardict               | Cancer variant caller                                            |
+| wcx2cytosure          | Converts WisecondorX calls to cytosure format                    |
 | wisecondor            | NIPT caller                                                      |
 
 ## Family Tags

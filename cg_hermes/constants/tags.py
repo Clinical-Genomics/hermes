@@ -304,6 +304,7 @@ class AnalysisTags(StrEnum):
     AUTOZYG: str = "autozyg"
     BED: str = "bed"
     BED_INDEX: str = "bed-index"
+    BIGBED: str = "bigbed"
     BIGWIG: str = "bigwig"
     CIRCULAR_PLOT: str = "circular-plot"
     CLINICAL: str = "clinical"
@@ -351,6 +352,7 @@ class AnalysisTags(StrEnum):
             self.AUTOZYG: "Autozygous region",
             self.BED: "Bed file",
             self.BED_INDEX: "Following index",
+            self.BIGBED: "BigBed file",
             self.BIGWIG: "Bigwig formatted file",
             self.CIRCULAR_PLOT: "Circular plot",
             self.CLINICAL: "Clinical subset",
@@ -438,6 +440,7 @@ class BioinfoToolsTags(StrEnum):
     TNSCOPE_UMI: str = "tnscope-umi"
     UPD: str = "upd"
     VARDICT: str = "vardict"
+    WCX2CYTOSURE: str = "wcx2cytosure"
     WISECONDOR: str = "wisecondor"
 
     @classmethod
@@ -492,6 +495,7 @@ class BioinfoToolsTags(StrEnum):
             self.TNSCOPE_UMI: "Call snv indels for umi",
             self.UPD: "Uniparent disomy caller from bjhall",
             self.VARDICT: "Cancer variant caller",
+            self.WCX2CYTOSURE: "Conversion from wisecondorX to cytosure format",
             self.WISECONDOR: "NIPT caller",
         }
         return descriptions.get(self, "Description not available")
@@ -545,6 +549,7 @@ class MicrosaltTags(StrEnum):
     MICROSLAT_CONFIG: str = "microsalt-config"
     MICROSLAT_LOG: str = "microsalt-log"
     TYPING_REPORT: str = "typing-report"
+    MICROSALT_VERSION: str = "microsalt-version"
 
     @classmethod
     def name(cls) -> str:

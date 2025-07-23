@@ -249,12 +249,12 @@ MIP_DNA_TAGS = {
         "used_by": ["scout"],
     },
     frozenset(["upd_ar", "regions"]): {
-        "tags": ["upd", "regions"],
+        "tags": ["upd", "regions", "bigbed"],
         "is_mandatory": False,
         "used_by": ["scout"],
     },
     frozenset(["upd_ar", "sites"]): {
-        "tags": ["upd", "sites"],
+        "tags": ["upd", "sites", "bigbed"],
         "is_mandatory": False,
         "used_by": ["scout"],
     },
