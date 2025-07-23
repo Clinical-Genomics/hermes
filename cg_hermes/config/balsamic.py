@@ -270,7 +270,7 @@ QC_TAGS = {
         "used_by": ["audit"],
     },
     frozenset(RAW_TAGS["tumor.d4"]): {  # D4 coverage
-        "tags": ["d4", "coverage"],
+        "tags": ["d4", "coverage", "tumor"],
         "is_mandatory": True,
         "used_by": ["scout"],
     },
