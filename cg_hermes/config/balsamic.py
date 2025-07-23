@@ -10,8 +10,7 @@ RAW_TAGS = {
     "BALSAMIC_X.X.X_graph.pdf": ["balsamic-dag"],
     "multiqc_report.html": ["html", "multiqc-html"],
     "multiqc_data.json": ["json", "multiqc-json"],
-    "tumor.d4": ["tumor", "d4file", "qc-metrics-d4file"],
-    "normal.d4": ["normal", "d4file", "qc-metrics-d4file"],
+    "tumor.d4": ["d4file", "qc-metrics-d4file"],
     # Custom QC
     "metrics_deliverables.yaml": ["yaml", "qc-metrics-yaml"],
     # Alignment files (PANEL & WGS)
@@ -273,11 +272,6 @@ QC_TAGS = {
     frozenset(RAW_TAGS["tumor.d4"]): {  # D4 coverage
         "tags": ["d4", "coverage"],
         "is_mandatory": True,
-        "used_by": ["scout"],
-    },
-    frozenset(RAW_TAGS["normal.d4"]): {  # D4 coverage
-        "tags": ["d4", "coverage"],
-        "is_mandatory": False,
         "used_by": ["scout"],
     },
     # Custom QC
