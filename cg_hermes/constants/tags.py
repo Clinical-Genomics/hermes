@@ -438,6 +438,7 @@ class BioinfoToolsTags(StrEnum):
     TIDDIT: str = "tiddit"
     TNSCOPE: str = "tnscope"
     TNSCOPE_UMI: str = "tnscope-umi"
+    TRGT: str = "trgt"
     UPD: str = "upd"
     VARDICT: str = "vardict"
     WCX2CYTOSURE: str = "wcx2cytosure"
@@ -493,6 +494,7 @@ class BioinfoToolsTags(StrEnum):
             self.TIDDIT: "Tool to identify chromosomal rearrangements",
             self.TNSCOPE: "Call snv indels",
             self.TNSCOPE_UMI: "Call snv indels for umi",
+            self.TRGT: "Call repeat expansions",
             self.UPD: "Uniparent disomy caller from bjhall",
             self.VARDICT: "Cancer variant caller",
             self.WCX2CYTOSURE: "Conversion from wisecondorX to cytosure format",
