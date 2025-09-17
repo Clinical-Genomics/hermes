@@ -32,22 +32,22 @@ NALLO_COMMON_TAGS = {
     },
     frozenset(["assembly", "summary_hap1"]): {
         "tags": [NalloTags.HAP1, NalloTags.ASSEMBLY, NalloTags.ASSEMBLY_SUMMARY],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["assembly", "summary_hap2"]): {
         "tags": [NalloTags.HAP2, NalloTags.ASSEMBLY, NalloTags.ASSEMBLY_SUMMARY],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["assembly", "assembly_aligned"]): {
         "tags": [AlignmentTags.BAM, NalloTags.ASSEMBLY],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["assembly", "assembly_aligned_index"]): {
         "tags": [AlignmentTags.BAM_INDEX, NalloTags.ASSEMBLY],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["methylation_pileup", "hap1"]): {

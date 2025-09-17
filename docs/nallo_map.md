@@ -2,10 +2,10 @@
 |-----------------------------------------------------|-------------|-------------------------------------|---------------------------------------------|
 | alignment_haplotags, alignment                      | True        | bam, haplotags                      | scout, clinical-delivery, long-term-storage |
 | alignment_haplotags_index, alignment                | True        | bam-index, haplotags                | scout, clinical-delivery, long-term-storage |
-| assembly, summary_hap1                              | True        | hap1, assembly, assembly-summary    | clinical-delivery, long-term-storage        |
-| summary_hap2, assembly                              | True        | hap2, assembly, assembly-summary    | clinical-delivery, long-term-storage        |
-| assembly_aligned, assembly                          | True        | bam, assembly                       | clinical-delivery, long-term-storage        |
-| assembly, assembly_aligned_index                    | True        | bam-index, assembly                 | clinical-delivery, long-term-storage        |
+| assembly, summary_hap1                              | False       | hap1, assembly, assembly-summary    | clinical-delivery, long-term-storage        |
+| summary_hap2, assembly                              | False       | hap2, assembly, assembly-summary    | clinical-delivery, long-term-storage        |
+| assembly_aligned, assembly                          | False       | bam, assembly                       | clinical-delivery, long-term-storage        |
+| assembly, assembly_aligned_index                    | False       | bam-index, assembly                 | clinical-delivery, long-term-storage        |
 | hap1, methylation_pileup                            | True        | bed, hap1, modkit-pileup            | clinical-delivery, long-term-storage        |
 | hap1_index, methylation_pileup                      | True        | bed-index, hap1, modkit-pileup      | clinical-delivery, long-term-storage        |
 | hap2, methylation_pileup                            | True        | bed, hap2, modkit-pileup            | clinical-delivery, long-term-storage        |
