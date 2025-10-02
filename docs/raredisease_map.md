@@ -5,7 +5,7 @@
 | alignment, alignment_mt                          | False       | bam-mt                               | scout                                          |
 | alignment_mt_index, alignment                    | False       | bam-mt-index                         | scout                                          |
 | tiddit_coverage                                  | False       | tiddit-coverage, bigwig              | scout                                          |
-| mosdepth_d4, qc_bam                              | False       | coverage, d4                         | scout                                          |
+| d4tools_d4, qc_bam                              | False       | coverage, d4                         | scout                                          |
 | tcov, chromograph_cov                            | False       | chromograph, tcov                    | scout                                          |
 | smncopynumbercaller, tsv                         | False       | smn-calling                          | scout, clinical-delivery, long-term-storage    |
 | variant_catalog, expansionhunter                 | False       | expansionhunter, variant-catalog     | scout, long-term-storage                       |

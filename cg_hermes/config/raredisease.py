@@ -45,7 +45,7 @@ RAREDISEASE_COMMON_TAGS = {
         "is_mandatory": False,
         "used_by": [UsageTags.SCOUT],
     },
-    frozenset(["qc_bam", "mosdepth_d4"]): {
+    frozenset(["qc_bam", "d4tools_d4"]): {
         "tags": [AnalysisTags.COVERAGE, ReportTags.D4],
         "is_mandatory": False,
         "used_by": [UsageTags.SCOUT],
