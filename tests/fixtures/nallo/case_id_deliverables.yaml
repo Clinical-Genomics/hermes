@@ -295,6 +295,16 @@ files:
   path: PATHTOCASE/pipeline_info/nallo_pipeline_software_mqc_versions.yml
   step: software-versions
   tag: software-versions
+- format: meta
+  id: CASEID
+  path: PATHTOCASE/phasing_stats/CASEID/CASEID_stats.blocks.gtf.gz
+  step: phase_blocks
+  tag: gtf
+- format: meta
+  id: CASEID
+  path: PATHTOCASE/phasing_stats/CASEID/CASEID_stats.blocks.gtf.gz.tbi
+  step: phase_blocks
+  tag: gtf_index
 - format: yaml
   id: CASEID
   path: PATHTOCASE/CASEID_metrics_deliverables.yaml

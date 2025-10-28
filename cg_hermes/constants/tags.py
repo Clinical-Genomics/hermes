@@ -322,6 +322,8 @@ class AnalysisTags(StrEnum):
     PROFILE_PLOT: str = "profile-plot"
     QC_CRAM: str = "qc-cram"
     QC_CRAM_INDEX: str = "qc-cram-index"
+    PHASE_BLOCKS: str = "gtf"
+    PHASE_BLOCKS_INDEX: str = "gtf-index"
     RAW_PROFILE_PLOT: str = "raw-profile-plot"
     REFERENCE_INFO: str = "reference-info"
     REGIONS: str = "regions"
@@ -367,6 +369,8 @@ class AnalysisTags(StrEnum):
             self.JUNCTION: "Junction data",
             self.METRICS: "Data metrics",
             self.MITOCHONDRIA: "Mitochondria related",
+            self.PHASE_BLOCKS: "Phase blocks",
+            self.PHASE_BLOCKS_INDEX: "Index file for phase blocks",
             self.PROFILE_PLOT: "Copy number profile plot",
             self.QC_CRAM: "QC alignment file in CRAM format",
             self.QC_CRAM_INDEX: "QC index file for alignment file in CRAM format",
@@ -442,6 +446,7 @@ class BioinfoToolsTags(StrEnum):
     UPD: str = "upd"
     VARDICT: str = "vardict"
     WCX2CYTOSURE: str = "wcx2cytosure"
+    WHATSHAP: str = "whatshap"
     WISECONDOR: str = "wisecondor"
 
     @classmethod
@@ -498,6 +503,7 @@ class BioinfoToolsTags(StrEnum):
             self.UPD: "Uniparent disomy caller from bjhall",
             self.VARDICT: "Cancer variant caller",
             self.WCX2CYTOSURE: "Conversion from wisecondorX to cytosure format",
+            self.WHATSHAP: "Tool for phasing variants",
             self.WISECONDOR: "NIPT caller",
         }
         return descriptions.get(self, "Description not available")

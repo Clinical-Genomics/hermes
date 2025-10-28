@@ -57,4 +57,6 @@
 | samplesheet                                         | True        | nextflow-samplesheet                | cg, long-term-storage                       |
 | software-versions                                   | True        | software-versions                   | cg, clinical-delivery, long-term-storage    |
 | qc-metrics                                          | True        | qc-metrics, deliverable             | cg, long-term-storage                       |
+| whatshap, gtf                                       | True        | bam, paraphase                      | scout, clinical-delivery, long-term-storage |
+| whatshap, gtf_index                                 | True        | bam, paraphase                      | scout, clinical-delivery, long-term-storage |
 | manifest                                            | False       | manifest                            | scout, long-term-storage                    |
