@@ -304,6 +304,7 @@ class AnalysisTags(StrEnum):
     AUTOZYG: str = "autozyg"
     BED: str = "bed"
     BED_INDEX: str = "bed-index"
+    BIGBED: str = "bigbed"
     BIGWIG: str = "bigwig"
     CIRCULAR_PLOT: str = "circular-plot"
     CLINICAL: str = "clinical"
@@ -353,6 +354,7 @@ class AnalysisTags(StrEnum):
             self.AUTOZYG: "Autozygous region",
             self.BED: "Bed file",
             self.BED_INDEX: "Following index",
+            self.BIGBED: "BigBed file",
             self.BIGWIG: "Bigwig formatted file",
             self.CIRCULAR_PLOT: "Circular plot",
             self.CLINICAL: "Clinical subset",
@@ -440,6 +442,7 @@ class BioinfoToolsTags(StrEnum):
     TIDDIT: str = "tiddit"
     TNSCOPE: str = "tnscope"
     TNSCOPE_UMI: str = "tnscope-umi"
+    TRGT: str = "trgt"
     UPD: str = "upd"
     VARDICT: str = "vardict"
     WCX2CYTOSURE: str = "wcx2cytosure"
@@ -496,6 +499,7 @@ class BioinfoToolsTags(StrEnum):
             self.TIDDIT: "Tool to identify chromosomal rearrangements",
             self.TNSCOPE: "Call snv indels",
             self.TNSCOPE_UMI: "Call snv indels for umi",
+            self.TRGT: "Call repeat expansions",
             self.UPD: "Uniparent disomy caller from bjhall",
             self.VARDICT: "Cancer variant caller",
             self.WCX2CYTOSURE: "Conversion from wisecondorX to cytosure format",
@@ -553,6 +557,7 @@ class MicrosaltTags(StrEnum):
     MICROSLAT_CONFIG: str = "microsalt-config"
     MICROSLAT_LOG: str = "microsalt-log"
     TYPING_REPORT: str = "typing-report"
+    MICROSALT_VERSION: str = "microsalt-version"
 
     @classmethod
     def name(cls) -> str:

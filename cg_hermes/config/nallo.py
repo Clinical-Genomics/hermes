@@ -10,6 +10,7 @@ from cg_hermes.constants.tags import (
     AnalysisTags,
     BioinfoToolsTags,
     FamilyTags,
+    MipTags,
     NextflowTags,
     NalloTags,
     QCTags,
@@ -31,22 +32,22 @@ NALLO_COMMON_TAGS = {
     },
     frozenset(["assembly", "summary_hap1"]): {
         "tags": [NalloTags.HAP1, NalloTags.ASSEMBLY, NalloTags.ASSEMBLY_SUMMARY],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["assembly", "summary_hap2"]): {
         "tags": [NalloTags.HAP2, NalloTags.ASSEMBLY, NalloTags.ASSEMBLY_SUMMARY],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["assembly", "assembly_aligned"]): {
         "tags": [AlignmentTags.BAM, NalloTags.ASSEMBLY],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["assembly", "assembly_aligned_index"]): {
         "tags": [AlignmentTags.BAM_INDEX, NalloTags.ASSEMBLY],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["methylation_pileup", "hap1"]): {
@@ -188,6 +189,11 @@ NALLO_COMMON_TAGS = {
         "tags": [VariantTags.VCF_STR_INDEX],
         "is_mandatory": True,
         "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
+    },
+    frozenset(["trgt", "variant_catalog"]): {
+        "tags": [BioinfoToolsTags.TRGT, MipTags.VARIANT_CATALOG],
+        "is_mandatory": True,
+        "used_by": [UsageTags.SCOUT, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["snv_annotated", "vcf_snv_research"]): {
         "tags": [VariantTags.VCF_SNV_RESEARCH],
