@@ -353,6 +353,7 @@ RAREDISEASE_COMMON_TAGS = {
         "tags": [ReportTags.DEEPVARIANT_REPORT],
         "is_mandatory": True,
         "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
+    },
 }
 
 RAREDISEASE_TAGS = {**RAREDISEASE_COMMON_TAGS, **NEXTFLOW_TAGS}
