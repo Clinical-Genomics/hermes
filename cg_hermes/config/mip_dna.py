@@ -164,7 +164,7 @@ MIP_DNA_TAGS = {
         "is_mandatory": True,
         "used_by": ["storage"],
     },
-    frozenset(["deepvariant", "report"]): {
+    frozenset(["deepvariant"]): {
         "tags": ["deepvariant-report"],
         "is_mandatory": True,
         "used_by": ["storage"],
