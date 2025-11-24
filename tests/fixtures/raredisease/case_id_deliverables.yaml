@@ -815,6 +815,11 @@ files:
   path: PATHTOCASE/multiqc/multiqc_report.html
   step: multiqc
   tag: multiqc-html
+- format: meta
+  id: SAMPLEID
+  path: PATHTOCASE/qc/SAMPLEID.visual_report.html
+  step: deepvariant
+  tag: report
 - format: csv
   id: CASEID
   path: PATHTOCASE/CASEID_samplesheet.csv
