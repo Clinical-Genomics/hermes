@@ -817,7 +817,7 @@ files:
   tag: multiqc-html
 - format: meta
   id: SAMPLEID
-  path: PATHTOCASE/qc/SAMPLEID.visual_report.html
+  path: PATHTOCASE/call_snv/genome/SAMPLEID_deepvar.visual_report.html
   step: deepvariant
   tag: report
 - format: csv
