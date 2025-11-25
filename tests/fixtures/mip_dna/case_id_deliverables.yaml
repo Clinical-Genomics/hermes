@@ -154,6 +154,12 @@ files:
     path_index: ~
     step: multiqc_ar
     tag: json
+  - format: meta
+    id: sample_id
+    path: /path/to/rare-disease/cases/case_id/analysis/sample_id/deepvariant/sample_id.visual_report.html
+    path_index: ~
+    step: deepvariant
+    tag: ~
   - format: bcf
     id: case_id
     path: /path/to/rare-disease/cases/case_id/analysis/case_id/gatk_combinevariantcallsets/case_id_gatkcomb.bcf
