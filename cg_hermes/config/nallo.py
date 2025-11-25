@@ -131,7 +131,7 @@ NALLO_COMMON_TAGS = {
         "used_by": [UsageTags.AUDIT, UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY],
     },
     frozenset(["deepvariant", "report"]): {
-        "tags": [NalloTags.DEEPVARIANT_REPORT],
+        "tags": [ReportTags.DEEPVARIANT_REPORT],
         "is_mandatory": True,
         "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
