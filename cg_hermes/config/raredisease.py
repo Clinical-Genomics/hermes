@@ -50,6 +50,11 @@ RAREDISEASE_COMMON_TAGS = {
         "is_mandatory": False,
         "used_by": [UsageTags.SCOUT],
     },
+    frozenset(["sambamba_depth", "qc_bam"]): {
+        "tags": [AnalysisTags.COVERAGE, ReportTags.SAMBAMBA_DEPTH],
+        "is_mandatory": True,
+        "used_by": [UsageTags.CHANJO],
+    },
     frozenset(["chromograph_cov", "tcov"]): {
         "tags": [BioinfoToolsTags.CHROMOGRAPH, AnalysisTags.TCOV],
         "is_mandatory": False,
