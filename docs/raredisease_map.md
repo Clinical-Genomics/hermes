@@ -6,6 +6,7 @@
 | alignment_mt_index, alignment                    | False       | bam-mt-index                         | scout                                          |
 | tiddit_coverage                                  | False       | tiddit-coverage, bigwig              | scout                                          |
 | d4tools_d4, qc_bam                              | False       | coverage, d4                         | scout                                          |
+| sambamba_depth, qc_bam                           | False       | coverage, sambamba_depth             | cg, long-term-storage                          |
 | tcov, chromograph_cov                            | False       | chromograph, tcov                    | scout                                          |
 | smncopynumbercaller, tsv                         | False       | smn-calling                          | scout, clinical-delivery, long-term-storage    |
 | variant_catalog, expansionhunter                 | False       | expansionhunter, variant-catalog     | scout, long-term-storage                       |
