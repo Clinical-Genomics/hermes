@@ -354,6 +354,11 @@ RAREDISEASE_COMMON_TAGS = {
         "tags": [NextflowTags.SAMPLESHEET],
         "used_by": [UsageTags.CG, UsageTags.LONG_TERM_STORAGE],
     },
+    frozenset(["deepvariant", "report"]): {
+        "tags": [ReportTags.DEEPVARIANT_REPORT],
+        "is_mandatory": True,
+        "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
+    },
 }
 
 RAREDISEASE_TAGS = {**RAREDISEASE_COMMON_TAGS, **NEXTFLOW_TAGS}

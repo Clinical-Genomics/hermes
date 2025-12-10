@@ -62,6 +62,7 @@
 | chromograph_upd, sites                           | False       | chromograph, upd, sites              | scout                                          |
 | multiqc-html, multiqc                            | True        | multiqc-html                         | scout, clinical-delivery, long-term-storage    |
 | multiqc-json, multiqc                            | True        | multiqc-json                         | long-term-storage                              |
+| deepvariant, report                              | True        | deepvariant-report                   | clinical-delivery, long-term-storage           |
 | nextflow-params                                  | True        | nextflow-params                      | cg, long-term-storage                          |
 | nextflow-config                                  | True        | nextflow-config                      | cg, long-term-storage                          |
 | samplesheet                                      | True        | nextflow-samplesheet                 | cg, long-term-storage                          |
