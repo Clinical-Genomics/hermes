@@ -2,11 +2,11 @@
 
 from cg_hermes.config.nextflow import NEXTFLOW_TAGS
 from cg_hermes.constants.tags import (
-    TaxprofilerTags,
     AnalysisTags,
-    ReportTags,
-    QCTags,
     BioinfoToolsTags,
+    QCTags,
+    ReportTags,
+    TaxprofilerTags,
     UsageTags,
 )
 
@@ -100,17 +100,16 @@ TAXPROFILER_COMMON_TAGS = {
         "tags": [TaxprofilerTags.CENTRIFUGE, TaxprofilerTags.TAXONOMY_TREE],
         "used_by": [UsageTags.LONG_TERM_STORAGE],
     },
-    frozenset({"taxpasta", "kraken2"}): {
-        "is_mandatory": True,
-        "tags": [TaxprofilerTags.TAXPASTA, TaxprofilerTags.KRAKEN2],
-        "used_by": [UsageTags.LONG_TERM_STORAGE],
-    },
     frozenset({"taxpasta", "centrifuge"}): {
         "is_mandatory": True,
         "tags": [TaxprofilerTags.TAXPASTA, TaxprofilerTags.CENTRIFUGE],
         "used_by": [UsageTags.LONG_TERM_STORAGE],
     },
-
+    frozenset({"taxpasta", "kraken2"}): {
+        "is_mandatory": True,
+        "tags": [TaxprofilerTags.TAXPASTA, TaxprofilerTags.KRAKEN2],
+        "used_by": [UsageTags.LONG_TERM_STORAGE],
+    },
 }
 
 TAXPROFILER_TAGS = {**TAXPROFILER_COMMON_TAGS, **NEXTFLOW_TAGS}
