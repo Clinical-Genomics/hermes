@@ -90,6 +90,27 @@ TAXPROFILER_COMMON_TAGS = {
         "tags": [QCTags.QC_METRICS, ReportTags.MULTIQC, TaxprofilerTags.KRAKEN2],
         "used_by": [UsageTags.JANUS],
     },
+    frozenset({"kraken2", "kraken2_classified_reads"}): {
+        "is_mandatory": True,
+        "tags": [TaxprofilerTags.KRAKEN2, TaxprofilerTags.CLASSIFIED_READS],
+        "used_by": [UsageTags.LONG_TERM_STORAGE],
+    },
+    frozenset({"centrifuge", "centrifuge_results"}): {
+        "is_mandatory": True,
+        "tags": [TaxprofilerTags.CENTRIFUGE, TaxprofilerTags.TAXONOMY_TREE],
+        "used_by": [UsageTags.LONG_TERM_STORAGE],
+    },
+    frozenset({"taxpasta", "kraken2"}): {
+        "is_mandatory": True,
+        "tags": [TaxprofilerTags.TAXPASTA, TaxprofilerTags.KRAKEN2],
+        "used_by": [UsageTags.LONG_TERM_STORAGE],
+    },
+    frozenset({"taxpasta", "centrifuge"}): {
+        "is_mandatory": True,
+        "tags": [TaxprofilerTags.TAXPASTA, TaxprofilerTags.CENTRIFUGE],
+        "used_by": [UsageTags.LONG_TERM_STORAGE],
+    },
+
 }
 
 TAXPROFILER_TAGS = {**TAXPROFILER_COMMON_TAGS, **NEXTFLOW_TAGS}

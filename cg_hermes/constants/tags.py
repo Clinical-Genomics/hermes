@@ -726,6 +726,9 @@ class TaxprofilerTags(StrEnum):
     KRAKEN2: str = "kraken2"
     KRONA: str = "krona"
     METAGENOMICS_REPORT: str = "metagenomics-report"
+    CLASSIFIED_READS: str = "classified-reads"
+    TAXONOMY_TREE: str = "taxonomy-tree"
+    TAXPASTA: str = "taxpasta"
 
     @classmethod
     def name(cls) -> str:
@@ -743,6 +746,9 @@ class TaxprofilerTags(StrEnum):
             self.KRONA: "Visualisation tool that allows to explore relative abundances and "
             "confidences within metagenomic classifications",
             self.METAGENOMICS_REPORT: "Report describing taxonomic classification results",
+            self.CLASSIFIED_READS: "Reads that have been taxonomically classified",
+            self.TAXONOMY_TREE: "Standardises taxonomic profiles",
+
         }
         return descriptions.get(self, "Description not available")
 
