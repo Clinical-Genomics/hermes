@@ -17,3 +17,4 @@
 | software-versions                      | True        | software-versions                   | cg, clinical-delivery, long-term-storage |
 | qc-metrics                             | True        | qc-metrics, deliverable             | cg, long-term-storage                    |
 | manifest                               | False       | manifest                            | scout, long-term-storage                 |
+|to be added...|             |             |                                     |                                          |
