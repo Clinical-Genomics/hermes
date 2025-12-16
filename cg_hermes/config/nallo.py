@@ -245,6 +245,16 @@ NALLO_COMMON_TAGS = {
         "is_mandatory": True,
         "used_by": [UsageTags.LONG_TERM_STORAGE],
     },
+    frozenset(["svs_per_caller", "vcf_sawfish"]): {
+        "tags": [BioinfoToolsTags.SAWFISH, VariantTags.VCF],
+        "is_mandatory": True,
+        "used_by": [UsageTags.LONG_TERM_STORAGE],
+    },
+    frozenset(["svs_per_caller", "vcf_sawfish_index"]): {
+        "tags": [BioinfoToolsTags.SAWFISH, VariantTags.VCF_INDEX],
+        "is_mandatory": True,
+        "used_by": [UsageTags.LONG_TERM_STORAGE],
+    },
     frozenset(["svs_per_caller", "vcf_severus"]): {
         "tags": [BioinfoToolsTags.SEVERUS, VariantTags.VCF],
         "is_mandatory": True,
