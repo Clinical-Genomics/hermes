@@ -29,6 +29,7 @@
 | mip_analyse, sample_info            | True        | sample-info                      | cg, audit    |
 | html, multiqc_ar                    | True        | multiqc-html                     | scout        |
 | json, multiqc_ar                    | True        | multiqc-json                     | storage      |
+| deepvariant                         | True        | deepvariant-report               | storage      |
 | mitodel                             | False       | mitodel                          | scout        |
 | ped_check, peddy_ar                 | True        | peddy, ped-check                 | audit, scout |
 | peddy_ar, peddy                     | True        | peddy, ped                       | audit, scout |
