@@ -722,10 +722,13 @@ class RnafusionTags(StrEnum):
 class TaxprofilerTags(StrEnum):
     BRACKEN: str = "bracken"
     CENTRIFUGE: str = "centrifuge"
+    CLASSIFIED_READS: str = "classified-reads"
     COMBINED_REPORT: str = "combined-report"
     KRAKEN2: str = "kraken2"
     KRONA: str = "krona"
     METAGENOMICS_REPORT: str = "metagenomics-report"
+    TAXONOMY_TREE: str = "taxonomy-tree"
+    TAXPASTA: str = "taxpasta"
 
     @classmethod
     def name(cls) -> str:
@@ -734,15 +737,14 @@ class TaxprofilerTags(StrEnum):
     @property
     def description(self) -> str:
         descriptions: dict[str, TaxprofilerTags] = {
-            self.BRACKEN: "Tool to compute the abundance of species and is companion program to "
-            "kraken2",
+            self.BRACKEN: "Tool to compute the abundance of species and is companion program to kraken2",
             self.CENTRIFUGE: "Taxonomic sequence classifier for metagenomic sequences",
+            self.CLASSIFIED_READS: "Reads that have been taxonomically classified",
             self.COMBINED_REPORT: "A combined report of taxonomic classification from all samples",
-            self.KRAKEN2: "Taxonomic sequence classifier that assigns taxonomic labels to "
-            "metagenomic DNA sequences",
-            self.KRONA: "Visualisation tool that allows to explore relative abundances and "
-            "confidences within metagenomic classifications",
+            self.KRAKEN2: "Taxonomic sequence classifier that assigns taxonomic labels to metagenomic DNA sequences",
+            self.KRONA: "Visualisation tool that allows to explore relative abundances and confidences within metagenomic classifications",
             self.METAGENOMICS_REPORT: "Report describing taxonomic classification results",
+            self.TAXONOMY_TREE: "Standardises taxonomic profiles",
         }
         return descriptions.get(self, "Description not available")
 
