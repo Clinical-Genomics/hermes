@@ -62,3 +62,5 @@
 | whatshap, gtf                                       | True        | bam, paraphase                      | scout, clinical-delivery, long-term-storage |
 | whatshap, gtf_index                                 | True        | bam, paraphase                      | scout, clinical-delivery, long-term-storage |
 | manifest                                            | False       | manifest                            | scout, long-term-storage                    |
+| chromograph_rhoviz, autozyg                      | False       | chromograph, autozyg                 | scout                                          |
+| tcov, chromograph_cov                            | False       | chromograph, tcov                    | scout
