@@ -44,6 +44,8 @@
 | vcf_sv_clinical_index, sv_annotated_ranked_filtered | True        | vcf-sv-clinical-index               | scout, clinical-delivery, long-term-storage |
 | svs_per_caller, vcf_hificnv                         | True        | hificnv, vcf                        | long-term-storage                           |
 | svs_per_caller, vcf_hificnv_index                   | True        | hificnv, vcf-index                  | long-term-storage                           |
+| svs_per_caller, vcf_sawfish                         | True        | sawfish, vcf                        | long-term-storage                           |
+| svs_per_caller, vcf_sawfish_index                   | True        | sawfish, vcf-index                  | long-term-storage                           |
 | svs_per_caller, vcf_severus                         | True        | severus, vcf                        | long-term-storage                           |
 | svs_per_caller, vcf_severus_index                   | True        | severus, vcf-index                  | long-term-storage                           |
 | svs_per_caller, vcf_sniffles                        | True        | sniffles1, vcf                      | long-term-storage                           |
@@ -60,3 +62,5 @@
 | whatshap, gtf                                       | True        | bam, paraphase                      | scout, clinical-delivery, long-term-storage |
 | whatshap, gtf_index                                 | True        | bam, paraphase                      | scout, clinical-delivery, long-term-storage |
 | manifest                                            | False       | manifest                            | scout, long-term-storage                    |
+| chromograph_rhoviz, autozyg                      | False       | chromograph, autozyg                 | scout                                          |
+| tcov, chromograph_cov                            | False       | chromograph, tcov                    | scout

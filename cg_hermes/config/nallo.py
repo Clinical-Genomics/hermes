@@ -50,6 +50,16 @@ NALLO_COMMON_TAGS = {
         "is_mandatory": False,
         "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
+    frozenset(["chromograph_rhoviz", "autozyg"]): {
+        "tags": [BioinfoToolsTags.CHROMOGRAPH, AnalysisTags.AUTOZYG],
+        "is_mandatory": False,
+        "used_by": [UsageTags.SCOUT],
+    },
+    frozenset(["chromograph_cov", "tcov"]): {
+        "tags": [BioinfoToolsTags.CHROMOGRAPH, AnalysisTags.TCOV],
+        "is_mandatory": False,
+        "used_by": [UsageTags.SCOUT],
+    },
     frozenset(["methylation_pileup", "hap1"]): {
         "tags": [AnalysisTags.BED, NalloTags.HAP1, BioinfoToolsTags.MODKIT_PILEUP],
         "is_mandatory": True,
@@ -242,6 +252,16 @@ NALLO_COMMON_TAGS = {
     },
     frozenset(["svs_per_caller", "vcf_hificnv_index"]): {
         "tags": [BioinfoToolsTags.HIFICNV, VariantTags.VCF_INDEX],
+        "is_mandatory": True,
+        "used_by": [UsageTags.LONG_TERM_STORAGE],
+    },
+    frozenset(["svs_per_caller", "vcf_sawfish"]): {
+        "tags": [BioinfoToolsTags.SAWFISH, VariantTags.VCF],
+        "is_mandatory": True,
+        "used_by": [UsageTags.LONG_TERM_STORAGE],
+    },
+    frozenset(["svs_per_caller", "vcf_sawfish_index"]): {
+        "tags": [BioinfoToolsTags.SAWFISH, VariantTags.VCF_INDEX],
         "is_mandatory": True,
         "used_by": [UsageTags.LONG_TERM_STORAGE],
     },
