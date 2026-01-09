@@ -432,6 +432,7 @@ class BioinfoToolsTags(StrEnum):
     PIZZLY: str = "pizzly"
     RETROSEQ: str = "retroseq"
     SALMON_QUANT: str = "salmon-quant"
+    SAWFISH: str = "sawfish"
     SENTION: str = "sention"
     SEVERUS: str = "severus"
     SNIFFLES1: str = "sniffles1"
