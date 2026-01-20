@@ -27,6 +27,7 @@
 | json, paraphase                                     | True        | paraphase, json                     | clinical-delivery, long-term-storage        |
 | vcf, paraphase                                      | False       | paraphase, vcf                      | clinical-delivery, long-term-storage        |
 | vcf_index, paraphase                                | False       | paraphase, vcf-index                | clinical-delivery, long-term-storage        |
+| sambamba_depth                                      | False       | coverage, sambamba_depth             | cg, long-term-storage                          |
 | sorted_repeats, vcf_str                             | True        | repeats, sorted, vcf                | long-term-storage                           |
 | sorted_repeats, vcf_str_index                       | True        | repeats, sorted, vcf-index          | long-term-storage                           |
 | spanning_repeats, bam                               | True        | repeats, spanning, bam              | long-term-storage                           |

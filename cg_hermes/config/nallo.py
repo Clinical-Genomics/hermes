@@ -105,6 +105,11 @@ NALLO_COMMON_TAGS = {
         "is_mandatory": True,
         "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.SCOUT, UsageTags.LONG_TERM_STORAGE],
     },
+        frozenset(["sambamba_depth", "qc_bam"]): {
+        "tags": [AnalysisTags.COVERAGE, ReportTags.SAMBAMBA_DEPTH],
+        "is_mandatory": True,
+        "used_by": [UsageTags.CHANJO, UsageTags.LONG_TERM_STORAGE],
+    },
     frozenset(["somalier", "relate_html"]): {
         "tags": [BioinfoToolsTags.SOMALIER, NalloTags.RELATE_HTML],
         "is_mandatory": True,
