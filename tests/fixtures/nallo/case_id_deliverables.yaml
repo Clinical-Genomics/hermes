@@ -323,7 +323,7 @@ files:
 - format: meta
   id: SAMPLEID
   path: PATHTOCASE/qc/sambamba_depth/SAMPLEID/SAMPLEID_sambamba_depth.bed
-  step: sambamba_depth
+  step: qc_bam
   tag: sambamba_depth
 - format: meta
   id: CASEID
