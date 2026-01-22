@@ -12,7 +12,7 @@
 | hap2_index, methylation_pileup                      | True        | bed-index, hap2, modkit-pileup      | clinical-delivery, long-term-storage        |
 | methylation_pileup, ungrouped                       | True        | bed, ungrouped, modkit-pileup       | clinical-delivery, long-term-storage        |
 | ungrouped_index, methylation_pileup                 | True        | bed-index, ungrouped, modkit-pileup | clinical-delivery, long-term-storage        |
-| mosdepth_d4, qc_bam                                 | True        | coverage, d4                        | scout, clinical-delivery, long-term-storage |
+| mosdepth_d4, qc_bam                                 | False        | coverage, d4                        | scout, clinical-delivery, long-term-storage |
 | multiqc-html, multiqc                               | True        | multiqc-html                        | scout, clinical-delivery, long-term-storage |
 | pedigree_fam, pedigree                              | True        | pedigree                            | clinical-delivery, scout, long-term-storage |
 | relate_html, somalier                               | True        | somalier, relate-html               | clinical-delivery, scout, long-term-storage |
@@ -27,7 +27,7 @@
 | json, paraphase                                     | True        | paraphase, json                     | clinical-delivery, long-term-storage        |
 | vcf, paraphase                                      | False       | paraphase, vcf                      | clinical-delivery, long-term-storage        |
 | vcf_index, paraphase                                | False       | paraphase, vcf-index                | clinical-delivery, long-term-storage        |
-| sambamba_depth                                      | False       | coverage, sambamba_depth             | cg, long-term-storage                          |
+| sambamba_depth                                      | True       | coverage, sambamba_depth             | cg, long-term-storage                          |
 | sorted_repeats, vcf_str                             | True        | repeats, sorted, vcf                | long-term-storage                           |
 | sorted_repeats, vcf_str_index                       | True        | repeats, sorted, vcf-index          | long-term-storage                           |
 | spanning_repeats, bam                               | True        | repeats, spanning, bam              | long-term-storage                           |
