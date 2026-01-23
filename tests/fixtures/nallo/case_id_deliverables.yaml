@@ -317,7 +317,7 @@ files:
   tag: methbat_hap1
 - format: bed
   id: SAMPLEID
-  path: PATHTOCASE/methylation/pileup/SAMPLEID/SAMPLEID_pbcpgtools.hap1.gz.tbi
+  path: PATHTOCASE/methylation/pileup/SAMPLEID/SAMPLEID_pbcpgtools.hap1.bed.gz.tbi
   step: methylation_pileup
   tag: methbat_hap1_index
 - format: bed
