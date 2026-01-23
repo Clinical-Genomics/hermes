@@ -284,7 +284,7 @@ files:
   id: SAMPLEID
   path: PATHTOCASE/methylation/pileup/SAMPLEID/SAMPLEID_modkit_pileup_1.bed.gz
   step: methylation_pileup
-  tag: hap1
+  tag: modkit_hap1
 - format: bed
   id: SAMPLEID
   path: PATHTOCASE/methylation/pileup/SAMPLEID/SAMPLEID_modkit_pileup_1.bed.gz.tbi
