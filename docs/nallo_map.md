@@ -6,6 +6,10 @@
 | summary_hap2, assembly                              | False       | hap2, assembly, assembly-summary    | clinical-delivery, long-term-storage        |
 | assembly_aligned, assembly                          | False       | bam, assembly                       | clinical-delivery, long-term-storage        |
 | assembly, assembly_aligned_index                    | False       | bam-index, assembly                 | clinical-delivery, long-term-storage        |
+| baf, gens_generatedata                           | False       | gens, fracsnp, bed                   | scout                                          |
+| baf_index, gens_generatedata                     | False       | gens, fracsnp, bed-index             | scout                                          |
+| cov, gens_generatedata                           | False       | gens, coverage, bed                  | scout                                          |
+| cov_index, gens_generatedata                     | False       | gens, coverage, bed-index            | scout                                          |
 | modkit_hap1, methylation_pileup                     | False       | bed, hap1, modkit-pileup            | clinical-delivery, long-term-storage        |
 | modkit_hap1_index, methylation_pileup               | False       | bed-index, hap1, modkit-pileup      | clinical-delivery, long-term-storage        |
 | modkit_hap2, methylation_pileup                     | False       | bed, hap2, modkit-pileup            | clinical-delivery, long-term-storage        |
