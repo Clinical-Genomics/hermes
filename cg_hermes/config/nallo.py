@@ -60,35 +60,70 @@ NALLO_COMMON_TAGS = {
         "is_mandatory": False,
         "used_by": [UsageTags.SCOUT],
     },
-    frozenset(["methylation_pileup", "hap1"]): {
+    frozenset(["methylation_pileup", "modkit_hap1"]): {
         "tags": [AnalysisTags.BED, NalloTags.HAP1, BioinfoToolsTags.MODKIT_PILEUP],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
-    frozenset(["methylation_pileup", "hap1_index"]): {
+    frozenset(["methylation_pileup", "modkit_hap1_index"]): {
         "tags": [AnalysisTags.BED_INDEX, NalloTags.HAP1, BioinfoToolsTags.MODKIT_PILEUP],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
-    frozenset(["methylation_pileup", "hap2"]): {
+    frozenset(["methylation_pileup", "modkit_hap2"]): {
         "tags": [AnalysisTags.BED, NalloTags.HAP2, BioinfoToolsTags.MODKIT_PILEUP],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
-    frozenset(["methylation_pileup", "hap2_index"]): {
+    frozenset(["methylation_pileup", "modkit_hap2_index"]): {
         "tags": [AnalysisTags.BED_INDEX, NalloTags.HAP2, BioinfoToolsTags.MODKIT_PILEUP],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
-    frozenset(["methylation_pileup", "ungrouped"]): {
+    frozenset(["methylation_pileup", "modkit_ungrouped"]): {
         "tags": [AnalysisTags.BED, NalloTags.UNGROUPED, BioinfoToolsTags.MODKIT_PILEUP],
+        "is_mandatory": False,
+        "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
+    },
+    frozenset(["methylation_pileup", "modkit_ungrouped_index"]): {
+        "tags": [AnalysisTags.BED_INDEX, NalloTags.UNGROUPED, BioinfoToolsTags.MODKIT_PILEUP],
+        "is_mandatory": False,
+        "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
+    },
+    frozenset(["methylation_pileup", "methbat_hap1"]): {
+        "tags": [AnalysisTags.BED, NalloTags.HAP1, BioinfoToolsTags.METHBAT_PILEUP],
         "is_mandatory": True,
         "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
-    frozenset(["methylation_pileup", "ungrouped_index"]): {
-        "tags": [AnalysisTags.BED_INDEX, NalloTags.UNGROUPED, BioinfoToolsTags.MODKIT_PILEUP],
+    frozenset(["methylation_pileup", "methbat_hap1_index"]): {
+        "tags": [AnalysisTags.BED_INDEX, NalloTags.HAP1, BioinfoToolsTags.METHBAT_PILEUP],
         "is_mandatory": True,
         "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
+    },
+    frozenset(["methylation_pileup", "methbat_hap2"]): {
+        "tags": [AnalysisTags.BED, NalloTags.HAP2, BioinfoToolsTags.METHBAT_PILEUP],
+        "is_mandatory": True,
+        "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
+    },
+    frozenset(["methylation_pileup", "methbat_hap2_index"]): {
+        "tags": [AnalysisTags.BED_INDEX, NalloTags.HAP2, BioinfoToolsTags.METHBAT_PILEUP],
+        "is_mandatory": True,
+        "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
+    },
+    frozenset(["methylation_pileup", "methbat_combined"]): {
+        "tags": [AnalysisTags.BED, NalloTags.COMBINED, BioinfoToolsTags.METHBAT_PILEUP],
+        "is_mandatory": True,
+        "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
+    },
+    frozenset(["methylation_pileup", "methbat_combined_index"]): {
+        "tags": [AnalysisTags.BED_INDEX, NalloTags.COMBINED, BioinfoToolsTags.METHBAT_PILEUP],
+        "is_mandatory": True,
+        "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
+    },
+    frozenset(["methylation_calling", "methbat_profile"]): {
+        "tags": [NalloTags.METHYLATION_TSV, BioinfoToolsTags.METHBAT_PROFILE],
+        "is_mandatory": True,
+        "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["qc_bam", "mosdepth_d4"]): {
         "tags": [AnalysisTags.COVERAGE, ReportTags.D4],

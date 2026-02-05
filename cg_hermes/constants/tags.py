@@ -423,6 +423,8 @@ class BioinfoToolsTags(StrEnum):
     HIFICNV: str = "hificnv"
     MANTA: str = "manta"
     MERGED: str = "merged"
+    METHBAT_PILEUP: str = "methbat-pileup"
+    METHBAT_PROFILE: str = "methbat-profile"
     MITODEL: str = "mitodel"
     MODKIT_PILEUP: str = "modkit-pileup"
     NEXTCLADE: str = "nextclade"
@@ -632,8 +634,10 @@ class MutantTags(StrEnum):
 
 class NalloTags(StrEnum):
     ASSEMBLY_SUMMARY: str = "assembly-summary"
+    COMBINED: str = "combined"
     HAP1: str = "hap1"
     HAP2: str = "hap2"
+    METHYLATION_TSV: str = "methylaton-tsv"
     UNGROUPED: str = "ungrouped"
     HAPLOTAGS: str = "haplotags"
     ASSEMBLY: str = "assembly"
