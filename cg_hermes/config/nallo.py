@@ -127,7 +127,7 @@ NALLO_COMMON_TAGS = {
     },
     frozenset(["qc_bam", "mosdepth_d4"]): {
         "tags": [AnalysisTags.COVERAGE, ReportTags.D4],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset({"multiqc", "multiqc-html"}): {
@@ -139,6 +139,11 @@ NALLO_COMMON_TAGS = {
         "tags": [FamilyTags.PEDIGREE],
         "is_mandatory": True,
         "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.SCOUT, UsageTags.LONG_TERM_STORAGE],
+    },
+    frozenset(["sambamba_depth", "qc_bam"]): {
+        "tags": [AnalysisTags.COVERAGE, ReportTags.SAMBAMBA_DEPTH],
+        "is_mandatory": True,
+        "used_by": [UsageTags.CHANJO, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["somalier", "relate_html"]): {
         "tags": [BioinfoToolsTags.SOMALIER, NalloTags.RELATE_HTML],
