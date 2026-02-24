@@ -6,7 +6,10 @@
 | summary_hap2, assembly                              | False       | hap2, assembly, assembly-summary    | clinical-delivery, long-term-storage        |
 | assembly_aligned, assembly                          | False       | bam, assembly                       | clinical-delivery, long-term-storage        |
 | assembly, assembly_aligned_index                    | False       | bam-index, assembly                 | clinical-delivery, long-term-storage        |
-| mosdepth_d4, qc_bam                                 | False       | coverage, d4                        | scout, clinical-delivery, long-term-storage |
+| baf, gens_generatedata                           | False       | gens, fracsnp, bed                   | scout                                          |
+| baf_index, gens_generatedata                     | False       | gens, fracsnp, bed-index             | scout                                          |
+| cov, gens_generatedata                           | False       | gens, coverage, bed                  | scout                                          |
+| cov_index, gens_generatedata                     | False       | gens, coverage, bed-index            | scout                                          |
 | modkit_hap1, methylation_pileup                     | False       | bed, hap1, modkit-pileup            | clinical-delivery, long-term-storage        |
 | modkit_hap1_index, methylation_pileup               | False       | bed-index, hap1, modkit-pileup      | clinical-delivery, long-term-storage        |
 | modkit_hap2, methylation_pileup                     | False       | bed, hap2, modkit-pileup            | clinical-delivery, long-term-storage        |
@@ -20,7 +23,7 @@
 | methbat_combined, methylation_pileup                | True        | bed, combined, methbat-pileup       | clinical-delivery, long-term-storage        |
 | methbat_combined_index, methylation_pileup          | True        | bed-index, combined, modkit-pileup  | clinical-delivery, long-term-storage        |
 | methbat_profile, methylation_calling                | True        | methylation-tsv, methbat-profile    | scout, clinical-delivery, long-term-storage |
-| mosdepth_d4, qc_bam                                 | True        | coverage, d4                        | scout, clinical-delivery, long-term-storage |
+| mosdepth_d4, qc_bam                                 | False        | coverage, d4                        | scout, clinical-delivery, long-term-storage |
 | multiqc-html, multiqc                               | True        | multiqc-html                        | scout, clinical-delivery, long-term-storage |
 | pedigree_fam, pedigree                              | True        | pedigree                            | clinical-delivery, scout, long-term-storage |
 | relate_html, somalier                               | True        | somalier, relate-html               | clinical-delivery, scout, long-term-storage |

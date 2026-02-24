@@ -345,6 +345,26 @@ NALLO_COMMON_TAGS = {
         "is_mandatory": True,
         "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
+    frozenset(["gens_generatedata", "baf"]): {
+        "tags": [BioinfoToolsTags.GENS, AnalysisTags.FRACSNP, AnalysisTags.BED],
+        "is_mandatory": False,
+        "used_by": [UsageTags.SCOUT],
+    },
+    frozenset(["gens_generatedata", "baf_index"]): {
+        "tags": [BioinfoToolsTags.GENS, AnalysisTags.FRACSNP, AnalysisTags.BED_INDEX],
+        "is_mandatory": False,
+        "used_by": [UsageTags.SCOUT],
+    },
+    frozenset(["gens_generatedata", "cov"]): {
+        "tags": [BioinfoToolsTags.GENS, AnalysisTags.COVERAGE, AnalysisTags.BED],
+        "is_mandatory": False,
+        "used_by": [UsageTags.SCOUT],
+    },
+    frozenset(["gens_generatedata", "cov_index"]): {
+        "tags": [BioinfoToolsTags.GENS, AnalysisTags.COVERAGE, AnalysisTags.BED_INDEX],
+        "is_mandatory": False,
+        "used_by": [UsageTags.SCOUT],
+    },
     frozenset(["phase_blocks", "gtf"]): {
         "tags": [BioinfoToolsTags.WHATSHAP, AnalysisTags.PHASE_BLOCKS],
         "is_mandatory": True,
