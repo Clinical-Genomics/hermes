@@ -10,10 +10,6 @@
 | centrifuge_report, centrifuge          | True        | centrifuge, metagenomics-report     | clinical-delivery                        |
 | multiqc-html, report                   | True        | multiqc-html                        | clinical-delivery, long-term-storage     |
 | multiqc-json                           | True        | multiqc-json                        | clinical-delivery, long-term-storage     |
-| multiqc-general-stats, multiqc-json    | True        | qc-metrics, multiqc, general-stats  | janus                                    |
-| multiqc-json, multiqc-fastp            | True        | qc-metrics, multiqc, fastp          | janus                                    |
-| multiqc-json, multiqc-samtools-stats   | True        | qc-metrics, multiqc, samtools-stats | janus                                    |
-| multiqc-kraken, multiqc-json           | True        | qc-metrics, multiqc, kraken2        | janus                                    |
 | kraken2_classified_reads, kraken2      | True        | kraken2, classified-reads           | long-term-storage                        |
 | centrifuge_results, centrifuge         | True        | centrifuge, taxonomy-tree           | long-term-storage                        |
 | centrifuge, taxpasta                   | True        | taxpasta, centrifuge                | long-term-storage                        |
