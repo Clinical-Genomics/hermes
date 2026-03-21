@@ -697,6 +697,7 @@ TUMOR_ONLY_PANEL_TAGS = {
     frozenset(RAW_TAGS["merged.clinical.scored.vcf.gz.tbi"]): {"is_mandatory": True},
     # CNVs (PANEL)
     frozenset(RAW_TAGS["report.html"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["report.pdf"]): {"is_mandatory": True, "used_by": ["deliver"]},
     frozenset(RAW_TAGS["tumor.merged.cns"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["tumor.merged.cnr"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["gene_metrics"]): {"is_mandatory": True},
@@ -730,6 +731,7 @@ TUMOR_NORMAL_PANEL_TAGS = {
     frozenset(RAW_TAGS["merged.clinical.scored.vcf.gz.tbi"]): {"is_mandatory": True},
     # CNVs (PANEL)
     frozenset(RAW_TAGS["report.html"]): {"is_mandatory": True},
+    frozenset(RAW_TAGS["report.pdf"]): {"is_mandatory": True, "used_by": ["deliver"]},
     frozenset(RAW_TAGS["tumor.merged.cns"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["tumor.merged.cnr"]): {"is_mandatory": True},
     frozenset(RAW_TAGS["gene_metrics"]): {"is_mandatory": True},
