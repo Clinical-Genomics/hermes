@@ -483,7 +483,7 @@
             "format": "yaml"
         },
         {
-            "path": "TN-panel/analysis/cnv/CNV.somatic.TN-panel.report.pdf",
+            "path": "TN-panel/analysis/cnv/CNV.somatic.TN-panel.report_deprecated.pdf",
             "path_index": [],
             "step": "merge_cnv_pdf_reports",
             "tag": [
@@ -492,6 +492,17 @@
             ],
             "id": "TN-panel",
             "format": "pdf"
+        },
+        {
+            "path": "T-panel/analysis/cnv/CNV.somatic.TN-panel.report.html",
+            "path_index": [],
+            "step": "create_cnv_html_report",
+            "tag": [
+                "cnv-report-html",
+                "clinical-cnv-report-html"
+            ],
+            "id": "TN-panel",
+            "format": "html"
         },
         {
             "path": "TN-panel/analysis/qc/multiqc_report.html",
