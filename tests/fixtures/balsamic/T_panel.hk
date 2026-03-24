@@ -478,7 +478,7 @@
             "format": "pdf"
         },
         {
-            "path": "T-panel/analysis/cnv/CNV.somatic.T-panel.report_deprecated.pdf",
+            "path": "T-panel/analysis/cnv/CNV.somatic.T-panel.report.pdf",
             "path_index": [],
             "step": "merge_cnv_pdf_reports",
             "tag": [
