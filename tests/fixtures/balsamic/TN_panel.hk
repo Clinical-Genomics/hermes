@@ -494,7 +494,7 @@
             "format": "pdf"
         },
         {
-            "path": "T-panel/analysis/cnv/CNV.somatic.TN-panel.report.html",
+            "path": "T-panel/analysis/cnv/CNV.somatic.TN-panel.interactive_report.html",
             "path_index": [],
             "step": "create_cnv_html_report",
             "tag": [
