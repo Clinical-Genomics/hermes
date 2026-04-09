@@ -193,6 +193,8 @@ class Deliverables:
         for tag_name in tag_set:
             tag_info = tag_set[tag_name]
             updated_tags[tag_name]["is_mandatory"] = tag_info["is_mandatory"]
+            if "used_by" in tag_info:
+                updated_tags[tag_name]["used_by"] = tag_info["used_by"]
         return updated_tags
 
     def validate_mandatory_files(self, force: bool = False) -> None:

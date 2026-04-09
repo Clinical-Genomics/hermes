@@ -494,6 +494,17 @@
             "format": "pdf"
         },
         {
+            "path": "T-panel/analysis/cnv/CNV.somatic.TN-panel.interactive_report.html",
+            "path_index": [],
+            "step": "create_cnv_html_report",
+            "tag": [
+                "cnv-report-html",
+                "clinical-cnv-report-html"
+            ],
+            "id": "TN-panel",
+            "format": "html"
+        },
+        {
             "path": "TN-panel/analysis/qc/multiqc_report.html",
             "path_index": [],
             "step": "multiqc",

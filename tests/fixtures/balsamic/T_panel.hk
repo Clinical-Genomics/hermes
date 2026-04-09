@@ -478,6 +478,17 @@
             "format": "pdf"
         },
         {
+            "path": "T-panel/analysis/cnv/CNV.somatic.T-panel.interactive_report.html",
+            "path_index": [],
+            "step": "create_cnv_html_report",
+            "tag": [
+                "cnv-report-html",
+                "clinical-cnv-report-html"
+            ],
+            "id": "T-panel",
+            "format": "html"
+        },
+        {
             "path": "T-panel/analysis/vcf/SNV.somatic.T-panel.tnscope_umi.vcf.gz",
             "path_index": [
                 "T-panel/analysis/vcf/SNV.somatic.T-panel.tnscope_umi.vcf.gz.tbi"
