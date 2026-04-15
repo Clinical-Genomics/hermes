@@ -186,7 +186,7 @@ RAREDISEASE_COMMON_TAGS = {
         "used_by": [UsageTags.SCOUT],
     },
     frozenset(["call_sv_mt", "call_sv_mt"]): {
-        "tags": [RarediseaseTags.SALTSHAKER_CLASSIFY, ReportTags.TXT, AnalysisTags.MITOCHONDRIA],
+        "tags": [RarediseaseTags.SALTSHAKER_CLASSIFY, ReportTags.HTML, AnalysisTags.MITOCHONDRIA],
         "is_mandatory": False,
         "used_by": [UsageTags.SCOUT, UsageTags.LONG_TERM_STORAGE],
     },

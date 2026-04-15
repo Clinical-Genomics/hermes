@@ -209,6 +209,7 @@ class ReportTags(StrEnum):
     DELIVERY_REPORT: str = "delivery-report"
     GENE_COUNTS: str = "gene-counts"
     GENERAL_STATS: str = "general-stats"
+    HTML: str = "html"
     JSON: str = "json"
     MOSDEPTH_COVDIST: str = "mosdepth-covdist"
     MOSDEPTH_CUMCOV: str = "mosdepth-cumcov"
