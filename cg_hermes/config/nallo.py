@@ -200,6 +200,16 @@ NALLO_COMMON_TAGS = {
         "is_mandatory": True,
         "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
+    frozenset(["paraphrase", "json"]): {
+        "tags": [BioinfoToolsTags.PARAPHRASE, ReportTags.JSON],
+        "is_mandatory": False,
+        "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
+    },
+    frozenset(["paraphrase", "tsv"]): {
+        "tags": [BioinfoToolsTags.PARAPHRASE, ReportTags.TSV],
+        "is_mandatory": False,
+        "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
+    },
     frozenset(["paraphase", "vcf"]): {
         "tags": [BioinfoToolsTags.PARAPHASE, VariantTags.VCF],
         "is_mandatory": False,
