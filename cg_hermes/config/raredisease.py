@@ -180,35 +180,20 @@ RAREDISEASE_COMMON_TAGS = {
         "is_mandatory": False,
         "used_by": [UsageTags.CG, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
-    frozenset(["call_sv_mt", "call_sv_mt"]): {
-        "tags": [VariantTags.VCF_SV, AnalysisTags.MITOCHONDRIA],
-        "is_mandatory": False,
-        "used_by": [UsageTags.CG],
-    },
-    frozenset(["call_sv_mt", "call_sv_mt_index"]): {
-        "tags": [VariantTags.VCF_SV_INDEX, AnalysisTags.MITOCHONDRIA],
-        "is_mandatory": False,
-        "used_by": [UsageTags.CG],
-    },
     frozenset(["call_sv_mt", "call_sv_mt_del"]): {
         "tags": [AnalysisTags.MITOCHONDRIA, BioinfoToolsTags.MITODEL],
         "is_mandatory": False,
         "used_by": [UsageTags.SCOUT],
     },
-    frozenset(["call_sv_mt", "eklipse_del"]): {
-        "tags": [RarediseaseTags.EKLIPSE_DEL, ReportTags.CSV, AnalysisTags.MITOCHONDRIA],
+    frozenset(["call_sv_mt", "saltshaker_classify"]): {
+        "tags": [RarediseaseTags.SALTSHAKER_CLASSIFY, ReportTags.HTML, AnalysisTags.MITOCHONDRIA],
         "is_mandatory": False,
-        "used_by": [UsageTags.LONG_TERM_STORAGE],
+        "used_by": [UsageTags.SCOUT, UsageTags.LONG_TERM_STORAGE],
     },
-    frozenset(["call_sv_mt", "eklipse_png"]): {
-        "tags": [RarediseaseTags.EKLIPSE_PNG, AnalysisTags.MITOCHONDRIA],
+    frozenset(["call_sv_mt", "saltshaker_png"]): {
+        "tags": [RarediseaseTags.SALTSHAKER_PNG, AnalysisTags.MITOCHONDRIA],
         "is_mandatory": False,
-        "used_by": [UsageTags.LONG_TERM_STORAGE],
-    },
-    frozenset(["call_sv_mt", "eklipse_genes"]): {
-        "tags": [RarediseaseTags.EKLIPSE_GENES, ReportTags.CSV, AnalysisTags.MITOCHONDRIA],
-        "is_mandatory": False,
-        "used_by": [UsageTags.SCOUT],
+        "used_by": [UsageTags.SCOUT, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["rank_and_filter", "snv_clinical"]): {
         "tags": [VariantTags.VCF_SNV_CLINICAL],

@@ -209,6 +209,7 @@ class ReportTags(StrEnum):
     DELIVERY_REPORT: str = "delivery-report"
     GENE_COUNTS: str = "gene-counts"
     GENERAL_STATS: str = "general-stats"
+    HTML: str = "html"
     JSON: str = "json"
     MOSDEPTH_COVDIST: str = "mosdepth-covdist"
     MOSDEPTH_CUMCOV: str = "mosdepth-cumcov"
@@ -409,7 +410,6 @@ class BioinfoToolsTags(StrEnum):
     DELLY: str = "delly"
     DESEQ2: str = "deseq2"
     DNASCOP: str = "dnascope"
-    EKLIPSE: str = "eklipse"
     EXPANSIONHUNTER: str = "expansionhunter"
     FASTP: str = "fastp"
     FASTQC: str = "fastqc"
@@ -426,6 +426,7 @@ class BioinfoToolsTags(StrEnum):
     METHBAT_PILEUP: str = "methbat-pileup"
     METHBAT_PROFILE: str = "methbat-profile"
     MITODEL: str = "mitodel"
+    MITOSALT: str = "mitosalt"
     MODKIT_PILEUP: str = "modkit-pileup"
     NEXTCLADE: str = "nextclade"
     PARAPHASE: str = "paraphase"
@@ -434,6 +435,7 @@ class BioinfoToolsTags(StrEnum):
     PIZZLY: str = "pizzly"
     RETROSEQ: str = "retroseq"
     SALMON_QUANT: str = "salmon-quant"
+    SALTSHAKER: str = "saltshaker"
     SAWFISH: str = "sawfish"
     SENTION: str = "sention"
     SEVERUS: str = "severus"
@@ -472,7 +474,6 @@ class BioinfoToolsTags(StrEnum):
             self.DELLY: "Cancer structural variant prediction tool",
             self.DESEQ2: "Differential expression analysis with DESeq2",
             self.DNASCOP: "Call snv indels",
-            self.EKLIPSE: "Detection and quantification of mitochondrial DNA deletions",
             self.EXPANSIONHUNTER: "Call repeat expansions",
             self.FASTP: "Preprocessing tool for FastQ files",
             self.FASTQC: "Quality control tool for high throughput sequence data",
@@ -486,6 +487,7 @@ class BioinfoToolsTags(StrEnum):
             self.HIFICNV: "Hificnv tool output",
             self.MANTA: "Tool to call structural variants",
             self.MITODEL: "Tool to identify mitochondrial deletion signatures",
+            self.MITOSALT: "Tool to call mitochondrial deletions and duplications",
             self.MODKIT_PILEUP: "Modkit pileup tool output",
             self.NEXTCLADE: "Viral genome clade assignment",
             self.PARAPHASE: "Paraphase tool output",
@@ -494,6 +496,7 @@ class BioinfoToolsTags(StrEnum):
             self.PIZZLY: "Fusion caller",
             self.RETROSEQ: "Mobile element caller",
             self.SALMON_QUANT: "Transcript quantification",
+            self.SALTSHAKER: "Downstream tool of mitosalt to classify and plot mito SVs",
             self.SENTION: "Sention algorithm",
             self.SOMALIER: "Tool for sample-swap and relatedness checks",
             self.SQUID: "Fusion caller",
@@ -678,9 +681,8 @@ class NalloTags(StrEnum):
 
 class RarediseaseTags(StrEnum):
     ANNOTATION: str = "annotation"
-    EKLIPSE_DEL: str = "eklipse-del"
-    EKLIPSE_GENES: str = "eklipse-gene"
-    EKLIPSE_PNG: str = "eklipse-png"
+    SALTSHAKER_CLASSIFY: str = "saltshaker-classify"
+    SALTSHAKER_PNG: str = "saltshaker-png"
     HAPLOGREP: str = "haplogrep"
     NGSBITS: str = "ngsbits-samplegender"
     SVDBQUERY: str = "svdbquery"
@@ -694,9 +696,8 @@ class RarediseaseTags(StrEnum):
     def description(self) -> str:
         descriptions: dict[str, RarediseaseTags] = {
             self.ANNOTATION: "Annotation tag",
-            self.EKLIPSE_DEL: "Mitochondrial eKLIPse deletions",
-            self.EKLIPSE_GENES: "Mitochondrial eKLIPse genes",
-            self.EKLIPSE_PNG: "Mitochondrial eKLIPse png",
+            self.SALTSHAKER_CLASSIFY: "Saltshaker classification for mitochondrial deletions",
+            self.SALTSHAKER_PNG: "Mitochondrial saltshaker png",
             self.HAPLOGREP: "Haplogrep",
             self.NGSBITS: "Result from SampleGender tool to determine sample sex",
             self.SVDBQUERY: "Query of SVDB results",
