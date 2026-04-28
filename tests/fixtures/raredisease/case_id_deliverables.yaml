@@ -285,7 +285,7 @@ files:
   path: PATHTOCASE/call_sv/SAMPLEID_mitochondria_deletions.txt
   step: call_sv_mt
   tag: call_sv_mt_del
-- format: html
+- format: meta
   id: SAMPLEID
   path: PATHTOCASE/call_sv/SAMPLEID.saltshaker_classify.html
   step: call_sv_mt
