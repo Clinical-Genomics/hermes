@@ -203,7 +203,7 @@ NALLO_COMMON_TAGS = {
     frozenset(["paraphrase", "json"]): {
         "tags": [BioinfoToolsTags.PARAPHRASE, ReportTags.JSON],
         "is_mandatory": False,
-        "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
+        "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["paraphrase", "tsv"]): {
         "tags": [BioinfoToolsTags.PARAPHRASE, ReportTags.TSV],
