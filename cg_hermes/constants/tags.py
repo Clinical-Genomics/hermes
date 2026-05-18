@@ -430,6 +430,7 @@ class BioinfoToolsTags(StrEnum):
     MODKIT_PILEUP: str = "modkit-pileup"
     NEXTCLADE: str = "nextclade"
     PARAPHASE: str = "paraphase"
+    PARAPHRASE: str = "paraphrase"
     PEDDY: str = "peddy"
     PICARD: str = "picard"
     PIZZLY: str = "pizzly"
@@ -491,6 +492,7 @@ class BioinfoToolsTags(StrEnum):
             self.MODKIT_PILEUP: "Modkit pileup tool output",
             self.NEXTCLADE: "Viral genome clade assignment",
             self.PARAPHASE: "Paraphase tool output",
+            self.PARAPHRASE: "Paraphrase annotated paraphase JSONs",
             self.PEDDY: "Tool to check pedigree and ancestral relations",
             self.PICARD: "Picard set of bioinformatic tools",
             self.PIZZLY: "Fusion caller",

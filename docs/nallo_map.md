@@ -36,6 +36,8 @@
 | paraphase                                           | True        | bam, paraphase                      | clinical-delivery, long-term-storage        |
 | paraphase_index, paraphase                          | True        | bam-index, paraphase                | clinical-delivery, long-term-storage        |
 | json, paraphase                                     | True        | paraphase, json                     | clinical-delivery, long-term-storage        |
+| json, paraphrase                                     | False        | paraphrase, json                     | clinical-delivery, long-term-storage        |
+| tsv, paraphrase                                     | False        | paraphrase, tsv                     | clinical-delivery, long-term-storage        |
 | vcf, paraphase                                      | False       | paraphase, vcf                      | clinical-delivery, long-term-storage        |
 | vcf_index, paraphase                                | False       | paraphase, vcf-index                | clinical-delivery, long-term-storage        |
 | sambamba_depth                                      | True       | coverage, sambamba_depth             | cg, long-term-storage                          |
