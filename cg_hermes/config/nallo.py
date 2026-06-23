@@ -125,11 +125,6 @@ NALLO_COMMON_TAGS = {
         "is_mandatory": True,
         "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
-    frozenset(["qc_bam", "mosdepth_d4"]): {
-        "tags": [AnalysisTags.COVERAGE, ReportTags.D4],
-        "is_mandatory": False,
-        "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
-    },
     frozenset({"multiqc", "multiqc-html"}): {
         "is_mandatory": True,
         "tags": [ReportTags.MULTIQC_HTML],
@@ -337,7 +332,7 @@ NALLO_COMMON_TAGS = {
     },
     frozenset(["qc_bam", "mosdepth_d4"]): {
         "tags": [AnalysisTags.COVERAGE, ReportTags.D4],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["copy_number", "bedgraph"]): {
