@@ -11,7 +11,6 @@ from cg_hermes.constants.tags import (
     UsageTags,
 )
 
-
 NEXTFLOW_TAGS = {
     frozenset({"software-versions"}): {
         "is_mandatory": True,

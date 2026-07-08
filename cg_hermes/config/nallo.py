@@ -11,22 +11,22 @@ from cg_hermes.constants.tags import (
     BioinfoToolsTags,
     FamilyTags,
     MipTags,
-    NextflowTags,
     NalloTags,
+    NextflowTags,
     QCTags,
     ReportTags,
-    VariantTags,
     UsageTags,
+    VariantTags,
 )
 
 NALLO_COMMON_TAGS = {
     frozenset(["alignment", "alignment_haplotags"]): {
-        "tags": [AlignmentTags.BAM, NalloTags.HAPLOTAGS],# TODO: Change to CRAM
+        "tags": [AlignmentTags.BAM, NalloTags.HAPLOTAGS],  # TODO: Change to CRAM
         "is_mandatory": True,
         "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["alignment", "alignment_haplotags_index"]): {
-        "tags": [AlignmentTags.BAM_INDEX, NalloTags.HAPLOTAGS], # TODO: Remove?
+        "tags": [AlignmentTags.BAM_INDEX, NalloTags.HAPLOTAGS],  # TODO: Remove?
         "is_mandatory": True,
         "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
