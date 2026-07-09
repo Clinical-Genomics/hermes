@@ -21,12 +21,12 @@ from cg_hermes.constants.tags import (
 
 NALLO_COMMON_TAGS = {
     frozenset(["alignment", "alignment_haplotags"]): {
-        "tags": [AlignmentTags.BAM, NalloTags.HAPLOTAGS],  # TODO: Change to CRAM
+        "tags": [AlignmentTags.CRAM, NalloTags.HAPLOTAGS],
         "is_mandatory": True,
         "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["alignment", "alignment_haplotags_index"]): {
-        "tags": [AlignmentTags.BAM_INDEX, NalloTags.HAPLOTAGS],  # TODO: change to CRAI
+        "tags": [AlignmentTags.CRAM_INDEX, NalloTags.HAPLOTAGS],
         "is_mandatory": True,
         "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
@@ -41,12 +41,12 @@ NALLO_COMMON_TAGS = {
         "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["assembly", "assembly_aligned"]): {
-        "tags": [AlignmentTags.BAM, NalloTags.ASSEMBLY],  # TODO: Change to CRAM
+        "tags": [AlignmentTags.CRAM, NalloTags.ASSEMBLY],
         "is_mandatory": False,
         "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["assembly", "assembly_aligned_index"]): {
-        "tags": [AlignmentTags.BAM_INDEX, NalloTags.ASSEMBLY],  # TODO: Change to CRAI
+        "tags": [AlignmentTags.CRAM_INDEX, NalloTags.ASSEMBLY],
         "is_mandatory": False,
         "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
@@ -181,12 +181,12 @@ NALLO_COMMON_TAGS = {
         "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["paraphase", "paraphase"]): {
-        "tags": [AlignmentTags.BAM, BioinfoToolsTags.PARAPHASE],  # TODO: Change to CRAM
+        "tags": [AlignmentTags.CRAM, BioinfoToolsTags.PARAPHASE],
         "is_mandatory": True,
         "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["paraphase", "paraphase_index"]): {
-        "tags": [AlignmentTags.BAM_INDEX, BioinfoToolsTags.PARAPHASE],  # TODO: Change to CRAI
+        "tags": [AlignmentTags.CRAM_INDEX, BioinfoToolsTags.PARAPHASE],
         "is_mandatory": True,
         "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
@@ -225,17 +225,13 @@ NALLO_COMMON_TAGS = {
         "is_mandatory": True,
         "used_by": [UsageTags.LONG_TERM_STORAGE],
     },
-    frozenset(["spanning_repeats", "bam"]): {  # TODO: Change to cram
-        "tags": [NalloTags.REPEATS, NalloTags.SPANNING, AlignmentTags.BAM],  # TODO: Change to CRAM
+    frozenset(["spanning_repeats", "cram"]): {
+        "tags": [NalloTags.REPEATS, NalloTags.SPANNING, AlignmentTags.CRAM],
         "is_mandatory": True,
         "used_by": [UsageTags.LONG_TERM_STORAGE],
     },
-    frozenset(["spanning_repeats", "bam_index"]): {  # TODO: Change to cram_index
-        "tags": [
-            NalloTags.REPEATS,
-            NalloTags.SPANNING,
-            AlignmentTags.BAM_INDEX,
-        ],  # TODO: Change to CRAI
+    frozenset(["spanning_repeats", "cram_index"]): {
+        "tags": [NalloTags.REPEATS, NalloTags.SPANNING, AlignmentTags.CRAM_INDEX],
         "is_mandatory": True,
         "used_by": [UsageTags.LONG_TERM_STORAGE],
     },
