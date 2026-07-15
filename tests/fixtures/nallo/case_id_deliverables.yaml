@@ -1,13 +1,13 @@
 ---
 files:
-- format: bam
+- format: cram
   id: SAMPLEID
-  path: PATHTOCASE/aligned_reads/SAMPLEID/SAMPLEID_haplotagged.bam
+  path: PATHTOCASE/aligned_reads/SAMPLEID/SAMPLEID_haplotagged.cram
   step: alignment
   tag: alignment_haplotags
-- format: bam
+- format: cram
   id: SAMPLEID
-  path: PATHTOCASE/aligned_reads/SAMPLEID/SAMPLEID_haplotagged.bam.bai
+  path: PATHTOCASE/aligned_reads/SAMPLEID/SAMPLEID_haplotagged.cram.crai
   step: alignment
   tag: alignment_haplotags_index
 - format: meta
@@ -20,14 +20,14 @@ files:
   path: PATHTOCASE/assembly/stats/SAMPLEID/SAMPLEID_haplotype_2.assembly_summary
   step: assembly
   tag: summary_hap2
-- format: bam
+- format: cram
   id: SAMPLEID
-  path: PATHTOCASE/assembly/sample/SAMPLEID/SAMPLEID_aligned_assembly.bam
+  path: PATHTOCASE/assembly/sample/SAMPLEID/SAMPLEID_aligned_assembly.cram
   step: assembly
   tag: assembly_aligned
-- format: bam
+- format: cram
   id: SAMPLEID
-  path: PATHTOCASE/assembly/sample/SAMPLEID/SAMPLEID_aligned_assembly.bam.bai
+  path: PATHTOCASE/assembly/sample/SAMPLEID/SAMPLEID_aligned_assembly.cram.crai
   step: assembly
   tag: assembly_aligned_index
 - format: bed
@@ -415,14 +415,14 @@ files:
   path: PATHTOCASE/qc/deepvariant_vcfstatsreport/SAMPLEID/SAMPLEID.visual_report.html
   step: deepvariant
   tag: report
-- format: bam
+- format: cram
   id: SAMPLEID
-  path: PATHTOCASE/paraphase/sample/SAMPLEID/SAMPLEID.paraphase.bam
+  path: PATHTOCASE/paraphase/sample/SAMPLEID/SAMPLEID.paraphase.cram
   step: paraphase
   tag: paraphase
-- format: bam
+- format: cram
   id: SAMPLEID
-  path: PATHTOCASE/paraphase/sample/SAMPLEID/SAMPLEID.paraphase.bam.bai
+  path: PATHTOCASE/paraphase/sample/SAMPLEID/SAMPLEID.paraphase.cram.crai
   step: paraphase
   tag: paraphase_index
 - format: json
@@ -460,16 +460,16 @@ files:
   path: PATHTOCASE/repeats/sample/SAMPLEID/SAMPLEID_trgt.vcf.gz.tbi
   step: sorted_repeats
   tag: vcf_str_index
-- format: bam
+- format: cram
   id: SAMPLEID
-  path: PATHTOCASE/repeats/sample/SAMPLEID/SAMPLEID_spanning_trgt.bam
+  path: PATHTOCASE/repeats/sample/SAMPLEID/SAMPLEID_spanning_trgt.cram
   step: spanning_repeats
-  tag: bam
-- format: bam
+  tag: cram
+- format: cram
   id: SAMPLEID
-  path: PATHTOCASE/repeats/sample/SAMPLEID/SAMPLEID_spanning_trgt.bam.bai
+  path: PATHTOCASE/repeats/sample/SAMPLEID/SAMPLEID_spanning_trgt.cram.crai
   step: spanning_repeats
-  tag: bam_index
+  tag: cram_index
 - format: vcf
   id: CASEID
   path: PATHTOCASE/repeats/family/CASEID/CASEID_repeats_annotated.vcf.gz
