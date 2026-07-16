@@ -830,3 +830,13 @@ files:
   path: PATHTOCASE/manifest.json
   step: manifest
   tag: manifest
+- format: ini
+  id: CASEID
+  path: PATHTOCASE/CASEID_rank_model_snvs.ini
+  step: rank-models-snv
+  tag: rank-models-snv
+- format: ini
+  id: CASEID
+  path: PATHTOCASE/CASEID_rank_model_svs.ini
+  step: rank-models-sv
+  tag: rank-models-sv
