@@ -1,15 +1,15 @@
 | Nallo tags                                          | Mandatory   | HK tags                             | Used by                                     |
 |-----------------------------------------------------|-------------|-------------------------------------|---------------------------------------------|
-| alignment_haplotags, alignment                      | True        | bam, haplotags                      | scout, clinical-delivery, long-term-storage |
-| alignment_haplotags_index, alignment                | True        | bam-index, haplotags                | scout, clinical-delivery, long-term-storage |
+| alignment_haplotags, alignment                      | True        | cram, haplotags                     | scout, clinical-delivery, long-term-storage |
+| alignment_haplotags_index, alignment                | True        | cram-index, haplotags               | scout, clinical-delivery, long-term-storage |
 | assembly, summary_hap1                              | False       | hap1, assembly, assembly-summary    | clinical-delivery, long-term-storage        |
 | summary_hap2, assembly                              | False       | hap2, assembly, assembly-summary    | clinical-delivery, long-term-storage        |
-| assembly_aligned, assembly                          | False       | bam, assembly                       | clinical-delivery, long-term-storage        |
-| assembly, assembly_aligned_index                    | False       | bam-index, assembly                 | clinical-delivery, long-term-storage        |
-| baf, gens_generatedata                           | False       | gens, fracsnp, bed                   | scout                                          |
-| baf_index, gens_generatedata                     | False       | gens, fracsnp, bed-index             | scout                                          |
-| cov, gens_generatedata                           | False       | gens, coverage, bed                  | scout                                          |
-| cov_index, gens_generatedata                     | False       | gens, coverage, bed-index            | scout                                          |
+| assembly_aligned, assembly                          | False       | cram, assembly                      | clinical-delivery, long-term-storage        |
+| assembly, assembly_aligned_index                    | False       | cram-index, assembly                | clinical-delivery, long-term-storage        |
+| baf, gens_generatedata                           | False       | gens, fracsnp, bed                  | scout                                          |
+| baf_index, gens_generatedata                     | False       | gens, fracsnp, bed-index            | scout                                          |
+| cov, gens_generatedata                           | False       | gens, coverage, bed                 | scout                                          |
+| cov_index, gens_generatedata                     | False       | gens, coverage, bed-index           | scout                                          |
 | modkit_hap1, methylation_pileup                     | False       | bed, hap1, modkit-pileup            | clinical-delivery, long-term-storage        |
 | modkit_hap1_index, methylation_pileup               | False       | bed-index, hap1, modkit-pileup      | clinical-delivery, long-term-storage        |
 | modkit_hap2, methylation_pileup                     | False       | bed, hap2, modkit-pileup            | clinical-delivery, long-term-storage        |
@@ -33,18 +33,18 @@
 | ped_check, peddy                                    | True        | peddy, ped-check                    | audit, scout, clinical-delivery             |
 | peddy, sex_check                                    | True        | peddy, sex-check                    | audit, scout, clinical-delivery             |
 | deepvariant, report                                 | True        | deepvariant-report                  | clinical-delivery, long-term-storage        |
-| paraphase                                           | True        | bam, paraphase                      | clinical-delivery, long-term-storage        |
-| paraphase_index, paraphase                          | True        | bam-index, paraphase                | clinical-delivery, long-term-storage        |
+| paraphase                                           | True        | cram, paraphase                     | clinical-delivery, long-term-storage        |
+| paraphase_index, paraphase                          | True        | cram-index, paraphase               | clinical-delivery, long-term-storage        |
 | json, paraphase                                     | True        | paraphase, json                     | clinical-delivery, long-term-storage        |
-| json, paraphrase                                     | False        | paraphrase, json                     | clinical-delivery, long-term-storage        |
+| json, paraphrase                                     | False        | paraphrase, json                    | clinical-delivery, long-term-storage        |
 | tsv, paraphrase                                     | False        | paraphrase, tsv                     | clinical-delivery, long-term-storage        |
 | vcf, paraphase                                      | False       | paraphase, vcf                      | clinical-delivery, long-term-storage        |
 | vcf_index, paraphase                                | False       | paraphase, vcf-index                | clinical-delivery, long-term-storage        |
-| sambamba_depth                                      | True       | coverage, sambamba_depth             | cg, long-term-storage                          |
+| sambamba_depth                                      | True       | coverage, sambamba_depth            | cg, long-term-storage                          |
 | sorted_repeats, vcf_str                             | True        | repeats, sorted, vcf                | long-term-storage                           |
 | sorted_repeats, vcf_str_index                       | True        | repeats, sorted, vcf-index          | long-term-storage                           |
-| spanning_repeats, bam                               | True        | repeats, spanning, bam              | long-term-storage                           |
-| spanning_repeats, bam_index                         | True        | repeats, spanning, bam-index        | long-term-storage                           |
+| spanning_repeats, cram                               | True        | repeats, spanning, cram             | long-term-storage                           |
+| spanning_repeats, cram_index                         | True        | repeats, spanning, cram-index       | long-term-storage                           |
 | repeats_annotated, vcf_str                          | True        | vcf-str                             | scout, clinical-delivery, long-term-storage |
 | repeats_annotated, vcf_str_index                    | True        | vcf-str-index                       | scout, clinical-delivery, long-term-storage |
 | trgt, variant_catalog                               | True        | trgt, variant-catalog               | scout, long-term-storage                    |
@@ -76,5 +76,5 @@
 | whatshap, gtf                                       | True        | bam, paraphase                      | scout, clinical-delivery, long-term-storage |
 | whatshap, gtf_index                                 | True        | bam, paraphase                      | scout, clinical-delivery, long-term-storage |
 | manifest                                            | False       | manifest                            | scout, long-term-storage                    |
-| chromograph_rhoviz, autozyg                      | False       | chromograph, autozyg                 | scout                                          |
-| tcov, chromograph_cov                            | False       | chromograph, tcov                    | scout
+| chromograph_rhoviz, autozyg                      | False       | chromograph, autozyg                | scout                                          |
+| tcov, chromograph_cov                            | False       | chromograph, tcov                   | scout
