@@ -522,6 +522,18 @@ class InputFileTags(StrEnum):
     RANK_MODEL_SNV = "rank-model-snv"
     RANK_MODEL_SV = "rank-model-sv"
 
+    @classmethod
+    def name(cls) -> str:
+        return "Input File Tags"
+
+    @property
+    def description(self) -> str:
+        descriptions: dict[InputFileTags, str] = {
+            self.RANK_MODEL_SNV: "Rank model for SNV prioritization",
+            self.RANK_MODEL_SV: "Rank model for SV prioritization",
+        }
+        return descriptions.get(self, "Description not available")
+
 
 class MipTags(StrEnum):
     EXE_VER: str = "exe-ver"
