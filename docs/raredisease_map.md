@@ -52,6 +52,8 @@
 | ped_check, peddy                                 | True        | peddy, ped-check                       | audit, scout, clinical-delivery                |
 | sex_check, peddy                                 | True        | peddy, sex-check                       | audit, scout, clinical-delivery                |
 | pedigree_fam, pedigree                           | True        | pedigree                               | scout                                          |
+| rank_model_snv, rank_and_filter                 | False       | rank-model-snv                         | scout                                          |
+| rank_model_sv, rank_and_filter                  | False       | rank-model-sv                          | scout                                          |
 | rhocallviz, annotate_snv                         | False       | rhocall-viz                            | scout                                          |
 | annotate_snv_mt, haplogrep                       | False       | haplogrep                              | scout, clinical-delivery                       |
 | chromograph_rhoviz, autozyg                      | False       | chromograph, autozyg                   | scout                                          |
