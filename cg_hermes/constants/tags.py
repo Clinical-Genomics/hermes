@@ -518,6 +518,11 @@ class BioinfoToolsTags(StrEnum):
         return descriptions.get(self, "Description not available")
 
 
+class InputFileTags(StrEnum):
+    RANK_MODEL_SNV = "rank-model-snv"
+    RANK_MODEL_SV = "rank-model-sv"
+
+
 class MipTags(StrEnum):
     EXE_VER: str = "exe-ver"
     MIP_ANALYSE: str = "mip-analyse"
@@ -819,6 +824,7 @@ COMMON_TAG_CATEGORIES: list[Any] = [
     AnalysisTags,
     BioinfoToolsTags,
     FamilyTags,
+    InputFileTags,
     QCTags,
     RawDataTags,
     ReportTags,

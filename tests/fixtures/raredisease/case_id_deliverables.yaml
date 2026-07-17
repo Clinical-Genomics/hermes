@@ -833,10 +833,10 @@ files:
 - format: ini
   id: CASEID
   path: PATHTOCASE/CASEID_rank_model_snvs.ini
-  step: rank-models-snv
-  tag: rank-models-snv
+  step: rank-model-snv
+  tag: rank-model-snv
 - format: ini
   id: CASEID
   path: PATHTOCASE/CASEID_rank_model_svs.ini
-  step: rank-models-sv
-  tag: rank-models-sv
+  step: rank-model-sv
+  tag: rank-model-sv
