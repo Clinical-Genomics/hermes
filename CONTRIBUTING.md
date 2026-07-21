@@ -5,7 +5,7 @@ guidelines when contributing to Hermes.
 
 ## Deliverables Format
 
-Workflows must clearly define their deliverables in a [standardised format](https://atlas.scilifelab.se/infrastructure/dataflow/workflow/files_delivery/).
+Workflows must clearly define their deliverables in a [standardised format](https://atlas.scilifelab.se/infrastructure/data_management/dataflow/workflow/files_delivery/).
 
 ## Tags Format
 
