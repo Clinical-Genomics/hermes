@@ -632,11 +632,11 @@ files:
   tag: qc-metrics
 - format: ini
   id: CASEID
-  path: PATHTOCASE/CASEID_rank_model_snvs.ini
+  path: PATHTOCASE/grch38_rank_model_snvs_-v1.0-.ini
   step: rank-model-snv
   tag: rank-model-snv
 - format: ini
   id: CASEID
-  path: PATHTOCASE/CASEID_rank_model_svs.ini
+  path: PATHTOCASE/grch38_rank_model_svs_-v1.0-.ini
   step: rank-model-sv
   tag: rank-model-sv

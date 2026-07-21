@@ -832,11 +832,11 @@ files:
   tag: manifest
 - format: ini
   id: CASEID
-  path: PATHTOCASE/CASEID_rank_model_snvs.ini
+  path: PATHTOCASE/grch38_rank_model_-v0.4-.ini
   step: rank-model-snv
   tag: rank-model-snv
 - format: ini
   id: CASEID
-  path: PATHTOCASE/CASEID_rank_model_svs.ini
+  path: PATHTOCASE/grch38_sv_rank_model_-v0.2-.ini
   step: rank-model-sv
   tag: rank-model-sv
