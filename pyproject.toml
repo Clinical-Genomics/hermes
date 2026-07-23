@@ -23,9 +23,6 @@ pytest-cov = "*"
 [tool.poetry.scripts]
 hermes = "cg_hermes.__main__:main"
 
-[tool.poetry.group.dev.dependencies]
-black = "^26.5.1"
-
 [build-system]
 requires = ["poetry>=0.12"]
 build-backend = "poetry.masonry.api"
