@@ -1,7 +1,7 @@
 | Nallo tags                                          | Mandatory   | HK tags                             | Used by                                     |
 |-----------------------------------------------------|-------------|-------------------------------------|---------------------------------------------|
-| alignment_haplotags, alignment                      | True        | bam, haplotags                      | scout, clinical-delivery, long-term-storage |
-| alignment_haplotags_index, alignment                | True        | bam-index, haplotags                | scout, clinical-delivery, long-term-storage |
+| alignment_haplotags, alignment                      | False       | bam, haplotags                      | scout, clinical-delivery, long-term-storage |
+| alignment_haplotags_index, alignment                | False       | bam-index, haplotags                | scout, clinical-delivery, long-term-storage |
 | assembly, summary_hap1                              | False       | hap1, assembly, assembly-summary    | clinical-delivery, long-term-storage        |
 | summary_hap2, assembly                              | False       | hap2, assembly, assembly-summary    | clinical-delivery, long-term-storage        |
 | assembly_aligned, assembly                          | False       | bam, assembly                       | clinical-delivery, long-term-storage        |

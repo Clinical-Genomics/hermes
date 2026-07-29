@@ -22,12 +22,12 @@ from cg_hermes.constants.tags import (
 NALLO_COMMON_TAGS = {
     frozenset(["alignment", "alignment_haplotags"]): {
         "tags": [AlignmentTags.BAM, NalloTags.HAPLOTAGS],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["alignment", "alignment_haplotags_index"]): {
         "tags": [AlignmentTags.BAM_INDEX, NalloTags.HAPLOTAGS],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["assembly", "summary_hap1"]): {
