@@ -92,37 +92,37 @@ NALLO_COMMON_TAGS = {
     },
     frozenset(["methylation_pileup", "methbat_hap1"]): {
         "tags": [AnalysisTags.BED, NalloTags.HAP1, BioinfoToolsTags.METHBAT_PILEUP],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["methylation_pileup", "methbat_hap1_index"]): {
         "tags": [AnalysisTags.BED_INDEX, NalloTags.HAP1, BioinfoToolsTags.METHBAT_PILEUP],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["methylation_pileup", "methbat_hap2"]): {
         "tags": [AnalysisTags.BED, NalloTags.HAP2, BioinfoToolsTags.METHBAT_PILEUP],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["methylation_pileup", "methbat_hap2_index"]): {
         "tags": [AnalysisTags.BED_INDEX, NalloTags.HAP2, BioinfoToolsTags.METHBAT_PILEUP],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["methylation_pileup", "methbat_combined"]): {
         "tags": [AnalysisTags.BED, NalloTags.COMBINED, BioinfoToolsTags.METHBAT_PILEUP],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["methylation_pileup", "methbat_combined_index"]): {
         "tags": [AnalysisTags.BED_INDEX, NalloTags.COMBINED, BioinfoToolsTags.METHBAT_PILEUP],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["methylation_calling", "methbat_profile"]): {
         "tags": [NalloTags.METHYLATION_TSV, BioinfoToolsTags.METHBAT_PROFILE],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["qc_bam", "mosdepth_d4"]): {
@@ -167,17 +167,17 @@ NALLO_COMMON_TAGS = {
     },
     frozenset(["peddy", "peddy"]): {
         "tags": [BioinfoToolsTags.PEDDY, FamilyTags.PED],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": [UsageTags.AUDIT, UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY],
     },
     frozenset(["peddy", "ped_check"]): {
         "tags": [BioinfoToolsTags.PEDDY, QCTags.PED_CHECK],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": [UsageTags.AUDIT, UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY],
     },
     frozenset(["peddy", "sex_check"]): {
         "tags": [BioinfoToolsTags.PEDDY, QCTags.SEX_CHECK],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": [UsageTags.AUDIT, UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY],
     },
     frozenset(["deepvariant", "report"]): {
@@ -187,17 +187,17 @@ NALLO_COMMON_TAGS = {
     },
     frozenset(["paraphase", "paraphase"]): {
         "tags": [AlignmentTags.BAM, BioinfoToolsTags.PARAPHASE],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["paraphase", "paraphase_index"]): {
         "tags": [AlignmentTags.BAM_INDEX, BioinfoToolsTags.PARAPHASE],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["paraphase", "json"]): {
         "tags": [BioinfoToolsTags.PARAPHASE, ReportTags.JSON],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["paraphase", "vcf"]): {
@@ -212,32 +212,32 @@ NALLO_COMMON_TAGS = {
     },
     frozenset(["sorted_repeats", "vcf_str"]): {
         "tags": [NalloTags.REPEATS, NalloTags.SORTED, VariantTags.VCF],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": [UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["sorted_repeats", "vcf_str_index"]): {
         "tags": [NalloTags.REPEATS, NalloTags.SORTED, VariantTags.VCF_INDEX],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": [UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["spanning_repeats", "bam"]): {
         "tags": [NalloTags.REPEATS, NalloTags.SPANNING, AlignmentTags.BAM],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": [UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["spanning_repeats", "bam_index"]): {
         "tags": [NalloTags.REPEATS, NalloTags.SPANNING, AlignmentTags.BAM_INDEX],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": [UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["repeats_annotated", "vcf_str"]): {
         "tags": [VariantTags.VCF_STR],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["repeats_annotated", "vcf_str_index"]): {
         "tags": [VariantTags.VCF_STR_INDEX],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["trgt", "variant_catalog"]): {

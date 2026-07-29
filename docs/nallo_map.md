@@ -16,22 +16,22 @@
 | modkit_hap2_index, methylation_pileup               | False       | bed-index, hap2, modkit-pileup      | clinical-delivery, long-term-storage        |
 | modkit_ungrouped, methylation_pileup                | False       | bed, ungrouped, modkit-pileup       | clinical-delivery, long-term-storage        |
 | modkit_ungrouped_index, methylation_pileup          | False       | bed-index, ungrouped, modkit-pileup | clinical-delivery, long-term-storage        |
-| methbat_hap1, methylation_pileup                    | True        | bed, hap1, methbat-pileup           | clinical-delivery, long-term-storage        |
-| methbat_hap1_index, methylation_pileup              | True        | bed-index, hap1, methbat-pileup     | clinical-delivery, long-term-storage        |
-| methbat_hap2, methylation_pileup                    | True        | bed, hap2, methbat-pileup           | clinical-delivery, long-term-storage        |
-| methbat_hap2_index, methylation_pileup              | True        | bed-index, hap2, methbat-pileup     | clinical-delivery, long-term-storage        |
-| methbat_combined, methylation_pileup                | True        | bed, combined, methbat-pileup       | clinical-delivery, long-term-storage        |
-| methbat_combined_index, methylation_pileup          | True        | bed-index, combined, modkit-pileup  | clinical-delivery, long-term-storage        |
-| methbat_profile, methylation_calling                | True        | methylation-tsv, methbat-profile    | scout, clinical-delivery, long-term-storage |
-| mosdepth_d4, qc_bam                                 | False        | coverage, d4                        | scout, clinical-delivery, long-term-storage |
+| methbat_hap1, methylation_pileup                    | False       | bed, hap1, methbat-pileup           | clinical-delivery, long-term-storage        |
+| methbat_hap1_index, methylation_pileup              | False       | bed-index, hap1, methbat-pileup     | clinical-delivery, long-term-storage        |
+| methbat_hap2, methylation_pileup                    | False       | bed, hap2, methbat-pileup           | clinical-delivery, long-term-storage        |
+| methbat_hap2_index, methylation_pileup              | False       | bed-index, hap2, methbat-pileup     | clinical-delivery, long-term-storage        |
+| methbat_combined, methylation_pileup                | False       | bed, combined, methbat-pileup       | clinical-delivery, long-term-storage        |
+| methbat_combined_index, methylation_pileup          | False       | bed-index, combined, modkit-pileup  | clinical-delivery, long-term-storage        |
+| methbat_profile, methylation_calling                | False       | methylation-tsv, methbat-profile    | scout, clinical-delivery, long-term-storage |
+| mosdepth_d4, qc_bam                                 | False       | coverage, d4                        | scout, clinical-delivery, long-term-storage |
 | multiqc-html, multiqc                               | True        | multiqc-html                        | scout, clinical-delivery, long-term-storage |
 | pedigree_fam, pedigree                              | True        | pedigree                            | clinical-delivery, scout, long-term-storage |
 | relate_html, somalier                               | True        | somalier, relate-html               | clinical-delivery, scout, long-term-storage |
 | relate_pairs, somalier                              | True        | somalier, relate-pairs              | scout, long-term-storage                    |
 | relate_samples, somalier                            | True        | somalier, relate-samples            | scout, long-term-storage                    |
-| peddy                                               | True        | peddy, ped                          | audit, scout, clinical-delivery             |
-| ped_check, peddy                                    | True        | peddy, ped-check                    | audit, scout, clinical-delivery             |
-| peddy, sex_check                                    | True        | peddy, sex-check                    | audit, scout, clinical-delivery             |
+| peddy                                               | False       | peddy, ped                          | audit, scout, clinical-delivery             |
+| ped_check, peddy                                    | False       | peddy, ped-check                    | audit, scout, clinical-delivery             |
+| peddy, sex_check                                    | False       | peddy, sex-check                    | audit, scout, clinical-delivery             |
 | deepvariant, report                                 | True        | deepvariant-report                  | clinical-delivery, long-term-storage        |
 | paraphase                                           | True        | bam, paraphase                      | clinical-delivery, long-term-storage        |
 | paraphase_index, paraphase                          | True        | bam-index, paraphase                | clinical-delivery, long-term-storage        |
@@ -39,12 +39,12 @@
 | vcf, paraphase                                      | False       | paraphase, vcf                      | clinical-delivery, long-term-storage        |
 | vcf_index, paraphase                                | False       | paraphase, vcf-index                | clinical-delivery, long-term-storage        |
 | sambamba_depth                                      | True       | coverage, sambamba_depth             | cg, long-term-storage                          |
-| sorted_repeats, vcf_str                             | True        | repeats, sorted, vcf                | long-term-storage                           |
-| sorted_repeats, vcf_str_index                       | True        | repeats, sorted, vcf-index          | long-term-storage                           |
-| spanning_repeats, bam                               | True        | repeats, spanning, bam              | long-term-storage                           |
-| spanning_repeats, bam_index                         | True        | repeats, spanning, bam-index        | long-term-storage                           |
-| repeats_annotated, vcf_str                          | True        | vcf-str                             | scout, clinical-delivery, long-term-storage |
-| repeats_annotated, vcf_str_index                    | True        | vcf-str-index                       | scout, clinical-delivery, long-term-storage |
+| sorted_repeats, vcf_str                             | False       | repeats, sorted, vcf                | long-term-storage                           |
+| sorted_repeats, vcf_str_index                       | False       | repeats, sorted, vcf-index          | long-term-storage                           |
+| spanning_repeats, bam                               | False       | repeats, spanning, bam              | long-term-storage                           |
+| spanning_repeats, bam_index                         | False       | repeats, spanning, bam-index        | long-term-storage                           |
+| repeats_annotated, vcf_str                          | False       | vcf-str                             | scout, clinical-delivery, long-term-storage |
+| repeats_annotated, vcf_str_index                    | False       | vcf-str-index                       | scout, clinical-delivery, long-term-storage |
 | trgt, variant_catalog                               | True        | trgt, variant-catalog               | scout, long-term-storage                    |
 | vcf_snv_research, snv_annotated                     | True        | vcf-snv-research                    | scout, clinical-delivery, long-term-storage |
 | vcf_snv_research_index, snv_annotated               | True        | vcf-snv-research-index              | scout, clinical-delivery, long-term-storage |
