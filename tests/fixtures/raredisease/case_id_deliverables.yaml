@@ -286,8 +286,8 @@ files:
   step: call_sv_mt
   tag: call_sv_mt_del
 - format: meta
-  id: SAMPLEID
-  path: PATHTOCASE/call_sv/SAMPLEID.saltshaker_classify.html
+  id: CASEID
+  path: PATHTOCASE/call_sv/CASEID.saltshaker_classify.html
   step: call_sv_mt
   tag: saltshaker_classify
 - format: png
@@ -830,3 +830,13 @@ files:
   path: PATHTOCASE/manifest.json
   step: manifest
   tag: manifest
+- format: ini
+  id: CASEID
+  path: PATHTOCASE/grch38_rank_model_-v0.4-.ini
+  step: rank-model-snv
+  tag: rank-model-snv
+- format: ini
+  id: CASEID
+  path: PATHTOCASE/grch38_sv_rank_model_-v0.2-.ini
+  step: rank-model-sv
+  tag: rank-model-sv

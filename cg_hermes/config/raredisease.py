@@ -10,13 +10,14 @@ from cg_hermes.constants.tags import (
     AnalysisTags,
     BioinfoToolsTags,
     FamilyTags,
+    InputFileTags,
     MipTags,
     NextflowTags,
     QCTags,
     RarediseaseTags,
     ReportTags,
-    VariantTags,
     UsageTags,
+    VariantTags,
 )
 
 RAREDISEASE_COMMON_TAGS = {
@@ -242,25 +243,25 @@ RAREDISEASE_COMMON_TAGS = {
         "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["rank_and_filter", "mt_clinical"]): {
-        "tags": [VariantTags.VCF_SV_CLINICAL, AnalysisTags.MITOCHONDRIA],
+        "tags": [VariantTags.VCF_SNV_CLINICAL, AnalysisTags.MITOCHONDRIA],
         "is_mandatory": False,
         "bundle_id": True,
         "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["rank_and_filter", "mt_clinical_index"]): {
-        "tags": [VariantTags.VCF_SV_CLINICAL_INDEX, AnalysisTags.MITOCHONDRIA],
+        "tags": [VariantTags.VCF_SNV_CLINICAL_INDEX, AnalysisTags.MITOCHONDRIA],
         "is_mandatory": False,
         "bundle_id": True,
         "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["rank_and_filter", "mt_research"]): {
-        "tags": [VariantTags.VCF_SV_RESEARCH, AnalysisTags.MITOCHONDRIA],
+        "tags": [VariantTags.VCF_SNV_RESEARCH, AnalysisTags.MITOCHONDRIA],
         "index_tags": ["vcf-snv-research-index"],
         "is_mandatory": False,
         "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["rank_and_filter", "mt_research_index"]): {
-        "tags": [VariantTags.VCF_SV_RESEARCH_INDEX, AnalysisTags.MITOCHONDRIA],
+        "tags": [VariantTags.VCF_SNV_RESEARCH_INDEX, AnalysisTags.MITOCHONDRIA],
         "is_mandatory": False,
         "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
@@ -343,6 +344,16 @@ RAREDISEASE_COMMON_TAGS = {
         "tags": [ReportTags.DEEPVARIANT_REPORT],
         "is_mandatory": True,
         "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
+    },
+    frozenset({"rank-model-snv"}): {
+        "is_mandatory": True,
+        "tags": [InputFileTags.RANK_MODEL_SNV],
+        "used_by": [UsageTags.SCOUT, UsageTags.LONG_TERM_STORAGE],
+    },
+    frozenset({"rank-model-sv"}): {
+        "is_mandatory": True,
+        "tags": [InputFileTags.RANK_MODEL_SV],
+        "used_by": [UsageTags.SCOUT, UsageTags.LONG_TERM_STORAGE],
     },
 }
 
