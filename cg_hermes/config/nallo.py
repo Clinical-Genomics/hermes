@@ -293,32 +293,32 @@ NALLO_COMMON_TAGS = {
     },
     frozenset(["svs_per_caller", "vcf_hificnv"]): {
         "tags": [BioinfoToolsTags.HIFICNV, VariantTags.VCF],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": [UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["svs_per_caller", "vcf_hificnv_index"]): {
         "tags": [BioinfoToolsTags.HIFICNV, VariantTags.VCF_INDEX],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": [UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["svs_per_caller", "vcf_sawfish"]): {
         "tags": [BioinfoToolsTags.SAWFISH, VariantTags.VCF],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": [UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["svs_per_caller", "vcf_sawfish_index"]): {
         "tags": [BioinfoToolsTags.SAWFISH, VariantTags.VCF_INDEX],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": [UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["svs_per_caller", "vcf_severus"]): {
         "tags": [BioinfoToolsTags.SEVERUS, VariantTags.VCF],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": [UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["svs_per_caller", "vcf_severus_index"]): {
         "tags": [BioinfoToolsTags.SEVERUS, VariantTags.VCF_INDEX],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": [UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["svs_per_caller", "vcf_sniffles"]): {

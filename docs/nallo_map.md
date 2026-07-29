@@ -54,12 +54,12 @@
 | vcf_sv_research_index, sv_annotated_ranked          | True        | vcf-sv-research-index               | scout, clinical-delivery, long-term-storage |
 | vcf_sv_clinical, sv_annotated_ranked_filtered       | True        | vcf-sv-clinical                     | scout, clinical-delivery, long-term-storage |
 | vcf_sv_clinical_index, sv_annotated_ranked_filtered | True        | vcf-sv-clinical-index               | scout, clinical-delivery, long-term-storage |
-| svs_per_caller, vcf_hificnv                         | True        | hificnv, vcf                        | long-term-storage                           |
-| svs_per_caller, vcf_hificnv_index                   | True        | hificnv, vcf-index                  | long-term-storage                           |
-| svs_per_caller, vcf_sawfish                         | True        | sawfish, vcf                        | long-term-storage                           |
-| svs_per_caller, vcf_sawfish_index                   | True        | sawfish, vcf-index                  | long-term-storage                           |
-| svs_per_caller, vcf_severus                         | True        | severus, vcf                        | long-term-storage                           |
-| svs_per_caller, vcf_severus_index                   | True        | severus, vcf-index                  | long-term-storage                           |
+| svs_per_caller, vcf_hificnv                         | False       | hificnv, vcf                        | long-term-storage                           |
+| svs_per_caller, vcf_hificnv_index                   | False       | hificnv, vcf-index                  | long-term-storage                           |
+| svs_per_caller, vcf_sawfish                         | False       | sawfish, vcf                        | long-term-storage                           |
+| svs_per_caller, vcf_sawfish_index                   | False       | sawfish, vcf-index                  | long-term-storage                           |
+| svs_per_caller, vcf_severus                         | False       | severus, vcf                        | long-term-storage                           |
+| svs_per_caller, vcf_severus_index                   | False       | severus, vcf-index                  | long-term-storage                           |
 | svs_per_caller, vcf_sniffles                        | True        | sniffles1, vcf                      | long-term-storage                           |
 | svs_per_caller, vcf_sniffles_index                  | True        | sniffles1, vcf-index                | long-term-storage                           |
 | copy_number, bedgraph                               | True        | cnv, bedgraph                       | clinical-delivery, long-term-storage        |
