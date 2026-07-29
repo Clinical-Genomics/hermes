@@ -338,7 +338,7 @@ NALLO_COMMON_TAGS = {
     },
     frozenset(["copy_number", "bedgraph"]): {
         "tags": [VariantTags.CNV, NalloTags.BEDGRAPH],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["depth_track", "bigwig"]): {
@@ -373,12 +373,12 @@ NALLO_COMMON_TAGS = {
     },
     frozenset(["phase_blocks", "gtf"]): {
         "tags": [BioinfoToolsTags.WHATSHAP, AnalysisTags.PHASE_BLOCKS],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["phase_blocks", "gtf_index"]): {
         "tags": [BioinfoToolsTags.WHATSHAP, AnalysisTags.PHASE_BLOCKS_INDEX],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset({"multiqc", "multiqc-json"}): {

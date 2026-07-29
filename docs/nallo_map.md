@@ -62,7 +62,7 @@
 | svs_per_caller, vcf_severus_index                   | False       | severus, vcf-index                  | long-term-storage                           |
 | svs_per_caller, vcf_sniffles                        | True        | sniffles1, vcf                      | long-term-storage                           |
 | svs_per_caller, vcf_sniffles_index                  | True        | sniffles1, vcf-index                | long-term-storage                           |
-| copy_number, bedgraph                               | True        | cnv, bedgraph                       | clinical-delivery, long-term-storage        |
+| copy_number, bedgraph                               | False       | cnv, bedgraph                       | clinical-delivery, long-term-storage        |
 | depth_track, bigwig                                 | True        | hificnv, bigwig                     | clinical-delivery, long-term-storage        |
 | maf_depth_track, bigwig                             | True        | hificnv, bigwig, maf                | clinical-delivery, long-term-storage        |
 | multiqc-json, multiqc                               | True        | multiqc-json                        | long-term-storage                           |
@@ -71,8 +71,8 @@
 | samplesheet                                         | True        | nextflow-samplesheet                | cg, long-term-storage                       |
 | software-versions                                   | True        | software-versions                   | cg, clinical-delivery, long-term-storage    |
 | qc-metrics                                          | True        | qc-metrics, deliverable             | cg, long-term-storage                       |
-| whatshap, gtf                                       | True        | bam, paraphase                      | scout, clinical-delivery, long-term-storage |
-| whatshap, gtf_index                                 | True        | bam, paraphase                      | scout, clinical-delivery, long-term-storage |
+| whatshap, gtf                                       | False       | bam, paraphase                      | scout, clinical-delivery, long-term-storage |
+| whatshap, gtf_index                                 | False       | bam, paraphase                      | scout, clinical-delivery, long-term-storage |
 | manifest                                            | False       | manifest                            | scout, long-term-storage                    |
 | chromograph_rhoviz, autozyg                      | False       | chromograph, autozyg                 | scout                                          |
 | tcov, chromograph_cov                            | False       | chromograph, tcov                    | scout
