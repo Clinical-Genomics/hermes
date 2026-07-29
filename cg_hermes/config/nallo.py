@@ -343,12 +343,12 @@ NALLO_COMMON_TAGS = {
     },
     frozenset(["depth_track", "bigwig"]): {
         "tags": [BioinfoToolsTags.HIFICNV, AnalysisTags.BIGWIG],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["maf_depth_track", "bigwig"]): {
         "tags": [BioinfoToolsTags.HIFICNV, AnalysisTags.BIGWIG, NalloTags.MAF],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["gens_generatedata", "baf"]): {

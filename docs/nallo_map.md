@@ -63,8 +63,8 @@
 | svs_per_caller, vcf_sniffles                        | True        | sniffles1, vcf                      | long-term-storage                           |
 | svs_per_caller, vcf_sniffles_index                  | True        | sniffles1, vcf-index                | long-term-storage                           |
 | copy_number, bedgraph                               | False       | cnv, bedgraph                       | clinical-delivery, long-term-storage        |
-| depth_track, bigwig                                 | True        | hificnv, bigwig                     | clinical-delivery, long-term-storage        |
-| maf_depth_track, bigwig                             | True        | hificnv, bigwig, maf                | clinical-delivery, long-term-storage        |
+| depth_track, bigwig                                 | False       | hificnv, bigwig                     | clinical-delivery, long-term-storage        |
+| maf_depth_track, bigwig                             | False       | hificnv, bigwig, maf                | clinical-delivery, long-term-storage        |
 | multiqc-json, multiqc                               | True        | multiqc-json                        | long-term-storage                           |
 | nextflow-params                                     | True        | nextflow-params                     | cg, long-term-storage                       |
 | nextflow-config                                     | True        | nextflow-config                     | cg, long-term-storage                       |
