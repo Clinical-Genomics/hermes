@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "cg-hermes"
-version = "6.2.2"
+version = "6.4.1"
 description = "Convert information between pipelines and CG"
 authors = ["Måns Magnusson <mans.magnusson@scilifelab.se>"]
 
@@ -22,6 +22,9 @@ pytest-cov = "*"
 
 [tool.poetry.scripts]
 hermes = "cg_hermes.__main__:main"
+
+[tool.poetry.group.dev.dependencies]
+black = "^26.5.1"
 
 [build-system]
 requires = ["poetry>=0.12"]
@@ -47,4 +50,3 @@ minversion = "6.0"
 testpaths = [
     "tests",
 ]
-

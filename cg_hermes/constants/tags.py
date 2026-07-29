@@ -430,6 +430,7 @@ class BioinfoToolsTags(StrEnum):
     MODKIT_PILEUP: str = "modkit-pileup"
     NEXTCLADE: str = "nextclade"
     PARAPHASE: str = "paraphase"
+    PARAPHRASE: str = "paraphrase"
     PEDDY: str = "peddy"
     PICARD: str = "picard"
     PIZZLY: str = "pizzly"
@@ -491,6 +492,7 @@ class BioinfoToolsTags(StrEnum):
             self.MODKIT_PILEUP: "Modkit pileup tool output",
             self.NEXTCLADE: "Viral genome clade assignment",
             self.PARAPHASE: "Paraphase tool output",
+            self.PARAPHRASE: "Paraphrase annotated paraphase JSONs",
             self.PEDDY: "Tool to check pedigree and ancestral relations",
             self.PICARD: "Picard set of bioinformatic tools",
             self.PIZZLY: "Fusion caller",
@@ -512,6 +514,23 @@ class BioinfoToolsTags(StrEnum):
             self.WCX2CYTOSURE: "Conversion from wisecondorX to cytosure format",
             self.WHATSHAP: "Tool for phasing variants",
             self.WISECONDOR: "NIPT caller",
+        }
+        return descriptions.get(self, "Description not available")
+
+
+class InputFileTags(StrEnum):
+    RANK_MODEL_SNV = "rank-model-snv"
+    RANK_MODEL_SV = "rank-model-sv"
+
+    @classmethod
+    def name(cls) -> str:
+        return "Input File Tags"
+
+    @property
+    def description(self) -> str:
+        descriptions: dict[InputFileTags, str] = {
+            self.RANK_MODEL_SNV: "Rank model for SNV prioritization",
+            self.RANK_MODEL_SV: "Rank model for SV prioritization",
         }
         return descriptions.get(self, "Description not available")
 
@@ -817,6 +836,7 @@ COMMON_TAG_CATEGORIES: list[Any] = [
     AnalysisTags,
     BioinfoToolsTags,
     FamilyTags,
+    InputFileTags,
     QCTags,
     RawDataTags,
     ReportTags,

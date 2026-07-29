@@ -10,6 +10,7 @@ from cg_hermes.constants.tags import (
     AnalysisTags,
     BioinfoToolsTags,
     FamilyTags,
+    InputFileTags,
     MipTags,
     NextflowTags,
     NalloTags,
@@ -125,11 +126,6 @@ NALLO_COMMON_TAGS = {
         "is_mandatory": False,
         "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
-    frozenset(["qc_bam", "mosdepth_d4"]): {
-        "tags": [AnalysisTags.COVERAGE, ReportTags.D4],
-        "is_mandatory": False,
-        "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
-    },
     frozenset({"multiqc", "multiqc-html"}): {
         "is_mandatory": True,
         "tags": [ReportTags.MULTIQC_HTML],
@@ -197,6 +193,16 @@ NALLO_COMMON_TAGS = {
     },
     frozenset(["paraphase", "json"]): {
         "tags": [BioinfoToolsTags.PARAPHASE, ReportTags.JSON],
+        "is_mandatory": False,
+        "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
+    },
+    frozenset(["paraphrase", "json"]): {
+        "tags": [BioinfoToolsTags.PARAPHRASE, ReportTags.JSON],
+        "is_mandatory": False,
+        "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
+    },
+    frozenset(["paraphrase", "tsv"]): {
+        "tags": [BioinfoToolsTags.PARAPHRASE, ReportTags.TSV],
         "is_mandatory": False,
         "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
@@ -327,7 +333,7 @@ NALLO_COMMON_TAGS = {
     },
     frozenset(["qc_bam", "mosdepth_d4"]): {
         "tags": [AnalysisTags.COVERAGE, ReportTags.D4],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["copy_number", "bedgraph"]): {
@@ -394,6 +400,16 @@ NALLO_COMMON_TAGS = {
         "is_mandatory": True,
         "tags": [NextflowTags.SAMPLESHEET],
         "used_by": [UsageTags.CG, UsageTags.LONG_TERM_STORAGE],
+    },
+    frozenset({"rank-model-snv"}): {
+        "is_mandatory": True,
+        "tags": [InputFileTags.RANK_MODEL_SNV],
+        "used_by": [UsageTags.SCOUT, UsageTags.LONG_TERM_STORAGE],
+    },
+    frozenset({"rank-model-sv"}): {
+        "is_mandatory": True,
+        "tags": [InputFileTags.RANK_MODEL_SV],
+        "used_by": [UsageTags.SCOUT, UsageTags.LONG_TERM_STORAGE],
     },
 }
 
