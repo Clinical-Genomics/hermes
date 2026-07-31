@@ -25,7 +25,7 @@
 | methbat_profile, methylation_calling                | False       | methylation-tsv, methbat-profile    | scout, clinical-delivery, long-term-storage |
 | mosdepth_d4, qc_bam                                 | False       | coverage, d4                        | scout, clinical-delivery, long-term-storage |
 | multiqc-html, multiqc                               | True        | multiqc-html                        | scout, clinical-delivery, long-term-storage |
-| pedigree_fam, pedigree                              | True        | pedigree                            | clinical-delivery, scout, long-term-storage |
+| pedigree_fam, pedigree                              | False       | pedigree                            | clinical-delivery, scout, long-term-storage |
 | relate_html, somalier                               | True        | somalier, relate-html               | clinical-delivery, scout, long-term-storage |
 | relate_pairs, somalier                              | True        | somalier, relate-pairs              | scout, long-term-storage                    |
 | relate_samples, somalier                            | True        | somalier, relate-samples            | scout, long-term-storage                    |

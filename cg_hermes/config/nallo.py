@@ -133,7 +133,7 @@ NALLO_COMMON_TAGS = {
     },
     frozenset(["pedigree", "pedigree_fam"]): {
         "tags": [FamilyTags.PEDIGREE],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.SCOUT, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["sambamba_depth", "qc_bam"]): {
