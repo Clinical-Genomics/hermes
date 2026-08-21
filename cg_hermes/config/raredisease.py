@@ -171,6 +171,16 @@ RAREDISEASE_COMMON_TAGS = {
         "is_mandatory": False,
         "used_by": [UsageTags.CG],
     },
+    frozenset(["call_snv_loqusdb", "call_snv_loqusdb"]): {
+        "tags": [VariantTags.VCF_SNV_LOQUSDB],
+        "is_mandatory": True,
+        "used_by": [UsageTags.CG, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
+    },
+    frozenset(["call_snv_loqusdb", "call_snv_loqusdb_index"]): {
+        "tags": [VariantTags.VCF_SNV_LOQUSDB_INDEX],
+        "is_mandatory": False,
+        "used_by": [UsageTags.CG, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
+    },
     frozenset(["call_sv", "call_sv"]): {
         "tags": [VariantTags.VCF_SV],
         "is_mandatory": False,

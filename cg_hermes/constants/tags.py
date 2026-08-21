@@ -87,6 +87,8 @@ class VariantTags(StrEnum):
     VCF_SNV_GERMLINE_TUMOR: str = "vcf-snv-germline-tumor"
     VCF_SNV_GERMLINE_TUMOR_INDEX: str = "vcf-snv-germline-tumor-index"
     VCF_SNV_INDEX: str = "vcf-snv-index"
+    VCF_SNV_LOQUSDB: str = "vcf-snv-loqusdb"
+    VCF_SNV_LOQUSDB_INDEX: str = "vcf-snv-loqusdb-index"
     VCF_SNV_RESEARCH: str = "vcf-snv-research"
     VCF_SNV_RESEARCH_INDEX: str = "vcf-snv-research-index"
     VCF_SNV_RESEARCH_UNFILTERED: str = "vcf-snv-research-unfiltered"
@@ -155,6 +157,8 @@ class VariantTags(StrEnum):
             self.VCF_SNV_GERMLINE_TUMOR: "SNV germline tumor variants",
             self.VCF_SNV_GERMLINE_TUMOR_INDEX: "Following index",
             self.VCF_SNV_INDEX: "Following index",
+            self.VCF_SNV_LOQUSDB: "Concatenated MT and SNV variants",
+            self.VCF_SNV_LOQUSDB_INDEX: "Following index",
             self.VCF_SNV_RESEARCH: "SNV variants from whole genome",
             self.VCF_SNV_RESEARCH_INDEX: "Following index",
             self.VCF_STR: "Short tandem repeat variants",

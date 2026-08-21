@@ -28,6 +28,8 @@
 | research_index, annotate_mobile_elements         | False       | mobile-elements, research, vcf-index   | scout, clinical-delivery, long-term-storage    |
 | call_snv                                         | True        | vcf-snv                                | genotype, clinical-delivery, long-term-storage |
 | call_snv_index, call_snv                         | False       | vcf-snv-index                          | cg, clinical-delivery, long-term-storage       |
+| call_snv_loqusdb                                 | True        | vcf-snv-loqusdb                        | cg, clinical-delivery, long-term-storage       |
+| call_snv_loqusdb, call_snv_loqusdb_index         | True        | vcf-snv-loqusdb-index                  | cg, clinical-delivery, long-term-storage       |
 | call_snv_mt, call_snv                            | False       | vcf-snv, mitochondria                  | cg                                             |
 | call_snv, call_snv_mt_index                      | False       | vcf-snv-index, mitochondria            | cg                                             |
 | call_sv                                          | False       | vcf-sv                                 | cg, clinical-delivery, long-term-storage       |
