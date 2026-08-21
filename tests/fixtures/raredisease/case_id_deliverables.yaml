@@ -263,12 +263,12 @@ files:
 - format: vcf
   id: CASEID
   path: PATHTOCASE/call_snv/concatenated/CASEID_mt_and_nuclear_snvs.vcf.gz
-  step: vcf-snv-loqusdb
+  step: call_snv
   tag: vcf-snv-loqusdb
 - format: vcf
   id: CASEID
   path: PATHTOCASE/call_snv/concatenated/CASEID_mt_and_nuclear_snvs.vcf.gz.tbi
-  step: vcf-snv-loqusdb
+  step: call_snv
   tag: vcf-snv-loqusdb_index
 - format: vcf
   id: CASEID
