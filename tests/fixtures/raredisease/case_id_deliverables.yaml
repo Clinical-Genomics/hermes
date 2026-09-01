@@ -262,6 +262,16 @@ files:
   tag: call_snv_index
 - format: vcf
   id: CASEID
+  path: PATHTOCASE/call_snv/concatenated_calls/CASEID_mt_and_nuclear_snvs.vcf.gz
+  step: call_snv_loqusdb
+  tag: call_snv_loqusdb
+- format: vcf
+  id: CASEID
+  path: PATHTOCASE/call_snv/concatenated_calls/CASEID_mt_and_nuclear_snvs.vcf.gz.tbi
+  step: call_snv_loqusdb
+  tag: call_snv_loqusdb_index
+- format: vcf
+  id: CASEID
   path: PATHTOCASE/call_snv/mitochondria/CASEID_mitochondria.vcf.gz
   step: call_snv_mt
   tag: call_snv_mt
