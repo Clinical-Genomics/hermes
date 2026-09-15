@@ -26,9 +26,9 @@
 | mosdepth_d4, qc_bam                                 | False       | coverage, d4                        | scout, clinical-delivery, long-term-storage |
 | multiqc-html, multiqc                               | True        | multiqc-html                        | scout, clinical-delivery, long-term-storage |
 | pedigree_fam, pedigree                              | False       | pedigree                            | clinical-delivery, scout, long-term-storage |
-| relate_html, somalier                               | True        | somalier, relate-html               | clinical-delivery, scout, long-term-storage |
-| relate_pairs, somalier                              | True        | somalier, relate-pairs              | scout, long-term-storage                    |
-| relate_samples, somalier                            | True        | somalier, relate-samples            | scout, long-term-storage                    |
+| relate_html, somalier                               | False       | somalier, relate-html               | clinical-delivery, scout, long-term-storage |
+| relate_pairs, somalier                              | False       | somalier, relate-pairs              | scout, long-term-storage                    |
+| relate_samples, somalier                            | False       | somalier, relate-samples            | scout, long-term-storage                    |
 | peddy                                               | False       | peddy, ped                          | audit, scout, clinical-delivery             |
 | ped_check, peddy                                    | False       | peddy, ped-check                    | audit, scout, clinical-delivery             |
 | peddy, sex_check                                    | False       | peddy, sex-check                    | audit, scout, clinical-delivery             |
