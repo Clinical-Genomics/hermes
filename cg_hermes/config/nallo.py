@@ -142,22 +142,17 @@ NALLO_COMMON_TAGS = {
         "used_by": [UsageTags.CHANJO, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["somalier", "relate_html"]): {
-        "tags": [BioinfoToolsTags.SOMALIER, NalloTags.RELATE_HTML],
+        "tags": [BioinfoToolsTags.SOMALIER, AnalysisTags.RELATE_HTML],
         "is_mandatory": True,
         "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.SCOUT, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["somalier", "relate_pairs"]): {
-        "tags": [BioinfoToolsTags.SOMALIER, NalloTags.RELATE_PAIRS],
-        "is_mandatory": True,
-        "used_by": [UsageTags.SCOUT, UsageTags.LONG_TERM_STORAGE],
-    },
-    frozenset(["somalier", "relate_pairs"]): {
-        "tags": [BioinfoToolsTags.SOMALIER, NalloTags.RELATE_PAIRS],
+        "tags": [BioinfoToolsTags.SOMALIER, AnalysisTags.RELATE_PAIRS],
         "is_mandatory": True,
         "used_by": [UsageTags.SCOUT, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["somalier", "relate_samples"]): {
-        "tags": [BioinfoToolsTags.SOMALIER, NalloTags.RELATE_SAMPLES],
+        "tags": [BioinfoToolsTags.SOMALIER, AnalysisTags.RELATE_SAMPLES],
         "is_mandatory": True,
         "used_by": [UsageTags.SCOUT, UsageTags.LONG_TERM_STORAGE],
     },

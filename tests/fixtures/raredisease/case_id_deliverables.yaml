@@ -382,6 +382,21 @@ files:
   tag: ngsbits_samplegender
 - format: meta
   id: CASEID
+  path: PATHTOCASE/qc/somalier/relate/CASEID/CASEID.html
+  step: somalier
+  tag: relate_html
+- format: tsv
+  id: CASEID
+  path: PATHTOCASE/qc/somalier/relate/CASEID/CASEID.pairs.tsv
+  step: somalier
+  tag: relate_pairs
+- format: tsv
+  id: CASEID
+  path: PATHTOCASE/qc/somalier/relate/CASEID/CASEID.samples.tsv
+  step: somalier
+  tag: relate_samples
+- format: meta
+  id: CASEID
   path: PATHTOCASE/peddy/CASEID.peddy.ped
   step: peddy
   tag: peddy
