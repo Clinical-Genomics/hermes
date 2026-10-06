@@ -61,6 +61,8 @@
 | chromograph_rhoviz, autozyg                      | False       | chromograph, autozyg                   | scout                                          |
 | chromograph_upd, regions                         | False       | chromograph, upd, regions              | scout                                          |
 | chromograph_upd, sites                           | False       | chromograph, upd, sites                | scout                                          |
+| upd_regions_bigbed, regions                      | False       | upd, regions, bigbed                   | scout                                          |
+| upd_sites_bigbed, sites                          | False       | upd, sites, bigbed                     | scout                                          |
 | multiqc-html, multiqc                            | True        | multiqc-html                           | scout, clinical-delivery, long-term-storage    |
 | multiqc-json, multiqc                            | True        | multiqc-json                           | long-term-storage                              |
 | deepvariant, report                              | True        | deepvariant-report                     | clinical-delivery, long-term-storage           |
