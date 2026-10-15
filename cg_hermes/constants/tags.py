@@ -333,6 +333,9 @@ class AnalysisTags(StrEnum):
     RAW_PROFILE_PLOT: str = "raw-profile-plot"
     REFERENCE_INFO: str = "reference-info"
     REGIONS: str = "regions"
+    RELATE_HTML: str = "relate-html"
+    RELATE_PAIRS: str = "relate-pairs"
+    RELATE_SAMPLES: str = "relate-samples"
     RESEARCH: str = "research"
     SCATTER_PLOT: str = "scatter-plot"
     SECOND_PASS: str = "second-pass"
@@ -383,6 +386,9 @@ class AnalysisTags(StrEnum):
             self.RAW_PROFILE_PLOT: "Copy number profile without rounding to whole numbers",
             self.REFERENCE_INFO: "Information about references used in analysis",
             self.REGIONS: "Output for regions",
+            self.RELATE_HTML: "Somalier relate html output",
+            self.RELATE_PAIRS: "Somalier relate pairs output",
+            self.RELATE_SAMPLES: "Somalier relate samples output",
             self.RESEARCH: "Research set",
             self.SCATTER_PLOT: "Scatter plot",
             self.SECOND_PASS: "Data metrics second pass",
@@ -670,9 +676,6 @@ class NalloTags(StrEnum):
     REPEATS: str = "repeats"
     SORTED: str = "sorted"
     SPANNING: str = "spanning"
-    RELATE_HTML: str = "relate-html"
-    RELATE_PAIRS: str = "relate-pairs"
-    RELATE_SAMPLES: str = "relate-samples"
     BEDGRAPH: str = "bedgraph"
     MAF: str = "maf"
 
@@ -693,9 +696,6 @@ class NalloTags(StrEnum):
             self.REPEATS: "Repeat expansions output",
             self.SORTED: "Sorted output",
             self.SPANNING: "Sorted with spanning reads",
-            self.RELATE_HTML: "Somelier relate html output",
-            self.RELATE_PAIRS: "Somelier relate pairs output",
-            self.RELATE_SAMPLES: "Somelier relate samples output",
             self.BEDGRAPH: "Copy number in bedgraph format",
             self.MAF: "Minor allele frequencies",
         }

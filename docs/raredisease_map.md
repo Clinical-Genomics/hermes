@@ -57,6 +57,9 @@
 | rank_model_snv, rank_and_filter                 | False       | rank-model-snv                         | scout                                          |
 | rank_model_sv, rank_and_filter                  | False       | rank-model-sv                          | scout                                          |
 | rhocallviz, annotate_snv                         | False       | rhocall-viz                            | scout                                          |
+| relate_html, somalier                              | False        | somalier, relate-html             | clinical-delivery, scout, long-term-storage |
+| relate_pairs, somalier                             | False        | somalier, relate-pairs            | scout, long-term-storage                    |
+| relate_samples, somalier                           | False        | somalier, relate-samples          | scout, long-term-storage                    |
 | annotate_snv_mt, haplogrep                       | False       | haplogrep                              | scout, clinical-delivery                       |
 | chromograph_rhoviz, autozyg                      | False       | chromograph, autozyg                   | scout                                          |
 | chromograph_upd, regions                         | False       | chromograph, upd, regions              | scout                                          |
