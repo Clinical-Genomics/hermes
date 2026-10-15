@@ -340,6 +340,16 @@ RAREDISEASE_COMMON_TAGS = {
         "is_mandatory": False,
         "used_by": [UsageTags.SCOUT],
     },
+    frozenset(["upd_regions_bigbed", "regions"]): {
+        "tags": [VariantTags.UPD, AnalysisTags.REGIONS, AnalysisTags.BIGBED],
+        "is_mandatory": False,
+        "used_by": [UsageTags.SCOUT],
+    },
+    frozenset(["upd_sites_bigbed", "sites"]): {
+        "tags": [VariantTags.UPD, AnalysisTags.SITES, AnalysisTags.BIGBED],
+        "is_mandatory": False,
+        "used_by": [UsageTags.SCOUT],
+    },
     frozenset({"multiqc", "multiqc-html"}): {
         "is_mandatory": True,
         "tags": [ReportTags.MULTIQC_HTML],
