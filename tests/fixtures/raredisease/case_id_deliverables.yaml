@@ -810,6 +810,16 @@ files:
   path: PATHTOCASE/annotate_snv/genome/SAMPLEID_chromograph_sites/SAMPLEID_upd_sites_M.png
   step: chromograph_upd
   tag: sites
+- format: bigBed
+  id: SAMPLEID
+  path: PATHTOCASE/annotate_snv/genome/upd/SAMPLEID_upd_regions.bigBed
+  step: upd_regions_bigbed
+  tag: regions
+- format: bigBed
+  id: SAMPLEID
+  path: PATHTOCASE/annotate_snv/genome/upd/SAMPLEID_upd_sites.bigBed
+  step: upd_sites_bigbed
+  tag: sites
 - format: yaml
   id: CASEID
   path: PATHTOCASE/CASEID_metrics_deliverables.yaml
