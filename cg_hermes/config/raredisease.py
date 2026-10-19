@@ -56,6 +56,21 @@ RAREDISEASE_COMMON_TAGS = {
         "is_mandatory": True,
         "used_by": [UsageTags.CHANJO],
     },
+    frozenset(["somalier", "relate_html"]): {
+        "tags": [BioinfoToolsTags.SOMALIER, AnalysisTags.RELATE_HTML],
+        "is_mandatory": False,
+        "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.SCOUT, UsageTags.LONG_TERM_STORAGE],
+    },
+    frozenset(["somalier", "relate_pairs"]): {
+        "tags": [BioinfoToolsTags.SOMALIER, AnalysisTags.RELATE_PAIRS],
+        "is_mandatory": False,
+        "used_by": [UsageTags.SCOUT, UsageTags.LONG_TERM_STORAGE],
+    },
+    frozenset(["somalier", "relate_samples"]): {
+        "tags": [BioinfoToolsTags.SOMALIER, AnalysisTags.RELATE_SAMPLES],
+        "is_mandatory": False,
+        "used_by": [UsageTags.SCOUT, UsageTags.LONG_TERM_STORAGE],
+    },
     frozenset(["chromograph_cov", "tcov"]): {
         "tags": [BioinfoToolsTags.CHROMOGRAPH, AnalysisTags.TCOV],
         "is_mandatory": False,
