@@ -674,6 +674,7 @@ class NalloTags(StrEnum):
     HAPLOTAGS: str = "haplotags"
     ASSEMBLY: str = "assembly"
     REPEATS: str = "repeats"
+    KIVVI: str = "kivvi"
     SORTED: str = "sorted"
     SPANNING: str = "spanning"
     BEDGRAPH: str = "bedgraph"
@@ -693,6 +694,7 @@ class NalloTags(StrEnum):
             self.HAPLOTAGS: "Haplotags",
             self.ASSEMBLY: "Assembly",
             self.DEEPVARIANT_REPORT: "Deepvariant report",
+            self.KIVVI: "Kivvi outputs",
             self.REPEATS: "Repeat expansions output",
             self.SORTED: "Sorted output",
             self.SPANNING: "Sorted with spanning reads",
