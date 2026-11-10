@@ -93,37 +93,37 @@ NALLO_COMMON_TAGS = {
     },
     frozenset(["methylation_pileup", "methbat_hap1"]): {
         "tags": [AnalysisTags.BED, NalloTags.HAP1, BioinfoToolsTags.METHBAT_PILEUP],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["methylation_pileup", "methbat_hap1_index"]): {
         "tags": [AnalysisTags.BED_INDEX, NalloTags.HAP1, BioinfoToolsTags.METHBAT_PILEUP],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["methylation_pileup", "methbat_hap2"]): {
         "tags": [AnalysisTags.BED, NalloTags.HAP2, BioinfoToolsTags.METHBAT_PILEUP],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["methylation_pileup", "methbat_hap2_index"]): {
         "tags": [AnalysisTags.BED_INDEX, NalloTags.HAP2, BioinfoToolsTags.METHBAT_PILEUP],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["methylation_pileup", "methbat_combined"]): {
         "tags": [AnalysisTags.BED, NalloTags.COMBINED, BioinfoToolsTags.METHBAT_PILEUP],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["methylation_pileup", "methbat_combined_index"]): {
         "tags": [AnalysisTags.BED_INDEX, NalloTags.COMBINED, BioinfoToolsTags.METHBAT_PILEUP],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset(["methylation_calling", "methbat_profile"]): {
         "tags": [NalloTags.METHYLATION_TSV, BioinfoToolsTags.METHBAT_PROFILE],
-        "is_mandatory": True,
+        "is_mandatory": False,
         "used_by": [UsageTags.SCOUT, UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
     },
     frozenset({"multiqc", "multiqc-html"}): {
