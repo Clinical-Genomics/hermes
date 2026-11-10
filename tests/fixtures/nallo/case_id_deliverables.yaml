@@ -490,29 +490,14 @@ files:
   path: PATHTOCASE/kivvi/SAMPLEID/SAMPLEID.kivvi.d4z4.json
   step: kivvi
   tag: json
-- format: json
-  id: SAMPLEID
-  path: PATHTOCASE/kivvi/SAMPLEID/SAMPLEID.kivvi.kiv2.json
-  step: kivvi
-  tag: json
 - format: svg
   id: SAMPLEID
   path: PATHTOCASE/kivvi/SAMPLEID/SAMPLEID.kivvi.d4z4.svg
   step: kivvi
   tag: svg
-- format: svg
-  id: SAMPLEID
-  path: PATHTOCASE/kivvi/SAMPLEID/SAMPLEID.kivvi.kiv2.svg
-  step: kivvi
-  tag: svg
 - format: vcf
   id: SAMPLEID
   path: PATHTOCASE/kivvi/SAMPLEID/SAMPLEID.kivvi.d4z4.vcf
-  step: kivvi
-  tag: vcf
-- format: vcf
-  id: SAMPLEID
-  path: PATHTOCASE/kivvi/SAMPLEID/SAMPLEID.kivvi.kiv2.vcf
   step: kivvi
   tag: vcf
 - format: bam
@@ -522,17 +507,7 @@ files:
   tag: bam
 - format: bam
   id: SAMPLEID
-  path: PATHTOCASE/kivvi/SAMPLEID/SAMPLEID.kivvi.kiv2.bam
-  step: kivvi
-  tag: bam
-- format: bam
-  id: SAMPLEID
   path: PATHTOCASE/kivvi/SAMPLEID/SAMPLEID.kivvi.d4z4.bam.bai
-  step: kivvi
-  tag: bam_index
-- format: bam
-  id: SAMPLEID
-  path: PATHTOCASE/kivvi/SAMPLEID/SAMPLEID.kivvi.kiv2.bam.bai
   step: kivvi
   tag: bam_index
 - format: vcf
