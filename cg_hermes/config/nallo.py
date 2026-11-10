@@ -431,11 +431,6 @@ NALLO_COMMON_TAGS = {
         "tags": [InputFileTags.RANK_MODEL_SV],
         "used_by": [UsageTags.SCOUT, UsageTags.LONG_TERM_STORAGE],
     },
-    frozenset({"rank-model-sv"}): {
-        "is_mandatory": True,
-        "tags": [InputFileTags.RANK_MODEL_SV],
-        "used_by": [UsageTags.SCOUT, UsageTags.LONG_TERM_STORAGE],
-    },
 }
 
 NALLO_TAGS = {**NALLO_COMMON_TAGS, **NEXTFLOW_TAGS}
