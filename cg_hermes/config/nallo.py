@@ -246,6 +246,31 @@ NALLO_COMMON_TAGS = {
         "is_mandatory": True,
         "used_by": [UsageTags.SCOUT, UsageTags.LONG_TERM_STORAGE],
     },
+    frozenset(["kivvi", "json"]): {
+        "tags": [NalloTags.KIVVI, ReportTags.JSON],
+        "is_mandatory": True,
+        "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
+    },
+    frozenset(["kivvi", "svg"]): {
+        "tags": [NalloTags.KIVVI],
+        "is_mandatory": False,
+        "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
+    },
+    frozenset(["kivvi", "vcf"]): {
+        "tags": [NalloTags.KIVVI, VariantTags.VCF],
+        "is_mandatory": True,
+        "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
+    },
+    frozenset(["kivvi", "bam"]): {
+        "tags": [NalloTags.KIVVI, AlignmentTags.BAM],
+        "is_mandatory": True,
+        "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
+    },
+    frozenset(["kivvi", "bam_index"]): {
+        "tags": [NalloTags.KIVVI, AlignmentTags.BAM_INDEX],
+        "is_mandatory": True,
+        "used_by": [UsageTags.CLINICAL_DELIVERY, UsageTags.LONG_TERM_STORAGE],
+    },
     frozenset(["snv_annotated", "vcf_snv_research"]): {
         "tags": [VariantTags.VCF_SNV_RESEARCH],
         "is_mandatory": True,

@@ -485,6 +485,31 @@ files:
   path: /home/proj/production/workflows/nallo/references/v0.4.0/grch38_trgt_pathogenic_repeats.bed
   step: trgt
   tag: variant_catalog
+- format: json
+  id: SAMPLEID
+  path: PATHTOCASE/kivvi/SAMPLEID/SAMPLEID.kivvi.d4z4.json
+  step: kivvi
+  tag: json
+- format: svg
+  id: SAMPLEID
+  path: PATHTOCASE/kivvi/SAMPLEID/SAMPLEID.kivvi.d4z4.svg
+  step: kivvi
+  tag: svg
+- format: vcf
+  id: SAMPLEID
+  path: PATHTOCASE/kivvi/SAMPLEID/SAMPLEID.kivvi.d4z4.vcf
+  step: kivvi
+  tag: vcf
+- format: bam
+  id: SAMPLEID
+  path: PATHTOCASE/kivvi/SAMPLEID/SAMPLEID.kivvi.d4z4.bam
+  step: kivvi
+  tag: bam
+- format: bam
+  id: SAMPLEID
+  path: PATHTOCASE/kivvi/SAMPLEID/SAMPLEID.kivvi.d4z4.bam.bai
+  step: kivvi
+  tag: bam_index
 - format: vcf
   id: CASEID
   path: PATHTOCASE/snvs/family/CASEID/CASEID_snvs_annotated_ranked_research.vcf.gz

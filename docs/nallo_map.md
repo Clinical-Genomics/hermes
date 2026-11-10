@@ -51,6 +51,11 @@
 | repeats_annotated, vcf_str                         | True        | vcf-str                           | scout, clinical-delivery, long-term-storage |
 | repeats_annotated, vcf_str_index                   | True        | vcf-str-index                     | scout, clinical-delivery, long-term-storage |
 | trgt, variant_catalog                              | True        | trgt, variant-catalog             | scout, long-term-storage                    |
+| kivvi, json                                        | True        | kivvi, json                       | clinical-delivery, long-term-storage        |
+| kivvi, svg                                         | False       | kivvi                             | clinical-delivery, long-term-storage        |
+| kivvi, vcf                                         | True        | kivvi, vcf                        | clinical-delivery, long-term-storage        |
+| kivvi, bam                                         | True        | kivvi, bam                        | clinical-delivery, long-term-storage        |
+| kivvi, bam_index                                   | True        | kivvi, bam-index                  | clinical-delivery, long-term-storage        |
 | vcf_snv_research, snv_annotated                    | True        | vcf-snv-research                  | scout, clinical-delivery, long-term-storage |
 | vcf_snv_research_index, snv_annotated              | True        | vcf-snv-research-index            | scout, clinical-delivery, long-term-storage |
 | vcf_snv_clinical, snv_annotated_filtered           | True        | vcf-snv-clinical                  | scout, clinical-delivery, long-term-storage |
